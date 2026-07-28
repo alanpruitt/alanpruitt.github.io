@@ -1,0 +1,12 @@
+# Operating System Junk
+.DS_Store
+Thumbs.db
+
+# Editor & IDE configs
+.vscode/
+.idea/
+
+# Local build artifacts & caches
+node_modules/
+.cache/
+dist/
