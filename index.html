@@ -49,18 +49,18 @@
     <!-- Header / Navigation Bar -->
     <header class="w-full max-w-6xl mx-auto px-6 py-6 flex justify-between items-center border-b border-creme-200">
         <div class="flex items-center space-x-3">
-            <span class="w-3 h-3 bg-navy-900 rounded-full inline-block"></span>
+            <span class="w-3 h-3 bg-navy-900 rounded-full inline-block" aria-hidden="true"></span>
             <a href="#" class="text-xl font-bold tracking-tight text-navy-900 hover:text-navy-800 transition-colors">
                 alanpruitt.com
             </a>
         </div>
         
-        <!-- Language Toggle -->
-        <div class="flex items-center bg-creme-200 p-1 rounded-lg border border-creme-200 text-sm font-semibold">
-            <button id="btn-en" onclick="setLanguage('en')" class="px-3 py-1 rounded-md transition-all bg-navy-900 text-creme-100 shadow-sm">
+        <!-- Language Toggle (WCAG AA Accessible) -->
+        <div class="flex items-center bg-creme-200 p-1 rounded-lg border border-creme-200 text-sm font-semibold" role="group" aria-label="Language selector">
+            <button id="btn-en" onclick="setLanguage('en')" aria-label="Switch language to English" class="px-3 py-1 rounded-md transition-all bg-navy-900 text-creme-100 shadow-sm">
                 EN
             </button>
-            <button id="btn-es" onclick="setLanguage('es')" class="px-3 py-1 rounded-md transition-all text-navy-900 hover:text-navy-800">
+            <button id="btn-es" onclick="setLanguage('es')" aria-label="Cambiar idioma a Español" class="px-3 py-1 rounded-md transition-all text-navy-900 hover:text-navy-800">
                 ES
             </button>
         </div>
@@ -110,13 +110,13 @@
                 </div>
                 <a href="https://www.webcognita.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-between w-full px-4 py-3 bg-creme-100 text-navy-900 font-semibold rounded-xl hover:bg-white transition-all text-sm group">
                     <span>Visit webcognita.com</span>
-                    <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                 </a>
             </div>
 
             <!-- Curriculum-as-Code Manifesto Card -->
             <div class="bg-white p-8 rounded-2xl border border-creme-200 shadow-sm">
-                <div class="w-10 h-10 bg-creme-100 rounded-xl flex items-center justify-center mb-4 text-navy-900 border border-creme-200 font-mono font-bold">
+                <div class="w-10 h-10 bg-creme-100 rounded-xl flex items-center justify-center mb-4 text-navy-900 border border-creme-200 font-mono font-bold" aria-hidden="true">
                     &lt;/&gt;
                 </div>
                 <h3 class="text-xl font-bold mb-2 text-navy-900" data-lang="en">Curriculum-as-Code</h3>
@@ -131,7 +131,7 @@
 
             <!-- Featured Repository Card -->
             <div class="bg-white p-8 rounded-2xl border border-creme-200 shadow-sm">
-                <div class="w-10 h-10 bg-creme-100 rounded-xl flex items-center justify-center mb-4 text-navy-900 border border-creme-200 font-mono font-bold">
+                <div class="w-10 h-10 bg-creme-100 rounded-xl flex items-center justify-center mb-4 text-navy-900 border border-creme-200 font-mono font-bold" aria-hidden="true">
                     ⚡
                 </div>
                 <h3 class="text-xl font-bold mb-2 text-navy-900">WPE Digital Toolkit</h3>
@@ -148,7 +148,7 @@
 
             <!-- Articles & Essays Index Card -->
             <div class="bg-white p-8 rounded-2xl border border-creme-200 shadow-sm">
-                <div class="w-10 h-10 bg-creme-100 rounded-xl flex items-center justify-center mb-4 text-navy-900 border border-creme-200 font-mono font-bold">
+                <div class="w-10 h-10 bg-creme-100 rounded-xl flex items-center justify-center mb-4 text-navy-900 border border-creme-200 font-mono font-bold" aria-hidden="true">
                     📝
                 </div>
                 <h3 class="text-xl font-bold mb-2 text-navy-900" data-lang="en">LinkedIn & CaC Essays</h3>
@@ -165,14 +165,18 @@
 
     </main>
 
-    <!-- Footer -->
-    <footer class="w-full max-w-6xl mx-auto px-6 py-8 mt-12 border-t border-creme-200 flex flex-col sm:flex-row justify-between items-center text-xs text-navy-800 gap-4">
-        <div>
-            &copy; <span id="year"></span> Alan Pruitt. All rights reserved.
+    <!-- Unified Footer with Licensing & Links -->
+    <footer class="w-full max-w-6xl mx-auto px-6 py-8 mt-12 border-t border-creme-200 flex flex-col md:flex-row justify-between items-center text-xs text-navy-800 gap-4">
+        <div class="space-y-1 text-center md:text-left">
+            <div>&copy; <span id="year"></span> Alan Pruitt. All rights reserved.</div>
+            <div class="text-navy-800/80">
+                Code licensed under <a href="LICENSE" class="underline hover:text-navy-900">MIT</a>. 
+                Content licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer" class="underline hover:text-navy-900">CC BY 4.0</a>.
+            </div>
         </div>
         <div class="flex space-x-6">
-            <a href="https://github.com/alanyuma-928" target="_blank" rel="noopener noreferrer" class="hover:text-navy-900 transition-colors">GitHub</a>
-            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="hover:text-navy-900 transition-colors">LinkedIn</a>
+            <a href="https://github.com/alanpruitt" target="_blank" rel="noopener noreferrer" class="hover:text-navy-900 transition-colors">GitHub</a>
+            <a href="https://www.linkedin.com/in/alanpruitt/" target="_blank" rel="noopener noreferrer" class="hover:text-navy-900 transition-colors">LinkedIn</a>
             <a href="https://www.webcognita.com" target="_blank" rel="noopener noreferrer" class="hover:text-navy-900 transition-colors">Webcognita</a>
         </div>
     </footer>
@@ -195,12 +199,18 @@
                 
                 btnEn.className = "px-3 py-1 rounded-md transition-all bg-navy-900 text-creme-100 shadow-sm";
                 btnEs.className = "px-3 py-1 rounded-md transition-all text-navy-900 hover:text-navy-800";
+                
+                btnEn.setAttribute('aria-pressed', 'true');
+                btnEs.setAttribute('aria-pressed', 'false');
             } else {
                 esElements.forEach(el => el.classList.remove('hidden-lang'));
                 enElements.forEach(el => el.classList.add('hidden-lang'));
                 
                 btnEs.className = "px-3 py-1 rounded-md transition-all bg-navy-900 text-creme-100 shadow-sm";
                 btnEn.className = "px-3 py-1 rounded-md transition-all text-navy-900 hover:text-navy-800";
+                
+                btnEs.setAttribute('aria-pressed', 'true');
+                btnEn.setAttribute('aria-pressed', 'false');
             }
 
             // Save user preference locally
@@ -214,7 +224,4 @@
         });
     </script>
 </body>
-    <footer class="text-xs text-navy-800">
-  <p>&copy; 2026 Alan Pruitt. Code licensed under <a href="LICENSE" class="underline">MIT</a>. Content licensed under <a href="https://creativecommons.org/licenses/by/4.0/" class="underline">CC BY 4.0</a>.</p>
-</footer>
 </html>
