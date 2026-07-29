@@ -27,10 +27,10 @@
     <meta name="twitter:description" content="Pioneering Curriculum-as-Code (CaC) frameworks and sovereign, human-in-the-loop Generative AI strategies.">
     <meta name="twitter:image" content="https://alanpruitt.com/assets/og-preview.png">
     
-    <!-- Option A: Fast, Lightweight Compiled Tailwind CSS (Zero JS Overhead) -->
+    <!-- Fast Pre-Compiled Tailwind Standard CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" />
-    
-    <!-- Custom Webcognita Theme Tokens & Utility Fallbacks -->
+
+    <!-- Custom Webcognita Token Overrides -->
     <style>
         :root {
             --bg-creme-50: #FAFBF7;
@@ -41,13 +41,11 @@
             --text-navy-950: #060E1A;
         }
 
-        /* Custom Palette Utility Classes */
         .bg-creme-50 { background-color: var(--bg-creme-50); }
         .bg-creme-100 { background-color: var(--bg-creme-100); }
         .bg-creme-200 { background-color: var(--bg-creme-200); }
         .border-creme-100 { border-color: var(--bg-creme-100); }
         .border-creme-200 { border-color: var(--bg-creme-200); }
-        
         .bg-navy-900 { background-color: var(--text-navy-900); }
         .text-navy-800 { color: var(--text-navy-800); }
         .text-navy-900 { color: var(--text-navy-900); }
@@ -58,13 +56,8 @@
         .selection\:bg-navy-900::selection { background-color: var(--text-navy-900); }
         .selection\:text-creme-100::selection { color: var(--bg-creme-100); }
 
-        /* Smooth language visibility transition */
-        [data-lang] {
-            transition: opacity 0.15s ease-in-out;
-        }
-        .hidden-lang {
-            display: none !important;
-        }
+        [data-lang] { transition: opacity 0.15s ease-in-out; }
+        .hidden-lang { display: none !important; }
     </style>
 </head>
 <body class="bg-creme-100 text-navy-900 font-sans antialiased min-h-full flex flex-col justify-between selection:bg-navy-900 selection:text-creme-100">
@@ -94,7 +87,7 @@
         
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             
-            <!-- Hero Card (Spans 2 columns on desktop) -->
+            <!-- Hero Card -->
             <div class="md:col-span-2 bg-white p-8 rounded-2xl border border-creme-200 shadow-sm flex flex-col justify-between">
                 <div>
                     <div class="inline-block px-3 py-1 bg-creme-100 text-navy-900 text-xs font-mono font-bold tracking-wider uppercase rounded-full mb-4 border border-creme-200">
@@ -118,9 +111,9 @@
                 <div class="mt-8 flex flex-wrap items-center gap-3 pt-6 border-t border-creme-100">
                     <span class="text-xs font-mono bg-creme-100 text-navy-900 px-3 py-1.5 rounded-md border border-creme-200">USMC Veteran</span>
                     
-                    <!-- Gemini Certified Faculty Badge (Explicit Dimensions Fixed) -->
+                    <!-- Gemini Certified Faculty Badge -->
                     <div class="inline-flex items-center gap-2 bg-creme-100 px-3 py-1 rounded-md border border-creme-200">
-                        <img src="assets/gemini-certified-faculty-io26.webp" 
+                        <img src="assets/gemini-certified-faculty-IO26.webp" 
                              alt="Google Gemini Certified Faculty Badge" 
                              width="20"
                              height="20"
@@ -196,13 +189,16 @@
                 <p class="text-sm text-navy-800 leading-relaxed mb-4 hidden-lang" data-lang="es">
                     Repositorio canónico de publicaciones sobre diseño de evaluación con IA Generativa, cumplimiento normativo y pedagogía de código abierto.
                 </p>
+                <a href="articles/index.html" class="text-sm font-semibold text-navy-900 hover:underline inline-flex items-center gap-1">
+                    Browse Articles &rarr;
+                </a>
             </div>
 
         </div>
 
     </main>
 
-    <!-- Unified Footer with Licensing & Links -->
+    <!-- Unified Footer -->
     <footer class="w-full max-w-6xl mx-auto px-6 py-8 mt-12 border-t border-creme-200 flex flex-col md:flex-row justify-between items-center text-xs text-navy-800 gap-4">
         <div class="space-y-1 text-center md:text-left">
             <div>&copy; <span id="year"></span> Alan Pruitt. All rights reserved.</div>
@@ -220,10 +216,8 @@
 
     <!-- Client-Side State Script for Language & Year -->
     <script>
-        // Set dynamic copyright year
         document.getElementById('year').textContent = new Date().getFullYear();
 
-        // Language Toggle Controller
         function setLanguage(lang) {
             const enElements = document.querySelectorAll('[data-lang="en"]');
             const esElements = document.querySelectorAll('[data-lang="es"]');
@@ -250,11 +244,9 @@
                 btnEn.setAttribute('aria-pressed', 'false');
             }
 
-            // Save user preference locally
             localStorage.setItem('preferred_lang', lang);
         }
 
-        // Initialize saved language preference on load
         document.addEventListener('DOMContentLoaded', () => {
             const savedLang = localStorage.getItem('preferred_lang') || 'en';
             setLanguage(savedLang);
