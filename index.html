@@ -27,35 +27,37 @@
     <meta name="twitter:description" content="Pioneering Curriculum-as-Code (CaC) frameworks and sovereign, human-in-the-loop Generative AI strategies.">
     <meta name="twitter:image" content="https://alanpruitt.com/assets/og-preview.png">
     
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Option A: Fast, Lightweight Compiled Tailwind CSS (Zero JS Overhead) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" />
     
-    <!-- Custom Palette & Design Tokens -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        creme: {
-                            50: '#FAFBF7',
-                            100: '#F5F5F0', // Webcognita Creme Base
-                            200: '#E6E6DC',
-                        },
-                        navy: {
-                            800: '#1E3E62',
-                            900: '#0B192C', // Webcognita Deep Navy
-                            950: '#060E1A',
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
-                        mono: ['Fira Code', 'monospace']
-                    }
-                }
-            }
-        }
-    </script>
+    <!-- Custom Webcognita Theme Tokens & Utility Fallbacks -->
     <style>
+        :root {
+            --bg-creme-50: #FAFBF7;
+            --bg-creme-100: #F5F5F0;
+            --bg-creme-200: #E6E6DC;
+            --text-navy-800: #1E3E62;
+            --text-navy-900: #0B192C;
+            --text-navy-950: #060E1A;
+        }
+
+        /* Custom Palette Utility Classes */
+        .bg-creme-50 { background-color: var(--bg-creme-50); }
+        .bg-creme-100 { background-color: var(--bg-creme-100); }
+        .bg-creme-200 { background-color: var(--bg-creme-200); }
+        .border-creme-100 { border-color: var(--bg-creme-100); }
+        .border-creme-200 { border-color: var(--bg-creme-200); }
+        
+        .bg-navy-900 { background-color: var(--text-navy-900); }
+        .text-navy-800 { color: var(--text-navy-800); }
+        .text-navy-900 { color: var(--text-navy-900); }
+        .text-creme-50 { color: var(--bg-creme-50); }
+        .text-creme-100 { color: var(--bg-creme-100); }
+        .text-creme-200 { color: var(--bg-creme-200); }
+
+        .selection\:bg-navy-900::selection { background-color: var(--text-navy-900); }
+        .selection\:text-creme-100::selection { color: var(--bg-creme-100); }
+
         /* Smooth language visibility transition */
         [data-lang] {
             transition: opacity 0.15s ease-in-out;
