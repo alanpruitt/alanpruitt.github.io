@@ -90,19 +90,22 @@
             <!-- Hero Card -->
             <div class="md:col-span-2 bg-white p-8 rounded-2xl border border-creme-200 shadow-sm flex flex-col justify-between">
                 <div>
-                    <!-- Top Tag & Gemini Badge Alignment -->
-                    <div class="flex flex-wrap items-center justify-between gap-4 mb-6">
-                        <div class="inline-block px-3 py-1 bg-creme-100 text-navy-900 text-xs font-mono font-bold tracking-wider uppercase rounded-full border border-creme-200">
+                    <!-- Top Tag & Prominent Gemini Badge Callout -->
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+                        <div class="inline-block px-3 py-1 bg-creme-100 text-navy-900 text-xs font-mono font-bold tracking-wider uppercase rounded-full border border-creme-200 self-start">
                             <span data-lang="en">Founder & Chief Curriculum Architect</span>
                             <span data-lang="es" class="hidden-lang">Fundador y Arquitecto Principal de Currículum</span>
                         </div>
                         
-                        <img src="assets/gemini-certified-faculty-io26.webp" 
-                             alt="Google Gemini Certified Faculty Badge" 
-                             width="160"
-                             height="40"
-                             class="h-10 w-auto object-contain" 
-                             loading="eager" />
+                        <!-- Scaled & Legible Gemini Badge -->
+                        <div class="bg-creme-50 p-2 rounded-xl border border-creme-200 inline-flex items-center justify-center self-start sm:self-auto shadow-2xs">
+                            <img src="assets/gemini-certified-faculty-io26.webp" 
+                                 alt="Google Gemini Certified Faculty Badge" 
+                                 width="240"
+                                 height="72"
+                                 class="h-16 w-auto object-contain" 
+                                 loading="eager" />
+                        </div>
                     </div>
 
                     <!-- Personal Branding Header with Sketch Headshot Avatar -->
