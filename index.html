@@ -245,7 +245,7 @@
                 </a>
             </div>
 
-            <!-- Articles & Essays Bento Card (Expanded for All 4 Articles) -->
+            <!-- Articles & Essays Bento Card (Expanded for All 5 Articles) -->
             <div class="bg-white p-8 rounded-2xl border border-creme-200 shadow-sm md:col-span-3">
                 <div class="flex items-center justify-between mb-6 pb-4 border-b border-creme-100">
                     <div class="flex items-center gap-3">
@@ -263,7 +263,7 @@
                     </a>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <!-- Essay 01 Card -->
                     <div class="p-4 rounded-xl bg-creme-50 border border-creme-200 flex flex-col justify-between">
                         <div>
@@ -319,6 +319,20 @@
                         </div>
                         <a href="articles/04-ada-title-ii-accessibility.html" class="text-xs font-semibold text-navy-900 hover:underline">Read Essay &rarr;</a>
                     </div>
+
+                    <!-- Essay 05 Card -->
+                    <div class="p-4 rounded-xl bg-creme-50 border border-creme-200 flex flex-col justify-between md:col-span-2">
+                        <div>
+                            <div class="text-xs font-mono text-navy-800 font-bold mb-1">ESSAY 05</div>
+                            <h4 class="text-base font-bold text-navy-900 mb-2">
+                                <a href="articles/05-instructional-engineering.html" class="hover:underline" data-lang="en">Instructional Engineering: Transforming Curriculum into Source Code</a>
+                                <a href="articles/05-instructional-engineering.html" class="hover:underline hidden-lang" data-lang="es">Ingeniería Instruccional: Transformando el Currículum en Código Fuente</a>
+                            </h4>
+                            <p class="text-xs text-navy-800 leading-relaxed mb-3" data-lang="en">Applying continuous integration, component reusability, and plain-text SSoT to instructional architecture.</p>
+                            <p class="text-xs text-navy-800 leading-relaxed mb-3 hidden-lang" data-lang="es">Aplicando integración continua, reutilización de componentes y SSoT en texto plano a la arquitectura instruccional.</p>
+                        </div>
+                        <a href="articles/05-instructional-engineering.html" class="text-xs font-semibold text-navy-900 hover:underline">Read Essay &rarr;</a>
+                    </div>
                 </div>
             </div>
 
@@ -355,23 +369,18 @@
             if (lang === 'en') {
                 enElements.forEach(el => el.classList.remove('hidden-lang'));
                 esElements.forEach(el => el.classList.add('hidden-lang'));
-                
                 btnEn.className = "px-3 py-1 rounded-md transition-all bg-navy-900 text-creme-100 shadow-sm";
                 btnEs.className = "px-3 py-1 rounded-md transition-all text-navy-900 hover:text-navy-800";
-                
                 btnEn.setAttribute('aria-pressed', 'true');
                 btnEs.setAttribute('aria-pressed', 'false');
             } else {
                 esElements.forEach(el => el.classList.remove('hidden-lang'));
                 enElements.forEach(el => el.classList.add('hidden-lang'));
-                
                 btnEs.className = "px-3 py-1 rounded-md transition-all bg-navy-900 text-creme-100 shadow-sm";
                 btnEn.className = "px-3 py-1 rounded-md transition-all text-navy-900 hover:text-navy-800";
-                
                 btnEs.setAttribute('aria-pressed', 'true');
                 btnEn.setAttribute('aria-pressed', 'false');
             }
-
             localStorage.setItem('preferred_lang', lang);
         }
 
