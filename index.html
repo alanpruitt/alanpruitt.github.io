@@ -56,6 +56,7 @@
         @media (min-width: 768px) {
             .md\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
             .md\:col-span-2 { grid-column: span 2 / span 2; }
+            .md\:col-span-3 { grid-column: span 3 / span 3; }
             .md\:flex-row { flex-direction: row; }
         }
 
@@ -77,6 +78,8 @@
         .text-creme-200 { color: var(--bg-creme-200); }
 
         .p-1 { padding: 0.25rem; }
+        .p-4 { padding: 1rem; }
+        .p-6 { padding: 1.5rem; }
         .p-8 { padding: 2rem; }
         .px-3 { padding-left: 0.75rem; padding-right: 0.75rem; }
         .px-4 { padding-left: 1rem; padding-right: 1rem; }
@@ -114,6 +117,7 @@
         .shadow-sm { box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); }
         .object-cover { object-fit: cover; }
         .flex-shrink-0 { flex-shrink: 0; }
+        .hover\:underline:hover { text-decoration: underline; }
 
         [data-lang] { transition: opacity 0.15s ease-in-out; }
         .hidden-lang { display: none !important; }
@@ -241,22 +245,81 @@
                 </a>
             </div>
 
-            <!-- Articles & Essays Index Card -->
-            <div class="bg-white p-8 rounded-2xl border border-creme-200 shadow-sm">
-                <div class="w-10 h-10 bg-creme-100 rounded-xl flex items-center justify-center mb-4 text-navy-900 border border-creme-200 font-mono font-bold" aria-hidden="true">
-                    📝
+            <!-- Articles & Essays Bento Card (Expanded for All 4 Articles) -->
+            <div class="bg-white p-8 rounded-2xl border border-creme-200 shadow-sm md:col-span-3">
+                <div class="flex items-center justify-between mb-6 pb-4 border-b border-creme-100">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-creme-100 rounded-xl flex items-center justify-center text-navy-900 border border-creme-200 font-mono font-bold" aria-hidden="true">
+                            📝
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-navy-900" data-lang="en">Curriculum-as-Code Essays</h3>
+                            <h3 class="text-xl font-bold text-navy-900 hidden-lang" data-lang="es">Ensayos de Currículum como Código</h3>
+                        </div>
+                    </div>
+                    <a href="articles/index.html" class="text-sm font-semibold text-navy-900 hover:underline inline-flex items-center gap-1">
+                        <span data-lang="en">View All Articles &rarr;</span>
+                        <span data-lang="es" class="hidden-lang">Ver Todos los Artículos &rarr;</span>
+                    </a>
                 </div>
-                <h3 class="text-xl font-bold mb-2 text-navy-900" data-lang="en">LinkedIn & CaC Essays</h3>
-                <h3 class="text-xl font-bold mb-2 text-navy-900 hidden-lang" data-lang="es">Artículos y Ensayos CaC</h3>
-                <p class="text-sm text-navy-800 leading-relaxed mb-4" data-lang="en">
-                    Canonical repository of published writings covering GenAI assessment design, regulatory compliance, and open-source pedagogy.
-                </p>
-                <p class="text-sm text-navy-800 leading-relaxed mb-4 hidden-lang" data-lang="es">
-                    Repositorio canónico de publicaciones sobre diseño de evaluación con IA Generativa, cumplimiento normativo y pedagogía de código abierto.
-                </p>
-                <a href="articles/index.html" class="text-sm font-semibold text-navy-900 hover:underline inline-flex items-center gap-1">
-                    Browse Articles &rarr;
-                </a>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- Essay 01 Card -->
+                    <div class="p-4 rounded-xl bg-creme-50 border border-creme-200 flex flex-col justify-between">
+                        <div>
+                            <div class="text-xs font-mono text-navy-800 font-bold mb-1">ESSAY 01</div>
+                            <h4 class="text-base font-bold text-navy-900 mb-2">
+                                <a href="articles/01-ai-assessment-design.html" class="hover:underline" data-lang="en">Shifting from AI Fear to Strategic Assessment Design</a>
+                                <a href="articles/01-ai-assessment-design.html" class="hover:underline hidden-lang" data-lang="es">Cambiando del Miedo a la IA al Diseño Estratégico de Evaluación</a>
+                            </h4>
+                            <p class="text-xs text-navy-800 leading-relaxed mb-3" data-lang="en">Auditing cognitive processes rather than static outputs in GenAI environments.</p>
+                            <p class="text-xs text-navy-800 leading-relaxed mb-3 hidden-lang" data-lang="es">Auditando el proceso cognitivo en lugar de respuestas estándar.</p>
+                        </div>
+                        <a href="articles/01-ai-assessment-design.html" class="text-xs font-semibold text-navy-900 hover:underline">Read Essay &rarr;</a>
+                    </div>
+
+                    <!-- Essay 02 Card -->
+                    <div class="p-4 rounded-xl bg-creme-50 border border-creme-200 flex flex-col justify-between">
+                        <div>
+                            <div class="text-xs font-mono text-navy-800 font-bold mb-1">ESSAY 02</div>
+                            <h4 class="text-base font-bold text-navy-900 mb-2">
+                                <a href="articles/02-curriculum-as-code.html" class="hover:underline" data-lang="en">Curriculum-as-Code: Treating Educational Content Like Software</a>
+                                <a href="articles/02-curriculum-as-code.html" class="hover:underline hidden-lang" data-lang="es">Currículum como Código: Tratando el Contenido como Software</a>
+                            </h4>
+                            <p class="text-xs text-navy-800 leading-relaxed mb-3" data-lang="en">Git version control, Markdown SSoT, and continuous integration pipelines.</p>
+                            <p class="text-xs text-navy-800 leading-relaxed mb-3 hidden-lang" data-lang="es">Control de versiones Git, Markdown SSoT y tuberías CI/CD.</p>
+                        </div>
+                        <a href="articles/02-curriculum-as-code.html" class="text-xs font-semibold text-navy-900 hover:underline">Read Essay &rarr;</a>
+                    </div>
+
+                    <!-- Essay 03 Card -->
+                    <div class="p-4 rounded-xl bg-creme-50 border border-creme-200 flex flex-col justify-between">
+                        <div>
+                            <div class="text-xs font-mono text-navy-800 font-bold mb-1">ESSAY 03</div>
+                            <h4 class="text-base font-bold text-navy-900 mb-2">
+                                <a href="articles/03-air-gapped-sovereign-ai.html" class="hover:underline" data-lang="en">Air-Gapped & Sovereign AI in High-Compliance Environments</a>
+                                <a href="articles/03-air-gapped-sovereign-ai.html" class="hover:underline hidden-lang" data-lang="es">IA Desconectada y Soberana en Entornos de Alto Cumplimiento</a>
+                            </h4>
+                            <p class="text-xs text-navy-800 leading-relaxed mb-3" data-lang="en">Deploying local Gemma open weights for privacy-first institutional workloads.</p>
+                            <p class="text-xs text-navy-800 leading-relaxed mb-3 hidden-lang" data-lang="es">Desplegando modelos locales Gemma para privacidad absoluta de datos.</p>
+                        </div>
+                        <a href="articles/03-air-gapped-sovereign-ai.html" class="text-xs font-semibold text-navy-900 hover:underline">Read Essay &rarr;</a>
+                    </div>
+
+                    <!-- Essay 04 Card -->
+                    <div class="p-4 rounded-xl bg-creme-50 border border-creme-200 flex flex-col justify-between">
+                        <div>
+                            <div class="text-xs font-mono text-navy-800 font-bold mb-1">ESSAY 04</div>
+                            <h4 class="text-base font-bold text-navy-900 mb-2">
+                                <a href="articles/04-ada-title-ii-accessibility.html" class="hover:underline" data-lang="en">Architecting Born-Accessible Higher Ed: ADA Title II</a>
+                                <a href="articles/04-ada-title-ii-accessibility.html" class="hover:underline hidden-lang" data-lang="es">Educación Superior Nativamente Accesible: Título II de la ADA</a>
+                            </h4>
+                            <p class="text-xs text-navy-800 leading-relaxed mb-3" data-lang="en">Replacing reactive PDF remediation with automated WCAG 2.1 AA compliance.</p>
+                            <p class="text-xs text-navy-800 leading-relaxed mb-3 hidden-lang" data-lang="es">Reemplazando remediación PDF con cumplimiento WCAG 2.1 AA automatizado.</p>
+                        </div>
+                        <a href="articles/04-ada-title-ii-accessibility.html" class="text-xs font-semibold text-navy-900 hover:underline">Read Essay &rarr;</a>
+                    </div>
+                </div>
             </div>
 
         </div>
