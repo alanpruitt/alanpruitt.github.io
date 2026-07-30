@@ -9,11 +9,43 @@
     <priority>1.0</priority>
   </url>
 
-  <!-- Articles & Essays Index -->
+  <!-- Articles & Essays Index Hub -->
   <url>
     <loc>https://alanpruitt.com/articles/index.html</loc>
     <lastmod>2026-07-30</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Essay 01: GenAI Assessment Design -->
+  <url>
+    <loc>https://alanpruitt.com/articles/01-ai-assessment-design.html</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Essay 02: Curriculum-as-Code -->
+  <url>
+    <loc>https://alanpruitt.com/articles/02-curriculum-as-code.html</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Essay 03: Air-Gapped & Sovereign AI -->
+  <url>
+    <loc>https://alanpruitt.com/articles/03-air-gapped-sovereign-ai.html</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Essay 04: ADA Title II & Digital Accessibility -->
+  <url>
+    <loc>https://alanpruitt.com/articles/04-ada-title-ii-accessibility.html</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
