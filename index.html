@@ -6,10 +6,10 @@
     <title>Alan Pruitt | Curriculum Architect & AI Strategist</title>
     <meta name="description" content="Personal portfolio and Curriculum-as-Code repository of Alan Pruitt.">
 
-    <!-- Favicon (Inline Deep Navy SVG) -->
+    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%230B192C'/></svg>">
 
-    <!-- OpenGraph Meta Tags (LinkedIn, Facebook, Slack) -->
+    <!-- OpenGraph Meta Tags -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Alan Pruitt">
     <meta property="og:title" content="Alan Pruitt | Curriculum Architect & AI Strategist">
@@ -21,16 +21,13 @@
     <meta property="og:locale" content="en_US">
     <meta property="og:locale:alternate" content="es_MX">
 
-    <!-- Twitter / X Card Meta Tags -->
+    <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Alan Pruitt | Curriculum Architect & AI Strategist">
     <meta name="twitter:description" content="Pioneering Curriculum-as-Code (CaC) frameworks and sovereign, human-in-the-loop Generative AI strategies.">
     <meta name="twitter:image" content="https://alanpruitt.com/assets/og-preview.png">
-    
-    <!-- Fast Pre-Compiled Tailwind Standard CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" />
 
-    <!-- Custom Webcognita Token Overrides -->
+    <!-- Inlined Zero-JS Pure Critical CSS -->
     <style>
         :root {
             --bg-creme-50: #FAFBF7;
@@ -41,26 +38,88 @@
             --text-navy-950: #060E1A;
         }
 
+        *, ::before, ::after { box-sizing: border-width: 0; box-sizing: border-box; }
+        html { line-height: 1.5; -webkit-text-size-adjust: 100%; tab-size: 4; font-family: Inter, -apple-system, sans-serif; }
+        body { margin: 0; background-color: var(--bg-creme-100); color: var(--text-navy-900); }
+
+        .w-full { width: 100%; }
+        .max-w-6xl { max-width: 72rem; }
+        .mx-auto { margin-left: auto; margin-right: auto; }
+        .flex { display: flex; }
+        .flex-col { flex-direction: column; }
+        .flex-grow { flex-grow: 1; }
+        .items-center { align-items: center; }
+        .justify-between { justify-content: space-between; }
+        .grid { display: grid; }
+        .grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+
+        @media (min-width: 768px) {
+            .md\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+            .md\:col-span-2 { grid-column: span 2 / span 2; }
+            .md\:flex-row { flex-direction: row; }
+        }
+
+        .gap-3 { gap: 0.75rem; }
+        .gap-4 { gap: 1rem; }
+        .gap-5 { gap: 1.25rem; }
+        .gap-6 { gap: 1.5rem; }
+
+        .bg-white { background-color: #ffffff; }
         .bg-creme-50 { background-color: var(--bg-creme-50); }
         .bg-creme-100 { background-color: var(--bg-creme-100); }
         .bg-creme-200 { background-color: var(--bg-creme-200); }
-        .border-creme-100 { border-color: var(--bg-creme-100); }
-        .border-creme-200 { border-color: var(--bg-creme-200); }
         .bg-navy-900 { background-color: var(--text-navy-900); }
+
         .text-navy-800 { color: var(--text-navy-800); }
         .text-navy-900 { color: var(--text-navy-900); }
         .text-creme-50 { color: var(--bg-creme-50); }
         .text-creme-100 { color: var(--bg-creme-100); }
         .text-creme-200 { color: var(--bg-creme-200); }
 
-        .selection\:bg-navy-900::selection { background-color: var(--text-navy-900); }
-        .selection\:text-creme-100::selection { color: var(--bg-creme-100); }
+        .p-1 { padding: 0.25rem; }
+        .p-8 { padding: 2rem; }
+        .px-3 { padding-left: 0.75rem; padding-right: 0.75rem; }
+        .px-4 { padding-left: 1rem; padding-right: 1rem; }
+        .px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+        .py-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+        .py-1\.5 { padding-top: 0.375rem; padding-bottom: 0.375rem; }
+        .py-3 { padding-top: 0.75rem; padding-bottom: 0.75rem; }
+        .py-6 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+        .py-8 { padding-top: 2rem; padding-bottom: 2rem; }
+
+        .border { border-style: solid; border-width: 1px; }
+        .border-t { border-top-style: solid; border-top-width: 1px; }
+        .border-b { border-bottom-style: solid; border-bottom-width: 1px; }
+        .border-2 { border-style: solid; border-width: 2px; }
+        .border-creme-100 { border-color: var(--bg-creme-100); }
+        .border-creme-200 { border-color: var(--bg-creme-200); }
+
+        .rounded-full { border-radius: 9999px; }
+        .rounded-lg { border-radius: 0.5rem; }
+        .rounded-xl { border-radius: 0.75rem; }
+        .rounded-2xl { border-radius: 1rem; }
+
+        .font-sans { font-family: Inter, sans-serif; }
+        .font-mono { font-family: 'Fira Code', monospace; }
+        .font-semibold { font-weight: 600; }
+        .font-bold { font-weight: 700; }
+        .font-extrabold { font-weight: 800; }
+        .text-xs { font-size: 0.75rem; line-height: 1rem; }
+        .text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+        .text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+        .text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+        .text-2xl { font-size: 1.5rem; line-height: 2rem; }
+        .text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+
+        .shadow-sm { box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); }
+        .object-cover { object-fit: cover; }
+        .flex-shrink-0 { flex-shrink: 0; }
 
         [data-lang] { transition: opacity 0.15s ease-in-out; }
         .hidden-lang { display: none !important; }
     </style>
 </head>
-<body class="bg-creme-100 text-navy-900 font-sans antialiased min-h-full flex flex-col justify-between selection:bg-navy-900 selection:text-creme-100">
+<body class="bg-creme-100 text-navy-900 font-sans antialiased min-h-full flex flex-col justify-between">
 
     <!-- Header / Navigation Bar -->
     <header class="w-full max-w-6xl mx-auto px-6 py-6 flex justify-between items-center border-b border-creme-200">
@@ -71,7 +130,7 @@
             </a>
         </div>
         
-        <!-- Language Toggle (WCAG AA Accessible) -->
+        <!-- Language Toggle -->
         <div class="flex items-center bg-creme-200 p-1 rounded-lg border border-creme-200 text-sm font-semibold" role="group" aria-label="Language selector">
             <button id="btn-en" onclick="setLanguage('en')" aria-label="Switch language to English" class="px-3 py-1 rounded-md transition-all bg-navy-900 text-creme-100 shadow-sm">
                 EN
@@ -82,7 +141,7 @@
         </div>
     </header>
 
-    <!-- Main Content Grid (Bento Grid) -->
+    <!-- Main Content Grid -->
     <main class="w-full max-w-6xl mx-auto px-6 py-8 flex-grow">
         
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -96,14 +155,15 @@
                         <span data-lang="es" class="hidden-lang">Fundador y Arquitecto Principal de Currículum</span>
                     </div>
 
-                    <!-- Personal Branding Header with Sketch Headshot Avatar -->
+                    <!-- Personal Branding Header with Headshot -->
                     <div class="flex items-center gap-5 mb-6">
                         <img src="assets/Coach-Alan-Sketch-Headshot.webp" 
                              alt="Alan Pruitt Sketch Portrait" 
                              width="80" 
                              height="80" 
                              class="w-20 h-20 rounded-full border-2 border-creme-200 object-cover shadow-sm bg-creme-100 flex-shrink-0" 
-                             loading="eager" />
+                             loading="eager" 
+                             decoding="async" />
                         <div>
                             <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-navy-900 leading-tight">
                                 Alan Pruitt
@@ -131,7 +191,7 @@
                 </div>
             </div>
 
-            <!-- Strategic Enterprise Card (Webcognita Link) -->
+            <!-- Commercial Card -->
             <div class="bg-navy-900 text-creme-100 p-8 rounded-2xl shadow-sm flex flex-col justify-between">
                 <div>
                     <span class="text-xs font-mono text-creme-200 uppercase tracking-widest block mb-2">Commercial Practice</span>
@@ -149,7 +209,7 @@
                 </a>
             </div>
 
-            <!-- Curriculum-as-Code Manifesto Card -->
+            <!-- CaC Manifesto Card -->
             <div class="bg-white p-8 rounded-2xl border border-creme-200 shadow-sm">
                 <div class="w-10 h-10 bg-creme-100 rounded-xl flex items-center justify-center mb-4 text-navy-900 border border-creme-200 font-mono font-bold" aria-hidden="true">
                     &lt;/&gt;
@@ -203,7 +263,7 @@
 
     </main>
 
-    <!-- Unified Footer -->
+    <!-- Footer -->
     <footer class="w-full max-w-6xl mx-auto px-6 py-8 mt-12 border-t border-creme-200 flex flex-col md:flex-row justify-between items-center text-xs text-navy-800 gap-4">
         <div class="space-y-1 text-center md:text-left">
             <div>&copy; <span id="year"></span> Alan Pruitt. All rights reserved.</div>
@@ -219,7 +279,7 @@
         </div>
     </footer>
 
-    <!-- Client-Side State Script for Language & Year -->
+    <!-- Client Script -->
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
 
