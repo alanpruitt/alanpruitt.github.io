@@ -1,0 +1,6 @@
+# Allow all search engines and web crawlers to index the entire site
+User-agent: *
+Allow: /
+
+# Canonical XML Sitemap for Google Search Console & Search Engines
+Sitemap: https://alanpruitt.com/sitemap.xml
