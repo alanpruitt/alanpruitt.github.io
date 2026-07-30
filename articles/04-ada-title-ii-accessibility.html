@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Architecting Born-Accessible Higher Ed: ADA Title II & Curriculum-as-Code | Alan Pruitt</title>
+    <meta name="description" content="How Curriculum-as-Code paradigms solve systemic ADA Title II and Section 508 compliance issues by embedding automated WCAG 2.1 AA validation into plain-text instructional pipelines.">
+
+    <!-- Favicon (Inline Deep Navy SVG) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%230B192C'/></svg>">
+
+    <!-- OpenGraph Meta Tags -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Alan Pruitt">
+    <meta property="og:title" content="Architecting Born-Accessible Higher Ed: ADA Title II & Curriculum-as-Code">
+    <meta property="og:description" content="Automating WCAG 2.1 AA and Section 508 compliance using markdown single sources of truth and CI/CD validation.">
+    <meta property="og:url" content="https://alanpruitt.com/articles/04-ada-title-ii-accessibility.html">
+    <meta property="og:image" content="https://alanpruitt.com/assets/og-preview.png">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Architecting Born-Accessible Higher Ed: ADA Title II & Curriculum-as-Code">
+    <meta name="twitter:description" content="Automating WCAG 2.1 AA compliance in higher education through Curriculum-as-Code.">
+    <meta name="twitter:image" content="https://alanpruitt.com/assets/og-preview.png">
+
+    <!-- Inlined Zero-JS Pure Critical CSS (100/100 Lighthouse Compliant) -->
+    <style>
+        :root {
+            --bg-creme-50: #FAFBF7;
+            --bg-creme-100: #F5F5F0;
+            --bg-creme-200: #E6E6DC;
+            --text-navy-800: #1E3E62;
+            --text-navy-900: #0B192C;
+            --text-navy-950: #060E1A;
+        }
+
+        *, ::before, ::after { box-sizing: border-box; border-width: 0; border-style: solid; }
+        html { line-height: 1.5; -webkit-text-size-adjust: 100%; tab-size: 4; font-family: Inter, -apple-system, sans-serif; }
+        body { margin: 0; background-color: var(--bg-creme-100); color: var(--text-navy-900); }
+
+        .w-full { width: 100%; }
+        .max-w-4xl { max-width: 56rem; }
+        .max-w-3xl { max-width: 48rem; }
+        .mx-auto { margin-left: auto; margin-right: auto; }
+        .flex { display: flex; }
+        .flex-col { flex-direction: column; }
+        .flex-grow { flex-grow: 1; }
+        .flex-wrap { flex-wrap: wrap; }
+        .items-center { align-items: center; }
+        .justify-between { justify-content: space-between; }
+        .space-x-3 > :not([hidden]) ~ :not([hidden]) { margin-left: 0.75rem; }
+        .space-x-6 > :not([hidden]) ~ :not([hidden]) { margin-left: 1.5rem; }
+
+        @media (min-width: 768px) {
+            .md\:flex-row { flex-direction: row; }
+        }
+
+        .gap-2 { gap: 0.5rem; }
+        .gap-3 { gap: 0.75rem; }
+
+        .bg-white { background-color: #ffffff; }
+        .bg-creme-50 { background-color: var(--bg-creme-50); }
+        .bg-creme-100 { background-color: var(--bg-creme-100); }
+        .bg-creme-200 { background-color: var(--bg-creme-200); }
+        .bg-navy-900 { background-color: var(--text-navy-900); }
+
+        .text-navy-800 { color: var(--text-navy-800); }
+        .text-navy-900 { color: var(--text-navy-900); }
+        .text-creme-100 { color: var(--bg-creme-100); }
+        .text-creme-200 { color: var(--bg-creme-200); }
+        .text-green-700 { color: #15803d; }
+
+        .p-1 { padding: 0.25rem; }
+        .p-8 { padding: 2rem; }
+        .px-2\.5 { padding-left: 0.625rem; padding-right: 0.625rem; }
+        .px-3 { padding-left: 0.75rem; padding-right: 0.75rem; }
+        .px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+        .py-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+        .py-6 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+        .py-8 { padding-top: 2rem; padding-bottom: 2rem; }
+        .py-10 { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+        
+        .mb-3 { margin-bottom: 0.75rem; }
+        .mb-4 { margin-bottom: 1rem; }
+        .mb-8 { margin-bottom: 2rem; }
+        .mt-6 { margin-top: 1.5rem; }
+        .mt-12 { margin-top: 3rem; }
+        .pt-4 { padding-top: 1rem; }
+        .pt-6 { padding-top: 1.5rem; }
+
+        .border { border-style: solid; border-width: 1px; }
+        .border-t { border-top-style: solid; border-top-width: 1px; }
+        .border-b { border-bottom-style: solid; border-bottom-width: 1px; }
+        .border-l-4 { border-left-style: solid; border-left-width: 4px; }
+        .border-creme-100 { border-color: var(--bg-creme-100); }
+        .border-creme-200 { border-color: var(--bg-creme-200); }
+
+        .rounded-md { border-radius: 0.375rem; }
+        .rounded-lg { border-radius: 0.5rem; }
+        .rounded-2xl { border-radius: 1rem; }
+
+        .font-sans { font-family: Inter, -apple-system, sans-serif; }
+        .font-mono { font-family: 'Fira Code', monospace; }
+        .font-semibold { font-weight: 600; }
+        .font-bold { font-weight: 700; }
+        .font-extrabold { font-weight: 800; }
+
+        .text-xs { font-size: 0.75rem; line-height: 1rem; }
+        .text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+        .text-base { font-size: 1rem; line-height: 1.5rem; }
+        .text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+        .text-2xl { font-size: 1.5rem; line-height: 2rem; }
+        .text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+
+        @media (min-width: 640px) {
+            .sm\:text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+            .sm\:p-12 { padding: 3rem; }
+        }
+
+        .tracking-tight { letter-spacing: -0.025em; }
+        .leading-tight { line-height: 1.25; }
+        .leading-relaxed { line-height: 1.7; }
+        .shadow-sm { box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); }
+
+        .hover\:underline:hover { text-decoration: underline; }
+        .hover\:text-navy-800:hover { color: var(--text-navy-800); }
+        .hover\:text-navy-900:hover { color: var(--text-navy-900); }
+        .inline-block { display: inline-block; }
+        .inline-flex { display: inline-flex; }
+
+        /* Typography & Long-form Article Styles */
+        .article-body p { margin-bottom: 1.5rem; color: var(--text-navy-800); font-size: 1.0625rem; line-height: 1.75; }
+        .article-body h2 { font-size: 1.5rem; font-weight: 700; color: var(--text-navy-900); margin-top: 2.5rem; margin-bottom: 1rem; letter-spacing: -0.02em; }
+        .article-body h3 { font-size: 1.25rem; font-weight: 700; color: var(--text-navy-900); margin-top: 2rem; margin-bottom: 0.75rem; }
+        .article-body ul { margin-bottom: 1.5rem; padding-left: 1.5rem; color: var(--text-navy-800); list-style-type: disc; }
+        .article-body li { margin-bottom: 0.5rem; font-size: 1.0625rem; line-height: 1.6; }
+        .article-body blockquote { background-color: var(--bg-creme-50); border-left: 4px solid var(--text-navy-900); padding: 1.25rem 1.5rem; margin-top: 2rem; margin-bottom: 2rem; border-radius: 0 0.5rem 0.5rem 0; }
+        .article-body blockquote p { margin-bottom: 0; font-size: 1rem; font-weight: 600; color: var(--text-navy-900); }
+
+        [data-lang] { transition: opacity 0.15s ease-in-out; }
+        .hidden-lang { display: none !important; }
+    </style>
+</head>
+<body class="bg-creme-100 text-navy-900 font-sans antialiased min-h-full flex flex-col justify-between">
+
+    <!-- Header / Navigation Bar -->
+    <header class="w-full max-w-4xl mx-auto px-6 py-6 flex justify-between items-center border-b border-creme-200">
+        <div class="flex items-center space-x-3">
+            <span class="w-3 h-3 bg-navy-900 rounded-full inline-block" aria-hidden="true"></span>
+            <a href="../index.html" class="text-xl font-bold tracking-tight text-navy-900 hover:text-navy-800 transition-colors">
+                alanpruitt.com
+            </a>
+            <span class="text-creme-200">/</span>
+            <a href="index.html" class="text-sm font-mono text-navy-800 font-semibold hover:underline">
+                articles
+            </a>
+        </div>
+        
+        <!-- Language Toggle -->
+        <div class="flex items-center bg-creme-200 p-1 rounded-lg border border-creme-200 text-sm font-semibold" role="group" aria-label="Language selector">
+            <button id="btn-en" onclick="setLanguage('en')" aria-label="Switch language to English" class="px-3 py-1 rounded-md bg-navy-900 text-creme-100 shadow-sm">EN</button>
+            <button id="btn-es" onclick="setLanguage('es')" aria-label="Cambiar idioma a Español" class="px-3 py-1 rounded-md text-navy-900 hover:text-navy-800">ES</button>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="w-full max-w-3xl mx-auto px-6 py-10 flex-grow">
+        
+        <article class="bg-white p-8 sm:p-12 rounded-2xl border border-creme-200 shadow-sm">
+            
+            <!-- Article Header Metadata -->
+            <header class="mb-8 pb-8 border-b border-creme-100">
+                <div class="flex flex-wrap items-center gap-3 mb-4 text-xs font-mono text-navy-800">
+                    <span class="px-2.5 py-1 bg-navy-900 text-creme-100 font-bold rounded-md">ESSAY 04</span>
+                    <span>July 2026</span>
+                    <span aria-hidden="true">•</span>
+                    <span>8 min read</span>
+                    <span aria-hidden="true">•</span>
+                    <span class="text-green-700 font-semibold">Source: Markdown SSoT</span>
+                </div>
+
+                <h1 class="text-3xl sm:text-4xl font-extrabold text-navy-900 tracking-tight leading-tight mb-4">
+                    <span data-lang="en">Architecting Born-Accessible Higher Ed: ADA Title II & Curriculum-as-Code</span>
+                    <span data-lang="es" class="hidden-lang">Arquitectura de Educación Superior Nativamente Accesible: Título II de la ADA y Currículum como Código</span>
+                </h1>
+
+                <p class="text-lg text-navy-800 leading-relaxed font-medium" data-lang="en">
+                    Under Title II of the ADA and Section 508 of the Rehabilitation Act, digital accessibility is a strict legal mandate for every content author. Here is how Curriculum-as-Code paradigms replace reactive remediation with automated compliance.
+                </p>
+                <p class="text-lg text-navy-800 leading-relaxed font-medium hidden-lang" data-lang="es">
+                    Bajo el Título II de la ADA y la Sección 508, la accesibilidad digital es un mandato legal estricto. Vea cómo los paradigmas de Currículum como Código reemplazan la remediación reactiva con el cumplimiento automatizado.
+                </p>
+
+                <div class="mt-6 flex flex-wrap gap-2">
+                    <span class="text-xs font-mono bg-creme-100 text-navy-900 px-2.5 py-1 rounded-md border border-creme-200">ADA Title II</span>
+                    <span class="text-xs font-mono bg-creme-100 text-navy-900 px-2.5 py-1 rounded-md border border-creme-200">WCAG 2.1 AA</span>
+                    <span class="text-xs font-mono bg-creme-100 text-navy-900 px-2.5 py-1 rounded-md border border-creme-200">Section 508</span>
+                </div>
+            </header>
+
+            <!-- English Article Content -->
+            <div class="article-body" data-lang="en">
+                <p>
+                    Under Title II of the Americans with Disabilities Act (ADA) and Section 508 of the Rehabilitation Act, public colleges and universities are legally bound to ensure that all digital content—from course syllabi to web applications—is fully accessible. Accessibility is no longer an optional task delegated to disability support offices; it is the immediate responsibility of every faculty member, instructional designer, and content creator across the institution.
+                </p>
+                
+                <p>
+                    However, the traditional higher education approach to compliance relies heavily on <em>reactive remediation</em>: scanning unstructured PDFs, manually adding alt text to WYSIWYG editors, or re-formatting course shells right before a semester begins. This approach fails at scale. To achieve true compliance, higher education must move to a <strong>born-accessible</strong> engineering model powered by <strong>Curriculum-as-Code (CaC)</strong>.
+                </p>
+
+                <h2>The Failure of Reactive PDF and LMS Workflows</h2>
+
+                <p>
+                    For decades, the standard method for distributing course materials has involved converting desktop documents to PDFs or typing content into closed Learning Management System (LMS) rich-text containers.
+                </p>
+
+                <ul>
+                    <li><strong>PDF Inaccessibility:</strong> Exported PDFs frequently drop logical reading order, strip out proper heading tags (`H1`-`H3`), and generate unlabelled form fields, making them unusable for screen reader users.</li>
+                    <li><strong>WYSIWYG Fragmentation:</strong> Rich-text LMS editors permit inconsistent heading hierarchies, arbitrary color choices that fail WCAG contrast ratios, and inline layout hacks that break responsive reflow.</li>
+                </ul>
+
+                <blockquote>
+                    <p>Retrofitting accessibility onto proprietary binary files or fragmented rich-text editors is expensive and prone to failure. True compliance requires generating accessible outputs automatically from a clean source.</p>
+                </blockquote>
+
+                <h2>How Curriculum-as-Code Enforces WCAG 2.1 AA Standards</h2>
+
+                <p>
+                    Curriculum-as-Code decouples instructional content from display formatting by maintaining all educational assets in plain-text Markdown single sources of truth (SSoT). Plain-text Markdown enforces semantic structure by default:
+                </p>
+
+                <ul>
+                    <li><strong>Semantic Structure Enforcement:</strong> Markdown inherently requires strict document hierarchy (`#`, `##`, `###`), forcing authors to build proper heading trees that screen readers rely on for navigation.</li>
+                    <li><strong>Automated Alt-Text Auditing:</strong> CI/CD build pipelines analyze image references in real time. If an author attempts to merge a lab manual without specifying meaningful image alt text, the build fails automatically.</li>
+                    <li><strong>Born-Accessible HTML Output:</strong> During automated compilation, the Markdown SSoT compiles into clean, semantic HTML5 containing proper ARIA landmarks, WCAG 2.1 AA compliant color contrast ratios, and responsive text reflow without horizontal scrolling.</li>
+                </ul>
+
+                <h2>Institutional Scale and Continuous Audit Trails</h2>
+
+                <p>
+                    When instructional content is managed as source code in Git repositories, compliance officers and department chairs gain something previously impossible in traditional LMS environments: <strong>continuous, automated audit trails</strong>.
+                </p>
+
+                <p>
+                    Every revision to a course syllabus or lab guide generates a version-controlled commit. Automated linting scripts audit the entire institutional curriculum for accessibility compliance continuously on every push. By shifting from manual retroactive checks to automated Curriculum-as-Code pipelines, institutions eliminate legal exposure under ADA Title II while guaranteeing equal access for all learners.
+                </p>
+            </div>
+
+            <!-- Spanish Article Content -->
+            <div class="article-body hidden-lang" data-lang="es">
+                <p>
+                    Bajo el Título II de la Ley sobre Estadounidenses con Discapacidades (ADA) y la Sección 508 de la Ley de Rehabilitación, las instituciones de educación superior públicas están obligadas legalmente a garantizar que todo el contenido digital sea totalmente accesible. La accesibilidad ya no es una tarea opcional; es responsabilidad directa de cada creador de contenido en todos los departamentos.
+                </p>
+                
+                <p>
+                    Sin embargo, el enfoque tradicional de cumplimiento se apoya en la <em>remediación reactiva</em>: escanear archivos PDF no estructurados o modificar manualmente editores WYSIWYG antes de iniciar el semestre. Este modelo falla a gran escala. Para lograr un cumplimiento genuino, debemos migrar a un modelo de ingeniería <strong>nativamente accesible</strong> impulsado por el <strong>Currículum como Código (CaC)</strong>.
+                </p>
+
+                <h2>El Fracaso de los Flujos de Trabajo Basados en PDF y LMS</h2>
+
+                <p>
+                    Durante décadas, el método estándar para distribuir materiales ha sido convertir documentos de escritorio a PDF o escribir contenido en contenedores rich-text dentro de un LMS.
+                </p>
+
+                <ul>
+                    <li><strong>Inaccesibilidad del PDF:</strong> Los PDF exportados frecuentemente pierden el orden de lectura lógico, eliminan etiquetas de encabezado correctas (`H1`-`H3`) y generan campos no etiquetados.</li>
+                    <li><strong>Fragmentación WYSIWYG:</strong> Los editores de texto enriquecido permiten jerarquías inconsistentes, combinaciones de color que violan las tasas de contraste de WCAG y formatos que rompen el diseño adaptativo.</li>
+                </ul>
+
+                <blockquote>
+                    <p>Adaptar la accesibilidad de manera retroactiva en archivos binarios propietarios es costoso y propenso a errores. El cumplimiento real exige generar formatos accesibles de forma automatizada desde una fuente limpia.</p>
+                </blockquote>
+
+                <h2>Cómo el Currículum como Código Impone el Estándar WCAG 2.1 AA</h2>
+
+                <p>
+                    El Currículum como Código separa el contenido educativo del formato visual al mantener los materiales en texto plano Markdown como fuentes únicas de verdad (SSoT). El texto plano impone una estructura semántica por definición:
+                </p>
+
+                <ul>
+                    <li><strong>Estructura Semántica Obligatoria:</strong> Markdown requiere una jerarquía estricta (`#`, `##`, `###`), obligando a los autores a construir árboles de encabezados adecuados para lectores de pantalla.</li>
+                    <li><strong>Auditoría Automatizada de Texto Alternativo:</strong> Las tuberías de integración continua (CI/CD) analizan las referencias de imágenes. Si falta el texto alternativo, la compilación falla automáticamente.</li>
+                    <li><strong>Formatos Nativamente Accesibles:</strong> Durante la compilación automatizada, el Markdown SSoT se transforma en HTML5 limpio con etiquetas ARIA adecuadas y un contraste de color conforme a WCAG 2.1 AA.</li>
+                </ul>
+
+                <h2>Escala Institucional y Trazabilidad Continua</h2>
+
+                <p>
+                    Al gestionar el contenido instruccional como código fuente en repositorios Git, los responsables de cumplimiento y jefes de departamento obtienen <strong>registros de auditoría continuos y automatizados</strong>.
+                </p>
+
+                <p>
+                    Cada revisión de un programa de estudios genera un commit controlado por versiones. Los scripts de validación auditan continuamente todo el currículum institucional en cada actualización. Al sustituir las revisiones manuales por tuberías automatizadas de Currículum como Código, las instituciones eliminan el riesgo legal bajo el Título II de la ADA garantizando el acceso equitativo para todos los estudiantes.
+                </p>
+            </div>
+
+            <!-- Article Footer Navigation -->
+            <footer class="mt-12 pt-6 border-t border-creme-100 flex items-center justify-between">
+                <a href="index.html" class="text-sm font-semibold text-navy-900 hover:underline inline-flex items-center gap-1">
+                    &larr; <span data-lang="en">Back to Articles</span><span data-lang="es" class="hidden-lang">Volver a Artículos</span>
+                </a>
+                <a href="https://www.linkedin.com/in/alanpruitt/" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-navy-900 hover:underline">
+                    <span data-lang="en">Discuss on LinkedIn &rarr;</span><span data-lang="es" class="hidden-lang">Discutir en LinkedIn &rarr;</span>
+                </a>
+            </footer>
+
+        </article>
+
+    </main>
+
+    <!-- Unified Footer -->
+    <footer class="w-full max-w-4xl mx-auto px-6 py-8 mt-12 border-t border-creme-200 flex flex-col md:flex-row justify-between items-center text-xs text-navy-800 gap-4">
+        <div class="space-y-1 text-center md:text-left">
+            <div>&copy; <span id="year"></span> Alan Pruitt. All rights reserved.</div>
+            <div class="text-navy-800">
+                Code licensed under <a href="../LICENSE" class="hover:underline hover:text-navy-900">MIT</a>. 
+                Content licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer" class="hover:underline hover:text-navy-900">CC BY 4.0</a>.
+            </div>
+        </div>
+        <div class="flex space-x-6">
+            <a href="https://github.com/alanpruitt" target="_blank" rel="noopener noreferrer" class="hover:text-navy-900">GitHub</a>
+            <a href="https://www.linkedin.com/in/alanpruitt/" target="_blank" rel="noopener noreferrer" class="hover:text-navy-900">LinkedIn</a>
+            <a href="https://www.webcognita.com" target="_blank" rel="noopener noreferrer" class="hover:text-navy-900">Webcognita</a>
+        </div>
+    </footer>
+
+    <!-- Client-Side Language Toggle & Year Script -->
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        function setLanguage(lang) {
+            const enElements = document.querySelectorAll('[data-lang="en"]');
+            const esElements = document.querySelectorAll('[data-lang="es"]');
+            const btnEn = document.getElementById('btn-en');
+            const btnEs = document.getElementById('btn-es');
+
+            if (lang === 'en') {
+                enElements.forEach(el => el.classList.remove('hidden-lang'));
+                esElements.forEach(el => el.classList.add('hidden-lang'));
+                btnEn.className = "px-3 py-1 rounded-md bg-navy-900 text-creme-100 shadow-sm";
+                btnEs.className = "px-3 py-1 rounded-md text-navy-900 hover:text-navy-800";
+                btnEn.setAttribute('aria-pressed', 'true');
+                btnEs.setAttribute('aria-pressed', 'false');
+            } else {
+                esElements.forEach(el => el.classList.remove('hidden-lang'));
+                enElements.forEach(el => el.classList.add('hidden-lang'));
+                btnEs.className = "px-3 py-1 rounded-md bg-navy-900 text-creme-100 shadow-sm";
+                btnEn.className = "px-3 py-1 rounded-md text-navy-900 hover:text-navy-800";
+                btnEs.setAttribute('aria-pressed', 'true');
+                btnEn.setAttribute('aria-pressed', 'false');
+            }
+            localStorage.setItem('preferred_lang', lang);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('preferred_lang') || 'en';
+            setLanguage(savedLang);
+        });
+    </script>
+</body>
+</html>
