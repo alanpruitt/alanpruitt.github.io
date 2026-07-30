@@ -17,40 +17,119 @@
     <meta property="og:url" content="https://alanpruitt.com/articles/">
     <meta property="og:image" content="https://alanpruitt.com/assets/og-preview.png">
 
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Design Tokens Matching Webcognita Palette -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        creme: {
-                            50: '#FAFBF7',
-                            100: '#F5F5F0', // Webcognita Base
-                            200: '#E6E6DC',
-                        },
-                        navy: {
-                            800: '#1E3E62',
-                            900: '#0B192C', // Deep Navy Primary
-                            950: '#060E1A',
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
-                        mono: ['Fira Code', 'monospace']
-                    }
-                }
-            }
-        }
-    </script>
+    <!-- Inlined Zero-JS Pure Critical CSS (Matches 100/100 Landing Standard) -->
     <style>
+        :root {
+            --bg-creme-50: #FAFBF7;
+            --bg-creme-100: #F5F5F0;
+            --bg-creme-200: #E6E6DC;
+            --text-navy-800: #1E3E62;
+            --text-navy-900: #0B192C;
+            --text-navy-950: #060E1A;
+        }
+
+        *, ::before, ::after { box-sizing: border-box; border-width: 0; border-style: solid; }
+        html { line-height: 1.5; -webkit-text-size-adjust: 100%; tab-size: 4; font-family: Inter, -apple-system, sans-serif; }
+        body { margin: 0; background-color: var(--bg-creme-100); color: var(--text-navy-900); }
+
+        .w-full { width: 100%; }
+        .max-w-5xl { max-width: 64rem; }
+        .max-w-2xl { max-width: 42rem; }
+        .mx-auto { margin-left: auto; margin-right: auto; }
+        .flex { display: flex; }
+        .flex-col { flex-direction: column; }
+        .flex-grow { flex-grow: 1; }
+        .flex-wrap { flex-wrap: wrap; }
+        .items-center { align-items: center; }
+        .justify-between { justify-content: space-between; }
+        .space-x-3 > :not([hidden]) ~ :not([hidden]) { margin-left: 0.75rem; }
+        .space-x-6 > :not([hidden]) ~ :not([hidden]) { margin-left: 1.5rem; }
+        .space-y-6 > :not([hidden]) ~ :not([hidden]) { margin-top: 1.5rem; }
+        .space-y-1 > :not([hidden]) ~ :not([hidden]) { margin-top: 0.25rem; }
+
+        @media (min-width: 768px) {
+            .md\:flex-row { flex-direction: row; }
+        }
+
+        .gap-1 { gap: 0.25rem; }
+        .gap-2 { gap: 0.5rem; }
+        .gap-3 { gap: 0.75rem; }
+        .gap-4 { gap: 1rem; }
+
+        .bg-white { background-color: #ffffff; }
+        .bg-creme-50 { background-color: var(--bg-creme-50); }
+        .bg-creme-100 { background-color: var(--bg-creme-100); }
+        .bg-creme-200 { background-color: var(--bg-creme-200); }
+        .bg-navy-900 { background-color: var(--text-navy-900); }
+
+        .text-navy-800 { color: var(--text-navy-800); }
+        .text-navy-900 { color: var(--text-navy-900); }
+        .text-creme-100 { color: var(--bg-creme-100); }
+        .text-creme-200 { color: var(--bg-creme-200); }
+        .text-green-700 { color: #15803d; }
+
+        .p-1 { padding: 0.25rem; }
+        .p-8 { padding: 2rem; }
+        .p-6 { padding: 1.5rem; }
+        .px-2\.5 { padding-left: 0.625rem; padding-right: 0.625rem; }
+        .px-3 { padding-left: 0.75rem; padding-right: 0.75rem; }
+        .px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+        .py-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+        .py-6 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+        .py-8 { padding-top: 2rem; padding-bottom: 2rem; }
+        .py-10 { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+        .mb-3 { margin-bottom: 0.75rem; }
+        .mb-6 { margin-bottom: 1.5rem; }
+        .mb-10 { margin-bottom: 2.5rem; }
+        .mt-12 { margin-top: 3rem; }
+        .pt-4 { padding-top: 1rem; }
+
+        .border { border-style: solid; border-width: 1px; }
+        .border-t { border-top-style: solid; border-top-width: 1px; }
+        .border-b { border-bottom-style: solid; border-bottom-width: 1px; }
+        .border-dashed { border-style: dashed; }
+        .border-creme-100 { border-color: var(--bg-creme-100); }
+        .border-creme-200 { border-color: var(--bg-creme-200); }
+
+        .rounded-md { border-radius: 0.375rem; }
+        .rounded-lg { border-radius: 0.5rem; }
+        .rounded-full { border-radius: 9999px; }
+        .rounded-2xl { border-radius: 1rem; }
+
+        .font-sans { font-family: Inter, sans-serif; }
+        .font-mono { font-family: 'Fira Code', monospace; }
+        .font-semibold { font-weight: 600; }
+        .font-bold { font-weight: 700; }
+        .font-extrabold { font-weight: 800; }
+
+        .text-xs { font-size: 0.75rem; line-height: 1rem; }
+        .text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+        .text-base { font-size: 1rem; line-height: 1.5rem; }
+        .text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+        .text-2xl { font-size: 1.5rem; line-height: 2rem; }
+        .text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+
+        @media (min-width: 640px) {
+            .sm\:text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+        }
+
+        .tracking-tight { letter-spacing: -0.025em; }
+        .leading-tight { line-height: 1.25; }
+        .leading-relaxed { line-height: 1.625; }
+        .shadow-sm { box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); }
+
+        .hover\:underline:hover { text-decoration: underline; }
+        .hover\:text-navy-800:hover { color: var(--text-navy-800); }
+        .hover\:text-navy-900:hover { color: var(--text-navy-900); }
+        .inline-block { display: inline-block; }
+        .inline-flex { display: inline-flex; }
+        .text-center { text-align: center; }
+
         [data-lang] { transition: opacity 0.15s ease-in-out; }
         .hidden-lang { display: none !important; }
     </style>
 </head>
-<body class="bg-creme-100 text-navy-900 font-sans antialiased min-h-full flex flex-col justify-between selection:bg-navy-900 selection:text-creme-100">
+<body class="bg-creme-100 text-navy-900 font-sans antialiased min-h-full flex flex-col justify-between">
 
     <!-- Header / Navigation Bar -->
     <header class="w-full max-w-5xl mx-auto px-6 py-6 flex justify-between items-center border-b border-creme-200">
@@ -73,13 +152,11 @@
     <!-- Main Content -->
     <main class="w-full max-w-5xl mx-auto px-6 py-10 flex-grow">
         
-        <!-- Page Title & Description -->
+        <!-- Page Title & Description (WCAG AA Compliant Single H1) -->
         <div class="mb-10">
-            <h1 class="text-3xl sm:text-4xl font-extrabold text-navy-900 tracking-tight leading-tight mb-3" data-lang="en">
-                Curriculum-as-Code Essays & Publications
-            </h1>
-            <h1 class="text-3xl sm:text-4xl font-extrabold text-navy-900 tracking-tight leading-tight mb-3 hidden-lang" data-lang="es">
-                Ensayos y Publicaciones de Currículum como Código
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-navy-900 tracking-tight leading-tight mb-3">
+                <span data-lang="en">Curriculum-as-Code Essays & Publications</span>
+                <span data-lang="es" class="hidden-lang">Ensayos y Publicaciones de Currículum como Código</span>
             </h1>
             <p class="text-base text-navy-800 max-w-2xl leading-relaxed" data-lang="en">
                 Canonical, open-source repository of writings covering sovereign GenAI strategy, human-in-the-loop assessment design, and edge-native educational architecture.
@@ -93,22 +170,20 @@
         <div class="space-y-6">
 
             <!-- Article Card 1 -->
-            <article class="bg-white p-8 rounded-2xl border border-creme-200 shadow-sm hover:border-navy-800/30 transition-all">
+            <article class="bg-white p-8 rounded-2xl border border-creme-200 shadow-sm">
                 <div class="flex flex-wrap items-center gap-3 mb-3 text-xs font-mono text-navy-800">
                     <span class="px-2.5 py-1 bg-navy-900 text-creme-100 font-bold rounded-md">ESSAY 01</span>
                     <span>July 2026</span>
-                    <span>•</span>
+                    <span aria-hidden="true">•</span>
                     <span>6 min read</span>
-                    <span>•</span>
+                    <span aria-hidden="true">•</span>
                     <span class="text-green-700 font-semibold">Source: Markdown SSoT</span>
                 </div>
                 
                 <h2 class="text-2xl font-bold text-navy-900 mb-3">
-                    <a href="01-ai-assessment-design.html" class="hover:underline" data-lang="en">
-                        Shifting from AI Fear to Strategic Assessment Design
-                    </a>
-                    <a href="01-ai-assessment-design.html" class="hover:underline hidden-lang" data-lang="es">
-                        Cambiando del Miedo a la IA al Diseño Estratégico de Evaluación
+                    <a href="01-ai-assessment-design.html" class="hover:underline">
+                        <span data-lang="en">Shifting from AI Fear to Strategic Assessment Design</span>
+                        <span data-lang="es" class="hidden-lang">Cambiando del Miedo a la IA al Diseño Estratégico de Evaluación</span>
                     </a>
                 </h2>
                 
@@ -124,8 +199,8 @@
                         <span class="text-xs font-mono bg-creme-100 text-navy-900 px-2.5 py-1 rounded-md border border-creme-200">GenAI Assessment</span>
                         <span class="text-xs font-mono bg-creme-100 text-navy-900 px-2.5 py-1 rounded-md border border-creme-200">Markdown SSoT</span>
                     </div>
-                    <a href="01-ai-assessment-design.html" class="text-sm font-semibold text-navy-900 hover:underline inline-flex items-center gap-1">
-                        Read Essay &rarr;
+                    <a href="01-ai-assessment-design.html" class="text-sm font-semibold text-navy-900 hover:underline inline-flex items-center gap-1" aria-label="Read Essay 01: Shifting from AI Fear to Strategic Assessment Design">
+                        <span>Read Essay &rarr;</span>
                     </a>
                 </div>
             </article>
@@ -148,15 +223,15 @@
     <footer class="w-full max-w-5xl mx-auto px-6 py-8 mt-12 border-t border-creme-200 flex flex-col md:flex-row justify-between items-center text-xs text-navy-800 gap-4">
         <div class="space-y-1 text-center md:text-left">
             <div>&copy; <span id="year"></span> Alan Pruitt. All rights reserved.</div>
-            <div class="text-navy-800/80">
-                Code licensed under <a href="../LICENSE" class="underline hover:text-navy-900">MIT</a>. 
-                Content licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer" class="underline hover:text-navy-900">CC BY 4.0</a>.
+            <div class="text-navy-800">
+                Code licensed under <a href="../LICENSE" class="hover:underline hover:text-navy-900">MIT</a>. 
+                Content licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer" class="hover:underline hover:text-navy-900">CC BY 4.0</a>.
             </div>
         </div>
         <div class="flex space-x-6">
-            <a href="https://github.com/alanpruitt" target="_blank" rel="noopener noreferrer" class="hover:text-navy-900 transition-colors">GitHub</a>
-            <a href="https://www.linkedin.com/in/alanpruitt/" target="_blank" rel="noopener noreferrer" class="hover:text-navy-900 transition-colors">LinkedIn</a>
-            <a href="https://www.webcognita.com" target="_blank" rel="noopener noreferrer" class="hover:text-navy-900 transition-colors">Webcognita</a>
+            <a href="https://github.com/alanpruitt" target="_blank" rel="noopener noreferrer" class="hover:text-navy-900">GitHub</a>
+            <a href="https://www.linkedin.com/in/alanpruitt/" target="_blank" rel="noopener noreferrer" class="hover:text-navy-900">LinkedIn</a>
+            <a href="https://www.webcognita.com" target="_blank" rel="noopener noreferrer" class="hover:text-navy-900">Webcognita</a>
         </div>
     </footer>
 
@@ -173,15 +248,15 @@
             if (lang === 'en') {
                 enElements.forEach(el => el.classList.remove('hidden-lang'));
                 esElements.forEach(el => el.classList.add('hidden-lang'));
-                btnEn.className = "px-3 py-1 rounded-md transition-all bg-navy-900 text-creme-100 shadow-sm";
-                btnEs.className = "px-3 py-1 rounded-md transition-all text-navy-900 hover:text-navy-800";
+                btnEn.className = "px-3 py-1 rounded-md bg-navy-900 text-creme-100 shadow-sm";
+                btnEs.className = "px-3 py-1 rounded-md text-navy-900 hover:text-navy-800";
                 btnEn.setAttribute('aria-pressed', 'true');
                 btnEs.setAttribute('aria-pressed', 'false');
             } else {
                 esElements.forEach(el => el.classList.remove('hidden-lang'));
                 enElements.forEach(el => el.classList.add('hidden-lang'));
-                btnEs.className = "px-3 py-1 rounded-md transition-all bg-navy-900 text-creme-100 shadow-sm";
-                btnEn.className = "px-3 py-1 rounded-md transition-all text-navy-900 hover:text-navy-800";
+                btnEs.className = "px-3 py-1 rounded-md bg-navy-900 text-creme-100 shadow-sm";
+                btnEn.className = "px-3 py-1 rounded-md text-navy-900 hover:text-navy-800";
                 btnEs.setAttribute('aria-pressed', 'true');
                 btnEn.setAttribute('aria-pressed', 'false');
             }
