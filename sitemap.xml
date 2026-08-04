@@ -57,4 +57,20 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Essay 06: Practical AI in Canvas -->
+  <url>
+    <loc>https://alanpruitt.com/articles/06-canvas-ai-course-design.html</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Essay 07: Continuous Integration for Pedagogy -->
+  <url>
+    <loc>https://alanpruitt.com/articles/07-continuous-integration-pedagogy.html</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Continuous Integration for Pedagogy: Automated Unit Tests | Alan Pruitt</title>
+    <meta name="description" content="How applying CI pipeline linting, AST mapping, and automated prerequisite graph validation guarantees instructional integrity before code hits production.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%230B192C'/></svg>">
+
+    <!-- OpenGraph Meta Tags -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Alan Pruitt">
+    <meta property="og:title" content="Continuous Integration for Pedagogy: Writing Automated Unit Tests for Learning Outcomes">
+    <meta property="og:description" content="Linting learning outcomes, AST validation, and DAG prerequisite graph verification for Curriculum-as-Code.">
+    <meta property="og:url" content="https://alanpruitt.com/articles/07-continuous-integration-pedagogy.html">
+    <meta property="og:image" content="https://alanpruitt.com/assets/og-preview.png">
+
+    <!-- Inlined Zero-JS Critical CSS (100/100 Lighthouse Standard) -->
+    <style>
+        :root {
+            --bg-creme-50: #FAFBF7;
+            --bg-creme-100: #F5F5F0;
+            --bg-creme-200: #E6E6DC;
+            --text-navy-800: #1E3E62;
+            --text-navy-900: #0B192C;
+            --text-navy-950: #060E1A;
+        }
+
+        *, ::before, ::after { box-sizing: border-box; border-width: 0; border-style: solid; }
+        html { line-height: 1.5; -webkit-text-size-adjust: 100%; tab-size: 4; font-family: Inter, -apple-system, sans-serif; }
+        body { margin: 0; background-color: var(--bg-creme-100); color: var(--text-navy-900); }
+
+        .w-full { width: 100%; }
+        .max-w-4xl { max-width: 56rem; }
+        .max-w-3xl { max-width: 48rem; }
+        .mx-auto { margin-left: auto; margin-right: auto; }
+        .flex { display: flex; }
+        .flex-col { flex-direction: column; }
+        .flex-grow { flex-grow: 1; }
+        .flex-wrap { flex-wrap: wrap; }
+        .items-center { align-items: center; }
+        .justify-between { justify-content: space-between; }
+        .space-x-3 > :not([hidden]) ~ :not([hidden]) { margin-left: 0.75rem; }
+
+        @media (min-width: 768px) {
+            .md\:flex-row { flex-direction: row; }
+        }
+
+        .gap-2 { gap: 0.5rem; }
+        .gap-3 { gap: 0.75rem; }
+
+        .bg-white { background-color: #ffffff; }
+        .bg-creme-50 { background-color: var(--bg-creme-50); }
+        .bg-creme-100 { background-color: var(--bg-creme-100); }
+        .bg-creme-200 { background-color: var(--bg-creme-200); }
+        .bg-navy-900 { background-color: var(--text-navy-900); }
+
+        .text-navy-800 { color: var(--text-navy-800); }
+        .text-navy-900 { color: var(--text-navy-900); }
+        .text-creme-100 { color: var(--bg-creme-100); }
+        .text-creme-200 { color: var(--bg-creme-200); }
+        .text-green-700 { color: #15803d; }
+
+        .p-1 { padding: 0.25rem; }
+        .p-8 { padding: 2rem; }
+        .px-2\.5 { padding-left: 0.625rem; padding-right: 0.625rem; }
+        .px-3 { padding-left: 0.75rem; padding-right: 0.75rem; }
+        .px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+        .py-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+        .py-6 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+        .py-8 { padding-top: 2rem; padding-bottom: 2rem; }
+        .py-10 { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+        
+        .mb-3 { margin-bottom: 0.75rem; }
+        .mb-4 { margin-bottom: 1rem; }
+        .mb-8 { margin-bottom: 2rem; }
+        .mt-6 { margin-top: 1.5rem; }
+        .mt-12 { margin-top: 3rem; }
+        .pt-6 { padding-top: 1.5rem; }
+
+        .border { border-style: solid; border-width: 1px; }
+        .border-t { border-top-style: solid; border-top-width: 1px; }
+        .border-b { border-bottom-style: solid; border-bottom-width: 1px; }
+        .border-creme-100 { border-color: var(--bg-creme-100); }
+        .border-creme-200 { border-color: var(--bg-creme-200); }
+
+        .rounded-md { border-radius: 0.375rem; }
+        .rounded-lg { border-radius: 0.5rem; }
+        .rounded-2xl { border-radius: 1rem; }
+
+        .font-sans { font-family: Inter, -apple-system, sans-serif; }
+        .font-mono { font-family: 'Fira Code', monospace; }
+        .font-semibold { font-weight: 600; }
+        .font-bold { font-weight: 700; }
+        .font-extrabold { font-weight: 800; }
+
+        .text-xs { font-size: 0.75rem; line-height: 1rem; }
+        .text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+        .text-base { font-size: 1rem; line-height: 1.5rem; }
+        .text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+        .text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+
+        @media (min-width: 640px) {
+            .sm\:text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+            .sm\:p-12 { padding: 3rem; }
+        }
+
+        .tracking-tight { letter-spacing: -0.025em; }
+        .leading-tight { line-height: 1.25; }
+        .leading-relaxed { line-height: 1.7; }
+        .shadow-sm { box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); }
+
+        .hover\:underline:hover { text-decoration: underline; }
+        .hover\:text-navy-800:hover { color: var(--text-navy-800); }
+        .inline-block { display: inline-block; }
+        .inline-flex { display: inline-flex; }
+
+        .article-body p { margin-bottom: 1.5rem; color: var(--text-navy-800); font-size: 1.0625rem; line-height: 1.75; }
+        .article-body h2 { font-size: 1.5rem; font-weight: 700; color: var(--text-navy-900); margin-top: 2.5rem; margin-bottom: 1rem; letter-spacing: -0.02em; }
+        .article-body ul { margin-bottom: 1.5rem; padding-left: 1.5rem; color: var(--text-navy-800); list-style-type: disc; }
+        .article-body ol { margin-bottom: 1.5rem; padding-left: 1.5rem; color: var(--text-navy-800); list-style-type: decimal; }
+        .article-body li { margin-bottom: 0.5rem; font-size: 1.0625rem; line-height: 1.6; }
+        .article-body blockquote { background-color: var(--bg-creme-50); border-left: 4px solid var(--text-navy-900); padding: 1.25rem 1.5rem; margin-top: 2rem; margin-bottom: 2rem; border-radius: 0 0.5rem 0.5rem 0; }
+        .article-body blockquote p { margin-bottom: 0; font-size: 1rem; font-weight: 600; color: var(--text-navy-900); }
+
+        [data-lang] { transition: opacity 0.15s ease-in-out; }
+        .hidden-lang { display: none !important; }
+    </style>
+</head>
+<body class="bg-creme-100 text-navy-900 font-sans antialiased min-h-full flex flex-col justify-between">
+
+    <!-- Header Navigation -->
+    <header class="w-full max-w-4xl mx-auto px-6 py-6 flex justify-between items-center border-b border-creme-200">
+        <div class="flex items-center space-x-3">
+            <span class="w-3 h-3 bg-navy-900 rounded-full inline-block" aria-hidden="true"></span>
+            <a href="../index.html" class="text-xl font-bold tracking-tight text-navy-900 hover:text-navy-800 transition-colors">
+                alanpruitt.com
+            </a>
+            <span class="text-creme-200">/</span>
+            <a href="index.html" class="text-sm font-mono text-navy-800 font-semibold hover:underline">
+                articles
+            </a>
+        </div>
+        
+        <!-- Language Switcher -->
+        <div class="flex items-center bg-creme-200 p-1 rounded-lg border border-creme-200 text-sm font-semibold" role="group" aria-label="Language selector">
+            <button id="btn-en" onclick="setLanguage('en')" aria-label="Switch language to English" class="px-3 py-1 rounded-md bg-navy-900 text-creme-100 shadow-sm">EN</button>
+            <button id="btn-es" onclick="setLanguage('es')" aria-label="Cambiar idioma a Español" class="px-3 py-1 rounded-md text-navy-900 hover:text-navy-800">ES</button>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="w-full max-w-3xl mx-auto px-6 py-10 flex-grow">
+        
+        <article class="bg-white p-8 sm:p-12 rounded-2xl border border-creme-200 shadow-sm">
+            
+            <!-- Article Header -->
+            <header class="mb-8 pb-8 border-b border-creme-100">
+                <div class="flex flex-wrap items-center gap-3 mb-4 text-xs font-mono text-navy-800">
+                    <span class="px-2.5 py-1 bg-navy-900 text-creme-100 font-bold rounded-md">ESSAY 07</span>
+                    <span>August 2026</span>
+                    <span aria-hidden="true">•</span>
+                    <span>8 min read</span>
+                    <span aria-hidden="true">•</span>
+                    <span class="text-green-700 font-semibold">Source: Markdown SSoT</span>
+                </div>
+
+                <h1 class="text-3xl sm:text-4xl font-extrabold text-navy-900 tracking-tight leading-tight mb-4">
+                    <span data-lang="en">Continuous Integration for Pedagogy: Writing Automated Unit Tests for Learning Outcomes</span>
+                    <span data-lang="es" class="hidden-lang">Integración Continua para la Pedagogía: Escritura de Pruebas Unitarias Automatizadas para Resultados de Aprendizaje</span>
+                </h1>
+
+                <p class="text-lg text-navy-800 leading-relaxed font-medium" data-lang="en">
+                    How applying CI pipeline linting, AST mapping, and automated prerequisite graph validation guarantees instructional integrity before code hits production.
+                </p>
+                <p class="text-lg text-navy-800 leading-relaxed font-medium hidden-lang" data-lang="es">
+                    Cómo la aplicación de validaciones CI, mapeo AST y verificación automatizada de grafos de prerequisitos garantiza la integridad instruccional antes de llegar a producción.
+                </p>
+
+                <div class="mt-6 flex flex-wrap gap-2">
+                    <span class="text-xs font-mono bg-creme-100 text-navy-900 px-2.5 py-1 rounded-md border border-creme-200">Continuous Integration</span>
+                    <span class="text-xs font-mono bg-creme-100 text-navy-900 px-2.5 py-1 rounded-md border border-creme-200">Curriculum-as-Code</span>
+                    <span class="text-xs font-mono bg-creme-100 text-navy-900 px-2.5 py-1 rounded-md border border-creme-200">Pedagogical Testing</span>
+                </div>
+            </header>
+
+            <!-- English Content -->
+            <div class="article-body" data-lang="en">
+                <p>
+                    In software engineering, continuous integration (CI) pipelines run automated test suites on every commit to ensure system contracts remain unbroken. In traditional instructional design, however, curriculum changes are committed without automated verification—resulting in broken prerequisites, unmapped learning outcomes, and silent accessibility regressions that go unnoticed until students encounter them.
+                </p>
+                
+                <p>
+                    <strong>Continuous Integration for Pedagogy</strong> shifts quality assurance from a manual pre-semester review to an automated background process running on every Git commit.
+                </p>
+
+                <h2>1. The Anatomy of a Pedagogical Unit Test</h2>
+                <p>
+                    Just as a software unit test validates that a function returns expected outputs for given inputs, a pedagogical unit test validates that instructional source code satisfies core educational requirements before compilation:
+                </p>
+                <ul>
+                    <li><strong>Bloom's Taxonomy Regex/AST Audits:</strong> Automated linters scan Markdown headings and learning objectives to ensure action verbs match target cognitive depth.</li>
+                    <li><strong>Outcome Coverage Mapping:</strong> Pre-commit hooks parse course modules to verify that every lesson maps directly to at least one accredited institutional outcome.</li>
+                    <li><strong>Accessibility Linting:</strong> Build checks audit contrast ratios, header hierarchy depth, and alt-text completeness across all visual media.</li>
+                </ul>
+
+                <h2>2. Directed Acyclic Graphs (DAGs) for Prerequisite Verification</h2>
+                <p>
+                    When course modules are reordered or updated across multiple semesters, prerequisite dependencies frequently break. By representing course progression as a Directed Acyclic Graph (DAG), CI build scripts run topological sorting tests to detect dependency failures instantly:
+                </p>
+                <ol>
+                    <li><strong>Node Validation:</strong> Every module node must define explicit entry competencies and exit outcomes.</li>
+                    <li><strong>Cycle Detection:</strong> Automated graph traversal verifies that circular prerequisite loops cannot occur.</li>
+                    <li><strong>Orphaned Content Warnings:</strong> Build passes flag any module or lab assignment disconnected from the primary progression tree.</li>
+                </ol>
+
+                <blockquote>
+                    <p>If a broken code commit shouldn't make it to main, a broken learning outcome shouldn't make it to the LMS.</p>
+                </blockquote>
+
+                <h2>3. Shifting Quality Assurance Left</h2>
+                <p>
+                    By integrating pedagogical linters into local pre-commit hooks and remote GitHub Actions workflows, instructional architects achieve <strong>zero-regression curriculum delivery</strong>. Quality assurance is no longer a stressful audit completed days before a term starts; it is a continuously passing test suite.
+                </p>
+            </div>
+
+            <!-- Spanish Content -->
+            <div class="article-body hidden-lang" data-lang="es">
+                <p>
+                    En la ingeniería de software, las tuberías de integración continua (CI) ejecutan suites de pruebas automatizadas en cada commit para garantizar que las funciones del sistema permanezcan intactas. En el diseño instruccional tradicional, sin embargo, los cambios curriculares se aplican sin verificación automatizada, lo que resulta en prerrequisitos rotos, resultados de aprendizaje desalineados y regresiones de accesibilidad no detectadas.
+                </p>
+
+                <p>
+                    La <strong>Integración Continua para la Pedagogía</strong> traslada la garantía de calidad desde una revisión manual previa al semestre hacia un proceso automatizado en segundo plano que se ejecuta en cada actualización de Git.
+                </p>
+
+                <h2>1. La Anatomía de una Prueba Unitaria Pedagógica</h2>
+                <p>
+                    Así como una prueba unitaria de software valida que una función devuelva los resultados esperados, una prueba unitaria pedagógica valida que el código fuente instruccional cumpla con los requisitos educativos fundamentales antes de su compilación:
+                </p>
+                <ul>
+                    <li><strong>Auditorías AST/Regex de la Taxonomía de Bloom:</strong> Validadores automatizados analizan los encabezados y objetivos en Markdown para asegurar que los verbos de acción coincidan con la profundidad cognitiva esperada.</li>
+                    <li><strong>Mapeo de Cobertura de Resultados:</strong> Hooks de pre-commit analizan los módulos para verificar que cada lección esté vinculada a un resultado de aprendizaje acreditado.</li>
+                    <li><strong>Verificación Automatizada de Accesibilidad:</strong> Las pruebas de compilación auditan contrastes, jerarquías de encabezados y etiquetas de texto alternativo en todos los medios visuales.</li>
+                </ul>
+
+                <h2>2. Grafos Acíclicos Dirigidos (DAGs) para Verificación de Prerrequisitos</h2>
+                <p>
+                    Cuando los módulos de un curso se reordenan o actualizan entre semestres, las dependencias de prerrequisitos suelen romperse. Al representar la progresión académica como un Grafo Acíclico Dirigido (DAG), los scripts de CI ejecutan pruebas de ordenamiento topológico para detectar fallos de dependencia al instante:
+                </p>
+                <ol>
+                    <li><strong>Validación de Nodos:</strong> Cada nodo del módulo debe definir competencias de entrada y resultados de salida explícitos.</li>
+                    <li><strong>Detección de Ciclos:</strong> El recorrido automatizado del grafo verifica que no existan bucles circulares de prerrequisitos.</li>
+                    <li><strong>Advertencias de Contenido Huérfano:</strong> El sistema señala cualquier lección o laboratorio desconectado del árbol de progresión principal.</li>
+                </ol>
+
+                <blockquote>
+                    <p>Si una actualización de código defectuosa no debe llegar a la rama principal, un resultado de aprendizaje roto tampoco debe llegar al LMS.</p>
+                </blockquote>
+
+                <h2>3. Desplazando la Garantía de Calidad a la Izquierda</h2>
+                <p>
+                    Al integrar validadores pedagógicos en hooks locales de pre-commit y flujos de GitHub Actions, los arquitectos instruccionales logran una <strong>entrega curricular libre de regresiones</strong>. La garantía de calidad deja de ser una auditoría estresante días antes del semestre para convertirse en una suite de pruebas en ejecución continua.
+                </p>
+            </div>
+
+            <!-- Footer Navigation -->
+            <footer class="mt-12 pt-6 border-t border-creme-100 flex items-center justify-between">
+                <a href="index.html" class="text-sm font-semibold text-navy-900 hover:underline inline-flex items-center gap-1">
+                    &larr; <span data-lang="en">Back to Articles</span><span data-lang="es" class="hidden-lang">Volver a Artículos</span>
+                </a>
+                <a href="https://www.linkedin.com/in/alanpruitt/" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-navy-900 hover:underline">
+                    <span data-lang="en">Discuss on LinkedIn &rarr;</span><span data-lang="es" class="hidden-lang">Discutir en LinkedIn &rarr;</span>
+                </a>
+            </footer>
+
+        </article>
+
+    </main>
+
+    <!-- Unified Footer -->
+    <footer class="w-full max-w-4xl mx-auto px-6 py-8 mt-12 border-t border-creme-200 flex flex-col md:flex-row justify-between items-center text-xs text-navy-800 gap-4">
+        <div class="space-y-1 text-center md:text-left">
+            <div>&copy; <span id="year"></span> Alan Pruitt. All rights reserved.</div>
+            <div class="text-navy-800">
+                Code licensed under <a href="../LICENSE" class="hover:underline hover:text-navy-900">MIT</a>. 
+                Content licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer" class="hover:underline hover:text-navy-900">CC BY 4.0</a>.
+            </div>
+        </div>
+        <div class="flex space-x-6">
+            <a href="https://github.com/alanpruitt" target="_blank" rel="noopener noreferrer" class="hover:text-navy-900">GitHub</a>
+            <a href="https://www.linkedin.com/in/alanpruitt/" target="_blank" rel="noopener noreferrer" class="hover:text-navy-900">LinkedIn</a>
+            <a href="https://www.webcognita.com" target="_blank" rel="noopener noreferrer" class="hover:text-navy-900">Webcognita</a>
+        </div>
+    </footer>
+
+    <!-- Client Script -->
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        function setLanguage(lang) {
+            const enElements = document.querySelectorAll('[data-lang="en"]');
+            const esElements = document.querySelectorAll('[data-lang="es"]');
+            const btnEn = document.getElementById('btn-en');
+            const btnEs = document.getElementById('btn-es');
+
+            if (lang === 'en') {
+                enElements.forEach(el => el.classList.remove('hidden-lang'));
+                esElements.forEach(el => el.classList.add('hidden-lang'));
+                btnEn.className = "px-3 py-1 rounded-md bg-navy-900 text-creme-100 shadow-sm";
+                btnEs.className = "px-3 py-1 rounded-md text-navy-900 hover:text-navy-800";
+                btnEn.setAttribute('aria-pressed', 'true');
+                btnEs.setAttribute('aria-pressed', 'false');
+            } else {
+                esElements.forEach(el => el.classList.remove('hidden-lang'));
+                enElements.forEach(el => el.classList.add('hidden-lang'));
+                btnEs.className = "px-3 py-1 rounded-md bg-navy-900 text-creme-100 shadow-sm";
+                btnEn.className = "px-3 py-1 rounded-md text-navy-900 hover:text-navy-800";
+                btnEs.setAttribute('aria-pressed', 'true');
+                btnEn.setAttribute('aria-pressed', 'false');
+            }
+            localStorage.setItem('preferred_lang', lang);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('preferred_lang') || 'en';
+            setLanguage(savedLang);
+        });
+    </script>
+</body>
+</html>
