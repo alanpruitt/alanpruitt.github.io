@@ -39,7 +39,7 @@
         }
 
         *, ::before, ::after { box-sizing: border-width: 0; box-sizing: border-box; }
-        html { line-height: 1.5; -webkit-text-size-adjust: 100%; tab-size: 4; font-family: Inter, -apple-system, sans-serif; }
+        html { line-height: 1.5; -webkit-text-size-adjust: 100%; tab-size: 4; font-family: Inter, sans-serif; }
         body { margin: 0; background-color: var(--bg-creme-100); color: var(--text-navy-900); }
 
         .w-full { width: 100%; }
@@ -133,7 +133,7 @@
                 alanpruitt.com
             </a>
         </div>
-        
+       
         <!-- Language Toggle -->
         <div class="flex items-center bg-creme-200 p-1 rounded-lg border border-creme-200 text-sm font-semibold" role="group" aria-label="Language selector">
             <button id="btn-en" onclick="setLanguage('en')" aria-label="Switch language to English" class="px-3 py-1 rounded-md transition-all bg-navy-900 text-creme-100 shadow-sm">
@@ -147,9 +147,9 @@
 
     <!-- Main Content Grid -->
     <main class="w-full max-w-6xl mx-auto px-6 py-8 flex-grow">
-        
+       
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            
+           
             <!-- Hero Card -->
             <div class="md:col-span-2 bg-white p-8 rounded-2xl border border-creme-200 shadow-sm flex flex-col justify-between">
                 <div>
@@ -161,12 +161,12 @@
 
                     <!-- Personal Branding Header with Headshot -->
                     <div class="flex items-center gap-5 mb-6">
-                        <img src="assets/Coach-Alan-Sketch-Headshot.webp" 
-                             alt="Alan Pruitt Sketch Portrait" 
-                             width="80" 
-                             height="80" 
-                             class="w-20 h-20 rounded-full border-2 border-creme-200 object-cover shadow-sm bg-creme-100 flex-shrink-0" 
-                             loading="eager" 
+                        <img src="assets/Coach-Alan-Sketch-Headshot.webp"
+                             alt="Alan Pruitt Sketch Portrait"
+                             width="80"
+                             height="80"
+                             class="w-20 h-20 rounded-full border-2 border-creme-200 object-cover shadow-sm bg-creme-100 flex-shrink-0"
+                             loading="eager"
                              decoding="async" />
                         <div>
                             <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-navy-900 leading-tight">
@@ -245,7 +245,7 @@
                 </a>
             </div>
 
-            <!-- Articles & Essays Bento Card (Expanded for All 5 Articles) -->
+            <!-- Articles & Essays Bento Card (Expanded to Include Essay 06) -->
             <div class="bg-white p-8 rounded-2xl border border-creme-200 shadow-sm md:col-span-3">
                 <div class="flex items-center justify-between mb-6 pb-4 border-b border-creme-100">
                     <div class="flex items-center gap-3">
@@ -321,7 +321,7 @@
                     </div>
 
                     <!-- Essay 05 Card -->
-                    <div class="p-4 rounded-xl bg-creme-50 border border-creme-200 flex flex-col justify-between md:col-span-2">
+                    <div class="p-4 rounded-xl bg-creme-50 border border-creme-200 flex flex-col justify-between">
                         <div>
                             <div class="text-xs font-mono text-navy-800 font-bold mb-1">ESSAY 05</div>
                             <h4 class="text-base font-bold text-navy-900 mb-2">
@@ -332,6 +332,20 @@
                             <p class="text-xs text-navy-800 leading-relaxed mb-3 hidden-lang" data-lang="es">Aplicando integración continua, reutilización de componentes y SSoT en texto plano a la arquitectura instruccional.</p>
                         </div>
                         <a href="articles/05-instructional-engineering.html" class="text-xs font-semibold text-navy-900 hover:underline">Read Essay &rarr;</a>
+                    </div>
+
+                    <!-- Essay 06 Card -->
+                    <div class="p-4 rounded-xl bg-creme-50 border border-creme-200 flex flex-col justify-between">
+                        <div>
+                            <div class="text-xs font-mono text-navy-800 font-bold mb-1">ESSAY 06</div>
+                            <h4 class="text-base font-bold text-navy-900 mb-2">
+                                <a href="articles/06-canvas-ai-course-design.html" class="hover:underline" data-lang="en">Practical AI in Canvas: Supporting Course Design & Engagement</a>
+                                <a href="articles/06-canvas-ai-course-design.html" class="hover:underline hidden-lang" data-lang="es">IA Práctica en Canvas: Apoyo al Diseño de Cursos y Compromiso</a>
+                            </h4>
+                            <p class="text-xs text-navy-800 leading-relaxed mb-3" data-lang="en">Native Canvas features, rapid AI content workflows, and ethical engagement strategies.</p>
+                            <p class="text-xs text-navy-800 leading-relaxed mb-3 hidden-lang" data-lang="es">Funciones nativas de Canvas, flujos ágiles de contenido e integración ética.</p>
+                        </div>
+                        <a href="articles/06-canvas-ai-course-design.html" class="text-xs font-semibold text-navy-900 hover:underline">Read Essay &rarr;</a>
                     </div>
                 </div>
             </div>
@@ -345,7 +359,7 @@
         <div class="space-y-1 text-center md:text-left">
             <div>&copy; <span id="year"></span> Alan Pruitt. All rights reserved.</div>
             <div class="text-navy-800/80">
-                Code licensed under <a href="LICENSE" class="underline hover:text-navy-900">MIT</a>. 
+                Code licensed under <a href="LICENSE" class="underline hover:text-navy-900">MIT</a>.
                 Content licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer" class="underline hover:text-navy-900">CC BY 4.0</a>.
             </div>
         </div>
