@@ -71,4 +71,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- Essay 08 -->
+  <url>
+    <loc>https://alanpruitt.com/articles/08-bilingual-localization-pipelines.html</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
