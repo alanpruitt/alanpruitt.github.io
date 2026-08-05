@@ -51,7 +51,7 @@ Sovereign Localization applies modern software internationalization standards to
 
 Higher education institutions in border regions and international partnerships serve diverse linguistic populations. A sovereign localization pipeline supports regional vocabulary mapping:
 
-* **Contextual Glossary Injection:** Custom build scripts swap technical terms to match target regional dialects (e.g., border-region Mexican Spanish vs. Castilian Spanish academic standards).
+* **Contextual Glossary Injection:** Custom build scripts swap technical terms to match target regional dialects (e.g., border-region Mexican Spanish [Norteño dialect] vs. Castilian Spanish academic standards).
 * **Culturally Aligned Case Studies:** Real-world examples and scenario prompts are adapted to reflect regional economic and healthcare contexts.
 
 ## 4. Continuous Synchronization & Zero Data Egress
