@@ -41,7 +41,7 @@
       <h3>⚡ WPE Digital Toolkit</h3>
       <p>An agentic Progressive Web App (PWA) integrating ACSM 12th Edition clinical standards, NWS/EPA environmental factors, and kinesiology curricula into mobile-first learning tools.</p>
       <p><code>PWA</code> • <code>Kinesiology</code> • <code>ACSM</code> • <code>Agentic AI</code></p>
-      <a href="https://github.com/alanyuma-928/wpe-digital-toolkit"><strong>View Repository &rarr;</strong></a>
+      <a href="https://wpe-toolkit-pro.lovable.app" target="_blank" rel="noopener noreferrer"><strong>Launch App &rarr;</strong></a>
     </td>
     <td width="50%" valign="top">
       <h3>🌐 alanpruitt.com</h3>
