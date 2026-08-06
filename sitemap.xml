@@ -79,4 +79,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- Essay 09 -->
+  <url>
+    <loc>https://alanpruitt.com/articles/09-immutable-learning-analytics.html</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
