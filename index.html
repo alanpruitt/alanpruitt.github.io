@@ -9,7 +9,6 @@
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%230B192C'/></svg>">
 
-
     <!-- OpenGraph Meta Tags -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Alan Pruitt">
@@ -29,7 +28,7 @@
             --text-navy-950: #060E1A;
         }
 
-        *, ::before, ::after { box-sizing: border-width: 0; box-sizing: border-box; }
+        *, ::before, ::after { box-sizing: border-box; border-width: 0; }
         html { line-height: 1.5; -webkit-text-size-adjust: 100%; tab-size: 4; font-family: Inter, sans-serif; }
         body { margin: 0; background-color: var(--bg-creme-100); color: var(--text-navy-900); }
 
@@ -205,38 +204,65 @@
             </div>
 
             <!-- CaC Manifesto Card -->
-            <div class="bg-white p-8 rounded-2xl border border-creme-200 shadow-sm">
-                <div class="w-10 h-10 bg-creme-100 rounded-xl flex items-center justify-center mb-4 text-navy-900 border border-creme-200 font-mono font-bold" aria-hidden="true">
-                    &lt;/&gt;
+            <div class="bg-white p-8 rounded-2xl border border-creme-200 shadow-sm flex flex-col justify-between">
+                <div>
+                    <div class="w-10 h-10 bg-creme-100 rounded-xl flex items-center justify-center mb-4 text-navy-900 border border-creme-200 font-mono font-bold" aria-hidden="true">
+                        &lt;/&gt;
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-navy-900" data-lang="en">Curriculum-as-Code</h3>
+                    <h3 class="text-xl font-bold mb-2 text-navy-900 hidden-lang" data-lang="es">Currículum como Código</h3>
+                    <p class="text-sm text-navy-800 leading-relaxed mb-4" data-lang="en">
+                        Treating educational materials like software development: Markdown Single Source of Truth (SSoT), Git version control, CI/CD automated validation, and born-accessible outputs.
+                    </p>
+                    <p class="text-sm text-navy-800 leading-relaxed mb-4 hidden-lang" data-lang="es">
+                        Tratamiento de materiales educativos como desarrollo de software: Fuente Única de Verdad en Markdown (SSoT), control de versiones Git, validación automatizada CI/CD y formatos nativos accesibles.
+                    </p>
                 </div>
-                <h3 class="text-xl font-bold mb-2 text-navy-900" data-lang="en">Curriculum-as-Code</h3>
-                <h3 class="text-xl font-bold mb-2 text-navy-900 hidden-lang" data-lang="es">Currículum como Código</h3>
-                <p class="text-sm text-navy-800 leading-relaxed mb-4" data-lang="en">
-                    Treating educational materials like software development: Markdown Single Source of Truth (SSoT), Git version control, CI/CD automated validation, and born-accessible outputs.
-                </p>
-                <p class="text-sm text-navy-800 leading-relaxed mb-4 hidden-lang" data-lang="es">
-                    Tratamiento de materiales educativos como desarrollo de software: Fuente Única de Verdad en Markdown (SSoT), control de versiones Git, validación automatizada CI/CD y formatos nativos accesibles.
-                </p>
             </div>
 
-            <!-- Featured Repository Card -->
-            <div class="bg-white p-8 rounded-2xl border border-creme-200 shadow-sm">
-                <div class="w-10 h-10 bg-creme-100 rounded-xl flex items-center justify-center mb-4 text-navy-900 border border-creme-200 font-mono font-bold" aria-hidden="true">
-                    ⚡
+            <!-- Featured Repository Card: WPE Digital Toolkit -->
+            <div class="bg-white p-8 rounded-2xl border border-creme-200 shadow-sm flex flex-col justify-between">
+                <div>
+                    <div class="w-10 h-10 bg-creme-100 rounded-xl flex items-center justify-center mb-4 text-navy-900 border border-creme-200 font-mono font-bold" aria-hidden="true">
+                        ⚡
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-navy-900">WPE Digital Toolkit</h3>
+                    <p class="text-sm text-navy-800 leading-relaxed mb-4" data-lang="en">
+                        Agentic PWA framework integrating ACSM 12th Ed. clinical standards, NWS/EPA environmental factors, and kinesiology curricula.
+                    </p>
+                    <p class="text-sm text-navy-800 leading-relaxed mb-4 hidden-lang" data-lang="es">
+                        Framework PWA agéntico que integra estándares clínicos ACSM 12a Ed., factores ambientales NWS/EPA y currículos de kinesiología.
+                    </p>
                 </div>
-                <h3 class="text-xl font-bold mb-2 text-navy-900">WPE Digital Toolkit</h3>
-                <p class="text-sm text-navy-800 leading-relaxed mb-4" data-lang="en">
-                    Agentic PWA framework integrating ACSM 12th Ed. clinical standards, NWS/EPA environmental factors, and kinesiology curricula.
-                </p>
-                <p class="text-sm text-navy-800 leading-relaxed mb-4 hidden-lang" data-lang="es">
-                    Framework PWA agéntico que integra estándares clínicos ACSM 12a Ed., factores ambientales NWS/EPA y currículos de kinesiología.
-                </p>
-                <a href="https://wpe-toolkit-pro.lovable.app" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-navy-900 hover:underline inline-flex items-center gap-1">
+                <a href="https://wpe-toolkit-pro.lovable.app" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-navy-900 hover:underline inline-flex items-center gap-1 mt-2">
                     Launch App &rarr;
                 </a>
             </div>
 
-            <!-- Articles & Essays Bento Card (Expanded to Include Essay 07) -->
+            <!-- Vibe-Coded App Card: Flavor Architect -->
+            <div class="bg-white p-8 rounded-2xl border border-creme-200 shadow-sm flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-10 h-10 bg-creme-100 rounded-xl flex items-center justify-center text-navy-900 border border-creme-200 font-mono font-bold" aria-hidden="true">
+                            🧪
+                        </div>
+                        <span class="text-xs font-mono bg-creme-100 text-navy-900 px-2.5 py-1 rounded-md border border-creme-200 font-semibold">Vibe-Coded</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-1 text-navy-900">Flavor Architect</h3>
+                    <span class="text-xs font-mono text-navy-800/80 font-semibold uppercase tracking-wider block mb-3">Molecular Pairing &amp; Culinary Design</span>
+                    <p class="text-sm text-navy-800 leading-relaxed mb-4" data-lang="en">
+                        AI-driven molecular culinary workbench built to evaluate flavor compound synergies, bridge ingredients, and profile balances in real time.
+                    </p>
+                    <p class="text-sm text-navy-800 leading-relaxed mb-4 hidden-lang" data-lang="es">
+                        Plataforma culinaria molecular con IA para evaluar sinergias de compuestos de sabor, ingredientes puente y balances de perfil en tiempo real.
+                    </p>
+                </div>
+                <a href="https://flavor-architect-lab.lovable.app" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-navy-900 hover:underline inline-flex items-center gap-1 mt-2">
+                    Launch App &rarr;
+                </a>
+            </div>
+
+            <!-- Articles & Essays Bento Card (Expanded Grid) -->
             <div class="bg-white p-8 rounded-2xl border border-creme-200 shadow-sm md:col-span-3">
                 <div class="flex items-center justify-between mb-6 pb-4 border-b border-creme-100">
                     <div class="flex items-center gap-3">
