@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Mission Loop Architecture | Alan Pruitt</title>
+    <meta name="description" content="Structuring deterministic health science problem-solving pipelines that enforce pattern identification, rule citation, and audited intervention.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%230B192C'/></svg>">
+
+    <!-- OpenGraph Meta Tags -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Alan Pruitt">
+    <meta property="og:title" content="The Mission Loop Architecture: Pattern, Rule, and Solve in Coded Instruction">
+    <meta property="og:description" content="Pattern identification, SSoT rule citation, and AI-audited clinical interventions for Curriculum-as-Code.">
+    <meta property="og:url" content="https://alanpruitt.com/articles/12-mission-loop-architecture.html">
+    <meta property="og:image" content="https://alanpruitt.com/assets/og-preview.png">
+
+    <!-- Inlined Zero-JS Critical CSS (100/100 Lighthouse Standard) -->
+    <style>
+        :root {
+            --bg-creme-50: #FAFBF7;
+            --bg-creme-100: #F5F5F0;
+            --bg-creme-200: #E6E6DC;
+            --text-navy-800: #1E3E62;
+            --text-navy-900: #0B192C;
+            --text-navy-950: #060E1A;
+        }
+
+        *, ::before, ::after { box-sizing: border-box; border-width: 0; border-style: solid; }
+        html { line-height: 1.5; -webkit-text-size-adjust: 100%; tab-size: 4; font-family: Inter, -apple-system, sans-serif; }
+        body { margin: 0; background-color: var(--bg-creme-100); color: var(--text-navy-900); }
+
+        .w-full { width: 100%; }
+        .max-w-4xl { max-width: 56rem; }
+        .max-w-3xl { max-width: 48rem; }
+        .mx-auto { margin-left: auto; margin-right: auto; }
+        .flex { display: flex; }
+        .flex-col { flex-direction: column; }
+        .flex-grow { flex-grow: 1; }
+        .flex-wrap { flex-wrap: wrap; }
+        .items-center { align-items: center; }
+        .justify-between { justify-content: space-between; }
+        .space-x-3 > :not([hidden]) ~ :not([hidden]) { margin-left: 0.75rem; }
+
+        @media (min-width: 768px) {
+            .md\:flex-row { flex-direction: row; }
+        }
+
+        .gap-2 { gap: 0.5rem; }
+        .gap-3 { gap: 0.75rem; }
+
+        .bg-white { background-color: #ffffff; }
+        .bg-creme-50 { background-color: var(--bg-creme-50); }
+        .bg-creme-100 { background-color: var(--bg-creme-100); }
+        .bg-creme-200 { background-color: var(--bg-creme-200); }
+        .bg-navy-900 { background-color: var(--text-navy-900); }
+
+        .text-navy-800 { color: var(--text-navy-800); }
+        .text-navy-900 { color: var(--text-navy-900); }
+        .text-creme-100 { color: var(--bg-creme-100); }
+        .text-creme-200 { color: var(--bg-creme-200); }
+        .text-green-700 { color: #15803d; }
+
+        .p-1 { padding: 0.25rem; }
+        .p-8 { padding: 2rem; }
+        .px-2\.5 { padding-left: 0.625rem; padding-right: 0.625rem; }
+        .px-3 { padding-left: 0.75rem; padding-right: 0.75rem; }
+        .px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+        .py-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+        .py-6 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+        .py-8 { padding-top: 2rem; padding-bottom: 2rem; }
+        .py-10 { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+        
+        .mb-3 { margin-bottom: 0.75rem; }
+        .mb-4 { margin-bottom: 1rem; }
+        .mb-8 { margin-bottom: 2rem; }
+        .mt-6 { margin-top: 1.5rem; }
+        .mt-12 { margin-top: 3rem; }
+        .pt-6 { padding-top: 1.5rem; }
+
+        .border { border-style: solid; border-width: 1px; }
+        .border-t { border-top-style: solid; border-top-width: 1px; }
+        .border-b { border-bottom-style: solid; border-bottom-width: 1px; }
+        .border-creme-100 { border-color: var(--bg-creme-100); }
+        .border-creme-200 { border-color: var(--bg-creme-200); }
+
+        .rounded-md { border-radius: 0.375rem; }
+        .rounded-lg { border-radius: 0.5rem; }
+        .rounded-2xl { border-radius: 1rem; }
+
+        .font-sans { font-family: Inter, -apple-system, sans-serif; }
+        .font-mono { font-family: 'Fira Code', monospace; }
+        .font-semibold { font-weight: 600; }
+        .font-bold { font-weight: 700; }
+        .font-extrabold { font-weight: 800; }
+
+        .text-xs { font-size: 0.75rem; line-height: 1rem; }
+        .text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+        .text-base { font-size: 1rem; line-height: 1.5rem; }
+        .text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+        .text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+
+        @media (min-width: 640px) {
+            .sm\:text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+            .sm\:p-12 { padding: 3rem; }
+        }
+
+        .tracking-tight { letter-spacing: -0.025em; }
+        .leading-tight { line-height: 1.25; }
+        .leading-relaxed { line-height: 1.7; }
+        .shadow-sm { box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); }
+
+        .hover\:underline:hover { text-decoration: underline; }
+        .hover\:text-navy-800:hover { color: var(--text-navy-800); }
+        .inline-block { display: inline-block; }
+        .inline-flex { display: inline-flex; }
+
+        .article-body p { margin-bottom: 1.5rem; color: var(--text-navy-800); font-size: 1.0625rem; line-height: 1.75; }
+        .article-body h2 { font-size: 1.5rem; font-weight: 700; color: var(--text-navy-900); margin-top: 2.5rem; margin-bottom: 1rem; letter-spacing: -0.02em; }
+        .article-body h3 { font-size: 1.25rem; font-weight: 700; color: var(--text-navy-900); margin-top: 2rem; margin-bottom: 0.75rem; }
+        .article-body ul { margin-bottom: 1.5rem; padding-left: 1.5rem; color: var(--text-navy-800); list-style-type: disc; }
+        .article-body ol { margin-bottom: 1.5rem; padding-left: 1.5rem; color: var(--text-navy-800); list-style-type: decimal; }
+        .article-body li { margin-bottom: 0.5rem; font-size: 1.0625rem; line-height: 1.6; }
+        .article-body blockquote { background-color: var(--bg-creme-50); border-left: 4px solid var(--text-navy-900); padding: 1.25rem 1.5rem; margin-top: 2rem; margin-bottom: 2rem; border-radius: 0 0.5rem 0.5rem 0; }
+        .article-body blockquote p { margin-bottom: 0; font-size: 1rem; font-weight: 600; color: var(--text-navy-900); }
+        .article-body pre { background-color: var(--text-navy-900); color: var(--bg-creme-100); padding: 1.25rem; border-radius: 0.5rem; font-family: 'Fira Code', monospace; font-size: 0.875rem; overflow-x: auto; margin-bottom: 1.5rem; }
+
+        [data-lang] { transition: opacity 0.15s ease-in-out; }
+        .hidden-lang { display: none !important; }
+    </style>
+</head>
+<body class="bg-creme-100 text-navy-900 font-sans antialiased min-h-full flex flex-col justify-between">
+
+    <!-- Header Navigation -->
+    <header class="w-full max-w-4xl mx-auto px-6 py-6 flex justify-between items-center border-b border-creme-200">
+        <div class="flex items-center space-x-3">
+            <span class="w-3 h-3 bg-navy-900 rounded-full inline-block" aria-hidden="true"></span>
+            <a href="../index.html" class="text-xl font-bold tracking-tight text-navy-900 hover:text-navy-800 transition-colors">
+                alanpruitt.com
+            </a>
+            <span class="text-creme-200">/</span>
+            <a href="index.html" class="text-sm font-mono text-navy-800 font-semibold hover:underline">
+                articles
+            </a>
+        </div>
+        
+        <!-- Language Switcher -->
+        <div class="flex items-center bg-creme-200 p-1 rounded-lg border border-creme-200 text-sm font-semibold" role="group" aria-label="Language selector">
+            <button id="btn-en" onclick="setLanguage('en')" aria-label="Switch language to English" class="px-3 py-1 rounded-md bg-navy-900 text-creme-100 shadow-sm">EN</button>
+            <button id="btn-es" onclick="setLanguage('es')" aria-label="Cambiar idioma a Español" class="px-3 py-1 rounded-md text-navy-900 hover:text-navy-800">ES</button>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="w-full max-w-3xl mx-auto px-6 py-10 flex-grow">
+        
+        <article class="bg-white p-8 sm:p-12 rounded-2xl border border-creme-200 shadow-sm">
+            
+            <!-- Article Header -->
+            <header class="mb-8 pb-8 border-b border-creme-100">
+                <div class="flex flex-wrap items-center gap-3 mb-4 text-xs font-mono text-navy-800">
+                    <span class="px-2.5 py-1 bg-navy-900 text-creme-100 font-bold rounded-md">ESSAY 12</span>
+                    <span>August 2026</span>
+                    <span aria-hidden="true">•</span>
+                    <span>9 min read</span>
+                    <span aria-hidden="true">•</span>
+                    <span class="text-green-700 font-semibold">Source: Markdown SSoT</span>
+                </div>
+
+                <h1 class="text-3xl sm:text-4xl font-extrabold text-navy-900 tracking-tight leading-tight mb-4">
+                    <span data-lang="en">The Mission Loop Architecture: Pattern, Rule, and Solve in Coded Instruction</span>
+                    <span data-lang="es" class="hidden-lang">La Arquitectura del Bucle de Misión: Patrón, Regla y Solución en la Instrucción Codificada</span>
+                </h1>
+
+                <p class="text-lg text-navy-800 leading-relaxed font-medium" data-lang="en">
+                    Structuring deterministic health science problem-solving pipelines that enforce pattern identification, rule citation, and audited intervention.
+                </p>
+                <p class="text-lg text-navy-800 leading-relaxed font-medium hidden-lang" data-lang="es">
+                    Estructurando tuberías deterministas de resolución de problemas en ciencias de la salud que imponen identificación de patrones, cita de reglas y solución auditada.
+                </p>
+
+                <div class="mt-6 flex flex-wrap gap-2">
+                    <span class="text-xs font-mono bg-creme-100 text-navy-900 px-2.5 py-1 rounded-md border border-creme-200">Mission Loop</span>
+                    <span class="text-xs font-mono bg-creme-100 text-navy-900 px-2.5 py-1 rounded-md border border-creme-200">Instructional Engineering</span>
+                    <span class="text-xs font-mono bg-creme-100 text-navy-900 px-2.5 py-1 rounded-md border border-creme-200">Health Sciences</span>
+                </div>
+            </header>
+
+            <!-- English Content -->
+            <div class="article-body" data-lang="en">
+                <p>
+                    In traditional health science education, assignment prompts often ask open-ended questions like "Describe how you would design an exercise program for a diabetic client." While well-intentioned, these unconstrained assignments invite vague responses, obscure student reasoning errors, and make objective assessment extraordinarily difficult.
+                </p>
+
+                <p>
+                    When curriculum is engineered as code, learning tasks require a structured, deterministic execution pipeline: <strong>The Mission Loop</strong>.
+                </p>
+
+                <h2>1. The Architecture of the Mission Loop</h2>
+                <p>
+                    The Mission Loop divides weekly problem-solving tasks into three explicit, sequential phases: <strong>Pattern</strong>, <strong>Rule</strong>, and <strong>Solve</strong>.
+                </p>
+
+                <h3>Mission Loop Execution Protocol</h3>
+<pre><code>[1. PATTERN (Observation & Framing)]
+- Action: Identify physiological signals, client risk factors, and metabolic baselines.
+- Input: Wrapped client profile inside explicit delimiters (### CLIENT_PROFILE ###).
+
+[2. RULE (Single Source of Truth Citation)]
+- Action: Map identified patterns to specific, evidence-based guidelines.
+- Authority: PAGA 2018 (2nd Ed) / USDA Guidelines / ACSM Position Stands.
+
+[3. SOLVE (Audited Intervention)]
+- Action: Formulate the exercise or nutritional prescription.
+- Validation: Pass through the AI Safety Auditor gate for compliance verification.</code></pre>
+
+                <blockquote>
+                    <p>Open-ended prompts produce vague answers; the Mission Loop forces students to cite the evidence-based rule before prescribing the clinical solution.</p>
+                </blockquote>
+
+                <h2>2. Converting Open Prompts into Deterministic Pipelines</h2>
+                <p>
+                    Transforming vague homework assignments into Mission Loops establishes unambiguous rubrics for both students and evaluators:
+                </p>
+
+                <ol>
+                    <li><strong>Pattern Phase:</strong> Students extract quantitative indicators (e.g., resting BP > 130/80 mmHg, HbA1c > 6.5%) rather than offering general descriptions.</li>
+                    <li><strong>Rule Phase:</strong> Students cite the governing federal or clinical guideline clause that dictates treatment protocols.</li>
+                    <li><strong>Solve Phase:</strong> The proposed intervention is compiled into structured parameters (intensity, duration, frequency) and validated against the Safety Auditor.</li>
+                </ol>
+
+                <h2>3. Benefits for Higher Education Curricula</h2>
+                <p>
+                    Implementing Mission Loops across exercise physiology and nutrition coursework delivers core architectural advantages:
+                </p>
+                <ul>
+                    <li><strong>Elimination of Fluff:</strong> Submissions focus strictly on physiological evidence and clinical logic rather than filler text.</li>
+                    <li><strong>Objective Grading Automation:</strong> Pre-defined Pattern and Rule targets enable automated unit testing of student reasoning.</li>
+                    <li><strong>Scalable Clinical Competency:</strong> Learners develop repeatable analytical habits that translate directly into clinical practice and board certification exams.</li>
+                </ul>
+            </div>
+
+            <!-- Spanish Content -->
+            <div class="article-body hidden-lang" data-lang="es">
+                <p>
+                    En la educación tradicional en ciencias de la salud, las consignas de tareas a menudo plantean preguntas abiertas como "Describa cómo diseñaría un programa de ejercicios para un cliente diabético". Aunque bien intencionadas, estas tareas sin restricciones invitan a respuestas vagas, oscurecen los errores de razonamiento de los estudiantes y dificultan enormemente la evaluación objetiva.
+                </p>
+
+                <p>
+                    Cuando el currículum se diseña como código, las tareas de aprendizaje requieren una tubería de ejecución estructurada y determinista: <strong>El Bucle de Misión</strong>.
+                </p>
+
+                <h2>1. La Arquitectura del Bucle de Misión</h2>
+                <p>
+                    El Bucle de Misión divide las tareas semanales de resolución de problemas en tres fases explícitas y secuenciales: <strong>Patrón</strong>, <strong>Regla</strong> y <strong>Solución</strong>.
+                </p>
+
+                <h3>Protocolo de Ejecución del Bucle de Misión</h3>
+<pre><code>[1. PATRÓN (Observación y Encuadre)]
+- Acción: Identificar señales fisiológicas, factores de riesgo del cliente y líneas base metabólicas.
+- Entrada: Perfil del cliente dentro de delimitadores explícitos (### CLIENT_PROFILE ###).
+
+[2. REGLA (Cita de Fuente Única de Verdad)]
+- Acción: Mapear patrones identificados con guías específicas basadas en evidencia.
+- Autoridad: PAGA 2018 (2a Ed) / Guías USDA / Posicionamientos ACSM.
+
+[3. SOLUCIÓN (Intervención Auditada)]
+- Acción: Formular la prescripción de ejercicio o nutricional.
+- Validación: Pasar por el filtro del Auditor de Seguridad de IA para verificación de cumplimiento.</code></pre>
+
+                <blockquote>
+                    <p>Las consignas abiertas producen respuestas vagas; el Bucle de Misión obliga a los estudiantes a citar la regla basada en evidencia antes de prescribir la solución clínica.</p>
+                </blockquote>
+
+                <h2>2. Conversión de Consignas Abiertas en Tuberías Deterministas</h2>
+                <p>
+                    Transformar tareas vagas en Bucles de Misión establece rúbricas inequívocas tanto para estudiantes como para evaluadores:
+                </p>
+
+                <ol>
+                    <li><strong>Fase de Patrón:</strong> Los estudiantes extraen indicadores cuantitativos (ej. PA en reposo > 130/80 mmHg, HbA1c > 6.5%) en lugar de ofrecer descripciones generales.</li>
+                    <li><strong>Fase de Regla:</strong> Los estudiantes citan la cláusula de la guía clínica o federal rectora que dicta los protocolos de tratamiento.</li>
+                    <li><strong>Fase de Solución:</strong> La intervención propuesta se compila en parámetros estructurados (intensidad, duración, frecuencia) y se valida contra el Auditor de Seguridad.</li>
+                </ol>
+
+                <h2>3. Beneficios para los Currículos de Educación Superior</h2>
+                <p>
+                    La implementación de Bucles de Misión en cursos de fisiología del ejercicio y nutrición ofrece ventajas arquitectónicas clave:
+                </p>
+                <ul>
+                    <li><strong>Eliminación de Texto Relleno:</strong> Los envíos se concentran estrictamente en evidencia fisiológica y lógica clínica.</li>
+                    <li><strong>Automatización de Evaluación Objetiva:</strong> Los objetivos de Patrón y Regla predefinidos permiten pruebas unitarias automatizadas del razonamiento estudiantil.</li>
+                    <li><strong>Competencia Clínica Escalable:</strong> Los estudiantes desarrollan hábitos analíticos repetibles que se traducen directamente en la práctica clínica y exámenes de certificación.</li>
+                </ul>
+            </div>
+
+            <!-- Footer Navigation -->
+            <footer class="mt-12 pt-6 border-t border-creme-100 flex items-center justify-between">
+                <a href="index.html" class="text-sm font-semibold text-navy-900 hover:underline inline-flex items-center gap-1">
+                    &larr; <span data-lang="en">Back to Articles</span><span data-lang="es" class="hidden-lang">Volver a Artículos</span>
+                </a>
+                <a href="https://www.linkedin.com/in/alanpruitt/" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-navy-900 hover:underline">
+                    <span data-lang="en">Discuss on LinkedIn &rarr;</span><span data-lang="es" class="hidden-lang">Discutir en LinkedIn &rarr;</span>
+                </a>
+            </footer>
+
+        </article>
+
+    </main>
+
+    <!-- Unified Footer -->
+    <footer class="w-full max-w-4xl mx-auto px-6 py-8 mt-12 border-t border-creme-200 flex flex-col md:flex-row justify-between items-center text-xs text-navy-800 gap-4">
+        <div class="space-y-1 text-center md:text-left">
+            <div>&copy; <span id="year"></span> Alan Pruitt. All rights reserved.</div>
+            <div class="text-navy-800">
+                Code licensed under <a href="../LICENSE" class="hover:underline hover:text-navy-900">MIT</a>. 
+                Content licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer" class="hover:underline hover:text-navy-900">CC BY 4.0</a>.
+            </div>
+        </div>
+        <div class="flex space-x-6">
+            <a href="https://github.com/alanpruitt" target="_blank" rel="noopener noreferrer" class="hover:text-navy-900">GitHub</a>
+            <a href="https://www.linkedin.com/in/alanpruitt/" target="_blank" rel="noopener noreferrer" class="hover:text-navy-900">LinkedIn</a>
+            <a href="https://www.webcognita.com" target="_blank" rel="noopener noreferrer" class="hover:text-navy-900">Webcognita</a>
+        </div>
+    </footer>
+
+    <!-- Client Script -->
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        function setLanguage(lang) {
+            const enElements = document.querySelectorAll('[data-lang="en"]');
+            const esElements = document.querySelectorAll('[data-lang="es"]');
+            const btnEn = document.getElementById('btn-en');
+            const btnEs = document.getElementById('btn-es');
+
+            if (lang === 'en') {
+                enElements.forEach(el => el.classList.remove('hidden-lang'));
+                esElements.forEach(el => el.classList.add('hidden-lang'));
+                btnEn.className = "px-3 py-1 rounded-md bg-navy-900 text-creme-100 shadow-sm";
+                btnEs.className = "px-3 py-1 rounded-md text-navy-900 hover:text-navy-800";
+                btnEn.setAttribute('aria-pressed', 'true');
+                btnEs.setAttribute('aria-pressed', 'false');
+            } else {
+                esElements.forEach(el => el.classList.remove('hidden-lang'));
+                enElements.forEach(el => el.classList.add('hidden-lang'));
+                btnEs.className = "px-3 py-1 rounded-md bg-navy-900 text-creme-100 shadow-sm";
+                btnEn.className = "px-3 py-1 rounded-md text-navy-900 hover:text-navy-800";
+                btnEs.setAttribute('aria-pressed', 'true');
+                btnEn.setAttribute('aria-pressed', 'false');
+            }
+            localStorage.setItem('preferred_lang', lang);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('preferred_lang') || 'en';
+            setLanguage(savedLang);
+        });
+    </script>
+</body>
+</html>
