@@ -18,6 +18,14 @@ const BUILD_DATE = new Date('2026-08-14T22:30:00Z');
 // 1. Authoritative Essay Catalogue (SSoT Metadata Registry)
 const ESSAYS = [
   {
+    id: '20',
+    slug: '20-deterministic-clinical-guardrails',
+    title: 'Deterministic Clinical Guardrails: Sovereign AI Simulation & Safety Gates (EXW265 SSoT Case Study)',
+    date: '2026-08-21T12:00:00Z',
+    summary: 'How EXW265 integrates deterministic clinical guardrails and safety gates into AI simulation models to enforce ACSM and PAGA academic source-of-truth standards.',
+    tags: ['AISafety', 'ClinicalGuardrails', 'Kinesiology', 'SSoT']
+  },
+  {
     id: '19',
     slug: '19-hybrid-ergometer-scaffold',
     title: 'The Hybrid Ergometer Scaffold: Guided Simulation & Precision Testing (EXW245 Case Study)',

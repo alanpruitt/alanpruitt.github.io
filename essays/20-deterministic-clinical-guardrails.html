@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deterministic Clinical Guardrails: Preventing Hallucination Drift | Alan Pruitt</title>
+    <meta name="description" content="How EXW265 deploys deterministic prompt guardrails, strict delimiter encapsulation, and the federal PAGA 2018 Single Source of Truth to eliminate dangerous AI hallucination drift in exercise prescriptions for chronic conditions.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%230B192C'/></svg>">
+
+    <!-- OpenGraph Meta Tags -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Alan Pruitt">
+    <meta property="og:title" content="Deterministic Clinical Guardrails: Preventing Hallucination Drift in Special Population Prescriptions">
+    <meta property="og:description" content="How EXW265 deploys deterministic prompt guardrails, strict delimiter encapsulation, and the federal PAGA 2018 Single Source of Truth to eliminate dangerous AI hallucination drift in exercise prescriptions for chronic conditions.">
+    <meta property="og:url" content="https://alanpruitt.com/articles/20-deterministic-clinical-guardrails.html">
+    <meta property="og:image" content="https://alanpruitt.com/assets/og-preview.png">
+
+    <!-- Zero-JS Pure Critical CSS with Strict WCAG 2.2 AA Contrast -->
+    <style>
+        :root {
+            --bg-creme-50: #FAFBF7;
+            --bg-creme-100: #F5F5F0;
+            --bg-creme-200: #E6E6DC;
+            --text-navy-800: #1E3E62;
+            --text-navy-900: #0B192C;
+            --text-navy-950: #060E1A;
+            --link-accent: #0E3D73;
+        }
+
+        *, ::before, ::after { box-sizing: border-box; border-width: 0; }
+        html { line-height: 1.5; -webkit-text-size-adjust: 100%; tab-size: 4; font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; height: 100%; }
+        body { margin: 0; min-height: 100%; display: flex; flex-direction: column; justify-content: space-between; background-color: var(--bg-creme-100); color: var(--text-navy-900); }
+
+        .w-full { width: 100%; }
+        .max-w-4xl { max-width: 56rem; }
+        .max-w-3xl { max-width: 48rem; }
+        .mx-auto { margin-left: auto; margin-right: auto; }
+        .flex { display: flex; }
+        .flex-wrap { flex-wrap: wrap; }
+        .flex-col { flex-direction: column; }
+        .flex-grow { flex-grow: 1; }
+        .items-center { align-items: center; }
+        .justify-between { justify-content: space-between; }
+        .justify-end { justify-content: justify-end; }
+        
+        .space-x-6 > :not([hidden]) ~ :not([hidden]) { margin-left: 1.5rem; }
+        .space-y-4 > :not([hidden]) ~ :not([hidden]) { margin-top: 1rem; }
+        .inline-flex { display: inline-flex; }
+
+        .gap-3 { gap: 0.75rem; }
+        .gap-1 { gap: 0.25rem; }
+
+        .bg-white { background-color: #ffffff; }
+        .bg-creme-100 { background-color: var(--bg-creme-100); }
+        .bg-creme-200 { background-color: var(--bg-creme-200); }
+        .bg-navy-900 { background-color: var(--text-navy-900); }
+
+        .text-navy-800 { color: var(--text-navy-800); }
+        .text-navy-900 { color: var(--text-navy-900); }
+        .text-creme-100 { color: var(--bg-creme-100); }
+        
+        .p-1 { padding: 0.25rem; }
+        .p-8 { padding: 2rem; }
+        .px-3 { padding-left: 0.75rem; padding-right: 0.75rem; }
+        .px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+        .py-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+        .py-6 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+        .py-10 { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+        .pt-6 { padding-top: 1.5rem; }
+        .pt-2 { padding-top: 0.5rem; }
+
+        .mb-1 { margin-bottom: 0.25rem; }
+        .mb-2 { margin-bottom: 0.5rem; }
+        .mb-3 { margin-bottom: 0.75rem; }
+        .mb-6 { margin-bottom: 1.5rem; }
+        .mb-8 { margin-bottom: 2rem; }
+        .mt-12 { margin-top: 3rem; }
+
+        .border { border: 1px solid var(--bg-creme-200); }
+        .border-t { border-top: 1px solid var(--bg-creme-200); }
+        .border-b { border-bottom: 1px solid var(--bg-creme-200); }
+
+        .rounded-md { border-radius: 0.375rem; }
+        .rounded-lg { border-radius: 0.5rem; }
+        .rounded-2xl { border-radius: 1rem; }
+
+        .shadow-sm { box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); }
+
+        .font-mono { font-family: monospace; }
+        .font-bold { font-weight: 700; }
+        .font-semibold { font-weight: 600; }
+        
+        .leading-relaxed { line-height: 1.625; }
+        
+        .hover:underline:hover { text-decoration: underline; }
+        .hover:text-navy-900:hover { color: var(--text-navy-900); }
+
+        .cursor-pointer { cursor: pointer; }
+        .outline-none { outline: 2px solid transparent; outline-offset: 2px; }
+
+        /* Typography Styles for Article Content */
+        .article-body h2 { font-size: 1.5rem; font-weight: 700; color: var(--text-navy-900); margin-top: 2rem; margin-bottom: 1rem; }
+        .article-body p { font-size: 1rem; color: #1a1a1a; line-height: 1.75; margin-bottom: 1.25rem; }
+        .article-body ul, .article-body ol { margin-bottom: 1.25rem; padding-left: 1.5rem; }
+        .article-body li { margin-bottom: 0.5rem; line-height: 1.6; }
+        .article-body strong { font-weight: 700; color: var(--text-navy-950); }
+        .article-body blockquote { margin: 1.5rem 0; padding: 1rem 1.5rem; border-left: 4px solid var(--text-navy-800); background-color: var(--bg-creme-50); font-style: italic; color: #333; }
+        .article-body pre { background-color: var(--bg-creme-50); border: 1px solid var(--bg-creme-200); padding: 1rem; border-radius: 0.5rem; overflow-x: auto; margin-bottom: 1.25rem; font-family: monospace; font-size: 0.875rem; }
+
+        /* Interactive Language Selector Toggle */
+        .lang-toggle-btn { transition: all 0.2s ease-in-out; }
+        .lang-toggle-btn.active { background-color: var(--text-navy-900); color: var(--bg-creme-100); }
+        .lang-toggle-btn:not(.active):hover { background-color: var(--bg-creme-200); }
+
+        .hidden-lang { display: none !important; }
+    </style>
+</head>
+<body class="bg-creme-100 text-navy-900 font-sans antialiased min-h-screen flex flex-col justify-between">
+
+    <!-- Header Navigation -->
+    <header class="w-full bg-white border-b border-creme-200 py-6 px-6 shadow-sm">
+        <div class="max-w-4xl mx-auto flex items-center justify-between">
+            <a href="../index.html" class="text-lg font-bold text-navy-900 hover:underline">
+                Alan Pruitt
+            </a>
+            <nav class="flex items-center space-x-6">
+                <a href="../index.html" class="text-sm font-semibold text-navy-800 hover:text-navy-900 hover:underline">Home</a>
+                <a href="index.html" class="text-sm font-semibold text-navy-900 hover:underline">Articles</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="w-full max-w-3xl mx-auto px-6 py-10 flex-grow">
+        
+        <!-- Language Switcher Bar -->
+        <div class="flex justify-end mb-8">
+            <div class="inline-flex rounded-lg bg-creme-200 p-1" style="margin-left: auto;">
+                <button onclick="setLanguage('en')" id="btn-en" class="lang-toggle-btn active text-xs font-semibold px-3 py-1 rounded-md outline-none cursor-pointer">
+                    English
+                </button>
+                <button onclick="setLanguage('es')" id="btn-es" class="lang-toggle-btn text-xs font-semibold px-3 py-1 rounded-md outline-none cursor-pointer">
+                    Español
+                </button>
+            </div>
+        </div>
+
+        <article class="bg-white p-8 rounded-2xl border border-creme-200 shadow-sm">
+            
+            <!-- Metadata Header -->
+            <div class="flex flex-wrap items-center gap-3 mb-6 text-xs font-mono text-navy-800">
+                <span class="px-2.5 py-1 bg-navy-900 text-creme-100 font-bold rounded-md">ESSAY 20</span>
+                <span>August 2026</span>
+                <span aria-hidden="true">•</span>
+                <span>5 min read</span>
+                <span aria-hidden="true">•</span>
+                <span class="text-green-700 font-semibold">Source: Markdown SSoT</span>
+            </div>
+
+            <!-- English Title Header -->
+            <div data-lang="en">
+                <h1 class="text-3xl md:text-4xl font-bold text-navy-900 mb-6 leading-tight">
+                    Deterministic Clinical Guardrails: Preventing Hallucination Drift in Special Population Prescriptions
+                </h1>
+            </div>
+
+            <!-- Spanish Title Header -->
+            <div data-lang="es" class="hidden-lang">
+                <h1 class="text-3xl md:text-4xl font-bold text-navy-900 mb-6 leading-tight">
+                    Barreras Clínicas Deterministas: Prevenir la Deriva de Alucinaciones en Prescripciones para Poblaciones Especiales
+                </h1>
+            </div>
+
+            <hr class="border-creme-200 mb-8" />
+
+            <!-- English Article Content -->
+            <div class="article-body" data-lang="en">
+                <blockquote>
+                    <strong>TL;DR:</strong> How EXW265 deploys deterministic prompt guardrails, strict delimiter encapsulation, and the federal PAGA 2018 Single Source of Truth to eliminate dangerous AI hallucination drift in exercise prescriptions for chronic conditions.
+                </blockquote>
+
+                <p>
+                    In exercise science, prescribing physical activity for healthy adults allows for broad programming latitude. For special populations—individuals navigating chronic metabolic conditions, cardiovascular disease, peripheral neuropathies, or severe neuromuscular limitations—the margin for error drops to zero. A single unvetted recommendation regarding exercise intensity, weight-bearing loading, or thermal stress can trigger acute clinical complications.
+                </p>
+                <p>
+                    As generative artificial intelligence tools become common study aids for community college students, an urgent curriculum challenge emerges: <strong>unconstrained Large Language Models (LLMs) are fundamentally non-deterministic and clinically unanchored</strong>.
+                </p>
+                <p>
+                    When queried for exercise programming advice, out-of-the-box AI models blend peer-reviewed clinical guidelines with unregulated internet fitness blogs, commercial wellness trends, and speculative influencer protocols. The result is <strong>hallucination drift</strong>—a subtle, authoritative-sounding recommendation that introduces contraindicated movements or miscalculates hemodynamic thresholds.
+                </p>
+                <p>
+                    In <strong>EXW265 (Exercise for Special Populations)</strong> for Fall 2026, we solved this failure mode through upstream <strong>Curriculum-as-Code (CaC)</strong> engineering: establishing deterministic clinical guardrails that anchor every AI-assisted simulation strictly to federal guidelines.
+                </p>
+
+                <h2>1. The Clinical Bottleneck: Vulnerable Populations & LLM Non-Determinism</h2>
+                <p>
+                    When early-stage kinesiology students evaluate complex clinical case studies, they often turn to AI assistants to brainstorm exercise adaptations. Without strict structural boundaries, standard foundation models fail in predictable, high-risk ways:
+                </p>
+                <ul>
+                    <li><strong>Medication-Blunted Hemodynamics:</strong> A general LLM will frequently recommend heart-rate-based intensity targets (such as 70% to 85% of Age-Predicted Max Heart Rate) for a client prescribed beta-blockers, failing to recognize that competitive receptor blockade prevents normal chronotropic responses, rendering target heart rates dangerously misleading.</li>
+                    <li><strong>Autonomic & Neuropathic Blind Spots:</strong> When designing routines for clients with advanced Type 2 diabetes, unguided models often suggest high-impact plyometric or running drills, entirely missing the presence of diabetic peripheral neuropathy and the severe risk of unperceived plantar ulceration.</li>
+                    <li><strong>Commercial Fad Bleed:</strong> Open-web models routinely pull from speculative wellness datasets, suggesting restrictive fasting windows, extreme thermal exposure (e.g., hot yoga or infrared saunas for hypertensive clients), or unverified herbal supplements alongside exercise protocols.</li>
+                </ul>
+
+                <pre><code>┌────────────────────────────────────────────────────────────────────────┐
+│                   THE UNGUARDED AI HAZARD PATTERN                      │
+│                                                                        │
+│  [ Raw Student Query ] ──► [ Unanchored Public LLM ]                   │
+│                                     │                                  │
+│         ┌───────────────────────────┴───────────────────────────┐      
+│         ▼                                                       ▼      │
+│  [ Internet Fitness Fads ]                           [ Conflicting Studies ]
+│         │                                                       │      │
+│         └───────────────────────────┬───────────────────────────┘      │
+│                                     ▼                                  │
+│               [ Hallucinated Clinical Prescription ]                   │
+│               • Contraindicated impact forces                          │
+│               • Ignored medication interactions                        │
+│               • Dangerous thermal/hemodynamic load                     │
+└────────────────────────────────────────────────────────────────────────┘</code></pre>
+
+                <h2>2. Upstream Governance: The PAGA 2018 Immutable Standard</h2>
+                <p>
+                    To eliminate algorithmic ambiguity, EXW265 enforces a strict curriculum law: <strong>The Physical Activity Guidelines for Americans (PAGA 2018, 2nd Ed.) serves as the exclusive Single Source of Truth (SSoT)</strong>.
+                </p>
+                <p>
+                    Unlike athletic performance or general fitness courses that draw on commercial training frameworks, EXW265 deliberately discards external, unvetted standards. Every clinical volume recommendation, progression rule, and safety boundary must trace directly to the evidence-based consensus established by the U.S. Department of Health and Human Services (HHS).
+                </p>
+                
+                <h3>The SSoT Boundary Rules</h3>
+                <p>
+                    Under our automated continuous integration pipeline, all instructional modules and AI toolkits are audited against three federal pillars:
+                </p>
+                <ol>
+                    <li><strong>Dose-Response Specificity:</strong> Prescriptions must align with federal baseline targets (150 to 300 minutes of moderate-intensity activity, or 75 to 150 minutes of vigorous-intensity aerobic physical activity per week, paired with multi-joint muscle-strengthening activities on two or more days).</li>
+                    <li><strong>Chronic Disease Adaptation:</strong> When chronic conditions prevent individuals from achieving standard volume minimums, the protocol strictly enforces the PAGA mandate: <em>individuals should be as physically active as their abilities and conditions allow, avoiding all sedentary behavior</em>.</li>
+                    <li><strong>Zero Commercial Bleed:</strong> Prompt structures explicitly instruct AI evaluators to reject commercial diet trends, proprietary training protocols, and non-guideline clinical advice.</li>
+                </ol>
+                <p>
+                    By version-controlling our course master in plain Markdown on GitHub, any attempted deviation from the federal guideline fails automated linting before the module ever deploys to the student Canvas LMS environment.
+                </p>
+
+                <h2>3. The Delimiter Protocol & Context Isolation</h2>
+                <p>
+                    The primary mechanism for preventing prompt injection, data leakage, and hallucination drift in EXW265 is our <strong>Delimiter Protocol</strong>.
+                </p>
+                <p>
+                    Students are taught to interact with the course AI Tool Kit not through open-ended conversation, but by wrapping structured clinical profiles inside explicit triple-hash (<code>###</code>) delimiter blocks. This establishes an isolated, machine-readable sandbox that commands the model's attention exclusively to the client's documented constraints.
+                </p>
+
+                <h3>The Delimited Case Schema</h3>
+                <pre><code>### CLINICAL CASE PROFILE ###
+Client ID: Case-EXW265-M08
+Age: 58
+Biological Sex: Male
+Primary Diagnosis: Type 2 Diabetes (HbA1c: 8.4%)
+Comorbidities: Bilateral Peripheral Neuropathy (lower limbs), Stage 1 Hypertension
+Current Medications: Metformin, Lisinopril, Atenolol (Beta-Blocker)
+Functional Status: Sedentary (&lt; 30 min/week structured activity); independent mobility
+Clinical Restrictions: Loss of protective sensation in plantar surfaces; blunted heart rate response; no barefoot or high-impact loading
+Assigned Target: Develop Initial 4-Week Aerobic & Resistance Progression
+###</code></pre>
+
+                <h2>4. The Mission Loop in Special Population Safety</h2>
+                <p>
+                    In clinical kinesiology, problem-solving cannot be treated as an unstructured creative exercise. Every exercise adaptation for vulnerable populations must follow a verifiable, deterministic loop.
+                </p>
+                <p>
+                    In EXW265, student analysis is structured around the <strong>Mission Loop (Pattern / Rule / Solve)</strong>:
+                </p>
+                <pre><code>┌────────────────────────────────────────────────────────────────────────┐
+│                   THE MISSION LOOP CLINICAL PIPELINE                   │
+│                                                                        │
+│  [ PATTERN ] ──► Identify clinical diagnoses, medications & mobility   │
+│        │                                                               │
+│        ▼                                                               │
+│  [  RULE   ] ──► Apply federal PAGA 2018 dosage & contraindications   │
+│        │                                                               │
+│        ▼                                                               │
+│  [  SOLVE  ] ──► Prescribe individualized, non-contraindicated program │
+└────────────────────────────────────────────────────────────────────────┘</code></pre>
+
+                <h2>5. The AI Auditor & Deterministic Verification Logic</h2>
+                <p>
+                    To prevent student reliance on hallucinated AI responses, the EXW265 AI Tool Kit operates not as an open-ended conversationalist, but as a rigid <strong>Red Team Clinical Safety Auditor</strong>.
+                </p>
+                <p>
+                    When a student submits their proposed exercise protocol alongside the delimited client profile, the auditor executes an automated decision tree:
+                </p>
+                <pre><code>                      [ Ingest ### Profile ### ]
+                                  │
+                                  ▼
+                 [ Check 1: Modality Contraindications ]
+                   ├── FAIL (e.g., impact with neuropathy) ──► Tier: RECALIBRATE
+                   └── PASS
+                                  │
+                                  ▼
+                  [ Check 2: Intensity Metric Gate ]
+                   ├── FAIL (e.g., Target HR used with Atenolol) ──► Tier: RECALIBRATE
+                   └── PASS (e.g., RPE / Talk Test applied)
+                                  │
+                                  ▼
+                    [ Check 3: PAGA Dosage & Volume ]
+                   ├── Volume Spike (&gt;10% weekly increase) ──► Tier: RECALIBRATE
+                   ├── Minor Rounding / Pacing Variance ──► Tier: COMPETENT
+                   └── 100% PAGA Alignment & Clinical Safety ──► Tier: EXEMPLARY</code></pre>
+
+                <h2>6. Institutional Resilience & Rural Community Impact</h2>
+                <p>
+                    Deploying deterministic clinical guardrails within community college kinesiology programs addresses a vital public health mission in rural borderland regions like Yuma and La Paz counties.
+                </p>
+                <p>
+                    In rural communities, individuals managing multi-comorbidity conditions—such as Type 2 diabetes combined with cardiovascular disease and agricultural musculoskeletal wear—frequently interact with fitness professionals, physical therapy aides, and community wellness coordinators who received their foundational training at local community colleges.
+                </p>
+                <p>
+                    By engineering <strong>EXW265</strong> under Curriculum-as-Code principles:
+                </p>
+                <ol>
+                    <li><strong>Equitable OER Delivery:</strong> Course materials, clinical case matrices, and AI auditor prompts are delivered in zero-cost, mobile-first Markdown, eliminating costly commercial textbook barriers for first- and second-year students.</li>
+                    <li><strong>Born-Accessible Semantic Structure:</strong> All modules follow strict WCAG 2.2 AA contrast standards, starting semantic headings at level 2 (<code>&lt;h2&gt;</code>) to guarantee full screen-reader accessibility for students with diverse visual and cognitive needs.</li>
+                    <li><strong>Zero-Trust Sovereign AI:</strong> Using synthetic case profiles (<code>Case-EXW265-M08</code>) inside delimited prompts ensures student learning occurs without exposing protected health information (PHI) or personal student data to public AI networks.</li>
+                </ol>
+                <p>
+                    When clinical health science education is governed by upstream deterministic code, generative AI ceases to be a liability. It becomes an unyielding safety mirror—teaching students to prescribe exercise with the precision, empathy, and evidence-based rigor that vulnerable communities deserve.
+                </p>
+
+                <h2>Academic Citation & Attribution</h2>
+                <pre><code>@article{pruitt2026deterministicguardrails,
+  author    = {Alan Pruitt},
+  title     = {Deterministic Clinical Guardrails: Preventing Hallucination Drift in Special Population Prescriptions},
+  journal   = {Curriculum-as-Code Publication Series},
+  year      = {2026},
+  month     = {aug},
+  number    = {20},
+  url       = {https://alanpruitt.com/articles/20-deterministic-clinical-guardrails.html},
+  publisher = {Webcognita LLC}
+}</code></pre>
+            </div>
+
+            <!-- Spanish Article Content -->
+            <div class="article-body hidden-lang" data-lang="es">
+                <blockquote>
+                    <strong>TL;DR:</strong> Cómo EXW265 despliega barreras deterministas, encapsulamiento estricto de delimitadores y la Fuente Única de Verdad de PAGA 2018 para eliminar la deriva de alucinaciones de IA en prescripciones de ejercicio para condiciones crónicas.
+                </blockquote>
+
+                <p>
+                    En las ciencias del ejercicio, prescribir actividad física para adultos sanos permite una amplia latitud de programación. Para poblaciones especiales (personas que navegan por condiciones metabólicas crónicas, enfermedades cardiovasculares, neuropatías periféricas o limitaciones neuromusculares graves), el margen de error se reduce a cero. Una sola recomendación no verificada sobre la intensidad del ejercicio, la carga de soporte de peso o el estrés térmico puede desencadenar complicaciones clínicas agudas.
+                </p>
+                <p>
+                    A medida que las herramientas de inteligencia artificial generativa se vuelven ayudas de estudio comunes para los estudiantes de colegios comunitarios, surge un desafío curricular urgente: <strong>los Modelos de Lenguaje Grande (LLM) no restringidos son fundamentalmente no deterministas y carecen de anclaje clínico</strong>.
+                </p>
+                <p>
+                    Cuando se les consulta para obtener consejos sobre la programación de ejercicios, los modelos de IA listos para usar mezclan pautas clínicas revisadas por pares con blogs de fitness no regulados en internet, tendencias de bienestar comercial y protocolos especulativos de influencers. El resultado es la <strong>deriva de alucinaciones</strong>: una recomendación sutil, de sonido autoritario, que introduce movimientos contraindicados o calcula mal los umbrales hemodinámicos.
+                </p>
+                <p>
+                    En <strong>EXW265 (Ejercicio para Poblaciones Especiales)</strong> para el otoño de 2026, resolvimos este modo de falla a través de la ingeniería de **Currículum como Código (CaC)** aguas arriba: estableciendo barreras clínicas deterministas que anclan cada simulación asistida por IA estrictamente a las directrices federales.
+                </p>
+
+                <h2>1. El Cuello de Botella Clínico: Poblaciones Vulnerables y el No Determinismo de los LLM</h2>
+                <p>
+                    Cuando los estudiantes de kinesiología en etapas tempranas evalúan estudios de casos clínicos complejos, a menudo recurren a asistentes de IA para intercambiar ideas sobre adaptaciones de ejercicios. Sin límites estructurales estrictos, los modelos de base estándar fallan de maneras predecibles y de alto riesgo:
+                </p>
+                <ul>
+                    <li><strong>Hemodinámica Atenuada por Medicamentos:</strong> Un LLM general con frecuencia recomendará objetivos de intensidad basados en la frecuencia cardíaca (como el 70% al 85% de la frecuencia cardíaca máxima prevista por la edad) para un cliente al que se le recetan betabloqueantes, sin reconocer que el bloqueo competitivo de los receptores impide las respuestas cronotrópicas normales, lo que hace que las frecuencias cardíacas de referencia sean peligrosamente engañosas.</li>
+                    <li><strong>Puntos Ciegos Autonómicos y Neuropáticos:</strong> Al diseñar rutinas para clientes con diabetes tipo 2 avanzada, los modelos no guiados a menudo sugieren ejercicios pliométricos o de carrera de alto impacto, perdiendo por completo la presencia de neuropatía periférica diabética y el riesgo grave de ulceración plantar no percibida.</li>
+                    <li><strong>Fuga de Modas Comerciales:</strong> Los modelos de la web abierta extraen datos rutinariamente de conjuntos de datos de bienestar especulativo, sugiriendo ventanas de ayuno restrictivas, exposición térmica extrema (por ejemplo, yoga caliente o saunas infrarrojos para clientes hipertensos) o suplementos a base de hierbas no verificados junto con protocolos de ejercicio.</li>
+                </ul>
+
+                <pre><code>┌────────────────────────────────────────────────────────────────────────┐
+│                   EL PATRÓN DE PELIGRO DE IA NO PROTEGIDA              │
+│                                                                        │
+│  [ Consulta del Estudiante ] ──► [ LLM Público sin Anclaje ]           │
+│                                     │                                  │
+│         ┌───────────────────────────┴───────────────────────────┐      
+│         ▼                                                       ▼      │
+│  [ Modas de Fitness en Internet ]                    [ Estudios en Conflicto ]
+│         │                                                       │      │
+│         └───────────────────────────┬───────────────────────────┘      │
+│                                     ▼                                  │
+│               [ Prescripción Clínica Alucinada ]                       │
+│               • Fuerzas de impacto contraindicadas                     │
+│               • Interacciones medicamentosas ignoradas                 │
+│               • Carga térmica/hemodinámica peligrosa                  │
+└────────────────────────────────────────────────────────────────────────┘</code></pre>
+
+                <h2>2. Gobernanza Aguas Arriba: El Estándar Inmutable PAGA 2018</h2>
+                <p>
+                    Para eliminar la ambigüedad algorítmica, EXW265 impone una ley curricular estricta: **las Directrices de Actividad Física para Estadounidenses (PAGA 2018, 2ª Ed.) sirven como la Fuente Única de Verdad (SSoT) exclusiva**.
+                </p>
+                <p>
+                    A diferencia de los cursos de rendimiento atlético o fitness general que se basan en marcos de entrenamiento comerciales, EXW265 descarta deliberadamente los estándares externos no verificados. Cada recomendación de volumen clínico, regla de progresión y límite de seguridad debe rastrearse directamente hasta el consenso basado en evidencia establecido por el Departamento de Salud y Servicios Humanos (HHS) de los EE. UU.
+                </p>
+                
+                <h3>Las Reglas de Límites de SSoT</h3>
+                <p>
+                    Bajo nuestra canalización de integración continua automatizada, todos los módulos de instrucción y herramientas de IA se auditan contra tres pilares federales:
+                </p>
+                <ol>
+                    <li><strong>Especificidad de Dosis-Respuesta:</strong> Las prescripciones deben alinearse con los objetivos de referencia federales (150 a 300 minutos de actividad de intensidad moderada, o 75 a 150 minutos de actividad física aeróbica de intensidad vigorosa por semana, combinados con actividades de fortalecimiento muscular multiarticular en dos o más días).</li>
+                    <li><strong>Adaptación a Enfermedades Crónicas:</strong> Cuando las condiciones crónicas impiden que las personas alcancen los mínimos de volumen estándar, el protocolo impone estrictamente el mandato de PAGA: *las personas deben estar tan físicamente activas como lo permitan sus capacidades y condiciones, evitando todo comportamiento sedentario*.</li>
+                    <li><strong>Cero Fuga Comercial:</strong> Las estructuras de prompts instruyen explícitamente a los evaluadores de IA a rechazar las tendencias dietéticas comerciales, los protocolos de entrenamiento patentados y los consejos clínicos que no figuren en las pautas.</li>
+                </ol>
+                <p>
+                    Al controlar las versiones de nuestro curso principal en Markdown simple en GitHub, cualquier intento de desviación de la directriz federal falla en el análisis de linting automatizado antes de que el módulo se despliegue en el entorno Canvas LMS del estudiante.
+                </p>
+
+                <h2>3. El Protocolo de Delimitadores e Aislamiento del Contexto</h2>
+                <p>
+                    El mecanismo principal para prevenir la inyección de prompts, la fuga de datos y la deriva de alucinaciones en EXW265 es nuestro <strong>Protocolo de Delimitadores</strong>.
+                </p>
+                <p>
+                    Se enseña a los estudiantes a interactuar con el kit de herramientas de IA del curso no a través de conversaciones abiertas, sino envolviendo perfiles clínicos estructurados dentro de bloques delimitadores explícitos de tres almohadillas (<code>###</code>). Esto establece un entorno de pruebas aislado y legible por máquina que dirige la atención del modelo exclusivamente a las limitaciones documentadas del cliente.
+                </p>
+
+                <h3>El Esquema del Caso Delimitado</h3>
+                <pre><code>### PERFIL DEL CASO CLÍNICO ###
+ID del Cliente: Case-EXW265-M08
+Edad: 58
+Sexo Biológico: Masculino
+Diagnóstico Primario: Diabetes Tipo 2 (HbA1c: 8.4%)
+Comorbilidades: Neuropatía Periférica Bilateral (extremidades inferiores), Hipertensión Estadio 1
+Medicamentos Actuales: Metformina, Lisinopril, Atenolol (Betabloqueante)
+Estado Funcional: Sedentario (&lt; 30 min/semana de actividad estructurada); movilidad independiente
+Restricciones Clínicas: Pérdida de la sensación protectora en superficies plantares; respuesta atenuada de la frecuencia cardíaca; sin carga de alto impacto ni descalzo
+Objetivo Asignado: Desarrollar la Progresión Inicial Aeróbica y de Resistencia de 4 Semanas
+###</code></pre>
+
+                <h2>4. El Bucle de Misión (Mission Loop) en la Seguridad de Poblaciones Especiales</h2>
+                <p>
+                    En kinesiología clínica, la resolución de problemas no puede tratarse como un ejercicio creativo no estructurado. Cada adaptación de ejercicio para poblaciones vulnerables debe seguir un bucle verificable y determinista.
+                </p>
+                <p>
+                    En EXW265, el análisis del estudiante se estructura en torno al <strong>Bucle de Misión (Patrón / Regla / Resolver)</strong>:
+                </p>
+                <pre><code>┌────────────────────────────────────────────────────────────────────────┐
+│                  EL PIPELINE CLÍNICO DEL BUCLE DE MISIÓN               │
+│                                                                        │
+│  [ PATRÓN ] ──► Identificar diagnósticos, medicamentos y movilidad     │
+│        │                                                               │
+│        ▼                                                               │
+│  [  REGLA  ] ──► Aplicar dosis de PAGA 2018 y contraindicaciones       │
+│        │                                                               │
+│        ▼                                                               │
+│  [RESOLVER ] ──► Prescribir programa individualizado no contraindicado  │
+└────────────────────────────────────────────────────────────────────────┘</code></pre>
+
+                <h2>5. El Auditor de IA y la Lógica de Verificación Determinista</h2>
+                <p>
+                    Para evitar que los estudiantes dependan de respuestas de IA alucinadas, el kit de herramientas de IA de EXW265 funciona no como un conversador abierto, sino como un **Auditor de Seguridad Clínica Red Team** rígido.
+                </p>
+                <p>
+                    Cuando un estudiante presenta su protocolo de ejercicio propuesto junto con el perfil delimitado del cliente, el auditor ejecuta un árbol de decisiones automatizado:
+                </p>
+                <pre><code>                      [ Ingestión del Perfil ### ]
+                                  │
+                                  ▼
+                [ Verificación 1: Contraindicaciones de Modalidad ]
+                   ├── FALLA (ej. impacto con neuropatía) ──► Nivel: RECALIBRAR
+                   └── PASA
+                                  │
+                                  ▼
+                [ Verificación 2: Puerta de Métrica de Intensidad ]
+                   ├── FALLA (ej. FC Objetivo usada con Atenolol) ──► Nivel: RECALIBRAR
+                   └── PASA (ej. se aplica RPE / Prueba del Habla)
+                                  │
+                                  ▼
+                [ Verificación 3: Dosis y Volumen de PAGA ]
+                   ├── Pico de Volumen (&gt;10% de aumento semanal) ──► Nivel: RECALIBRAR
+                   ├── Redondeo menor / Varianza de Ritmo ──► Nivel: COMPETENTE
+                   └── 100% de Alineación con PAGA y Seguridad ──► Nivel: EJEMPLAR</code></pre>
+
+                <h2>6. Resiliencia Institucional e Impacto en la Comunidad Rural</h2>
+                <p>
+                    El despliegue de barreras clínicas deterministas dentro de los programas de kinesiología de los colegios comunitarios aborda una misión vital de salud pública en regiones fronterizas rurales como los condados de Yuma y La Paz.
+                </p>
+                <p>
+                    En las comunidades rurales, las personas que manejan condiciones de comorbilidad múltiple, como la diabetes tipo 2 combinada con enfermedad cardiovascular y el desgaste musculoesquelético agrícola, interactúan con frecuencia con profesionales del fitness, asistentes de terapia física y coordinadores de bienestar comunitario que recibieron su formación inicial en los colegios comunitarios locales.
+                </p>
+                <p>
+                    Al diseñar <strong>EXW265</strong> bajo los principios de Currículum como Código:
+                </p>
+                <ol>
+                    <li><strong>Entrega Equitativa de REA:</strong> Los materiales del curso, las matrices de casos clínicos y las indicaciones del auditor de IA se entregan en Markdown móvil primero y de costo cero, eliminando las costosas barreras de los libros de texto comerciales para estudiantes de primer y segundo año.</li>
+                    <li><strong>Estructura Semántica Accesible de Nacimiento:</strong> Todos los módulos siguen estrictas normas de contraste WCAG 2.2 AA, comenzando los encabezados semánticos en el nivel 2 (<code>&lt;h2&gt;</code>) para garantizar la accesibilidad completa del lector de pantalla para estudiantes con diversas necesidades visuales y cognitivas.</li>
+                    <li><strong>IA Soberana de Confianza Cero:</strong> El uso de perfiles de casos sintéticos (<code>Case-EXW265-M08</code>) dentro de indicaciones delimitadas garantiza que el aprendizaje del estudiante ocurra sin exponer información de salud protegida (PHI) o datos personales del estudiante a las redes públicas de IA.</li>
+                </ol>
+                <p>
+                    Cuando la educación en ciencias de la salud clínica se rige por un código determinista aguas arriba, la IA generativa deja de ser una responsabilidad. Se convierte en un espejo de seguridad inquebrantable, enseñando a los estudiantes a prescribir ejercicio con la precisión, empatía y rigor basado en evidencia que las comunidades vulnerables merecen.
+                </p>
+
+                <h2>Citación Académica y Atribución</h2>
+                <pre><code>@article{pruitt2026deterministicguardrails,
+  author    = {Alan Pruitt},
+  title     = {Deterministic Clinical Guardrails: Preventing Hallucination Drift in Special Population Prescriptions},
+  journal   = {Curriculum-as-Code Publication Series},
+  year      = {2026},
+  month     = {aug},
+  number    = {20},
+  url       = {https://alanpruitt.com/articles/20-deterministic-clinical-guardrails.html},
+  publisher = {Webcognita LLC}
+}</code></pre>
+            </div>
+
+            <!-- Article Footer Navigation -->
+            <footer class="mt-12 pt-6 border-t border-creme-100 flex items-center justify-between">
+                <a href="index.html" class="text-sm font-semibold text-navy-900 hover:underline inline-flex items-center gap-1">
+                    &larr; Back to Articles
+                </a>
+                <a href="https://www.linkedin.com/in/alanpruitt/recent-activity/all/" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-navy-800 hover:text-navy-900 hover:underline inline-flex items-center gap-1">
+                    View on LinkedIn ↗
+                </a>
+            </footer>
+
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full bg-navy-900 text-creme-200 py-8 px-6 text-center text-xs border-t border-navy-950">
+        <p class="mb-2">© 2026 Alan Pruitt • All Rights Reserved.</p>
+        <p class="opacity-75">Instructional Design, AI Pedagogy & Curriculum Architecture</p>
+    </footer>
+
+    <!-- Toggle Script -->
+    <script>
+        function setLanguage(lang) {
+            const elements = document.querySelectorAll('[data-lang]');
+            elements.forEach(el => {
+                if (el.getAttribute('data-lang') === lang) {
+                    el.classList.remove('hidden-lang');
+                } else {
+                    el.classList.add('hidden-lang');
+                }
+            });
+
+            // Update button states
+            document.querySelectorAll('.lang-toggle-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.getElementById('btn-' + lang).classList.add('active');
+        }
+    </script>
+</body>
+</html>

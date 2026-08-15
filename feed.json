@@ -15,6 +15,19 @@
   ],
   "items": [
     {
+      "id": "https://alanpruitt.com/articles/20-deterministic-clinical-guardrails.html",
+      "url": "https://alanpruitt.com/articles/20-deterministic-clinical-guardrails.html",
+      "title": "Deterministic Clinical Guardrails: Sovereign AI Simulation & Safety Gates (EXW265 SSoT Case Study)",
+      "summary": "How EXW265 integrates deterministic clinical guardrails and safety gates into AI simulation models to enforce ACSM and PAGA academic source-of-truth standards.",
+      "date_published": "2026-08-21T12:00:00.000Z",
+      "tags": [
+        "AISafety",
+        "ClinicalGuardrails",
+        "Kinesiology",
+        "SSoT"
+      ]
+    },
+    {
       "id": "https://alanpruitt.com/articles/19-hybrid-ergometer-scaffold.html",
       "url": "https://alanpruitt.com/articles/19-hybrid-ergometer-scaffold.html",
       "title": "The Hybrid Ergometer Scaffold: Guided Simulation & Precision Testing (EXW245 Case Study)",
