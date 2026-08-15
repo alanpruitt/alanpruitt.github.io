@@ -3,7 +3,7 @@ import { resolve, join, basename } from 'path';
 
 const SITE_ORIGIN = 'https://alanpruitt.com';
 const CONTENT_DIR = resolve('content/essays');
-const DIST_DIR = resolve('.');
+const DIST_DIR = (process.env.GITHUB_ACTIONS === 'true') ? resolve('_site') : resolve('.');
 
 function parseFrontmatter(rawContent) {
   const match = rawContent.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
