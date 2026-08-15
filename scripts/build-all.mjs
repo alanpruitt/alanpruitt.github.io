@@ -215,30 +215,21 @@ ${items}
 </rss>`;
 }
 
-function buildJsonFeed(essays) {
-  const feed = {
+function generateJsonFeed(essays) {
+  return JSON.stringify({
     version: "https://jsonfeed.org/version/1.1",
-    title: "Coach Alan Pruitt — Essays & Curriculum Architecture",
-    home_page_url: SITE_ORIGIN,
-    feed_url: `${SITE_ORIGIN}/feed.json`,
-    description: "Algorithmic pedagogy, curriculum architecture, and generative AI strategy.",
-    authors: [
-      {
-        name: "Coach Alan Pruitt",
-        url: SITE_ORIGIN
-      }
-    ],
-    items: essays.map(essay => ({
-      id: essay.canonicalUrl,
-      url: essay.canonicalUrl,
-      title: essay.title,
-      summary: essay.summary,
-      date_published: new Date(essay.date).toISOString(),
-      content_html: essay.body.replace(/\n\n/g, '<p>').replace(/\n/g, '<br>')
+    title: "Coach Alan | Curriculum-as-Code Essays",
+    home_page_url: "https://alanpruitt.com/",
+    feed_url: "https://alanpruitt.com/feed.json",
+    description: "Algorithmic pedagogy, CaC frameworks, and sovereign AI strategies.",
+    items: essays.map(e => ({
+      id: e.canonicalUrl,
+      url: e.canonicalUrl,
+      title: e.title,
+      content_html: e.htmlContent,
+      date_published: new Date(e.date).toISOString()
     }))
-  };
-
-  return JSON.stringify(feed, null, 2);
+  }, null, 2);
 }
 
 function generateArchiveHtml(essays) {
@@ -333,7 +324,8 @@ function run() {
       summary: metadata.summary || '',
       date,
       canonicalUrl,
-      body: markdownBody
+      body: markdownBody,
+      htmlContent: markdownBody.replace(/\n\n/g, '<p>').replace(/\n/g, '<br>')
     };
     essays.push(essayData);
 
@@ -379,7 +371,7 @@ function run() {
   console.log('📡 Generated: rss.xml');
 
   // 3. JSON Feed (v1.1)
-  writeFileSync(resolve(DIST_DIR, 'feed.json'), buildJsonFeed(essays), 'utf-8');
+  writeFileSync(resolve(DIST_DIR, 'feed.json'), generateJsonFeed(essays), 'utf-8');
   console.log('📄 Generated: feed.json');
 
   // 1. Build Primary Archive: essays/index.html
