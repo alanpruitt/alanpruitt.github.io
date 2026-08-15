@@ -48,7 +48,42 @@ function escapeXml(unsafe) {
   });
 }
 
-function generateStaticHtml({ title, summary, canonicalUrl, body }) {
+function generateShareButtonsHtml(article) {
+  const canonicalUrl = encodeURIComponent(article.url || `https://alanpruitt.com/articles/${article.slug}.html`);
+  const encodedTitle = encodeURIComponent(article.title);
+
+  const linkedInUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${canonicalUrl}`;
+  const xUrl = `https://x.com/intent/post?text=${encodedTitle}&url=${canonicalUrl}&via=alanpruitt`;
+  const redditUrl = `https://reddit.com/submit?url=${canonicalUrl}&title=${encodedTitle}`;
+  const mailtoUrl = `mailto:?subject=${encodedTitle}&body=Read%20this%20Curriculum-as-Code%20architecture:%20${canonicalUrl}`;
+
+  return `
+    <!-- Zero-JS Semantic Social Share -->
+    <div style="margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--bg-creme-200, #E6E6DC); display: flex; flex-direction: column; gap: 16px;" aria-label="Social sharing options">
+      <span style="font-family: monospace; font-size: 0.75rem; font-weight: bold; color: var(--navy-dark); text-transform: uppercase; tracking-wider">
+        Share this Architecture:
+      </span>
+      <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center;">
+        <a href="${linkedInUrl}" target="_blank" rel="noopener noreferrer" aria-label="Share on LinkedIn" style="font-family: monospace; font-size: 0.75rem; font-weight: 600; text-decoration: none; padding: 6px 12px; border-radius: 8px; border: 1px solid var(--bg-creme-200, #E6E6DC); color: var(--navy-dark); background-color: var(--bg-cream);">
+          LinkedIn
+        </a>
+        <a href="${xUrl}" target="_blank" rel="noopener noreferrer" aria-label="Share on X" style="font-family: monospace; font-size: 0.75rem; font-weight: 600; text-decoration: none; padding: 6px 12px; border-radius: 8px; border: 1px solid var(--bg-creme-200, #E6E6DC); color: var(--navy-dark); background-color: var(--bg-cream);">
+          X
+        </a>
+        <a href="${redditUrl}" target="_blank" rel="noopener noreferrer" aria-label="Share on Reddit" style="font-family: monospace; font-size: 0.75rem; font-weight: 600; text-decoration: none; padding: 6px 12px; border-radius: 8px; border: 1px solid var(--bg-creme-200, #E6E6DC); color: var(--navy-dark); background-color: var(--bg-cream);">
+          Reddit
+        </a>
+        <a href="${mailtoUrl}" aria-label="Share via Email" style="font-family: monospace; font-size: 0.75rem; font-weight: 600; text-decoration: none; padding: 6px 12px; border-radius: 8px; border: 1px solid var(--bg-creme-200, #E6E6DC); color: var(--navy-dark); background-color: var(--bg-cream);">
+          Email
+        </a>
+      </div>
+    </div>`;
+}
+
+function generateStaticHtml(article) {
+  const { title, summary, canonicalUrl, body } = article;
+  const shareButtonsHtml = generateShareButtonsHtml({ ...article, url: canonicalUrl });
+
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -95,6 +130,7 @@ function generateStaticHtml({ title, summary, canonicalUrl, body }) {
     <div class="content">
       ${body.replace(/\n\n/g, '<p>').replace(/\n/g, '<br>')}
     </div>
+    ${shareButtonsHtml}
   </main>
 </body>
 </html>`;
