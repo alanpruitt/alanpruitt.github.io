@@ -1,45 +1,258 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-full scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>All Essays & Articles | Coach Alan</title>
-  <meta name="description" content="Complete archive of essays, curriculum architecture frameworks, and algorithmic pedagogy writings.">
-  <link rel="canonical" href="https://alanpruitt.com/essays/">
-  
-  <style>
-    :root {
-      --bg-cream: #FDFBF7;
-      --navy-dark: #1B2A4A;
-      --text-main: #222222;
-      --link-accent: #0E3D73;
-    }
-    body {
-      background-color: var(--bg-cream);
-      color: var(--text-main);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      line-height: 1.6;
-      max-width: 780px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-    h2, h3 { color: var(--navy-dark); }
-    a { color: var(--link-accent); }
-    nav a { margin-right: 15px; font-weight: 600; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Essays &amp; Articles | Coach Alan</title>
+    <meta name="description" content="Complete archive of Curriculum-as-Code essays, algorithmic pedagogy frameworks, and AI strategy writings by Alan Pruitt.">
+    <link rel="canonical" href="https://alanpruitt.com/articles/index.html">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%230B192C'/></svg>">
+
+    <style>
+        :root {
+            --bg-creme-50: #FAFBF7;
+            --bg-creme-100: #F5F5F0;
+            --bg-creme-200: #E6E6DC;
+            --text-navy-800: #1E3E62;
+            --text-navy-900: #0B192C;
+            --link-accent: #0E3D73;
+        }
+
+        *, ::before, ::after { box-sizing: border-box; border-width: 0; }
+        html { line-height: 1.5; font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+        body { margin: 0; background-color: var(--bg-creme-100); color: var(--text-navy-900); padding: 2rem 1rem; }
+
+        .max-w-4xl { max-width: 56rem; margin: 0 auto; }
+        .bg-white { background-color: #ffffff; }
+        .p-6 { padding: 1.5rem; }
+        .p-8 { padding: 2rem; }
+        .rounded-2xl { border-radius: 1rem; }
+        .border { border: 1px solid var(--bg-creme-200); }
+        .border-b { border-bottom: 1px solid var(--bg-creme-200); }
+        .mb-2 { margin-bottom: 0.5rem; }
+        .mb-3 { margin-bottom: 0.75rem; }
+        .mb-4 { margin-bottom: 1rem; }
+        .mb-6 { margin-bottom: 1.5rem; }
+        .mb-8 { margin-bottom: 2rem; }
+        .pb-4 { padding-bottom: 1rem; }
+        .pb-6 { padding-bottom: 1.5rem; }
+
+        .font-mono { font-family: 'Fira Code', monospace; }
+        .font-bold { font-weight: 700; }
+        .text-xs { font-size: 0.75rem; }
+        .text-sm { font-size: 0.875rem; }
+        .text-lg { font-size: 1.125rem; }
+        .text-xl { font-size: 1.25rem; }
+        .text-3xl { font-size: 1.875rem; }
+
+        .text-navy-800 { color: var(--text-navy-800); }
+        .text-navy-900 { color: var(--text-navy-900); }
+        .shadow-sm { box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); }
+
+        a { color: var(--link-accent); text-decoration: underline; font-weight: 600; }
+        a:hover { color: var(--text-navy-900); }
+        .nav-back { display: inline-block; margin-bottom: 1.5rem; text-decoration: none; font-weight: 700; }
+        .essay-entry { padding: 1.25rem 0; }
+        .essay-entry:last-child { border-bottom: none; }
+    </style>
 </head>
 <body>
-  <header style="margin-bottom: 30px;">
-    <nav style="margin-bottom: 20px;">
-      <a href="/">← Home</a>
-    </nav>
-    <h2>All Essays &amp; Articles</h2>
-    <p style="color: #555555; font-size: 1rem;">
-      Curriculum Architecture, Algorithmic Pedagogy &amp; Generative AI Strategy.
-    </p>
-  </header>
-  <main>
-    
-  </main>
+
+    <div class="max-w-4xl">
+        <a href="/" class="nav-back text-sm">&larr; Back to alanpruitt.com</a>
+
+        <header class="mb-8 pb-6 border-b">
+            <div class="font-mono text-xs font-bold text-navy-800 uppercase tracking-widest mb-2">ARCHIVE</div>
+            <h1 class="text-3xl font-bold text-navy-900 mb-2">All Essays &amp; Articles</h1>
+            <p class="text-sm text-navy-800">Curriculum Architecture, Algorithmic Pedagogy &amp; Generative AI Strategy.</p>
+        </header>
+
+        <main class="bg-white p-8 rounded-2xl border shadow-sm">
+            
+            <!-- ESSAY 18 -->
+            <article class="essay-entry border-b">
+                <div class="font-mono text-xs font-bold text-navy-800 mb-1">ESSAY 18</div>
+                <h2 class="text-xl font-bold mb-2">
+                    <a href="/articles/18-the-illusion-of-the-feed.html">The Illusion of the Feed: Upstream SSoT &amp; Feed Link Rot Governance</a>
+                </h2>
+                <p class="text-sm text-navy-800 mb-3">How relying on dynamic external feeds inside an LMS introduces link rot vulnerabilities, and how upstream SSoT configuration control resolves accessibility issues at the source.</p>
+                <a href="/articles/18-the-illusion-of-the-feed.html" class="text-xs font-bold">Read Essay &rarr;</a>
+            </article>
+
+            <!-- ESSAY 17 -->
+            <article class="essay-entry border-b">
+                <div class="font-mono text-xs font-bold text-navy-800 mb-1">ESSAY 17</div>
+                <h2 class="text-xl font-bold mb-2">
+                    <a href="/articles/17-resolving-array-parsing-script-failures.html">Engineering Resilience: Resolving False-Positive Contrast Errors &amp; Array Failures</a>
+                </h2>
+                <p class="text-sm text-navy-800 mb-3">How automated accessibility checkers fail under WYSIWYG visual-editor DOM pollution and how Curriculum-as-Code resolves array parsing failures.</p>
+                <a href="/articles/17-resolving-array-parsing-script-failures.html" class="text-xs font-bold">Read Essay &rarr;</a>
+            </article>
+
+            <!-- ESSAY 16 -->
+            <article class="essay-entry border-b">
+                <div class="font-mono text-xs font-bold text-navy-800 mb-1">ESSAY 16</div>
+                <h2 class="text-xl font-bold mb-2">
+                    <a href="/articles/16-canvas-lms-3-track-ai-branch.html">Canvas LMS 3-Track Self-Guided AI Branch and Bilingual Scaffolding</a>
+                </h2>
+                <p class="text-sm text-navy-800 mb-3">Transforming traditional online discussion boards into active, interdisciplinary clinical case conferences across all 16 EXW modules.</p>
+                <a href="/articles/16-canvas-lms-3-track-ai-branch.html" class="text-xs font-bold">Read Essay &rarr;</a>
+            </article>
+
+            <!-- ESSAY 15 -->
+            <article class="essay-entry border-b">
+                <div class="font-mono text-xs font-bold text-navy-800 mb-1">ESSAY 15</div>
+                <h2 class="text-xl font-bold mb-2">
+                    <a href="/articles/15-algorithmic-pedagogy-ci.html">Algorithmic Pedagogy &amp; Continuous Integration: Zero-Regression Learning</a>
+                </h2>
+                <p class="text-sm text-navy-800 mb-3">Treating learning outcomes and compliance rules as executable code monitored by CI/CD.</p>
+                <a href="/articles/15-algorithmic-pedagogy-ci.html" class="text-xs font-bold">Read Essay &rarr;</a>
+            </article>
+
+            <!-- ESSAY 14 -->
+            <article class="essay-entry border-b">
+                <div class="font-mono text-xs font-bold text-navy-800 mb-1">ESSAY 14</div>
+                <h2 class="text-xl font-bold mb-2">
+                    <a href="/articles/14-guided-learning-trifecta.html">The Guided Learning Trifecta: AI Simulation, Application &amp; Auditing</a>
+                </h2>
+                <p class="text-sm text-navy-800 mb-3">Deploying Google's Guided Learning principles in Curriculum-as-Code via system prompts.</p>
+                <a href="/articles/14-guided-learning-trifecta.html" class="text-xs font-bold">Read Essay &rarr;</a>
+            </article>
+
+            <!-- ESSAY 13 -->
+            <article class="essay-entry border-b">
+                <div class="font-mono text-xs font-bold text-navy-800 mb-1">ESSAY 13</div>
+                <h2 class="text-xl font-bold mb-2">
+                    <a href="/articles/13-vibe-coding-paradigm.html">The Vibe-Coding Paradigm: Speed &amp; Full-Stack Execution in EdTech</a>
+                </h2>
+                <p class="text-sm text-navy-800 mb-3">Translating domain expertise directly into production-grade web applications using AI.</p>
+                <a href="/articles/13-vibe-coding-paradigm.html" class="text-xs font-bold">Read Essay &rarr;</a>
+            </article>
+
+            <!-- ESSAY 12 -->
+            <article class="essay-entry border-b">
+                <div class="font-mono text-xs font-bold text-navy-800 mb-1">ESSAY 12</div>
+                <h2 class="text-xl font-bold mb-2">
+                    <a href="/articles/12-mission-loop-architecture.html">The Mission Loop Architecture: Pattern, Rule, and Solve in Coded Instruction</a>
+                </h2>
+                <p class="text-sm text-navy-800 mb-3">Structuring deterministic health science problem-solving pipelines that enforce pattern identification.</p>
+                <a href="/articles/12-mission-loop-architecture.html" class="text-xs font-bold">Read Essay &rarr;</a>
+            </article>
+
+            <!-- ESSAY 11 -->
+            <article class="essay-entry border-b">
+                <div class="font-mono text-xs font-bold text-navy-800 mb-1">ESSAY 11</div>
+                <h2 class="text-xl font-bold mb-2">
+                    <a href="/articles/11-two-part-scaffold-framework.html">The Two-Part Scaffold Framework: Guided Simulation &amp; Precision Testing</a>
+                </h2>
+                <p class="text-sm text-navy-800 mb-3">Integrating AI simulation sandbox environments with research-grade laboratory equipment.</p>
+                <a href="/articles/11-two-part-scaffold-framework.html" class="text-xs font-bold">Read Essay &rarr;</a>
+            </article>
+
+            <!-- ESSAY 10 -->
+            <article class="essay-entry border-b">
+                <div class="font-mono text-xs font-bold text-navy-800 mb-1">ESSAY 10</div>
+                <h2 class="text-xl font-bold mb-2">
+                    <a href="/articles/10-ai-safety-auditor-pattern.html">The AI Safety Auditor Pattern: Guardrailing In-LMS Student Simulations</a>
+                </h2>
+                <p class="text-sm text-navy-800 mb-3">Deterministic verification protocols to prevent hallucination drift in academic environments.</p>
+                <a href="/articles/10-ai-safety-auditor-pattern.html" class="text-xs font-bold">Read Essay &rarr;</a>
+            </article>
+
+            <!-- ESSAY 09 -->
+            <article class="essay-entry border-b">
+                <div class="font-mono text-xs font-bold text-navy-800 mb-1">ESSAY 09</div>
+                <h2 class="text-xl font-bold mb-2">
+                    <a href="/articles/09-immutable-learning-analytics.html">Immutable Learning Analytics: Privacy-Preserving Student Verification</a>
+                </h2>
+                <p class="text-sm text-navy-800 mb-3">Auditing student engagement metrics with sovereign data privacy boundaries.</p>
+                <a href="/articles/09-immutable-learning-analytics.html" class="text-xs font-bold">Read Essay &rarr;</a>
+            </article>
+
+            <!-- ESSAY 08 -->
+            <article class="essay-entry border-b">
+                <div class="font-mono text-xs font-bold text-navy-800 mb-1">ESSAY 08</div>
+                <h2 class="text-xl font-bold mb-2">
+                    <a href="/articles/08-bilingual-localization-pipelines.html">Bilingual Localization Pipelines in Higher Education</a>
+                </h2>
+                <p class="text-sm text-navy-800 mb-3">Automating English/Spanish curriculum parity without semantic drift.</p>
+                <a href="/articles/08-bilingual-localization-pipelines.html" class="text-xs font-bold">Read Essay &rarr;</a>
+            </article>
+
+            <!-- ESSAY 07 -->
+            <article class="essay-entry border-b">
+                <div class="font-mono text-xs font-bold text-navy-800 mb-1">ESSAY 07</div>
+                <h2 class="text-xl font-bold mb-2">
+                    <a href="/articles/07-continuous-integration-pedagogy.html">Continuous Integration in Course Pedagogy</a>
+                </h2>
+                <p class="text-sm text-navy-800 mb-3">Automating curriculum deployment with GitHub Actions and Canvas API integrations.</p>
+                <a href="/articles/07-continuous-integration-pedagogy.html" class="text-xs font-bold">Read Essay &rarr;</a>
+            </article>
+
+            <!-- ESSAY 06 -->
+            <article class="essay-entry border-b">
+                <div class="font-mono text-xs font-bold text-navy-800 mb-1">ESSAY 06</div>
+                <h2 class="text-xl font-bold mb-2">
+                    <a href="/articles/06-canvas-ai-course-design.html">Canvas AI Course Design &amp; Modular Architecture</a>
+                </h2>
+                <p class="text-sm text-navy-800 mb-3">Designing high-touch student interaction tracks within learning management systems.</p>
+                <a href="/articles/06-canvas-ai-course-design.html" class="text-xs font-bold">Read Essay &rarr;</a>
+            </article>
+
+            <!-- ESSAY 05 -->
+            <article class="essay-entry border-b">
+                <div class="font-mono text-xs font-bold text-navy-800 mb-1">ESSAY 05</div>
+                <h2 class="text-xl font-bold mb-2">
+                    <a href="/articles/05-instructional-engineering.html">Instructional Engineering: Treating Pedagogy as Code</a>
+                </h2>
+                <p class="text-sm text-navy-800 mb-3">Applying software engineering principles to academic curriculum design and maintenance.</p>
+                <a href="/articles/05-instructional-engineering.html" class="text-xs font-bold">Read Essay &rarr;</a>
+            </article>
+
+            <!-- ESSAY 04 -->
+            <article class="essay-entry border-b">
+                <div class="font-mono text-xs font-bold text-navy-800 mb-1">ESSAY 04</div>
+                <h2 class="text-xl font-bold mb-2">
+                    <a href="/articles/04-ada-title-ii-accessibility.html">ADA Title II Compliance &amp; WCAG 2.2 AA in Digital Classrooms</a>
+                </h2>
+                <p class="text-sm text-navy-800 mb-3">Enforcing sovereign accessibility standards and programmatic contrast auditing across LMS pages.</p>
+                <a href="/articles/04-ada-title-ii-accessibility.html" class="text-xs font-bold">Read Essay &rarr;</a>
+            </article>
+
+            <!-- ESSAY 03 -->
+            <article class="essay-entry border-b">
+                <div class="font-mono text-xs font-bold text-navy-800 mb-1">ESSAY 03</div>
+                <h2 class="text-xl font-bold mb-2">
+                    <a href="/articles/03-air-gapped-sovereign-ai.html">Air-Gapped Sovereign AI in Community Colleges</a>
+                </h2>
+                <p class="text-sm text-navy-800 mb-3">Deploying local open-weight models for zero-cost, private student compute.</p>
+                <a href="/articles/03-air-gapped-sovereign-ai.html" class="text-xs font-bold">Read Essay &rarr;</a>
+            </article>
+
+            <!-- ESSAY 02 -->
+            <article class="essay-entry border-b">
+                <div class="font-mono text-xs font-bold text-navy-800 mb-1">ESSAY 02</div>
+                <h2 class="text-xl font-bold mb-2">
+                    <a href="/articles/02-curriculum-as-code.html">Curriculum-as-Code: Version Control for Education</a>
+                </h2>
+                <p class="text-sm text-navy-800 mb-3">Establishing Git as the Single Source of Truth for instructional design.</p>
+                <a href="/articles/02-curriculum-as-code.html" class="text-xs font-bold">Read Essay &rarr;</a>
+            </article>
+
+            <!-- ESSAY 01 -->
+            <article class="essay-entry">
+                <div class="font-mono text-xs font-bold text-navy-800 mb-1">ESSAY 01</div>
+                <h2 class="text-xl font-bold mb-2">
+                    <a href="/articles/01-ai-assessment-design.html">AI Assessment Design: Beyond the Multiple Choice Question</a>
+                </h2>
+                <p class="text-sm text-navy-800 mb-3">Designing authentic, interactive problem-solving evaluations using AI prompts.</p>
+                <a href="/articles/01-ai-assessment-design.html" class="text-xs font-bold">Read Essay &rarr;</a>
+            </article>
+
+        </main>
+    </div>
+
 </body>
 </html>
