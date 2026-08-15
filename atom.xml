@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Alan Pruitt | Curriculum-as-Code &amp; AI Strategy</title>
+  <subtitle>Curriculum architecture, algorithmic pedagogy, sovereign AI strategies, and compliance frameworks by Alan Pruitt (Coach Alan).</subtitle>
+  <link href="https://alanpruitt.com/atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://alanpruitt.com/" rel="alternate" type="text/html"/>
+  <id>https://alanpruitt.com/</id>
+  <updated>2026-08-14T22:30:00.000Z</updated>
+  <author>
+    <name>Alan Pruitt</name>
+    <email>contact@webcognita.com</email>
+    <uri>https://alanpruitt.com</uri>
+  </author>
+  <entry>
+    <title>The Illusion of the Feed: Upstream SSoT &amp; Feed Link Rot Governance</title>
+    <link href="https://alanpruitt.com/articles/18-the-illusion-of-the-feed.html" rel="alternate" type="text/html"/>
+    <id>https://alanpruitt.com/articles/18-the-illusion-of-the-feed.html</id>
+    <updated>2026-08-14T12:00:00.000Z</updated>
+    <published>2026-08-14T12:00:00.000Z</published>
+    <summary type="text">How relying on dynamic external feeds inside an LMS introduces link rot vulnerabilities, and how upstream SSoT configuration control resolves accessibility issues at the source.</summary>
+    <author>
+      <name>Alan Pruitt</name>
+      <email>contact@webcognita.com</email>
+      <uri>https://alanpruitt.com</uri>
+    </author>
+    <category term="CurriculumAsCode"/>
+    <category term="Compliance"/>
+    <category term="Pedagogy"/>
+    <category term="SSoT"/>
+  </entry>
+  <entry>
+    <title>Engineering Resilience: Resolving False-Positive Contrast Errors &amp; Array Failures</title>
+    <link href="https://alanpruitt.com/articles/17-resolving-array-parsing-script-failures.html" rel="alternate" type="text/html"/>
+    <id>https://alanpruitt.com/articles/17-resolving-array-parsing-script-failures.html</id>
+    <updated>2026-08-07T12:00:00.000Z</updated>
+    <published>2026-08-07T12:00:00.000Z</published>
+    <summary type="text">How automated accessibility checkers fail under WYSIWYG visual-editor DOM pollution and how Curriculum-as-Code resolves array parsing failures.</summary>
+    <author>
+      <name>Alan Pruitt</name>
+      <email>contact@webcognita.com</email>
+      <uri>https://alanpruitt.com</uri>
+    </author>
+    <category term="CurriculumAsCode"/>
+    <category term="Accessibility"/>
+    <category term="DOM"/>
+  </entry>
+  <entry>
+    <title>Canvas LMS 3-Track Self-Guided AI Branch and Bilingual Scaffolding</title>
+    <link href="https://alanpruitt.com/articles/16-canvas-lms-3-track-ai-branch.html" rel="alternate" type="text/html"/>
+    <id>https://alanpruitt.com/articles/16-canvas-lms-3-track-ai-branch.html</id>
+    <updated>2026-07-31T12:00:00.000Z</updated>
+    <published>2026-07-31T12:00:00.000Z</published>
+    <summary type="text">Transforming traditional online discussion boards into active, interdisciplinary clinical case conferences across all 16 EXW modules.</summary>
+    <author>
+      <name>Alan Pruitt</name>
+      <email>contact@webcognita.com</email>
+      <uri>https://alanpruitt.com</uri>
+    </author>
+    <category term="CanvasLMS"/>
+    <category term="Pedagogy"/>
+    <category term="Bilingual"/>
+  </entry>
+  <entry>
+    <title>Algorithmic Pedagogy &amp; Continuous Integration: Zero-Regression Learning</title>
+    <link href="https://alanpruitt.com/articles/15-algorithmic-pedagogy-ci.html" rel="alternate" type="text/html"/>
+    <id>https://alanpruitt.com/articles/15-algorithmic-pedagogy-ci.html</id>
+    <updated>2026-07-24T12:00:00.000Z</updated>
+    <published>2026-07-24T12:00:00.000Z</published>
+    <summary type="text">Treating learning outcomes and compliance rules as executable code monitored by CI/CD.</summary>
+    <author>
+      <name>Alan Pruitt</name>
+      <email>contact@webcognita.com</email>
+      <uri>https://alanpruitt.com</uri>
+    </author>
+    <category term="AlgorithmicPedagogy"/>
+    <category term="CICD"/>
+    <category term="CurriculumAsCode"/>
+  </entry>
+  <entry>
+    <title>The Guided Learning Trifecta: AI Simulation, Application &amp; Auditing</title>
+    <link href="https://alanpruitt.com/articles/14-guided-learning-trifecta.html" rel="alternate" type="text/html"/>
+    <id>https://alanpruitt.com/articles/14-guided-learning-trifecta.html</id>
+    <updated>2026-07-17T12:00:00.000Z</updated>
+    <published>2026-07-17T12:00:00.000Z</published>
+    <summary type="text">Deploying Google&apos;s Guided Learning principles in Curriculum-as-Code via system prompts.</summary>
+    <author>
+      <name>Alan Pruitt</name>
+      <email>contact@webcognita.com</email>
+      <uri>https://alanpruitt.com</uri>
+    </author>
+    <category term="GuidedLearning"/>
+    <category term="AI"/>
+    <category term="Prompts"/>
+  </entry>
+  <entry>
+    <title>The Vibe-Coding Paradigm: Speed &amp; Full-Stack Execution in EdTech</title>
+    <link href="https://alanpruitt.com/articles/13-vibe-coding-paradigm.html" rel="alternate" type="text/html"/>
+    <id>https://alanpruitt.com/articles/13-vibe-coding-paradigm.html</id>
+    <updated>2026-07-10T12:00:00.000Z</updated>
+    <published>2026-07-10T12:00:00.000Z</published>
+    <summary type="text">Translating domain expertise directly into production-grade web applications using AI orchestration.</summary>
+    <author>
+      <name>Alan Pruitt</name>
+      <email>contact@webcognita.com</email>
+      <uri>https://alanpruitt.com</uri>
+    </author>
+    <category term="VibeCoding"/>
+    <category term="PWA"/>
+    <category term="EdTech"/>
+  </entry>
+  <entry>
+    <title>The Mission Loop Architecture: Pattern, Rule, and Solve in Coded Instruction</title>
+    <link href="https://alanpruitt.com/articles/12-mission-loop-architecture.html" rel="alternate" type="text/html"/>
+    <id>https://alanpruitt.com/articles/12-mission-loop-architecture.html</id>
+    <updated>2026-07-03T12:00:00.000Z</updated>
+    <published>2026-07-03T12:00:00.000Z</published>
+    <summary type="text">Structuring deterministic health science problem-solving pipelines that enforce pattern identification.</summary>
+    <author>
+      <name>Alan Pruitt</name>
+      <email>contact@webcognita.com</email>
+      <uri>https://alanpruitt.com</uri>
+    </author>
+    <category term="MissionLoop"/>
+    <category term="Pedagogy"/>
+    <category term="Kinesiology"/>
+  </entry>
+  <entry>
+    <title>The Two-Part Scaffold Framework: Guided Simulation &amp; Precision Testing</title>
+    <link href="https://alanpruitt.com/articles/11-two-part-scaffold-framework.html" rel="alternate" type="text/html"/>
+    <id>https://alanpruitt.com/articles/11-two-part-scaffold-framework.html</id>
+    <updated>2026-06-26T12:00:00.000Z</updated>
+    <published>2026-06-26T12:00:00.000Z</published>
+    <summary type="text">Integrating AI simulation sandboxes with research-grade laboratory equipment.</summary>
+    <author>
+      <name>Alan Pruitt</name>
+      <email>contact@webcognita.com</email>
+      <uri>https://alanpruitt.com</uri>
+    </author>
+    <category term="Scaffolding"/>
+    <category term="Kinesiology"/>
+    <category term="AI"/>
+  </entry>
+  <entry>
+    <title>The AI Safety Auditor Pattern: Guardrailing In-LMS Student Simulations</title>
+    <link href="https://alanpruitt.com/articles/10-ai-safety-auditor-pattern.html" rel="alternate" type="text/html"/>
+    <id>https://alanpruitt.com/articles/10-ai-safety-auditor-pattern.html</id>
+    <updated>2026-06-19T12:00:00.000Z</updated>
+    <published>2026-06-19T12:00:00.000Z</published>
+    <summary type="text">Deterministic verification protocols to prevent hallucination drift in academic environments.</summary>
+    <author>
+      <name>Alan Pruitt</name>
+      <email>contact@webcognita.com</email>
+      <uri>https://alanpruitt.com</uri>
+    </author>
+    <category term="AISafety"/>
+    <category term="AuditorPattern"/>
+    <category term="Compliance"/>
+  </entry>
+  <entry>
+    <title>Immutable Learning Analytics: Privacy-Preserving Student Verification</title>
+    <link href="https://alanpruitt.com/articles/09-immutable-learning-analytics.html" rel="alternate" type="text/html"/>
+    <id>https://alanpruitt.com/articles/09-immutable-learning-analytics.html</id>
+    <updated>2026-06-12T12:00:00.000Z</updated>
+    <published>2026-06-12T12:00:00.000Z</published>
+    <summary type="text">Auditing student engagement metrics with sovereign data privacy boundaries.</summary>
+    <author>
+      <name>Alan Pruitt</name>
+      <email>contact@webcognita.com</email>
+      <uri>https://alanpruitt.com</uri>
+    </author>
+    <category term="Analytics"/>
+    <category term="Privacy"/>
+    <category term="Compliance"/>
+  </entry>
+  <entry>
+    <title>Bilingual Localization Pipelines in Higher Education</title>
+    <link href="https://alanpruitt.com/articles/08-bilingual-localization-pipelines.html" rel="alternate" type="text/html"/>
+    <id>https://alanpruitt.com/articles/08-bilingual-localization-pipelines.html</id>
+    <updated>2026-06-05T12:00:00.000Z</updated>
+    <published>2026-06-05T12:00:00.000Z</published>
+    <summary type="text">Automating English/Spanish curriculum parity without semantic drift.</summary>
+    <author>
+      <name>Alan Pruitt</name>
+      <email>contact@webcognita.com</email>
+      <uri>https://alanpruitt.com</uri>
+    </author>
+    <category term="Localization"/>
+    <category term="Bilingual"/>
+    <category term="Pedagogy"/>
+  </entry>
+  <entry>
+    <title>Continuous Integration in Course Pedagogy</title>
+    <link href="https://alanpruitt.com/articles/07-continuous-integration-pedagogy.html" rel="alternate" type="text/html"/>
+    <id>https://alanpruitt.com/articles/07-continuous-integration-pedagogy.html</id>
+    <updated>2026-05-29T12:00:00.000Z</updated>
+    <published>2026-05-29T12:00:00.000Z</published>
+    <summary type="text">Automating curriculum deployment with GitHub Actions and Canvas API integrations.</summary>
+    <author>
+      <name>Alan Pruitt</name>
+      <email>contact@webcognita.com</email>
+      <uri>https://alanpruitt.com</uri>
+    </author>
+    <category term="CICD"/>
+    <category term="Automation"/>
+    <category term="CurriculumAsCode"/>
+  </entry>
+  <entry>
+    <title>Canvas AI Course Design &amp; Modular Architecture</title>
+    <link href="https://alanpruitt.com/articles/06-canvas-ai-course-design.html" rel="alternate" type="text/html"/>
+    <id>https://alanpruitt.com/articles/06-canvas-ai-course-design.html</id>
+    <updated>2026-05-22T12:00:00.000Z</updated>
+    <published>2026-05-22T12:00:00.000Z</published>
+    <summary type="text">Designing high-touch student interaction tracks within learning management systems.</summary>
+    <author>
+      <name>Alan Pruitt</name>
+      <email>contact@webcognita.com</email>
+      <uri>https://alanpruitt.com</uri>
+    </author>
+    <category term="CanvasLMS"/>
+    <category term="Architecture"/>
+    <category term="Pedagogy"/>
+  </entry>
+  <entry>
+    <title>Instructional Engineering: Treating Pedagogy as Code</title>
+    <link href="https://alanpruitt.com/articles/05-instructional-engineering.html" rel="alternate" type="text/html"/>
+    <id>https://alanpruitt.com/articles/05-instructional-engineering.html</id>
+    <updated>2026-05-15T12:00:00.000Z</updated>
+    <published>2026-05-15T12:00:00.000Z</published>
+    <summary type="text">Applying software engineering principles to academic curriculum design and maintenance.</summary>
+    <author>
+      <name>Alan Pruitt</name>
+      <email>contact@webcognita.com</email>
+      <uri>https://alanpruitt.com</uri>
+    </author>
+    <category term="InstructionalEngineering"/>
+    <category term="CurriculumAsCode"/>
+  </entry>
+  <entry>
+    <title>ADA Title II Compliance &amp; WCAG 2.2 AA in Digital Classrooms</title>
+    <link href="https://alanpruitt.com/articles/04-ada-title-ii-accessibility.html" rel="alternate" type="text/html"/>
+    <id>https://alanpruitt.com/articles/04-ada-title-ii-accessibility.html</id>
+    <updated>2026-05-08T12:00:00.000Z</updated>
+    <published>2026-05-08T12:00:00.000Z</published>
+    <summary type="text">Enforcing sovereign accessibility standards and programmatic contrast auditing across LMS pages.</summary>
+    <author>
+      <name>Alan Pruitt</name>
+      <email>contact@webcognita.com</email>
+      <uri>https://alanpruitt.com</uri>
+    </author>
+    <category term="ADATitleII"/>
+    <category term="WCAG"/>
+    <category term="Accessibility"/>
+  </entry>
+  <entry>
+    <title>Air-Gapped Sovereign AI in Community Colleges</title>
+    <link href="https://alanpruitt.com/articles/03-air-gapped-sovereign-ai.html" rel="alternate" type="text/html"/>
+    <id>https://alanpruitt.com/articles/03-air-gapped-sovereign-ai.html</id>
+    <updated>2026-05-01T12:00:00.000Z</updated>
+    <published>2026-05-01T12:00:00.000Z</published>
+    <summary type="text">Deploying local open-weight models for zero-cost, private student compute.</summary>
+    <author>
+      <name>Alan Pruitt</name>
+      <email>contact@webcognita.com</email>
+      <uri>https://alanpruitt.com</uri>
+    </author>
+    <category term="SovereignAI"/>
+    <category term="AirGapped"/>
+    <category term="CommunityColleges"/>
+  </entry>
+  <entry>
+    <title>Curriculum-as-Code: Version Control for Education</title>
+    <link href="https://alanpruitt.com/articles/02-curriculum-as-code.html" rel="alternate" type="text/html"/>
+    <id>https://alanpruitt.com/articles/02-curriculum-as-code.html</id>
+    <updated>2026-04-24T12:00:00.000Z</updated>
+    <published>2026-04-24T12:00:00.000Z</published>
+    <summary type="text">Establishing Git as the Single Source of Truth for instructional design.</summary>
+    <author>
+      <name>Alan Pruitt</name>
+      <email>contact@webcognita.com</email>
+      <uri>https://alanpruitt.com</uri>
+    </author>
+    <category term="CurriculumAsCode"/>
+    <category term="Git"/>
+    <category term="SSoT"/>
+  </entry>
+  <entry>
+    <title>AI Assessment Design: Beyond the Multiple Choice Question</title>
+    <link href="https://alanpruitt.com/articles/01-ai-assessment-design.html" rel="alternate" type="text/html"/>
+    <id>https://alanpruitt.com/articles/01-ai-assessment-design.html</id>
+    <updated>2026-04-17T12:00:00.000Z</updated>
+    <published>2026-04-17T12:00:00.000Z</published>
+    <summary type="text">Designing authentic, interactive problem-solving evaluations using AI prompts.</summary>
+    <author>
+      <name>Alan Pruitt</name>
+      <email>contact@webcognita.com</email>
+      <uri>https://alanpruitt.com</uri>
+    </author>
+    <category term="AIAssessment"/>
+    <category term="Pedagogy"/>
+    <category term="Prompts"/>
+  </entry>
+</feed>
