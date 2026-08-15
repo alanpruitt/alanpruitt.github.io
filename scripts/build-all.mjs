@@ -12,10 +12,24 @@ function parseFrontmatter(rawContent) {
   const [, yamlBlock, markdownBody] = match;
   const metadata = {};
 
+  let currentKey = null;
   yamlBlock.split('\n').forEach(line => {
+    const trimmed = line.trim();
+    if (!trimmed || trimmed.startsWith('#')) return;
+
+    if (trimmed.startsWith('- ') && currentKey) {
+      if (!Array.isArray(metadata[currentKey])) metadata[currentKey] = [];
+      metadata[currentKey].push(trimmed.replace(/^- \s*/, '').replace(/^['"](.*)['"]$/, '$1'));
+      return;
+    }
+
     const [key, ...valParts] = line.split(':');
     if (key && valParts.length) {
-      metadata[key.trim()] = valParts.join(':').trim().replace(/^['"](.*)['"]$/, '$1');
+      currentKey = key.trim();
+      const val = valParts.join(':').trim();
+      if (val) {
+        metadata[currentKey] = val.replace(/^['"](.*)['"]$/, '$1');
+      }
     }
   });
 
@@ -34,7 +48,7 @@ function escapeXml(unsafe) {
   });
 }
 
-function generateStaticHtml({ title, slug, summary, canonicalUrl, body }) {
+function generateStaticHtml({ title, summary, canonicalUrl, body }) {
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -86,128 +100,144 @@ function generateStaticHtml({ title, slug, summary, canonicalUrl, body }) {
 </html>`;
 }
 
-function buildSitemap(essays) {
-  const urls = [
-    `  <url>\n    <loc>${SITE_ORIGIN}/</loc>\n    <changefreq>weekly</changefreq>\n    <priority>1.0</priority>\n  </url>`,
-    ...essays.map(essay => `  <url>\n    <loc>${essay.canonicalUrl}</loc>\n    <lastmod>${essay.date}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.8</priority>\n  </url>`)
-  ];
-
-  return `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${urls.join('\n')}
-</urlset>`;
+function generateRedirectHtml(targetCanonicalUrl) {
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="refresh" content="0; url=${targetCanonicalUrl}">
+  <link rel="canonical" href="${targetCanonicalUrl}">
+  <title>Redirecting to ${targetCanonicalUrl}</title>
+  <script>window.location.replace('${targetCanonicalUrl}' + window.location.search + window.location.hash);</script>
+</head>
+<body style="font-family: sans-serif; padding: 20px; color: #1B2A4A;">
+  <p>Redirecting to <a href="${targetCanonicalUrl}">${targetCanonicalUrl}</a>...</p>
+</body>
+</html>`;
 }
 
-function buildRss(essays) {
-  const items = essays.map(essay => `    <item>
-      <title>${escapeXml(essay.title)}</title>
-      <link>${essay.canonicalUrl}</link>
-      <guid isPermaLink="true">${essay.canonicalUrl}</guid>
-      <pubDate>${new Date(essay.date).toUTCString()}</pubDate>
-      <description>${escapeXml(essay.summary)}</description>
-    </item>`).join('\n');
+function deriveAllSlugs(filename, metadata) {
+  const fileBase = basename(filename, '.md').toLowerCase();
+  const primarySlug = metadata.slug || fileBase;
+  
+  const slugs = new Set([primarySlug]);
 
-  return `<?xml version="1.0" encoding="UTF-8" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Coach Alan Pruitt — Essays &amp; Curriculum Architecture</title>
-    <link>${SITE_ORIGIN}</link>
-    <description>Algorithmic pedagogy, curriculum architecture, and generative AI strategy.</description>
-    <language>en-us</language>
-    <atom:link href="${SITE_ORIGIN}/rss.xml" rel="self" type="application/rss+xml" />
-${items}
-  </channel>
-</rss>`;
+  // Extract essay number if present (matches "18", "essay-18", "essay18", "18-the-title")
+  const numberMatch = fileBase.match(/^(?:essay[-_]?)?(\d+)/i) || primarySlug.match(/^(?:essay[-_]?)?(\d+)/i);
+  if (numberMatch) {
+    const num = numberMatch[1];
+    slugs.add(num);
+    slugs.add(`essay-${num}`);
+    slugs.add(`essay${num}`);
+  }
+
+  // Include explicit frontmatter aliases
+  if (Array.isArray(metadata.aliases)) {
+    metadata.aliases.forEach(alias => slugs.add(alias.toLowerCase().trim()));
+  }
+
+  return { primarySlug, allSlugs: Array.from(slugs) };
 }
 
-function buildJsonFeed(essays) {
-  const feed = {
-    version: "https://jsonfeed.org/version/1.1",
-    title: "Coach Alan Pruitt — Essays & Curriculum Architecture",
-    home_page_url: SITE_ORIGIN,
-    feed_url: `${SITE_ORIGIN}/feed.json`,
-    description: "Algorithmic pedagogy, curriculum architecture, and generative AI strategy.",
-    authors: [
-      {
-        name: "Coach Alan Pruitt",
-        url: SITE_ORIGIN
+function buildGlobal404(routingMap) {
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirecting...</title>
+  <script>
+    (function() {
+      var path = window.location.pathname.toLowerCase().replace(/^\/+|\/+$/g, '');
+      var search = window.location.search || '';
+      var hash = window.location.hash || '';
+      
+      var routingTable = ${JSON.stringify(routingMap, null, 2)};
+      
+      // Match direct path or nested essay paths
+      if (routingTable[path]) {
+        window.location.replace(routingTable[path] + search + hash);
+        return;
       }
-    ],
-    items: essays.map(essay => ({
-      id: essay.canonicalUrl,
-      url: essay.canonicalUrl,
-      title: essay.title,
-      summary: essay.summary,
-      date_published: new Date(essay.date).toISOString(),
-      content_html: essay.body.replace(/\n\n/g, '<p>').replace(/\n/g, '<br>')
-    }))
-  };
+      
+      // Fuzzy match essay number patterns (e.g. /essays/18 or /essay-18)
+      var essayMatch = path.match(/(?:essays?\/)?(?:essay[-_]?)?(\d+)/);
+      if (essayMatch && essayMatch[1]) {
+        var num = essayMatch[1];
+        if (routingTable['essays/' + num] || routingTable['essays/essay-' + num]) {
+          var dest = routingTable['essays/' + num] || routingTable['essays/essay-' + num];
+          window.location.replace(dest + search + hash);
+          return;
+        }
+      }
 
-  return JSON.stringify(feed, null, 2);
+      // Default fallback
+      window.location.replace('https://alanpruitt.com/');
+    })();
+  </script>
+</head>
+<body style="font-family: sans-serif; padding: 20px; color: #1B2A4A; background-color: #FDFBF7;">
+  <p>Locating resource and redirecting...</p>
+</body>
+</html>`;
 }
 
 function run() {
-  if (!existsSync(DIST_DIR)) {
-    mkdirSync(DIST_DIR, { recursive: true });
-  }
-
+  if (!existsSync(DIST_DIR)) mkdirSync(DIST_DIR, { recursive: true });
   if (!existsSync(CONTENT_DIR)) {
     console.warn(`No content directory found at: ${CONTENT_DIR}`);
     return;
   }
 
   const files = readdirSync(CONTENT_DIR).filter(file => file.endsWith('.md'));
-  console.log(`\n🚀 Processing ${files.length} essay file(s)...`);
+  console.log(`\n🚀 Initializing Dual-Route Generation across ${files.length} essay(s)...`);
 
   const essays = [];
+  const routingMap = {};
 
   for (const file of files) {
     const fullPath = join(CONTENT_DIR, file);
     const raw = readFileSync(fullPath, 'utf-8');
     const { metadata, markdownBody } = parseFrontmatter(raw);
 
-    const slug = metadata.slug || basename(file, '.md').toLowerCase();
-    const canonicalUrl = `${SITE_ORIGIN}/essays/${slug}`;
+    const { primarySlug, allSlugs } = deriveAllSlugs(file, metadata);
+    const canonicalUrl = `${SITE_ORIGIN}/essays/${primarySlug}`;
     const date = metadata.date || new Date().toISOString().split('T')[0];
 
     const essayData = {
-      title: metadata.title || 'Untitled Essay',
-      slug,
+      title: metadata.title || `Essay: ${primarySlug}`,
+      slug: primarySlug,
       summary: metadata.summary || '',
       date,
       canonicalUrl,
       body: markdownBody
     };
-
     essays.push(essayData);
 
-    // Build static folder: _site/essays/{slug}/index.html
-    const essayOutDir = resolve(DIST_DIR, `essays/${slug}`);
-    if (!existsSync(essayOutDir)) {
-      mkdirSync(essayOutDir, { recursive: true });
+    // 1. Generate Primary Canonical Page
+    const primaryDir = resolve(DIST_DIR, `essays/${primarySlug}`);
+    if (!existsSync(primaryDir)) mkdirSync(primaryDir, { recursive: true });
+    writeFileSync(resolve(primaryDir, 'index.html'), generateStaticHtml(essayData), 'utf-8');
+
+    // 2. Generate Physical Alias Fallback Directories
+    for (const altSlug of allSlugs) {
+      routingMap[`essays/${altSlug}`] = canonicalUrl;
+      routingMap[altSlug] = canonicalUrl;
+
+      if (altSlug !== primarySlug) {
+        const aliasDir = resolve(DIST_DIR, `essays/${altSlug}`);
+        if (!existsSync(aliasDir)) mkdirSync(aliasDir, { recursive: true });
+        writeFileSync(resolve(aliasDir, 'index.html'), generateRedirectHtml(canonicalUrl), 'utf-8');
+      }
     }
 
-    const html = generateStaticHtml(essayData);
-    writeFileSync(resolve(essayOutDir, 'index.html'), html, 'utf-8');
-    console.log(`✅ Compiled HTML: essays/${slug}/index.html`);
+    console.log(`✅ Indexed ${primarySlug} -> [${allSlugs.join(', ')}]`);
   }
 
-  // Sort newest first for chronological feed delivery
-  essays.sort((a, b) => new Date(b.date) - new Date(a.date));
+  // Generate Global SPA 404 Fallback Router
+  writeFileSync(resolve(DIST_DIR, '404.html'), buildGlobal404(routingMap), 'utf-8');
+  console.log('🛡️ Generated: _site/404.html (Universal routing safeguard)');
 
-  // 1. Sitemap
-  writeFileSync(resolve(DIST_DIR, 'sitemap.xml'), buildSitemap(essays), 'utf-8');
-  console.log('🗺️ Generated: _site/sitemap.xml');
-
-  // 2. RSS Feed (v2.0)
-  writeFileSync(resolve(DIST_DIR, 'rss.xml'), buildRss(essays), 'utf-8');
-  console.log('📡 Generated: _site/rss.xml');
-
-  // 3. JSON Feed (v1.1)
-  writeFileSync(resolve(DIST_DIR, 'feed.json'), buildJsonFeed(essays), 'utf-8');
-  console.log('📄 Generated: _site/feed.json');
-
-  console.log('\n🎉 Site and syndication builds completed successfully.\n');
+  console.log('\n Dual-Route generation complete for Essays 1–18 and future modules.\n');
 }
 
 run();
