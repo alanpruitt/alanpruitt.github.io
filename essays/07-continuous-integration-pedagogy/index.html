@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Continuous Integration for Pedagogy: Writing Automated Unit Tests for Learning Outcomes | Coach Alan</title>
+  <meta name="description" content="Continuous Integration for Pedagogy: Writing Automated Unit Tests for Learning Outcomes">
+  <link rel="canonical" href="https://alanpruitt.com/essays/07-continuous-integration-pedagogy">
+  
+  <!-- Feed Discovery -->
+  <link rel="alternate" type="application/rss+xml" title="Alan Pruitt - RSS Feed" href="https://alanpruitt.com/rss.xml">
+  <link rel="alternate" type="application/feed+json" title="Alan Pruitt - JSON Feed" href="https://alanpruitt.com/feed.json">
+  
+  <!-- OpenGraph Metadata -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Continuous Integration for Pedagogy: Writing Automated Unit Tests for Learning Outcomes">
+  <meta property="og:description" content="Continuous Integration for Pedagogy: Writing Automated Unit Tests for Learning Outcomes">
+  <meta property="og:url" content="https://alanpruitt.com/essays/07-continuous-integration-pedagogy">
+  <meta property="og:site_name" content="alanpruitt.com">
+
+  <!-- Premium Style Guard -->
+  <style>
+    :root {
+      --bg-creme-50: #FAFBF7;
+      --bg-creme-100: #F5F5F0;
+      --bg-creme-200: #E6E6DC;
+      --text-navy-800: #1E3E62;
+      --text-navy-900: #0B192C;
+      --text-navy-950: #060E1A;
+      --link-accent: #0E3D73;
+    }
+    *, ::before, ::after { box-sizing: border-box; }
+    html { line-height: 1.5; font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; height: 100%; }
+    body { margin: 0; min-height: 100%; display: flex; flex-direction: column; justify-content: space-between; background-color: var(--bg-creme-100); color: var(--text-navy-900); }
+    
+    header { width: 100%; background-color: #ffffff; border-bottom: 1px solid var(--bg-creme-200); padding: 24px; box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); }
+    main { width: 100%; max-width: 780px; margin: 40px auto; padding: 0 20px; flex-grow: 1; }
+    
+    .content h2 { font-size: 1.5rem; font-weight: 700; color: var(--text-navy-900); margin-top: 2rem; margin-bottom: 1rem; }
+    .content h3 { font-size: 1.25rem; font-weight: 700; color: var(--text-navy-900); margin-top: 1.5rem; margin-bottom: 0.75rem; }
+    .content p { font-size: 1rem; color: #1a1a1a; line-height: 1.75; margin-bottom: 1.25rem; }
+    .content ul, .content ol { margin-bottom: 1.25rem; padding-left: 1.5rem; }
+    .content li { margin-bottom: 0.5rem; line-height: 1.6; }
+    .content a { color: var(--link-accent); text-decoration: underline; font-weight: 600; }
+    .content pre { background-color: var(--bg-creme-50); border: 1px solid var(--bg-creme-200); padding: 1rem; border-radius: 0.5rem; overflow-x: auto; margin-bottom: 1.25rem; font-family: monospace; font-size: 0.875rem; }
+  </style>
+</head>
+<body class="bg-creme-100 text-navy-900 font-sans antialiased min-h-full flex flex-col justify-between">
+  <!-- Navigation Header -->
+  <header>
+    <div style="max-width: 780px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between;">
+      <a href="/" style="font-size: 1.125rem; font-weight: 700; color: var(--text-navy-900); text-decoration: none;">Alan Pruitt</a>
+      <nav style="display: flex; gap: 24px;">
+        <a href="/" style="font-size: 0.875rem; font-weight: 600; color: var(--text-navy-800); text-decoration: none;">Home</a>
+        <a href="/articles/" style="font-size: 0.875rem; font-weight: 600; color: var(--text-navy-900); text-decoration: underline;">Articles</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <article class="content">
+      <h1 style="font-size: 2rem; font-weight: 700; color: var(--text-navy-900); margin-top: 1rem; margin-bottom: 1.5rem;">Continuous Integration for Pedagogy: Writing Automated Unit Tests for Learning Outcomes</h1>
+      <p><!-- =========================================================================<br>  LANG: ENGLISH<br>  ========================================================================= --><br><div data-lang="en"></p>
+<h1>Continuous Integration for Pedagogy: Writing Automated Unit Tests for Learning Outcomes</h1>
+<p>In software engineering, continuous integration (CI) pipelines run automated test suites on every commit to ensure system contracts remain unbroken. In traditional instructional design, however, curriculum changes are committed without automated verification—resulting in broken prerequisites, unmapped learning outcomes, and silent accessibility regressions that go unnoticed until students encounter them.</p>
+<p>**Continuous Integration for Pedagogy** shifts quality assurance from a manual pre-semester review to an automated background process running on every Git commit.</p>
+<h2>1. The Anatomy of a Pedagogical Unit Test</h2>
+<p>Just as a software unit test validates that an function returns expected outputs for given inputs, a pedagogical unit test validates that instructional source code satisfies core educational requirements before compilation:</p>
+<li>**Bloom's Taxonomy Regex/AST Audits:** Automated linters scan Markdown headings and learning objectives to ensure action verbs match target cognitive depth.</li>
+<li>**Outcome Coverage Mapping:** Pre-commit hooks parse course modules to verify that every lesson maps directly to at least one accredited institutional outcome.</li>
+<li>**Accessibility Linting:** Build checks audit contrast ratios, header hierarchy depth (`#` through `###`), and alt-text completeness across all visual media.</li>
+<h2>2. Directed Acyclic Graphs (DAGs) for Prerequisite Verification</h2>
+<p>When course modules are reordered or updated across multiple semesters, prerequisite dependencies frequently break. By representing course progression as a Directed Acyclic Graph (DAG), CI build scripts run topological sorting tests to detect dependency failures instantly:</p>
+<p>1. **Node Validation:** Every module node must define explicit entry competencies and exit outcomes.<br>2. **Cycle Detection:** Automated graph traversal verifies that circular prerequisite loops cannot occur.<br>3. **Orphaned Content Warnings:** Build passes flag any module or lab assignment disconnected from the primary progression tree.</p>
+<p>> "If a broken code commit shouldn't make it to main, a broken learning outcome shouldn't make it to the LMS."</p>
+<h2>3. Shifting Quality Assurance Left</h2>
+<p>By integrating pedagogical linters into local pre-commit hooks and remote GitHub Actions workflows, instructional architects achieve **zero-regression curriculum delivery**. Quality assurance is no longer a stressful audit completed days before a term starts; it is a continuously passing test suite.</p>
+<p></div></p>
+<p><!-- =========================================================================<br>  LANG: SPANISH<br>  ========================================================================= --><br><div data-lang="es" class="hidden-lang"></p>
+<h1>Integración Continua para la Pedagogía: Escritura de Pruebas Unitarias Automatizadas para Resultados de Aprendizaje</h1>
+<p>En la ingeniería de software, las tuberías de integración continua (CI) ejecutan suites de pruebas automatizadas en cada commit para garantizar que las funciones del sistema permanezcan intactas. En el diseño instruccional tradicional, sin embargo, los cambios curriculares se aplican sin verificación automatizada, lo que resulta en prerrequisitos rotos, resultados de aprendizaje desalineados y regresiones de accesibilidad no detectadas hasta que el estudiante las enfrenta.</p>
+<p>La **Integración Continua para la Pedagogía** traslada la garantía de calidad desde una revisión manual previa al semestre hacia un proceso automatizado en segundo plano que se ejecuta en cada actualización de Git.</p>
+<h2>1. La Anatomía de una Prueba Unitaria Pedagógica</h2>
+<p>Así como una prueba unitaria de software valida que una función devuelva los resultados esperados, una prueba unitaria pedagógica valida que el código fuente instruccional cumpla con los requisitos educativos fundamentales antes de su compilación:</p>
+<li>**Auditorías AST/Regex de la Taxonomía de Bloom:** Validadores automatizados analizan los encabezados y objetivos en Markdown para asegurar que los verbos de acción coincidan con la profundidad cognitiva esperada.</li>
+<li>**Mapeo de Cobertura de Resultados:** Hooks de pre-commit analizan los módulos para verificar que cada lección esté vinculada a un resultado de aprendizaje acreditado.</li>
+<li>**Verificación Automatizada de Accesibilidad:** Las pruebas de compilación auditan contrastes, jerarquías de encabezados y etiquetas de texto alternativo en todos los medios visuales.</li>
+<h2>2. Grafos Acíclicos Dirigidos (DAGs) para Verificación de Prerrequisitos</h2>
+<p>Cuando los módulos de un curso se reordenan o actualizan entre semestres, las dependencias de prerrequisitos suelen romperse. Al representar la progresión académica como un Grafo Acíclico Dirigido (DAG), los scripts de CI ejecutan pruebas de ordenamiento topológico para detectar fallos de dependencia al instante:</p>
+<p>1. **Validación de Nodos:** Cada nodo del módulo debe definir competencias de entrada y resultados de salida explícitos.<br>2. **Detección de Ciclos:** El recorrido automatizado del grafo verifica que no existan bucles circulares de prerrequisitos.<br>3. **Advertencias de Contenido Huérfano:** El sistema señala cualquier lección o laboratorio desconectado del árbol de progresión principal.</p>
+<p>> "Si una actualización de código defectuosa no debe llegar a la rama principal, un resultado de aprendizaje roto tampoco debe llegar al LMS."</p>
+<h2>3. Desplazando la Garantía de Calidad a la Izquierda</h2>
+<p>Al integrar validadores pedagógicos en hooks locales de pre-commit y flujos de GitHub Actions, los arquitectos instruccionales logran una **entrega curricular libre de regresiones**. La garantía de calidad deja de ser una auditoría estresante días antes del semestre para convertirse en una suite de pruebas en ejecución continua.</p>
+<p></div></p>
+    </article>
+
+    <!-- INJECT SOCIAL SHARE BLOCK -->
+    
+    <!-- Zero-JS Semantic Social Share -->
+    <div style="margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--bg-creme-200, #E6E6DC); display: flex; flex-direction: column; gap: 16px;" aria-label="Social sharing options">
+      <span style="font-family: monospace; font-size: 0.75rem; font-weight: bold; color: var(--navy-dark); text-transform: uppercase; tracking-wider">
+        Share this Architecture:
+      </span>
+      <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center;">
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Falanpruitt.com%2Fessays%2F07-continuous-integration-pedagogy" target="_blank" rel="noopener noreferrer" aria-label="Share on LinkedIn" style="font-family: monospace; font-size: 0.75rem; font-weight: 600; text-decoration: none; padding: 6px 12px; border-radius: 8px; border: 1px solid var(--bg-creme-200, #E6E6DC); color: var(--navy-dark); background-color: var(--bg-cream);">
+          LinkedIn
+        </a>
+        <a href="https://x.com/intent/post?text=Continuous%20Integration%20for%20Pedagogy%3A%20Writing%20Automated%20Unit%20Tests%20for%20Learning%20Outcomes&url=https%3A%2F%2Falanpruitt.com%2Fessays%2F07-continuous-integration-pedagogy&via=alanpruitt" target="_blank" rel="noopener noreferrer" aria-label="Share on X" style="font-family: monospace; font-size: 0.75rem; font-weight: 600; text-decoration: none; padding: 6px 12px; border-radius: 8px; border: 1px solid var(--bg-creme-200, #E6E6DC); color: var(--navy-dark); background-color: var(--bg-cream);">
+          X
+        </a>
+        <a href="https://reddit.com/submit?url=https%3A%2F%2Falanpruitt.com%2Fessays%2F07-continuous-integration-pedagogy&title=Continuous%20Integration%20for%20Pedagogy%3A%20Writing%20Automated%20Unit%20Tests%20for%20Learning%20Outcomes" target="_blank" rel="noopener noreferrer" aria-label="Share on Reddit" style="font-family: monospace; font-size: 0.75rem; font-weight: 600; text-decoration: none; padding: 6px 12px; border-radius: 8px; border: 1px solid var(--bg-creme-200, #E6E6DC); color: var(--navy-dark); background-color: var(--bg-cream);">
+          Reddit
+        </a>
+        <a href="mailto:?subject=Continuous%20Integration%20for%20Pedagogy%3A%20Writing%20Automated%20Unit%20Tests%20for%20Learning%20Outcomes&body=Read%20this%20Curriculum-as-Code%20architecture:%20https%3A%2F%2Falanpruitt.com%2Fessays%2F07-continuous-integration-pedagogy" aria-label="Share via Email" style="font-family: monospace; font-size: 0.75rem; font-weight: 600; text-decoration: none; padding: 6px 12px; border-radius: 8px; border: 1px solid var(--bg-creme-200, #E6E6DC); color: var(--navy-dark); background-color: var(--bg-cream);">
+          Email
+        </a>
+      </div>
+    </div>
+
+    <!-- Academic Citation & BibTeX Section -->
+    
+  </main>
+
+  <!-- Footer -->
+  <footer style="width: 100%; padding: 32px 24px; text-align: center; font-size: 0.75rem; border-top: 1px solid var(--text-navy-950); background-color: var(--text-navy-900); color: var(--bg-creme-100);">
+    <p style="margin-bottom: 8px;">© 2026 Alan Pruitt • All Rights Reserved.</p>
+    <p style="opacity: 0.75; margin: 0;">Instructional Design, AI Pedagogy & Curriculum Architecture</p>
+  </footer>
+</body>
+</html>

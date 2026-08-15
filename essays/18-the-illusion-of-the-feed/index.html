@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Essay: 18-the-illusion-of-the-feed | Coach Alan</title>
+  <meta name="description" content="Essay: 18-the-illusion-of-the-feed">
+  <link rel="canonical" href="https://alanpruitt.com/essays/18-the-illusion-of-the-feed">
+  
+  <!-- Feed Discovery -->
+  <link rel="alternate" type="application/rss+xml" title="Alan Pruitt - RSS Feed" href="https://alanpruitt.com/rss.xml">
+  <link rel="alternate" type="application/feed+json" title="Alan Pruitt - JSON Feed" href="https://alanpruitt.com/feed.json">
+  
+  <!-- OpenGraph Metadata -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Essay: 18-the-illusion-of-the-feed">
+  <meta property="og:description" content="Essay: 18-the-illusion-of-the-feed">
+  <meta property="og:url" content="https://alanpruitt.com/essays/18-the-illusion-of-the-feed">
+  <meta property="og:site_name" content="alanpruitt.com">
+
+  <!-- Premium Style Guard -->
+  <style>
+    :root {
+      --bg-creme-50: #FAFBF7;
+      --bg-creme-100: #F5F5F0;
+      --bg-creme-200: #E6E6DC;
+      --text-navy-800: #1E3E62;
+      --text-navy-900: #0B192C;
+      --text-navy-950: #060E1A;
+      --link-accent: #0E3D73;
+    }
+    *, ::before, ::after { box-sizing: border-box; }
+    html { line-height: 1.5; font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; height: 100%; }
+    body { margin: 0; min-height: 100%; display: flex; flex-direction: column; justify-content: space-between; background-color: var(--bg-creme-100); color: var(--text-navy-900); }
+    
+    header { width: 100%; background-color: #ffffff; border-bottom: 1px solid var(--bg-creme-200); padding: 24px; box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); }
+    main { width: 100%; max-width: 780px; margin: 40px auto; padding: 0 20px; flex-grow: 1; }
+    
+    .content h2 { font-size: 1.5rem; font-weight: 700; color: var(--text-navy-900); margin-top: 2rem; margin-bottom: 1rem; }
+    .content h3 { font-size: 1.25rem; font-weight: 700; color: var(--text-navy-900); margin-top: 1.5rem; margin-bottom: 0.75rem; }
+    .content p { font-size: 1rem; color: #1a1a1a; line-height: 1.75; margin-bottom: 1.25rem; }
+    .content ul, .content ol { margin-bottom: 1.25rem; padding-left: 1.5rem; }
+    .content li { margin-bottom: 0.5rem; line-height: 1.6; }
+    .content a { color: var(--link-accent); text-decoration: underline; font-weight: 600; }
+    .content pre { background-color: var(--bg-creme-50); border: 1px solid var(--bg-creme-200); padding: 1rem; border-radius: 0.5rem; overflow-x: auto; margin-bottom: 1.25rem; font-family: monospace; font-size: 0.875rem; }
+  </style>
+</head>
+<body class="bg-creme-100 text-navy-900 font-sans antialiased min-h-full flex flex-col justify-between">
+  <!-- Navigation Header -->
+  <header>
+    <div style="max-width: 780px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between;">
+      <a href="/" style="font-size: 1.125rem; font-weight: 700; color: var(--text-navy-900); text-decoration: none;">Alan Pruitt</a>
+      <nav style="display: flex; gap: 24px;">
+        <a href="/" style="font-size: 0.875rem; font-weight: 600; color: var(--text-navy-800); text-decoration: none;">Home</a>
+        <a href="/articles/" style="font-size: 0.875rem; font-weight: 600; color: var(--text-navy-900); text-decoration: underline;">Articles</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <article class="content">
+      <h1 style="font-size: 2rem; font-weight: 700; color: var(--text-navy-900); margin-top: 1rem; margin-bottom: 1.5rem;">Essay: 18-the-illusion-of-the-feed</h1>
+      <h1>Essay 18: The Illusion of the Feed: Upstream SSoT and Feed Link Rot Governance</h1>
+<h2>🎯 Learning Objectives</h2>
+<li>Analyze the impact of link rot on digital course content.</li>
+<li>Establish upstream Single Source of Truth (SSoT) configuration control.</li>
+<li>Design glare-resilient, high-contrast, offline-first course architectures.</li>
+<p>---</p>
+<h2>📖 Instructional Content</h2>
+<p>> **Key Concept:** Relying on live external web links and dynamic social media widgets inside an LMS creates an illusion of real-time engagement while introducing a compounding vulnerability of link rot. Upstream Single Source of Truth (SSoT) governance mitigates this risk by externalizing external resources as config-controlled assets in centralized database manifests.</p>
+<p>---</p>
+<h2>The Illusion of the Feed</h2>
+<p>In modern web-based education, courses often incorporate dynamic components such as real-time social media widgets, live discussion links, and third-party web embeds. These widgets create the "illusion of the feed"—the impression that course content is current, interactive, and continuously updated.</p>
+<p>However, this reliance on live-state web resources introduces a major system vulnerability: **Link Rot**. Research shows that a substantial percentage of external hyperlinks in web pages rot within a few years due to URL restructurings, server decommissions, and platform access updates. In an LMS environment, link rot degrades instructional quality, interrupts student learning flows, and compromises accessibility standards.</p>
+<p>---</p>
+<h2>Upstream SSoT Governance</h2>
+<p>Curriculum-as-Code (C-a-C) resolves the issue of link rot by establishing an upstream Single Source of Truth (SSoT) for all external resources. Instead of allowing instructors to hardcode URLs directly into individual pages or assignments, URLs are stored in central configurations:</p>
+<p>###<br>```json<br>{<br>  "external_resources": {<br>    "paga_2018_guidelines": "https://health.gov/sites/default/files/2019-09/Physical_Activity_Guidelines_2nd_edition.pdf",<br>    "acsm_testing_standards": "https://www.acsm.org/education-resources/guidelines-exercise-testing-prescription",<br>    "yuma_heat_safety_protocol": "https://www.yumaaz.gov/government/emergency-management/heat-safety"<br>  }<br>}<br>```<br>###</p>
+<p>By separating content from configuration, instructional engineers can audit and update link destinations globally. If a government website restructures its URL path, the fix is made once in the configuration file, and the CI/CD compilation pipeline automatically regenerates and deploys the updated references to the Canvas LMS.</p>
+<p>---</p>
+<h2>The Centaur Protocol & High-Friction Pedagogy</h2>
+<p>In alignment with the **Centaur Protocol**, course designs should position the student as the **Pilot/Architect** (exhibiting critical clinical judgment) and the AI as the **Engine/Calculator** (processing computations and drafting templates).</p>
+<p>To prevent cognitive offloading, we implement **High-Friction Pedagogy**:<br><li>**High-Friction Assessments:** Rather than completing passive, one-and-done multiple-choice tests, residents must perform active clinical audits.</li><br><li>**Offline-First Resilience:** In regional institutions like Arizona Western College (AWC), a Hispanic-Serving Institution (HSI), students often study in high-heat environments (e.g., Yuma County desert glare exceeding $115^\circ\text{F}$) where mobile connectivity drops.</li><br><li>**Semantic Security:** Instructors wrap clinical case data, client profiles, and medical inputs in triple-hashes (`###`). This keeps parsing errors from leaking information into public AI models.</li></p>
+<p>---</p>
+<h2>CI/CD Link Rot Audits</h2>
+<p>Our automated validation pipeline includes pre-commit link checkers that audit the integrity of the SSoT file before code is staged. This ensures that:<br>1. All referenced URLs return `HTTP 200 OK`.<br>2. Anchor tags contain descriptive labels matching WCAG 2.1 AA screen reader standards.<br>3. Every external link opens in a new tab with proper security parameters (`rel="noopener noreferrer"`).</p>
+<p>This programmatic approach ensures that the course remains functional, secure, and accessible throughout the academic year.</p>
+    </article>
+
+    <!-- INJECT SOCIAL SHARE BLOCK -->
+    
+    <!-- Zero-JS Semantic Social Share -->
+    <div style="margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--bg-creme-200, #E6E6DC); display: flex; flex-direction: column; gap: 16px;" aria-label="Social sharing options">
+      <span style="font-family: monospace; font-size: 0.75rem; font-weight: bold; color: var(--navy-dark); text-transform: uppercase; tracking-wider">
+        Share this Architecture:
+      </span>
+      <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center;">
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Falanpruitt.com%2Fessays%2F18-the-illusion-of-the-feed" target="_blank" rel="noopener noreferrer" aria-label="Share on LinkedIn" style="font-family: monospace; font-size: 0.75rem; font-weight: 600; text-decoration: none; padding: 6px 12px; border-radius: 8px; border: 1px solid var(--bg-creme-200, #E6E6DC); color: var(--navy-dark); background-color: var(--bg-cream);">
+          LinkedIn
+        </a>
+        <a href="https://x.com/intent/post?text=Essay%3A%2018-the-illusion-of-the-feed&url=https%3A%2F%2Falanpruitt.com%2Fessays%2F18-the-illusion-of-the-feed&via=alanpruitt" target="_blank" rel="noopener noreferrer" aria-label="Share on X" style="font-family: monospace; font-size: 0.75rem; font-weight: 600; text-decoration: none; padding: 6px 12px; border-radius: 8px; border: 1px solid var(--bg-creme-200, #E6E6DC); color: var(--navy-dark); background-color: var(--bg-cream);">
+          X
+        </a>
+        <a href="https://reddit.com/submit?url=https%3A%2F%2Falanpruitt.com%2Fessays%2F18-the-illusion-of-the-feed&title=Essay%3A%2018-the-illusion-of-the-feed" target="_blank" rel="noopener noreferrer" aria-label="Share on Reddit" style="font-family: monospace; font-size: 0.75rem; font-weight: 600; text-decoration: none; padding: 6px 12px; border-radius: 8px; border: 1px solid var(--bg-creme-200, #E6E6DC); color: var(--navy-dark); background-color: var(--bg-cream);">
+          Reddit
+        </a>
+        <a href="mailto:?subject=Essay%3A%2018-the-illusion-of-the-feed&body=Read%20this%20Curriculum-as-Code%20architecture:%20https%3A%2F%2Falanpruitt.com%2Fessays%2F18-the-illusion-of-the-feed" aria-label="Share via Email" style="font-family: monospace; font-size: 0.75rem; font-weight: 600; text-decoration: none; padding: 6px 12px; border-radius: 8px; border: 1px solid var(--bg-creme-200, #E6E6DC); color: var(--navy-dark); background-color: var(--bg-cream);">
+          Email
+        </a>
+      </div>
+    </div>
+
+    <!-- Academic Citation & BibTeX Section -->
+    
+  </main>
+
+  <!-- Footer -->
+  <footer style="width: 100%; padding: 32px 24px; text-align: center; font-size: 0.75rem; border-top: 1px solid var(--text-navy-950); background-color: var(--text-navy-900); color: var(--bg-creme-100);">
+    <p style="margin-bottom: 8px;">© 2026 Alan Pruitt • All Rights Reserved.</p>
+    <p style="opacity: 0.75; margin: 0;">Instructional Design, AI Pedagogy & Curriculum Architecture</p>
+  </footer>
+</body>
+</html>

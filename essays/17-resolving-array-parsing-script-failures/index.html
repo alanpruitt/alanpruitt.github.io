@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Essay 17: Engineering Resilience: Resolving False-Positive Contrast Errors and Array Parsing Script Failures via Curriculum-as-Code | Coach Alan</title>
+  <meta name="description" content="Essay 17: Engineering Resilience: Resolving False-Positive Contrast Errors and Array Parsing Script Failures via Curriculum-as-Code">
+  <link rel="canonical" href="https://alanpruitt.com/essays/17-resolving-array-parsing-script-failures">
+  
+  <!-- Feed Discovery -->
+  <link rel="alternate" type="application/rss+xml" title="Alan Pruitt - RSS Feed" href="https://alanpruitt.com/rss.xml">
+  <link rel="alternate" type="application/feed+json" title="Alan Pruitt - JSON Feed" href="https://alanpruitt.com/feed.json">
+  
+  <!-- OpenGraph Metadata -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Essay 17: Engineering Resilience: Resolving False-Positive Contrast Errors and Array Parsing Script Failures via Curriculum-as-Code">
+  <meta property="og:description" content="Essay 17: Engineering Resilience: Resolving False-Positive Contrast Errors and Array Parsing Script Failures via Curriculum-as-Code">
+  <meta property="og:url" content="https://alanpruitt.com/essays/17-resolving-array-parsing-script-failures">
+  <meta property="og:site_name" content="alanpruitt.com">
+
+  <!-- Premium Style Guard -->
+  <style>
+    :root {
+      --bg-creme-50: #FAFBF7;
+      --bg-creme-100: #F5F5F0;
+      --bg-creme-200: #E6E6DC;
+      --text-navy-800: #1E3E62;
+      --text-navy-900: #0B192C;
+      --text-navy-950: #060E1A;
+      --link-accent: #0E3D73;
+    }
+    *, ::before, ::after { box-sizing: border-box; }
+    html { line-height: 1.5; font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; height: 100%; }
+    body { margin: 0; min-height: 100%; display: flex; flex-direction: column; justify-content: space-between; background-color: var(--bg-creme-100); color: var(--text-navy-900); }
+    
+    header { width: 100%; background-color: #ffffff; border-bottom: 1px solid var(--bg-creme-200); padding: 24px; box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); }
+    main { width: 100%; max-width: 780px; margin: 40px auto; padding: 0 20px; flex-grow: 1; }
+    
+    .content h2 { font-size: 1.5rem; font-weight: 700; color: var(--text-navy-900); margin-top: 2rem; margin-bottom: 1rem; }
+    .content h3 { font-size: 1.25rem; font-weight: 700; color: var(--text-navy-900); margin-top: 1.5rem; margin-bottom: 0.75rem; }
+    .content p { font-size: 1rem; color: #1a1a1a; line-height: 1.75; margin-bottom: 1.25rem; }
+    .content ul, .content ol { margin-bottom: 1.25rem; padding-left: 1.5rem; }
+    .content li { margin-bottom: 0.5rem; line-height: 1.6; }
+    .content a { color: var(--link-accent); text-decoration: underline; font-weight: 600; }
+    .content pre { background-color: var(--bg-creme-50); border: 1px solid var(--bg-creme-200); padding: 1rem; border-radius: 0.5rem; overflow-x: auto; margin-bottom: 1.25rem; font-family: monospace; font-size: 0.875rem; }
+  </style>
+</head>
+<body class="bg-creme-100 text-navy-900 font-sans antialiased min-h-full flex flex-col justify-between">
+  <!-- Navigation Header -->
+  <header>
+    <div style="max-width: 780px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between;">
+      <a href="/" style="font-size: 1.125rem; font-weight: 700; color: var(--text-navy-900); text-decoration: none;">Alan Pruitt</a>
+      <nav style="display: flex; gap: 24px;">
+        <a href="/" style="font-size: 0.875rem; font-weight: 600; color: var(--text-navy-800); text-decoration: none;">Home</a>
+        <a href="/articles/" style="font-size: 0.875rem; font-weight: 600; color: var(--text-navy-900); text-decoration: underline;">Articles</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <article class="content">
+      <h1 style="font-size: 2rem; font-weight: 700; color: var(--text-navy-900); margin-top: 1rem; margin-bottom: 1.5rem;">Essay 17: Engineering Resilience: Resolving False-Positive Contrast Errors and Array Parsing Script Failures via Curriculum-as-Code</h1>
+      <p><!-- =========================================================================<br>  LANG: ENGLISH<br>  ========================================================================= --><br><div data-lang="en"></p>
+<h1>Essay 17: Engineering Resilience: Resolving False-Positive Contrast Errors and Array Parsing Script Failures via Curriculum-as-Code</h1>
+<p>> **TL;DR:** Automated accessibility checkers in Learning Management Systems often flag false-positive contrast errors due to array parsing script failures caused by deeply nested, visual-editor HTML bloat. Curriculum-as-Code (C-a-C) resolves this at the source by replacing GUI color adjustments with deterministic Markdown pipelines, native semantic hierarchies starting at `<h2>`, and zero inline color overrides.</p>
+<p>---</p>
+<h2>The Fragility of the Visual Editor</h2>
+<p>In contemporary digital education, accessibility compliance is commonly evaluated by client-side JavaScript auditing scripts within the Learning Management System (LMS). While automated checkers provide an essential baseline, their reliance on runtime Document Object Model (DOM) traversal exposes a fundamental vulnerability: they fail when exposed to the messy markup produced by visual Rich Content Editors (RCE).</p>
+<p>When instructional designers adjust formatting or apply color sliders in a WYSIWYG editor, the editor injects layers of redundant inline elements:</p>
+<p>```html<br><h3>GUI_GENERATED_DOM_POLLUTION_EXAMPLE ###</h3><br><p><span style="color: #000000;"><span style="font-size: 14pt;"><b><span style="color: #494d50;">Module Overview</span></b></span></span></p><br><h3>END_EXAMPLE ###</h3><br><pre><code><br>This DOM nesting results in excessive memory consumption, styling conflicts, and layout degradation. More critically, it creates parsing exceptions in the LMS's accessibility scripts.</p>
+<p>---</p>
+<h2>The Mechanics of Array Parsing Script Failures</h2>
+<p>Automated accessibility tools parse HTML style attributes by converting the inline text declaration into parsed arrays of properties (e.g., using `split(';')` on attributes). When these scripts encounter deeply nested `<span style="...">` tags or malformed styling generated by visual editors, they often fail to correctly traverse the DOM tree.</p>
+<p>Because the color definitions are inherited across multiple nested elements rather than declared explicitly on the target node, the parser gets confused:</p>
+<p>1. **Parent-Child Style Disconnect:** The checker identifies a parent node containing `background-color: #003366` and a child containing text, but fails to map the color properties to the leaf node where the text actually resides.<br>2. **Parsing Exception Failures:** When checking color contrast, the auditing script attempts to calculate the relative luminance between a foreground color and its background. If either is nested under undefined parents, the parser throws a `TypeError: Cannot read properties of undefined (reading 'split')`, causing the script to halt execution or flag a false-positive contrast warning.</p>
+<p>These false-positives consume significant instructional engineering time as developers manually override checker warnings that are pedagogically compliant but programmatically illegible to the LMS.</p>
+<p>---</p>
+<h2>Localized Reading Demographics & Glare Resilience</h2>
+<p>The necessity for clean, high-contrast markup is not merely a theoretical compliance exercise. In regions like Yuma, Arizona, and the Imperial Valley of California, students frequently access course content on mobile devices under extreme thermal conditions and intense desert glare.</p>
+<p>When a student reads a clinical case study on a screen in 115°F (46°C) ambient heat, low-contrast text (even if passing the WCAG 4.5:1 standard) becomes completely unreadable due to sunlight reflection. To achieve true equity and access, our local standard mandates a **9:1 contrast ratio**, bypassing the LMS defaults. Achieving this 9:1 threshold deterministically is impossible when visual editors pollute the DOM with conflicting inline styles.</p>
+<p>---</p>
+<h2>The Curriculum-as-Code Solution</h2>
+<p>Curriculum-as-Code (C-a-C) resolves the visual editor problem by enforcing a strict build pipeline:</p>
+<li>**Sovereign Plain-Text SSoT:** All lessons, labs, and syllabus documents are composed in plain-text Markdown, completely bypassing the RCE.</li>
+<li>**Semantic Hierarchy Enforcement:** Markdown files start strictly at H2 (`##`), matching Canvas LMS page structures. Skipped headings are flagged and blocked during build time.</li>
+<li>**Elimination of Inline Styles:** All visual design is driven by Canvas-native CSS classes rather than inline color declarations. By preventing the injection of `<span style="...">` tags at the source, C-a-C eliminates array parsing script failures entirely.</li>
+<li>**CI/CD Quality Gates:** Automated linting via `markdownlint` and custom AST parsers run on every Git commit, ensuring that every course module is fully audited and valid *before* deployment to the LMS.</li>
+<p>By moving course design from a GUI-centric model to version-controlled source code, institutions can deliver resilient, highly accessible, and standardized education at scale.</p>
+<p></div></p>
+<p><!-- =========================================================================<br>  LANG: SPANISH<br>  ========================================================================= --><br><div data-lang="es" class="hidden-lang"></p>
+<h1>Ensayo 17: Resiliencia de la Ingeniería: Resolviendo Errores de Contraste Falsos Positivos y Fallas en Scripts de Análisis de Arrays mediante Currículum como Código</h1>
+<p>> **TL;DR:** Los evaluadores automáticos de accesibilidad en los LMS a menudo informan falsos positivos de contraste debido a fallas en los scripts de análisis de arrays causadas por el código HTML inflado de los editores visuales. Currículum como Código (C-a-C) resuelve esto desde el origen reemplazando los ajustes de color manuales con flujos Markdown deterministas, jerarquías semánticas que inician en `<h2>` y cero estilos de color en línea.</p>
+<p>---</p>
+<h2>La Fragilidad del Editor Visual</h2>
+<p>En la educación digital contemporánea, el cumplimiento de la accesibilidad se evalúa comúnmente mediante scripts de JavaScript que se ejecutan en el navegador dentro del LMS. Aunque estos evaluadores automáticos proporcionan una línea base esencial, su dependencia del recorrido del DOM en tiempo de ejecución expone una vulnerabilidad fundamental: fallan ante el código desordenado producido por los editores visuales (RCE).</p>
+<p>Cuando los diseñadores instruccionales modifican el formato o aplican colores en un editor visual, el sistema inyecta capas de elementos en línea redundantes:<br></code></pre>html<br><h3>GUI_GENERATED_DOM_POLLUTION_EXAMPLE ###</h3><br><p><span style="color: #000000;"><span style="font-size: 14pt;"><b><span style="color: #494d50;">Module Overview</span></b></span></span></p><br><h3>END_EXAMPLE ###</h3><br>```</p>
+<p>Este anidamiento excesivo en el DOM provoca un alto consumo de memoria, conflictos de estilo y degradación visual del diseño. Lo que es más crítico, genera excepciones de análisis en los scripts del LMS.</p>
+<p>---</p>
+<h2>La Mecánica de las Fallas en el Análisis de Arrays</h2>
+<p>Las herramientas de accesibilidad analizan los atributos de estilo HTML convirtiendo la declaración de texto en línea en arrays de propiedades (usando, por ejemplo, `.split(';')`). Cuando estos scripts encuentran etiquetas `<span style="...">` profundamente anidadas o estilos mal formados, no logran recorrer el árbol DOM correctamente.</p>
+<p>Debido a que las definiciones de color se heredan a través de múltiples elementos anidados en lugar de declararse explícitamente en el nodo final, el analizador falla:</p>
+<p>1. **Desconexión de Estilo Padre-Hijo:** El evaluador identifica un nodo padre con `background-color: #003366` y un hijo con texto, pero no logra mapear las propiedades de color en el nodo hoja final donde reside el texto.<br>2. **Excepciones de Análisis:** Al calcular la luminancia relativa para evaluar el contraste, el script intenta dividir los valores de color. Si el color está en un nodo anidado indefinido, el analizador arroja un error `TypeError: Cannot read properties of undefined (reading 'split')`, lo que detiene la ejecución o genera una advertencia de contraste falsa.</p>
+<p>Esto obliga a los ingenieros instruccionales a perder tiempo valioso verificando manualmente advertencias que pedagógicamente cumplen con las normas pero que programáticamente son ilegibles para el LMS.</p>
+<p>---</p>
+<h2>Datos Demográficos Locales y Resiliencia al Reflejo</h2>
+<p>La necesidad de un marcado limpio y de alto contraste no es solo una teoría de cumplimiento normativo. En regiones como Yuma, Arizona, y el Valle Imperial en California, los estudiantes acceden con frecuencia al contenido del curso en dispositivos móviles bajo condiciones térmicas extremas y un intenso reflejo del sol.</p>
+<p>Cuando un estudiante lee un caso de estudio clínico al aire libre a 46°C (115°F), el texto con bajo contraste (incluso si pasa la norma estándar WCAG de 4.5:1) se vuelve completamente ilegible. Para garantizar una accesibilidad real en nuestra región, el estándar exige una **relación de contraste mínima de 9:1**. Lograr este umbral de manera determinista es imposible si los editores visuales ensucian el DOM con estilos en línea conflictivos.</p>
+<p>---</p>
+<h2>La Solución de Currículum como Código</h2>
+<p>Currículum como Código (C-a-C) resuelve los problemas del editor visual mediante un pipeline de compilación estricto:</p>
+<li>**SSoT en Texto Plano Soberano:** Las lecciones, laboratorios y sílabos se redactan en Markdown plano, evitando por completo el uso del editor visual.</li>
+<li>**Estructura Semántica Obligatoria:** Los archivos Markdown comienzan estrictamente en H2 (`##`), alineándose con la interfaz de Canvas LMS.</li>
+<li>**Eliminación de Estilos en Línea:** El diseño visual se maneja mediante clases CSS nativas del LMS, eliminando las etiquetas `<span style="...">` y evitando las fallas de análisis de arrays.</li>
+<li>**Integración Continua (CI/CD):** Herramientas de análisis estático como `markdownlint` auditan automáticamente cada commit en Git, deteniendo cualquier error de accesibilidad antes de que el contenido llegue al servidor LMS.</li>
+<p>Al migrar el diseño de cursos de un modelo basado en interfaces visuales a código fuente controlado por versiones, las instituciones garantizan una entrega de contenidos educativa estandarizada, escalable y nativamente accesible.</p>
+<p></div></p>
+    </article>
+
+    <!-- INJECT SOCIAL SHARE BLOCK -->
+    
+    <!-- Zero-JS Semantic Social Share -->
+    <div style="margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--bg-creme-200, #E6E6DC); display: flex; flex-direction: column; gap: 16px;" aria-label="Social sharing options">
+      <span style="font-family: monospace; font-size: 0.75rem; font-weight: bold; color: var(--navy-dark); text-transform: uppercase; tracking-wider">
+        Share this Architecture:
+      </span>
+      <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center;">
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Falanpruitt.com%2Fessays%2F17-resolving-array-parsing-script-failures" target="_blank" rel="noopener noreferrer" aria-label="Share on LinkedIn" style="font-family: monospace; font-size: 0.75rem; font-weight: 600; text-decoration: none; padding: 6px 12px; border-radius: 8px; border: 1px solid var(--bg-creme-200, #E6E6DC); color: var(--navy-dark); background-color: var(--bg-cream);">
+          LinkedIn
+        </a>
+        <a href="https://x.com/intent/post?text=Essay%2017%3A%20Engineering%20Resilience%3A%20Resolving%20False-Positive%20Contrast%20Errors%20and%20Array%20Parsing%20Script%20Failures%20via%20Curriculum-as-Code&url=https%3A%2F%2Falanpruitt.com%2Fessays%2F17-resolving-array-parsing-script-failures&via=alanpruitt" target="_blank" rel="noopener noreferrer" aria-label="Share on X" style="font-family: monospace; font-size: 0.75rem; font-weight: 600; text-decoration: none; padding: 6px 12px; border-radius: 8px; border: 1px solid var(--bg-creme-200, #E6E6DC); color: var(--navy-dark); background-color: var(--bg-cream);">
+          X
+        </a>
+        <a href="https://reddit.com/submit?url=https%3A%2F%2Falanpruitt.com%2Fessays%2F17-resolving-array-parsing-script-failures&title=Essay%2017%3A%20Engineering%20Resilience%3A%20Resolving%20False-Positive%20Contrast%20Errors%20and%20Array%20Parsing%20Script%20Failures%20via%20Curriculum-as-Code" target="_blank" rel="noopener noreferrer" aria-label="Share on Reddit" style="font-family: monospace; font-size: 0.75rem; font-weight: 600; text-decoration: none; padding: 6px 12px; border-radius: 8px; border: 1px solid var(--bg-creme-200, #E6E6DC); color: var(--navy-dark); background-color: var(--bg-cream);">
+          Reddit
+        </a>
+        <a href="mailto:?subject=Essay%2017%3A%20Engineering%20Resilience%3A%20Resolving%20False-Positive%20Contrast%20Errors%20and%20Array%20Parsing%20Script%20Failures%20via%20Curriculum-as-Code&body=Read%20this%20Curriculum-as-Code%20architecture:%20https%3A%2F%2Falanpruitt.com%2Fessays%2F17-resolving-array-parsing-script-failures" aria-label="Share via Email" style="font-family: monospace; font-size: 0.75rem; font-weight: 600; text-decoration: none; padding: 6px 12px; border-radius: 8px; border: 1px solid var(--bg-creme-200, #E6E6DC); color: var(--navy-dark); background-color: var(--bg-cream);">
+          Email
+        </a>
+      </div>
+    </div>
+
+    <!-- Academic Citation & BibTeX Section -->
+    
+  </main>
+
+  <!-- Footer -->
+  <footer style="width: 100%; padding: 32px 24px; text-align: center; font-size: 0.75rem; border-top: 1px solid var(--text-navy-950); background-color: var(--text-navy-900); color: var(--bg-creme-100);">
+    <p style="margin-bottom: 8px;">© 2026 Alan Pruitt • All Rights Reserved.</p>
+    <p style="opacity: 0.75; margin: 0;">Instructional Design, AI Pedagogy & Curriculum Architecture</p>
+  </footer>
+</body>
+</html>

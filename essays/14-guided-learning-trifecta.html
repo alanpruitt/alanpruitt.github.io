@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Guided Learning Trifecta | Alan Pruitt</title>
+    <meta name="description" content="Combining Google's Guided Learning principles with Curriculum-as-Code to create a three-tier execution pipeline for high-stakes health science education.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%230B192C'/></svg>">
+
+    <!-- OpenGraph Meta Tags -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Alan Pruitt">
+    <meta property="og:title" content="The Guided Learning Trifecta: AI Simulation, Clinical Application, and Deterministic Auditing">
+    <meta property="og:description" content="Google Guided Learning in Gemini, Socratic Professor prompts, AI Safety Auditor gating, and Curriculum-as-Code integration.">
+    <meta property="og:url" content="https://alanpruitt.com/articles/14-guided-learning-trifecta.html">
+    <meta property="og:image" content="https://alanpruitt.com/assets/og-preview.png">
+
+    <!-- Inlined Zero-JS Critical CSS (100/100 Lighthouse Standard) -->
+    <style>
+        :root {
+            --bg-creme-50: #FAFBF7;
+            --bg-creme-100: #F5F5F0;
+            --bg-creme-200: #E6E6DC;
+            --text-navy-800: #1E3E62;
+            --text-navy-900: #0B192C;
+            --text-navy-950: #060E1A;
+        }
+
+        *, ::before, ::after { box-sizing: border-box; border-width: 0; border-style: solid; }
+        html { line-height: 1.5; -webkit-text-size-adjust: 100%; tab-size: 4; font-family: Inter, -apple-system, sans-serif; }
+        body { margin: 0; background-color: var(--bg-creme-100); color: var(--text-navy-900); }
+
+        .w-full { width: 100%; }
+        .max-w-4xl { max-width: 56rem; }
+        .max-w-3xl { max-width: 48rem; }
+        .mx-auto { margin-left: auto; margin-right: auto; }
+        .flex { display: flex; }
+        .flex-col { flex-direction: column; }
+        .flex-grow { flex-grow: 1; }
+        .flex-wrap { flex-wrap: wrap; }
+        .items-center { align-items: center; }
+        .justify-between { justify-content: space-between; }
+        .space-x-3 > :not([hidden]) ~ :not([hidden]) { margin-left: 0.75rem; }
+
+        @media (min-width: 768px) {
+            .md\:flex-row { flex-direction: row; }
+        }
+
+        .gap-2 { gap: 0.5rem; }
+        .gap-3 { gap: 0.75rem; }
+
+        .bg-white { background-color: #ffffff; }
+        .bg-creme-50 { background-color: var(--bg-creme-50); }
+        .bg-creme-100 { background-color: var(--bg-creme-100); }
+        .bg-creme-200 { background-color: var(--bg-creme-200); }
+        .bg-navy-900 { background-color: var(--text-navy-900); }
+
+        .text-navy-800 { color: var(--text-navy-800); }
+        .text-navy-900 { color: var(--text-navy-900); }
+        .text-creme-100 { color: var(--bg-creme-100); }
+        .text-creme-200 { color: var(--bg-creme-200); }
+        .text-green-700 { color: #15803d; }
+
+        .p-1 { padding: 0.25rem; }
+        .p-8 { padding: 2rem; }
+        .px-2\.5 { padding-left: 0.625rem; padding-right: 0.625rem; }
+        .px-3 { padding-left: 0.75rem; padding-right: 0.75rem; }
+        .px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+        .py-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+        .py-6 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+        .py-8 { padding-top: 2rem; padding-bottom: 2rem; }
+        .py-10 { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+        
+        .mb-3 { margin-bottom: 0.75rem; }
+        .mb-4 { margin-bottom: 1rem; }
+        .mb-8 { margin-bottom: 2rem; }
+        .mt-6 { margin-top: 1.5rem; }
+        .mt-12 { margin-top: 3rem; }
+        .pt-6 { padding-top: 1.5rem; }
+
+        .border { border-style: solid; border-width: 1px; }
+        .border-t { border-top-style: solid; border-top-width: 1px; }
+        .border-b { border-bottom-style: solid; border-bottom-width: 1px; }
+        .border-creme-100 { border-color: var(--bg-creme-100); }
+        .border-creme-200 { border-color: var(--bg-creme-200); }
+
+        .rounded-md { border-radius: 0.375rem; }
+        .rounded-lg { border-radius: 0.5rem; }
+        .rounded-2xl { border-radius: 1rem; }
+
+        .font-sans { font-family: Inter, -apple-system, sans-serif; }
+        .font-mono { font-family: 'Fira Code', monospace; }
+        .font-semibold { font-weight: 600; }
+        .font-bold { font-weight: 700; }
+        .font-extrabold { font-weight: 800; }
+
+        .text-xs { font-size: 0.75rem; line-height: 1rem; }
+        .text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+        .text-base { font-size: 1rem; line-height: 1.5rem; }
+        .text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+        .text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+
+        @media (min-width: 640px) {
+            .sm\:text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+            .sm\:p-12 { padding: 3rem; }
+        }
+
+        .tracking-tight { letter-spacing: -0.025em; }
+        .leading-tight { line-height: 1.25; }
+        .leading-relaxed { line-height: 1.7; }
+        .shadow-sm { box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); }
+
+        .hover\:underline:hover { text-decoration: underline; }
+        .hover\:text-navy-800:hover { color: var(--text-navy-800); }
+        .inline-block { display: inline-block; }
+        .inline-flex { display: inline-flex; }
+
+        .article-body p { margin-bottom: 1.5rem; color: var(--text-navy-800); font-size: 1.0625rem; line-height: 1.75; }
+        .article-body h2 { font-size: 1.5rem; font-weight: 700; color: var(--text-navy-900); margin-top: 2.5rem; margin-bottom: 1rem; letter-spacing: -0.02em; }
+        .article-body h3 { font-size: 1.25rem; font-weight: 700; color: var(--text-navy-900); margin-top: 2rem; margin-bottom: 0.75rem; }
+        .article-body ul { margin-bottom: 1.5rem; padding-left: 1.5rem; color: var(--text-navy-800); list-style-type: disc; }
+        .article-body ol { margin-bottom: 1.5rem; padding-left: 1.5rem; color: var(--text-navy-800); list-style-type: decimal; }
+        .article-body li { margin-bottom: 0.5rem; font-size: 1.0625rem; line-height: 1.6; }
+        .article-body blockquote { background-color: var(--bg-creme-50); border-left: 4px solid var(--text-navy-900); padding: 1.25rem 1.5rem; margin-top: 2rem; margin-bottom: 2rem; border-radius: 0 0.5rem 0.5rem 0; }
+        .article-body blockquote p { margin-bottom: 0; font-size: 1rem; font-weight: 600; color: var(--text-navy-900); }
+        .article-body pre { background-color: var(--text-navy-900); color: var(--bg-creme-100); padding: 1.25rem; border-radius: 0.5rem; font-family: 'Fira Code', monospace; font-size: 0.875rem; overflow-x: auto; margin-bottom: 1.5rem; }
+
+        [data-lang] { transition: opacity 0.15s ease-in-out; }
+        .hidden-lang { display: none !important; }
+    </style>
+</head>
+<body class="bg-creme-100 text-navy-900 font-sans antialiased min-h-full flex flex-col justify-between">
+
+    <!-- Header Navigation -->
+    <header class="w-full max-w-4xl mx-auto px-6 py-6 flex justify-between items-center border-b border-creme-200">
+        <div class="flex items-center space-x-3">
+            <span class="w-3 h-3 bg-navy-900 rounded-full inline-block" aria-hidden="true"></span>
+            <a href="../index.html" class="text-xl font-bold tracking-tight text-navy-900 hover:text-navy-800 transition-colors">
+                alanpruitt.com
+            </a>
+            <span class="text-creme-200">/</span>
+            <a href="index.html" class="text-sm font-mono text-navy-800 font-semibold hover:underline">
+                articles
+            </a>
+        </div>
+        
+        <!-- Language Switcher -->
+        <div class="flex items-center bg-creme-200 p-1 rounded-lg border border-creme-200 text-sm font-semibold" role="group" aria-label="Language selector">
+            <button id="btn-en" onclick="setLanguage('en')" aria-label="Switch language to English" class="px-3 py-1 rounded-md bg-navy-900 text-creme-100 shadow-sm">EN</button>
+            <button id="btn-es" onclick="setLanguage('es')" aria-label="Cambiar idioma a Español" class="px-3 py-1 rounded-md text-navy-900 hover:text-navy-800">ES</button>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="w-full max-w-3xl mx-auto px-6 py-10 flex-grow">
+        
+        <article class="bg-white p-8 sm:p-12 rounded-2xl border border-creme-200 shadow-sm">
+            
+            <!-- Article Header -->
+            <header class="mb-8 pb-8 border-b border-creme-100">
+                <div class="flex flex-wrap items-center gap-3 mb-4 text-xs font-mono text-navy-800">
+                    <span class="px-2.5 py-1 bg-navy-900 text-creme-100 font-bold rounded-md">ESSAY 14</span>
+                    <span>August 2026</span>
+                    <span aria-hidden="true">•</span>
+                    <span>10 min read</span>
+                    <span aria-hidden="true">•</span>
+                    <span class="text-green-700 font-semibold">Source: Markdown SSoT</span>
+                </div>
+
+                <h1 class="text-3xl sm:text-4xl font-extrabold text-navy-900 tracking-tight leading-tight mb-4">
+                    <span data-lang="en">The Guided Learning Trifecta: AI Simulation, Clinical Application, and Deterministic Auditing</span>
+                    <span data-lang="es" class="hidden-lang">La Trifecta del Aprendizaje Guiado: Simulación con IA, Aplicación Clínica y Auditoría Determinista</span>
+                </h1>
+
+                <p class="text-lg text-navy-800 leading-relaxed font-medium" data-lang="en">
+                    Combining Google's Guided Learning principles with Curriculum-as-Code to create a three-tier execution pipeline for high-stakes health science education.
+                </p>
+                <p class="text-lg text-navy-800 leading-relaxed font-medium hidden-lang" data-lang="es">
+                    Combinando los principios de Aprendizaje Guiado de Google con Currículum como Código para crear una tubería de tres niveles en ciencias de la salud.
+                </p>
+
+                <div class="mt-6 flex flex-wrap gap-2">
+                    <span class="text-xs font-mono bg-creme-100 text-navy-900 px-2.5 py-1 rounded-md border border-creme-200">Guided Learning</span>
+                    <span class="text-xs font-mono bg-creme-100 text-navy-900 px-2.5 py-1 rounded-md border border-creme-200">AI Simulation</span>
+                    <span class="text-xs font-mono bg-creme-100 text-navy-900 px-2.5 py-1 rounded-md border border-creme-200">Safety Auditor</span>
+                </div>
+            </header>
+
+            <!-- English Content -->
+            <div class="article-body" data-lang="en">
+                <p>
+                    When higher education institutions scramble to integrate Generative AI into workforce programs, they usually make one of two mistakes: they treat AI as a passive text summarizer, or they fear it as an unstoppable cheating engine. Both approaches miss the true potential of intelligent instructional engineering.
+                </p>
+
+                <p>
+                    In applied health sciences and vocational education, AI should neither replace human instruction nor act as an open-ended conversational oracle. Instead, it must be deployed as a structured, deterministic learning partner within a three-tier execution pipeline: <strong>The Guided Learning Trifecta</strong>.
+                </p>
+
+                <h2>1. The Architecture of the Trifecta</h2>
+                <p>
+                    Engineered as part of the EXW Curriculum-as-Code framework, the Guided Learning Trifecta structures student engagement into three explicit, non-negotiable operational roles:
+                </p>
+
+                <ol>
+                    <li><strong>The AI Tool Kit (Simulation & Math Verification):</strong> Before touching high-value lab equipment or prescribing human interventions, students interact with specialized AI simulation nodes. The Tool Kit acts as a sandbox—allowing students to test metabolic calculations, model physiological responses, and verify dosage logic without clinical risk.</li>
+                    <li><strong>The Clinical Application (Onsite Research-Grade Execution):</strong> Simulation without application is just a video game. Once student calculations pass digital gating, learning transitions to physical execution—utilizing research-grade equipment like Lode Corival cycle ergometers or clinical assessment protocols. The digital pre-lab ensures 100% of physical lab time is spent on high-touch, real-world application.</li>
+                    <li><strong>The Safety Auditor (Deterministic Compliance Gating):</strong> The entire workflow is guarded by the AI Safety Auditor. Rather than offering vague encouragement, the Auditor evaluates student inputs against strict Single Sources of Truth (SSoTs)—such as PAGA 2018 or ACSM 12th Edition guidelines. If a student's proposed exercise prescription violates clinical safety thresholds, the Auditor flags the exact logic breach before the student proceeds.</li>
+                </ol>
+
+                <h2>2. Google's Guided Learning & The Curriculum-as-Code Model</h2>
+                <p>
+                    The industry is rapidly catching up to this pedagogical shift. Google recently unveiled <a href="https://blog.google/products-and-platforms/products/education/guided-learning/" target="_blank" rel="noopener noreferrer" class="hover:underline font-semibold">Guided Learning in Gemini</a>, a model built explicitly on learning science principles to move AI from answering questions <em>for</em> students to guiding students <em>through</em> understanding.
+                </p>
+                <p>
+                    In our Curriculum-as-Code (C-a-C) architecture, Google’s Guided Learning acts as the native intelligence layer. Rather than allowing raw LLM hallucination, C-a-C injects explicit pedagogical roles directly into the prompt stream, ensuring Gemini operates not as a shortcut, but as a structured cognitive partner.
+                </p>
+
+                <h3>The Socratic Professor (Framing & Critical Inquiry)</h3>
+                <p>
+                    Prompt instructions force the AI to refuse raw answers, instead probing student understanding through open-ended questioning and contextual framing.
+                </p>
+
+<pre><code>### SYSTEM_PROMPT: Socratic Professor ###
+
+[ROLE_IDENTITY]
+You are the Socratic Professor for EXW101. Your objective is to guide students to identify human inactivity patterns without giving direct answers.
+
+[PROTOCOL]
+1. Wrap all client profile data in ### CLIENT_PROFILE ### delimiters.
+2. NEVER provide the final physiological prescription or diagnosis directly.
+3. Respond to student statements by asking targeted, probing questions that direct them toward the PAGA 2018 guideline thresholds.
+4. If the student asks for the direct answer, respond: "As your Socratic guide, I need you to analyze the signals first. What does the client's current weekly aerobic volume indicate?"</code></pre>
+
+                <blockquote>
+                    <p>AI in education shouldn't be an answer engine—it must be a structured cognitive scaffold that guides students toward evidence-based reasoning.</p>
+                </blockquote>
+
+                <h2>3. Real-World Impact in Health Science Programs</h2>
+                <p>
+                    Deploying the Guided Learning Trifecta transforms health science and clinical kinesiology outcomes:
+                </p>
+                <ul>
+                    <li><strong>Elimination of Clinical Risk:</strong> Students verify all workload protocols in the digital sandbox before running live human testing trials.</li>
+                    <li><strong>Objective Assessment Gating:</strong> Safety Auditor nodes validate student reasoning against ACSM SSoT standards with zero grading ambiguity.</li>
+                    <li><strong>Scalable Pedagogy:</strong> Faculty shift from manual calculation grading to high-value clinical mentorship and hands-on skill development.</li>
+                </ul>
+            </div>
+
+            <!-- Spanish Content -->
+            <div class="article-body hidden-lang" data-lang="es">
+                <p>
+                    Cuando las instituciones de educación superior se apresuran a integrar la IA generativa en sus programas académicos, suelen cometer uno de dos errores: tratan a la IA como un resumidor de texto pasivo, o le temen como a un motor de fraude imparable. Ambos enfoques pierden de vista el verdadero potencial de la ingeniería instruccional inteligente.
+                </p>
+
+                <p>
+                    En ciencias de la salud aplicadas y educación vocacional, la IA no debe reemplazar la instrucción humana ni actuar como un oráculo conversacional sin restricciones. En cambio, debe desplegarse como un socio de aprendizaje estructurado y determinista dentro de una tubería de ejecución de tres niveles: <strong>La Trifecta del Aprendizaje Guiado</strong>.
+                </p>
+
+                <h2>1. La Arquitectura de la Trifecta</h2>
+                <p>
+                    Diseñada como parte del marco EXW Currículum como Código, la Trifecta del Aprendizaje Guiado estructura la participación estudiantil en tres roles operativos explícitos y no negociables:
+                </p>
+
+                <ol>
+                    <li><strong>El Toolkit de IA (Simulación y Verificación Matemática):</strong> Antes de tocar equipos de laboratorio de alto valor o prescribir intervenciones humanas, los estudiantes interactúan con nodos de simulación de IA especializados. El Toolkit actúa como un entorno de pruebas, permitiendo verificar cálculos metabólicos y lógica de dosificación sin riesgo clínico.</li>
+                    <li><strong>La Aplicación Clínica (Ejecución Presencial de Nivel de Investigación):</strong> La simulación sin aplicación es solo un juego. Una vez que los cálculos aprueban el filtro digital, el aprendizaje pasa a la ejecución física, utilizando equipos de nivel de investigación como cicloergómetros Lode Corival o protocolos clínicos.</li>
+                    <li><strong>El Auditor de Seguridad (Filtrado de Cumplimiento Determinista):</strong> Todo el flujo de trabajo está resguardado por el Auditor de Seguridad de IA. En lugar de ofrecer ánimos vagos, el Auditor evalúa las entregas contra Fuentes Únicas de Verdad (SSoTs) estrictas (como guías PAGA 2018 o ACSM 12a Edición).</li>
+                </ol>
+
+                <h2>2. El Aprendizaje Guiado de Google y el Modelo de Currículum como Código</h2>
+                <p>
+                    La industria está alcanzando rápidamente este cambio pedagógico. Google presentó recientemente <a href="https://blog.google/products-and-platforms/products/education/guided-learning/" target="_blank" rel="noopener noreferrer" class="hover:underline font-semibold">Guided Learning en Gemini</a>, un modelo construido explícitamente sobre principios de ciencias del aprendizaje para pasar de responder preguntas <em>por</em> los estudiantes a guiarlos <em>a través</em> de la comprensión.
+                </p>
+                <p>
+                    En nuestra arquitectura de Currículum como Código (C-a-C), el Aprendizaje Guiado de Google actúa como la capa de inteligencia nativa. En lugar de permitir alucinaciones, C-a-C inyecta roles pedagógicos explícitos directamente en el flujo de prompts.
+                </p>
+
+                <h3>El Profesor Socrático (Encuadre e Indagación Crítica)</h3>
+                <p>
+                    Las instrucciones del prompt obligan a la IA a rechazar respuestas directas, guiando la comprensión del estudiante mediante preguntas dirigidas y encuadre contextual.
+                </p>
+
+<pre><code>### SYSTEM_PROMPT: Profesor Socrático ###
+
+[IDENTIDAD_ROL]
+Eres el Profesor Socrático de EXW101. Tu objetivo es guiar a los estudiantes a identificar patrones de inactividad humana sin dar respuestas directas.
+
+[PROTOCOLO]
+1. Envuelve los datos del perfil del cliente en delimitadores ### CLIENT_PROFILE ###.
+2. NUNCA proporciones la prescripción fisiológica final o diagnóstico directamente.
+3. Responde a las afirmaciones del estudiante haciendo preguntas dirigidas que los orienten hacia los umbrales de PAGA 2018.
+4. Si el estudiante pide la respuesta directa, responde: "Como tu guía socrático, necesito que analices primero las señales. ¿Qué indica el volumen aeróbico semanal actual del cliente?"</code></pre>
+
+                <blockquote>
+                    <p>La IA en educación no debe ser un motor de respuestas; debe ser un andamio cognitivo estructurado que guíe a los estudiantes hacia el razonamiento basado en evidencia.</p>
+                </blockquote>
+
+                <h2>3. Impacto en Programas de Ciencias de la Salud</h2>
+                <p>
+                    El despliegue de la Trifecta del Aprendizaje Guiado transforma los resultados en ciencias de la salud y kinesiología clínica:
+                </p>
+                <ul>
+                    <li><strong>Eliminación del Riesgo Clínico:</strong> Los estudiantes verifican todos los protocolos de carga de trabajo en el entorno digital antes de realizar pruebas humanas en vivo.</li>
+                    <li><strong>Filtrado de Evaluación Objetiva:</strong> Los nodos del Auditor de Seguridad validan el razonamiento estudiantil contra estándares ACSM SSoT con cero ambigüedad de calificación.</li>
+                    <li><strong>Pedagogía Escalable:</strong> El profesorado pasa de calificar cálculos manuales a la tutoría clínica de alto valor y el desarrollo de habilidades prácticas.</li>
+                </ul>
+            </div>
+
+            <!-- Footer Navigation -->
+            <footer class="mt-12 pt-6 border-t border-creme-100 flex items-center justify-between">
+                <a href="index.html" class="text-sm font-semibold text-navy-900 hover:underline inline-flex items-center gap-1">
+                    &larr; <span data-lang="en">Back to Articles</span><span data-lang="es" class="hidden-lang">Volver a Artículos</span>
+                </a>
+                <a href="https://www.linkedin.com/in/alanpruitt/" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-navy-900 hover:underline">
+                    <span data-lang="en">Discuss on LinkedIn &rarr;</span><span data-lang="es" class="hidden-lang">Discutir en LinkedIn &rarr;</span>
+                </a>
+            </footer>
+
+        </article>
+
+    </main>
+
+    <!-- Unified Footer -->
+    <footer class="w-full max-w-4xl mx-auto px-6 py-8 mt-12 border-t border-creme-200 flex flex-col md:flex-row justify-between items-center text-xs text-navy-800 gap-4">
+        <div class="space-y-1 text-center md:text-left">
+            <div>&copy; <span id="year"></span> Alan Pruitt. All rights reserved.</div>
+            <div class="text-navy-800">
+                Code licensed under <a href="../LICENSE" class="hover:underline hover:text-navy-900">MIT</a>. 
+                Content licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer" class="hover:underline hover:text-navy-900">CC BY 4.0</a>.
+            </div>
+        </div>
+        <div class="flex space-x-6">
+            <a href="https://github.com/alanpruitt" target="_blank" rel="noopener noreferrer" class="hover:text-navy-900">GitHub</a>
+            <a href="https://www.linkedin.com/in/alanpruitt/" target="_blank" rel="noopener noreferrer" class="hover:text-navy-900">LinkedIn</a>
+            <a href="https://www.webcognita.com" target="_blank" rel="noopener noreferrer" class="hover:text-navy-900">Webcognita</a>
+        </div>
+    </footer>
+
+    <!-- Client Script -->
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        function setLanguage(lang) {
+            const enElements = document.querySelectorAll('[data-lang="en"]');
+            const esElements = document.querySelectorAll('[data-lang="es"]');
+            const btnEn = document.getElementById('btn-en');
+            const btnEs = document.getElementById('btn-es');
+
+            if (lang === 'en') {
+                enElements.forEach(el => el.classList.remove('hidden-lang'));
+                esElements.forEach(el => el.classList.add('hidden-lang'));
+                btnEn.className = "px-3 py-1 rounded-md bg-navy-900 text-creme-100 shadow-sm";
+                btnEs.className = "px-3 py-1 rounded-md text-navy-900 hover:text-navy-800";
+                btnEn.setAttribute('aria-pressed', 'true');
+                btnEs.setAttribute('aria-pressed', 'false');
+            } else {
+                esElements.forEach(el => el.classList.remove('hidden-lang'));
+                enElements.forEach(el => el.classList.add('hidden-lang'));
+                btnEs.className = "px-3 py-1 rounded-md bg-navy-900 text-creme-100 shadow-sm";
+                btnEn.className = "px-3 py-1 rounded-md text-navy-900 hover:text-navy-800";
+                btnEs.setAttribute('aria-pressed', 'true');
+                btnEn.setAttribute('aria-pressed', 'false');
+            }
+            localStorage.setItem('preferred_lang', lang);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('preferred_lang') || 'en';
+            setLanguage(savedLang);
+        });
+    </script>
+</body>
+</html>

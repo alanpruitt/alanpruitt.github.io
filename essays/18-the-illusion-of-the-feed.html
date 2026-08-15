@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Illusion of the Feed: Upstream SSoT and Feed Link Rot Governance | Alan Pruitt</title>
+    <meta name="description" content="How relying on dynamic external feeds inside an LMS introduces link rot vulnerabilities, and how upstream SSoT configuration control resolves accessibility issues at the source.">
+
+    <!-- Favicon (Inline Deep Navy SVG) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%230B192C'/></svg>">
+
+    <!-- OpenGraph Meta Tags -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Alan Pruitt">
+    <meta property="og:title" content="The Illusion of the Feed: Upstream SSoT and Feed Link Rot Governance">
+    <meta property="og:description" content="Managing external links, feeds, and configurations programmatically as version-controlled manifests.">
+    <meta property="og:url" content="https://alanpruitt.com/articles/18-the-illusion-of-the-feed.html">
+    <meta property="og:image" content="https://alanpruitt.com/assets/og-preview.png">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The Illusion of the Feed: Upstream SSoT and Feed Link Rot Governance">
+    <meta name="twitter:description" content="Preventing external resource accessibility issues in Canvas LMS using CI/CD pipelines.">
+    <meta name="twitter:image" content="https://alanpruitt.com/assets/og-preview.png">
+
+    <!-- Inlined Zero-JS Pure Critical CSS (100/100 Lighthouse Compliant) -->
+    <style>
+        :root {
+            --bg-creme-50: #FAFBF7;
+            --bg-creme-100: #F5F5F0;
+            --bg-creme-200: #E6E6DC;
+            --text-navy-800: #1E3E62;
+            --text-navy-900: #0B192C;
+            --text-navy-950: #060E1A;
+        }
+
+        *, ::before, ::after { box-sizing: border-box; border-width: 0; border-style: solid; }
+        html { line-height: 1.5; -webkit-text-size-adjust: 100%; tab-size: 4; font-family: Inter, -apple-system, sans-serif; }
+        body { margin: 0; background-color: var(--bg-creme-100); color: var(--text-navy-900); }
+
+        .w-full { width: 100%; }
+        .max-w-4xl { max-width: 56rem; }
+        .max-w-3xl { max-width: 48rem; }
+        .mx-auto { margin-left: auto; margin-right: auto; }
+        .flex { display: flex; }
+        .flex-col { flex-direction: column; }
+        .flex-grow { flex-grow: 1; }
+        .flex-wrap { flex-wrap: wrap; }
+        .items-center { align-items: center; }
+        .justify-between { justify-content: space-between; }
+        .space-x-3 > :not([hidden]) ~ :not([hidden]) { margin-left: 0.75rem; }
+        .space-x-6 > :not([hidden]) ~ :not([hidden]) { margin-left: 1.5rem; }
+
+        @media (min-width: 768px) {
+            .md\:flex-row { flex-direction: row; }
+        }
+
+        .gap-2 { gap: 0.5rem; }
+        .gap-3 { gap: 0.75rem; }
+
+        .bg-white { background-color: #ffffff; }
+        .bg-creme-50 { background-color: var(--bg-creme-50); }
+        .bg-creme-100 { background-color: var(--bg-creme-100); }
+        .bg-creme-200 { background-color: var(--bg-creme-200); }
+        .bg-navy-900 { background-color: var(--text-navy-900); }
+
+        .text-navy-800 { color: var(--text-navy-800); }
+        .text-navy-900 { color: var(--text-navy-900); }
+        .text-creme-100 { color: var(--bg-creme-100); }
+        .text-creme-200 { color: var(--bg-creme-200); }
+        .text-green-700 { color: #15803d; }
+
+        .p-1 { padding: 0.25rem; }
+        .p-8 { padding: 2rem; }
+        .px-2\.5 { padding-left: 0.625rem; padding-right: 0.625rem; }
+        .px-3 { padding-left: 0.75rem; padding-right: 0.75rem; }
+        .px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+        .py-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+        .py-6 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+        .py-8 { padding-top: 2rem; padding-bottom: 2rem; }
+        .py-10 { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+        
+        .mb-3 { margin-bottom: 0.75rem; }
+        .mb-4 { margin-bottom: 1rem; }
+        .mb-8 { margin-bottom: 2rem; }
+        .mt-6 { margin-top: 1.5rem; }
+        .mt-12 { margin-top: 3rem; }
+        .pt-4 { padding-top: 1rem; }
+        .pt-6 { padding-top: 1.5rem; }
+
+        .border { border-style: solid; border-width: 1px; }
+        .border-t { border-top-style: solid; border-top-width: 1px; }
+        .border-b { border-bottom-style: solid; border-bottom-width: 1px; }
+        .border-l-4 { border-left-style: solid; border-left-width: 4px; }
+        .border-creme-100 { border-color: var(--bg-creme-100); }
+        .border-creme-200 { border-color: var(--bg-creme-200); }
+
+        .rounded-md { border-radius: 0.375rem; }
+        .rounded-lg { border-radius: 0.5rem; }
+        .rounded-2xl { border-radius: 1rem; }
+
+        .shadow-sm { box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); }
+
+        .font-mono { font-family: monospace; }
+        .font-bold { font-weight: 700; }
+        .font-semibold { font-weight: 600; }
+        
+        .leading-relaxed { line-height: 1.625; }
+        
+        .hover\:underline:hover { text-decoration: underline; }
+        .hover\:text-navy-900:hover { color: var(--text-navy-900); }
+
+        .cursor-pointer { cursor: pointer; }
+        .outline-none { outline: 2px solid transparent; outline-offset: 2px; }
+
+        /* Typography Styles for Article Content */
+        .article-body h2 { font-size: 1.5rem; font-weight: 700; color: var(--text-navy-900); margin-top: 2rem; margin-bottom: 1rem; }
+        .article-body p { font-size: 1rem; color: #1a1a1a; line-height: 1.75; margin-bottom: 1.25rem; }
+        .article-body ul, .article-body ol { margin-bottom: 1.25rem; padding-left: 1.5rem; }
+        .article-body li { margin-bottom: 0.5rem; line-height: 1.6; }
+        .article-body strong { font-weight: 700; color: var(--text-navy-950); }
+        .article-body blockquote { margin: 1.5rem 0; padding: 1rem 1.5rem; border-left: 4px solid var(--text-navy-800); background-color: var(--bg-creme-50); font-style: italic; color: #333; }
+        .article-body pre { background-color: var(--bg-creme-50); border: 1px solid var(--bg-creme-200); padding: 1rem; rounded: 0.5rem; overflow-x: auto; margin-bottom: 1.25rem; font-family: monospace; font-size: 0.875rem; }
+
+        /* Interactive Language Selector Toggle */
+        .lang-toggle-btn { transition: all 0.2s ease-in-out; }
+        .lang-toggle-btn.active { background-color: var(--text-navy-900); color: var(--bg-creme-100); }
+        .lang-toggle-btn:not(.active):hover { background-color: var(--bg-creme-200); }
+
+        .hidden-lang { display: none !important; }
+    </style>
+</head>
+<body class="bg-creme-100 text-navy-900 font-sans antialiased min-h-screen flex flex-col justify-between">
+
+    <!-- Header Navigation -->
+    <header class="w-full bg-white border-b border-creme-200 py-6 px-6 shadow-sm">
+        <div class="max-w-4xl mx-auto flex items-center justify-between">
+            <a href="../index.html" class="text-lg font-bold text-navy-900 hover:underline">
+                Alan Pruitt
+            </a>
+            <nav class="flex items-center space-x-6">
+                <a href="../index.html" class="text-sm font-semibold text-navy-800 hover:text-navy-900 hover:underline">Home</a>
+                <a href="index.html" class="text-sm font-semibold text-navy-900 hover:underline">Articles</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="w-full max-w-3xl mx-auto px-6 py-10 flex-grow">
+        
+        <!-- Language Switcher Bar -->
+        <div class="flex justify-end mb-8">
+            <div class="inline-flex rounded-lg bg-creme-200 p-1">
+                <button onclick="setLanguage('en')" id="btn-en" class="lang-toggle-btn active text-xs font-semibold px-3 py-1 rounded-md outline-none cursor-pointer">
+                    English
+                </button>
+                <button onclick="setLanguage('es')" id="btn-es" class="lang-toggle-btn text-xs font-semibold px-3 py-1 rounded-md outline-none cursor-pointer">
+                    Español
+                </button>
+            </div>
+        </div>
+
+        <article class="bg-white p-8 rounded-2xl border border-creme-200 shadow-sm">
+            
+            <!-- Metadata Header -->
+            <div class="flex flex-wrap items-center gap-3 mb-6 text-xs font-mono text-navy-800">
+                <span class="px-2.5 py-1 bg-navy-900 text-creme-100 font-bold rounded-md">ESSAY 18</span>
+                <span>August 2026</span>
+                <span aria-hidden="true">•</span>
+                <span>6 min read</span>
+                <span aria-hidden="true">•</span>
+                <span class="text-green-700 font-semibold">Source: Markdown SSoT</span>
+            </div>
+
+            <!-- English Title Header -->
+            <div data-lang="en">
+                <h1 class="text-3xl md:text-4xl font-bold text-navy-900 mb-6 leading-tight">
+                    The Illusion of the Feed: Upstream SSoT and Feed Link Rot Governance
+                </h1>
+            </div>
+
+            <!-- Spanish Title Header -->
+            <div data-lang="es" class="hidden-lang">
+                <h1 class="text-3xl md:text-4xl font-bold text-navy-900 mb-6 leading-tight">
+                    La Ilusión del Feed: Gobernanza de SSoT Aguas Arriba y Rotura de Enlaces
+                </h1>
+            </div>
+
+            <hr class="border-creme-200 mb-8" />
+
+            <!-- English Article Content -->
+            <div class="article-body" data-lang="en">
+                <blockquote>
+                    <strong>TL;DR:</strong> Relying on live external web links and dynamic social media widgets inside an LMS creates an illusion of real-time engagement while introducing a compounding vulnerability of link rot. Upstream Single Source of Truth (SSoT) governance resolves this at the source by managing links, references, and credentials as config-controlled variables in centralized manifests, which are validated by automated link-auditing pipelines.
+                </blockquote>
+
+                <h2>The Illusion of the Feed</h2>
+                <p>
+                    In contemporary web-based education, courses often incorporate dynamic components such as real-time social media widgets, live discussion feeds, and external resource embeds. These widgets create the "illusion of the feed"—the impression that course content is current, interactive, and continuously updated.
+                </p>
+                <p>
+                    However, this reliance on live-state web resources introduces a major system vulnerability: <strong>Link Rot</strong>. Research shows that a substantial percentage of external hyperlinks in web pages rot within a few years due to URL restructurings, server decommissions, and platform access updates. In an LMS environment, link rot degrades instructional quality, interrupts student learning flows, and compromises accessibility standards.
+                </p>
+
+                <h2>Upstream SSoT Governance</h2>
+                <p>
+                    Curriculum-as-Code (C-a-C) resolves the issue of link rot by establishing an upstream Single Source of Truth (SSoT) for all external resources. Instead of allowing instructors to hardcode URLs directly into individual pages or assignments, URLs are stored in central configurations:
+                </p>
+
+                <pre><code>{
+  "external_resources": {
+    "paga_2018_guidelines": "https://health.gov/sites/default/files/2019-09/Physical_Activity_Guidelines_2nd_edition.pdf",
+    "acsm_testing_standards": "https://www.acsm.org/education-resources/guidelines-exercise-testing-prescription",
+    "yuma_heat_safety_protocol": "https://www.yumaaz.gov/government/emergency-management/heat-safety"
+  }
+}</code></pre>
+
+                <p>
+                    By separating content from configuration, instructional engineers can audit and update link destinations globally. If a government website restructures its URL path, the fix is made once in the configuration file, and the CI/CD compilation pipeline automatically regenerates and deploys the updated references to the Canvas LMS.
+                </p>
+
+                <h2>The Centaur Protocol & High-Friction Pedagogy</h2>
+                <p>
+                    In alignment with the <strong>Centaur Protocol</strong>, course designs should position the student as the <strong>Pilot/Architect</strong> (exhibiting critical clinical judgment) and the AI as the <strong>Engine/Calculator</strong> (processing computations and drafting templates).
+                </p>
+                <p>
+                    To prevent cognitive offloading, we implement <strong>High-Friction Pedagogy</strong>:
+                </p>
+                <ul>
+                    <li><strong>High-Friction Assessments:</strong> Rather than completing passive, one-and-done multiple-choice tests, residents must perform active clinical audits.</li>
+                    <li><strong>Offline-First Resilience:</strong> In regional institutions like Arizona Western College (AWC), a Hispanic-Serving Institution (HSI), students often study in high-heat environments (e.g., Yuma County desert glare exceeding 115°F) where mobile connectivity drops.</li>
+                    <li><strong>Semantic Security:</strong> Instructors wrap clinical case data, client profiles, and medical inputs in triple-hashes (<code>###</code>). This keeps parsing errors from leaking information into public AI models.</li>
+                </ul>
+
+                <h2>CI/CD Link Rot Audits</h2>
+                <p>
+                    Our automated validation pipeline includes pre-commit link checkers that audit the integrity of the SSoT file before code is staged. This ensures that:
+                </p>
+                <ol>
+                    <li>All referenced URLs return <code>HTTP 200 OK</code>.</li>
+                    <li>Anchor tags contain descriptive labels matching WCAG 2.1 AA screen reader standards.</li>
+                    <li>Every external link opens in a new tab with proper security parameters (<code>rel="noopener noreferrer"</code>).</li>
+                </ol>
+                <p>
+                    This programmatic approach ensures that the course remains functional, secure, and accessible throughout the academic year.
+                </p>
+            </div>
+
+            <!-- Spanish Article Content -->
+            <div class="article-body hidden-lang" data-lang="es">
+                <blockquote>
+                    <strong>TL;DR:</strong> Depender de enlaces web externos en vivo y widgets de redes sociales dinámicos dentro de un LMS crea una ilusión de participación en tiempo real, pero introduce una vulnerabilidad acumulativa de enlaces rotos. La gobernanza de la Fuente Única de Verdad (SSoT) aguas arriba resuelve esto en origen gestionando enlaces, referencias y credenciales como variables controladas por configuración en manifiestos centralizados.
+                </blockquote>
+
+                <h2>La Ilusión del Feed</h2>
+                <p>
+                    En la educación digital contemporánea, los cursos a menudo incorporan componentes dinámicos como widgets de redes sociales en tiempo real, feeds de discusión en vivo y recursos externos incrustados. Estos widgets crean la "ilusión del feed": la impresión de que el contenido del curso está actualizado, es interactivo y se renueva continuamente.
+                </p>
+                <p>
+                    Sin embargo, esta dependencia de recursos web en estado activo introduce una vulnerabilidad importante en el sistema: <strong>la rotura de enlaces (Link Rot)</strong>. Las investigaciones demuestran que un porcentaje sustancial de los hipervínculos externos en las páginas web se rompe en pocos años debido a reestructuraciones de URL, bajas de servidores y actualizaciones de acceso a las plataformas. En un entorno LMS, los enlaces rotos degradan la calidad instruccional, interrumpen los flujos de aprendizaje de los estudiantes y comprometen los estándares de accesibilidad.
+                </p>
+
+                <h2>Gobernanza de SToT Aguas Arriba</h2>
+                <p>
+                    Currículum como Código (C-a-C) resuelve el problema de la rotura de enlaces estableciendo una Fuente Única de Verdad (SSoT) aguas arriba para todos los recursos externos. En lugar de permitir que los instructores codifiquen directamente las URL en páginas o tareas individuales, las URL se almacenan en configuraciones centralizadas:
+                </p>
+
+                <pre><code>{
+  "external_resources": {
+    "paga_2018_guidelines": "https://health.gov/sites/default/files/2019-09/Physical_Activity_Guidelines_2nd_edition.pdf",
+    "acsm_testing_standards": "https://www.acsm.org/education-resources/guidelines-exercise-testing-prescription",
+    "yuma_heat_safety_protocol": "https://www.yumaaz.gov/government/emergency-management/heat-safety"
+  }
+}</code></pre>
+
+                <p>
+                    Al separar el contenido de la configuración, los ingenieros instruccionales pueden auditar y actualizar los destinos de los enlaces a nivel global. Si un sitio web gubernamental reestructura su ruta de URL, la corrección se realiza una sola vez en el archivo de configuración, y el pipeline de compilación de CI/CD regenera y despliega automáticamente las referencias actualizadas en Canvas LMS.
+                </p>
+
+                <h2>El Protocolo Centauro y la Pedagogía de Alta Fricción</h2>
+                <p>
+                    En alineación con el <strong>Protocolo Centauro</strong>, los diseños de los cursos deben posicionar al estudiante como el <strong>Piloto/Arquitecto</strong> (que exhibe un juicio clínico crítico) y a la IA como el <strong>Motor/Calculadora</strong> (que procesa cálculos y redacta plantillas).
+                </p>
+                <p>
+                    Para evitar el traspaso de responsabilidades cognitivas a las máquinas, implementamos una <strong>pedagogía de alta fricción</strong>:
+                </p>
+                <ul>
+                    <li><strong>Evaluaciones de alta fricción:</strong> En lugar de realizar pruebas pasivas de opción múltiple, los residentes deben llevar a cabo auditorías clínicas activas.</li>
+                    <li><strong>Resiliencia sin conexión (Offline-First):</strong> En instituciones regionales como Arizona Western College (AWC), una Institución de Servicio a Hispanos (HSI), los estudiantes a menudo estudian en entornos de calor extremo (por ejemplo, el reflejo del desierto del condado de Yuma que supera los 115°F) donde la conectividad móvil disminuye.</li>
+                    <li><strong>Seguridad semántica:</strong> Los instructores envuelven los datos de los casos clínicos, perfiles de clientes y entradas médicas en tres almohadillas (<code>###</code>) para evitar que los errores de análisis filtren información en los modelos de IA públicos.</li>
+                </ul>
+
+                <h2>Auditorías de Rotura de Enlaces en CI/CD</h2>
+                <p>
+                    Nuestra canalización de validación automatizada incluye evaluadores de enlaces pre-commit que auditan la integridad del archivo SSoT antes de que se prepare el código. Esto asegura que:
+                </p>
+                <ol>
+                    <li>Todas las URL de referencia devuelvan <code>HTTP 200 OK</code>.</li>
+                    <li>Las etiquetas de anclaje contengan descripciones accesibles según la norma WCAG 2.1 AA.</li>
+                    <li>Cada enlace externo se abra en una pestaña nueva con parámetros de seguridad (<code>rel="noopener noreferrer"</code>).</li>
+                </ol>
+                <p>
+                    Este enfoque programático garantiza que el curso siga siendo funcional, seguro y accesible durante todo el año académico.
+                </p>
+            </div>
+
+            <!-- Article Footer Navigation -->
+            <footer class="mt-12 pt-6 border-t border-creme-100 flex items-center justify-between">
+                <a href="index.html" class="text-sm font-semibold text-navy-900 hover:underline inline-flex items-center gap-1">
+                    &larr; Back to Articles
+                </a>
+                <a href="https://www.linkedin.com/in/alanpruitt/recent-activity/all/" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-navy-800 hover:text-navy-900 hover:underline inline-flex items-center gap-1">
+                    View on LinkedIn ↗
+                </a>
+            </footer>
+
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full bg-navy-900 text-creme-200 py-8 px-6 text-center text-xs border-t border-navy-950">
+        <p class="mb-2">© 2026 Alan Pruitt • All Rights Reserved.</p>
+        <p class="opacity-75">Instructional Design, AI Pedagogy & Curriculum Architecture</p>
+    </footer>
+
+    <!-- Toggle Script -->
+    <script>
+        function setLanguage(lang) {
+            const elements = document.querySelectorAll('[data-lang]');
+            elements.forEach(el => {
+                if (el.getAttribute('data-lang') === lang) {
+                    el.classList.remove('hidden-lang');
+                } else {
+                    el.classList.add('hidden-lang');
+                }
+            });
+
+            // Update button states
+            document.querySelectorAll('.lang-toggle-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.getElementById('btn-' + lang).classList.add('active');
+        }
+    </script>
+</body>
+</html>

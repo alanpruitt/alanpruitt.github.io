@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instructional Engineering: Transforming Curriculum into Source Code | Alan Pruitt</title>
+    <meta name="description" content="How applying continuous integration, modular component design, and plain-text single sources of truth redefines modern instructional architecture.">
+
+    <!-- Favicon (Inline Deep Navy SVG) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%230B192C'/></svg>">
+
+    <!-- OpenGraph Meta Tags -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Alan Pruitt">
+    <meta property="og:title" content="Instructional Engineering: Transforming Curriculum into Source Code">
+    <meta property="og:description" content="Applying CI/CD pipelines, modular design, and Markdown SSoT to educational architecture.">
+    <meta property="og:url" content="https://alanpruitt.com/articles/05-instructional-engineering.html">
+    <meta property="og:image" content="https://alanpruitt.com/assets/og-preview.png">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Instructional Engineering: Transforming Curriculum into Source Code">
+    <meta name="twitter:description" content="Applying software engineering principles to modern educational architecture.">
+    <meta name="twitter:image" content="https://alanpruitt.com/assets/og-preview.png">
+
+    <!-- Inlined Zero-JS Pure Critical CSS (100/100 Lighthouse Compliant) -->
+    <style>
+        :root {
+            --bg-creme-50: #FAFBF7;
+            --bg-creme-100: #F5F5F0;
+            --bg-creme-200: #E6E6DC;
+            --text-navy-800: #1E3E62;
+            --text-navy-900: #0B192C;
+            --text-navy-950: #060E1A;
+        }
+
+        *, ::before, ::after { box-sizing: border-box; border-width: 0; border-style: solid; }
+        html { line-height: 1.5; -webkit-text-size-adjust: 100%; tab-size: 4; font-family: Inter, -apple-system, sans-serif; }
+        body { margin: 0; background-color: var(--bg-creme-100); color: var(--text-navy-900); }
+
+        .w-full { width: 100%; }
+        .max-w-4xl { max-width: 56rem; }
+        .max-w-3xl { max-width: 48rem; }
+        .mx-auto { margin-left: auto; margin-right: auto; }
+        .flex { display: flex; }
+        .flex-col { flex-direction: column; }
+        .flex-grow { flex-grow: 1; }
+        .flex-wrap { flex-wrap: wrap; }
+        .items-center { align-items: center; }
+        .justify-between { justify-content: space-between; }
+        .space-x-3 > :not([hidden]) ~ :not([hidden]) { margin-left: 0.75rem; }
+        .space-x-6 > :not([hidden]) ~ :not([hidden]) { margin-left: 1.5rem; }
+
+        @media (min-width: 768px) {
+            .md\:flex-row { flex-direction: row; }
+        }
+
+        .gap-2 { gap: 0.5rem; }
+        .gap-3 { gap: 0.75rem; }
+
+        .bg-white { background-color: #ffffff; }
+        .bg-creme-50 { background-color: var(--bg-creme-50); }
+        .bg-creme-100 { background-color: var(--bg-creme-100); }
+        .bg-creme-200 { background-color: var(--bg-creme-200); }
+        .bg-navy-900 { background-color: var(--text-navy-900); }
+
+        .text-navy-800 { color: var(--text-navy-800); }
+        .text-navy-900 { color: var(--text-navy-900); }
+        .text-creme-100 { color: var(--bg-creme-100); }
+        .text-creme-200 { color: var(--bg-creme-200); }
+        .text-green-700 { color: #15803d; }
+
+        .p-1 { padding: 0.25rem; }
+        .p-8 { padding: 2rem; }
+        .px-2\.5 { padding-left: 0.625rem; padding-right: 0.625rem; }
+        .px-3 { padding-left: 0.75rem; padding-right: 0.75rem; }
+        .px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+        .py-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+        .py-6 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+        .py-8 { padding-top: 2rem; padding-bottom: 2rem; }
+        .py-10 { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+        
+        .mb-3 { margin-bottom: 0.75rem; }
+        .mb-4 { margin-bottom: 1rem; }
+        .mb-8 { margin-bottom: 2rem; }
+        .mt-6 { margin-top: 1.5rem; }
+        .mt-12 { margin-top: 3rem; }
+        .pt-4 { padding-top: 1rem; }
+        .pt-6 { padding-top: 1.5rem; }
+
+        .border { border-style: solid; border-width: 1px; }
+        .border-t { border-top-style: solid; border-top-width: 1px; }
+        .border-b { border-bottom-style: solid; border-bottom-width: 1px; }
+        .border-l-4 { border-left-style: solid; border-left-width: 4px; }
+        .border-creme-100 { border-color: var(--bg-creme-100); }
+        .border-creme-200 { border-color: var(--bg-creme-200); }
+
+        .rounded-md { border-radius: 0.375rem; }
+        .rounded-lg { border-radius: 0.5rem; }
+        .rounded-2xl { border-radius: 1rem; }
+
+        .font-sans { font-family: Inter, -apple-system, sans-serif; }
+        .font-mono { font-family: 'Fira Code', monospace; }
+        .font-semibold { font-weight: 600; }
+        .font-bold { font-weight: 700; }
+        .font-extrabold { font-weight: 800; }
+
+        .text-xs { font-size: 0.75rem; line-height: 1rem; }
+        .text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+        .text-base { font-size: 1rem; line-height: 1.5rem; }
+        .text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+        .text-2xl { font-size: 1.5rem; line-height: 2rem; }
+        .text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+
+        @media (min-width: 640px) {
+            .sm\:text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+            .sm\:p-12 { padding: 3rem; }
+        }
+
+        .tracking-tight { letter-spacing: -0.025em; }
+        .leading-tight { line-height: 1.25; }
+        .leading-relaxed { line-height: 1.7; }
+        .shadow-sm { box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); }
+
+        .hover\:underline:hover { text-decoration: underline; }
+        .hover\:text-navy-800:hover { color: var(--text-navy-800); }
+        .hover\:text-navy-900:hover { color: var(--text-navy-900); }
+        .inline-block { display: inline-block; }
+        .inline-flex { display: inline-flex; }
+
+        /* Typography & Long-form Article Styles */
+        .article-body p { margin-bottom: 1.5rem; color: var(--text-navy-800); font-size: 1.0625rem; line-height: 1.75; }
+        .article-body h2 { font-size: 1.5rem; font-weight: 700; color: var(--text-navy-900); margin-top: 2.5rem; margin-bottom: 1rem; letter-spacing: -0.02em; }
+        .article-body h3 { font-size: 1.25rem; font-weight: 700; color: var(--text-navy-900); margin-top: 2rem; margin-bottom: 0.75rem; }
+        .article-body ul { margin-bottom: 1.5rem; padding-left: 1.5rem; color: var(--text-navy-800); list-style-type: disc; }
+        .article-body ol { margin-bottom: 1.5rem; padding-left: 1.5rem; color: var(--text-navy-800); list-style-type: decimal; }
+        .article-body li { margin-bottom: 0.5rem; font-size: 1.0625rem; line-height: 1.6; }
+        .article-body blockquote { background-color: var(--bg-creme-50); border-left: 4px solid var(--text-navy-900); padding: 1.25rem 1.5rem; margin-top: 2rem; margin-bottom: 2rem; border-radius: 0 0.5rem 0.5rem 0; }
+        .article-body blockquote p { margin-bottom: 0; font-size: 1rem; font-weight: 600; color: var(--text-navy-900); }
+
+        [data-lang] { transition: opacity 0.15s ease-in-out; }
+        .hidden-lang { display: none !important; }
+    </style>
+</head>
+<body class="bg-creme-100 text-navy-900 font-sans antialiased min-h-full flex flex-col justify-between">
+
+    <!-- Header / Navigation Bar -->
+    <header class="w-full max-w-4xl mx-auto px-6 py-6 flex justify-between items-center border-b border-creme-200">
+        <div class="flex items-center space-x-3">
+            <span class="w-3 h-3 bg-navy-900 rounded-full inline-block" aria-hidden="true"></span>
+            <a href="../index.html" class="text-xl font-bold tracking-tight text-navy-900 hover:text-navy-800 transition-colors">
+                alanpruitt.com
+            </a>
+            <span class="text-creme-200">/</span>
+            <a href="index.html" class="text-sm font-mono text-navy-800 font-semibold hover:underline">
+                articles
+            </a>
+        </div>
+        
+        <!-- Language Toggle -->
+        <div class="flex items-center bg-creme-200 p-1 rounded-lg border border-creme-200 text-sm font-semibold" role="group" aria-label="Language selector">
+            <button id="btn-en" onclick="setLanguage('en')" aria-label="Switch language to English" class="px-3 py-1 rounded-md bg-navy-900 text-creme-100 shadow-sm">EN</button>
+            <button id="btn-es" onclick="setLanguage('es')" aria-label="Cambiar idioma a Español" class="px-3 py-1 rounded-md text-navy-900 hover:text-navy-800">ES</button>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="w-full max-w-3xl mx-auto px-6 py-10 flex-grow">
+        
+        <article class="bg-white p-8 sm:p-12 rounded-2xl border border-creme-200 shadow-sm">
+            
+            <!-- Article Header Metadata -->
+            <header class="mb-8 pb-8 border-b border-creme-100">
+                <div class="flex flex-wrap items-center gap-3 mb-4 text-xs font-mono text-navy-800">
+                    <span class="px-2.5 py-1 bg-navy-900 text-creme-100 font-bold rounded-md">ESSAY 05</span>
+                    <span>July 2026</span>
+                    <span aria-hidden="true">•</span>
+                    <span>7 min read</span>
+                    <span aria-hidden="true">•</span>
+                    <span class="text-green-700 font-semibold">Source: Markdown SSoT</span>
+                </div>
+
+                <h1 class="text-3xl sm:text-4xl font-extrabold text-navy-900 tracking-tight leading-tight mb-4">
+                    <span data-lang="en">Instructional Engineering: Transforming Curriculum into Version-Controlled Source Code</span>
+                    <span data-lang="es" class="hidden-lang">Ingeniería Instruccional: Transformando el Currículum en Código Fuente Controlado por Versiones</span>
+                </h1>
+
+                <p class="text-lg text-navy-800 leading-relaxed font-medium" data-lang="en">
+                    How applying continuous integration, modular component design, and plain-text single sources of truth redefines modern instructional architecture.
+                </p>
+                <p class="text-lg text-navy-800 leading-relaxed font-medium hidden-lang" data-lang="es">
+                    Cómo la aplicación de integración continua, diseño de componentes modulares y fuentes únicas de verdad en texto plano redefinen la arquitectura instruccional moderna.
+                </p>
+
+                <div class="mt-6 flex flex-wrap gap-2">
+                    <span class="text-xs font-mono bg-creme-100 text-navy-900 px-2.5 py-1 rounded-md border border-creme-200">Instructional Engineering</span>
+                    <span class="text-xs font-mono bg-creme-100 text-navy-900 px-2.5 py-1 rounded-md border border-creme-200">Curriculum-as-Code</span>
+                    <span class="text-xs font-mono bg-creme-100 text-navy-900 px-2.5 py-1 rounded-md border border-creme-200">CI/CD Architecture</span>
+                </div>
+            </header>
+
+            <!-- English Article Content -->
+            <div class="article-body" data-lang="en">
+                <p>
+                    For decades, instructional design has treated educational content as static documents trapped inside proprietary Learning Management Systems or binary PDFs. <strong>Instructional Engineering</strong> replaces this reactive model with software design principles: modularity, automated linting, plain-text portability, and continuous delivery.
+                </p>
+                
+                <h2>The Shift from Design to Engineering</h2>
+
+                <p>
+                    Traditional instructional design focuses heavily on visual presentation within specific tools. Instructional Engineering treats content as an evolving software system that must meet strict operational criteria:
+                </p>
+
+                <ol>
+                    <li><strong>Source Independence:</strong> Course assets exist in plain-text Markdown, decoupled from display vendors.</li>
+                    <li><strong>Automated Verification:</strong> Continuous Integration (CI) pipelines audit every commit for WCAG 2.1 AA contrast, link integrity, and semantic heading structure.</li>
+                    <li><strong>Version Determinism:</strong> Git commits track the precise historical evolution of every learning outcome and lab specification.</li>
+                </ol>
+
+                <blockquote>
+                    <p>When instructional assets are managed as plain-text code, quality assurance shifts from an afterthought right before a semester begins to an automated background process running on every commit.</p>
+                </blockquote>
+
+                <h3>Key Pillars of the Pipeline</h3>
+
+                <p>
+                    Below is the foundational architecture of a Curriculum-as-Code delivery pipeline:
+                </p>
+
+                <ul>
+                    <li><strong>Single Source of Truth (SSoT):</strong> Authoring strictly in Markdown to preserve long-term data sovereignty.</li>
+                    <li><strong>Component Reusability:</strong> Modular lab instructions and rubrics shared across multiple course shells without duplication.</li>
+                    <li><strong>Born-Accessible Output:</strong> Automatic rendering into zero-JS, responsive HTML5 with full screen-reader compliance.</li>
+                </ul>
+
+                <h2>Next Steps for Institutional Implementation</h2>
+
+                <p>
+                    Adopting Instructional Engineering does not require abandoning existing pedagogical models. It provides the sovereign infrastructure that ensures pedagogical intent is delivered reliably, securely, and accessibly at institutional scale.
+                </p>
+            </div>
+
+            <!-- Spanish Article Content -->
+            <div class="article-body hidden-lang" data-lang="es">
+                <p>
+                    Durante décadas, el diseño instruccional ha tratado el contenido educativo como documentos estáticos atrapados en sistemas de gestión de aprendizaje propietarios o archivos PDF binarios. La <strong>Ingeniería Instruccional</strong> reemplaza este modelo reactivo con principios de diseño de software: modularidad, validación automatizada, portabilidad en texto plano y entrega continua.
+                </p>
+                
+                <h2>El Cambio de Diseño a Ingeniería</h2>
+
+                <p>
+                    El diseño instruccional tradicional se centra en la presentación visual dentro de herramientas específicas. La Ingeniería Instruccional trata el contenido como un sistema de software en evolución que debe cumplir con criterios operativos estrictos:
+                </p>
+
+                <ol>
+                    <li><strong>Independencia de la Fuente:</strong> Los activos del curso existen en texto plano Markdown, desacoplados de las plataformas de visualización.</li>
+                    <li><strong>Verificación Automatizada:</strong> Las tuberías de Integración Continua (CI) auditan cada actualización para garantizar el cumplimiento de WCAG 2.1 AA, la integridad de los enlaces y la estructura semántica de los encabezados.</li>
+                    <li><strong>Determinismo de Versiones:</strong> Los commits de Git rastrean la evolución histórica precisa de cada resultado de aprendizaje y especificación de laboratorio.</li>
+                </ol>
+
+                <blockquote>
+                    <p>Cuando los activos instruccionales se gestionan como código en texto plano, la garantía de calidad pasa de ser una idea de último momento a un proceso automatizado en segundo plano que se ejecuta en cada actualización.</p>
+                </blockquote>
+
+                <h3>Pilares Fundamentales de la Tubería</h3>
+
+                <p>
+                    A continuación se presenta la arquitectura fundamental de un entorno de entrega de Currículum como Código:
+                </p>
+
+                <ul>
+                    <li><strong>Fuente Única de Verdad (SSoT):</strong> Redacción estricta en Markdown para preservar la soberanía de los datos a largo plazo.</li>
+                    <li><strong>Reutilización de Componentes:</strong> Instrucciones de laboratorio y rúbricas modulares compartidas entre múltiples cursos sin duplicación.</li>
+                    <li><strong>Formatos Nativamente Accesibles:</strong> Renderización automática en HTML5 adaptable sin JS, con cumplimiento total para lectores de pantalla.</li>
+                </ul>
+
+                <h2>Próximos Pasos para la Implementación Institucional</h2>
+
+                <p>
+                    Adoptar la Ingeniería Instruccional no requiere abandonar los modelos pedagógicos existentes. Proporciona la infraestructura soberana que garantiza que la intención pedagógica se entregue de manera confiable, segura y accesible a escala institucional.
+                </p>
+            </div>
+
+            <!-- Article Footer Navigation -->
+            <footer class="mt-12 pt-6 border-t border-creme-100 flex items-center justify-between">
+                <a href="index.html" class="text-sm font-semibold text-navy-900 hover:underline inline-flex items-center gap-1">
+                    &larr; <span data-lang="en">Back to Articles</span><span data-lang="es" class="hidden-lang">Volver a Artículos</span>
+                </a>
+                <a href="https://www.linkedin.com/feed/update/urn:li:share:7490421894203060224/" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-navy-900 hover:underline">
+                    <span data-lang="en">Discuss on LinkedIn &rarr;</span><span data-lang="es" class="hidden-lang">Discutir en LinkedIn &rarr;</span>
+                </a>
+            </footer>
+
+        </article>
+
+    </main>
+
+    <!-- Unified Footer -->
+    <footer class="w-full max-w-4xl mx-auto px-6 py-8 mt-12 border-t border-creme-200 flex flex-col md:flex-row justify-between items-center text-xs text-navy-800 gap-4">
+        <div class="space-y-1 text-center md:text-left">
+            <div>&copy; <span id="year"></span> Alan Pruitt. All rights reserved.</div>
+            <div class="text-navy-800">
+                Code licensed under <a href="../LICENSE" class="hover:underline hover:text-navy-900">MIT</a>. 
+                Content licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer" class="hover:underline hover:text-navy-900">CC BY 4.0</a>.
+            </div>
+        </div>
+        <div class="flex space-x-6">
+            <a href="https://github.com/alanpruitt" target="_blank" rel="noopener noreferrer" class="hover:text-navy-900">GitHub</a>
+            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7490421895578669056/" target="_blank" rel="noopener noreferrer" class="hover:text-navy-900">LinkedIn</a>
+            <a href="https://www.webcognita.com" target="_blank" rel="noopener noreferrer" class="hover:text-navy-900">Webcognita</a>
+        </div>
+    </footer>
+
+    <!-- Client-Side Language Toggle & Year Script -->
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        function setLanguage(lang) {
+            const enElements = document.querySelectorAll('[data-lang="en"]');
+            const esElements = document.querySelectorAll('[data-lang="es"]');
+            const btnEn = document.getElementById('btn-en');
+            const btnEs = document.getElementById('btn-es');
+
+            if (lang === 'en') {
+                enElements.forEach(el => el.classList.remove('hidden-lang'));
+                esElements.forEach(el => el.classList.add('hidden-lang'));
+                btnEn.className = "px-3 py-1 rounded-md bg-navy-900 text-creme-100 shadow-sm";
+                btnEs.className = "px-3 py-1 rounded-md text-navy-900 hover:text-navy-800";
+                btnEn.setAttribute('aria-pressed', 'true');
+                btnEs.setAttribute('aria-pressed', 'false');
+            } else {
+                esElements.forEach(el => el.classList.remove('hidden-lang'));
+                enElements.forEach(el => el.classList.add('hidden-lang'));
+                btnEs.className = "px-3 py-1 rounded-md bg-navy-900 text-creme-100 shadow-sm";
+                btnEn.className = "px-3 py-1 rounded-md text-navy-900 hover:text-navy-800";
+                btnEs.setAttribute('aria-pressed', 'true');
+                btnEn.setAttribute('aria-pressed', 'false');
+            }
+            localStorage.setItem('preferred_lang', lang);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('preferred_lang') || 'en';
+            setLanguage(savedLang);
+        });
+    </script>
+</body>
+</html>
