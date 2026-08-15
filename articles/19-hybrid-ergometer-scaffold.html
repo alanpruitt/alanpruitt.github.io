@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Hybrid Ergometer Scaffold: Guided Simulation & Precision Testing | Alan Pruitt</title>
+    <meta name="description" content="A clinical case study detailing how hybrid recumbent ergometry pacing protocols and digital predictive calculators isolate metabolic equations under ACSM 12th Ed guidelines.">
+
+    <!-- Favicon (Inline Deep Navy SVG) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%230B192C'/></svg>">
+
+    <!-- OpenGraph Meta Tags -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Alan Pruitt">
+    <meta property="og:title" content="The Hybrid Ergometer Scaffold: Guided Simulation & Precision Testing (EXW245 Case Study)">
+    <meta property="og:description" content="A clinical case study detailing how hybrid recumbent ergometry pacing protocols and digital predictive calculators isolate metabolic equations under ACSM 12th Ed guidelines.">
+    <meta property="og:url" content="https://alanpruitt.com/articles/19-hybrid-ergometer-scaffold.html">
+    <meta property="og:image" content="https://alanpruitt.com/assets/og-preview.png">
+
+    <!-- Zero-JS Pure Critical CSS with Strict WCAG 2.2 AA Contrast -->
+    <style>
+        :root {
+            --bg-creme-50: #FAFBF7;
+            --bg-creme-100: #F5F5F0;
+            --bg-creme-200: #E6E6DC;
+            --text-navy-800: #1E3E62;
+            --text-navy-900: #0B192C;
+            --text-navy-950: #060E1A;
+            --link-accent: #0E3D73;
+        }
+
+        *, ::before, ::after { box-sizing: border-box; border-width: 0; }
+        html { line-height: 1.5; -webkit-text-size-adjust: 100%; tab-size: 4; font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; height: 100%; }
+        body { margin: 0; min-height: 100%; display: flex; flex-direction: column; justify-content: space-between; background-color: var(--bg-creme-100); color: var(--text-navy-900); }
+
+        .w-full { width: 100%; }
+        .max-w-4xl { max-width: 56rem; }
+        .max-w-3xl { max-width: 48rem; }
+        .mx-auto { margin-left: auto; margin-right: auto; }
+        .flex { display: flex; }
+        .flex-wrap { flex-wrap: wrap; }
+        .flex-col { flex-direction: column; }
+        .flex-grow { flex-grow: 1; }
+        .items-center { align-items: center; }
+        .justify-between { justify-content: space-between; }
+        .justify-end { justify-content: justify-end; }
+        
+        .space-x-6 > :not([hidden]) ~ :not([hidden]) { margin-left: 1.5rem; }
+        .space-y-4 > :not([hidden]) ~ :not([hidden]) { margin-top: 1rem; }
+        .inline-flex { display: inline-flex; }
+
+        .gap-3 { gap: 0.75rem; }
+        .gap-1 { gap: 0.25rem; }
+
+        .bg-white { background-color: #ffffff; }
+        .bg-creme-100 { background-color: var(--bg-creme-100); }
+        .bg-creme-200 { background-color: var(--bg-creme-200); }
+        .bg-navy-900 { background-color: var(--text-navy-900); }
+
+        .text-navy-800 { color: var(--text-navy-800); }
+        .text-navy-900 { color: var(--text-navy-900); }
+        .text-creme-100 { color: var(--bg-creme-100); }
+        
+        .p-1 { padding: 0.25rem; }
+        .p-8 { padding: 2rem; }
+        .px-3 { padding-left: 0.75rem; padding-right: 0.75rem; }
+        .px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+        .py-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+        .py-6 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+        .py-10 { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+        .pt-6 { padding-top: 1.5rem; }
+        .pt-2 { padding-top: 0.5rem; }
+
+        .mb-1 { margin-bottom: 0.25rem; }
+        .mb-2 { margin-bottom: 0.5rem; }
+        .mb-3 { margin-bottom: 0.75rem; }
+        .mb-6 { margin-bottom: 1.5rem; }
+        .mb-8 { margin-bottom: 2rem; }
+        .mt-12 { margin-top: 3rem; }
+
+        .border { border: 1px solid var(--bg-creme-200); }
+        .border-t { border-top: 1px solid var(--bg-creme-200); }
+        .border-b { border-bottom: 1px solid var(--bg-creme-200); }
+
+        .rounded-md { border-radius: 0.375rem; }
+        .rounded-lg { border-radius: 0.5rem; }
+        .rounded-2xl { border-radius: 1rem; }
+
+        .shadow-sm { box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); }
+
+        .font-mono { font-family: monospace; }
+        .font-bold { font-weight: 700; }
+        .font-semibold { font-weight: 600; }
+        
+        .leading-relaxed { line-height: 1.625; }
+        
+        .hover:underline:hover { text-decoration: underline; }
+        .hover:text-navy-900:hover { color: var(--text-navy-900); }
+
+        .cursor-pointer { cursor: pointer; }
+        .outline-none { outline: 2px solid transparent; outline-offset: 2px; }
+
+        /* Typography Styles for Article Content */
+        .article-body h2 { font-size: 1.5rem; font-weight: 700; color: var(--text-navy-900); margin-top: 2rem; margin-bottom: 1rem; }
+        .article-body p { font-size: 1rem; color: #1a1a1a; line-height: 1.75; margin-bottom: 1.25rem; }
+        .article-body ul, .article-body ol { margin-bottom: 1.25rem; padding-left: 1.5rem; }
+        .article-body li { margin-bottom: 0.5rem; line-height: 1.6; }
+        .article-body strong { font-weight: 700; color: var(--text-navy-950); }
+        .article-body blockquote { margin: 1.5rem 0; padding: 1rem 1.5rem; border-left: 4px solid var(--text-navy-800); background-color: var(--bg-creme-50); font-style: italic; color: #333; }
+        .article-body pre { background-color: var(--bg-creme-50); border: 1px solid var(--bg-creme-200); padding: 1rem; border-radius: 0.5rem; overflow-x: auto; margin-bottom: 1.25rem; font-family: monospace; font-size: 0.875rem; }
+
+        /* Interactive Language Selector Toggle */
+        .lang-toggle-btn { transition: all 0.2s ease-in-out; }
+        .lang-toggle-btn.active { background-color: var(--text-navy-900); color: var(--bg-creme-100); }
+        .lang-toggle-btn:not(.active):hover { background-color: var(--bg-creme-200); }
+
+        .hidden-lang { display: none !important; }
+    </style>
+    <!-- MathJax for LaTeX equations render -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</head>
+<body class="bg-creme-100 text-navy-900 font-sans antialiased min-h-screen flex flex-col justify-between">
+
+    <!-- Header Navigation -->
+    <header class="w-full bg-white border-b border-creme-200 py-6 px-6 shadow-sm">
+        <div class="max-w-4xl mx-auto flex items-center justify-between">
+            <a href="../index.html" class="text-lg font-bold text-navy-900 hover:underline">
+                Alan Pruitt
+            </a>
+            <nav class="flex items-center space-x-6">
+                <a href="../index.html" class="text-sm font-semibold text-navy-800 hover:text-navy-900 hover:underline">Home</a>
+                <a href="index.html" class="text-sm font-semibold text-navy-900 hover:underline">Articles</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="w-full max-w-3xl mx-auto px-6 py-10 flex-grow">
+        
+        <!-- Language Switcher Bar -->
+        <div class="flex justify-end mb-8">
+            <div class="inline-flex rounded-lg bg-creme-200 p-1" style="margin-left: auto;">
+                <button onclick="setLanguage('en')" id="btn-en" class="lang-toggle-btn active text-xs font-semibold px-3 py-1 rounded-md outline-none cursor-pointer">
+                    English
+                </button>
+                <button onclick="setLanguage('es')" id="btn-es" class="lang-toggle-btn text-xs font-semibold px-3 py-1 rounded-md outline-none cursor-pointer">
+                    Español
+                </button>
+            </div>
+        </div>
+
+        <article class="bg-white p-8 rounded-2xl border border-creme-200 shadow-sm">
+            
+            <!-- Metadata Header -->
+            <div class="flex flex-wrap items-center gap-3 mb-6 text-xs font-mono text-navy-800">
+                <span class="px-2.5 py-1 bg-navy-900 text-creme-100 font-bold rounded-md">ESSAY 19</span>
+                <span>August 2026</span>
+                <span aria-hidden="true">•</span>
+                <span>5 min read</span>
+                <span aria-hidden="true">•</span>
+                <span class="text-green-700 font-semibold">Source: Markdown SSoT</span>
+            </div>
+
+            <!-- English Title Header -->
+            <div data-lang="en">
+                <h1 class="text-3xl md:text-4xl font-bold text-navy-900 mb-6 leading-tight">
+                    The Hybrid Ergometer Scaffold: Guided Simulation & Precision Testing (EXW245 Case Study)
+                </h1>
+            </div>
+
+            <!-- Spanish Title Header -->
+            <div data-lang="es" class="hidden-lang">
+                <h1 class="text-3xl md:text-4xl font-bold text-navy-900 mb-6 leading-tight">
+                    El Andamio del Ergómetro Híbrido: Simulación Guiada y Pruebas de Precisión (Estudio de Caso EXW245)
+                </h1>
+            </div>
+
+            <hr class="border-creme-200 mb-8" />
+
+            <!-- English Article Content -->
+            <div class="article-body" data-lang="en">
+                <blockquote>
+                    <strong>TL;DR:</strong> A clinical case study detailing how hybrid recumbent ergometry pacing protocols and digital predictive calculators isolate metabolic equations under ACSM 12th Ed guidelines.
+                </blockquote>
+
+                <h2>Clinical Scaffolding and Recumbent Modality Selection</h2>
+                <p>
+                    Under the ACSM 12th Edition guidelines, metabolic testing configuration decisions must prioritize patient hemodynamics and orthopedic safety. In the extreme heat environment of the Yuma Desert (with summer temperatures regularly exceeding 115°F and high regional rates of metabolic syndrome), clinical exercise specialists regularly encounter patients presenting with peripheral neuropathy, orthostatic intolerance, or balance impairments.
+                </p>
+                <p>
+                    For these populations, standard upright treadmill testing is contraindicated due to gravity-dependent venous blood pooling and bipedal joint friction. The recumbent or semi-recumbent cycle ergometer offers a non-weight-bearing alternative that stabilizes orthostatic pressures, minimizes joint shear stress, and allows large skeletal muscle masses to perform steady-state exercise.
+                </p>
+
+                <h2>The ACSM Metabolic Calculation Pipeline</h2>
+                <p>
+                    To calculate gross oxygen consumption (\(\dot{V}\text{O}_2\)) during leg ergometry, clinical specialists apply the standard ACSM metabolic formula:
+                </p>
+
+                <p style="text-align: center; margin: 1.5rem 0;">
+                    $$\dot{V}\text{O}_2 = 1.8 \cdot \left(\frac{\text{Work Rate}}{\text{Body Mass}}\right) + 3.5 + 3.5$$
+                </p>
+
+                <p>Where:</p>
+                <ul>
+                    <li>\(\dot{V}\text{O}_2\) is gross oxygen uptake in \(\text{mL} \cdot \text{kg}^{-1} \cdot \text{min}^{-1}\).</li>
+                    <li>\(\text{Work Rate}\) is power output in \(\text{kg} \cdot \text{m} \cdot \text{min}^{-1}\) (\(1\text{ Watt} = 6.12\text{ kg} \cdot \text{m} \cdot \text{min}^{-1}\)).</li>
+                    <li>\(\text{Body Mass}\) is the client's mass in \(\text{kg}\).</li>
+                    <li>The first \(3.5\) is the oxygen cost of horizontal pedaling against no load (\(\text{mL} \cdot \text{kg}^{-1} \cdot \text{min}^{-1}\)).</li>
+                    <li>The second \(3.5\) is resting metabolic rate (\(\text{mL} \cdot \text{kg}^{-1} \cdot \text{min}^{-1}\)).</li>
+                </ul>
+
+                <p>
+                    Under the Centaur Protocol, the student acts as the <strong>Pilot</strong> (governing clinical indications and test termination decisions) while the AI serves as the <strong>Engine</strong> (processing the metabolic math equations).
+                </p>
+
+                <h2>🧪 Laboratory Application & Case Audit</h2>
+                <p>
+                    Students verify digital predictive formulas by performing live verification checks on the Lode Corival cycle ergometer located within the GY 116 laboratory. This apparatus utilizes hyperbolic braking to maintain a constant wattage work rate independently of the student's pedaling velocity (RPM).
+                </p>
+
+                <h3>🌟 Exemplar: 10/10 Submission Standard</h3>
+                
+                <h4>Part 1 (Engine): The P-T-C-F Prompt</h4>
+                <pre><code>Persona: Clinical Exercise Physiologist & ACSM 12th Edition Auditor
+Task: Calculate the target work rate in Watts and the corresponding steady-state VO2 for the recumbent cycle ergometer test.
+Context:
+###
+Client: 54-year-old female, 180 lbs (81.65 kg)
+Clinical Indication: Type 2 Diabetes with moderate peripheral neuropathy. Extreme heat protocol active (Yuma, AZ, 112 F outdoor).
+Target METs: 5.0 METs (steady-state aerobic exercise target).
+Equipment: Lode Corival Cycle Ergometer (Hyperbolic Braking).
+###
+Format: Output a structured table displaying (1) target METs, (2) VO2 in mL/kg/min, (3) target Work Rate in kg*m/min, and (4) power output in Watts. Include step-by-step mathematical validation.</code></pre>
+
+                <h4>Part 2 (Audit): The Clinical Critique</h4>
+                <p>
+                    The AI-generated calculation output was audited against the ACSM 12th Edition Source of Truth.
+                </p>
+                <ol>
+                    <li>The conversion of \(5.0\text{ METs}\) to gross oxygen consumption was correctly calculated as \(5.0 \cdot 3.5 = 17.5\text{ mL} \cdot \text{kg}^{-1} \cdot \text{min}^{-1}\).</li>
+                    <li>The isolated loading component of the equation was derived:
+                        $$\text{Loading VO2} = 17.5 - 7.0 = 10.5\text{ mL} \cdot \text{kg}^{-1} \cdot \text{min}^{-1}$$
+                    </li>
+                    <li>Rearranging the loading equation for Work Rate:
+                        $$\text{Work Rate} = \frac{10.5 \cdot 81.65}{1.8} = 476.29\text{ kg} \cdot \text{m} \cdot \text{min}^{-1}$$
+                    </li>
+                    <li>Converting the Work Rate to Watts:
+                        $$\text{Watts} = \frac{476.29}{6.12} = 77.82\text{ Watts}$$
+                    </li>
+                </ol>
+                <p>
+                    The clinical check verified that the AI-calculated target of 78 Watts matches the calibration capabilities of the Lode Corival ergometer.
+                </p>
+
+                <h4>Part 3 (Presence): The Verbatim Text Defense</h4>
+                <blockquote>
+                    "As the clinical exercise specialist, I selected the semi-recumbent cycle ergometer for this client because her peripheral neuropathy presents a significant balance hazard on an upright treadmill, which is exacerbated by Yuma's extreme summer heat index. By setting the Lode Corival's hyperbolic braking to 78 Watts, the mechanical braking resistance automatically adjusts to changes in her pedaling speed, ensuring she maintains the precise 5.0 MET metabolic workload. This configuration eliminates human pacing variance, stabilizing cardiovascular responses and ensuring that the test remains hemodynamically safe and mathematically valid under ACSM standards."
+                </blockquote>
+
+                <blockquote>
+                    <strong>Safety Gate:</strong> Any heart rate reading exceeding 85% of the client's age-predicted maximum (166 bpm baseline), or any sudden drop in systolic blood pressure (&gt;10 mmHg) with increasing workload, requires immediate termination of the exercise protocol.
+                </blockquote>
+
+                <h2>🏁 Check for Understanding</h2>
+                <p>
+                    Explain why the horizontal pedaling constant of \(3.5\text{ mL} \cdot \text{kg}^{-1} \cdot \text{min}^{-1}\) is mathematically omitted in treadmill metabolic formulas, but must be explicitly included in cycle ergometer calculations under ACSM 12th Edition guidelines.
+                </p>
+            </div>
+
+            <!-- Spanish Article Content -->
+            <div class="article-body hidden-lang" data-lang="es">
+                <blockquote>
+                    <strong>TL;DR:</strong> Un estudio de caso clínico que detalla cómo los protocolos de ritmo de ergometría recostada híbrida y los calculadores algebraicos predictivos digitales aíslan ecuaciones metabólicas según las pautas de ACSM.
+                </blockquote>
+
+                <h2>Andamiaje Clínico y Selección de la Modalidad Recostada</h2>
+                <p>
+                    Bajo las pautas de la 12ª Edición de ACSM, las decisiones de configuración de las pruebas metabólicas deben priorizar la hemodinámica del paciente y la seguridad ortopédica. En el entorno de calor extremo del desierto de Yuma (con temperaturas de verano que superan regularmente los 115°F y altas tasas regionales de síndrome metabólico), los especialistas en ejercicio clínico se encuentran regularmente con pacientes que presentan neuropatía periférica, intolerancia ortostática o alteraciones del equilibrio.
+                </p>
+                <p>
+                    Para estas poblaciones, las pruebas estándar en cinta de correr vertical están contraindicadas debido a la acumulación de sangre venosa dependiente de la gravedad y la fricción de las articulaciones bipedales. El ergómetro de ciclo recostado o semi-recostado ofrece una alternativa sin soporte de peso que estabiliza las presiones ortostáticas, minimiza el estrés de cizallamiento en las articulaciones y permite que grandes masas musculares esqueléticas realicen ejercicio en estado estable.
+                </p>
+
+                <h2>El Pipeline de Cálculo Metabólico de ACSM</h2>
+                <p>
+                    Para calcular el consumo bruto de oxígeno (\(\dot{V}\text{O}_2\)) durante la ergometría de piernas, los especialistas clínicos aplican la fórmula metabólica estándar de ACSM:
+                </p>
+
+                <p style="text-align: center; margin: 1.5rem 0;">
+                    $$\dot{V}\text{O}_2 = 1.8 \cdot \left(\frac{\text{Work Rate}}{\text{Body Mass}}\right) + 3.5 + 3.5$$
+                </p>
+
+                <p>Donde:</p>
+                <ul>
+                    <li>\(\dot{V}\text{O}_2\) es el consumo bruto de oxígeno en \(\text{mL} \cdot \text{kg}^{-1} \cdot \text{min}^{-1}\).</li>
+                    <li>\(\text{Work Rate}\) es la potencia de salida en \(\text{kg} \cdot \text{m} \cdot \text{min}^{-1}\) (\(1\text{ Watt} = 6.12\text{ kg} \cdot \text{m} \cdot \text{min}^{-1}\)).</li>
+                    <li>\(\text{Body Mass}\) es la masa del cliente en \(\text{kg}\).</li>
+                    <li>El primer \(3.5\) es el costo de oxígeno del pedaleo horizontal sin carga (\(\text{mL} \cdot \text{kg}^{-1} \cdot \text{min}^{-1}\)).</li>
+                    <li>El segundo \(3.5\) es la tasa metabólica en reposo (\(\text{mL} \cdot \text{kg}^{-1} \cdot \text{min}^{-1}\)).</li>
+                </ul>
+
+                <p>
+                    Bajo el Protocolo Centauro, el estudiante actúa como el <strong>Piloto</strong> (que gobierna las indicaciones clínicas y las decisiones de terminación de la prueba) mientras que la IA sirve como el <strong>Motor</strong> (procesando las ecuaciones matemáticas metabólicas).
+                </p>
+
+                <h2>🧪 Aplicación de Laboratorio y Auditoría de Caso</h2>
+                <p>
+                    Los estudiantes verifican las fórmulas predictivas digitales realizando verificaciones en vivo en el ergómetro de ciclo Lode Corival ubicado dentro del laboratorio GY 116. Este aparato utiliza frenado hiperbólico para mantener una tasa de trabajo de vataje constante independientemente de la velocidad de pedaleo del estudiante (RPM).
+                </p>
+
+                <h3>🌟 Ejemplar: Estándar de Envío de 10/10</h3>
+                
+                <h4>Parte 1 (Motor): El Prompt P-T-C-F</h4>
+                <pre><code>Persona: Clinical Exercise Physiologist & ACSM 12th Edition Auditor
+Task: Calculate the target work rate in Watts and the corresponding steady-state VO2 for the recumbent cycle ergometer test.
+Context:
+###
+Client: 54-year-old female, 180 lbs (81.65 kg)
+Clinical Indication: Type 2 Diabetes with moderate peripheral neuropathy. Extreme heat protocol active (Yuma, AZ, 112 F outdoor).
+Target METs: 5.0 METs (steady-state aerobic exercise target).
+Equipment: Lode Corival Cycle Ergometer (Hyperbolic Braking).
+###
+Format: Output a structured table displaying (1) target METs, (2) VO2 in mL/kg/min, (3) target Work Rate in kg*m/min, and (4) power output in Watts. Include step-by-step mathematical validation.</code></pre>
+
+                <h4>Parte 2 (Auditoría): La Crítica Clínica</h4>
+                <p>
+                    El resultado de cálculo generado por la IA fue auditado contra la Fuente de Verdad de la 12ª Edición de ACSM.
+                </p>
+                <ol>
+                    <li>La conversión de \(5.0\text{ METs}\) a consumo bruto de oxígeno se calculó correctamente como \(5.0 \cdot 3.5 = 17.5\text{ mL} \cdot \text{kg}^{-1} \cdot \text{min}^{-1}\).</li>
+                    <li>Se derivó el componente de carga aislado de la ecuación:
+                        $$\text{Carga de VO2} = 17.5 - 7.0 = 10.5\text{ mL} \cdot \text{kg}^{-1} \cdot \text{min}^{-1}$$
+                    </li>
+                    <li>Reordenando la ecuación de carga para la tasa de trabajo:
+                        $$\text{Work Rate} = \frac{10.5 \cdot 81.65}{1.8} = 476.29\text{ kg} \cdot \text{m} \cdot \text{min}^{-1}$$
+                    </li>
+                    <li>Conversión de la tasa de trabajo a vatios:
+                        $$\text{Watts} = \frac{476.29}{6.12} = 77.82\text{ Watts}$$
+                    </li>
+                </ol>
+                <p>
+                    La verificación clínica comprobó que el objetivo calculado por la IA de 78 vatios coincide con las capacidades de calibración del ergómetro Lode Corival.
+                </p>
+
+                <h4>Parte 3 (Presencia): La Defensa de Texto Verbatim</h4>
+                <blockquote>
+                    "Como especialista en ejercicio clínico, seleccioné el ergómetro de ciclo semi-recostado para esta cliente porque su neuropatía periférica presenta un peligro de equilibrio significativo en una cinta de correr vertical, lo cual se ve exacerbado por el índice de calor extremo de verano en Yuma. Al establecer el frenado hiperbólico del Lode Corival en 78 vatios, la resistencia de frenado mecánica se ajusta automáticamente a los cambios en su velocidad de pedaleo, lo que garantiza que mantenga la carga de trabajo metabólica precisa de 5.0 MET. Esta configuración elimina la variación de ritmo humana, estabiliza las respuestas cardiovasculares y garantiza que la prueba siga siendo hemodinámicamente segura y matemáticamente válida bajo los estándares de ACSM."
+                </blockquote>
+
+                <blockquote>
+                    <strong>Barrera de Seguridad:</strong> Cualquier lectura de frecuencia cardíaca que supere el 85% del máximo previsto por la edad de la cliente (166 lpm de referencia), o cualquier caída repentina en la presión arterial sistólica (&gt;10 mmHg) con el aumento de la carga de trabajo, requiere la terminación inmediata del protocolo de ejercicio.
+                </blockquote>
+
+                <h2>🏁 Chequeo de Comprensión</h2>
+                <p>
+                    Explique por qué la constante de pedaleo horizontal de \(3.5\text{ mL} \cdot \text{kg}^{-1} \cdot \text{min}^{-1}\) se omite matemáticamente en las fórmulas metabólicas de la cinta de correr, pero debe incluirse explícitamente en los cálculos del ergómetro de ciclo según las pautas de la 12ª Edición de ACSM.
+                </p>
+            </div>
+
+            <!-- Article Footer Navigation -->
+            <footer class="mt-12 pt-6 border-t border-creme-100 flex items-center justify-between">
+                <a href="index.html" class="text-sm font-semibold text-navy-900 hover:underline inline-flex items-center gap-1">
+                    &larr; Back to Articles
+                </a>
+                <a href="https://www.linkedin.com/in/alanpruitt/recent-activity/all/" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-navy-800 hover:text-navy-900 hover:underline inline-flex items-center gap-1">
+                    View on LinkedIn ↗
+                </a>
+            </footer>
+
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full bg-navy-900 text-creme-200 py-8 px-6 text-center text-xs border-t border-navy-950">
+        <p class="mb-2">© 2026 Alan Pruitt • All Rights Reserved.</p>
+        <p class="opacity-75">Instructional Design, AI Pedagogy & Curriculum Architecture</p>
+    </footer>
+
+    <!-- Toggle Script -->
+    <script>
+        function setLanguage(lang) {
+            const elements = document.querySelectorAll('[data-lang]');
+            elements.forEach(el => {
+                if (el.getAttribute('data-lang') === lang) {
+                    el.classList.remove('hidden-lang');
+                } else {
+                    el.classList.add('hidden-lang');
+                }
+            });
+
+            // Update button states
+            document.querySelectorAll('.lang-toggle-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.getElementById('btn-' + lang).classList.add('active');
+        }
+    </script>
+</body>
+</html>

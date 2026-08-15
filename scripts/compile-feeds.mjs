@@ -18,6 +18,14 @@ const BUILD_DATE = new Date('2026-08-14T22:30:00Z');
 // 1. Authoritative Essay Catalogue (SSoT Metadata Registry)
 const ESSAYS = [
   {
+    id: '19',
+    slug: '19-hybrid-ergometer-scaffold',
+    title: 'The Hybrid Ergometer Scaffold: Guided Simulation & Precision Testing (EXW245 Case Study)',
+    date: '2026-08-15T12:00:00Z',
+    summary: 'A clinical case study detailing how hybrid recumbent ergometry pacing protocols and digital predictive calculators isolate metabolic equations under ACSM 12th Ed guidelines.',
+    tags: ['Kinesiology', 'Ergometry', 'ACSM', 'Pedagogy']
+  },
+  {
     id: '18',
     slug: '18-the-illusion-of-the-feed',
     title: 'The Illusion of the Feed: Upstream SSoT & Feed Link Rot Governance',
