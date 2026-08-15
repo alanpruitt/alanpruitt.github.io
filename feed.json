@@ -1,0 +1,14 @@
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": "Coach Alan Pruitt — Essays & Curriculum Architecture",
+  "home_page_url": "https://alanpruitt.com",
+  "feed_url": "https://alanpruitt.com/feed.json",
+  "description": "Algorithmic pedagogy, curriculum architecture, and generative AI strategy.",
+  "authors": [
+    {
+      "name": "Coach Alan Pruitt",
+      "url": "https://alanpruitt.com"
+    }
+  ],
+  "items": []
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Coach Alan Pruitt — Essays &amp; Curriculum Architecture</title>
+    <link>https://alanpruitt.com</link>
+    <description>Algorithmic pedagogy, curriculum architecture, and generative AI strategy.</description>
+    <language>en-us</language>
+    <atom:link href="https://alanpruitt.com/rss.xml" rel="self" type="application/rss+xml" />
+
+  </channel>
+</rss>
