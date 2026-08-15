@@ -43,7 +43,10 @@ function generateStaticHtml({ title, slug, summary, canonicalUrl, body }) {
   <title>${escapeXml(title)} | Coach Alan</title>
   <meta name="description" content="${escapeXml(summary || title)}">
   <link rel="canonical" href="${canonicalUrl}">
+  
+  <!-- Feed Discovery -->
   <link rel="alternate" type="application/rss+xml" title="Alan Pruitt - RSS Feed" href="${SITE_ORIGIN}/rss.xml">
+  <link rel="alternate" type="application/feed+json" title="Alan Pruitt - JSON Feed" href="${SITE_ORIGIN}/feed.json">
   
   <!-- OpenGraph Metadata -->
   <meta property="og:type" content="article">
@@ -117,6 +120,32 @@ ${items}
 </rss>`;
 }
 
+function buildJsonFeed(essays) {
+  const feed = {
+    version: "https://jsonfeed.org/version/1.1",
+    title: "Coach Alan Pruitt — Essays & Curriculum Architecture",
+    home_page_url: SITE_ORIGIN,
+    feed_url: `${SITE_ORIGIN}/feed.json`,
+    description: "Algorithmic pedagogy, curriculum architecture, and generative AI strategy.",
+    authors: [
+      {
+        name: "Coach Alan Pruitt",
+        url: SITE_ORIGIN
+      }
+    ],
+    items: essays.map(essay => ({
+      id: essay.canonicalUrl,
+      url: essay.canonicalUrl,
+      title: essay.title,
+      summary: essay.summary,
+      date_published: new Date(essay.date).toISOString(),
+      content_html: essay.body.replace(/\n\n/g, '<p>').replace(/\n/g, '<br>')
+    }))
+  };
+
+  return JSON.stringify(feed, null, 2);
+}
+
 function run() {
   if (!existsSync(DIST_DIR)) {
     mkdirSync(DIST_DIR, { recursive: true });
@@ -163,17 +192,22 @@ function run() {
     console.log(`✅ Compiled HTML: essays/${slug}/index.html`);
   }
 
-  // Sort newest first for RSS and feed syndication
+  // Sort newest first for chronological feed delivery
   essays.sort((a, b) => new Date(b.date) - new Date(a.date));
 
-  // Generate sitemap.xml and rss.xml
+  // 1. Sitemap
   writeFileSync(resolve(DIST_DIR, 'sitemap.xml'), buildSitemap(essays), 'utf-8');
   console.log('🗺️ Generated: _site/sitemap.xml');
 
+  // 2. RSS Feed (v2.0)
   writeFileSync(resolve(DIST_DIR, 'rss.xml'), buildRss(essays), 'utf-8');
   console.log('📡 Generated: _site/rss.xml');
 
-  console.log('\n🎉 Site build finished successfully.\n');
+  // 3. JSON Feed (v1.1)
+  writeFileSync(resolve(DIST_DIR, 'feed.json'), buildJsonFeed(essays), 'utf-8');
+  console.log('📄 Generated: _site/feed.json');
+
+  console.log('\n🎉 Site and syndication builds completed successfully.\n');
 }
 
 run();
