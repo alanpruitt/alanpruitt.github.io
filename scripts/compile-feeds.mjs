@@ -21,8 +21,8 @@ const ESSAYS = [
     id: "22",
     slug: "22-foundational-human-movement-in-the-algorithmic-age",
     title: "Foundational Human Movement in the Algorithmic Age: PAGA 2018 SSoT & Community Inactivity Interventions",
-    titleEs: "El Movimiento Humano Fundamental en la Era Algorítmica: PAGA 2018 SSoT e Intervenciones de Inactividad Comunitaria",
-    date: "2026-08-21T12:00:00Z",
+    titleEs: "Movimiento Humano Fundamental en la Era Algorítmica: SSoT PAGA 2018 e Intervenciones de Inactividad Comunitaria",
+    date: "2026-08-21",
     course: "EXW101",
     term: "Fall 2026",
     ssot: "PAGA 2018 (2nd Ed.)",
@@ -31,7 +31,7 @@ const ESSAYS = [
     legacyUrl: "https://alanpruitt.com/essays/22-foundational-human-movement-in-the-algorithmic-age.html",
     tags: ["CurriculumAsCode", "Kinesiology", "PhysicalEducation", "PAGA", "PublicHealth", "OER"],
     summary: "How EXW101 deploys Curriculum-as-Code, the federal PAGA 2018 SSoT, and the Mission Loop framework to deconstruct systemic inactivity patterns and build community-level health interventions in rural borderland regions.",
-    summaryEs: "Cómo EXW101 utiliza Currículum como Código, el estándar federal PAGA 2018 SSoT y el Bucle de Misión para deconstruir la inactividad sistémica y diseñar intervenciones de salud comunitaria en regiones fronterizas rurales."
+    summaryEs: "Cómo EXW101 implementa Currículum como Código, las directrices federales PAGA 2018 como SSoT y el marco del Bucle de Misión para desglosar patrones de inactividad sistémica y crear intervenciones comunitarias en regiones fronterizas."
   },
   {
     id: "21",
