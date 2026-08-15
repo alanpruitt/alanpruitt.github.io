@@ -90,6 +90,30 @@ This repository contains a production-ready, open-access instructional suite for
 ## How to Import into Canvas LMS / Blackboard / Moodle:
 * Each module folder contains raw, mobile-first Markdown files pre-formatted with strict WCAG 2.2 AA semantic heading hierarchies (starting at `<h2>`).
 * AI prompt templates can be pasted directly into institutional custom GPTs, Gemini Gems, or Canvas LMS AI system instructions.
+
+---
+
+## AI Transparency, Pedagogical Intent & Human Authorship Disclosure
+*In alignment with the OER Commons Guidelines for AI Use and Attribution (August 1, 2026) and ISKME’s Guiding Principles for Responsible AI in the World of Open.*
+
+### 1. Primary Human Authorship & Curriculum Architecture
+* **Primary Author & Architect:** Alan Pruitt (Coach Alan), Founder & Chief Curriculum Architect, Webcognita LLC; Adjunct Faculty, Arizona Western College; Generative AI Strategist, University of Arizona Yuma Campus.
+* **Domain Credentials:** Google Gemini Certified Faculty, U.S. Marine Corps Veteran.
+* **Human Editorial & Clinical Scope:** All core pedagogical frameworks, the Mission Loop architecture (Pattern / Rule / Solve), course structures, and clinical safety thresholds were authored, verified, and audited by the human author against federal health standards.
+
+### 2. Nature and Scope of Generative AI Collaboration
+Generative AI was **not** used to wholesale-generate unvetted educational content or replace human instruction. Rather, AI tools (Google Gemini 1.5 Pro/Ultra, local open-weight Ollama instances) were utilized strictly as:
+* **Pedagogical Objects of Study:** As the actual mechanism inside the curriculum (e.g., student-facing AI Red Team Safety Auditors and delimited simulation toolkits).
+* **Mathematical & Algorithmic Verification:** Assisting in pre-flight calculation checks for cycle ergometer hyperbolic braking formulas and metabolic dosage calculations.
+* **Structural Linting & WCAG Accessibility Formatting:** Validating semantic HTML/Markdown tag balance, Dublin Core schema formatting, and zero-JS code structures.
+
+### 3. Verification & Single Source of Truth (SSoT) Auditing
+Every module, case study profile, and prompt template underwent exhaustive human review and was deterministic-checked against the following federal Single Sources of Truth:
+* **EXW101 / EXW265:** HHS Physical Activity Guidelines for Americans (PAGA 2018, 2nd Ed.).
+* **EXW150:** PAGA 2018 & current U.S. Dietary Guidelines for Americans (DGA).
+* **EXW245:** ACSM’s Guidelines for Exercise Testing and Prescription (12th Ed.) & PAGA 2018.
+
+---
 EOF
 
 echo "==> Packaging release zip archive..."
