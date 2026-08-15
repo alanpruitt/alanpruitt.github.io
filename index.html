@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -102,7 +104,7 @@
         }
 
         *, ::before, ::after { box-sizing: border-box; border-width: 0; }
-        html { line-height: 1.5; -webkit-text-size-adjust: 100%; tab-size: 4; font-family: Inter, sans-serif; }
+        html { line-height: 1.5; -webkit-text-size-adjust: 100%; tab-size: 4; font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
         body { margin: 0; background-color: var(--bg-creme-100); color: var(--text-navy-900); }
 
         .w-full { width: 100%; }
@@ -160,6 +162,7 @@
         .border-creme-100 { border-color: var(--bg-creme-100); }
         .border-creme-200 { border-color: var(--bg-creme-200); }
 
+        .rounded-md { border-radius: 0.375rem; }
         .rounded-full { border-radius: 9999px; }
         .rounded-lg { border-radius: 0.5rem; }
         .rounded-xl { border-radius: 0.75rem; }
@@ -186,3 +189,414 @@
         .hidden-lang { display: none !important; }
     </style>
 </head>
+<body class="bg-creme-100 text-navy-900 font-sans antialiased min-h-full flex flex-col justify-between">
+
+    <!-- Header / Navigation Bar -->
+    <header class="w-full max-w-6xl mx-auto px-6 py-6 flex justify-between items-center border-b border-creme-200">
+        <div class="flex items-center space-x-3">
+            <span class="w-3 h-3 bg-navy-900 rounded-full inline-block" aria-hidden="true"></span>
+            <a href="/" class="text-xl font-bold tracking-tight text-navy-900 hover:text-navy-800 transition-colors" style="text-decoration: none;">
+                alanpruitt.com
+            </a>
+        </div>
+        
+        <!-- Language Toggle -->
+        <div class="flex items-center bg-creme-200 p-1 rounded-lg border border-creme-200 text-sm font-semibold" role="group" aria-label="Language selector">
+            <button id="btn-en" onclick="setLanguage('en')" aria-label="Switch language to English" class="px-3 py-1 rounded-md transition-all bg-navy-900 text-creme-100 shadow-sm">
+                EN
+            </button>
+            <button id="btn-es" onclick="setLanguage('es')" aria-label="Cambiar idioma a Español" class="px-3 py-1 rounded-md transition-all text-navy-900 hover:text-navy-800">
+                ES
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content Grid -->
+    <main class="w-full max-w-6xl mx-auto px-6 py-8 flex-grow">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            <!-- Hero Card -->
+            <div class="md:col-span-2 bg-white p-8 rounded-2xl border border-creme-200 shadow-sm flex flex-col justify-between">
+                <div>
+                    <!-- Category Pill -->
+                    <div class="inline-block px-3 py-1 bg-creme-100 text-navy-900 text-xs font-mono font-bold tracking-wider uppercase rounded-full border border-creme-200 mb-6">
+                        <span data-lang="en">Founder &amp; Chief Curriculum Architect</span>
+                        <span data-lang="es" class="hidden-lang">Fundador y Arquitecto Principal de Currículum</span>
+                    </div>
+
+                    <!-- Personal Branding Header with Headshot -->
+                    <div class="flex items-center gap-5 mb-6">
+                        <img src="assets/Coach-Alan-Sketch-Headshot.webp" 
+                             alt="Alan Pruitt Sketch Portrait" 
+                             width="80" 
+                             height="80" 
+                             class="w-20 h-20 rounded-full border-2 border-creme-200 object-cover shadow-sm bg-creme-100 flex-shrink-0" 
+                             loading="eager" 
+                             decoding="async" />
+                        <div>
+                            <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-navy-900 leading-tight">
+                                Alan Pruitt
+                            </h1>
+                            <span class="text-xs font-mono text-navy-800/80 font-semibold uppercase tracking-wider block mt-1">
+                                Curriculum Architect &amp; AI Strategist
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Hero Paragraphs -->
+                    <p class="text-lg text-navy-800 leading-relaxed mb-3" data-lang="en">
+                        Pioneering <strong class="font-semibold text-navy-900">Curriculum-as-Code (CaC)</strong> frameworks and sovereign, human-in-the-loop Generative AI strategies for high-accessibility academic and enterprise environments.
+                    </p>
+                    <p class="text-lg text-navy-800 leading-relaxed mb-3 hidden-lang" data-lang="es">
+                        Pionero en marcos de <strong class="font-semibold text-navy-900">Currículum como Código (CaC)</strong> y estrategias soberanas de Inteligencia Artificial Generativa con intervención humana para entornos académicos y empresariales de alta accesibilidad.
+                    </p>
+                </div>
+
+                <!-- Credential Badges -->
+                <div class="mt-8 flex flex-wrap items-center gap-3 pt-6 border-t border-creme-100">
+                    <span class="text-xs font-mono bg-creme-100 text-navy-900 px-3 py-1.5 rounded-md border border-creme-200 font-semibold">USMC Veteran</span>
+                    <span class="text-xs font-mono bg-creme-100 text-navy-900 px-3 py-1.5 rounded-md border border-creme-200 font-semibold">Google Gemini Certified Faculty</span>
+                    <span class="text-xs font-mono bg-creme-100 text-navy-900 px-3 py-1.5 rounded-md border border-creme-200 font-semibold">WCAG 2.2 AA</span>
+                </div>
+            </div>
+
+            <!-- Commercial Card -->
+            <div class="bg-navy-900 text-creme-100 p-8 rounded-2xl shadow-sm flex flex-col justify-between">
+                <div>
+                    <span class="text-xs font-mono text-creme-200 uppercase tracking-widest block mb-2">Commercial Practice</span>
+                    <h2 class="text-2xl font-bold mb-3 text-creme-50">Webcognita LLC</h2>
+                    <p class="text-creme-200 text-sm leading-relaxed mb-6" data-lang="en">
+                        Technical consulting, edge-native AI infrastructure, and compliance-driven instructional engineering.
+                    </p>
+                    <p class="text-creme-200 text-sm leading-relaxed mb-6 hidden-lang" data-lang="es">
+                        Consultoría técnica, infraestructura de IA nativa en el borde e ingeniería instruccional basada en cumplimiento regulatorio.
+                    </p>
+                </div>
+                <a href="https://www.webcognita.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-between w-full px-4 py-3 bg-creme-100 text-navy-900 font-semibold rounded-xl hover:bg-white transition-all text-sm group" style="text-decoration: none;">
+                    <span>Visit webcognita.com</span>
+                    <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </a>
+            </div>
+
+            <!-- Curriculum-as-Code Card -->
+            <div class="bg-white p-8 rounded-2xl border border-creme-200 shadow-sm flex flex-col justify-between">
+                <div>
+                    <div class="w-10 h-10 bg-creme-100 rounded-xl flex items-center justify-center mb-4 text-navy-900 border border-creme-200 font-mono font-bold" aria-hidden="true">
+                        &lt;/&gt;
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-navy-900" data-lang="en">Curriculum-as-Code</h3>
+                    <h3 class="text-xl font-bold mb-2 text-navy-900 hidden-lang" data-lang="es">Currículum como Código</h3>
+                    <p class="text-sm text-navy-800 leading-relaxed mb-4" data-lang="en">
+                        Treating educational materials like software development: Markdown Single Source of Truth (SSoT), Git version control, CI/CD automated validation, born-accessible outputs, automated ADA Title II/WCAG 2.2 AA linting, and zero-trust data safety auditing.
+                    </p>
+                    <p class="text-sm text-navy-800 leading-relaxed mb-4 hidden-lang" data-lang="es">
+                        Tratamiento de materiales educativos como desarrollo de software: Fuente Única de Verdad en Markdown (SSoT), control de versiones Git, validación automatizada CI/CD, formatos nativos accesibles, linter para ADA Título II/WCAG 2.2 AA y auditoría de seguridad de datos de cero confianza.
+                    </p>
+                </div>
+                <a href="/articles/02-curriculum-as-code.html" class="text-sm font-semibold text-navy-900 hover:underline inline-flex items-center gap-1 mt-2">
+                    <span data-lang="en">Read Essay 02 &rarr;</span>
+                    <span data-lang="es" class="hidden-lang">Leer Ensayo 02 &rarr;</span>
+                </a>
+            </div>
+
+            <!-- Vibe Coding & CaC Synergy Card -->
+            <div class="bg-white p-8 rounded-2xl border border-creme-200 shadow-sm flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-10 h-10 bg-creme-100 rounded-xl flex items-center justify-center text-navy-900 border border-creme-200 font-mono font-bold" aria-hidden="true">
+                            ✨
+                        </div>
+                        <span class="text-xs font-mono bg-creme-100 text-navy-900 px-2.5 py-1 rounded-md border border-creme-200 font-semibold">Rapid Execution</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-navy-900" data-lang="en">Vibe Coding &amp; CaC</h3>
+                    <h3 class="text-xl font-bold mb-2 text-navy-900 hidden-lang" data-lang="es">Vibe Coding y CaC</h3>
+                    <p class="text-sm text-navy-800 leading-relaxed mb-4" data-lang="en">
+                        Bridging domain intuition and production-grade execution: translating pedagogical concepts directly into interactive PWAs and lab simulations at speed, governed upstream by deterministic Curriculum-as-Code standards.
+                    </p>
+                    <p class="text-sm text-navy-800 leading-relaxed mb-4 hidden-lang" data-lang="es">
+                        Uniendo la intuición de dominio con la ejecución de grado de producción: traduciendo conceptos pedagógicos en PWAs interactivas y simulaciones de laboratorio a gran velocidad, gobernadas por estándares de Currículum como Código.
+                    </p>
+                </div>
+                <a href="/articles/13-vibe-coding-paradigm.html" class="text-sm font-semibold text-navy-900 hover:underline inline-flex items-center gap-1 mt-2">
+                    <span data-lang="en">Read Essay 13 &rarr;</span>
+                    <span data-lang="es" class="hidden-lang">Leer Ensayo 13 &rarr;</span>
+                </a>
+            </div>
+
+            <!-- Compliance-as-Code Manifesto Card -->
+            <div class="bg-white p-8 rounded-2xl border border-creme-200 shadow-sm flex flex-col justify-between">
+                <div>
+                    <div class="w-10 h-10 bg-creme-100 rounded-xl flex items-center justify-center mb-4 text-navy-900 border border-creme-200 font-mono font-bold" aria-hidden="true">
+                        🛡️
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-navy-900" data-lang="en">Compliance-as-Code</h3>
+                    <h3 class="text-xl font-bold mb-2 text-navy-900 hidden-lang" data-lang="es">Cumplimiento como Código</h3>
+                    <p class="text-sm text-navy-800 leading-relaxed mb-4" data-lang="en">
+                        Automating regulatory, accessibility, and clinical governance into continuous deployment pipelines: deterministic SSoT rules, automated ADA Title II/WCAG 2.2 AA linting, and zero-trust data safety auditing.
+                    </p>
+                    <p class="text-sm text-navy-800 leading-relaxed mb-4 hidden-lang" data-lang="es">
+                        Automatización del gobierno regulatorio, de accesibilidad y clínico en tuberías de despliegue continuo: reglas deterministas SSoT, linter para ADA Título II/WCAG 2.2 AA y auditoría de seguridad sin confianza.
+                    </p>
+                </div>
+                <a href="/articles/04-ada-title-ii-accessibility.html" class="text-sm font-semibold text-navy-900 hover:underline inline-flex items-center gap-1 mt-2">
+                    <span data-lang="en">Read Essay 04 &rarr;</span>
+                    <span data-lang="es" class="hidden-lang">Leer Ensayo 04 &rarr;</span>
+                </a>
+            </div>
+
+            <!-- Featured Repository Card: WPE Digital Toolkit -->
+            <div class="bg-white p-8 rounded-2xl border border-creme-200 shadow-sm flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-10 h-10 bg-creme-100 rounded-xl flex items-center justify-center text-navy-900 border border-creme-200 font-mono font-bold" aria-hidden="true">
+                            ⚡
+                        </div>
+                        <span class="text-xs font-mono bg-creme-100 text-navy-900 px-2.5 py-1 rounded-md border border-creme-200 font-semibold">Vibe-Coded</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-navy-900">WPE Digital Toolkit</h3>
+                    <p class="text-sm text-navy-800 leading-relaxed mb-4" data-lang="en">
+                        Agentic PWA framework integrating ACSM 12th Ed. clinical standards, NWS/EPA environmental factors, and kinesiology curricula.
+                    </p>
+                    <p class="text-sm text-navy-800 leading-relaxed mb-4 hidden-lang" data-lang="es">
+                        Framework PWA agéntico que integra estándares clínicos ACSM 12a Ed., factores ambientales NWS/EPA y currículos de kinesiología.
+                    </p>
+                </div>
+                <a href="https://wpe-toolkit-pro.lovable.app" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-navy-900 hover:underline inline-flex items-center gap-1 mt-2">
+                    Launch App &rarr;
+                </a>
+            </div>
+
+            <!-- Vibe-Coded App Card: Flavor Architect -->
+            <div class="bg-white p-8 rounded-2xl border border-creme-200 shadow-sm flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-10 h-10 bg-creme-100 rounded-xl flex items-center justify-center text-navy-900 border border-creme-200 font-mono font-bold" aria-hidden="true">
+                            🧪
+                        </div>
+                        <span class="text-xs font-mono bg-creme-100 text-navy-900 px-2.5 py-1 rounded-md border border-creme-200 font-semibold">Vibe-Coded</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-1 text-navy-900">Flavor Architect</h3>
+                    <span class="text-xs font-mono text-navy-800/80 font-semibold uppercase tracking-wider block mb-3">Molecular Pairing &amp; Culinary Design</span>
+                    <p class="text-sm text-navy-800 leading-relaxed mb-4" data-lang="en">
+                        AI-driven molecular culinary workbench built to evaluate flavor compound synergies, bridge ingredients, and profile balances in real time.
+                    </p>
+                    <p class="text-sm text-navy-800 leading-relaxed mb-4 hidden-lang" data-lang="es">
+                        Plataforma culinaria molecular con IA para evaluar sinergias de compuestos de sabor, ingredientes puente y balances de perfil en tiempo real.
+                    </p>
+                </div>
+                <a href="https://flavor-architect-lab.lovable.app" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-navy-900 hover:underline inline-flex items-center gap-1 mt-2">
+                    Launch App &rarr;
+                </a>
+            </div>
+
+            <!-- Articles & Essays Bento Card -->
+            <div class="bg-white p-8 rounded-2xl border border-creme-200 shadow-sm md:col-span-3">
+                <div class="flex items-center justify-between mb-6 pb-4 border-b border-creme-100">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-creme-100 rounded-xl flex items-center justify-center text-navy-900 border border-creme-200 font-mono font-bold" aria-hidden="true">
+                            📝
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-navy-900" data-lang="en">Curriculum-as-Code Essays</h3>
+                            <h3 class="text-xl font-bold text-navy-900 hidden-lang" data-lang="es">Ensayos de Currículum como Código</h3>
+                        </div>
+                    </div>
+                    <a href="/articles/index.html" class="text-sm font-semibold text-navy-900 hover:underline inline-flex items-center gap-1">
+                        <span data-lang="en">View All Articles &rarr;</span>
+                        <span data-lang="es" class="hidden-lang">Ver Todos los Artículos &rarr;</span>
+                    </a>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    
+                    <!-- ESSAY 18 CARD (Featured) -->
+                    <div class="p-4 rounded-xl bg-creme-50 border border-creme-200 flex flex-col justify-between md:col-span-2">
+                        <div>
+                            <div class="flex items-center justify-between mb-1">
+                                <div class="text-xs font-mono text-navy-800 font-bold">ESSAY 18</div>
+                                <span class="text-xs font-mono bg-navy-900 text-creme-100 px-2 py-0.5 rounded text-[10px] font-semibold">Latest Release</span>
+                            </div>
+                            <h4 class="text-base font-bold text-navy-900 mb-2">
+                                <a href="/articles/18-the-illusion-of-the-feed.html" class="hover:underline" data-lang="en">The Illusion of the Feed: Upstream SSoT &amp; Feed Link Rot Governance</a>
+                                <a href="/articles/18-the-illusion-of-the-feed.html" class="hover:underline hidden-lang" data-lang="es">La Ilusión del Feed: Gobernanza de SSoT Aguas Arriba y Rotura de Enlaces</a>
+                            </h4>
+                            <p class="text-xs text-navy-800 leading-relaxed mb-3" data-lang="en">
+                                How relying on dynamic external feeds inside an LMS introduces link rot vulnerabilities, and how upstream SSoT configuration control resolves accessibility issues at the source.
+                            </p>
+                            <p class="text-xs text-navy-800 leading-relaxed mb-3 hidden-lang" data-lang="es">
+                                Cómo depender de feeds externos dinámicos en un LMS introduce enlaces rotos y cómo la gobernanza SSoT aguas arriba lo resuelve en origen.
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-4 mt-2 pt-2 border-t border-creme-200/60">
+                            <a href="/articles/18-the-illusion-of-the-feed.html" class="text-xs font-bold text-navy-900 hover:underline">Read Essay &rarr;</a>
+                            <a href="https://www.linkedin.com/in/alanpruitt/recent-activity/all/" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-navy-800 hover:text-navy-900 hover:underline inline-flex items-center gap-1">View on LinkedIn ↗</a>
+                        </div>
+                    </div>
+
+                    <!-- ESSAY 17 CARD -->
+                    <div class="p-4 rounded-xl bg-creme-50 border border-creme-200 flex flex-col justify-between">
+                        <div>
+                            <div class="text-xs font-mono text-navy-800 font-bold mb-1">ESSAY 17</div>
+                            <h4 class="text-base font-bold text-navy-900 mb-2">
+                                <a href="/articles/17-resolving-array-parsing-script-failures.html" class="hover:underline" data-lang="en">Engineering Resilience: Resolving False-Positive Contrast Errors &amp; Array Failures</a>
+                                <a href="/articles/17-resolving-array-parsing-script-failures.html" class="hover:underline hidden-lang" data-lang="es">Resiliencia de la Ingeniería: Resolviendo Errores de Contraste Falsos Positivos</a>
+                            </h4>
+                            <p class="text-xs text-navy-800 leading-relaxed mb-3" data-lang="en">
+                                How automated accessibility checkers fail under WYSIWYG visual-editor DOM pollution and how Curriculum-as-Code resolves array parsing failures.
+                            </p>
+                            <p class="text-xs text-navy-800 leading-relaxed mb-3 hidden-lang" data-lang="es">
+                                Cómo fallan los evaluadores automáticos ante la contaminación del DOM de los editores visuales y cómo el Currículum como Código lo resuelve.
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-4 mt-2 pt-2 border-t border-creme-200/60">
+                            <a href="/articles/17-resolving-array-parsing-script-failures.html" class="text-xs font-bold text-navy-900 hover:underline">Read Essay &rarr;</a>
+                            <a href="https://www.linkedin.com/in/alanpruitt/recent-activity/all/" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-navy-800 hover:text-navy-900 hover:underline inline-flex items-center gap-1">View on LinkedIn ↗</a>
+                        </div>
+                    </div>
+
+                    <!-- ESSAY 16 CARD -->
+                    <div class="p-4 rounded-xl bg-creme-50 border border-creme-200 flex flex-col justify-between">
+                        <div>
+                            <div class="text-xs font-mono text-navy-800 font-bold mb-1">ESSAY 16</div>
+                            <h4 class="text-base font-bold text-navy-900 mb-2">
+                                <a href="/articles/16-canvas-lms-3-track-ai-branch.html" class="hover:underline" data-lang="en">Canvas LMS 3-Track Self-Guided AI Branch and Bilingual Scaffolding</a>
+                                <a href="/articles/16-canvas-lms-3-track-ai-branch.html" class="hover:underline hidden-lang" data-lang="es">Rama de IA Autoguiada de 3 Rutas en Canvas LMS y Andamiaje Bilingüe</a>
+                            </h4>
+                            <p class="text-xs text-navy-800 leading-relaxed mb-3" data-lang="en">
+                                Transforming traditional online discussion boards into active, interdisciplinary clinical case conferences across all 16 EXW modules.
+                            </p>
+                            <p class="text-xs text-navy-800 leading-relaxed mb-3 hidden-lang" data-lang="es">
+                                Transformando foros de discusión en conferencias de casos clínicos activos e interdisciplinarios en los 16 módulos de EXW.
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-4 mt-2 pt-2 border-t border-creme-200/60">
+                            <a href="/articles/16-canvas-lms-3-track-ai-branch.html" class="text-xs font-bold text-navy-900 hover:underline">Read Essay &rarr;</a>
+                            <a href="https://www.linkedin.com/in/alanpruitt/recent-activity/all/" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-navy-800 hover:text-navy-900 hover:underline inline-flex items-center gap-1">View on LinkedIn ↗</a>
+                        </div>
+                    </div>
+
+                    <!-- ESSAY 15 CARD -->
+                    <div class="p-4 rounded-xl bg-creme-50 border border-creme-200 flex flex-col justify-between">
+                        <div>
+                            <div class="text-xs font-mono text-navy-800 font-bold mb-1">ESSAY 15</div>
+                            <h4 class="text-base font-bold text-navy-900 mb-2">
+                                <a href="/articles/15-algorithmic-pedagogy-ci.html" class="hover:underline" data-lang="en">Algorithmic Pedagogy &amp; Continuous Integration: Zero-Regression Learning</a>
+                                <a href="/articles/15-algorithmic-pedagogy-ci.html" class="hover:underline hidden-lang" data-lang="es">Pedagogía Algorítmica e Integración Continua: Aprendizaje Sin Regresión</a>
+                            </h4>
+                            <p class="text-xs text-navy-800 leading-relaxed mb-3" data-lang="en">Treating learning outcomes and compliance rules as executable code monitored by CI/CD.</p>
+                            <p class="text-xs text-navy-800 leading-relaxed mb-3 hidden-lang" data-lang="es">Tratando resultados de aprendizaje y reglas de cumplimiento como código ejecutable.</p>
+                        </div>
+                        <div class="flex items-center gap-3 mt-2 pt-2 border-t border-creme-200/60">
+                            <a href="/articles/15-algorithmic-pedagogy-ci.html" class="text-xs font-bold text-navy-900 hover:underline">Read Essay &rarr;</a>
+                            <a href="https://www.linkedin.com/in/alanpruitt/recent-activity/all/" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-navy-800/80 hover:text-navy-900 hover:underline">View on LinkedIn ↗</a>
+                        </div>
+                    </div>
+
+                    <!-- ESSAY 14 CARD -->
+                    <div class="p-4 rounded-xl bg-creme-50 border border-creme-200 flex flex-col justify-between">
+                        <div>
+                            <div class="text-xs font-mono text-navy-800 font-bold mb-1">ESSAY 14</div>
+                            <h4 class="text-base font-bold text-navy-900 mb-2">
+                                <a href="/articles/14-guided-learning-trifecta.html" class="hover:underline" data-lang="en">The Guided Learning Trifecta: AI Simulation, Application &amp; Auditing</a>
+                                <a href="/articles/14-guided-learning-trifecta.html" class="hover:underline hidden-lang" data-lang="es">La Trifecta de Aprendizaje Guiado: Simulación con IA y Auditoría</a>
+                            </h4>
+                            <p class="text-xs text-navy-800 leading-relaxed mb-3" data-lang="en">Deploying Google's Guided Learning principles in Curriculum-as-Code via system prompts.</p>
+                            <p class="text-xs text-navy-800 leading-relaxed mb-3 hidden-lang" data-lang="es">Desplegando principios de Aprendizaje Guiado de Google mediante protocolos.</p>
+                        </div>
+                        <div class="flex items-center gap-3 mt-2 pt-2 border-t border-creme-200/60">
+                            <a href="/articles/14-guided-learning-trifecta.html" class="text-xs font-bold text-navy-900 hover:underline">Read Essay &rarr;</a>
+                            <a href="https://www.linkedin.com/in/alanpruitt/recent-activity/all/" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-navy-800/80 hover:text-navy-900 hover:underline">View on LinkedIn ↗</a>
+                        </div>
+                    </div>
+
+                    <!-- Essay 13 Card -->
+                    <div class="p-4 rounded-xl bg-creme-50 border border-creme-200 flex flex-col justify-between">
+                        <div>
+                            <div class="text-xs font-mono text-navy-800 font-bold mb-1">ESSAY 13</div>
+                            <h4 class="text-base font-bold text-navy-900 mb-2">
+                                <a href="/articles/13-vibe-coding-paradigm.html" class="hover:underline" data-lang="en">The Vibe-Coding Paradigm: Speed &amp; Full-Stack Execution in EdTech</a>
+                                <a href="/articles/13-vibe-coding-paradigm.html" class="hover:underline hidden-lang" data-lang="es">El Paradigma de Vibe-Coding: Velocidad y Ejecución Full-Stack en EdTech</a>
+                            </h4>
+                            <p class="text-xs text-navy-800 leading-relaxed mb-3" data-lang="en">Translating domain expertise directly into production-grade web applications using AI.</p>
+                            <p class="text-xs text-navy-800 leading-relaxed mb-3 hidden-lang" data-lang="es">Traduciendo experiencia de dominio en aplicaciones web mediante orquestación semántica.</p>
+                        </div>
+                        <div class="flex items-center gap-3 mt-2 pt-2 border-t border-creme-200/60">
+                            <a href="/articles/13-vibe-coding-paradigm.html" class="text-xs font-bold text-navy-900 hover:underline">Read Essay &rarr;</a>
+                            <a href="https://www.linkedin.com/in/alanpruitt/recent-activity/all/" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-navy-800/80 hover:text-navy-900 hover:underline">View on LinkedIn ↗</a>
+                        </div>
+                    </div>
+
+                    <!-- Essay 12 Card -->
+                    <div class="p-4 rounded-xl bg-creme-50 border border-creme-200 flex flex-col justify-between">
+                        <div>
+                            <div class="text-xs font-mono text-navy-800 font-bold mb-1">ESSAY 12</div>
+                            <h4 class="text-base font-bold text-navy-900 mb-2">
+                                <a href="/articles/12-mission-loop-architecture.html" class="hover:underline" data-lang="en">The Mission Loop Architecture: Pattern, Rule, and Solve in Coded Instruction</a>
+                                <a href="/articles/12-mission-loop-architecture.html" class="hover:underline hidden-lang" data-lang="es">La Arquitectura del Bucle de Misión: Patrón, Regla y Solución</a>
+                            </h4>
+                            <p class="text-xs text-navy-800 leading-relaxed mb-3" data-lang="en">Structuring deterministic health science problem-solving pipelines that enforce pattern identification.</p>
+                            <p class="text-xs text-navy-800 leading-relaxed mb-3 hidden-lang" data-lang="es">Estructurando tuberías deterministas de resolución de problemas que imponen identificación de patrones.</p>
+                        </div>
+                        <div class="flex items-center gap-3 mt-2 pt-2 border-t border-creme-200/60">
+                            <a href="/articles/12-mission-loop-architecture.html" class="text-xs font-bold text-navy-900 hover:underline">Read Essay &rarr;</a>
+                            <a href="https://www.linkedin.com/in/alanpruitt/recent-activity/all/" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-navy-800/80 hover:text-navy-900 hover:underline">View on LinkedIn ↗</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full max-w-6xl mx-auto px-6 py-8 mt-12 border-t border-creme-200 flex flex-col md:flex-row justify-between items-center text-xs text-navy-800 gap-4">
+        <div class="space-y-1 text-center md:text-left">
+            <div>&copy; <span id="year"></span> Alan Pruitt. All rights reserved.</div>
+            <div style="opacity: 0.85;">
+                Code licensed under <a href="/LICENSE" class="underline hover:text-navy-900">MIT</a>. 
+                Content licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer" class="underline hover:text-navy-900">CC BY 4.0</a>.
+            </div>
+        </div>
+        <div class="flex space-x-6" style="gap: 1.5rem;">
+            <a href="https://github.com/alanpruitt" target="_blank" rel="noopener noreferrer" class="hover:text-navy-900 transition-colors">GitHub</a>
+            <a href="https://www.linkedin.com/in/alanpruitt/" target="_blank" rel="noopener noreferrer" class="hover:text-navy-900 transition-colors">LinkedIn</a>
+            <a href="https://www.webcognita.com" target="_blank" rel="noopener noreferrer" class="hover:text-navy-900 transition-colors">Webcognita</a>
+        </div>
+    </footer>
+
+    <!-- Client Script -->
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        function setLanguage(lang) {
+            const enElements = document.querySelectorAll('[data-lang="en"]');
+            const esElements = document.querySelectorAll('[data-lang="es"]');
+            const btnEn = document.getElementById('btn-en');
+            const btnEs = document.getElementById('btn-es');
+
+            if (lang === 'en') {
+                enElements.forEach(el => el.classList.remove('hidden-lang'));
+                esElements.forEach(el => el.classList.add('hidden-lang'));
+                btnEn.className = "px-3 py-1 rounded-md transition-all bg-navy-900 text-creme-100 shadow-sm";
+                btnEs.className = "px-3 py-1 rounded-md transition-all text-navy-900 hover:text-navy-800";
+                btnEn.setAttribute('aria-pressed', 'true');
+                btnEs.setAttribute('aria-pressed', 'false');
+            } else {
+                esElements.forEach(el => el.classList.remove('hidden-lang'));
+                enElements.forEach(el => el.classList.add('hidden-lang'));
+                btnEs.className = "px-3 py-1 rounded-md transition-all bg-navy-900 text-creme-100 shadow-sm";
+                btnEn.className = "px-3 py-1 rounded-md transition-all text-navy-900 hover:text-navy-800";
+                btnEn.setAttribute('aria-pressed', 'true');
+                btnEs.setAttribute('aria-pressed', 'false');
+            }
+            localStorage.setItem('preferred_lang', lang);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('preferred_lang') || 'en';
+            setLanguage(savedLang);
+        });
+    </script>
+</body>
+</html>
