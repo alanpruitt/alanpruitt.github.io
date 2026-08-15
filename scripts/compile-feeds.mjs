@@ -18,12 +18,20 @@ const BUILD_DATE = new Date('2026-08-14T22:30:00Z');
 // 1. Authoritative Essay Catalogue (SSoT Metadata Registry)
 const ESSAYS = [
   {
-    id: '21',
-    slug: '21-evidence-based-nutrition-vs-feed',
-    title: 'Evidence-Based Nutrition vs. The Feed: Upstream SSoT Governance in Sports Nutrition (EXW150 Case Study)',
-    date: '2026-08-21T12:00:00Z',
-    summary: 'How EXW150 uses Curriculum-as-Code, the Mission Loop framework, and federal SSoT standards to insulate community college students from social media fad diets, predatory supplement claims, and unanchored AI nutrition advice.',
-    tags: ['CurriculumAsCode', 'Nutrition', 'SportsNutrition', 'SSoT']
+    id: "21",
+    slug: "21-evidence-based-nutrition-vs-feed",
+    title: "Evidence-Based Nutrition vs. The Feed: Upstream SSoT Governance in Sports Nutrition",
+    titleEs: "Nutrición Basada en Evidencia vs. El Feed: Gobernanza de SSoT Aguas Arriba en Nutrición Deportiva",
+    date: "2026-08-21",
+    course: "EXW150",
+    term: "Fall 2026",
+    ssot: "PAGA 2018 (2nd Ed.) / Dietary Guidelines for Americans",
+    author: "Alan Pruitt",
+    url: "https://alanpruitt.com/articles/21-evidence-based-nutrition-vs-feed.html",
+    legacyUrl: "https://alanpruitt.com/essays/21-evidence-based-nutrition-vs-feed.html",
+    tags: ["CurriculumAsCode", "Nutrition", "SportsNutrition", "SSoT", "InformationLiteracy", "OER"],
+    summary: "How EXW150 uses Curriculum-as-Code, the Mission Loop framework, and federal SSoT standards to insulate community college students from social media fad diets, predatory supplement claims, and unanchored AI nutrition advice.",
+    summaryEs: "Cómo EXW150 utiliza Currículum como Código, el marco del Bucle de Misión y los estándares federales de SSoT para aislar a los estudiantes de dietas de moda en redes sociales, suplementos engañosos y consejos de nutrición no verificados de la IA."
   },
   {
     id: '20',

@@ -17,14 +17,16 @@
     {
       "id": "https://alanpruitt.com/articles/21-evidence-based-nutrition-vs-feed.html",
       "url": "https://alanpruitt.com/articles/21-evidence-based-nutrition-vs-feed.html",
-      "title": "Evidence-Based Nutrition vs. The Feed: Upstream SSoT Governance in Sports Nutrition (EXW150 Case Study)",
+      "title": "Evidence-Based Nutrition vs. The Feed: Upstream SSoT Governance in Sports Nutrition",
       "summary": "How EXW150 uses Curriculum-as-Code, the Mission Loop framework, and federal SSoT standards to insulate community college students from social media fad diets, predatory supplement claims, and unanchored AI nutrition advice.",
-      "date_published": "2026-08-21T12:00:00.000Z",
+      "date_published": "2026-08-21T00:00:00.000Z",
       "tags": [
         "CurriculumAsCode",
         "Nutrition",
         "SportsNutrition",
-        "SSoT"
+        "SSoT",
+        "InformationLiteracy",
+        "OER"
       ]
     },
     {
