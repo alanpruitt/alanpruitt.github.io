@@ -8,6 +8,18 @@
     <lastBuildDate>Fri, 14 Aug 2026 22:30:00 GMT</lastBuildDate>
     <atom:link href="https://alanpruitt.com/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Evidence-Based Nutrition vs. The Feed: Upstream SSoT Governance in Sports Nutrition (EXW150 Case Study)</title>
+      <link>https://alanpruitt.com/articles/21-evidence-based-nutrition-vs-feed.html</link>
+      <guid isPermaLink="true">https://alanpruitt.com/articles/21-evidence-based-nutrition-vs-feed.html</guid>
+      <pubDate>Fri, 21 Aug 2026 12:00:00 GMT</pubDate>
+      <description>How EXW150 uses Curriculum-as-Code, the Mission Loop framework, and federal SSoT standards to insulate community college students from social media fad diets, predatory supplement claims, and unanchored AI nutrition advice.</description>
+      <author>contact@webcognita.com (Alan Pruitt)</author>
+      <category>CurriculumAsCode</category>
+      <category>Nutrition</category>
+      <category>SportsNutrition</category>
+      <category>SSoT</category>
+    </item>
+    <item>
       <title>Deterministic Clinical Guardrails: Sovereign AI Simulation &amp; Safety Gates (EXW265 SSoT Case Study)</title>
       <link>https://alanpruitt.com/articles/20-deterministic-clinical-guardrails.html</link>
       <guid isPermaLink="true">https://alanpruitt.com/articles/20-deterministic-clinical-guardrails.html</guid>

@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidence-Based Nutrition vs. The Feed: Upstream SSoT Governance | Alan Pruitt</title>
+    <meta name="description" content="How EXW150 uses Curriculum-as-Code, the Mission Loop framework, and federal SSoT standards to insulate community college students from social media fad diets, predatory supplement claims, and unanchored AI nutrition advice.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%230B192C'/></svg>">
+
+    <!-- OpenGraph Meta Tags -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Alan Pruitt">
+    <meta property="og:title" content="Evidence-Based Nutrition vs. The Feed: Upstream SSoT Governance in Sports Nutrition">
+    <meta property="og:description" content="How EXW150 uses Curriculum-as-Code, the Mission Loop framework, and federal SSoT standards to insulate community college students from social media fad diets, predatory supplement claims, and unanchored AI nutrition advice.">
+    <meta property="og:url" content="https://alanpruitt.com/articles/21-evidence-based-nutrition-vs-feed.html">
+    <meta property="og:image" content="https://alanpruitt.com/assets/og-preview.png">
+
+    <!-- Zero-JS Pure Critical CSS with Strict WCAG 2.2 AA Contrast -->
+    <style>
+        :root {
+            --bg-creme-50: #FAFBF7;
+            --bg-creme-100: #F5F5F0;
+            --bg-creme-200: #E6E6DC;
+            --text-navy-800: #1E3E62;
+            --text-navy-900: #0B192C;
+            --text-navy-950: #060E1A;
+            --link-accent: #0E3D73;
+        }
+
+        *, ::before, ::after { box-sizing: border-box; border-width: 0; }
+        html { line-height: 1.5; -webkit-text-size-adjust: 100%; tab-size: 4; font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; height: 100%; }
+        body { margin: 0; min-height: 100%; display: flex; flex-direction: column; justify-content: space-between; background-color: var(--bg-creme-100); color: var(--text-navy-900); }
+
+        .w-full { width: 100%; }
+        .max-w-4xl { max-width: 56rem; }
+        .max-w-3xl { max-width: 48rem; }
+        .mx-auto { margin-left: auto; margin-right: auto; }
+        .flex { display: flex; }
+        .flex-wrap { flex-wrap: wrap; }
+        .flex-col { flex-direction: column; }
+        .flex-grow { flex-grow: 1; }
+        .items-center { align-items: center; }
+        .justify-between { justify-content: space-between; }
+        .justify-end { justify-content: justify-end; }
+        
+        .space-x-6 > :not([hidden]) ~ :not([hidden]) { margin-left: 1.5rem; }
+        .space-y-4 > :not([hidden]) ~ :not([hidden]) { margin-top: 1rem; }
+        .inline-flex { display: inline-flex; }
+
+        .gap-3 { gap: 0.75rem; }
+        .gap-1 { gap: 0.25rem; }
+
+        .bg-white { background-color: #ffffff; }
+        .bg-creme-100 { background-color: var(--bg-creme-100); }
+        .bg-creme-200 { background-color: var(--bg-creme-200); }
+        .bg-navy-900 { background-color: var(--text-navy-900); }
+
+        .text-navy-800 { color: var(--text-navy-800); }
+        .text-navy-900 { color: var(--text-navy-900); }
+        .text-creme-100 { color: var(--bg-creme-100); }
+        
+        .p-1 { padding: 0.25rem; }
+        .p-8 { padding: 2rem; }
+        .px-3 { padding-left: 0.75rem; padding-right: 0.75rem; }
+        .px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+        .py-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+        .py-6 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+        .py-10 { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+        .pt-6 { padding-top: 1.5rem; }
+        .pt-2 { padding-top: 0.5rem; }
+
+        .mb-1 { margin-bottom: 0.25rem; }
+        .mb-2 { margin-bottom: 0.5rem; }
+        .mb-3 { margin-bottom: 0.75rem; }
+        .mb-6 { margin-bottom: 1.5rem; }
+        .mb-8 { margin-bottom: 2rem; }
+        .mt-12 { margin-top: 3rem; }
+
+        .border { border: 1px solid var(--bg-creme-200); }
+        .border-t { border-top: 1px solid var(--bg-creme-200); }
+        .border-b { border-bottom: 1px solid var(--bg-creme-200); }
+
+        .rounded-md { border-radius: 0.375rem; }
+        .rounded-lg { border-radius: 0.5rem; }
+        .rounded-2xl { border-radius: 1rem; }
+
+        .shadow-sm { box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); }
+
+        .font-mono { font-family: monospace; }
+        .font-bold { font-weight: 700; }
+        .font-semibold { font-weight: 600; }
+        
+        .leading-relaxed { line-height: 1.625; }
+        
+        .hover:underline:hover { text-decoration: underline; }
+        .hover:text-navy-900:hover { color: var(--text-navy-900); }
+
+        .cursor-pointer { cursor: pointer; }
+        .outline-none { outline: 2px solid transparent; outline-offset: 2px; }
+
+        /* Typography Styles for Article Content */
+        .article-body h2 { font-size: 1.5rem; font-weight: 700; color: var(--text-navy-900); margin-top: 2rem; margin-bottom: 1rem; }
+        .article-body p { font-size: 1rem; color: #1a1a1a; line-height: 1.75; margin-bottom: 1.25rem; }
+        .article-body ul, .article-body ol { margin-bottom: 1.25rem; padding-left: 1.5rem; }
+        .article-body li { margin-bottom: 0.5rem; line-height: 1.6; }
+        .article-body strong { font-weight: 700; color: var(--text-navy-950); }
+        .article-body blockquote { margin: 1.5rem 0; padding: 1rem 1.5rem; border-left: 4px solid var(--text-navy-800); background-color: var(--bg-creme-50); font-style: italic; color: #333; }
+        .article-body pre { background-color: var(--bg-creme-50); border: 1px solid var(--bg-creme-200); padding: 1rem; border-radius: 0.5rem; overflow-x: auto; margin-bottom: 1.25rem; font-family: monospace; font-size: 0.875rem; }
+
+        /* Interactive Language Selector Toggle */
+        .lang-toggle-btn { transition: all 0.2s ease-in-out; }
+        .lang-toggle-btn.active { background-color: var(--text-navy-900); color: var(--bg-creme-100); }
+        .lang-toggle-btn:not(.active):hover { background-color: var(--bg-creme-200); }
+
+        .hidden-lang { display: none !important; }
+    </style>
+</head>
+<body class="bg-creme-100 text-navy-900 font-sans antialiased min-h-screen flex flex-col justify-between">
+
+    <!-- Header Navigation -->
+    <header class="w-full bg-white border-b border-creme-200 py-6 px-6 shadow-sm">
+        <div class="max-w-4xl mx-auto flex items-center justify-between">
+            <a href="../index.html" class="text-lg font-bold text-navy-900 hover:underline">
+                Alan Pruitt
+            </a>
+            <nav class="flex items-center space-x-6">
+                <a href="../index.html" class="text-sm font-semibold text-navy-800 hover:text-navy-900 hover:underline">Home</a>
+                <a href="index.html" class="text-sm font-semibold text-navy-900 hover:underline">Articles</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="w-full max-w-3xl mx-auto px-6 py-10 flex-grow">
+        
+        <!-- Language Switcher Bar -->
+        <div class="flex justify-end mb-8">
+            <div class="inline-flex rounded-lg bg-creme-200 p-1" style="margin-left: auto;">
+                <button onclick="setLanguage('en')" id="btn-en" class="lang-toggle-btn active text-xs font-semibold px-3 py-1 rounded-md outline-none cursor-pointer">
+                    English
+                </button>
+                <button onclick="setLanguage('es')" id="btn-es" class="lang-toggle-btn text-xs font-semibold px-3 py-1 rounded-md outline-none cursor-pointer">
+                    Español
+                </button>
+            </div>
+        </div>
+
+        <article class="bg-white p-8 rounded-2xl border border-creme-200 shadow-sm">
+            
+            <!-- Metadata Header -->
+            <div class="flex flex-wrap items-center gap-3 mb-6 text-xs font-mono text-navy-800">
+                <span class="px-2.5 py-1 bg-navy-900 text-creme-100 font-bold rounded-md">ESSAY 21</span>
+                <span>August 2026</span>
+                <span aria-hidden="true">•</span>
+                <span>5 min read</span>
+                <span aria-hidden="true">•</span>
+                <span class="text-green-700 font-semibold">Source: Markdown SSoT</span>
+            </div>
+
+            <!-- English Title Header -->
+            <div data-lang="en">
+                <h1 class="text-3xl md:text-4xl font-bold text-navy-900 mb-6 leading-tight">
+                    Evidence-Based Nutrition vs. The Feed: Upstream SSoT Governance in Sports Nutrition
+                </h1>
+            </div>
+
+            <!-- Spanish Title Header -->
+            <div data-lang="es" class="hidden-lang">
+                <h1 class="text-3xl md:text-4xl font-bold text-navy-900 mb-6 leading-tight">
+                    Nutrición Basada en Evidencia vs. El Feed: Gobernanza de SSoT Aguas Arriba en Nutrición Deportiva
+                </h1>
+            </div>
+
+            <hr class="border-creme-200 mb-8" />
+
+            <!-- English Article Content -->
+            <div class="article-body" data-lang="en">
+                <blockquote>
+                    <strong>TL;DR:</strong> How EXW150 uses Curriculum-as-Code, the Mission Loop framework, and federal SSoT standards to insulate community college students from social media fad diets, predatory supplement claims, and unanchored AI nutrition advice.
+                </blockquote>
+
+                <p>
+                    In collegiate health sciences, introductory sports nutrition occupies the most culturally polluted informational space in higher education. Long before community college students enroll in an academic exercise science course, their understanding of human fuel, energy balance, and macronutrient metabolism has been shaped by algorithmic social media feeds, commercial fitness influencers, and predatory supplement marketing.
+                </p>
+                <p>
+                    When students encounter dietary questions, their default intuition is not to consult peer-reviewed physiological literature; it is to consult the feed or prompt an unconstrained consumer AI tool.
+                </p>
+                <p>
+                    Unfortunately, foundation AI models trained on public web scrapes mirror the very commercial distortions students need to unlearn. Unanchored Large Language Models regularly validate extreme elimination protocols, suggest unverified ergogenic aids, and misrepresent baseline human energy needs.
+                </p>
+                <p>
+                    In <strong>EXW150 (Nutrition for Sports and Exercise)</strong> for Fall 2026, we dismantle this informational noise through <strong>Curriculum-as-Code (CaC)</strong> engineering: establishing deterministic federal standards as our exclusive Single Source of Truth (SSoT) and training students to audit nutritional claims through structured prompt sandboxes.
+                </p>
+
+                <h2>1. The Algorithmic Nutrition Trap: Social Media Feeds & Unguided AI</h2>
+                <p>
+                    Modern students enter the sports nutrition classroom navigating an aggressive digital ecosystem designed for engagement rather than metabolic reality:
+                </p>
+                <ul>
+                    <li><strong>Commercial Supplement Exploitation:</strong> Algorithmic platforms aggressively promote proprietary pre-workout blends, non-regulated fat burners, and hyper-dosed micronutrient powders that lack independent third-party verification (such as NSF Certified for Sport or Informed Choice) and carry risks of contamination or cardiovascular overstimulation.</li>
+                    <li><strong>The Elimination Diet Cycle:</strong> Short-form video algorithms amplify polarized dietary extremes—from zero-carbohydrate carnivore regimens to aggressive carbohydrate restriction during high-volume training cycles—failing to account for the metabolic consequences of Relative Energy Deficiency in Sport (REDs) or depleted muscle glycogen reserves.</li>
+                    <li><strong>Unguided AI Hallucination & Confirmation Bias:</strong> When students query general AI tools to build meal plans, the models often hallucinate extreme calorie deficits for athletic populations, generate micronutrient toxicities through excessive stacking, or uncritically endorse proprietary brand-name wellness products.</li>
+                </ul>
+
+                <pre><code>┌────────────────────────────────────────────────────────────────────────┐
+│                   THE ALGORITHMIC NUTRITION HAZARD                     │
+│                                                                        │
+│  [ Social Media Feeds ] ──► [ Unanchored Public AI ]                   │
+│                                     │                                  │
+│         ┌───────────────────────────┴───────────────────────────┐      │
+│         ▼                                                       ▼      │
+│  [ Fad Elimination Diets ]                             [ Predatory Supplements ]
+│         │                                                       │      │
+│         └───────────────────────────▼───────────────────────────┘      │
+│                                     ▼                                  │
+│                 [ Compromised Student Prescription ]                   │
+│                 • Relative Energy Deficiency in Sport (REDs)           │
+│                 • Depleted glycogen & impaired recovery                │
+│                 • Financial waste & commercial dependence              │
+└────────────────────────────────────────────────────────────────────────┘</code></pre>
+
+                <h2>2. The Delimiter Protocol & Context Isolation</h2>
+                <p>
+                    The primary mechanism for preventing prompt injection, data leakage, and hallucination drift in EXW150 is our <strong>Delimiter Protocol</strong>.
+                </p>
+                <p>
+                    Students interact with the course AI Tool Kit by wrapping structured clinical profiles inside explicit triple-hash (<code>###</code>) delimiter blocks:
+                </p>
+
+                <pre><code>### CLINICAL NUTRITION PROFILE ###
+Client ID: Case-EXW150-M04
+Sport / Activity: Community College Track & Field (Middle-Distance 800m/1500m)
+Weekly Training Load: 6 days/week (approx. 45 miles/week running + 2 resistance sessions)
+Estimated Daily Energy Expenditure: 2,800 - 3,100 kcal/day
+Reported Daily Intake: 1,900 kcal/day (Self-imposed severe carbohydrate restriction)
+Reported Symptoms: Persistent fatigue, recurrent shin splints, declining interval times
+Dietary Goal: "Drop body weight rapidly to improve race pace"
+Target Scope: Audit energy availability and design an SSoT-aligned fueling progression
+###</code></pre>
+
+                <h2>3. The AI Auditor System Directive</h2>
+                <p>
+                    To prevent student reliance on unguided AI outputs, the EXW150 AI Tool Kit runs on a rigid, instruction-driven system directive. This directive acts as a Red Team clinical safety auditor, evaluating student meal plans against federal sports nutrition guidelines:
+                </p>
+                <pre><code>### SYSTEM DIRECTIVE: EXW150 NUTRITIONAL AUDITOR ###
+AUTHORITY (SSoT): Dietary Guidelines for Americans & PAGA 2018 (2nd Ed.)
+CONTEXT: Wellness & Physical Education Department — Sports Nutrition Lab
+
+You are the EXW150 Nutritional Safety Auditor.
+Analyze the student's dietary audit for the athlete profile wrapped in the ### delimiters above.
+
+Execute the following verification checks:
+1. Audit Energy Availability: Evaluate the reported 1,900 kcal intake against the 2,800+ kcal training demand. Flag the clinical hazard of Low Energy Availability (LEA) and Relative Energy Deficiency in Sport (REDs).
+2. Audit Macronutrient Distribution: Challenge the low-carbohydrate restriction, citing the mandatory role of muscle glycogen in high-intensity middle-distance track performance.
+3. Validate SSoT Whole-Food Strategy: Confirm that the student's adjusted meal plan uses nutrient-dense whole foods to close the caloric gap without relying on unvetted commercial supplements.
+4. Output Safety Verdict: Output "RECALIBRATE" if the student endorses unsafe deficits or unvetted supplements. Output "NUTRITIONAL AUDIT CLEARED" when the plan meets DGA and PAGA benchmarks.
+###</code></pre>
+
+                <h2>4. The Mission Loop in Metabolic Problem Solving</h2>
+                <p>
+                    In sports nutrition education, evaluating energy systems and fueling strategies requires a repeatable, objective analytical framework.
+                </p>
+                <p>
+                    In <strong>EXW150</strong>, students apply the <strong>Mission Loop (Pattern / Rule / Solve)</strong> to break through marketing narratives and build metabolically sound fueling plans:
+                </p>
+                <pre><code>┌────────────────────────────────────────────────────────────────────────┐
+│                   THE MISSION LOOP NUTRITION PIPELINE                  │
+│                                                                        │
+│  [ PATTERN ] ──► Identify training volume, energy intake & deficits   │
+│        │                                                               │
+│        ▼                                                               │
+│  [  RULE   ] ──► Apply federal DGA macronutrient ratios & PAGA energy  │
+│        │                                                               │
+│        ▼                                                               │
+│  [  SOLVE  ] ──► Prescribe whole-food, sustainable athletic fueling    │
+└────────────────────────────────────────────────────────────────────────┘</code></pre>
+
+                <h2>5. The AI Auditor & Deterministic Verification Logic</h2>
+                <p>
+                    To prevent student reliance on hallucinated AI responses, the EXW150 AI Tool Kit operates not as an open-ended conversationalist, but as a rigid <strong>Red Team Clinical Safety Auditor</strong>.
+                </p>
+                <p>
+                    When a student submits their proposed exercise protocol alongside the delimited client profile, the auditor executes an automated decision tree:
+                </p>
+                <pre><code>[ Ingest ### Profile ### ]
+                                  │
+                                  ▼
+                [ Check 1: Energy Availability Gate ]
+                  ├── FAIL (Severe unmanaged deficit/LEA) ──► Tier: RECALIBRATE
+                  └── PASS
+                                  │
+                                  ▼
+                [ Check 2: SSoT Macronutrient Balance ]
+                  ├── FAIL (Fad elimination / extreme restriction) ──► Tier: RECALIBRATE
+                  └── PASS (DGA / AMDR ratios respected)
+                                  │
+                                  ▼
+                [ Check 3: Whole-Food Prioritization ]
+                  ├── Unvetted supplements / Proprietary blends ──► Tier: RECALIBRATE
+                  ├── Minor meal-timing or portion variance ──► Tier: COMPETENT
+                  └── 100% SSoT Alignment & Whole-Food Model ──► Tier: EXEMPLARY</code></pre>
+
+                <h2>Academic Citation & Attribution</h2>
+                <pre><code>@article{pruitt2026evidencebasednutrition,
+  author    = {Alan Pruitt},
+  title     = {Evidence-Based Nutrition vs. The Feed: Upstream SSoT Governance in Sports Nutrition},
+  journal   = {Curriculum-as-Code Publication Series},
+  year      = {2026},
+  month     = {aug},
+  number    = {21},
+  url       = {https://alanpruitt.com/articles/21-evidence-based-nutrition-vs-feed.html},
+  publisher = {Webcognita LLC}
+}</code></pre>
+            </div>
+
+            <!-- Spanish Article Content -->
+            <div class="article-body hidden-lang" data-lang="es">
+                <blockquote>
+                    <strong>TL;DR:</strong> Cómo EXW150 utiliza Currículum como Código, el marco del Bucle de Misión y los estándares federales SSoT para aislar a los estudiantes de colegios comunitarios de las dietas de moda de las redes sociales, las afirmaciones de suplementos depredadores y los consejos de nutrición de IA no anclados.
+                </blockquote>
+
+                <p>
+                    En las ciencias de la salud colegiales, la nutrición deportiva introductoria ocupa el espacio de información más contaminado culturalmente en la educación superior. Mucho antes de que los estudiantes de colegios comunitarios se inscriban en un curso académico de ciencias del ejercicio, su comprensión del combustible humano, el equilibrio energético y el metabolismo de los macronutrientes ha sido moldeada por feeds de redes sociales algorítmicas, influencers de fitness comerciales y marketing de suplementos depredadores.
+                </p>
+                <p>
+                    Cuando los estudiantes se enfrentan a preguntas dietéticas, su intuición por defecto no es consultar la literatura fisiológica revisada por pares; es consultar el feed o preguntar a una herramienta de IA de consumo no restringida.
+                </p>
+                <p>
+                    Desafortunadamente, los modelos de IA de base entrenados en raspados de la web pública reflejan las mismas distorsiones comerciales que los estudiantes necesitan desaprender. Los modelos de lenguaje grande no anclados validan regularmente los protocolos de eliminación extrema, sugieren ayudas ergogénicas no verificadas y representan mal las necesidades energéticas humanas iniciales.
+                </p>
+                <p>
+                    En <strong>EXW150 (Nutrición para el Deporte y el Ejercicio)</strong> para el otoño de 2026, desmantelamos este ruido informativo a través de la ingeniería de **Currículum como Código (CaC)**: estableciendo estándares federales deterministas como nuestra Fuente Única de Verdad (SSoT) exclusiva y capacitando a los estudiantes para auditar las afirmaciones nutricionales a través de entornos de pruebas de prompts estructurados.
+                </p>
+
+                <h2>1. La trampa de la nutrición algorítmica: feeds de redes sociales e IA no guiada</h2>
+                <p>
+                    Los estudiantes modernos ingresan al aula de nutrición deportiva navegando por un ecosistema digital agresivo diseñado para el compromiso en lugar de la realidad metabólica:
+                </p>
+                <ul>
+                    <li><strong>Explotación Comercial de Suplementos:</strong> Las plataformas algorítmicas promueven agresivamente mezclas patentadas de pre-entrenamiento, quemadores de grasa no regulados y polvos de micronutrientes hiperdosificados que carecen de verificación de terceros independiente (como NSF Certified for Sport o Informed Choice) y conllevan riesgos de contaminación o sobreestimulación cardiovascular.</li>
+                    <li><strong>El Ciclo de la Dieta de Eliminación:</strong> Los algoritmos de videos cortos amplifican los extremos dietéticos polarizados, desde regímenes carnívoros con cero carbohidratos hasta restricciones agresivas de carbohidratos durante los ciclos de entrenamiento de alto volumen, sin tener en cuenta las consecuencias metabólicas de la Deficiencia Energética Relativa en el Deporte (RED) o las reservas de glucógeno muscular agotadas.</li>
+                    <li><strong>Alucinación de IA no Guiada y Sesgo de Confirmación:</strong> Cuando los estudiantes consultan herramientas generales de IA para crear planes de alimentación, los modelos a menudo alucinan déficits calóricos extremos para poblaciones atléticas, generan toxicidades por micronutrientes a través de la acumulación excesiva o respaldan sin crítica productos de bienestar de marca patentados.</li>
+                </ul>
+
+                <pre><code>┌────────────────────────────────────────────────────────────────────────┐
+│                   EL PELIGRO DE LA NUTRICIÓN ALGORÍTMICA              │
+│                                                                        │
+│  [ Feeds de Redes Sociales ] ──► [ IA Pública sin Anclaje ]           │
+│                                     │                                  │
+│         ┌───────────────────────────┴───────────────────────────┐      │
+│         ▼                                                       ▼      │
+│  [ Dietas de Eliminación de Moda ]                  [ Suplementos Depredadores ]
+│         │                                                       │      │
+│         └───────────────────────────▼───────────────────────────┘      │
+│                                     ▼                                  │
+│                 [ Prescripción del Estudiante Comprometida ]           │
+│                 • Deficiencia Energética Relativa en el Deporte (REDs)│
+│                 • Glucógeno agotado y recuperación deteriorada         │
+│                 • Desperdicio financiero y dependencia comercial      │
+└────────────────────────────────────────────────────────────────────────┘</code></pre>
+
+                <h2>2. El protocolo de delimitadores e aislamiento del contexto</h2>
+                <p>
+                    El mecanismo principal para prevenir la inyección de prompts, la fuga de datos y la deriva de alucinaciones en EXW150 es nuestro <strong>Protocolo de Delimitadores</strong>.
+                </p>
+                <p>
+                    Los estudiantes interactúan con el kit de herramientas de IA del curso envolviendo los perfiles clínicos estructurados dentro de bloques delimitadores explícitos de tres almohadillas (<code>###</code>):
+                </p>
+
+                <pre><code>### PERFIL DE NUTRICIÓN CLÍNICA ###
+ID del Cliente: Case-EXW150-M04
+Deporte / Actividad: Atletismo de Colegio Comunitario (Medio Fondo 800m/1500m)
+Carga de Entrenamiento Semanal: 6 días/semana (aprox. 45 millas/semana corriendo + 2 sesiones de fuerza)
+Gasto Energético Diario Estimado: 2,800 - 3,100 kcal/día
+Ingesta Diaria Reportada: 1,900 kcal/día (Restricción severa de carbohidratos autoimpuesta)
+Síntomas Reportados: Fatiga persistente, dolor de espinillas recurrente, tiempos de intervalo en declive
+Objetivo Dietético: "Bajar de peso rápidamente para mejorar el ritmo de carrera"
+Alcance del Objetivo: Auditar la disponibilidad de energía y diseñar una progresión de alimentación alineada con SSoT
+###</code></pre>
+
+                <h2>3. La directiva del sistema del auditor de IA</h2>
+                <p>
+                    Para evitar que los estudiantes dependan de los resultados de la IA no guiada, el kit de herramientas de IA de EXW150 funciona con una directiva de sistema rígida y basada en instrucciones. Esta directiva actúa como un auditor de seguridad clínica Red Team, evaluando los planes de comidas de los estudiantes frente a las pautas federales de nutrición deportiva:
+                </p>
+                <pre><code>### DIRECTIVA DEL SISTEMA: AUDITOR NUTRICIONAL EXW150 ###
+AUTORIDAD (SSoT): Directrices Dietéticas para Estadounidenses y PAGA 2018 (2ª Ed.)
+CONTEXTO: Departamento de Bienestar y Educación Física — Laboratorio de Nutrición Deportiva
+
+Usted es el Auditor de Seguridad Nutricional EXW150.
+Analice la auditoría dietética del estudiante para el perfil del atleta envuelto en los delimitadores ### anteriores.
+
+Ejecute las siguientes comprobaciones de verificación:
+1. Auditar la Disponibilidad de Energía: Evaluar la ingesta reportada de 1,900 kcal frente a la demanda de entrenamiento de 2,800+ kcal. Señalar el peligro clínico de la Baja Disponibilidad de Energía (LEA) y la Deficiencia Energética Relativa en el Deporte (REDs).
+2. Auditar la Distribución de Macronutrientes: Desafiar la restricción baja en carbohidratos, citando el papel obligatorio del glucógeno muscular en el rendimiento de atletismo de medio fondo de alta intensidad.
+3. Validar la Estrategia de Alimentos Integrales SSoT: Confirmar que el plan de comidas ajustado del estudiante utiliza alimentos integrales densos en nutrientes para cerrar la brecha calórica sin depender de suplementos comerciales no verificados.
+4. Emitir el Veredicto de Seguridad: Imprimir "RECALIBRAR" si el estudiante respalda déficits inseguros o suplementos no verificados. Imprimir "AUDITORÍA NUTRICIONAL APROBADA" cuando el plan cumpla con los estándares de DGA y PAGA.
+###</code></pre>
+
+                <h2>4. El Bucle de Misión (Mission Loop) en la resolución de problemas metabólicos</h2>
+                <p>
+                    En la educación en nutrición deportiva, evaluar los sistemas de energía y las estrategias de alimentación requiere un marco analítico repetible y objetivo.
+                </p>
+                <p>
+                    En <strong>EXW150</strong>, los estudiantes aplican el <strong>Bucle de Misión (Patrón / Regla / Resolver)</strong> para romper con las narrativas comerciales y construir planes de alimentación metabólicamente sólidos:
+                </p>
+                <pre><code>┌────────────────────────────────────────────────────────────────────────┐
+│                   EL PIPELINE DE NUTRICIÓN DEL BUCLE DE MISIÓN         │
+│                                                                        │
+│  [ PATRÓN ] ──► Identificar volumen de entrenamiento e ingesta         │
+│        │                                                               │
+│        ▼                                                               │
+│  [  REGLA  ] ──► Aplicar proporciones de DGA y energía de PAGA         │
+│        │                                                               │
+│        ▼                                                               │
+│  [RESOLVER ] ──► Prescribir alimentación deportiva integral sostenible  │
+└────────────────────────────────────────────────────────────────────────┘</code></pre>
+
+                <h2>5. El auditor de IA y la lógica de verificación determinista</h2>
+                <p>
+                    Para evitar que los estudiantes dependan de respuestas de IA alucinadas, el kit de herramientas de IA de EXW150 funciona no como un conversador abierto, sino como un **Auditor de Seguridad Clínica Red Team** rígido.
+                </p>
+                <p>
+                    Cuando un estudiante presenta su protocolo de ejercicio propuesto junto con el perfil delimitado del cliente, el auditor ejecuta un árbol de decisiones automatizado:
+                </p>
+                <pre><code>[ Ingestión del Perfil ### ]
+                                  │
+                                  ▼
+                [ Verificación 1: Disponibilidad de Energía ]
+                   ├── FALLA (Déficit severo no gestionado/LEA) ──► Nivel: RECALIBRAR
+                   └── PASA
+                                  │
+                                  ▼
+                [ Verificación 2: Balance de Macronutrientes SSoT ]
+                   ├── FALLA (Dieta de eliminación / restricción extrema) ──► Nivel: RECALIBRAR
+                   └── PASA (Se respetan las proporciones DGA / AMDR)
+                                  │
+                                  ▼
+                [ Verificación 3: Priorización de Alimentos Integrales ]
+                   ├── Suplementos no verificados / Mezclas patentadas ──► Nivel: RECALIBRAR
+                   ├── Varianza menor de horarios de comida o porciones ──► Nivel: COMPETENTE
+                   └── 100% de Alineación SSoT y Alimentos Integrales ──► Nivel: EJEMPLAR</code></pre>
+
+                <h2>Citación Académica y Atribución</h2>
+                <pre><code>@article{pruitt2026evidencebasednutrition,
+  author    = {Alan Pruitt},
+  title     = {Evidence-Based Nutrition vs. The Feed: Upstream SSoT Governance in Sports Nutrition},
+  journal   = {Curriculum-as-Code Publication Series},
+  year      = {2026},
+  month     = {aug},
+  number    = {21},
+  url       = {https://alanpruitt.com/articles/21-evidence-based-nutrition-vs-feed.html},
+  publisher = {Webcognita LLC}
+}</code></pre>
+            </div>
+
+            <!-- Article Footer Navigation -->
+            <footer class="mt-12 pt-6 border-t border-creme-100 flex items-center justify-between">
+                <a href="index.html" class="text-sm font-semibold text-navy-900 hover:underline inline-flex items-center gap-1">
+                    &larr; Back to Articles
+                </a>
+                <a href="https://www.linkedin.com/in/alanpruitt/recent-activity/all/" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-navy-800 hover:text-navy-900 hover:underline inline-flex items-center gap-1">
+                    View on LinkedIn ↗
+                </a>
+            </footer>
+
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full bg-navy-900 text-creme-200 py-8 px-6 text-center text-xs border-t border-navy-950">
+        <p class="mb-2">© 2026 Alan Pruitt • All Rights Reserved.</p>
+        <p class="opacity-75">Instructional Design, AI Pedagogy & Curriculum Architecture</p>
+    </footer>
+
+    <!-- Toggle Script -->
+    <script>
+        function setLanguage(lang) {
+            const elements = document.querySelectorAll('[data-lang]');
+            elements.forEach(el => {
+                if (el.getAttribute('data-lang') === lang) {
+                    el.classList.remove('hidden-lang');
+                } else {
+                    el.classList.add('hidden-lang');
+                }
+            });
+
+            // Update button states
+            document.querySelectorAll('.lang-toggle-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.getElementById('btn-' + lang).classList.add('active');
+        }
+    </script>
+</body>
+</html>

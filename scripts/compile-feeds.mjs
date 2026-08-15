@@ -18,6 +18,14 @@ const BUILD_DATE = new Date('2026-08-14T22:30:00Z');
 // 1. Authoritative Essay Catalogue (SSoT Metadata Registry)
 const ESSAYS = [
   {
+    id: '21',
+    slug: '21-evidence-based-nutrition-vs-feed',
+    title: 'Evidence-Based Nutrition vs. The Feed: Upstream SSoT Governance in Sports Nutrition (EXW150 Case Study)',
+    date: '2026-08-21T12:00:00Z',
+    summary: 'How EXW150 uses Curriculum-as-Code, the Mission Loop framework, and federal SSoT standards to insulate community college students from social media fad diets, predatory supplement claims, and unanchored AI nutrition advice.',
+    tags: ['CurriculumAsCode', 'Nutrition', 'SportsNutrition', 'SSoT']
+  },
+  {
     id: '20',
     slug: '20-deterministic-clinical-guardrails',
     title: 'Deterministic Clinical Guardrails: Sovereign AI Simulation & Safety Gates (EXW265 SSoT Case Study)',
