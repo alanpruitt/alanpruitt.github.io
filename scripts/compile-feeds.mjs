@@ -18,6 +18,22 @@ const BUILD_DATE = new Date('2026-08-14T22:30:00Z');
 // 1. Authoritative Essay Catalogue (SSoT Metadata Registry)
 const ESSAYS = [
   {
+    id: "22",
+    slug: "22-foundational-human-movement-in-the-algorithmic-age",
+    title: "Foundational Human Movement in the Algorithmic Age: PAGA 2018 SSoT & Community Inactivity Interventions",
+    titleEs: "El Movimiento Humano Fundamental en la Era Algorítmica: PAGA 2018 SSoT e Intervenciones de Inactividad Comunitaria",
+    date: "2026-08-21T12:00:00Z",
+    course: "EXW101",
+    term: "Fall 2026",
+    ssot: "PAGA 2018 (2nd Ed.)",
+    author: "Alan Pruitt",
+    url: "https://alanpruitt.com/articles/22-foundational-human-movement-in-the-algorithmic-age.html",
+    legacyUrl: "https://alanpruitt.com/essays/22-foundational-human-movement-in-the-algorithmic-age.html",
+    tags: ["CurriculumAsCode", "Kinesiology", "PhysicalEducation", "PAGA", "PublicHealth", "OER"],
+    summary: "How EXW101 deploys Curriculum-as-Code, the federal PAGA 2018 SSoT, and the Mission Loop framework to deconstruct systemic inactivity patterns and build community-level health interventions in rural borderland regions.",
+    summaryEs: "Cómo EXW101 utiliza Currículum como Código, el estándar federal PAGA 2018 SSoT y el Bucle de Misión para deconstruir la inactividad sistémica y diseñar intervenciones de salud comunitaria en regiones fronterizas rurales."
+  },
+  {
     id: "21",
     slug: "21-evidence-based-nutrition-vs-feed",
     title: "Evidence-Based Nutrition vs. The Feed: Upstream SSoT Governance in Sports Nutrition",

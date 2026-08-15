@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundational Human Movement in the Algorithmic Age | Alan Pruitt</title>
+    <meta name="description" content="How EXW101 deploys Curriculum-as-Code, the federal PAGA 2018 SSoT, and the Mission Loop framework to deconstruct systemic inactivity patterns and build community-level health interventions in rural borderland regions.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%230B192C'/></svg>">
+
+    <!-- OpenGraph Meta Tags -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Alan Pruitt">
+    <meta property="og:title" content="Foundational Human Movement in the Algorithmic Age: PAGA 2018 SSoT & Community Inactivity Interventions">
+    <meta property="og:description" content="How EXW101 deploys Curriculum-as-Code, the federal PAGA 2018 SSoT, and the Mission Loop framework to deconstruct systemic inactivity patterns and build community-level health interventions in rural borderland regions.">
+    <meta property="og:url" content="https://alanpruitt.com/articles/22-foundational-human-movement-in-the-algorithmic-age.html">
+    <meta property="og:image" content="https://alanpruitt.com/assets/og-preview.png">
+
+    <!-- Zero-JS Pure Critical CSS with Strict WCAG 2.2 AA Contrast -->
+    <style>
+        :root {
+            --bg-creme-50: #FAFBF7;
+            --bg-creme-100: #F5F5F0;
+            --bg-creme-200: #E6E6DC;
+            --text-navy-800: #1E3E62;
+            --text-navy-900: #0B192C;
+            --text-navy-950: #060E1A;
+            --link-accent: #0E3D73;
+        }
+
+        *, ::before, ::after { box-sizing: border-box; border-width: 0; }
+        html { line-height: 1.5; -webkit-text-size-adjust: 100%; tab-size: 4; font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; height: 100%; }
+        body { margin: 0; min-height: 100%; display: flex; flex-direction: column; justify-content: space-between; background-color: var(--bg-creme-100); color: var(--text-navy-900); }
+
+        .w-full { width: 100%; }
+        .max-w-4xl { max-width: 56rem; }
+        .max-w-3xl { max-width: 48rem; }
+        .mx-auto { margin-left: auto; margin-right: auto; }
+        .flex { display: flex; }
+        .flex-wrap { flex-wrap: wrap; }
+        .flex-col { flex-direction: column; }
+        .flex-grow { flex-grow: 1; }
+        .items-center { align-items: center; }
+        .justify-between { justify-content: space-between; }
+        .justify-end { justify-content: justify-end; }
+        
+        .space-x-6 > :not([hidden]) ~ :not([hidden]) { margin-left: 1.5rem; }
+        .space-y-4 > :not([hidden]) ~ :not([hidden]) { margin-top: 1rem; }
+        .inline-flex { display: inline-flex; }
+
+        .gap-3 { gap: 0.75rem; }
+        .gap-1 { gap: 0.25rem; }
+
+        .bg-white { background-color: #ffffff; }
+        .bg-creme-100 { background-color: var(--bg-creme-100); }
+        .bg-creme-200 { background-color: var(--bg-creme-200); }
+        .bg-navy-900 { background-color: var(--text-navy-900); }
+
+        .text-navy-800 { color: var(--text-navy-800); }
+        .text-navy-900 { color: var(--text-navy-900); }
+        .text-creme-100 { color: var(--bg-creme-100); }
+        
+        .p-1 { padding: 0.25rem; }
+        .p-8 { padding: 2rem; }
+        .px-3 { padding-left: 0.75rem; padding-right: 0.75rem; }
+        .px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+        .py-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+        .py-6 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+        .py-10 { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+        .pt-6 { padding-top: 1.5rem; }
+        .pt-2 { padding-top: 0.5rem; }
+
+        .mb-1 { margin-bottom: 0.25rem; }
+        .mb-2 { margin-bottom: 0.5rem; }
+        .mb-3 { margin-bottom: 0.75rem; }
+        .mb-6 { margin-bottom: 1.5rem; }
+        .mb-8 { margin-bottom: 2rem; }
+        .mt-12 { margin-top: 3rem; }
+
+        .border { border: 1px solid var(--bg-creme-200); }
+        .border-t { border-top: 1px solid var(--bg-creme-200); }
+        .border-b { border-bottom: 1px solid var(--bg-creme-200); }
+
+        .rounded-md { border-radius: 0.375rem; }
+        .rounded-lg { border-radius: 0.5rem; }
+        .rounded-2xl { border-radius: 1rem; }
+
+        .shadow-sm { box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); }
+
+        .font-mono { font-family: monospace; }
+        .font-bold { font-weight: 700; }
+        .font-semibold { font-weight: 600; }
+        
+        .leading-relaxed { line-height: 1.625; }
+        
+        .hover:underline:hover { text-decoration: underline; }
+        .hover:text-navy-900:hover { color: var(--text-navy-900); }
+
+        .cursor-pointer { cursor: pointer; }
+        .outline-none { outline: 2px solid transparent; outline-offset: 2px; }
+
+        /* Typography Styles for Article Content */
+        .article-body h2 { font-size: 1.5rem; font-weight: 700; color: var(--text-navy-900); margin-top: 2rem; margin-bottom: 1rem; }
+        .article-body p { font-size: 1rem; color: #1a1a1a; line-height: 1.75; margin-bottom: 1.25rem; }
+        .article-body ul, .article-body ol { margin-bottom: 1.25rem; padding-left: 1.5rem; }
+        .article-body li { margin-bottom: 0.5rem; line-height: 1.6; }
+        .article-body strong { font-weight: 700; color: var(--text-navy-950); }
+        .article-body blockquote { margin: 1.5rem 0; padding: 1rem 1.5rem; border-left: 4px solid var(--text-navy-800); background-color: var(--bg-creme-50); font-style: italic; color: #333; }
+        .article-body pre { background-color: var(--bg-creme-50); border: 1px solid var(--bg-creme-200); padding: 1rem; border-radius: 0.5rem; overflow-x: auto; margin-bottom: 1.25rem; font-family: monospace; font-size: 0.875rem; }
+
+        /* Interactive Language Selector Toggle */
+        .lang-toggle-btn { transition: all 0.2s ease-in-out; }
+        .lang-toggle-btn.active { background-color: var(--text-navy-900); color: var(--bg-creme-100); }
+        .lang-toggle-btn:not(.active):hover { background-color: var(--bg-creme-200); }
+
+        .hidden-lang { display: none !important; }
+    </style>
+</head>
+<body class="bg-creme-100 text-navy-900 font-sans antialiased min-h-screen flex flex-col justify-between">
+
+    <!-- Header Navigation -->
+    <header class="w-full bg-white border-b border-creme-200 py-6 px-6 shadow-sm">
+        <div class="max-w-4xl mx-auto flex items-center justify-between">
+            <a href="../index.html" class="text-lg font-bold text-navy-900 hover:underline">
+                Alan Pruitt
+            </a>
+            <nav class="flex items-center space-x-6">
+                <a href="../index.html" class="text-sm font-semibold text-navy-800 hover:text-navy-900 hover:underline">Home</a>
+                <a href="index.html" class="text-sm font-semibold text-navy-900 hover:underline">Articles</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="w-full max-w-3xl mx-auto px-6 py-10 flex-grow">
+        
+        <!-- Language Switcher Bar -->
+        <div class="flex justify-end mb-8">
+            <div class="inline-flex rounded-lg bg-creme-200 p-1" style="margin-left: auto;">
+                <button onclick="setLanguage('en')" id="btn-en" class="lang-toggle-btn active text-xs font-semibold px-3 py-1 rounded-md outline-none cursor-pointer">
+                    English
+                </button>
+                <button onclick="setLanguage('es')" id="btn-es" class="lang-toggle-btn text-xs font-semibold px-3 py-1 rounded-md outline-none cursor-pointer">
+                    Español
+                </button>
+            </div>
+        </div>
+
+        <article class="bg-white p-8 rounded-2xl border border-creme-200 shadow-sm">
+            
+            <!-- Metadata Header -->
+            <div class="flex flex-wrap items-center gap-3 mb-6 text-xs font-mono text-navy-800">
+                <span class="px-2.5 py-1 bg-navy-900 text-creme-100 font-bold rounded-md">ESSAY 22</span>
+                <span>August 2026</span>
+                <span aria-hidden="true">•</span>
+                <span>5 min read</span>
+                <span aria-hidden="true">•</span>
+                <span class="text-green-700 font-semibold">Source: Markdown SSoT</span>
+            </div>
+
+            <!-- English Title Header -->
+            <div data-lang="en">
+                <h1 class="text-3xl md:text-4xl font-bold text-navy-900 mb-6 leading-tight">
+                    Foundational Human Movement in the Algorithmic Age: PAGA 2018 SSoT & Community Inactivity Interventions
+                </h1>
+            </div>
+
+            <!-- Spanish Title Header -->
+            <div data-lang="es" class="hidden-lang">
+                <h1 class="text-3xl md:text-4xl font-bold text-navy-900 mb-6 leading-tight">
+                    El Movimiento Humano Fundamental en la Era Algorítmica: PAGA 2018 SSoT e Intervenciones de Inactividad Comunitaria
+                </h1>
+            </div>
+
+            <hr class="border-creme-200 mb-8" />
+
+            <!-- English Article Content -->
+            <div class="article-body" data-lang="en">
+                <blockquote>
+                    <strong>TL;DR:</strong> How EXW101 deploys Curriculum-as-Code, the federal PAGA 2018 SSoT, and the Mission Loop framework to deconstruct systemic inactivity patterns and build community-level health interventions in rural borderland regions.
+                </blockquote>
+
+                <p>
+                    Introductory kinesiology and physical education courses are the front lines of the public health movement. Yet first- and second-year college students enter higher education at a moment of unprecedented physical displacement: average daily sedentary screen time exceeds seven hours, while popular culture equates physical activity exclusively with elite competitive athletics, bodybuilding, or high-cost commercial gyms.
+                </p>
+                <p>
+                    When students are asked to evaluate physical inactivity in their communities, their initial instinct is often framed by commercial fitness narratives: blaming personal willpower, recommending gym memberships, or prompting consumer AI tools for generic workout routines.
+                </p>
+                <p>
+                    Unconstrained Large Language Models exacerbate this distortion. Out-of-the-box AI models routinely generate hyper-individualistic, gym-centric exercise regimens that ignore systemic socioeconomic barriers, built-environment limitations, and federal baseline volume minimums.
+                </p>
+                <p>
+                    In <strong>EXW101 (Concepts of Kinesiology & Physical Education)</strong> for Fall 2026, we close our four-course instructional engineering series by applying <strong>Curriculum-as-Code (CaC)</strong> to foundational movement: anchoring human activity to the federal <strong>PAGA 2018 (2nd Ed.)</strong> Single Source of Truth (SSoT) and deploying the Mission Loop to frame physical inactivity as a solvable public health challenge.
+                </p>
+
+                <h2>1. The Sociological Bottleneck: Modern Sedentary Patterns & Commercial AI Bias</h2>
+                <p>
+                    Introductory kinesiology students must learn to distinguish between personal exercise preferences and population-level movement epidemiology. When exploring human movement without structured guardrails, students and unguided AI tools encounter distinct failure modes:
+                </p>
+                <ul>
+                    <li><strong>The All-or-Nothing Fallacy:</strong> General AI models frequently prescribe intense 60-minute daily fitness routines, reinforcing the false belief that physical activity only "counts" if it occurs in a fitness facility at high intensity, ignoring the federal mandate that *any movement is better than none*.</li>
+                    <li><strong>Ignoring the Built Environment:</strong> Unguided models generate exercise solutions that assume suburban sidewalks, air-conditioned fitness centers, and disposable income, failing to account for rural agricultural schedules, extreme desert heat, or lack of recreational infrastructure.</li>
+                    <li><strong>Historical & Sociological Blind Spots:</strong> Standard chatbots treat inactivity as an isolated personal choice rather than examining the historical shift from occupational physical labor to digital screen-bound sedentary behavior.</li>
+                </ul>
+
+                <pre><code>┌────────────────────────────────────────────────────────────────────────┐
+│                   THE UNGUARDED INACTIVITY HAZARD                      │
+│                                                                        │
+│  [ Student Inquiry ] ──► [ Unanchored Public AI ]                      │
+│                                  │                                     │
+│         ┌────────────────────────┴────────────────────────┐            │
+│         ▼                                                 ▼            │
+│  [ Commercial Gym Bias ]                       [ Willpower-Only Framing ]
+│         │                                                 │            │
+│         └────────────────────────┬────────────────────────┘            │
+│                                  ▼                                     │
+│                 [ Ineffective Community Proposal ]                     │
+│                 • High financial barriers                              │
+│                 • Ignored environmental constraints                    │
+│                 • Unsustainable volume spikes                          │
+└────────────────────────────────────────────────────────────────────────┘</code></pre>
+
+                <h2>2. The Delimiter Protocol & Context Isolation</h2>
+                <p>
+                    The primary mechanism for preventing prompt injection, data leakage, and hallucination drift in EXW101 is our <strong>Delimiter Protocol</strong>.
+                </p>
+                <p>
+                    Students interact with the course AI Tool Kit by wrapping structured community profiles inside explicit triple-hash (<code>###</code>) delimiter blocks:
+                </p>
+
+                <pre><code>### COMMUNITY INACTIVITY PROFILE ###
+Profile ID: Case-EXW101-M03
+Population Focus: Rural Agricultural Workers (Yuma County Borderland)
+Demographic Context: Multi-generational households; shift work (early morning/late afternoon)
+Environmental Factors: Summer daytime temperatures exceeding 105°F; limited municipal park shade
+Current Inactivity Pattern: High occupational musculoskeletal fatigue but low cardiovascular aerobic conditioning; sedentary leisure time (&gt; 5 hrs screen-time/day)
+Identified Barriers: Financial constraints (no commercial gym access); extreme daytime heat; lack of indoor recreational facilities
+Assigned Scope: Design a sustainable, zero-cost community-level physical activity intervention aligned with PAGA 2018 standards
+###</code></pre>
+
+                <h2>3. The AI Auditor System Directive</h2>
+                <p>
+                    To prevent student reliance on unguided AI outputs, the EXW101 AI Tool Kit runs on a rigid, instruction-driven system directive. This directive acts as a Red Team clinical safety auditor, evaluating student meal plans against federal physical activity guidelines:
+                </p>
+                <pre><code>### SYSTEM DIRECTIVE: EXW101 COMMUNITY HEALTH AUDITOR ###
+AUTHORITY (SSoT): Physical Activity Guidelines for Americans (PAGA 2018, 2nd Ed.)
+CONTEXT: Wellness & Physical Education Department — Concepts of Kinesiology Lab
+
+You are the EXW101 Community Health Auditor.
+Evaluate the student's physical activity intervention against the community profile wrapped in the ### delimiters above.
+
+Execute the following verification checks:
+1. Audit PAGA Dosage Alignment: Verify that the proposed intervention facilitates accumulating 150 to 300 minutes/week of moderate-intensity activity without imposing commercial gym requirements.
+2. Audit Environmental & Heat Safety: Flag any outdoor exercise recommendations scheduled during peak heat hours (10:00 AM - 6:00 PM) in extreme desert climates.
+3. Validate Socioeconomic Feasibility: Ensure the strategy requires zero paid equipment or facility fees, utilizing home-based movement, workplace walking corridors, or shaded municipal facilities.
+4. Output Safety & Feasibility Verdict: Output "RECALIBRATE" if the proposal imposes financial barriers or ignores environmental constraints. Output "COMMUNITY INTERVENTION VERIFIED" when the plan meets PAGA equity standards.
+###</code></pre>
+
+                <h2>4. The Mission Loop in Community Health Problem Solving</h2>
+                <p>
+                    In concepts of kinesiology education, evaluating community-level inactivity and physical barriers requires a repeatable, objective analytical framework.
+                </p>
+                <p>
+                    In <strong>EXW101</strong>, students apply the <strong>Mission Loop (Pattern / Rule / Solve)</strong> to break through commercial narratives and build accessible, SSoT-aligned physical activity plans:
+                </p>
+                <pre><code>┌────────────────────────────────────────────────────────────────────────┐
+│                   THE MISSION LOOP KINESIOLOGY PIPELINE                │
+│                                                                        │
+│  [ PATTERN ] ──► Identify sedentary habits, built barriers & schedules │
+│        │                                                               │
+│        ▼                                                               │
+│  [  RULE   ] ──► Apply federal PAGA 2018 dosage & intensity baselines │
+│        │                                                               │
+│        ▼                                                               │
+│  [  SOLVE  ] ──► Design accessible, zero-cost community interventions  │
+└────────────────────────────────────────────────────────────────────────┘</code></pre>
+
+                <h2>5. The AI Auditor & Deterministic Verification Logic</h2>
+                <p>
+                    To prevent student reliance on hallucinated AI responses, the EXW101 AI Tool Kit operates not as an open-ended conversationalist, but as a rigid <strong>Red Team Clinical Safety Auditor</strong>.
+                </p>
+                <p>
+                    When a student submits their proposed exercise protocol alongside the delimited client profile, the auditor executes an automated decision tree:
+                </p>
+                <pre><code>[ Ingest ### Profile ### ]
+                                  │
+                                  ▼
+                [ Check 1: Economic & Equipment Gate ]
+                  ├── FAIL (Requires paid gym / costly gear) ──► Tier: RECALIBRATE
+                  └── PASS (Zero-cost, accessible design)
+                                  │
+                                  ▼
+                [ Check 2: Environmental & Climate Safety ]
+                  ├── FAIL (Ignores extreme heat / unshaded hours) ──► Tier: RECALIBRATE
+                  └── PASS (Early morning / indoor / shaded routing)
+                                  │
+                                  ▼
+                [ Check 3: PAGA Dosage & Cumulative Volume ]
+                  ├── Unrealistic volume spike (&gt;300 min start) ──► Tier: RECALIBRATE
+                  ├── Minor pacing or schedule variance ──► Tier: COMPETENT
+                  └── 100% PAGA Alignment & Equitable Design ──► Tier: EXEMPLARY</code></pre>
+
+                <h2>6. The Complete Curriculum-as-Code Course Fleet</h2>
+                <p>
+                    By integrating deterministic AI safety auditors, delimiter encapsulation rules, and evidence-based federal Single Sources of Truth, the concepts of kinesiology program completes its curriculum-as-code deployment across the entire academic pathway:
+                </p>
+                <pre><code>┌────────────────────────────────────────────────────────────────────────┐
+│             THE COMPLETE CURRICULUM-AS-CODE COURSE FLEET               │
+│                                                                        │
+│   EXW101: Foundational Movement & Community Health (PAGA SSoT)         │
+│     │                                                                  │
+│     ├──► EXW150: Sports Nutrition & Whole-Food Systems (PAGA/DGA SSoT) │
+│     │                                                                  │
+│     ├──► EXW245: Ergometer Scaffolding & Lab Testing (ACSM/PAGA SSoT)  │
+│     │                                                                  │
+│     └──► EXW265: Deterministic Clinical Guardrails (PAGA SSoT)         │
+└────────────────────────────────────────────────────────────────────────┘</code></pre>
+
+                <h2>Academic Citation & Attribution</h2>
+                <pre><code>@article{pruitt2026foundationalmovement,
+  author    = {Alan Pruitt},
+  title     = {Foundational Human Movement in the Algorithmic Age: PAGA 2018 SSoT & Community Inactivity Interventions},
+  journal   = {Curriculum-as-Code Publication Series},
+  year      = {2026},
+  month     = {aug},
+  number    = {22},
+  url       = {https://alanpruitt.com/articles/22-foundational-human-movement-in-the-algorithmic-age.html},
+  publisher = {Webcognita LLC}
+}</code></pre>
+            </div>
+
+            <!-- Spanish Article Content -->
+            <div class="article-body hidden-lang" data-lang="es">
+                <blockquote>
+                    <strong>TL;DR:</strong> Cómo EXW101 utiliza Currículum como Código, el estándar federal PAGA 2018 SSoT y el Bucle de Misión para deconstruir la inactividad sistémica y diseñar intervenciones de salud comunitaria en regiones fronterizas rurales.
+                </blockquote>
+
+                <p>
+                    Los cursos introductorios de kinesiología y educación física son las líneas del frente del movimiento de salud pública. Sin embargo, los estudiantes universitarios de primer y segundo año ingresan a la educación superior en un momento de desplazamiento físico sin precedentes: el tiempo de pantalla sedentario promedio diario supera las siete horas, mientras que la cultura popular equipara la actividad física exclusivamente con el atletismo competitivo de élite, el culturismo estético o los gimnasios comerciales de alto costo.
+                </p>
+                <p>
+                    Cuando se les pide a los estudiantes que evalúen la inactividad física en sus comunidades, su intuición inicial a menudo está enmarcada por narrativas de fitness comercial: culpar a la fuerza de voluntad personal, recomendar membresías de gimnasios o consultar herramientas de IA de consumo para rutinas de ejercicio genéricas.
+                </p>
+                <p>
+                    Los modelos de lenguaje grande no restringidos aumentan esta distorsión. Fuera de la caja, los modelos de IA generan rutinariamente regímenes de ejercicio hiperindividualistas y centrados en el gimnasio que ignoran las barreras socioeconómicas sistémicas, las limitaciones del entorno construido y los mínimos de volumen de referencia federales.
+                </p>
+                <p>
+                    En <strong>EXW101 (Conceptos de Kinesiología y Educación Física)</strong> para el otoño de 2026, cerramos nuestra serie de ingeniería de instrucción de cuatro cursos aplicando **Currículum como Código (CaC)** al movimiento fundamental: anclando la actividad humana a la Fuente Única de Verdad (SSoT) federal **PAGA 2018 (2ª Ed.)** y desplegando el Bucle de Misión para enmarcar la inactividad física como un desafío de salud pública solucionable.
+                </p>
+
+                <h2>1. El cuello de botella sociológico: patrones sedentarios modernos y sesgo de la IA comercial</h2>
+                <p>
+                    Los estudiantes de kinesiología introductoria deben aprender a distinguir entre las preferencias de ejercicio personal y la epidemiología del movimiento a nivel de población. Al explorar el movimiento humano sin barreras estructuradas, los estudiantes y las herramientas de IA no guiadas encuentran distintos modos de falla:
+                </p>
+                <ul>
+                    <li><strong>La Falacia de Todo o Nada:</strong> Los modelos generales de IA prescriben con frecuencia rutinas de acondicionamiento físico diarias intensas de 60 minutos, lo que refuerza la creencia falsa de que la actividad física solo "cuenta" si ocurre en un gimnasio a alta intensidad, ignorando el mandato federal de que *cualquier movimiento es mejor que ninguno*.</li>
+                    <li><strong>Ignorar el Entorno Construido:</strong> Los modelos no guiados generan soluciones de ejercicio que asumen aceras suburbanas, gimnasios con aire acondicionado e ingresos disponibles, sin tener en cuenta los horarios agrícolas rurales, el calor extremo del desierto o la falta de infraestructura recreativa.</li>
+                    <li><strong>Puntos Ciegos Históricos y Sociológicos:</strong> Los chatbots estándar tratan la inactividad como una elección personal aislada en lugar de examinar el cambio histórico del trabajo físico ocupacional al comportamiento sedentario digital ligado a la pantalla.</li>
+                </ul>
+
+                <pre><code>┌────────────────────────────────────────────────────────────────────────┐
+│                   EL PELIGRO DE LA INACTIVIDAD NO PROTEGIDA            │
+│                                                                        │
+│  [ Consulta del Estudiante ] ──► [ IA Pública sin Anclaje ]           │
+│                                  │                                     │
+│         ┌────────────────────────┴────────────────────────┐            │
+│         ▼                                                 ▼            │
+│  [ Sesgo de Gimnasio Comercial ]             [ Enfoque Solo Fuerza Voluntad ]
+│         │                                                 │            │
+│         └────────────────────────┬────────────────────────┘            │
+│                                  ▼                                     │
+│                 [ Propuesta Comunitaria Ineficaz ]                     │
+│                 • Altas barreras financieras                           │
+│                 • Limitaciones ambientales ignoradas                   │
+│                 • Picos de volumen insostenibles                       │
+└────────────────────────────────────────────────────────────────────────┘</code></pre>
+
+                <h2>2. El protocolo de delimitadores e aislamiento del contexto</h2>
+                <p>
+                    El mecanismo principal para prevenir la inyección de prompts, la fuga de datos y la deriva de alucinaciones en EXW101 es nuestro <strong>Protocolo de Delimitadores</strong>.
+                </p>
+                <p>
+                    Los estudiantes interactúan con el kit de herramientas de IA del curso envolviendo los perfiles comunitarios estructurados dentro de bloques delimitadores explícitos de tres almohadillas (<code>###</code>):
+                </p>
+
+                <pre><code>### PERFIL DE INACTIVIDAD COMUNITARIA ###
+ID del Perfil: Case-EXW101-M03
+Enfoque de Población: Trabajadores Agrícolas Rurales (Frontera del Condado de Yuma)
+Contexto Demográfico: Hogares multigeneracionales; trabajo por turnos (temprano en la mañana/tarde en la tarde)
+Factores Ambientales: Temperaturas diurnas de verano que superan los 105°F; sombra limitada en parques municipales
+Patrón de Inactividad Actual: Alta fatiga musculoesquelética ocupacional pero bajo acondicionamiento aeróbico cardiovascular; tiempo de ocio sedentario (&gt; 5 horas de tiempo de pantalla al día)
+Barreras Identificadas: Limitaciones financieras (sin acceso a gimnasios comerciales); calor diurno extremo; falta de instalaciones recreativas interiores
+Alcance Asignado: Diseñar una intervención de actividad física a nivel comunitario sostenible y de costo cero alineada con los estándares PAGA 2018
+###</code></pre>
+
+                <h2>3. La directiva del sistema del auditor de IA</h2>
+                <p>
+                    Para evitar que los estudiantes dependan de los resultados de la IA no guiada, el kit de herramientas de IA de EXW101 funciona con una directiva de sistema rígida y basada en instrucciones. Esta directiva actúa como un auditor de seguridad clínica Red Team, evaluando los planes de comidas de los estudiantes frente a las pautas de actividad física federales:
+                </p>
+                <pre><code>### DIRECTIVA DEL SISTEMA: AUDITOR DE SALUD COMUNITARIA EXW101 ###
+AUTORIDAD (SSoT): Directrices de Actividad Física para Estadounidenses (PAGA 2018, 2ª Ed.)
+CONTEXTO: Departamento de Bienestar y Educación Física — Laboratorio de Conceptos de Kinesiología
+
+Usted es el Auditor de Salud Comunitaria EXW101.
+Evalúe la intervención de actividad física del estudiante frente al perfil de la comunidad envuelto en los delimitadores ### anteriores.
+
+Ejecute las siguientes comprobaciones de verificación:
+1. Auditar la Alineación de Dosis de PAGA: Verificar que la intervención propuesta facilite la acumulación de 150 a 300 minutos/semana de actividad de intensidad moderada sin imponer requisitos de gimnasios comerciales.
+2. Auditar la Seguridad Ambiental y del Calor: Señalar cualquier recomendación de ejercicio al aire libre programada durante las horas de calor máximo (10:00 AM - 6:00 PM) en climas desérticos extremos.
+3. Validar la Viabilidad Socioeconómica: Asegurar que la estrategia requiera cero equipos pagos o tarifas de instalaciones, utilizando el movimiento en el hogar, los pasillos para caminar en el lugar de trabajo o las instalaciones municipales sombreadas.
+4. Emitir el Veredicto de Seguridad y Viabilidad: Imprimir "RECALIBRAR" si la propuesta impone barreras financieras o ignora las limitaciones ambientales. Imprimir "INTERVENCIÓN COMUNITARIA VERIFICADA" cuando el plan cumpla con los estándares de equidad de PAGA.
+###</code></pre>
+
+                <h2>4. El Bucle de Misión (Mission Loop) en la resolución de problemas de salud comunitaria</h2>
+                <p>
+                    En la educación en conceptos de kinesiología, evaluar la inactividad a nivel comunitario y las barreras físicas requiere un marco analítico repetible y objetivo.
+                </p>
+                <p>
+                    En <strong>EXW101</strong>, los estudiantes aplican el <strong>Bucle de Misión (Patrón / Regla / Resolver)</strong> para romper con las narrativas comerciales y construir planes de actividad física accesibles y alineados con SSoT:
+                </p>
+                <pre><code>┌────────────────────────────────────────────────────────────────────────┐
+│             EL PIPELINE DE KINESIOLOGÍA DEL BUCLE DE MISIÓN            │
+│                                                                        │
+│  [ PATRÓN ] ──► Identificar hábitos, barreras construidas y horarios   │
+│        │                                                               │
+│        ▼                                                               │
+│  [  REGLA  ] ──► Aplicar dosis y niveles de intensidad PAGA 2018      │
+│        │                                                               │
+│        ▼                                                               │
+│  [RESOLVER ] ──► Diseñar intervenciones comunitarias accesibles        │
+└────────────────────────────────────────────────────────────────────────┘</code></pre>
+
+                <h2>5. El auditor de IA y la lógica de verificación determinista</h2>
+                <p>
+                    Para evitar que los estudiantes dependan de respuestas de IA alucinadas, el kit de herramientas de IA de EXW101 funciona no como un conversador abierto, sino como un **Auditor de Seguridad Clínica Red Team** rígido.
+                </p>
+                <p>
+                    Cuando un estudiante presenta su protocolo de ejercicio propuesto junto con el perfil de la comunidad delimitado, el auditor ejecuta un árbol de decisiones automatizado:
+                </p>
+                <pre><code>[ Ingestión del Perfil ### ]
+                                  │
+                                  ▼
+                [ Verificación 1: Entrada Económica y de Equipamiento ]
+                   ├── FALLA (Requiere gimnasio pago / equipo costoso) ──► Nivel: RECALIBRAR
+                   └── PASA (Diseño de costo cero, accesible)
+                                  │
+                                  ▼
+                [ Verificación 2: Seguridad Ambiental y Climática ]
+                   ├── FALLA (Ignora el calor extremo / horas sin sombra) ──► Nivel: RECALIBRAR
+                   └── PASA (Rutas temprano en la mañana / interior / sombra)
+                                  │
+                                  ▼
+                [ Verificación 3: Dosis PAGA y Volumen Acumulado ]
+                   ├── Pico de volumen poco realista (&gt;300 min inicio) ──► Nivel: RECALIBRAR
+                   ├── Varianza menor en el ritmo o el horario ──► Nivel: COMPETENTE
+                   └── 100% de Alineación PAGA y Diseño Equitativo ──► Nivel: EJEMPLAR</code></pre>
+
+                <h2>6. La flota completa de cursos de Currículum como Código</h2>
+                <p>
+                    Al integrar auditores de seguridad de IA deterministas, reglas de encapsulación de delimitadores y Fuentes Únicas de Verdad federales basadas en evidencia, el programa de conceptos de kinesiología completa su implementación de currículum como código en toda la ruta académica:
+                </p>
+                <pre><code>┌────────────────────────────────────────────────────────────────────────┐
+│             LA FLOTA COMPLETA DE CURSOS DE CURRÍCULUM COMO CÓDIGO      │
+│                                                                        │
+│   EXW101: Movimiento Fundamental y Salud Comunitaria (SSoT PAGA)      │
+│     │                                                                  │
+│     ├──► EXW150: Nutrición Deportiva y Alimentos Integrales (SSoT DGA)  │
+│     │                                                                  │
+│     ├──► EXW245: Andamiaje de Ergómetros y Pruebas (SSoT ACSM/PAGA)    │
+│     │                                                                  │
+│     └──► EXW265: Límites Clínicos Deterministas (SSoT PAGA)            │
+└────────────────────────────────────────────────────────────────────────┘</code></pre>
+
+                <h2>Citación Académica y Atribución</h2>
+                <pre><code>@article{pruitt2026foundationalmovement,
+  author    = {Alan Pruitt},
+  title     = {Foundational Human Movement in the Algorithmic Age: PAGA 2018 SSoT & Community Inactivity Interventions},
+  journal   = {Curriculum-as-Code Publication Series},
+  year      = {2026},
+  month     = {aug},
+  number    = {22},
+  url       = {https://alanpruitt.com/articles/22-foundational-human-movement-in-the-algorithmic-age.html},
+  publisher = {Webcognita LLC}
+}</code></pre>
+            </div>
+
+            <!-- Article Footer Navigation -->
+            <footer class="mt-12 pt-6 border-t border-creme-100 flex items-center justify-between">
+                <a href="index.html" class="text-sm font-semibold text-navy-900 hover:underline inline-flex items-center gap-1">
+                    &larr; Back to Articles
+                </a>
+                <a href="https://www.linkedin.com/in/alanpruitt/recent-activity/all/" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-navy-800 hover:text-navy-900 hover:underline inline-flex items-center gap-1">
+                    View on LinkedIn ↗
+                </a>
+            </footer>
+
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full bg-navy-900 text-creme-200 py-8 px-6 text-center text-xs border-t border-navy-950">
+        <p class="mb-2">© 2026 Alan Pruitt • All Rights Reserved.</p>
+        <p class="opacity-75">Instructional Design, AI Pedagogy & Curriculum Architecture</p>
+    </footer>
+
+    <!-- Toggle Script -->
+    <script>
+        function setLanguage(lang) {
+            const elements = document.querySelectorAll('[data-lang]');
+            elements.forEach(el => {
+                if (el.getAttribute('data-lang') === lang) {
+                    el.classList.remove('hidden-lang');
+                } else {
+                    el.classList.add('hidden-lang');
+                }
+            });
+
+            // Update button states
+            document.querySelectorAll('.lang-toggle-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.getElementById('btn-' + lang).classList.add('active');
+        }
+    </script>
+</body>
+</html>
