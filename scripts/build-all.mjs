@@ -181,6 +181,130 @@ function buildGlobal404(routingMap) {
 </html>`;
 }
 
+function buildSitemap(essays) {
+  const urls = [
+    `  <url>\n    <loc>${SITE_ORIGIN}/</loc>\n    <changefreq>weekly</changefreq>\n    <priority>1.0</priority>\n  </url>`,
+    ...essays.map(essay => `  <url>\n    <loc>${essay.canonicalUrl}</loc>\n    <lastmod>${essay.date}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.8</priority>\n  </url>`)
+  ];
+
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${urls.join('\n')}
+</urlset>`;
+}
+
+function buildRss(essays) {
+  const items = essays.map(essay => `    <item>
+      <title>${escapeXml(essay.title)}</title>
+      <link>${essay.canonicalUrl}</link>
+      <guid isPermaLink="true">${essay.canonicalUrl}</guid>
+      <pubDate>${new Date(essay.date).toUTCString()}</pubDate>
+      <description>${escapeXml(essay.summary)}</description>
+    </item>`).join('\n');
+
+  return `<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Coach Alan Pruitt — Essays &amp; Curriculum Architecture</title>
+    <link>${SITE_ORIGIN}</link>
+    <description>Algorithmic pedagogy, curriculum architecture, and generative AI strategy.</description>
+    <language>en-us</language>
+    <atom:link href="${SITE_ORIGIN}/rss.xml" rel="self" type="application/rss+xml" />
+${items}
+  </channel>
+</rss>`;
+}
+
+function buildJsonFeed(essays) {
+  const feed = {
+    version: "https://jsonfeed.org/version/1.1",
+    title: "Coach Alan Pruitt — Essays & Curriculum Architecture",
+    home_page_url: SITE_ORIGIN,
+    feed_url: `${SITE_ORIGIN}/feed.json`,
+    description: "Algorithmic pedagogy, curriculum architecture, and generative AI strategy.",
+    authors: [
+      {
+        name: "Coach Alan Pruitt",
+        url: SITE_ORIGIN
+      }
+    ],
+    items: essays.map(essay => ({
+      id: essay.canonicalUrl,
+      url: essay.canonicalUrl,
+      title: essay.title,
+      summary: essay.summary,
+      date_published: new Date(essay.date).toISOString(),
+      content_html: essay.body.replace(/\n\n/g, '<p>').replace(/\n/g, '<br>')
+    }))
+  };
+
+  return JSON.stringify(feed, null, 2);
+}
+
+function generateArchiveHtml(essays) {
+  const essayListHtml = essays.map(essay => `
+    <article style="margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid #E5E0D8;">
+      <h3 style="margin-bottom: 6px;">
+        <a href="${essay.canonicalUrl}" style="color: #0E3D73; text-decoration: underline; font-weight: 700;">
+          ${escapeXml(essay.title)}
+        </a>
+      </h3>
+      <p style="margin: 0 0 8px 0; color: #555555; font-size: 0.85rem;">
+        Published: ${essay.date}
+      </p>
+      <p style="margin: 0; color: #222222; font-size: 0.95rem; line-height: 1.5;">
+        ${escapeXml(essay.summary)}
+      </p>
+    </article>
+  `).join('\n');
+
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Essays & Articles | Coach Alan</title>
+  <meta name="description" content="Complete archive of essays, curriculum architecture frameworks, and algorithmic pedagogy writings.">
+  <link rel="canonical" href="${SITE_ORIGIN}/essays/">
+  
+  <style>
+    :root {
+      --bg-cream: #FDFBF7;
+      --navy-dark: #1B2A4A;
+      --text-main: #222222;
+      --link-accent: #0E3D73;
+    }
+    body {
+      background-color: var(--bg-cream);
+      color: var(--text-main);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.6;
+      max-width: 780px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    h2, h3 { color: var(--navy-dark); }
+    a { color: var(--link-accent); }
+    nav a { margin-right: 15px; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <header style="margin-bottom: 30px;">
+    <nav style="margin-bottom: 20px;">
+      <a href="/">← Home</a>
+    </nav>
+    <h2>All Essays &amp; Articles</h2>
+    <p style="color: #555555; font-size: 1rem;">
+      Curriculum Architecture, Algorithmic Pedagogy &amp; Generative AI Strategy.
+    </p>
+  </header>
+  <main>
+    ${essayListHtml}
+  </main>
+</body>
+</html>`;
+}
+
 function run() {
   if (!existsSync(DIST_DIR)) mkdirSync(DIST_DIR, { recursive: true });
   if (!existsSync(CONTENT_DIR)) {
@@ -233,11 +357,32 @@ function run() {
     console.log(`✅ Indexed ${primarySlug} -> [${allSlugs.join(', ')}]`);
   }
 
+  // Sort newest first for chronological feed delivery
+  essays.sort((a, b) => new Date(b.date) - new Date(a.date));
+
   // Generate Global SPA 404 Fallback Router
   writeFileSync(resolve(DIST_DIR, '404.html'), buildGlobal404(routingMap), 'utf-8');
   console.log('🛡️ Generated: _site/404.html (Universal routing safeguard)');
 
-  console.log('\n Dual-Route generation complete for Essays 1–18 and future modules.\n');
+  // 1. Sitemap
+  writeFileSync(resolve(DIST_DIR, 'sitemap.xml'), buildSitemap(essays), 'utf-8');
+  console.log('🗺️ Generated: _site/sitemap.xml');
+
+  // 2. RSS Feed (v2.0)
+  writeFileSync(resolve(DIST_DIR, 'rss.xml'), buildRss(essays), 'utf-8');
+  console.log('📡 Generated: _site/rss.xml');
+
+  // 3. JSON Feed (v1.1)
+  writeFileSync(resolve(DIST_DIR, 'feed.json'), buildJsonFeed(essays), 'utf-8');
+  console.log('📄 Generated: _site/feed.json');
+
+  // 4. Archive HTML Page
+  const essaysDir = resolve(DIST_DIR, 'essays');
+  if (!existsSync(essaysDir)) mkdirSync(essaysDir, { recursive: true });
+  writeFileSync(resolve(essaysDir, 'index.html'), generateArchiveHtml(essays), 'utf-8');
+  console.log('📚 Generated: _site/essays/index.html (Archive Page)');
+
+  console.log('\n🎉 Dual-Route generation and syndication builds complete.\n');
 }
 
 run();
