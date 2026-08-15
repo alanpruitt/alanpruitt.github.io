@@ -84,8 +84,8 @@ function run() {
   const canonicalUrl = `${SITE_ORIGIN}/essays/${slug}`;
   metadata.canonicalUrl = canonicalUrl;
 
-  // Build target static directory: dist/essays/{slug}/index.html
-  const outDir = resolve(`dist/essays/${slug}`);
+  // Resolves directly to the root /essays directory for GitHub Pages
+  const outDir = resolve(`essays/${slug}`);
   if (!existsSync(outDir)) {
     mkdirSync(outDir, { recursive: true });
   }
@@ -102,7 +102,7 @@ function run() {
 
   // Print standardized distribution copy blocks
   console.log('\n======================================================');
-  console.log(`✅ Build Complete: dist/essays/${slug}/index.html`);
+  console.log(`✅ Build Complete: essays/${slug}/index.html`);
   console.log(`🔗 Canonical SSoT: ${canonicalUrl}`);
   console.log('======================================================\n');
 
