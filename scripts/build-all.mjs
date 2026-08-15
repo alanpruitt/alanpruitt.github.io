@@ -360,6 +360,12 @@ function run() {
   // Sort newest first for chronological feed delivery
   essays.sort((a, b) => new Date(b.date) - new Date(a.date));
 
+  // Register Archive Routes in Universal Router Table
+  routingMap['articles'] = `${SITE_ORIGIN}/essays/`;
+  routingMap['articles/index.html'] = `${SITE_ORIGIN}/essays/`;
+  routingMap['essays'] = `${SITE_ORIGIN}/essays/`;
+  routingMap['essays/index.html'] = `${SITE_ORIGIN}/essays/`;
+
   // Generate Global SPA 404 Fallback Router
   writeFileSync(resolve(DIST_DIR, '404.html'), buildGlobal404(routingMap), 'utf-8');
   console.log('🛡️ Generated: _site/404.html (Universal routing safeguard)');
@@ -376,11 +382,17 @@ function run() {
   writeFileSync(resolve(DIST_DIR, 'feed.json'), buildJsonFeed(essays), 'utf-8');
   console.log('📄 Generated: _site/feed.json');
 
-  // 4. Archive HTML Page
+  // 1. Build Primary Archive: _site/essays/index.html
   const essaysDir = resolve(DIST_DIR, 'essays');
   if (!existsSync(essaysDir)) mkdirSync(essaysDir, { recursive: true });
   writeFileSync(resolve(essaysDir, 'index.html'), generateArchiveHtml(essays), 'utf-8');
-  console.log('📚 Generated: _site/essays/index.html (Archive Page)');
+  console.log('📚 Generated Archive: _site/essays/index.html');
+
+  // 2. Build Alias / Backward-Compatible Archive: _site/articles/index.html
+  const articlesDir = resolve(DIST_DIR, 'articles');
+  if (!existsSync(articlesDir)) mkdirSync(articlesDir, { recursive: true });
+  writeFileSync(resolve(articlesDir, 'index.html'), generateArchiveHtml(essays), 'utf-8');
+  console.log('📚 Generated Alias Archive: _site/articles/index.html');
 
   console.log('\n🎉 Dual-Route generation and syndication builds complete.\n');
 }
