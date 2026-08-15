@@ -3,7 +3,7 @@ import { resolve, join, basename } from 'path';
 
 const SITE_ORIGIN = 'https://alanpruitt.com';
 const CONTENT_DIR = resolve('content/essays');
-const DIST_DIR = resolve('_site');
+const DIST_DIR = resolve('.');
 
 function parseFrontmatter(rawContent) {
   const match = rawContent.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
@@ -368,31 +368,31 @@ function run() {
 
   // Generate Global SPA 404 Fallback Router
   writeFileSync(resolve(DIST_DIR, '404.html'), buildGlobal404(routingMap), 'utf-8');
-  console.log('🛡️ Generated: _site/404.html (Universal routing safeguard)');
+  console.log('🛡️ Generated: 404.html (Universal routing safeguard)');
 
   // 1. Sitemap
   writeFileSync(resolve(DIST_DIR, 'sitemap.xml'), buildSitemap(essays), 'utf-8');
-  console.log('🗺️ Generated: _site/sitemap.xml');
+  console.log('🗺️ Generated: sitemap.xml');
 
   // 2. RSS Feed (v2.0)
   writeFileSync(resolve(DIST_DIR, 'rss.xml'), buildRss(essays), 'utf-8');
-  console.log('📡 Generated: _site/rss.xml');
+  console.log('📡 Generated: rss.xml');
 
   // 3. JSON Feed (v1.1)
   writeFileSync(resolve(DIST_DIR, 'feed.json'), buildJsonFeed(essays), 'utf-8');
-  console.log('📄 Generated: _site/feed.json');
+  console.log('📄 Generated: feed.json');
 
-  // 1. Build Primary Archive: _site/essays/index.html
+  // 1. Build Primary Archive: essays/index.html
   const essaysDir = resolve(DIST_DIR, 'essays');
   if (!existsSync(essaysDir)) mkdirSync(essaysDir, { recursive: true });
   writeFileSync(resolve(essaysDir, 'index.html'), generateArchiveHtml(essays), 'utf-8');
-  console.log('📚 Generated Archive: _site/essays/index.html');
+  console.log('📚 Generated Archive: essays/index.html');
 
-  // 2. Build Alias / Backward-Compatible Archive: _site/articles/index.html
+  // 2. Build Alias / Backward-Compatible Archive: articles/index.html
   const articlesDir = resolve(DIST_DIR, 'articles');
   if (!existsSync(articlesDir)) mkdirSync(articlesDir, { recursive: true });
   writeFileSync(resolve(articlesDir, 'index.html'), generateArchiveHtml(essays), 'utf-8');
-  console.log('📚 Generated Alias Archive: _site/articles/index.html');
+  console.log('📚 Generated Alias Archive: articles/index.html');
 
   console.log('\n🎉 Dual-Route generation and syndication builds complete.\n');
 }
