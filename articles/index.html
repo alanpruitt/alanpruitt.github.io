@@ -1,45 +1,122 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-full scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>All Essays & Articles | Coach Alan</title>
-  <meta name="description" content="Complete archive of essays, curriculum architecture frameworks, and algorithmic pedagogy writings.">
-  <link rel="canonical" href="https://alanpruitt.com/essays/">
-  
-  <style>
-    :root {
-      --bg-cream: #FDFBF7;
-      --navy-dark: #1B2A4A;
-      --text-main: #222222;
-      --link-accent: #0E3D73;
-    }
-    body {
-      background-color: var(--bg-cream);
-      color: var(--text-main);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      line-height: 1.6;
-      max-width: 780px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-    h2, h3 { color: var(--navy-dark); }
-    a { color: var(--link-accent); }
-    nav a { margin-right: 15px; font-weight: 600; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum-as-Code Articles & Essays | Alan Pruitt</title>
+    <meta name="description" content="Archive of Curriculum-as-Code essays and AI strategy writings by Alan Pruitt.">
+    <style>
+        :root {
+            --bg-creme-100: #F5F5F0;
+            --bg-creme-200: #E6E6DC;
+            --text-navy-800: #1E3E62;
+            --text-navy-900: #0B192C;
+        }
+        *, ::before, ::after { box-sizing: border-box; border-width: 0; }
+        html { line-height: 1.5; font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+        body { margin: 0; background-color: var(--bg-creme-100); color: var(--text-navy-900); padding: 2rem 1rem; }
+        .max-w-4xl { max-width: 56rem; margin: 0 auto; }
+        .bg-white { background-color: #ffffff; }
+        .p-8 { padding: 2rem; }
+        .rounded-2xl { border-radius: 1rem; }
+        .border { border: 1px solid var(--bg-creme-200); }
+        .border-b { border-bottom: 1px solid var(--bg-creme-200); }
+        .mb-2 { margin-bottom: 0.5rem; }
+        .mb-6 { margin-bottom: 1.5rem; }
+        .mb-8 { margin-bottom: 2rem; }
+        .pb-6 { padding-bottom: 1.5rem; }
+        .font-mono { font-family: monospace; }
+        .text-xs { font-size: 0.75rem; }
+        .text-sm { font-size: 0.875rem; }
+        .text-xl { font-size: 1.25rem; }
+        .text-3xl { font-size: 1.875rem; }
+        .font-bold { font-weight: 700; }
+        a { color: var(--text-navy-900); text-decoration: underline; }
+        a:hover { color: var(--text-navy-800); }
+        .essay-entry { padding: 1.5rem 0; }
+    </style>
 </head>
 <body>
-  <header style="margin-bottom: 30px;">
-    <nav style="margin-bottom: 20px;">
-      <a href="/">← Home</a>
-    </nav>
-    <h2>All Essays &amp; Articles</h2>
-    <p style="color: #555555; font-size: 1rem;">
-      Curriculum Architecture, Algorithmic Pedagogy &amp; Generative AI Strategy.
-    </p>
-  </header>
-  <main>
-    
-  </main>
+    <div class="max-w-4xl">
+        <a href="/" style="display: inline-block; margin-bottom: 1.5rem; font-weight: 600; text-decoration: none;">&larr; Back to alanpruitt.com</a>
+
+        <header class="mb-8 pb-6 border-b">
+            <div class="font-mono text-xs font-bold text-navy-800 uppercase tracking-widest mb-2">ARCHIVE</div>
+            <h1 class="text-3xl font-bold mb-2">Curriculum-as-Code Essays &amp; Articles</h1>
+            <p class="text-sm">Frameworks on algorithmic pedagogy, continuous integration in instructional design, and sovereign AI strategies.</p>
+        </header>
+
+        <main class="bg-white p-8 rounded-2xl border">
+            <!-- ESSAY 18 -->
+            <article class="essay-entry border-b">
+                <div class="font-mono text-xs font-bold mb-1">ESSAY 18</div>
+                <h2 class="text-xl font-bold mb-2">
+                    <a href="18-the-illusion-of-the-feed.html">The Illusion of the Feed: Upstream SSoT &amp; Feed Link Rot Governance</a>
+                </h2>
+                <p class="text-sm mb-2">How relying on dynamic external feeds inside an LMS introduces link rot vulnerabilities, and how upstream SSoT configuration control resolves accessibility issues at the source.</p>
+                <a href="18-the-illusion-of-the-feed.html" class="text-xs font-bold">Read Essay &rarr;</a>
+            </article>
+
+            <!-- ESSAY 17 -->
+            <article class="essay-entry border-b">
+                <div class="font-mono text-xs font-bold mb-1">ESSAY 17</div>
+                <h2 class="text-xl font-bold mb-2">
+                    <a href="17-resolving-array-parsing-script-failures.html">Engineering Resilience: Resolving False-Positive Contrast Errors &amp; Array Failures</a>
+                </h2>
+                <p class="text-sm mb-2">How automated accessibility checkers fail under WYSIWYG visual-editor DOM pollution and how Curriculum-as-Code resolves array parsing failures.</p>
+                <a href="17-resolving-array-parsing-script-failures.html" class="text-xs font-bold">Read Essay &rarr;</a>
+            </article>
+
+            <!-- ESSAY 16 -->
+            <article class="essay-entry border-b">
+                <div class="font-mono text-xs font-bold mb-1">ESSAY 16</div>
+                <h2 class="text-xl font-bold mb-2">
+                    <a href="16-canvas-lms-3-track-ai-branch.html">Canvas LMS 3-Track Self-Guided AI Branch and Bilingual Scaffolding</a>
+                </h2>
+                <p class="text-sm mb-2">Transforming traditional online discussion boards into active, interdisciplinary clinical case conferences across all 16 EXW modules.</p>
+                <a href="16-canvas-lms-3-track-ai-branch.html" class="text-xs font-bold">Read Essay &rarr;</a>
+            </article>
+
+            <!-- ESSAY 15 -->
+            <article class="essay-entry border-b">
+                <div class="font-mono text-xs font-bold mb-1">ESSAY 15</div>
+                <h2 class="text-xl font-bold mb-2">
+                    <a href="15-algorithmic-pedagogy-ci.html">Algorithmic Pedagogy &amp; Continuous Integration: Zero-Regression Learning</a>
+                </h2>
+                <p class="text-sm mb-2">Treating learning outcomes and compliance rules as executable code monitored by CI/CD.</p>
+                <a href="15-algorithmic-pedagogy-ci.html" class="text-xs font-bold">Read Essay &rarr;</a>
+            </article>
+
+            <!-- ESSAY 14 -->
+            <article class="essay-entry border-b">
+                <div class="font-mono text-xs font-bold mb-1">ESSAY 14</div>
+                <h2 class="text-xl font-bold mb-2">
+                    <a href="14-guided-learning-trifecta.html">The Guided Learning Trifecta: AI Simulation, Application &amp; Auditing</a>
+                </h2>
+                <p class="text-sm mb-2">Deploying Google's Guided Learning principles in Curriculum-as-Code via system prompts.</p>
+                <a href="14-guided-learning-trifecta.html" class="text-xs font-bold">Read Essay &rarr;</a>
+            </article>
+
+            <!-- ESSAY 13 -->
+            <article class="essay-entry border-b">
+                <div class="font-mono text-xs font-bold mb-1">ESSAY 13</div>
+                <h2 class="text-xl font-bold mb-2">
+                    <a href="13-vibe-coding-paradigm.html">The Vibe-Coding Paradigm: Speed &amp; Full-Stack Execution in EdTech</a>
+                </h2>
+                <p class="text-sm mb-2">Translating domain expertise directly into production-grade web applications using AI.</p>
+                <a href="13-vibe-coding-paradigm.html" class="text-xs font-bold">Read Essay &rarr;</a>
+            </article>
+
+            <!-- ESSAY 12 -->
+            <article class="essay-entry">
+                <div class="font-mono text-xs font-bold mb-1">ESSAY 12</div>
+                <h2 class="text-xl font-bold mb-2">
+                    <a href="12-mission-loop-architecture.html">The Mission Loop Architecture: Pattern, Rule, and Solve in Coded Instruction</a>
+                </h2>
+                <p class="text-sm mb-2">Structuring deterministic health science problem-solving pipelines that enforce pattern identification.</p>
+                <a href="12-mission-loop-architecture.html" class="text-xs font-bold">Read Essay &rarr;</a>
+            </article>
+        </main>
+    </div>
 </body>
 </html>
