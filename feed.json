@@ -15,8 +15,8 @@
   ],
   "items": [
     {
-      "id": "https://alanpruitt.com/articles/23-the-accessibility-checker-parity-illusion.html",
-      "url": "https://alanpruitt.com/articles/23-the-accessibility-checker-parity-illusion.html",
+      "id": "https://alanpruitt.com/articles/23-accessibility-checker-parity-illusion.html",
+      "url": "https://alanpruitt.com/articles/23-accessibility-checker-parity-illusion.html",
       "title": "The Accessibility Checker Parity Illusion and the Curriculum-as-Code Imperative",
       "summary": "How proprietary accessibility checkers in Canvas LMS, Microsoft Office, and Adobe Acrobat introduce silent structural compliance failures, and why Curriculum-as-Code resolves accessibility translation debt at the source.",
       "date_published": "2026-08-21T00:00:00.000Z",

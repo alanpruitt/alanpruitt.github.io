@@ -19,7 +19,7 @@ const BUILD_DATE = new Date('2026-08-14T22:30:00Z');
 const ESSAYS = [
   {
     id: "23",
-    slug: "23-the-accessibility-checker-parity-illusion",
+    slug: "23-accessibility-checker-parity-illusion",
     title: "The Accessibility Checker Parity Illusion and the Curriculum-as-Code Imperative",
     titleEs: "La Ilusión de Paridad del Verificador de Accesibilidad y el Imperativo del Currículum como Código",
     date: "2026-08-21",
@@ -27,8 +27,8 @@ const ESSAYS = [
     term: "Fall 2026",
     ssot: "ADA Title II / WCAG 2.2 Level AA",
     author: "Alan Pruitt",
-    url: "https://alanpruitt.com/articles/23-the-accessibility-checker-parity-illusion.html",
-    legacyUrl: "https://alanpruitt.com/essays/23-the-accessibility-checker-parity-illusion.html",
+    url: "https://alanpruitt.com/articles/23-accessibility-checker-parity-illusion.html",
+    legacyUrl: "https://alanpruitt.com/essays/23-accessibility-checker-parity-illusion.html",
     tags: ["Accessibility", "WCAG", "CurriculumAsCode", "ADATitleII", "Compliance", "OER"],
     summary: "How proprietary accessibility checkers in Canvas LMS, Microsoft Office, and Adobe Acrobat introduce silent structural compliance failures, and why Curriculum-as-Code resolves accessibility translation debt at the source.",
     summaryEs: "Cómo los verificadores de accesibilidad propietarios en Canvas LMS, Microsoft Office y Adobe Acrobat introducen fallas de cumplimiento estructural silenciosas, y por qué Currículum como Código resuelve la deuda de traducción de accesibilidad en el origen."

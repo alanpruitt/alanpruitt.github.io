@@ -1,14 +1,305 @@
 {
   "version": "https://jsonfeed.org/version/1.1",
-  "title": "Coach Alan Pruitt — Essays & Curriculum Architecture",
-  "home_page_url": "https://alanpruitt.com",
+  "title": "Alan Pruitt | Curriculum-as-Code & AI Strategy",
+  "home_page_url": "https://alanpruitt.com/",
   "feed_url": "https://alanpruitt.com/feed.json",
-  "description": "Algorithmic pedagogy, curriculum architecture, and generative AI strategy.",
+  "description": "Curriculum architecture, algorithmic pedagogy, sovereign AI strategies, and compliance frameworks by Alan Pruitt (Coach Alan).",
+  "user_comment": "This feed allows programmatic consumers to ingest Curriculum-as-Code essays cleanly.",
+  "favicon": "https://alanpruitt.com/assets/og-preview.png",
   "authors": [
     {
-      "name": "Coach Alan Pruitt",
-      "url": "https://alanpruitt.com"
+      "name": "Alan Pruitt",
+      "url": "https://alanpruitt.com",
+      "avatar": "https://alanpruitt.com/assets/Coach-Alan-Sketch-Headshot.webp"
     }
   ],
-  "items": []
+  "items": [
+    {
+      "id": "https://alanpruitt.com/articles/23-accessibility-checker-parity-illusion.html",
+      "url": "https://alanpruitt.com/articles/23-accessibility-checker-parity-illusion.html",
+      "title": "The Accessibility Checker Parity Illusion and the Curriculum-as-Code Imperative",
+      "summary": "How proprietary accessibility checkers in Canvas LMS, Microsoft Office, and Adobe Acrobat introduce silent structural compliance failures, and why Curriculum-as-Code resolves accessibility translation debt at the source.",
+      "date_published": "2026-08-21T00:00:00.000Z",
+      "tags": [
+        "Accessibility",
+        "WCAG",
+        "CurriculumAsCode",
+        "ADATitleII",
+        "Compliance",
+        "OER"
+      ]
+    },
+    {
+      "id": "https://alanpruitt.com/articles/22-foundational-human-movement-in-the-algorithmic-age.html",
+      "url": "https://alanpruitt.com/articles/22-foundational-human-movement-in-the-algorithmic-age.html",
+      "title": "Foundational Human Movement in the Algorithmic Age: PAGA 2018 SSoT & Community Inactivity Interventions",
+      "summary": "How EXW101 deploys Curriculum-as-Code, the federal PAGA 2018 SSoT, and the Mission Loop framework to deconstruct systemic inactivity patterns and build community-level health interventions in rural borderland regions.",
+      "date_published": "2026-08-21T00:00:00.000Z",
+      "tags": [
+        "CurriculumAsCode",
+        "Kinesiology",
+        "PhysicalEducation",
+        "PAGA",
+        "PublicHealth",
+        "OER"
+      ]
+    },
+    {
+      "id": "https://alanpruitt.com/articles/21-evidence-based-nutrition-vs-feed.html",
+      "url": "https://alanpruitt.com/articles/21-evidence-based-nutrition-vs-feed.html",
+      "title": "Evidence-Based Nutrition vs. The Feed: Upstream SSoT Governance in Sports Nutrition",
+      "summary": "How EXW150 uses Curriculum-as-Code, the Mission Loop framework, and federal SSoT standards to insulate community college students from social media fad diets, predatory supplement claims, and unanchored AI nutrition advice.",
+      "date_published": "2026-08-21T00:00:00.000Z",
+      "tags": [
+        "CurriculumAsCode",
+        "Nutrition",
+        "SportsNutrition",
+        "SSoT",
+        "InformationLiteracy",
+        "OER"
+      ]
+    },
+    {
+      "id": "https://alanpruitt.com/articles/20-deterministic-clinical-guardrails.html",
+      "url": "https://alanpruitt.com/articles/20-deterministic-clinical-guardrails.html",
+      "title": "Deterministic Clinical Guardrails: Sovereign AI Simulation & Safety Gates (EXW265 SSoT Case Study)",
+      "summary": "How EXW265 integrates deterministic clinical guardrails and safety gates into AI simulation models to enforce ACSM and PAGA academic source-of-truth standards.",
+      "date_published": "2026-08-21T12:00:00.000Z",
+      "tags": [
+        "AISafety",
+        "ClinicalGuardrails",
+        "Kinesiology",
+        "SSoT"
+      ]
+    },
+    {
+      "id": "https://alanpruitt.com/articles/19-hybrid-ergometer-scaffold.html",
+      "url": "https://alanpruitt.com/articles/19-hybrid-ergometer-scaffold.html",
+      "title": "The Hybrid Ergometer Scaffold: Guided Simulation & Precision Testing (EXW245 Case Study)",
+      "summary": "A clinical case study detailing how hybrid recumbent ergometry pacing protocols and digital predictive calculators isolate metabolic equations under ACSM 12th Ed guidelines.",
+      "date_published": "2026-08-15T12:00:00.000Z",
+      "tags": [
+        "Kinesiology",
+        "Ergometry",
+        "ACSM",
+        "Pedagogy"
+      ]
+    },
+    {
+      "id": "https://alanpruitt.com/articles/18-the-illusion-of-the-feed.html",
+      "url": "https://alanpruitt.com/articles/18-the-illusion-of-the-feed.html",
+      "title": "The Illusion of the Feed: Upstream SSoT & Feed Link Rot Governance",
+      "summary": "How relying on dynamic external feeds inside an LMS introduces link rot vulnerabilities, and how upstream SSoT configuration control resolves accessibility issues at the source.",
+      "date_published": "2026-08-14T12:00:00.000Z",
+      "tags": [
+        "CurriculumAsCode",
+        "Compliance",
+        "Pedagogy",
+        "SSoT"
+      ]
+    },
+    {
+      "id": "https://alanpruitt.com/articles/17-resolving-array-parsing-script-failures.html",
+      "url": "https://alanpruitt.com/articles/17-resolving-array-parsing-script-failures.html",
+      "title": "Engineering Resilience: Resolving False-Positive Contrast Errors & Array Failures",
+      "summary": "How automated accessibility checkers fail under WYSIWYG visual-editor DOM pollution and how Curriculum-as-Code resolves array parsing failures.",
+      "date_published": "2026-08-07T12:00:00.000Z",
+      "tags": [
+        "CurriculumAsCode",
+        "Accessibility",
+        "DOM"
+      ]
+    },
+    {
+      "id": "https://alanpruitt.com/articles/16-canvas-lms-3-track-ai-branch.html",
+      "url": "https://alanpruitt.com/articles/16-canvas-lms-3-track-ai-branch.html",
+      "title": "Canvas LMS 3-Track Self-Guided AI Branch and Bilingual Scaffolding",
+      "summary": "Transforming traditional online discussion boards into active, interdisciplinary clinical case conferences across all 16 EXW modules.",
+      "date_published": "2026-07-31T12:00:00.000Z",
+      "tags": [
+        "CanvasLMS",
+        "Pedagogy",
+        "Bilingual"
+      ]
+    },
+    {
+      "id": "https://alanpruitt.com/articles/15-algorithmic-pedagogy-ci.html",
+      "url": "https://alanpruitt.com/articles/15-algorithmic-pedagogy-ci.html",
+      "title": "Algorithmic Pedagogy & Continuous Integration: Zero-Regression Learning",
+      "summary": "Treating learning outcomes and compliance rules as executable code monitored by CI/CD.",
+      "date_published": "2026-07-24T12:00:00.000Z",
+      "tags": [
+        "AlgorithmicPedagogy",
+        "CICD",
+        "CurriculumAsCode"
+      ]
+    },
+    {
+      "id": "https://alanpruitt.com/articles/14-guided-learning-trifecta.html",
+      "url": "https://alanpruitt.com/articles/14-guided-learning-trifecta.html",
+      "title": "The Guided Learning Trifecta: AI Simulation, Application & Auditing",
+      "summary": "Deploying Google's Guided Learning principles in Curriculum-as-Code via system prompts.",
+      "date_published": "2026-07-17T12:00:00.000Z",
+      "tags": [
+        "GuidedLearning",
+        "AI",
+        "Prompts"
+      ]
+    },
+    {
+      "id": "https://alanpruitt.com/articles/13-vibe-coding-paradigm.html",
+      "url": "https://alanpruitt.com/articles/13-vibe-coding-paradigm.html",
+      "title": "The Vibe-Coding Paradigm: Speed & Full-Stack Execution in EdTech",
+      "summary": "Translating domain expertise directly into production-grade web applications using AI orchestration.",
+      "date_published": "2026-07-10T12:00:00.000Z",
+      "tags": [
+        "VibeCoding",
+        "PWA",
+        "EdTech"
+      ]
+    },
+    {
+      "id": "https://alanpruitt.com/articles/12-mission-loop-architecture.html",
+      "url": "https://alanpruitt.com/articles/12-mission-loop-architecture.html",
+      "title": "The Mission Loop Architecture: Pattern, Rule, and Solve in Coded Instruction",
+      "summary": "Structuring deterministic health science problem-solving pipelines that enforce pattern identification.",
+      "date_published": "2026-07-03T12:00:00.000Z",
+      "tags": [
+        "MissionLoop",
+        "Pedagogy",
+        "Kinesiology"
+      ]
+    },
+    {
+      "id": "https://alanpruitt.com/articles/11-two-part-scaffold-framework.html",
+      "url": "https://alanpruitt.com/articles/11-two-part-scaffold-framework.html",
+      "title": "The Two-Part Scaffold Framework: Guided Simulation & Precision Testing",
+      "summary": "Integrating AI simulation sandboxes with research-grade laboratory equipment.",
+      "date_published": "2026-06-26T12:00:00.000Z",
+      "tags": [
+        "Scaffolding",
+        "Kinesiology",
+        "AI"
+      ]
+    },
+    {
+      "id": "https://alanpruitt.com/articles/10-ai-safety-auditor-pattern.html",
+      "url": "https://alanpruitt.com/articles/10-ai-safety-auditor-pattern.html",
+      "title": "The AI Safety Auditor Pattern: Guardrailing In-LMS Student Simulations",
+      "summary": "Deterministic verification protocols to prevent hallucination drift in academic environments.",
+      "date_published": "2026-06-19T12:00:00.000Z",
+      "tags": [
+        "AISafety",
+        "AuditorPattern",
+        "Compliance"
+      ]
+    },
+    {
+      "id": "https://alanpruitt.com/articles/09-immutable-learning-analytics.html",
+      "url": "https://alanpruitt.com/articles/09-immutable-learning-analytics.html",
+      "title": "Immutable Learning Analytics: Privacy-Preserving Student Verification",
+      "summary": "Auditing student engagement metrics with sovereign data privacy boundaries.",
+      "date_published": "2026-06-12T12:00:00.000Z",
+      "tags": [
+        "Analytics",
+        "Privacy",
+        "Compliance"
+      ]
+    },
+    {
+      "id": "https://alanpruitt.com/articles/08-bilingual-localization-pipelines.html",
+      "url": "https://alanpruitt.com/articles/08-bilingual-localization-pipelines.html",
+      "title": "Bilingual Localization Pipelines in Higher Education",
+      "summary": "Automating English/Spanish curriculum parity without semantic drift.",
+      "date_published": "2026-06-05T12:00:00.000Z",
+      "tags": [
+        "Localization",
+        "Bilingual",
+        "Pedagogy"
+      ]
+    },
+    {
+      "id": "https://alanpruitt.com/articles/07-continuous-integration-pedagogy.html",
+      "url": "https://alanpruitt.com/articles/07-continuous-integration-pedagogy.html",
+      "title": "Continuous Integration in Course Pedagogy",
+      "summary": "Automating curriculum deployment with GitHub Actions and Canvas API integrations.",
+      "date_published": "2026-05-29T12:00:00.000Z",
+      "tags": [
+        "CICD",
+        "Automation",
+        "CurriculumAsCode"
+      ]
+    },
+    {
+      "id": "https://alanpruitt.com/articles/06-canvas-ai-course-design.html",
+      "url": "https://alanpruitt.com/articles/06-canvas-ai-course-design.html",
+      "title": "Canvas AI Course Design & Modular Architecture",
+      "summary": "Designing high-touch student interaction tracks within learning management systems.",
+      "date_published": "2026-05-22T12:00:00.000Z",
+      "tags": [
+        "CanvasLMS",
+        "Architecture",
+        "Pedagogy"
+      ]
+    },
+    {
+      "id": "https://alanpruitt.com/articles/05-instructional-engineering.html",
+      "url": "https://alanpruitt.com/articles/05-instructional-engineering.html",
+      "title": "Instructional Engineering: Treating Pedagogy as Code",
+      "summary": "Applying software engineering principles to academic curriculum design and maintenance.",
+      "date_published": "2026-05-15T12:00:00.000Z",
+      "tags": [
+        "InstructionalEngineering",
+        "CurriculumAsCode"
+      ]
+    },
+    {
+      "id": "https://alanpruitt.com/articles/04-ada-title-ii-accessibility.html",
+      "url": "https://alanpruitt.com/articles/04-ada-title-ii-accessibility.html",
+      "title": "ADA Title II Compliance & WCAG 2.2 AA in Digital Classrooms",
+      "summary": "Enforcing sovereign accessibility standards and programmatic contrast auditing across LMS pages.",
+      "date_published": "2026-05-08T12:00:00.000Z",
+      "tags": [
+        "ADATitleII",
+        "WCAG",
+        "Accessibility"
+      ]
+    },
+    {
+      "id": "https://alanpruitt.com/articles/03-air-gapped-sovereign-ai.html",
+      "url": "https://alanpruitt.com/articles/03-air-gapped-sovereign-ai.html",
+      "title": "Air-Gapped Sovereign AI in Community Colleges",
+      "summary": "Deploying local open-weight models for zero-cost, private student compute.",
+      "date_published": "2026-05-01T12:00:00.000Z",
+      "tags": [
+        "SovereignAI",
+        "AirGapped",
+        "CommunityColleges"
+      ]
+    },
+    {
+      "id": "https://alanpruitt.com/articles/02-curriculum-as-code.html",
+      "url": "https://alanpruitt.com/articles/02-curriculum-as-code.html",
+      "title": "Curriculum-as-Code: Version Control for Education",
+      "summary": "Establishing Git as the Single Source of Truth for instructional design.",
+      "date_published": "2026-04-24T12:00:00.000Z",
+      "tags": [
+        "CurriculumAsCode",
+        "Git",
+        "SSoT"
+      ]
+    },
+    {
+      "id": "https://alanpruitt.com/articles/01-ai-assessment-design.html",
+      "url": "https://alanpruitt.com/articles/01-ai-assessment-design.html",
+      "title": "AI Assessment Design: Beyond the Multiple Choice Question",
+      "summary": "Designing authentic, interactive problem-solving evaluations using AI prompts.",
+      "date_published": "2026-04-17T12:00:00.000Z",
+      "tags": [
+        "AIAssessment",
+        "Pedagogy",
+        "Prompts"
+      ]
+    }
+  ]
 }

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essay 23: The Accessibility Checker Parity Illusion | Alan Pruitt</title>
+    <meta name="description" content="Why Canvas LMS, Microsoft Office, and Adobe PDF accessibility checkers lack structural parity, and why Markdown Curriculum-as-Code is the only deterministic path to WCAG 2.2 AA.">
+    <link rel="canonical" href="https://alanpruitt.com/articles/23-accessibility-checker-parity-illusion.html">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%230B192C'/></svg>">
+
+    <!-- Schema.org Knowledge Graph -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "The Accessibility Checker Parity Illusion: Schema Divergence & Curriculum-as-Code",
+      "author": {
+        "@type": "Person",
+        "name": "Alan Pruitt",
+        "url": "https://alanpruitt.com/"
+      },
+      "datePublished": "2026-08-16",
+      "description": "Why automated accessibility checkers in Canvas LMS, Microsoft Office 365, and Adobe PDF fail to achieve structural parity, and how Curriculum-as-Code ensures deterministic ADA Title II and WCAG 2.2 AA compliance."
+    }
+    </script>
+
+    <!-- Inlined Zero-JS Pure Critical CSS -->
+    <style>
+        :root {
+            --bg-creme-50: #FAFBF7;
+            --bg-creme-100: #F5F5F0;
+            --bg-creme-200: #E6E6DC;
+            --text-navy-800: #1E3E62;
+            --text-navy-900: #0B192C;
+            --text-navy-950: #060E1A;
+        }
+
+        *, ::before, ::after { box-sizing: border-box; border-width: 0; }
+        html { line-height: 1.6; -webkit-text-size-adjust: 100%; tab-size: 4; font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+        body { margin: 0; background-color: var(--bg-creme-100); color: var(--text-navy-900); }
+
+        .w-full { width: 100%; }
+        .max-w-4xl { max-width: 56rem; }
+        .max-w-6xl { max-width: 72rem; }
+        .mx-auto { margin-left: auto; margin-right: auto; }
+        .flex { display: flex; }
+        .flex-col { flex-direction: column; }
+        .items-center { align-items: center; }
+        .justify-between { justify-content: space-between; }
+        
+        .bg-white { background-color: #ffffff; }
+        .bg-creme-50 { background-color: var(--bg-creme-50); }
+        .bg-creme-100 { background-color: var(--bg-creme-100); }
+        .bg-creme-200 { background-color: var(--bg-creme-200); }
+        .bg-navy-900 { background-color: var(--text-navy-900); }
+
+        .text-navy-800 { color: var(--text-navy-800); }
+        .text-navy-900 { color: var(--text-navy-900); }
+        .text-creme-100 { color: var(--bg-creme-100); }
+
+        .p-1 { padding: 0.25rem; }
+        .p-4 { padding: 1rem; }
+        .p-6 { padding: 1.5rem; }
+        .p-8 { padding: 2rem; }
+        .px-3 { padding-left: 0.75rem; padding-right: 0.75rem; }
+        .px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+        .py-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+        .py-6 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+        .py-8 { padding-top: 2rem; padding-bottom: 2rem; }
+        .mb-2 { margin-bottom: 0.5rem; }
+        .mb-4 { margin-bottom: 1rem; }
+        .mb-6 { margin-bottom: 1.5rem; }
+        .mb-8 { margin-bottom: 2rem; }
+        .mt-2 { margin-top: 0.5rem; }
+        .mt-8 { margin-top: 2rem; }
+        .mt-12 { margin-top: 3rem; }
+
+        .border { border-style: solid; border-width: 1px; }
+        .border-t { border-top-style: solid; border-top-width: 1px; }
+        .border-b { border-bottom-style: solid; border-bottom-width: 1px; }
+        .border-creme-200 { border-color: var(--bg-creme-200); }
+
+        .rounded-md { border-radius: 0.375rem; }
+        .rounded-full { border-radius: 9999px; }
+        .rounded-lg { border-radius: 0.5rem; }
+        .rounded-2xl { border-radius: 1rem; }
+
+        .font-mono { font-family: 'Fira Code', monospace; }
+        .font-semibold { font-weight: 600; }
+        .font-bold { font-weight: 700; }
+        .font-extrabold { font-weight: 800; }
+
+        .text-xs { font-size: 0.75rem; }
+        .text-sm { font-size: 0.875rem; }
+        .text-base { font-size: 1rem; }
+        .text-lg { font-size: 1.125rem; }
+        .text-2xl { font-size: 1.5rem; }
+        .text-3xl { font-size: 1.875rem; }
+
+        .shadow-sm { box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); }
+        .hover\:underline:hover { text-decoration: underline; }
+
+        /* Article Prose Styling */
+        article h2 { font-size: 1.5rem; font-weight: 800; margin-top: 2rem; margin-bottom: 0.75rem; color: var(--text-navy-900); }
+        article h3 { font-size: 1.25rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.5rem; color: var(--text-navy-900); }
+        article p { margin-bottom: 1.25rem; color: var(--text-navy-800); }
+        article ul, article ol { margin-bottom: 1.25rem; padding-left: 1.5rem; color: var(--text-navy-800); }
+        article li { margin-bottom: 0.5rem; }
+        article blockquote { border-left: 4px solid var(--text-navy-800); padding-left: 1rem; margin: 1.5rem 0; font-style: italic; background-color: var(--bg-creme-50); padding: 1rem; border-radius: 0.375rem; }
+        article table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.875rem; }
+        article th, article td { border: 1px solid var(--bg-creme-200); padding: 0.75rem; text-align: left; }
+        article th { background-color: var(--bg-creme-50); font-weight: 700; color: var(--text-navy-900); }
+        article pre { background-color: var(--text-navy-900); color: var(--bg-creme-100); padding: 1rem; border-radius: 0.5rem; overflow-x: auto; font-family: 'Fira Code', monospace; font-size: 0.85rem; margin: 1.5rem 0; }
+
+        [data-lang] { transition: opacity 0.15s ease-in-out; }
+        .hidden-lang { display: none !important; }
+    </style>
+</head>
+<body class="bg-creme-100 text-navy-900 antialiased min-h-full flex flex-col justify-between">
+
+    <!-- Header / Navigation -->
+    <header class="w-full max-w-6xl mx-auto px-6 py-6 flex justify-between items-center border-b border-creme-200">
+        <div class="flex items-center space-x-3">
+            <span class="w-3 h-3 bg-navy-900 rounded-full inline-block" aria-hidden="true"></span>
+            <a href="/" class="text-xl font-bold tracking-tight text-navy-900 hover:text-navy-800" style="text-decoration: none;">
+                alanpruitt.com
+            </a>
+        </div>
+        
+        <div class="flex items-center bg-creme-200 p-1 rounded-lg border border-creme-200 text-sm font-semibold" role="group" aria-label="Language selector">
+            <button id="btn-en" onclick="setLanguage('en')" class="px-3 py-1 rounded-md transition-all bg-navy-900 text-creme-100 shadow-sm">EN</button>
+            <button id="btn-es" onclick="setLanguage('es')" class="px-3 py-1 rounded-md transition-all text-navy-900 hover:text-navy-800">ES</button>
+        </div>
+    </header>
+
+    <!-- Main Article Body -->
+    <main class="w-full max-w-4xl mx-auto px-6 py-8 flex-grow">
+        <nav class="mb-6">
+            <a href="/" class="text-xs font-mono font-semibold text-navy-800 hover:underline">&larr; Back to Home</a>
+        </nav>
+
+        <div class="bg-white p-8 md:p-10 rounded-2xl border border-creme-200 shadow-sm">
+            <div class="inline-block px-3 py-1 bg-creme-100 text-navy-900 text-xs font-mono font-bold tracking-wider uppercase rounded-full border border-creme-200 mb-4">
+                ESSAY 23 &bull; CURRICULUM-AS-CODE
+            </div>
+
+            <h1 class="text-3xl md:text-4xl font-extrabold text-navy-900 leading-tight mb-4" data-lang="en">
+                The Accessibility Checker Parity Illusion: Schema Divergence &amp; Curriculum-as-Code
+            </h1>
+            <h1 class="text-3xl md:text-4xl font-extrabold text-navy-900 leading-tight mb-4 hidden-lang" data-lang="es">
+                La Ilusión de Paridad en Evaluadores de Accesibilidad: Divergencia de Esquemas y CaC
+            </h1>
+
+            <div class="text-xs font-mono text-navy-800 pb-6 border-b border-creme-200 mb-6">
+                Published: August 16, 2026 &bull; Author: Alan Pruitt &bull; Single Source of Truth Architecture
+            </div>
+
+            <article>
+                <div data-lang="en">
+                    <h2>Executive Summary</h2>
+                    <p>Automated accessibility checkers in Canvas LMS, Microsoft Office 365, and Adobe Acrobat Pro operate on fundamentally incompatible, proprietary schema architectures. A document certified "accessible" in one system routinely introduces severe structural barriers in another.</p>
+                    <p>To achieve verifiable compliance under ADA Title II and WCAG 2.2 Level AA, higher education institutions must discard multi-tier export pipelines in favor of <strong>Curriculum-as-Code (CaC)</strong>: authoring in semantic, mobile-first Markdown as the Single Source of Truth (SSoT) and compiling deterministically to pristine HTML5.</p>
+
+                    <h2>1. The Tri-Engine Illusion: The False Sense of Parity</h2>
+                    <p>Higher education instructional workflows often assume that clicking "Check Accessibility" in Microsoft Word, running the Canvas Rich Content Editor (RCE) checker, and executing the Adobe Acrobat Pro Action Wizard are interchangeable checkpoints.</p>
+                    <p>They are not. These engines do not share a common schema, validation logic, or Document Object Model (DOM). When faculty author in Microsoft Word and export to PDF or copy-paste into Canvas, they inherit a cascade of silent structural failures.</p>
+
+                    <h2>2. Architectural Comparison of Accessibility Engines</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>System &amp; Engine</th>
+                                <th>Schema Architecture</th>
+                                <th>Heading Hierarchy</th>
+                                <th>Table Structure Support</th>
+                                <th>Mobile &amp; Reflow</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Canvas RCE Checker</strong></td>
+                                <td>HTML5 Web DOM via TinyMCE</td>
+                                <td>Audits sequential tags; often fails to enforce &lt;h2&gt; root under page title</td>
+                                <td>Checks basic &lt;th&gt; presence; lacks complex scope validation</td>
+                                <td>Fluid and responsive if HTML remains clean</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Microsoft Office Checker</strong></td>
+                                <td>OpenXML Schema (.docx, .pptx)</td>
+                                <td>Audits visual Word styles; decouples from export tag mappings</td>
+                                <td>Validates "Header Row" flag; loses explicit cell mapping on export</td>
+                                <td>Responsive within Office applications only</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Adobe Acrobat Pro</strong></td>
+                                <td>PostScript Stream + StructTreeRoot Tag Tree</td>
+                                <td>Audits structural tags (/H1–/H6); requires manual tree remediation</td>
+                                <td>Requires manual tagging for /Table, /TR, /TH, /TD, and span attributes</td>
+                                <td>Rigid print layout; fails mobile reflow without complex tagging</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h2>3. The Multi-Step Export Translation Debt</h2>
+                    <p>The legacy instructional workflow—<em>Word &rarr; PDF &rarr; Canvas</em>—introduces compounding structural degradation at each transformation boundary:</p>
+                    <ul>
+                        <li><strong>Heading Flattening:</strong> Exporting from OpenXML to PDF or pasting into the Canvas RCE often converts semantic subheadings (&lt;h3&gt;, &lt;h4&gt;) into unanchored bold styling (&lt;strong&gt; or /Span).</li>
+                        <li><strong>List Fragmentation:</strong> Nested lists lose parent-child relationship tokens, preventing screen readers from calculating total list length or hierarchy depth.</li>
+                        <li><strong>Table Scope Destruction:</strong> Export filters strip <code>scope="col"</code> and <code>scope="row"</code> attributes, leaving screen readers unable to announce contextual coordinates to non-sighted students.</li>
+                        <li><strong>Reflow &amp; Mobile Disruption:</strong> PDF documents lock content into fixed-coordinate visual boxes, forcing mobile learners into continuous horizontal scrolling.</li>
+                    </ul>
+
+                    <h2>4. Regulatory Benchmarks: WCAG 2.2 AA &amp; ADA Title II</h2>
+                    <p>Under the Department of Justice ADA Title II digital accessibility mandate, public institutions must ensure all digital course content strictly adheres to WCAG Level AA criteria:</p>
+                    <ul>
+                        <li><strong>WCAG 1.3.1 (Info and Relationships):</strong> Semantic structures must be programmatically determinable, not merely visually implied.</li>
+                        <li><strong>WCAG 2.4.6 (Headings and Labels):</strong> Headings must describe topic or purpose and maintain an unbroken hierarchy starting at &lt;h2&gt;.</li>
+                        <li><strong>WCAG 2.4.11 (Focus Appearance):</strong> Interactive elements must retain high-contrast, discernible focus states.</li>
+                        <li><strong>WCAG 2.5.8 (Target Size - Minimum):</strong> Touch targets must maintain adequate spacing on mobile viewports.</li>
+                    </ul>
+
+                    <h2>5. Curriculum-as-Code: Deterministic Accessibility</h2>
+                    <p>Curriculum-as-Code eliminates document translation debt by utilizing Markdown as the immutable Single Source of Truth (SSoT):</p>
+                    <ul>
+                        <li><strong>Deterministic Compilation:</strong> Plain text compiles directly into standardized HTML5 elements (&lt;h2&gt;, &lt;h3&gt;, &lt;p&gt;, &lt;table&gt;, &lt;ul&gt;), preventing proprietary WYSIWYG tag bloat.</li>
+                        <li><strong>Automated Gating:</strong> Master repositories run local linters (markdownlint, axe-core) before deployment to block non-compliant syntax.</li>
+                        <li><strong>OER &amp; Device Equity:</strong> Plain-text Markdown generates lightweight, zero-cost, screen-reader-optimized instructional files that load instantly across all devices.</li>
+                    </ul>
+
+                    <h2>Concluding Synthesis</h2>
+                    <p>Automated GUI checkers act as superficial linters for visual styles, but they cannot engineer structural accessibility. Achieving authentic accessibility and federal compliance requires structural rigor at the source. Adopting Markdown and Curriculum-as-Code replaces subjective checker validation with deterministic, accessible, and future-proof course architecture.</p>
+                </div>
+
+                <div data-lang="es" class="hidden-lang">
+                    <h2>Resumen Ejecutivo</h2>
+                    <p>Los evaluadores automáticos de accesibilidad en Canvas LMS, Microsoft Office 365 y Adobe Acrobat Pro operan en arquitecturas de esquemas patentadas e incompatibles. Un documento certificado como "accesible" en un sistema introduce rutinariamente barreras estructurales severas en otro.</p>
+                    <p>Para lograr un cumplimiento verificable bajo ADA Título II y WCAG 2.2 Nivel AA, las instituciones de educación superior deben descartar las cadenas de exportación tradicionales en favor de <strong>Currículum como Código (CaC)</strong>: redactar en Markdown semántico optimizado para móviles como Fuente Única de Verdad (SSoT) y compilar deterministamente a HTML5 puro.</p>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full max-w-6xl mx-auto px-6 py-8 mt-12 border-t border-creme-200 flex flex-col md:flex-row justify-between items-center text-xs text-navy-800 gap-4">
+        <div class="space-y-1 text-center md:text-left">
+            <div>&copy; <span id="year"></span> Alan Pruitt. All rights reserved.</div>
+        </div>
+        <div class="flex space-x-6" style="gap: 1.5rem;">
+            <a href="https://github.com/alanpruitt" target="_blank" rel="noopener noreferrer" class="hover:text-navy-900">GitHub</a>
+            <a href="https://www.linkedin.com/in/alanpruitt/" target="_blank" rel="noopener noreferrer" class="hover:text-navy-900">LinkedIn</a>
+            <a href="https://www.webcognita.com" target="_blank" rel="noopener noreferrer" class="hover:text-navy-900">Webcognita</a>
+        </div>
+    </footer>
+
+    <!-- Client Script -->
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        function setLanguage(lang) {
+            const enElements = document.querySelectorAll('[data-lang="en"]');
+            const esElements = document.querySelectorAll('[data-lang="es"]');
+            const btnEn = document.getElementById('btn-en');
+            const btnEs = document.getElementById('btn-es');
+
+            if (lang === 'en') {
+                enElements.forEach(el => el.classList.remove('hidden-lang'));
+                esElements.forEach(el => el.classList.add('hidden-lang'));
+                btnEn.className = "px-3 py-1 rounded-md transition-all bg-navy-900 text-creme-100 shadow-sm";
+                btnEs.className = "px-3 py-1 rounded-md transition-all text-navy-900 hover:text-navy-800";
+            } else {
+                enElements.forEach(el => el.classList.remove('hidden-lang'));
+                enElements.forEach(el => el.classList.add('hidden-lang'));
+                btnEs.className = "px-3 py-1 rounded-md transition-all bg-navy-900 text-creme-100 shadow-sm";
+                btnEn.className = "px-3 py-1 rounded-md transition-all text-navy-900 hover:text-navy-800";
+            }
+            localStorage.setItem('preferred_lang', lang);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('preferred_lang') || 'en';
+            setLanguage(savedLang);
+        });
+    </script>
+</body>
+</html>
