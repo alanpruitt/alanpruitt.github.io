@@ -1,5 +1,6 @@
 # Distribution Asset: Essay 18 LinkedIn Announcement
-**Target Canonical:** https://alanpruitt.com/articles/18-the-illusion-of-the-feed.html
+
+**Target Canonical:** <https://alanpruitt.com/articles/18-the-illusion-of-the-feed.html>
 **Release Date:** 2026-08-14
 **Strategy:** Single Canonical Link (Strategy 2)
 
@@ -22,8 +23,8 @@ In **Essay 18: The Illusion of the Feed**, I break down:
 If you're managing complex digital learning ecosystems, relying on unanchored feeds is an architectural debt you eventually have to pay back.
 
 Read the full breakdown in Essay 18 on alanpruitt.com:
-https://alanpruitt.com/articles/18-the-illusion-of-the-feed.html
+<https://alanpruitt.com/articles/18-the-illusion-of-the-feed.html>
 
 ---
 
-#CurriculumAsCode #EdTech #InstructionalDesign #GenerativeAI #Accessibility #HigherEducation #SystemArchitecture
+# CurriculumAsCode #EdTech #InstructionalDesign #GenerativeAI #Accessibility #HigherEducation #SystemArchitecture
