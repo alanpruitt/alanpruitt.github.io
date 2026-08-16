@@ -12,6 +12,25 @@
     <uri>https://alanpruitt.com</uri>
   </author>
   <entry>
+    <title>The Accessibility Checker Parity Illusion and the Curriculum-as-Code Imperative</title>
+    <link href="https://alanpruitt.com/articles/23-the-accessibility-checker-parity-illusion.html" rel="alternate" type="text/html"/>
+    <id>https://alanpruitt.com/articles/23-the-accessibility-checker-parity-illusion.html</id>
+    <updated>2026-08-21T00:00:00.000Z</updated>
+    <published>2026-08-21T00:00:00.000Z</published>
+    <summary type="text">How proprietary accessibility checkers in Canvas LMS, Microsoft Office, and Adobe Acrobat introduce silent structural compliance failures, and why Curriculum-as-Code resolves accessibility translation debt at the source.</summary>
+    <author>
+      <name>Alan Pruitt</name>
+      <email>contact@webcognita.com</email>
+      <uri>https://alanpruitt.com</uri>
+    </author>
+    <category term="Accessibility"/>
+    <category term="WCAG"/>
+    <category term="CurriculumAsCode"/>
+    <category term="ADATitleII"/>
+    <category term="Compliance"/>
+    <category term="OER"/>
+  </entry>
+  <entry>
     <title>Foundational Human Movement in the Algorithmic Age: PAGA 2018 SSoT &amp; Community Inactivity Interventions</title>
     <link href="https://alanpruitt.com/articles/22-foundational-human-movement-in-the-algorithmic-age.html" rel="alternate" type="text/html"/>
     <id>https://alanpruitt.com/articles/22-foundational-human-movement-in-the-algorithmic-age.html</id>

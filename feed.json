@@ -15,6 +15,21 @@
   ],
   "items": [
     {
+      "id": "https://alanpruitt.com/articles/23-the-accessibility-checker-parity-illusion.html",
+      "url": "https://alanpruitt.com/articles/23-the-accessibility-checker-parity-illusion.html",
+      "title": "The Accessibility Checker Parity Illusion and the Curriculum-as-Code Imperative",
+      "summary": "How proprietary accessibility checkers in Canvas LMS, Microsoft Office, and Adobe Acrobat introduce silent structural compliance failures, and why Curriculum-as-Code resolves accessibility translation debt at the source.",
+      "date_published": "2026-08-21T00:00:00.000Z",
+      "tags": [
+        "Accessibility",
+        "WCAG",
+        "CurriculumAsCode",
+        "ADATitleII",
+        "Compliance",
+        "OER"
+      ]
+    },
+    {
       "id": "https://alanpruitt.com/articles/22-foundational-human-movement-in-the-algorithmic-age.html",
       "url": "https://alanpruitt.com/articles/22-foundational-human-movement-in-the-algorithmic-age.html",
       "title": "Foundational Human Movement in the Algorithmic Age: PAGA 2018 SSoT & Community Inactivity Interventions",
