@@ -18,7 +18,7 @@ canonical_url: "https://alanpruitt.com/articles/21-evidence-based-nutrition-vs-f
 
 In collegiate health sciences, introductory sports nutrition occupies the most culturally polluted informational space in higher education. Long before community college students enroll in an academic exercise science course, their understanding of human fuel, energy balance, and macronutrient metabolism has been shaped by algorithmic social media feeds, commercial fitness influencers, and predatory supplement marketing.
 
-When students encounter dietary questions, their default intuition is not to consult peer-reviewed physiological literature; it is to consult the feed or prompt an unconstrained consumer AI tool. 
+When students encounter dietary questions, their default intuition is not to consult peer-reviewed physiological literature; it is to consult the feed or prompt an unconstrained consumer AI tool.
 
 Unfortunately, foundation AI models trained on public web scrapes mirror the very commercial distortions students need to unlearn. Unanchored Large Language Models regularly validate extreme elimination protocols, suggest unverified ergogenic aids, and misrepresent baseline human energy needs.
 
@@ -100,7 +100,7 @@ Execute the following verification checks:
 
 ## 4. The Mission Loop in Metabolic Problem Solving
 
-In sports nutrition education, evaluating energy systems and fueling strategies requires a repeatable, objective analytical framework. 
+In sports nutrition education, evaluating energy systems and fueling strategies requires a repeatable, objective analytical framework.
 
 In **EXW150**, students apply the **Mission Loop (Pattern / Rule / Solve)** to break through marketing narratives and build metabolically sound fueling plans:
 
@@ -122,7 +122,7 @@ In **EXW150**, students apply the **Mission Loop (Pattern / Rule / Solve)** to b
 
 ## 5. The AI Auditor & Deterministic Verification Logic
 
-To prevent student reliance on hallucinated AI responses, the EXW150 AI Tool Kit operates not as an open-ended conversationalist, but as a rigid **Red Team Clinical Safety Auditor**. 
+To prevent student reliance on hallucinated AI responses, the EXW150 AI Tool Kit operates not as an open-ended conversationalist, but as a rigid **Red Team Clinical Safety Auditor**.
 
 When a student submits their proposed exercise protocol alongside the delimited client profile, the auditor executes an automated decision tree:
 

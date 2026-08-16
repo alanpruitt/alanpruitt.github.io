@@ -16,9 +16,9 @@ canonical_url: "https://alanpruitt.com/articles/19-hybrid-ergometer-scaffold.htm
 
 # The Hybrid Ergometer Scaffold: Synchronizing AI Simulation with Lab Precision
 
-In clinical kinesiology and exercise physiology curricula, laboratory courses face a persistent pedagogical bottleneck: **the high-stakes cognitive choke point**. 
+In clinical kinesiology and exercise physiology curricula, laboratory courses face a persistent pedagogical bottleneck: **the high-stakes cognitive choke point**.
 
-When community college students step up to research-grade physiological testing equipment—such as electronically braked cycle ergometers, metabolic carts, or electrocardiographs—they are frequently expected to execute complex physiological mathematics, monitor subject safety, and operate unfamiliar mechanical interfaces simultaneously. 
+When community college students step up to research-grade physiological testing equipment—such as electronically braked cycle ergometers, metabolic carts, or electrocardiographs—they are frequently expected to execute complex physiological mathematics, monitor subject safety, and operate unfamiliar mechanical interfaces simultaneously.
 
 When arithmetic anxiety collides with live clinical data collection, learning degrades. Students focus entirely on surviving the mechanical protocol rather than understanding the underlying physiological adaptations.
 
@@ -62,6 +62,7 @@ In desert southwest academic environments like Yuma County, Arizona, baseline ph
 Under our Curriculum-as-Code framework, environmental stress indexing is treated as an immutable pre-flight safety condition.
 
 ### The Environmental Audit Gate
+
 Before clearing any participant for maximal or submaximal testing on the Lode Corival, the student technician must run an environmental pre-flight check in the WPE Digital Toolkit:
 
 * **Wet Bulb Globe Temperature (WBGT) & Heat Index:** Assessed against National Weather Service (NWS) and ACSM environmental stratification guidelines.

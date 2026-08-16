@@ -1,5 +1,3 @@
-<!-- markdownlint-disable MD013 MD041 -->
-
 ## Essay 23: The Accessibility Checker Parity Illusion and the Curriculum-as-Code Imperative
 
 ### Executive Summary

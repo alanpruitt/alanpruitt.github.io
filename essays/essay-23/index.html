@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Essay: essay-23 | Coach Alan</title>
+  <meta name="description" content="Essay: essay-23">
+  <link rel="canonical" href="https://alanpruitt.com/essays/essay-23">
+  
+  <!-- Feed Discovery -->
+  <link rel="alternate" type="application/rss+xml" title="Alan Pruitt - RSS Feed" href="https://alanpruitt.com/rss.xml">
+  <link rel="alternate" type="application/feed+json" title="Alan Pruitt - JSON Feed" href="https://alanpruitt.com/feed.json">
+  
+  <!-- OpenGraph Metadata -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Essay: essay-23">
+  <meta property="og:description" content="Essay: essay-23">
+  <meta property="og:url" content="https://alanpruitt.com/essays/essay-23">
+  <meta property="og:site_name" content="alanpruitt.com">
+
+  <!-- Premium Style Guard -->
+  <style>
+    :root {
+      --bg-creme-50: #FAFBF7;
+      --bg-creme-100: #F5F5F0;
+      --bg-creme-200: #E6E6DC;
+      --text-navy-800: #1E3E62;
+      --text-navy-900: #0B192C;
+      --text-navy-950: #060E1A;
+      --link-accent: #0E3D73;
+    }
+    *, ::before, ::after { box-sizing: border-box; }
+    html { line-height: 1.5; font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; height: 100%; }
+    body { margin: 0; min-height: 100%; display: flex; flex-direction: column; justify-content: space-between; background-color: var(--bg-creme-100); color: var(--text-navy-900); }
+    
+    header { width: 100%; background-color: #ffffff; border-bottom: 1px solid var(--bg-creme-200); padding: 24px; box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); }
+    main { width: 100%; max-width: 780px; margin: 40px auto; padding: 0 20px; flex-grow: 1; }
+    
+    .content h2 { font-size: 1.5rem; font-weight: 700; color: var(--text-navy-900); margin-top: 2rem; margin-bottom: 1rem; }
+    .content h3 { font-size: 1.25rem; font-weight: 700; color: var(--text-navy-900); margin-top: 1.5rem; margin-bottom: 0.75rem; }
+    .content p { font-size: 1rem; color: #1a1a1a; line-height: 1.75; margin-bottom: 1.25rem; }
+    .content ul, .content ol { margin-bottom: 1.25rem; padding-left: 1.5rem; }
+    .content li { margin-bottom: 0.5rem; line-height: 1.6; }
+    .content a { color: var(--link-accent); text-decoration: underline; font-weight: 600; }
+    .content pre { background-color: var(--bg-creme-50); border: 1px solid var(--bg-creme-200); padding: 1rem; border-radius: 0.5rem; overflow-x: auto; margin-bottom: 1.25rem; font-family: monospace; font-size: 0.875rem; }
+  </style>
+</head>
+<body class="bg-creme-100 text-navy-900 font-sans antialiased min-h-full flex flex-col justify-between">
+  <!-- Navigation Header -->
+  <header>
+    <div style="max-width: 780px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between;">
+      <a href="/" style="font-size: 1.125rem; font-weight: 700; color: var(--text-navy-900); text-decoration: none;">Alan Pruitt</a>
+      <nav style="display: flex; gap: 24px;">
+        <a href="/" style="font-size: 0.875rem; font-weight: 600; color: var(--text-navy-800); text-decoration: none;">Home</a>
+        <a href="/articles/" style="font-size: 0.875rem; font-weight: 600; color: var(--text-navy-900); text-decoration: underline;">Articles</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <article class="content">
+      <h1 style="font-size: 2rem; font-weight: 700; color: var(--text-navy-900); margin-top: 1rem; margin-bottom: 1.5rem;">Essay: essay-23</h1>
+      <h2>Essay 23: The Accessibility Checker Parity Illusion and the Curriculum-as-Code Imperative</h2>
+<h3>Executive Summary</h3>
+<p>Automated accessibility checkers in Canvas LMS, Microsoft Office 365, and Adobe Acrobat Pro operate on fundamentally incompatible, proprietary schema architectures. A document certified "accessible" in one system routinely introduces severe structural barriers in another.</p>
+<p>To achieve verifiable compliance under ADA Title II and WCAG 2.2 Level AA, higher education institutions must discard multi-tier export pipelines in favor of **Curriculum-as-Code (CaC)**: authoring in semantic, mobile-first Markdown as the Single Source of Truth (SSoT) and compiling deterministically to pristine HTML5.</p>
+<h3>1. The Tri-Engine Illusion: The False Sense of Parity</h3>
+<p>Higher education instructional workflows often assume that clicking "Check Accessibility" in Microsoft Word, running the Canvas Rich Content Editor (RCE) checker, and executing the Adobe Acrobat Pro Action Wizard are interchangeable checkpoints.</p>
+<p>They are not. These engines do not share a common schema, validation logic, or Document Object Model (DOM).</p>
+<p>When faculty author in Microsoft Word and export to PDF or copy-paste into Canvas, they inherit a cascade of silent structural failures. This checker-parity illusion creates institutional compliance risks under Title II of the Americans with Disabilities Act and presents students who rely on assistive technologies with broken reading orders, fragmented lists, and unassociated table cells.</p>
+<h3>2. Architectural Comparison of Accessibility Engines</h3>
+<p>The failure of automated checkers originates in the structural divergence of their underlying schemas:</p>
+<p>| System & Engine | Schema Architecture | Heading Hierarchy Handling | Table Structure Support | Mobile & Viewport Reflow |<br>| :--- | :--- | :--- | :--- | :--- |<br>| **Canvas RCE Checker** | HTML5 Web DOM via TinyMCE | Audits sequential tags; often fails to enforce `<h2>` root under page title | Checks basic `<th>` presence; lacks complex scope validation | Fluid and responsive if HTML remains clean |<br>| **Microsoft Office Checker** | OpenXML Schema (`.docx`, `.pptx`) | Audits visual Word styles; decouples from export tag mappings | Validates "Header Row" flag; loses explicit cell mapping on export | Responsive within Office applications only |<br>| **Adobe Acrobat Pro** | PostScript Stream + `/StructTreeRoot` Tag Tree | Audits structural tags (`/H1`–`/H6`); requires manual tree remediation | Requires manual tagging for `/Table`, `/TR`, `/TH`, `/TD`, and span attributes | Rigid print layout; fails mobile reflow without complex tagging |</p>
+<h3>3. The Multi-Step Export Translation Debt</h3>
+<p>The legacy instructional workflow—*Word $\rightarrow$ PDF $\rightarrow$ Canvas*—introduces compounding structural degradation at each transformation boundary:</p>
+<p>1. **Heading Flattening:** Exporting from OpenXML to PDF or pasting into the Canvas RCE often converts semantic subheadings (`<h3>`, `<h4>`) into unanchored bold styling (`<strong>` or `/Span`).<br>2. **List Fragmentation:** Nested lists lose parent-child relationship tokens, preventing screen readers from calculating total list length or hierarchy depth.<br>3. **Table Scope Destruction:** Export filters strip `scope="col"` and `scope="row"` attributes, leaving screen readers unable to announce contextual coordinates to non-sighted students.<br>4. **Reflow & Mobile Disruption:** PDF documents lock content into fixed-coordinate visual boxes, forcing mobile learners into continuous horizontal scrolling.</p>
+<h3>4. Regulatory Benchmarks: WCAG 2.2 AA & ADA Title II</h3>
+<p>Under the Department of Justice ADA Title II digital accessibility mandate, public institutions must ensure all digital course content strictly adheres to WCAG Level AA criteria:</p>
+<li>**WCAG 1.3.1 (Info and Relationships):** Semantic structures must be programmatically determinable, not merely visually implied.</li>
+<li>**WCAG 2.4.6 (Headings and Labels):** Headings must describe topic or purpose and maintain an unbroken hierarchy starting at `<h2>`.</li>
+<li>**WCAG 2.4.11 (Focus Appearance):** Interactive elements must retain high-contrast, discernible focus states.</li>
+<li>**WCAG 2.5.8 (Target Size - Minimum):** Touch targets must maintain adequate spacing on mobile viewports.</li>
+<h3>5. Curriculum-as-Code: Deterministic Accessibility</h3>
+<p>Curriculum-as-Code eliminates document translation debt by utilizing Markdown as the immutable Single Source of Truth (SSoT).</p>
+<li>**Deterministic Compilation:** Plain text compiles directly into standardized HTML5 elements (`<h2>`, `<h3>`, `<p>`, `<table>`, `<ul>`), preventing proprietary WYSIWYG tag bloat.</li>
+<li>**Automated CI/CD Verification:** Master repositories run automated linters (`markdownlint`, `axe-core`) on every commit to block non-compliant syntax before deployment.</li>
+<li>**OER & Device Equity:** Plain-text Markdown generates lightweight, zero-cost, screen-reader-optimized instructional files that load instantly across all devices and bandwidth levels.</li>
+<h3>Concluding Synthesis</h3>
+<p>Automated GUI checkers act as superficial linters for visual styles, but they cannot engineer structural accessibility. Achieving authentic accessibility and federal compliance requires structural rigor at the source. Adopting Markdown and Curriculum-as-Code replaces subjective checker validation with deterministic, accessible, and future-proof course architecture.</p>
+    </article>
+
+    <!-- INJECT SOCIAL SHARE BLOCK -->
+    
+    <!-- Zero-JS Semantic Social Share -->
+    <div style="margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--bg-creme-200, #E6E6DC); display: flex; flex-direction: column; gap: 16px;" aria-label="Social sharing options">
+      <span style="font-family: monospace; font-size: 0.75rem; font-weight: bold; color: var(--navy-dark); text-transform: uppercase; tracking-wider">
+        Share this Architecture:
+      </span>
+      <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center;">
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Falanpruitt.com%2Fessays%2Fessay-23" target="_blank" rel="noopener noreferrer" aria-label="Share on LinkedIn" style="font-family: monospace; font-size: 0.75rem; font-weight: 600; text-decoration: none; padding: 6px 12px; border-radius: 8px; border: 1px solid var(--bg-creme-200, #E6E6DC); color: var(--navy-dark); background-color: var(--bg-cream);">
+          LinkedIn
+        </a>
+        <a href="https://x.com/intent/post?text=Essay%3A%20essay-23&url=https%3A%2F%2Falanpruitt.com%2Fessays%2Fessay-23&via=alanpruitt" target="_blank" rel="noopener noreferrer" aria-label="Share on X" style="font-family: monospace; font-size: 0.75rem; font-weight: 600; text-decoration: none; padding: 6px 12px; border-radius: 8px; border: 1px solid var(--bg-creme-200, #E6E6DC); color: var(--navy-dark); background-color: var(--bg-cream);">
+          X
+        </a>
+        <a href="https://reddit.com/submit?url=https%3A%2F%2Falanpruitt.com%2Fessays%2Fessay-23&title=Essay%3A%20essay-23" target="_blank" rel="noopener noreferrer" aria-label="Share on Reddit" style="font-family: monospace; font-size: 0.75rem; font-weight: 600; text-decoration: none; padding: 6px 12px; border-radius: 8px; border: 1px solid var(--bg-creme-200, #E6E6DC); color: var(--navy-dark); background-color: var(--bg-cream);">
+          Reddit
+        </a>
+        <a href="mailto:?subject=Essay%3A%20essay-23&body=Read%20this%20Curriculum-as-Code%20architecture:%20https%3A%2F%2Falanpruitt.com%2Fessays%2Fessay-23" aria-label="Share via Email" style="font-family: monospace; font-size: 0.75rem; font-weight: 600; text-decoration: none; padding: 6px 12px; border-radius: 8px; border: 1px solid var(--bg-creme-200, #E6E6DC); color: var(--navy-dark); background-color: var(--bg-cream);">
+          Email
+        </a>
+      </div>
+    </div>
+
+    <!-- Academic Citation & BibTeX Section -->
+    
+  </main>
+
+  <!-- Footer -->
+  <footer style="width: 100%; padding: 32px 24px; text-align: center; font-size: 0.75rem; border-top: 1px solid var(--text-navy-950); background-color: var(--text-navy-900); color: var(--bg-creme-100);">
+    <p style="margin-bottom: 8px;">© 2026 Alan Pruitt • All Rights Reserved.</p>
+    <p style="opacity: 0.75; margin: 0;">Instructional Design, AI Pedagogy & Curriculum Architecture</p>
+  </footer>
+</body>
+</html>

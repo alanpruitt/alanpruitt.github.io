@@ -18,7 +18,7 @@ canonical_url: "https://alanpruitt.com/articles/20-deterministic-clinical-guardr
 
 In exercise science, prescribing physical activity for healthy adults allows for broad programming latitude. For special populations—individuals navigating chronic metabolic conditions, cardiovascular disease, peripheral neuropathies, or severe neuromuscular limitations—the margin for error drops to zero. A single unvetted recommendation regarding exercise intensity, weight-bearing loading, or thermal stress can trigger acute clinical complications.
 
-As generative artificial intelligence tools become common study aids for community college students, an urgent curriculum challenge emerges: **unconstrained Large Language Models (LLMs) are fundamentally non-deterministic and clinically unanchored**. 
+As generative artificial intelligence tools become common study aids for community college students, an urgent curriculum challenge emerges: **unconstrained Large Language Models (LLMs) are fundamentally non-deterministic and clinically unanchored**.
 
 When queried for exercise programming advice, out-of-the-box AI models blend peer-reviewed clinical guidelines with unregulated internet fitness blogs, commercial wellness trends, and speculative influencer protocols. The result is **hallucination drift**—a subtle, authoritative-sounding recommendation that introduces contraindicated movements or miscalculates hemodynamic thresholds.
 
@@ -62,6 +62,7 @@ To eliminate algorithmic ambiguity, EXW265 enforces a strict curriculum law: **T
 Unlike athletic performance or general fitness courses that draw on commercial training frameworks, EXW265 deliberately discards external, unvetted standards. Every clinical volume recommendation, progression rule, and safety boundary must trace directly to the evidence-based consensus established by the U.S. Department of Health and Human Services (HHS).
 
 ### The SSoT Boundary Rules
+
 Under our automated continuous integration pipeline, all instructional modules and AI toolkits are audited against three federal pillars:
 
 1. **Dose-Response Specificity:** Prescriptions must align with federal baseline targets (150 to 300 minutes of moderate-intensity activity, or 75 to 150 minutes of vigorous-intensity aerobic physical activity per week, paired with multi-joint muscle-strengthening activities on two or more days).
@@ -74,7 +75,7 @@ By version-controlling our course master in plain Markdown on GitHub, any attemp
 
 ## 3. The Delimiter Protocol & Context Isolation
 
-The primary mechanism for preventing prompt injection, data leakage, and hallucination drift in EXW265 is our **Delimiter Protocol**. 
+The primary mechanism for preventing prompt injection, data leakage, and hallucination drift in EXW265 is our **Delimiter Protocol**.
 
 Students are taught to interact with the course AI Tool Kit not through open-ended conversation, but by wrapping structured clinical profiles inside explicit triple-hash (`###`) delimiter blocks. This establishes an isolated, machine-readable sandbox that commands the model's attention exclusively to the client's documented constraints.
 
@@ -98,7 +99,7 @@ Assigned Target: Develop Initial 4-Week Aerobic & Resistance Progression
 
 ## 4. The Mission Loop in Special Population Safety
 
-In clinical kinesiology, problem-solving cannot be treated as an unstructured creative exercise. Every exercise adaptation for vulnerable populations must follow a verifiable, deterministic loop. 
+In clinical kinesiology, problem-solving cannot be treated as an unstructured creative exercise. Every exercise adaptation for vulnerable populations must follow a verifiable, deterministic loop.
 
 In EXW265, student analysis is structured around the **Mission Loop (Pattern / Rule / Solve)**:
 
@@ -120,7 +121,7 @@ In EXW265, student analysis is structured around the **Mission Loop (Pattern / R
 
 ## 5. The AI Auditor & Deterministic Verification Logic
 
-To prevent student reliance on hallucinated AI responses, the EXW265 AI Tool Kit operates not as an open-ended conversationalist, but as a rigid **Red Team Clinical Safety Auditor**. 
+To prevent student reliance on hallucinated AI responses, the EXW265 AI Tool Kit operates not as an open-ended conversationalist, but as a rigid **Red Team Clinical Safety Auditor**.
 
 When a student submits their proposed exercise protocol alongside the delimited client profile, the auditor executes an automated decision tree:
 

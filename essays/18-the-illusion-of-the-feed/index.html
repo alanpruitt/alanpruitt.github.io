@@ -60,7 +60,8 @@
   <main>
     <article class="content">
       <h1 style="font-size: 2rem; font-weight: 700; color: var(--text-navy-900); margin-top: 1rem; margin-bottom: 1.5rem;">Essay: 18-the-illusion-of-the-feed</h1>
-      <h1>Essay 18: The Illusion of the Feed: Upstream SSoT and Feed Link Rot Governance</h1>
+      <p><!-- markdownlint-disable MD024 --></p>
+<h1>Essay 18: The Illusion of the Feed: Upstream SSoT and Feed Link Rot Governance</h1>
 <h2>🎯 Learning Objectives</h2>
 <li>Analyze the impact of link rot on digital course content.</li>
 <li>Establish upstream Single Source of Truth (SSoT) configuration control.</li>
@@ -75,15 +76,21 @@
 <p>---</p>
 <h2>Upstream SSoT Governance</h2>
 <p>Curriculum-as-Code (C-a-C) resolves the issue of link rot by establishing an upstream Single Source of Truth (SSoT) for all external resources. Instead of allowing instructors to hardcode URLs directly into individual pages or assignments, URLs are stored in central configurations:</p>
-<p>###<br>```json<br>{<br>  "external_resources": {<br>    "paga_2018_guidelines": "https://health.gov/sites/default/files/2019-09/Physical_Activity_Guidelines_2nd_edition.pdf",<br>    "acsm_testing_standards": "https://www.acsm.org/education-resources/guidelines-exercise-testing-prescription",<br>    "yuma_heat_safety_protocol": "https://www.yumaaz.gov/government/emergency-management/heat-safety"<br>  }<br>}<br>```<br>###</p>
+<p>###</p>
+<p>```json<br>{<br>  "external_resources": {<br>    "paga_2018_guidelines": "https://health.gov/sites/default/files/2019-09/Physical_Activity_Guidelines_2nd_edition.pdf",<br>    "acsm_testing_standards": "https://www.acsm.org/education-resources/guidelines-exercise-testing-prescription",<br>    "yuma_heat_safety_protocol": "https://www.yumaaz.gov/government/emergency-management/heat-safety"<br>  }<br>}<br>```</p>
+<p>###</p>
 <p>By separating content from configuration, instructional engineers can audit and update link destinations globally. If a government website restructures its URL path, the fix is made once in the configuration file, and the CI/CD compilation pipeline automatically regenerates and deploys the updated references to the Canvas LMS.</p>
 <p>---</p>
 <h2>The Centaur Protocol & High-Friction Pedagogy</h2>
 <p>In alignment with the **Centaur Protocol**, course designs should position the student as the **Pilot/Architect** (exhibiting critical clinical judgment) and the AI as the **Engine/Calculator** (processing computations and drafting templates).</p>
-<p>To prevent cognitive offloading, we implement **High-Friction Pedagogy**:<br><li>**High-Friction Assessments:** Rather than completing passive, one-and-done multiple-choice tests, residents must perform active clinical audits.</li><br><li>**Offline-First Resilience:** In regional institutions like Arizona Western College (AWC), a Hispanic-Serving Institution (HSI), students often study in high-heat environments (e.g., Yuma County desert glare exceeding $115^\circ\text{F}$) where mobile connectivity drops.</li><br><li>**Semantic Security:** Instructors wrap clinical case data, client profiles, and medical inputs in triple-hashes (`###`). This keeps parsing errors from leaking information into public AI models.</li></p>
+<p>To prevent cognitive offloading, we implement **High-Friction Pedagogy**:</p>
+<li>**High-Friction Assessments:** Rather than completing passive, one-and-done multiple-choice tests, residents must perform active clinical audits.</li>
+<li>**Offline-First Resilience:** In regional institutions like Arizona Western College (AWC), a Hispanic-Serving Institution (HSI), students often study in high-heat environments (e.g., Yuma County desert glare exceeding $115^\circ\text{F}$) where mobile connectivity drops.</li>
+<li>**Semantic Security:** Instructors wrap clinical case data, client profiles, and medical inputs in triple-hashes (`###`). This keeps parsing errors from leaking information into public AI models.</li>
 <p>---</p>
 <h2>CI/CD Link Rot Audits</h2>
-<p>Our automated validation pipeline includes pre-commit link checkers that audit the integrity of the SSoT file before code is staged. This ensures that:<br>1. All referenced URLs return `HTTP 200 OK`.<br>2. Anchor tags contain descriptive labels matching WCAG 2.1 AA screen reader standards.<br>3. Every external link opens in a new tab with proper security parameters (`rel="noopener noreferrer"`).</p>
+<p>Our automated validation pipeline includes pre-commit link checkers that audit the integrity of the SSoT file before code is staged. This ensures that:</p>
+<p>1. All referenced URLs return `HTTP 200 OK`.<br>2. Anchor tags contain descriptive labels matching WCAG 2.1 AA screen reader standards.<br>3. Every external link opens in a new tab with proper security parameters (`rel="noopener noreferrer"`).</p>
 <p>This programmatic approach ensures that the course remains functional, secure, and accessible throughout the academic year.</p>
     </article>
 

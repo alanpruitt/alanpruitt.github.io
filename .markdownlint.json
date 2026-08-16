@@ -1,0 +1,37 @@
+{
+  "default": true,
+  "MD001": true,
+  "MD002": {
+    "level": 2
+  },
+  "MD003": {
+    "style": "atx"
+  },
+  "MD013": false,
+  "MD025": false,
+  "MD041": false,
+  "MD056": true,
+  "MD058": true,
+  "MD033": {
+    "allowed_elements": [
+      "h2",
+      "h3",
+      "h4",
+      "table",
+      "thead",
+      "tbody",
+      "tr",
+      "th",
+      "td",
+      "details",
+      "summary",
+      "section",
+      "div"
+    ]
+  },
+  "MD029": {
+    "style": "ordered"
+  },
+  "MD034": true,
+  "MD042": true
+}
