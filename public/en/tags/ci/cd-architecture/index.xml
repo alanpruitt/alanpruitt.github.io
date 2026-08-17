@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>CI/CD Architecture on Coach Alan</title>
-		<link>http://localhost:1313/alanpruitt/tags/ci/cd-architecture/</link>
+		<link>http://localhost:1313/alanpruitt/en/tags/ci/cd-architecture/</link>
 		<description>Recent content in CI/CD Architecture on Coach Alan</description>
 		<generator>Hugo</generator>
-		<language>en</language>
+		<language>en-US</language>
 		
 		
 		
 		
 			<lastBuildDate>Thu, 30 Jul 2026 00:00:00 +0000</lastBuildDate>
 		
-			<atom:link href="http://localhost:1313/alanpruitt/tags/ci/cd-architecture/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="http://localhost:1313/alanpruitt/en/tags/ci/cd-architecture/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>Instructional Engineering: Transforming Curriculum into Version-Controlled Source Code</title>
-				<link>http://localhost:1313/alanpruitt/essays/05-instructional-engineering/</link>
+				<link>http://localhost:1313/alanpruitt/en/essays/05-instructional-engineering/</link>
 				<pubDate>Thu, 30 Jul 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/alanpruitt/essays/05-instructional-engineering/</guid>
+				<guid>http://localhost:1313/alanpruitt/en/essays/05-instructional-engineering/</guid>
 				<description>&lt;!-- raw HTML omitted --&gt;&#xA;&lt;h1 id=&#34;instructional-engineering-transforming-curriculum-into-version-controlled-source-code&#34;&gt;Instructional Engineering: Transforming Curriculum into Version-Controlled Source Code&lt;/h1&gt;&#xA;&lt;p&gt;For decades, instructional design has treated educational content as static documents trapped inside proprietary Learning Management Systems or binary PDFs. &lt;strong&gt;Instructional Engineering&lt;/strong&gt; replaces this reactive model with software design principles: modularity, automated linting, plain-text portability, and continuous delivery.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-shift-from-design-to-engineering&#34;&gt;The Shift from Design to Engineering&lt;/h2&gt;&#xA;&lt;p&gt;Traditional instructional design focuses heavily on visual presentation within specific tools. Instructional Engineering treats content as an evolving software system that must meet strict operational criteria:&lt;/p&gt;</description>
 			</item>
 	</channel>

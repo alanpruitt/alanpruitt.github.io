@@ -2,40 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1314/alanpruitt/categories/</loc>
+    <loc>http://localhost:1313/alanpruitt/es/categories/</loc>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/alanpruitt/categories/"
+                hreflang="en-US"
+                href="http://localhost:1313/alanpruitt/en/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es-MX"
-                href="http://localhost:1314/alanpruitt/categories/"
+                href="http://localhost:1313/alanpruitt/es/categories/"
                 />
   </url><url>
-    <loc>http://localhost:1314/alanpruitt/</loc>
+    <loc>http://localhost:1313/alanpruitt/es/</loc>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/alanpruitt/"
+                hreflang="en-US"
+                href="http://localhost:1313/alanpruitt/en/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es-MX"
-                href="http://localhost:1314/alanpruitt/"
+                href="http://localhost:1313/alanpruitt/es/"
                 />
   </url><url>
-    <loc>http://localhost:1314/alanpruitt/tags/</loc>
+    <loc>http://localhost:1313/alanpruitt/es/tags/</loc>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/alanpruitt/tags/"
+                hreflang="en-US"
+                href="http://localhost:1313/alanpruitt/en/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es-MX"
-                href="http://localhost:1314/alanpruitt/tags/"
+                href="http://localhost:1313/alanpruitt/es/tags/"
                 />
   </url>
 </urlset>

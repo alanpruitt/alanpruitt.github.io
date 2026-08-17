@@ -2,281 +2,281 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Tags on Coach Alan</title>
-		<link>http://localhost:1313/alanpruitt/tags/</link>
+		<link>http://localhost:1313/alanpruitt/en/tags/</link>
 		<description>Recent content in Tags on Coach Alan</description>
 		<generator>Hugo</generator>
-		<language>en</language>
+		<language>en-US</language>
 		
 		
 		
 		
 			<lastBuildDate>Fri, 14 Aug 2026 00:00:00 +0000</lastBuildDate>
 		
-			<atom:link href="http://localhost:1313/alanpruitt/tags/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="http://localhost:1313/alanpruitt/en/tags/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>Accessibility</title>
-				<link>http://localhost:1313/alanpruitt/tags/accessibility/</link>
+				<link>http://localhost:1313/alanpruitt/en/tags/accessibility/</link>
 				<pubDate>Fri, 14 Aug 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/alanpruitt/tags/accessibility/</guid>
+				<guid>http://localhost:1313/alanpruitt/en/tags/accessibility/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Canvas LMS</title>
-				<link>http://localhost:1313/alanpruitt/tags/canvas-lms/</link>
+				<link>http://localhost:1313/alanpruitt/en/tags/canvas-lms/</link>
 				<pubDate>Fri, 14 Aug 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/alanpruitt/tags/canvas-lms/</guid>
+				<guid>http://localhost:1313/alanpruitt/en/tags/canvas-lms/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>CI/CD</title>
-				<link>http://localhost:1313/alanpruitt/tags/ci/cd/</link>
+				<link>http://localhost:1313/alanpruitt/en/tags/ci/cd/</link>
 				<pubDate>Fri, 14 Aug 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/alanpruitt/tags/ci/cd/</guid>
+				<guid>http://localhost:1313/alanpruitt/en/tags/ci/cd/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Curriculum-as-Code</title>
-				<link>http://localhost:1313/alanpruitt/tags/curriculum-as-code/</link>
+				<link>http://localhost:1313/alanpruitt/en/tags/curriculum-as-code/</link>
 				<pubDate>Fri, 14 Aug 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/alanpruitt/tags/curriculum-as-code/</guid>
+				<guid>http://localhost:1313/alanpruitt/en/tags/curriculum-as-code/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Web Standards</title>
-				<link>http://localhost:1313/alanpruitt/tags/web-standards/</link>
+				<link>http://localhost:1313/alanpruitt/en/tags/web-standards/</link>
 				<pubDate>Fri, 14 Aug 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/alanpruitt/tags/web-standards/</guid>
+				<guid>http://localhost:1313/alanpruitt/en/tags/web-standards/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>ACSM Guidelines</title>
-				<link>http://localhost:1313/alanpruitt/tags/acsm-guidelines/</link>
+				<link>http://localhost:1313/alanpruitt/en/tags/acsm-guidelines/</link>
 				<pubDate>Tue, 11 Aug 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/alanpruitt/tags/acsm-guidelines/</guid>
+				<guid>http://localhost:1313/alanpruitt/en/tags/acsm-guidelines/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>AI Safety Auditor</title>
-				<link>http://localhost:1313/alanpruitt/tags/ai-safety-auditor/</link>
+				<link>http://localhost:1313/alanpruitt/en/tags/ai-safety-auditor/</link>
 				<pubDate>Tue, 11 Aug 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/alanpruitt/tags/ai-safety-auditor/</guid>
+				<guid>http://localhost:1313/alanpruitt/en/tags/ai-safety-auditor/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>AI Simulation</title>
-				<link>http://localhost:1313/alanpruitt/tags/ai-simulation/</link>
+				<link>http://localhost:1313/alanpruitt/en/tags/ai-simulation/</link>
 				<pubDate>Tue, 11 Aug 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/alanpruitt/tags/ai-simulation/</guid>
+				<guid>http://localhost:1313/alanpruitt/en/tags/ai-simulation/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Clinical Application</title>
-				<link>http://localhost:1313/alanpruitt/tags/clinical-application/</link>
+				<link>http://localhost:1313/alanpruitt/en/tags/clinical-application/</link>
 				<pubDate>Tue, 11 Aug 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/alanpruitt/tags/clinical-application/</guid>
+				<guid>http://localhost:1313/alanpruitt/en/tags/clinical-application/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Clinical Protocols</title>
-				<link>http://localhost:1313/alanpruitt/tags/clinical-protocols/</link>
+				<link>http://localhost:1313/alanpruitt/en/tags/clinical-protocols/</link>
 				<pubDate>Tue, 11 Aug 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/alanpruitt/tags/clinical-protocols/</guid>
+				<guid>http://localhost:1313/alanpruitt/en/tags/clinical-protocols/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Cycle Ergometry</title>
-				<link>http://localhost:1313/alanpruitt/tags/cycle-ergometry/</link>
+				<link>http://localhost:1313/alanpruitt/en/tags/cycle-ergometry/</link>
 				<pubDate>Tue, 11 Aug 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/alanpruitt/tags/cycle-ergometry/</guid>
+				<guid>http://localhost:1313/alanpruitt/en/tags/cycle-ergometry/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>EdTech Innovation</title>
-				<link>http://localhost:1313/alanpruitt/tags/edtech-innovation/</link>
+				<link>http://localhost:1313/alanpruitt/en/tags/edtech-innovation/</link>
 				<pubDate>Tue, 11 Aug 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/alanpruitt/tags/edtech-innovation/</guid>
+				<guid>http://localhost:1313/alanpruitt/en/tags/edtech-innovation/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Full-Stack Execution</title>
-				<link>http://localhost:1313/alanpruitt/tags/full-stack-execution/</link>
+				<link>http://localhost:1313/alanpruitt/en/tags/full-stack-execution/</link>
 				<pubDate>Tue, 11 Aug 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/alanpruitt/tags/full-stack-execution/</guid>
+				<guid>http://localhost:1313/alanpruitt/en/tags/full-stack-execution/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Guided Learning</title>
-				<link>http://localhost:1313/alanpruitt/tags/guided-learning/</link>
+				<link>http://localhost:1313/alanpruitt/en/tags/guided-learning/</link>
 				<pubDate>Tue, 11 Aug 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/alanpruitt/tags/guided-learning/</guid>
+				<guid>http://localhost:1313/alanpruitt/en/tags/guided-learning/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Health Sciences</title>
-				<link>http://localhost:1313/alanpruitt/tags/health-sciences/</link>
+				<link>http://localhost:1313/alanpruitt/en/tags/health-sciences/</link>
 				<pubDate>Tue, 11 Aug 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/alanpruitt/tags/health-sciences/</guid>
+				<guid>http://localhost:1313/alanpruitt/en/tags/health-sciences/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Hybrid Laboratory</title>
-				<link>http://localhost:1313/alanpruitt/tags/hybrid-laboratory/</link>
+				<link>http://localhost:1313/alanpruitt/en/tags/hybrid-laboratory/</link>
 				<pubDate>Tue, 11 Aug 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/alanpruitt/tags/hybrid-laboratory/</guid>
+				<guid>http://localhost:1313/alanpruitt/en/tags/hybrid-laboratory/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Instructional Engineering</title>
-				<link>http://localhost:1313/alanpruitt/tags/instructional-engineering/</link>
+				<link>http://localhost:1313/alanpruitt/en/tags/instructional-engineering/</link>
 				<pubDate>Tue, 11 Aug 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/alanpruitt/tags/instructional-engineering/</guid>
+				<guid>http://localhost:1313/alanpruitt/en/tags/instructional-engineering/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Kinesiology</title>
-				<link>http://localhost:1313/alanpruitt/tags/kinesiology/</link>
+				<link>http://localhost:1313/alanpruitt/en/tags/kinesiology/</link>
 				<pubDate>Tue, 11 Aug 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/alanpruitt/tags/kinesiology/</guid>
+				<guid>http://localhost:1313/alanpruitt/en/tags/kinesiology/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Mission Loop</title>
-				<link>http://localhost:1313/alanpruitt/tags/mission-loop/</link>
+				<link>http://localhost:1313/alanpruitt/en/tags/mission-loop/</link>
 				<pubDate>Tue, 11 Aug 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/alanpruitt/tags/mission-loop/</guid>
+				<guid>http://localhost:1313/alanpruitt/en/tags/mission-loop/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Pedagogical Architecture</title>
-				<link>http://localhost:1313/alanpruitt/tags/pedagogical-architecture/</link>
+				<link>http://localhost:1313/alanpruitt/en/tags/pedagogical-architecture/</link>
 				<pubDate>Tue, 11 Aug 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/alanpruitt/tags/pedagogical-architecture/</guid>
+				<guid>http://localhost:1313/alanpruitt/en/tags/pedagogical-architecture/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Safety Auditor</title>
-				<link>http://localhost:1313/alanpruitt/tags/safety-auditor/</link>
+				<link>http://localhost:1313/alanpruitt/en/tags/safety-auditor/</link>
 				<pubDate>Tue, 11 Aug 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/alanpruitt/tags/safety-auditor/</guid>
+				<guid>http://localhost:1313/alanpruitt/en/tags/safety-auditor/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Two-Part Scaffold</title>
-				<link>http://localhost:1313/alanpruitt/tags/two-part-scaffold/</link>
+				<link>http://localhost:1313/alanpruitt/en/tags/two-part-scaffold/</link>
 				<pubDate>Tue, 11 Aug 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/alanpruitt/tags/two-part-scaffold/</guid>
+				<guid>http://localhost:1313/alanpruitt/en/tags/two-part-scaffold/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Vibe-Coding</title>
-				<link>http://localhost:1313/alanpruitt/tags/vibe-coding/</link>
+				<link>http://localhost:1313/alanpruitt/en/tags/vibe-coding/</link>
 				<pubDate>Tue, 11 Aug 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/alanpruitt/tags/vibe-coding/</guid>
+				<guid>http://localhost:1313/alanpruitt/en/tags/vibe-coding/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>FERPA Compliance</title>
-				<link>http://localhost:1313/alanpruitt/tags/ferpa-compliance/</link>
+				<link>http://localhost:1313/alanpruitt/en/tags/ferpa-compliance/</link>
 				<pubDate>Thu, 06 Aug 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/alanpruitt/tags/ferpa-compliance/</guid>
+				<guid>http://localhost:1313/alanpruitt/en/tags/ferpa-compliance/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Learning Analytics</title>
-				<link>http://localhost:1313/alanpruitt/tags/learning-analytics/</link>
+				<link>http://localhost:1313/alanpruitt/en/tags/learning-analytics/</link>
 				<pubDate>Thu, 06 Aug 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/alanpruitt/tags/learning-analytics/</guid>
+				<guid>http://localhost:1313/alanpruitt/en/tags/learning-analytics/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Privacy-First Telemetry</title>
-				<link>http://localhost:1313/alanpruitt/tags/privacy-first-telemetry/</link>
+				<link>http://localhost:1313/alanpruitt/en/tags/privacy-first-telemetry/</link>
 				<pubDate>Thu, 06 Aug 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/alanpruitt/tags/privacy-first-telemetry/</guid>
+				<guid>http://localhost:1313/alanpruitt/en/tags/privacy-first-telemetry/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Sovereign AI</title>
-				<link>http://localhost:1313/alanpruitt/tags/sovereign-ai/</link>
+				<link>http://localhost:1313/alanpruitt/en/tags/sovereign-ai/</link>
 				<pubDate>Thu, 06 Aug 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/alanpruitt/tags/sovereign-ai/</guid>
+				<guid>http://localhost:1313/alanpruitt/en/tags/sovereign-ai/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>AI Course Design</title>
-				<link>http://localhost:1313/alanpruitt/tags/ai-course-design/</link>
+				<link>http://localhost:1313/alanpruitt/en/tags/ai-course-design/</link>
 				<pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/alanpruitt/tags/ai-course-design/</guid>
+				<guid>http://localhost:1313/alanpruitt/en/tags/ai-course-design/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>AST Linting</title>
-				<link>http://localhost:1313/alanpruitt/tags/ast-linting/</link>
+				<link>http://localhost:1313/alanpruitt/en/tags/ast-linting/</link>
 				<pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/alanpruitt/tags/ast-linting/</guid>
+				<guid>http://localhost:1313/alanpruitt/en/tags/ast-linting/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Bilingual Education</title>
-				<link>http://localhost:1313/alanpruitt/tags/bilingual-education/</link>
+				<link>http://localhost:1313/alanpruitt/en/tags/bilingual-education/</link>
 				<pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/alanpruitt/tags/bilingual-education/</guid>
+				<guid>http://localhost:1313/alanpruitt/en/tags/bilingual-education/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Continuous Integration</title>
-				<link>http://localhost:1313/alanpruitt/tags/continuous-integration/</link>
+				<link>http://localhost:1313/alanpruitt/en/tags/continuous-integration/</link>
 				<pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/alanpruitt/tags/continuous-integration/</guid>
+				<guid>http://localhost:1313/alanpruitt/en/tags/continuous-integration/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Localization Pipelines</title>
-				<link>http://localhost:1313/alanpruitt/tags/localization-pipelines/</link>
+				<link>http://localhost:1313/alanpruitt/en/tags/localization-pipelines/</link>
 				<pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/alanpruitt/tags/localization-pipelines/</guid>
+				<guid>http://localhost:1313/alanpruitt/en/tags/localization-pipelines/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>OER Accessibility</title>
-				<link>http://localhost:1313/alanpruitt/tags/oer-accessibility/</link>
+				<link>http://localhost:1313/alanpruitt/en/tags/oer-accessibility/</link>
 				<pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/alanpruitt/tags/oer-accessibility/</guid>
+				<guid>http://localhost:1313/alanpruitt/en/tags/oer-accessibility/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Pedagogical Testing</title>
-				<link>http://localhost:1313/alanpruitt/tags/pedagogical-testing/</link>
+				<link>http://localhost:1313/alanpruitt/en/tags/pedagogical-testing/</link>
 				<pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/alanpruitt/tags/pedagogical-testing/</guid>
+				<guid>http://localhost:1313/alanpruitt/en/tags/pedagogical-testing/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Responsible AI</title>
-				<link>http://localhost:1313/alanpruitt/tags/responsible-ai/</link>
+				<link>http://localhost:1313/alanpruitt/en/tags/responsible-ai/</link>
 				<pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/alanpruitt/tags/responsible-ai/</guid>
+				<guid>http://localhost:1313/alanpruitt/en/tags/responsible-ai/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Student Engagement</title>
-				<link>http://localhost:1313/alanpruitt/tags/student-engagement/</link>
+				<link>http://localhost:1313/alanpruitt/en/tags/student-engagement/</link>
 				<pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/alanpruitt/tags/student-engagement/</guid>
+				<guid>http://localhost:1313/alanpruitt/en/tags/student-engagement/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>CI/CD Architecture</title>
-				<link>http://localhost:1313/alanpruitt/tags/ci/cd-architecture/</link>
+				<link>http://localhost:1313/alanpruitt/en/tags/ci/cd-architecture/</link>
 				<pubDate>Thu, 30 Jul 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/alanpruitt/tags/ci/cd-architecture/</guid>
+				<guid>http://localhost:1313/alanpruitt/en/tags/ci/cd-architecture/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>WCAG 2.1 AA</title>
-				<link>http://localhost:1313/alanpruitt/tags/wcag-2.1-aa/</link>
+				<link>http://localhost:1313/alanpruitt/en/tags/wcag-2.1-aa/</link>
 				<pubDate>Thu, 30 Jul 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/alanpruitt/tags/wcag-2.1-aa/</guid>
+				<guid>http://localhost:1313/alanpruitt/en/tags/wcag-2.1-aa/</guid>
 				<description></description>
 			</item>
 	</channel>

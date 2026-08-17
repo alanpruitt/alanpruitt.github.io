@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Coach Alan</title>
-		<link>http://localhost:1314/alanpruitt/</link>
+		<link>http://localhost:1313/alanpruitt/es/</link>
 		<description>Recent content on Coach Alan</description>
 		<generator>Hugo</generator>
 		<language>es-MX</language>
@@ -10,6 +10,6 @@
 		
 		
 		
-			<atom:link href="http://localhost:1314/alanpruitt/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="http://localhost:1313/alanpruitt/es/index.xml" rel="self" type="application/rss+xml" />
 	</channel>
 </rss>

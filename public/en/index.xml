@@ -2,155 +2,155 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Coach Alan</title>
-		<link>http://localhost:1313/alanpruitt/</link>
+		<link>http://localhost:1313/alanpruitt/en/</link>
 		<description>Recent content on Coach Alan</description>
 		<generator>Hugo</generator>
-		<language>en</language>
+		<language>en-US</language>
 		
 		
 		
 		
 			<lastBuildDate>Fri, 14 Aug 2026 00:00:00 +0000</lastBuildDate>
 		
-			<atom:link href="http://localhost:1313/alanpruitt/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="http://localhost:1313/alanpruitt/en/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>Essay 17: Engineering Resilience: Resolving False-Positive Contrast Errors and Array Parsing Script Failures via Curriculum-as-Code</title>
-				<link>http://localhost:1313/alanpruitt/essays/17-resolving-array-parsing-script-failures/</link>
+				<link>http://localhost:1313/alanpruitt/en/essays/17-resolving-array-parsing-script-failures/</link>
 				<pubDate>Fri, 14 Aug 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/alanpruitt/essays/17-resolving-array-parsing-script-failures/</guid>
+				<guid>http://localhost:1313/alanpruitt/en/essays/17-resolving-array-parsing-script-failures/</guid>
 				<description>&lt;!-- raw HTML omitted --&gt;&#xA;&lt;h1 id=&#34;essay-17-engineering-resilience-resolving-false-positive-contrast-errors-and-array-parsing-script-failures-via-curriculum-as-code&#34;&gt;Essay 17: Engineering Resilience: Resolving False-Positive Contrast Errors and Array Parsing Script Failures via Curriculum-as-Code&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;strong&gt;TL;DR:&lt;/strong&gt; Automated accessibility checkers in Learning Management Systems often flag false-positive contrast errors due to array parsing script failures caused by deeply nested, visual-editor HTML bloat. Curriculum-as-Code (C-a-C) resolves this at the source by replacing GUI color adjustments with deterministic Markdown pipelines, native semantic hierarchies starting at &lt;code&gt;&amp;lt;h2&amp;gt;&lt;/code&gt;, and zero inline color overrides.&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>The AI Safety Auditor Pattern in Applied Kinesiology</title>
-				<link>http://localhost:1313/alanpruitt/essays/10-ai-safety-auditor-pattern/</link>
+				<link>http://localhost:1313/alanpruitt/en/essays/10-ai-safety-auditor-pattern/</link>
 				<pubDate>Tue, 11 Aug 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/alanpruitt/essays/10-ai-safety-auditor-pattern/</guid>
+				<guid>http://localhost:1313/alanpruitt/en/essays/10-ai-safety-auditor-pattern/</guid>
 				<description>&lt;!-- raw HTML omitted --&gt;&#xA;&lt;h1 id=&#34;the-ai-safety-auditor-pattern-in-applied-kinesiology&#34;&gt;The AI Safety Auditor Pattern in Applied Kinesiology&lt;/h1&gt;&#xA;&lt;p&gt;The introduction of generative AI into kinesiology and health science education has exposed a fundamental design flaw: most academic AI implementations are designed as passive tutors or conversational &amp;ldquo;quiz masters.&amp;rdquo; They answer questions, summarize lectures, and occasionally hallucinate clinical protocols. In high-stakes fields like exercise testing, biomechanics, and nutrition, passive AI conversational partners are not just ineffective—they are clinically dangerous.&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>The Guided Learning Trifecta: AI Simulation, Clinical Application, and Deterministic Auditing</title>
-				<link>http://localhost:1313/alanpruitt/essays/14-guided-learning-trifecta/</link>
+				<link>http://localhost:1313/alanpruitt/en/essays/14-guided-learning-trifecta/</link>
 				<pubDate>Tue, 11 Aug 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/alanpruitt/essays/14-guided-learning-trifecta/</guid>
+				<guid>http://localhost:1313/alanpruitt/en/essays/14-guided-learning-trifecta/</guid>
 				<description>&lt;!-- raw HTML omitted --&gt;&#xA;&lt;h1 id=&#34;the-guided-learning-trifecta-ai-simulation-clinical-application-and-deterministic-auditing&#34;&gt;The Guided Learning Trifecta: AI Simulation, Clinical Application, and Deterministic Auditing&lt;/h1&gt;&#xA;&lt;p&gt;When higher education institutions scramble to integrate Generative AI into workforce programs, they usually make one of two mistakes: they treat AI as a passive text summarizer, or they fear it as an unstoppable cheating engine. Both approaches miss the true potential of intelligent instructional engineering.&lt;/p&gt;&#xA;&lt;p&gt;In applied health sciences and vocational education, AI should neither replace human instruction nor act as an open-ended conversational oracle. Instead, it must be deployed as a structured, deterministic learning partner within a three-tier execution pipeline: &lt;strong&gt;The Guided Learning Trifecta&lt;/strong&gt;.&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>The Mission Loop Architecture: Pattern, Rule, and Solve in Coded Instruction</title>
-				<link>http://localhost:1313/alanpruitt/essays/12-mission-loop-architecture/</link>
+				<link>http://localhost:1313/alanpruitt/en/essays/12-mission-loop-architecture/</link>
 				<pubDate>Tue, 11 Aug 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/alanpruitt/essays/12-mission-loop-architecture/</guid>
+				<guid>http://localhost:1313/alanpruitt/en/essays/12-mission-loop-architecture/</guid>
 				<description>&lt;!-- raw HTML omitted --&gt;&#xA;&lt;h1 id=&#34;the-mission-loop-architecture-pattern-rule-and-solve-in-coded-instruction&#34;&gt;The Mission Loop Architecture: Pattern, Rule, and Solve in Coded Instruction&lt;/h1&gt;&#xA;&lt;p&gt;In traditional health science education, assignment prompts often ask open-ended questions like &amp;ldquo;Describe how you would design an exercise program for a diabetic client.&amp;rdquo; While well-intentioned, these unconstrained assignments invite vague responses, obscure student reasoning errors, and make objective assessment extraordinarily difficult.&lt;/p&gt;&#xA;&lt;p&gt;When curriculum is engineered as code, learning tasks require a structured, deterministic execution pipeline: &lt;strong&gt;The Mission Loop&lt;/strong&gt;.&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>The Two-Part Scaffold Framework: Bridging Simulation &amp; Research-Grade Application</title>
-				<link>http://localhost:1313/alanpruitt/essays/11-two-part-scaffold-framework/</link>
+				<link>http://localhost:1313/alanpruitt/en/essays/11-two-part-scaffold-framework/</link>
 				<pubDate>Tue, 11 Aug 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/alanpruitt/essays/11-two-part-scaffold-framework/</guid>
+				<guid>http://localhost:1313/alanpruitt/en/essays/11-two-part-scaffold-framework/</guid>
 				<description>&lt;!-- raw HTML omitted --&gt;&#xA;&lt;h1 id=&#34;the-two-part-scaffold-framework-bridging-simulation--research-grade-application&#34;&gt;The Two-Part Scaffold Framework: Bridging Simulation &amp;amp; Research-Grade Application&lt;/h1&gt;&#xA;&lt;p&gt;Laboratory education in applied kinesiology faces a persistent operational dilemma: virtual simulations often lack hands-on physiological tactile feedback, while purely physical labs risk wasting valuable equipment time on basic mathematical or procedural misunderstandings.&lt;/p&gt;&#xA;&lt;p&gt;When curriculum is engineered as code, hybrid laboratory design solves this friction through a deterministic &lt;strong&gt;Two-Part Scaffold Framework&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;h2 id=&#34;1-the-architecture-of-the-two-part-scaffold&#34;&gt;1. The Architecture of the Two-Part Scaffold&lt;/h2&gt;&#xA;&lt;p&gt;The scaffold divides weekly laboratory modules into two distinct, sequential phases: &lt;strong&gt;Part A (Digital Guided Learning &amp;amp; Simulation)&lt;/strong&gt; and &lt;strong&gt;Part B (Research-Grade Practical Application)&lt;/strong&gt;.&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>The Vibe-Coding Paradigm: Speed, Intuition, and Full-Stack Execution in Instructional Engineering</title>
-				<link>http://localhost:1313/alanpruitt/essays/13-vibe-coding-paradigm/</link>
+				<link>http://localhost:1313/alanpruitt/en/essays/13-vibe-coding-paradigm/</link>
 				<pubDate>Tue, 11 Aug 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/alanpruitt/essays/13-vibe-coding-paradigm/</guid>
+				<guid>http://localhost:1313/alanpruitt/en/essays/13-vibe-coding-paradigm/</guid>
 				<description>&lt;!-- raw HTML omitted --&gt;&#xA;&lt;h1 id=&#34;the-vibe-coding-paradigm-speed-intuition-and-full-stack-execution-in-instructional-engineering&#34;&gt;The Vibe-Coding Paradigm: Speed, Intuition, and Full-Stack Execution in Instructional Engineering&lt;/h1&gt;&#xA;&lt;p&gt;For decades, building custom educational software or interactive lab tools required navigating a massive barrier to entry: armies of full-stack developers, months of sprint cycles, and rigid proprietary frameworks. If an educator wanted an interactive molecular flavor workbench or an agentic PWA for clinical exercise testing, they were forced to submit feature requests to software vendors and wait years for bloated, one-size-fits-all releases.&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>Immutable Learning Analytics &amp; Privacy-First Telemetry</title>
-				<link>http://localhost:1313/alanpruitt/essays/09-immutable-learning-analytics/</link>
+				<link>http://localhost:1313/alanpruitt/en/essays/09-immutable-learning-analytics/</link>
 				<pubDate>Thu, 06 Aug 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/alanpruitt/essays/09-immutable-learning-analytics/</guid>
+				<guid>http://localhost:1313/alanpruitt/en/essays/09-immutable-learning-analytics/</guid>
 				<description>&lt;!-- raw HTML omitted --&gt;&#xA;&lt;h1 id=&#34;immutable-learning-analytics--privacy-first-telemetry&#34;&gt;Immutable Learning Analytics &amp;amp; Privacy-First Telemetry&lt;/h1&gt;&#xA;&lt;p&gt;Higher education’s current approach to learning analytics is fundamentally flawed. In the rush to monitor student engagement, institutions have built intrusive surveillance apparatuses—relying on heavy Learning Management System (LMS) trackers, proprietary cookies, and third-party data aggregators. These systems monetize or hoard behavioral data while offering educators remarkably little actionable pedagogical insight.&lt;/p&gt;&#xA;&lt;p&gt;When curriculum is engineered as code, learning analytics must evolve from passive surveillance to &lt;strong&gt;sovereign, privacy-first event telemetry&lt;/strong&gt;.&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>Continuous Integration for Pedagogy: Writing Automated Unit Tests for Learning Outcomes</title>
-				<link>http://localhost:1313/alanpruitt/essays/07-continuous-integration-pedagogy/</link>
+				<link>http://localhost:1313/alanpruitt/en/essays/07-continuous-integration-pedagogy/</link>
 				<pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/alanpruitt/essays/07-continuous-integration-pedagogy/</guid>
+				<guid>http://localhost:1313/alanpruitt/en/essays/07-continuous-integration-pedagogy/</guid>
 				<description>&lt;!-- raw HTML omitted --&gt;&#xA;&lt;h1 id=&#34;continuous-integration-for-pedagogy-writing-automated-unit-tests-for-learning-outcomes&#34;&gt;Continuous Integration for Pedagogy: Writing Automated Unit Tests for Learning Outcomes&lt;/h1&gt;&#xA;&lt;p&gt;In software engineering, continuous integration (CI) pipelines run automated test suites on every commit to ensure system contracts remain unbroken. In traditional instructional design, however, curriculum changes are committed without automated verification—resulting in broken prerequisites, unmapped learning outcomes, and silent accessibility regressions that go unnoticed until students encounter them.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Continuous Integration for Pedagogy&lt;/strong&gt; shifts quality assurance from a manual pre-semester review to an automated background process running on every Git commit.&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>Practical AI in Canvas: Supporting Course Design, Content Creation, and Student Engagement</title>
-				<link>http://localhost:1313/alanpruitt/essays/06-canvas-ai-course-design/</link>
+				<link>http://localhost:1313/alanpruitt/en/essays/06-canvas-ai-course-design/</link>
 				<pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/alanpruitt/essays/06-canvas-ai-course-design/</guid>
+				<guid>http://localhost:1313/alanpruitt/en/essays/06-canvas-ai-course-design/</guid>
 				<description>&lt;!-- raw HTML omitted --&gt;&#xA;&lt;h1 id=&#34;practical-ai-in-canvas-supporting-course-design-content-creation-and-student-engagement&#34;&gt;Practical AI in Canvas: Supporting Course Design, Content Creation, and Student Engagement&lt;/h1&gt;&#xA;&lt;p&gt;Artificial intelligence is no longer a peripheral experiment in higher education—it is an embedded operational capability within modern Learning Management Systems. As Canvas continues to integrate native AI features, instructors face the practical challenge of moving past theoretical hype toward actionable, ethically grounded course implementation.&lt;/p&gt;&#xA;&lt;p&gt;Drawing on recent higher education conference developments, this specification provides concrete strategies for leveraging AI inside Canvas to streamline content creation, elevate student engagement, and maintain rigorous human-in-the-loop oversight.&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>Sovereign Localization: Automating Multi-Lingual &amp; Multi-Dialect Course Pipelines</title>
-				<link>http://localhost:1313/alanpruitt/essays/08-bilingual-localization-pipelines/</link>
+				<link>http://localhost:1313/alanpruitt/en/essays/08-bilingual-localization-pipelines/</link>
 				<pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/alanpruitt/essays/08-bilingual-localization-pipelines/</guid>
+				<guid>http://localhost:1313/alanpruitt/en/essays/08-bilingual-localization-pipelines/</guid>
 				<description>&lt;!-- raw HTML omitted --&gt;&#xA;&lt;h1 id=&#34;sovereign-localization-automating-multi-lingual--multi-dialect-course-pipelines&#34;&gt;Sovereign Localization: Automating Multi-Lingual &amp;amp; Multi-Dialect Course Pipelines&lt;/h1&gt;&#xA;&lt;p&gt;In dual-language and regional higher education contexts, multi-lingual instruction is often treated as an afterthought—relegated to second-tier automated browser translation widgets or manual, out-of-sync PDF translations. This creates significant equity gaps, as non-native English speakers receive content that lacks technical precision, cultural nuance, and structural alignment.&lt;/p&gt;&#xA;&lt;p&gt;True educational access requires &lt;strong&gt;Sovereign Localization&lt;/strong&gt;: treating course content as internationalized source code (&lt;code&gt;i18n&lt;/code&gt;) and building automated localization pipelines (&lt;code&gt;l10n&lt;/code&gt;) that compile synchronized, dialect-aware course shells directly into the LMS.&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>Air-Gapped &amp; Sovereign AI: Local Intelligence in High-Compliance Environments</title>
-				<link>http://localhost:1313/alanpruitt/essays/03-air-gapped-sovereign-ai/</link>
+				<link>http://localhost:1313/alanpruitt/en/essays/03-air-gapped-sovereign-ai/</link>
 				<pubDate>Thu, 30 Jul 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/alanpruitt/essays/03-air-gapped-sovereign-ai/</guid>
+				<guid>http://localhost:1313/alanpruitt/en/essays/03-air-gapped-sovereign-ai/</guid>
 				<description>&lt;h1 id=&#34;air-gapped--sovereign-ai-local-intelligence-in-high-compliance-environments&#34;&gt;Air-Gapped &amp;amp; Sovereign AI: Local Intelligence in High-Compliance Environments&lt;/h1&gt;&#xA;&lt;p&gt;Why relying on third-party cloud APIs poses unacceptable regulatory risks for educational data, and how edge-native open weights ensure absolute privacy.&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>Architecting Born-Accessible Higher Ed: ADA Title II &amp; Curriculum-as-Code</title>
-				<link>http://localhost:1313/alanpruitt/essays/04-ada-title-ii-accessibility/</link>
+				<link>http://localhost:1313/alanpruitt/en/essays/04-ada-title-ii-accessibility/</link>
 				<pubDate>Thu, 30 Jul 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/alanpruitt/essays/04-ada-title-ii-accessibility/</guid>
+				<guid>http://localhost:1313/alanpruitt/en/essays/04-ada-title-ii-accessibility/</guid>
 				<description>&lt;h1 id=&#34;architecting-born-accessible-higher-ed-ada-title-ii--curriculum-as-code&#34;&gt;Architecting Born-Accessible Higher Ed: ADA Title II &amp;amp; Curriculum-as-Code&lt;/h1&gt;&#xA;&lt;p&gt;Under Title II of the ADA and Section 508, digital accessibility is a legal mandate. Examine how Curriculum-as-Code paradigms replace reactive remediation with automated compliance.&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>Curriculum-as-Code: Treating Educational Content Like Software Development</title>
-				<link>http://localhost:1313/alanpruitt/essays/02-curriculum-as-code/</link>
+				<link>http://localhost:1313/alanpruitt/en/essays/02-curriculum-as-code/</link>
 				<pubDate>Thu, 30 Jul 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/alanpruitt/essays/02-curriculum-as-code/</guid>
+				<guid>http://localhost:1313/alanpruitt/en/essays/02-curriculum-as-code/</guid>
 				<description>&lt;h1 id=&#34;curriculum-as-code-treating-educational-content-like-software-development&#34;&gt;Curriculum-as-Code: Treating Educational Content Like Software Development&lt;/h1&gt;&#xA;&lt;p&gt;Why proprietary LMS platforms fail modern compliance and how Git version control, Markdown SSoT, and CI/CD validation redefine instructional engineering.&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>Instructional Engineering: Transforming Curriculum into Version-Controlled Source Code</title>
-				<link>http://localhost:1313/alanpruitt/essays/05-instructional-engineering/</link>
+				<link>http://localhost:1313/alanpruitt/en/essays/05-instructional-engineering/</link>
 				<pubDate>Thu, 30 Jul 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/alanpruitt/essays/05-instructional-engineering/</guid>
+				<guid>http://localhost:1313/alanpruitt/en/essays/05-instructional-engineering/</guid>
 				<description>&lt;!-- raw HTML omitted --&gt;&#xA;&lt;h1 id=&#34;instructional-engineering-transforming-curriculum-into-version-controlled-source-code&#34;&gt;Instructional Engineering: Transforming Curriculum into Version-Controlled Source Code&lt;/h1&gt;&#xA;&lt;p&gt;For decades, instructional design has treated educational content as static documents trapped inside proprietary Learning Management Systems or binary PDFs. &lt;strong&gt;Instructional Engineering&lt;/strong&gt; replaces this reactive model with software design principles: modularity, automated linting, plain-text portability, and continuous delivery.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-shift-from-design-to-engineering&#34;&gt;The Shift from Design to Engineering&lt;/h2&gt;&#xA;&lt;p&gt;Traditional instructional design focuses heavily on visual presentation within specific tools. Instructional Engineering treats content as an evolving software system that must meet strict operational criteria:&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>Shifting from AI Fear to Strategic Assessment Design</title>
-				<link>http://localhost:1313/alanpruitt/essays/01-ai-assessment-design/</link>
+				<link>http://localhost:1313/alanpruitt/en/essays/01-ai-assessment-design/</link>
 				<pubDate>Thu, 30 Jul 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/alanpruitt/essays/01-ai-assessment-design/</guid>
+				<guid>http://localhost:1313/alanpruitt/en/essays/01-ai-assessment-design/</guid>
 				<description>&lt;h1 id=&#34;shifting-from-ai-fear-to-strategic-assessment-design&#34;&gt;Shifting from AI Fear to Strategic Assessment Design&lt;/h1&gt;&#xA;&lt;p&gt;How Curriculum-as-Code paradigms transform educators from passive task checkers into problem architects by auditing the cognitive process rather than standard answers.&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title></title>
-				<link>http://localhost:1313/alanpruitt/distribution/essay-18-linkedin/</link>
+				<link>http://localhost:1313/alanpruitt/en/distribution/essay-18-linkedin/</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/alanpruitt/distribution/essay-18-linkedin/</guid>
+				<guid>http://localhost:1313/alanpruitt/en/distribution/essay-18-linkedin/</guid>
 				<description>&lt;h1 id=&#34;distribution-asset-essay-18-linkedin-announcement&#34;&gt;Distribution Asset: Essay 18 LinkedIn Announcement&lt;/h1&gt;&#xA;&lt;p&gt;&lt;strong&gt;Target Canonical:&lt;/strong&gt; &lt;a href=&#34;https://alanpruitt.com/articles/18-the-illusion-of-the-feed.html&#34;&gt;https://alanpruitt.com/articles/18-the-illusion-of-the-feed.html&lt;/a&gt;&#xA;&lt;strong&gt;Release Date:&lt;/strong&gt; 2026-08-14&#xA;&lt;strong&gt;Strategy:&lt;/strong&gt; Single Canonical Link (Strategy 2)&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;Broken links are just the visible damage. The real cost is configuration drift.&lt;/p&gt;&#xA;&lt;p&gt;In higher education and enterprise training, it’s common practice to pull external feeds and dynamic resources directly into Learning Management Systems (LMS). But without an upstream architecture governing those assets, you aren’t just risking 404 errors—you’re silently degrading version control, audit trails, and accessibility compliance.&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title></title>
-				<link>http://localhost:1313/alanpruitt/distribution/essay-18-newsletter/</link>
+				<link>http://localhost:1313/alanpruitt/en/distribution/essay-18-newsletter/</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/alanpruitt/distribution/essay-18-newsletter/</guid>
+				<guid>http://localhost:1313/alanpruitt/en/distribution/essay-18-newsletter/</guid>
 				<description>&lt;h1 id=&#34;newsletter-dispatch-asset-essay-18&#34;&gt;Newsletter Dispatch Asset: Essay 18&lt;/h1&gt;&#xA;&lt;p&gt;&lt;strong&gt;Subject:&lt;/strong&gt; Architectural Debt in the LMS: Why dynamic feeds break compliance&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;Hey team,&lt;/p&gt;&#xA;&lt;p&gt;Broken links in an online course are annoying, but the unseen damage is far worse: &lt;strong&gt;configuration drift&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;When instructional designers embed external feeds or unversioned links into course modules, they introduce a point of failure that bypasses version control and audit trails. When a source changes or drops, teams spend hours manually hunting down and patching broken URLs across dozens of shells.&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title></title>
-				<link>http://localhost:1313/alanpruitt/essays/18-the-illusion-of-the-feed/</link>
+				<link>http://localhost:1313/alanpruitt/en/essays/18-the-illusion-of-the-feed/</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/alanpruitt/essays/18-the-illusion-of-the-feed/</guid>
+				<guid>http://localhost:1313/alanpruitt/en/essays/18-the-illusion-of-the-feed/</guid>
 				<description>&lt;h1 id=&#34;essay-18-the-illusion-of-the-feed-upstream-ssot-and-feed-link-rot-governance&#34;&gt;Essay 18: The Illusion of the Feed: Upstream SSoT and Feed Link Rot Governance&lt;/h1&gt;&#xA;&lt;h2 id=&#34;-learning-objectives&#34;&gt;🎯 Learning Objectives&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Analyze the impact of link rot on digital course content.&lt;/li&gt;&#xA;&lt;li&gt;Establish upstream Single Source of Truth (SSoT) configuration control.&lt;/li&gt;&#xA;&lt;li&gt;Design glare-resilient, high-contrast, offline-first course architectures.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;-instructional-content&#34;&gt;📖 Instructional Content&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;strong&gt;Key Concept:&lt;/strong&gt; Relying on live external web links and dynamic social media widgets inside an LMS creates an illusion of real-time engagement while introducing a compounding vulnerability of link rot. Upstream Single Source of Truth (SSoT) governance mitigates this risk by externalizing external resources as config-controlled assets in centralized database manifests.&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title></title>
-				<link>http://localhost:1313/alanpruitt/essays/essay-15/</link>
+				<link>http://localhost:1313/alanpruitt/en/essays/essay-15/</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/alanpruitt/essays/essay-15/</guid>
+				<guid>http://localhost:1313/alanpruitt/en/essays/essay-15/</guid>
 				<description>&lt;h1 id=&#34;essay-15-algorithmic-pedagogy--continuous-integration--engineering-zero-regression-learning-environments&#34;&gt;Essay 15: Algorithmic Pedagogy &amp;amp; Continuous Integration — Engineering Zero-Regression Learning Environments&lt;/h1&gt;&#xA;&lt;p&gt;When traditional course design meets institutional scaling, it almost always encounters a friction point: version decay. Syllabi drift out of alignment with lab rubrics, external links break, accreditation standards shift, and manual updates introduce silent regressions into LMS course shells.&lt;/p&gt;&#xA;&lt;p&gt;In software development, this problem was solved decades ago through &lt;strong&gt;Continuous Integration (CI)&lt;/strong&gt; and automated testing. In higher education, the solution is &lt;strong&gt;Algorithmic Pedagogy&lt;/strong&gt;—the practice of treating learning outcomes, prerequisite graphs, and compliance rules as executable source code.&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title></title>
-				<link>http://localhost:1313/alanpruitt/essays/essay-23/</link>
+				<link>http://localhost:1313/alanpruitt/en/essays/essay-23/</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/alanpruitt/essays/essay-23/</guid>
+				<guid>http://localhost:1313/alanpruitt/en/essays/essay-23/</guid>
 				<description>&lt;h2 id=&#34;essay-23-the-accessibility-checker-parity-illusion-and-the-curriculum-as-code-imperative&#34;&gt;Essay 23: The Accessibility Checker Parity Illusion and the Curriculum-as-Code Imperative&lt;/h2&gt;&#xA;&lt;h3 id=&#34;executive-summary&#34;&gt;Executive Summary&lt;/h3&gt;&#xA;&lt;p&gt;Automated accessibility checkers in Canvas LMS, Microsoft Office 365, and Adobe Acrobat Pro operate on fundamentally incompatible, proprietary schema architectures. A document certified &amp;ldquo;accessible&amp;rdquo; in one system routinely introduces severe structural barriers in another.&lt;/p&gt;&#xA;&lt;p&gt;To achieve verifiable compliance under ADA Title II and WCAG 2.2 Level AA, higher education institutions must discard multi-tier export pipelines in favor of &lt;strong&gt;Curriculum-as-Code (CaC)&lt;/strong&gt;: authoring in semantic, mobile-first Markdown as the Single Source of Truth (SSoT) and compiling deterministically to pristine HTML5.&lt;/p&gt;</description>
 			</item>
 	</channel>
