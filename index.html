@@ -7,6 +7,20 @@
     <meta name="description" content="Personal portfolio and Curriculum-as-Code repository of Alan Pruitt.">
     <link rel="canonical" href="https://alanpruitt.com/">
 
+    <!-- GeoIP/Locale Browser Language Redirect for Spanish Preferred -->
+    <script>
+      (function() {
+        const userLang = navigator.language || navigator.userLanguage;
+        const currentPath = window.location.pathname;
+        
+        // If user prefers Spanish and is currently on the English root, redirect to /es/
+        if (userLang.startsWith('es') && currentPath === '/alanpruitt/' && !localStorage.getItem('lang_override')) {
+          localStorage.setItem('lang_override', 'es-MX');
+          window.location.href = '/alanpruitt/es/';
+        }
+      })();
+    </script>
+
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%230B192C'/></svg>">
 
