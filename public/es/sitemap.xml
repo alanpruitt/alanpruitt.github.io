@@ -2,40 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/alanpruitt/es/categories/</loc>
+    <loc>https://alanpruitt.github.io/alanpruitt/es/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="http://localhost:1313/alanpruitt/en/categories/"
+                href="https://alanpruitt.github.io/alanpruitt/en/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es-MX"
-                href="http://localhost:1313/alanpruitt/es/categories/"
+                href="https://alanpruitt.github.io/alanpruitt/es/categories/"
                 />
   </url><url>
-    <loc>http://localhost:1313/alanpruitt/es/</loc>
+    <loc>https://alanpruitt.github.io/alanpruitt/es/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="http://localhost:1313/alanpruitt/en/"
+                href="https://alanpruitt.github.io/alanpruitt/en/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es-MX"
-                href="http://localhost:1313/alanpruitt/es/"
+                href="https://alanpruitt.github.io/alanpruitt/es/"
                 />
   </url><url>
-    <loc>http://localhost:1313/alanpruitt/es/tags/</loc>
+    <loc>https://alanpruitt.github.io/alanpruitt/es/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="http://localhost:1313/alanpruitt/en/tags/"
+                href="https://alanpruitt.github.io/alanpruitt/en/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es-MX"
-                href="http://localhost:1313/alanpruitt/es/tags/"
+                href="https://alanpruitt.github.io/alanpruitt/es/tags/"
                 />
   </url>
 </urlset>

@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Learning Analytics on Coach Alan</title>
-		<link>http://localhost:1313/alanpruitt/en/tags/learning-analytics/</link>
+		<link>https://alanpruitt.github.io/alanpruitt/en/tags/learning-analytics/</link>
 		<description>Recent content in Learning Analytics on Coach Alan</description>
 		<generator>Hugo</generator>
 		<language>en-US</language>
@@ -12,12 +12,12 @@
 		
 			<lastBuildDate>Thu, 06 Aug 2026 00:00:00 +0000</lastBuildDate>
 		
-			<atom:link href="http://localhost:1313/alanpruitt/en/tags/learning-analytics/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="https://alanpruitt.github.io/alanpruitt/en/tags/learning-analytics/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>Immutable Learning Analytics &amp; Privacy-First Telemetry</title>
-				<link>http://localhost:1313/alanpruitt/en/essays/09-immutable-learning-analytics/</link>
+				<link>https://alanpruitt.github.io/alanpruitt/en/essays/09-immutable-learning-analytics/</link>
 				<pubDate>Thu, 06 Aug 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/alanpruitt/en/essays/09-immutable-learning-analytics/</guid>
+				<guid>https://alanpruitt.github.io/alanpruitt/en/essays/09-immutable-learning-analytics/</guid>
 				<description>&lt;!-- raw HTML omitted --&gt;&#xA;&lt;h1 id=&#34;immutable-learning-analytics--privacy-first-telemetry&#34;&gt;Immutable Learning Analytics &amp;amp; Privacy-First Telemetry&lt;/h1&gt;&#xA;&lt;p&gt;Higher education’s current approach to learning analytics is fundamentally flawed. In the rush to monitor student engagement, institutions have built intrusive surveillance apparatuses—relying on heavy Learning Management System (LMS) trackers, proprietary cookies, and third-party data aggregators. These systems monetize or hoard behavioral data while offering educators remarkably little actionable pedagogical insight.&lt;/p&gt;&#xA;&lt;p&gt;When curriculum is engineered as code, learning analytics must evolve from passive surveillance to &lt;strong&gt;sovereign, privacy-first event telemetry&lt;/strong&gt;.&lt;/p&gt;</description>
 			</item>
 	</channel>

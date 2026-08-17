@@ -2365,3 +2365,10 @@ Los evaluadores automáticos de accesibilidad en Canvas LMS, Microsoft Office 36
 
                     
 Para lograr un cumplimiento verificable bajo ADA Título II y WCAG 2.2 Nivel AA, las instituciones de educación superior deben descartar las cadenas de exportación tradicionales en favor de **Currículum como Código (CaC)**: redactar en Markdown semántico optimizado para móviles como Fuente Única de Verdad (SSoT) y compilar deterministamente a HTML5 puro.
+
+---
+
+# Essay 24: Chatbots & Canvas LMS: A Cautionary Tale
+URL: https://alanpruitt.com/articles/24-chatbots-canvas-lms-cautionary-tale.html
+
+

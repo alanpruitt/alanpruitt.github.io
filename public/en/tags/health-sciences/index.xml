@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Health Sciences on Coach Alan</title>
-		<link>http://localhost:1313/alanpruitt/en/tags/health-sciences/</link>
+		<link>https://alanpruitt.github.io/alanpruitt/en/tags/health-sciences/</link>
 		<description>Recent content in Health Sciences on Coach Alan</description>
 		<generator>Hugo</generator>
 		<language>en-US</language>
@@ -12,12 +12,12 @@
 		
 			<lastBuildDate>Tue, 11 Aug 2026 00:00:00 +0000</lastBuildDate>
 		
-			<atom:link href="http://localhost:1313/alanpruitt/en/tags/health-sciences/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="https://alanpruitt.github.io/alanpruitt/en/tags/health-sciences/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>The Mission Loop Architecture: Pattern, Rule, and Solve in Coded Instruction</title>
-				<link>http://localhost:1313/alanpruitt/en/essays/12-mission-loop-architecture/</link>
+				<link>https://alanpruitt.github.io/alanpruitt/en/essays/12-mission-loop-architecture/</link>
 				<pubDate>Tue, 11 Aug 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/alanpruitt/en/essays/12-mission-loop-architecture/</guid>
+				<guid>https://alanpruitt.github.io/alanpruitt/en/essays/12-mission-loop-architecture/</guid>
 				<description>&lt;!-- raw HTML omitted --&gt;&#xA;&lt;h1 id=&#34;the-mission-loop-architecture-pattern-rule-and-solve-in-coded-instruction&#34;&gt;The Mission Loop Architecture: Pattern, Rule, and Solve in Coded Instruction&lt;/h1&gt;&#xA;&lt;p&gt;In traditional health science education, assignment prompts often ask open-ended questions like &amp;ldquo;Describe how you would design an exercise program for a diabetic client.&amp;rdquo; While well-intentioned, these unconstrained assignments invite vague responses, obscure student reasoning errors, and make objective assessment extraordinarily difficult.&lt;/p&gt;&#xA;&lt;p&gt;When curriculum is engineered as code, learning tasks require a structured, deterministic execution pipeline: &lt;strong&gt;The Mission Loop&lt;/strong&gt;.&lt;/p&gt;</description>
 			</item>
 	</channel>

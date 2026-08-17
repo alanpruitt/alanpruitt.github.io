@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Distributions on Coach Alan</title>
-		<link>http://localhost:1313/alanpruitt/en/distribution/</link>
+		<link>https://alanpruitt.github.io/alanpruitt/en/distribution/</link>
 		<description>Recent content in Distributions on Coach Alan</description>
 		<generator>Hugo</generator>
 		<language>en-US</language>
@@ -10,19 +10,19 @@
 		
 		
 		
-			<atom:link href="http://localhost:1313/alanpruitt/en/distribution/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="https://alanpruitt.github.io/alanpruitt/en/distribution/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title></title>
-				<link>http://localhost:1313/alanpruitt/en/distribution/essay-18-linkedin/</link>
+				<link>https://alanpruitt.github.io/alanpruitt/en/distribution/essay-18-linkedin/</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/alanpruitt/en/distribution/essay-18-linkedin/</guid>
+				<guid>https://alanpruitt.github.io/alanpruitt/en/distribution/essay-18-linkedin/</guid>
 				<description>&lt;h1 id=&#34;distribution-asset-essay-18-linkedin-announcement&#34;&gt;Distribution Asset: Essay 18 LinkedIn Announcement&lt;/h1&gt;&#xA;&lt;p&gt;&lt;strong&gt;Target Canonical:&lt;/strong&gt; &lt;a href=&#34;https://alanpruitt.com/articles/18-the-illusion-of-the-feed.html&#34;&gt;https://alanpruitt.com/articles/18-the-illusion-of-the-feed.html&lt;/a&gt;&#xA;&lt;strong&gt;Release Date:&lt;/strong&gt; 2026-08-14&#xA;&lt;strong&gt;Strategy:&lt;/strong&gt; Single Canonical Link (Strategy 2)&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;Broken links are just the visible damage. The real cost is configuration drift.&lt;/p&gt;&#xA;&lt;p&gt;In higher education and enterprise training, it’s common practice to pull external feeds and dynamic resources directly into Learning Management Systems (LMS). But without an upstream architecture governing those assets, you aren’t just risking 404 errors—you’re silently degrading version control, audit trails, and accessibility compliance.&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title></title>
-				<link>http://localhost:1313/alanpruitt/en/distribution/essay-18-newsletter/</link>
+				<link>https://alanpruitt.github.io/alanpruitt/en/distribution/essay-18-newsletter/</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/alanpruitt/en/distribution/essay-18-newsletter/</guid>
+				<guid>https://alanpruitt.github.io/alanpruitt/en/distribution/essay-18-newsletter/</guid>
 				<description>&lt;h1 id=&#34;newsletter-dispatch-asset-essay-18&#34;&gt;Newsletter Dispatch Asset: Essay 18&lt;/h1&gt;&#xA;&lt;p&gt;&lt;strong&gt;Subject:&lt;/strong&gt; Architectural Debt in the LMS: Why dynamic feeds break compliance&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;Hey team,&lt;/p&gt;&#xA;&lt;p&gt;Broken links in an online course are annoying, but the unseen damage is far worse: &lt;strong&gt;configuration drift&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;When instructional designers embed external feeds or unversioned links into course modules, they introduce a point of failure that bypasses version control and audit trails. When a source changes or drops, teams spend hours manually hunting down and patching broken URLs across dozens of shells.&lt;/p&gt;</description>
 			</item>
 	</channel>
