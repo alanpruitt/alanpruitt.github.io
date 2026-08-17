@@ -5,7 +5,7 @@
     <loc>http://localhost:1314/alanpruitt/categories/</loc>
     <xhtml:link
                 rel="alternate"
-                hreflang="en-us"
+                hreflang="en"
                 href="http://localhost:1313/alanpruitt/categories/"
                 />
     <xhtml:link
@@ -17,7 +17,7 @@
     <loc>http://localhost:1314/alanpruitt/</loc>
     <xhtml:link
                 rel="alternate"
-                hreflang="en-us"
+                hreflang="en"
                 href="http://localhost:1313/alanpruitt/"
                 />
     <xhtml:link
@@ -29,7 +29,7 @@
     <loc>http://localhost:1314/alanpruitt/tags/</loc>
     <xhtml:link
                 rel="alternate"
-                hreflang="en-us"
+                hreflang="en"
                 href="http://localhost:1313/alanpruitt/tags/"
                 />
     <xhtml:link
