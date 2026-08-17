@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>AI Safety Auditor on Coach Alan</title>
+		<link>http://localhost:1313/alanpruitt/tags/ai-safety-auditor/</link>
+		<description>Recent content in AI Safety Auditor on Coach Alan</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Tue, 11 Aug 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/alanpruitt/tags/ai-safety-auditor/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>The AI Safety Auditor Pattern in Applied Kinesiology</title>
+				<link>http://localhost:1313/alanpruitt/essays/10-ai-safety-auditor-pattern/</link>
+				<pubDate>Tue, 11 Aug 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/alanpruitt/essays/10-ai-safety-auditor-pattern/</guid>
+				<description>&lt;!-- raw HTML omitted --&gt;&#xA;&lt;h1 id=&#34;the-ai-safety-auditor-pattern-in-applied-kinesiology&#34;&gt;The AI Safety Auditor Pattern in Applied Kinesiology&lt;/h1&gt;&#xA;&lt;p&gt;The introduction of generative AI into kinesiology and health science education has exposed a fundamental design flaw: most academic AI implementations are designed as passive tutors or conversational &amp;ldquo;quiz masters.&amp;rdquo; They answer questions, summarize lectures, and occasionally hallucinate clinical protocols. In high-stakes fields like exercise testing, biomechanics, and nutrition, passive AI conversational partners are not just ineffective—they are clinically dangerous.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

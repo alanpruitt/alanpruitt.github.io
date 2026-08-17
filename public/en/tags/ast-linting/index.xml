@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>AST Linting on Coach Alan</title>
+		<link>http://localhost:1313/alanpruitt/tags/ast-linting/</link>
+		<description>Recent content in AST Linting on Coach Alan</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Tue, 04 Aug 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/alanpruitt/tags/ast-linting/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Continuous Integration for Pedagogy: Writing Automated Unit Tests for Learning Outcomes</title>
+				<link>http://localhost:1313/alanpruitt/essays/07-continuous-integration-pedagogy/</link>
+				<pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/alanpruitt/essays/07-continuous-integration-pedagogy/</guid>
+				<description>&lt;!-- raw HTML omitted --&gt;&#xA;&lt;h1 id=&#34;continuous-integration-for-pedagogy-writing-automated-unit-tests-for-learning-outcomes&#34;&gt;Continuous Integration for Pedagogy: Writing Automated Unit Tests for Learning Outcomes&lt;/h1&gt;&#xA;&lt;p&gt;In software engineering, continuous integration (CI) pipelines run automated test suites on every commit to ensure system contracts remain unbroken. In traditional instructional design, however, curriculum changes are committed without automated verification—resulting in broken prerequisites, unmapped learning outcomes, and silent accessibility regressions that go unnoticed until students encounter them.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Continuous Integration for Pedagogy&lt;/strong&gt; shifts quality assurance from a manual pre-semester review to an automated background process running on every Git commit.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

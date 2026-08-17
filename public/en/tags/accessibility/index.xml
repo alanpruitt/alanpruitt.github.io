@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Accessibility on Coach Alan</title>
+		<link>http://localhost:1313/alanpruitt/tags/accessibility/</link>
+		<description>Recent content in Accessibility on Coach Alan</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Fri, 14 Aug 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/alanpruitt/tags/accessibility/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Essay 17: Engineering Resilience: Resolving False-Positive Contrast Errors and Array Parsing Script Failures via Curriculum-as-Code</title>
+				<link>http://localhost:1313/alanpruitt/essays/17-resolving-array-parsing-script-failures/</link>
+				<pubDate>Fri, 14 Aug 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/alanpruitt/essays/17-resolving-array-parsing-script-failures/</guid>
+				<description>&lt;!-- raw HTML omitted --&gt;&#xA;&lt;h1 id=&#34;essay-17-engineering-resilience-resolving-false-positive-contrast-errors-and-array-parsing-script-failures-via-curriculum-as-code&#34;&gt;Essay 17: Engineering Resilience: Resolving False-Positive Contrast Errors and Array Parsing Script Failures via Curriculum-as-Code&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;strong&gt;TL;DR:&lt;/strong&gt; Automated accessibility checkers in Learning Management Systems often flag false-positive contrast errors due to array parsing script failures caused by deeply nested, visual-editor HTML bloat. Curriculum-as-Code (C-a-C) resolves this at the source by replacing GUI color adjustments with deterministic Markdown pipelines, native semantic hierarchies starting at &lt;code&gt;&amp;lt;h2&amp;gt;&lt;/code&gt;, and zero inline color overrides.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

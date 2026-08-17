@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Responsible AI on Coach Alan</title>
+		<link>http://localhost:1313/alanpruitt/tags/responsible-ai/</link>
+		<description>Recent content in Responsible AI on Coach Alan</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Tue, 04 Aug 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/alanpruitt/tags/responsible-ai/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Practical AI in Canvas: Supporting Course Design, Content Creation, and Student Engagement</title>
+				<link>http://localhost:1313/alanpruitt/essays/06-canvas-ai-course-design/</link>
+				<pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/alanpruitt/essays/06-canvas-ai-course-design/</guid>
+				<description>&lt;!-- raw HTML omitted --&gt;&#xA;&lt;h1 id=&#34;practical-ai-in-canvas-supporting-course-design-content-creation-and-student-engagement&#34;&gt;Practical AI in Canvas: Supporting Course Design, Content Creation, and Student Engagement&lt;/h1&gt;&#xA;&lt;p&gt;Artificial intelligence is no longer a peripheral experiment in higher education—it is an embedded operational capability within modern Learning Management Systems. As Canvas continues to integrate native AI features, instructors face the practical challenge of moving past theoretical hype toward actionable, ethically grounded course implementation.&lt;/p&gt;&#xA;&lt;p&gt;Drawing on recent higher education conference developments, this specification provides concrete strategies for leveraging AI inside Canvas to streamline content creation, elevate student engagement, and maintain rigorous human-in-the-loop oversight.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Localization Pipelines on Coach Alan</title>
+		<link>http://localhost:1313/alanpruitt/tags/localization-pipelines/</link>
+		<description>Recent content in Localization Pipelines on Coach Alan</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Tue, 04 Aug 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/alanpruitt/tags/localization-pipelines/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Sovereign Localization: Automating Multi-Lingual &amp; Multi-Dialect Course Pipelines</title>
+				<link>http://localhost:1313/alanpruitt/essays/08-bilingual-localization-pipelines/</link>
+				<pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/alanpruitt/essays/08-bilingual-localization-pipelines/</guid>
+				<description>&lt;!-- raw HTML omitted --&gt;&#xA;&lt;h1 id=&#34;sovereign-localization-automating-multi-lingual--multi-dialect-course-pipelines&#34;&gt;Sovereign Localization: Automating Multi-Lingual &amp;amp; Multi-Dialect Course Pipelines&lt;/h1&gt;&#xA;&lt;p&gt;In dual-language and regional higher education contexts, multi-lingual instruction is often treated as an afterthought—relegated to second-tier automated browser translation widgets or manual, out-of-sync PDF translations. This creates significant equity gaps, as non-native English speakers receive content that lacks technical precision, cultural nuance, and structural alignment.&lt;/p&gt;&#xA;&lt;p&gt;True educational access requires &lt;strong&gt;Sovereign Localization&lt;/strong&gt;: treating course content as internationalized source code (&lt;code&gt;i18n&lt;/code&gt;) and building automated localization pipelines (&lt;code&gt;l10n&lt;/code&gt;) that compile synchronized, dialect-aware course shells directly into the LMS.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

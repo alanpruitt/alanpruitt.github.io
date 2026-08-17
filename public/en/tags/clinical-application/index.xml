@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Clinical Application on Coach Alan</title>
+		<link>http://localhost:1313/alanpruitt/tags/clinical-application/</link>
+		<description>Recent content in Clinical Application on Coach Alan</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Tue, 11 Aug 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/alanpruitt/tags/clinical-application/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>The Guided Learning Trifecta: AI Simulation, Clinical Application, and Deterministic Auditing</title>
+				<link>http://localhost:1313/alanpruitt/essays/14-guided-learning-trifecta/</link>
+				<pubDate>Tue, 11 Aug 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/alanpruitt/essays/14-guided-learning-trifecta/</guid>
+				<description>&lt;!-- raw HTML omitted --&gt;&#xA;&lt;h1 id=&#34;the-guided-learning-trifecta-ai-simulation-clinical-application-and-deterministic-auditing&#34;&gt;The Guided Learning Trifecta: AI Simulation, Clinical Application, and Deterministic Auditing&lt;/h1&gt;&#xA;&lt;p&gt;When higher education institutions scramble to integrate Generative AI into workforce programs, they usually make one of two mistakes: they treat AI as a passive text summarizer, or they fear it as an unstoppable cheating engine. Both approaches miss the true potential of intelligent instructional engineering.&lt;/p&gt;&#xA;&lt;p&gt;In applied health sciences and vocational education, AI should neither replace human instruction nor act as an open-ended conversational oracle. Instead, it must be deployed as a structured, deterministic learning partner within a three-tier execution pipeline: &lt;strong&gt;The Guided Learning Trifecta&lt;/strong&gt;.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>
