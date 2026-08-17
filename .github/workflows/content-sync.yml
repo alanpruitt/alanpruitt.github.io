@@ -1,0 +1,29 @@
+###
+# Workflow: Content Sync & Translation Audit
+# Purpose: Ensures English and Norteño Spanish content files remain aligned.
+###
+
+name: Content Sync Audit
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'content/en/**'
+
+jobs:
+  audit-sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Run Translation Sync Script
+        run: |
+          python scripts/translate_sync.py
