@@ -1,67 +1,28 @@
-name: Deploy alanpruitt.com to GitHub Pages
+name: Deploy Hugo Site to GitHub Pages
 
 on:
   push:
     branches:
       - main
-  workflow_dispatch:
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: true
 
 jobs:
-  build:
+  build-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
         with:
-          node-version: '20'
+          hugo-version: 'latest'
+          extended: true
 
-      - name: Assemble Static Site
-        run: |
-          mkdir -p _site
-          # 1. Copy all root static files
-          cp index.html _site/ 2>/dev/null || true
-          cp CNAME _site/ 2>/dev/null || true
-          cp .nojekyll _site/ 2>/dev/null || true
-          cp -r assets _site/ 2>/dev/null || true
-          cp 404.html _site/ 2>/dev/null || true
+      - name: Build Static Files
+        run: hugo --minify --baseURL "https://alanpruitt.github.io/alanpruitt/"
 
-          # 2. Copy the physical articles folder directly into _site/
-          if [ -d "articles" ]; then
-            cp -r articles _site/
-          fi
-
-          # 3. Run build script if needed
-          if [ -f "scripts/build-all.mjs" ]; then
-            node scripts/build-all.mjs
-          fi
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-
-      - name: Upload Artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: '_site'
-
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
       - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
