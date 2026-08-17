@@ -1,0 +1,11 @@
+<nav aria-label="Language Selector" class="language-switcher">
+  <ul>
+    {{ range .AllTranslations }}
+      <li>
+        <a href="{{ .Permalink }}" hreflang="{{ .Language.Lang }}" {{ if eq $.Language.Lang .Language.Lang }}aria-current="page"{{ end }}>
+          {{ .Language.LanguageName }}
+        </a>
+      </li>
+    {{ end }}
+  </ul>
+</nav>
