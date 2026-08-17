@@ -1,0 +1,17 @@
+baseURL = "https://alanpruitt.github.io/alanpruitt/"
+languageCode = "en-us"
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = true
+
+[languages.en]
+languageName = "English"
+weight = 1
+title = "Coach Alan"
+baseURL = "https://alanpruitt.github.io/alanpruitt/en/"
+
+[languages.es]
+languageName = "Español (Norteño)"
+weight = 2
+title = "Coach Alan"
+languageCode = "es-MX"
+baseURL = "https://alanpruitt.github.io/alanpruitt/es/"
