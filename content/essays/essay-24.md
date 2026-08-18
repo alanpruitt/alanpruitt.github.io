@@ -1,7 +1,9 @@
 ---
+layout: post
+title: "Essay 24"
+permalink: /essay-24/
 id: "24"
 slug: "24-chatbots-canvas-lms-cautionary-tale"
-title: "Chatbots & Canvas LMS: A Cautionary Tale"
 title_es: "Chatbots y Canvas LMS: Una Advertencia sobre la Delegación Agéntica"
 date: "2026-08-17"
 course: "EXW101"
