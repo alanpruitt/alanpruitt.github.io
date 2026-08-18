@@ -10,3 +10,5 @@ Thumbs.db
 node_modules/
 .cache/
 dist/
+_site/
+.jekyll-cache/
