@@ -3,91 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alan Pruitt | Curriculum Architect &amp; AI Strategist</title>
-    <meta name="description" content="Personal portfolio and Curriculum-as-Code repository of Alan Pruitt.">
-    <link rel="canonical" href="https://alanpruitt.com/">
+    <title>Chatbots & Canvas LMS: A Cautionary Tale & Best Practices | Alan Pruitt</title>
+    <meta name="description" content="Why rushing unmonitored AI chatbots into the LMS creates data privacy risks, SSoT conflicts, and clinical safety hazards—and how the Auditor Protocol governs secure implementation.">
+    <link rel="canonical" href="https://alanpruitt.com/articles/24-chatbots-canvas-lms-cautionary-tale.html">
 
+    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%230B192C'/></svg>">
 
-    <link rel="alternate" type="application/rss+xml" title="Alan Pruitt | RSS Feed" href="https://alanpruitt.com/feed.xml" />
-    <link rel="alternate" type="application/atom+xml" title="Alan Pruitt | Atom Feed" href="https://alanpruitt.com/atom.xml" />
-    <link rel="alternate" type="application/feed+json" title="Alan Pruitt | JSON Feed" href="https://alanpruitt.com/feed.json" />
-
-    <meta property="og:type" content="website">
+    <!-- OpenGraph Meta Tags -->
+    <meta property="og:type" content="article">
     <meta property="og:site_name" content="Alan Pruitt">
-    <meta property="og:title" content="Alan Pruitt | Curriculum Architect &amp; AI Strategist">
-    <meta property="og:description" content="Pioneering Curriculum-as-Code (CaC) frameworks and sovereign, human-in-the-loop Generative AI strategies for high-accessibility environments.">
-    <meta property="og:url" content="https://alanpruitt.com/">
+    <meta property="og:title" content="Chatbots & Canvas LMS: A Cautionary Tale & Best Practices">
+    <meta property="og:description" content="Why rushing unmonitored AI chatbots into the LMS creates data privacy risks, SSoT conflicts, and clinical safety hazards—and how the Auditor Protocol governs secure implementation.">
+    <meta property="og:url" content="https://alanpruitt.com/articles/24-chatbots-canvas-lms-cautionary-tale.html">
     <meta property="og:image" content="https://alanpruitt.com/assets/og-preview.png">
 
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "WebSite",
-          "@id": "https://alanpruitt.com/#website",
-          "url": "https://alanpruitt.com/",
-          "name": "Alan Pruitt | Curriculum Architect & AI Strategist",
-          "description": "Personal portfolio, research hub, and Curriculum-as-Code repository of Alan Pruitt.",
-          "inLanguage": "en",
-          "publisher": {
-            "@id": "https://alanpruitt.com/#person"
-          }
-        },
-        {
-          "@type": "Person",
-          "@id": "https://alanpruitt.com/#person",
-          "name": "Alan Pruitt",
-          "alternateName": ["Coach Alan", "Alan E. Pruitt"],
-          "url": "https://alanpruitt.com/",
-          "image": "https://alanpruitt.com/assets/Coach-Alan-Sketch-Headshot.webp",
-          "jobTitle": "Founder & Chief Curriculum Architect",
-          "description": "Pioneering Curriculum-as-Code (CaC) frameworks and sovereign, human-in-the-loop Generative AI strategies for high-accessibility academic and enterprise environments.",
-          "affiliation": {
-            "@id": "https://alanpruitt.com/#organization"
-          },
-          "knowsAbout": [
-            "Curriculum-as-Code (CaC)",
-            "Compliance-as-Code",
-            "Algorithmic Pedagogy",
-            "Generative AI Strategy",
-            "WCAG 2.2 AA Accessibility & ADA Title II Compliance",
-            "Instructional Design & Canvas LMS Architecture",
-            "Kinesiology & Exercise Science",
-            "Vibe Coding & Rapid Prototyping"
-          ],
-          "hasCredential": [
-            {
-              "@type": "EducationalOccupationalCredential",
-              "name": "Google Gemini Certified Faculty"
-            },
-            {
-              "@type": "EducationalOccupationalCredential",
-              "name": "United States Marine Corps Veteran"
-            }
-          ],
-          "sameAs": [
-            "https://www.linkedin.com/in/alanpruitt/",
-            "https://github.com/alanpruitt",
-            "https://www.webcognita.com"
-          ]
-        },
-        {
-          "@type": "Organization",
-          "@id": "https://alanpruitt.com/#organization",
-          "name": "Webcognita LLC",
-          "url": "https://www.webcognita.com",
-          "logo": "https://alanpruitt.com/assets/og-preview.png",
-          "founder": {
-            "@id": "https://alanpruitt.com/#person"
-          },
-          "description": "Technical consulting, edge-native AI infrastructure, and compliance-driven instructional engineering."
-        }
-      ]
-    }
-    </script>
-
+    <!-- Inlined Zero-JS Pure Critical CSS (Master Article Template) -->
     <style>
         :root {
             --bg-creme-50: #FAFBF7;
@@ -99,31 +30,17 @@
         }
 
         *, ::before, ::after { box-sizing: border-box; border-width: 0; }
-        html { line-height: 1.5; -webkit-text-size-adjust: 100%; tab-size: 4; font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+        html { line-height: 1.6; -webkit-text-size-adjust: 100%; tab-size: 4; font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
         body { margin: 0; background-color: var(--bg-creme-100); color: var(--text-navy-900); }
 
         .w-full { width: 100%; }
-        .max-w-6xl { max-width: 72rem; }
+        .max-w-4xl { max-width: 56rem; }
         .mx-auto { margin-left: auto; margin-right: auto; }
         .flex { display: flex; }
         .flex-col { flex-direction: column; }
         .flex-grow { flex-grow: 1; }
         .items-center { align-items: center; }
         .justify-between { justify-content: space-between; }
-        .grid { display: grid; }
-        .grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
-
-        @media (min-width: 768px) {
-            .md\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-            .md\:col-span-2 { grid-column: span 2 / span 2; }
-            .md\:col-span-3 { grid-column: span 3 / span 3; }
-            .md\:flex-row { flex-direction: row; }
-        }
-
-        .gap-3 { gap: 0.75rem; }
-        .gap-4 { gap: 1rem; }
-        .gap-5 { gap: 1.25rem; }
-        .gap-6 { gap: 1.5rem; }
 
         .bg-white { background-color: #ffffff; }
         .bg-creme-50 { background-color: var(--bg-creme-50); }
@@ -133,321 +50,120 @@
 
         .text-navy-800 { color: var(--text-navy-800); }
         .text-navy-900 { color: var(--text-navy-900); }
-        .text-creme-50 { color: var(--bg-creme-50); }
         .text-creme-100 { color: var(--bg-creme-100); }
         .text-creme-200 { color: var(--bg-creme-200); }
 
-        .p-1 { padding: 0.25rem; }
-        .p-4 { padding: 1rem; }
-        .p-5 { padding: 1.25rem; }
         .p-6 { padding: 1.5rem; }
         .p-8 { padding: 2rem; }
-        .px-3 { padding-left: 0.75rem; padding-right: 0.75rem; }
-        .px-4 { padding-left: 1rem; padding-right: 1rem; }
+        .p-10 { padding: 2.5rem; }
         .px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
-        .py-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
-        .py-1\.5 { padding-top: 0.375rem; padding-bottom: 0.375rem; }
-        .py-3 { padding-top: 0.75rem; padding-bottom: 0.75rem; }
         .py-6 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
-        .py-8 { padding-top: 2rem; padding-bottom: 2rem; }
-        .my-5 { margin-top: 1.25rem; margin-bottom: 1.25rem; }
-        .mb-0 { margin-bottom: 0; }
-        .mb-1 { margin-bottom: 0.25rem; }
+        .py-12 { padding-top: 3rem; padding-bottom: 3rem; }
+        
         .mb-2 { margin-bottom: 0.5rem; }
-        .mb-3 { margin-bottom: 0.75rem; }
         .mb-4 { margin-bottom: 1rem; }
         .mb-6 { margin-bottom: 1.5rem; }
-        .mt-1 { margin-top: 0.25rem; }
-        .mt-2 { margin-top: 0.5rem; }
-        .mt-6 { margin-top: 1.5rem; }
-        .mt-8 { margin-top: 2rem; }
+        .mb-8 { margin-bottom: 2rem; }
         .mt-12 { margin-top: 3rem; }
 
-        .border { border-style: solid; border-width: 1px; }
-        .border-t { border-top-style: solid; border-top-width: 1px; }
         .border-b { border-bottom-style: solid; border-bottom-width: 1px; }
-        .border-2 { border-style: solid; border-width: 2px; }
-        .border-l-4 { border-left-style: solid; border-left-width: 4px; }
-        .border-creme-100 { border-color: var(--bg-creme-100); }
         .border-creme-200 { border-color: var(--bg-creme-200); }
-        .border-l-navy-900 { border-left-color: var(--text-navy-900); }
-
-        .rounded-md { border-radius: 0.375rem; }
-        .rounded-full { border-radius: 9999px; }
-        .rounded-lg { border-radius: 0.5rem; }
-        .rounded-xl { border-radius: 0.75rem; }
         .rounded-2xl { border-radius: 1rem; }
+        .shadow-sm { box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); }
 
         .font-sans { font-family: Inter, sans-serif; }
         .font-mono { font-family: 'Fira Code', monospace; }
-        .font-semibold { font-weight: 600; }
         .font-bold { font-weight: 700; }
         .font-extrabold { font-weight: 800; }
-        .italic { font-style: italic; }
         .text-xs { font-size: 0.75rem; line-height: 1rem; }
         .text-sm { font-size: 0.875rem; line-height: 1.25rem; }
         .text-base { font-size: 1rem; line-height: 1.5rem; }
         .text-lg { font-size: 1.125rem; line-height: 1.75rem; }
-        .text-xl { font-size: 1.25rem; line-height: 1.75rem; }
         .text-2xl { font-size: 1.5rem; line-height: 2rem; }
         .text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
-        .text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
 
-        .shadow-sm { box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); }
-        .object-cover { object-fit: cover; }
-        .flex-shrink-0 { flex-shrink: 0; }
         .hover\:underline:hover { text-decoration: underline; }
+
+        /* Article Typography Styles */
+        article h1 { font-size: 2.25rem; font-weight: 800; color: var(--text-navy-900); line-height: 1.2; margin-bottom: 0.5rem; }
+        article h2 { font-size: 1.5rem; font-weight: 700; color: var(--text-navy-900); margin-top: 2.5rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--bg-creme-200); }
+        article p { margin-bottom: 1.25rem; font-size: 1.05rem; color: var(--text-navy-900); }
+        article ul { margin-bottom: 1.25rem; padding-left: 1.5rem; }
+        article li { margin-bottom: 0.5rem; font-size: 1.05rem; }
+        article blockquote { margin: 1.5rem 0; padding: 1rem 1.25rem; background-color: var(--bg-creme-50); border-left: 4px solid var(--text-navy-900); border-radius: 0.375rem; font-style: italic; }
+        article .essay-meta { font-size: 0.875rem; font-family: 'Fira Code', monospace; color: var(--text-navy-800); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 2rem; }
     </style>
 </head>
 <body class="bg-creme-100 text-navy-900 font-sans antialiased min-h-full flex flex-col justify-between">
 
-    <header class="w-full max-w-6xl mx-auto px-6 py-6 flex justify-between items-center border-b border-creme-200">
+    <!-- Header / Navigation Bar -->
+    <header class="w-full max-w-4xl mx-auto px-6 py-6 flex justify-between items-center border-b border-creme-200">
         <div class="flex items-center space-x-3">
             <span class="w-3 h-3 bg-navy-900 rounded-full inline-block" aria-hidden="true"></span>
             <a href="/" class="text-xl font-bold tracking-tight text-navy-900 hover:text-navy-800 transition-colors" style="text-decoration: none;">
                 alanpruitt.com
             </a>
         </div>
+        <a href="/articles/index.html" class="text-sm font-semibold text-navy-800 hover:underline">
+            &larr; Back to Essays
+        </a>
     </header>
 
-    <main class="w-full max-w-6xl mx-auto px-6 py-8 flex-grow">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <!-- Main Article Content Container -->
+    <main class="w-full max-w-4xl mx-auto px-6 py-12 flex-grow">
+        <article class="bg-white p-8 md:p-10 rounded-2xl border border-creme-200 shadow-sm">
+            <div class="essay-meta">Essay 24 &bull; Curriculum-as-Code &bull; Canvas LMS Architecture</div>
             
-            <div class="md:col-span-2 bg-white p-8 rounded-2xl border border-creme-200 shadow-sm flex flex-col justify-between">
-                <div>
-                    <div class="inline-block px-3 py-1 bg-creme-100 text-navy-900 text-xs font-mono font-bold tracking-wider uppercase rounded-full border border-creme-200 mb-6">
-                        Founder &amp; Chief Curriculum Architect
-                    </div>
+            <h1>Chatbots &amp; Canvas LMS: A Cautionary Tale &amp; Best Practices</h1>
+            <p class="text-sm text-navy-800 font-semibold mb-8">By Alan Pruitt</p>
 
-                    <div class="flex items-center gap-5 mb-6">
-                        <img src="assets/Coach-Alan-Sketch-Headshot.webp" 
-                             alt="Alan Pruitt Sketch Portrait" 
-                             width="80" 
-                             height="80" 
-                             class="w-20 h-20 rounded-full border-2 border-creme-200 object-cover shadow-sm bg-creme-100 flex-shrink-0" 
-                             loading="eager" 
-                             decoding="async" />
-                        <div>
-                            <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-navy-900 leading-tight">
-                                Alan Pruitt
-                            </h1>
-                            <span class="text-xs font-mono text-navy-800 font-semibold uppercase tracking-wider block mt-1">
-                                Curriculum Architect &amp; AI Strategist
-                            </span>
-                        </div>
-                    </div>
+            <p>This semester, the halls of academia—both physical and digital—are buzzing with the siren song of generative AI. Canvas administrators, rightfully looking for ways to scale support and improve student experiences, are increasingly adopting "chatbot" solutions. These tools promise to bridge the gap between overwhelmed support desks and students needing instant answers. Yet, as someone who builds and audits educational ecosystems, I find myself sounding a note of caution. The rush to implement is often outpacing the wisdom of integration.</p>
 
-                    <p class="text-lg text-navy-800 leading-relaxed mb-3">
-                        Pioneering <strong class="font-semibold text-navy-900">Curriculum-as-Code (CaC)</strong> frameworks and sovereign, human-in-the-loop Generative AI strategies for high-accessibility academic and enterprise environments.
-                    </p>
+            <h2>The Administrative Silver Bullet</h2>
+            <p>Administrators view these tools through the lens of institutional agility. From their vantage point, a chatbot that can answer "When is the withdrawal deadline?" or "Where is the writing center?" thousands of times a day is a massive win for efficiency. It deflects volume, standardizes responses, and provides a sleek, modern veneer to the learning management system.</p>
 
-                    <blockquote class="my-5 p-4 bg-creme-50 rounded-xl border border-creme-200 border-l-4 border-l-navy-900 shadow-sm">
-                        <div class="text-[10px] font-mono font-bold uppercase tracking-wider text-navy-800 mb-1">
-                            Curriculum-as-Code Imperative
-                        </div>
-                        <p class="text-base sm:text-lg font-bold text-navy-900 italic mb-0">
-                            &ldquo;Stop writing for the printer, and start writing for the web.&rdquo;
-                        </p>
-                    </blockquote>
-                </div>
+            <blockquote>
+                However, efficiency is not pedagogy. When we treat the LMS as a helpdesk, we risk ignoring its primary function: an environment designed for the challenging, messy, and deeply human process of learning.
+            </blockquote>
 
-                <div class="mt-6 flex flex-wrap items-center gap-3 pt-6 border-t border-creme-100">
-                    <span class="text-xs font-mono bg-creme-100 text-navy-900 px-3 py-1.5 rounded-md border border-creme-200 font-semibold">USMC Veteran</span>
-                    <span class="text-xs font-mono bg-creme-100 text-navy-900 px-3 py-1.5 rounded-md border border-creme-200 font-semibold">Google Gemini Certified Faculty</span>
-                    <span class="text-xs font-mono bg-creme-100 text-navy-900 px-3 py-1.5 rounded-md border border-creme-200 font-semibold">WCAG 2.2 AA</span>
-                </div>
-            </div>
+            <h2>The Right Way: Chatbot Best Practices and Edge Use Cases</h2>
+            <p>To be fair, chatbots inside the LMS are not inherently flawed; much depends on <em>how</em> they are scoped and deployed. When used as targeted, friction-reducing support layers rather than shortcuts for learning, well-engineered bots serve legitimate institutional roles:</p>
+            <ul>
+                <li><strong>Automated Logistics and FAQ Deflection:</strong> A restricted, institutional-level chatbot tied strictly to college policy documents can answer repetitive questions—such as campus resource locations or add/drop deadlines—at 2:00 AM without human staff intervention, preserving faculty bandwidth.</li>
+                <li><strong>Socratic Concept Checkers:</strong> Rather than giving away answers, a properly guarded instructional bot can use Socratic questioning to guide a student back to their own reasoning process when they ask for help formatting a citation or reviewing a basic principle.</li>
+                <li><strong>Multilingual Accessibility:</strong> Secure, localized translation tools can help diverse student populations navigate dense administrative phrasing or institutional procedures without corrupting core disciplinary content.</li>
+            </ul>
 
-            <div class="bg-navy-900 text-creme-100 p-8 rounded-2xl shadow-sm flex flex-col justify-between">
-                <div>
-                    <span class="text-xs font-mono text-creme-200 uppercase tracking-widest block mb-2">Commercial Practice</span>
-                    <h2 class="text-2xl font-bold mb-3 text-creme-50">Webcognita LLC</h2>
-                    <p class="text-creme-200 text-sm leading-relaxed mb-6">
-                        Technical consulting, edge-native AI infrastructure, and compliance-driven instructional engineering.
-                    </p>
-                </div>
-                <a href="https://www.webcognita.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-between w-full px-4 py-3 bg-creme-100 text-navy-900 font-semibold rounded-xl hover:bg-white transition-all text-sm group" style="text-decoration: none;">
-                    <span>Visit webcognita.com</span>
-                    <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                </a>
-            </div>
+            <h2>The Conflict of Truth</h2>
+            <p>Problems arise when these tools cross the line from administrative assistance into academic delivery. In my courses, I rely on a Single Source of Truth (SSoT)—be it core textbook chapters, primary historical documents, or specific lab manuals. A chatbot, unless strictly engineered with a retrieval-augmented generation (RAG) framework that respects the boundaries of my specific course shell, is a probabilistic machine. It makes things up. If a student asks a bot about a nuanced historical timeline or a complex chemical formula, and the bot pulls from a generic, unvetted internet consensus instead of my course's vetted materials, I have successfully sabotaged the learning objective.</p>
 
-            <div class="bg-white p-8 rounded-2xl border border-creme-200 shadow-sm flex flex-col justify-between">
-                <div>
-                    <div class="w-10 h-10 bg-creme-100 rounded-xl flex items-center justify-center mb-4 text-navy-900 border border-creme-200 font-mono font-bold" aria-hidden="true">
-                        &lt;/&gt;
-                    </div>
-                    <h3 class="text-xl font-bold mb-2 text-navy-900">Curriculum-as-Code</h3>
-                    <p class="text-sm text-navy-800 leading-relaxed mb-4">
-                        Treating educational materials like software development: Markdown Single Source of Truth (SSoT), Git version control, CI/CD automated validation, born-accessible outputs, automated ADA Title II/WCAG 2.2 AA linting, and zero-trust data safety auditing.
-                    </p>
-                </div>
-                <a href="/articles/02-curriculum-as-code.html" class="text-sm font-semibold text-navy-900 hover:underline inline-flex items-center gap-1 mt-2">
-                    Read Essay 02 &rarr;
-                </a>
-            </div>
+            <h2>The Pedagogical Cost</h2>
+            <p>The danger is not just that the bot is wrong; it is that the bot is <em>convincingly</em> wrong, or conversely, too helpful. If a student uses a bot to bypass critical thinking exercises, problem-framing tasks, or analytical writing prompts, I am not helping them; I am removing the friction that creates mastery. Assignments like discussion boards are high-touch, high-value components of academic development. If these spaces are flooded with AI-generated responses or mediated by an automated "Tutor Bot," the intellectual grit required for student reasoning evaporates.</p>
 
-            <div class="bg-white p-8 rounded-2xl border border-creme-200 shadow-sm flex flex-col justify-between">
-                <div>
-                    <div class="flex items-center justify-between mb-4">
-                        <div class="w-10 h-10 bg-creme-100 rounded-xl flex items-center justify-center text-navy-900 border border-creme-200 font-mono font-bold" aria-hidden="true">
-                            ✨
-                        </div>
-                        <span class="text-xs font-mono bg-creme-100 text-navy-900 px-2.5 py-1 rounded-md border border-creme-200 font-semibold">Rapid Execution</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2 text-navy-900">Vibe Coding &amp; CaC</h3>
-                    <p class="text-sm text-navy-800 leading-relaxed mb-4">
-                        Bridging domain intuition and production-grade execution: translating pedagogical concepts directly into interactive PWAs and lab simulations at speed, governed upstream by deterministic Curriculum-as-Code standards.
-                    </p>
-                </div>
-                <a href="/articles/13-vibe-coding-paradigm.html" class="text-sm font-semibold text-navy-900 hover:underline inline-flex items-center gap-1 mt-2">
-                    Read Essay 13 &rarr;
-                </a>
-            </div>
+            <h2>Why My EXW Courses Will Not Deploy Chatbots</h2>
+            <p>While campus administrators scramble to embed AI help desks across the LMS, I have made a firm pedagogical decision: you will not find unmonitored or generic chatbots deployed in my EXW (Exercise Science & Wellness) course shells.</p> 
+            
+            <p>In disciplines like exercise science, nutrition, and clinical kinesiology, the margin for error is razor-thin. Implementing automated chat tools introduces risks that my curriculum architecture simply cannot tolerate:</p>
+            <ul>
+                <li><strong>The Clinical Safety Hazard:</strong> An unconstrained chatbot lacks clinical judgment. If an EXW student asks a generic AI bot for an exercise prescription or dietary protocol for a client with cardiovascular disease or special physiological needs, a probabilistic hallucination can prescribe dangerous, contraindicated movements. In my courses, health and safety are governed strictly by authoritative standards—not by a server guessing the next most likely word.</li>
+                <li><strong>Bypassing the Mission Loop:</strong> My curriculum relies on the <em>Mission Loop (Pattern / Rule / Solve)</em> framework. I design assignments specifically to force students through the cognitive friction of identifying health patterns, applying federal rules, and solving real-world wellness problems. A chatbot offering instant, frictionless answers short-circuits this critical thinking loop, robbing students of the intellectual grit required to become competent practitioners.</li>
+                <li><strong>Undermining High-Touch Mastery:</strong> I view high-touch components like discussion boards and practical lab evaluations as sacred spaces for authentic student reasoning and peer interaction. Mediating these spaces with an automated "Tutor Bot" strips away the human nuance and mentorship that define true faculty-led education.</li>
+            </ul>
 
-            <div class="bg-white p-8 rounded-2xl border border-creme-200 shadow-sm flex flex-col justify-between">
-                <div>
-                    <div class="w-10 h-10 bg-creme-100 rounded-xl flex items-center justify-center mb-4 text-navy-900 border border-creme-200 font-mono font-bold" aria-hidden="true">
-                        🛡️
-                    </div>
-                    <h3 class="text-xl font-bold mb-2 text-navy-900">Compliance-as-Code</h3>
-                    <p class="text-sm text-navy-800 leading-relaxed mb-4">
-                        Automating regulatory, accessibility, and clinical governance into continuous deployment pipelines: deterministic SSoT rules, automated ADA Title II/WCAG 2.2 AA linting, and zero-trust data safety auditing.
-                    </p>
-                </div>
-                <a href="/articles/04-ada-title-ii-accessibility.html" class="text-sm font-semibold text-navy-900 hover:underline inline-flex items-center gap-1 mt-2">
-                    Read Essay 04 &rarr;
-                </a>
-            </div>
+            <h2>Moving Forward: The Auditor Protocol</h2>
+            <p>I shouldn't ban innovation, but I must subject it to the same rigor I apply to any curriculum component. Before a chatbot goes live in a course shell, it must pass an <em>Auditor Protocol</em> audit:</p>
+            <ul>
+                <li><strong>Data Scoping:</strong> Does it ingest student private data? If yes, it doesn't pass.</li>
+                <li><strong>Source Integrity:</strong> Is it strictly constrained to my official course SSoT?</li>
+                <li><strong>Cognitive Load:</strong> Does it enhance the learning path, or simply provide a shortcut around deep engagement?</li>
+            </ul>
 
-            <div class="bg-white p-8 rounded-2xl border border-creme-200 shadow-sm flex flex-col justify-between">
-                <div>
-                    <div class="flex items-center justify-between mb-4">
-                        <div class="w-10 h-10 bg-creme-100 rounded-xl flex items-center justify-center text-navy-900 border border-creme-200 font-mono font-bold" aria-hidden="true">
-                            ⚡
-                        </div>
-                        <span class="text-xs font-mono bg-creme-100 text-navy-900 px-2.5 py-1 rounded-md border border-creme-200 font-semibold">Vibe-Coded</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2 text-navy-900">WPE Digital Toolkit</h3>
-                    <p class="text-sm text-navy-800 leading-relaxed mb-4">
-                        Agentic PWA framework integrating ACSM 12th Ed. clinical standards, NWS/EPA environmental factors, and kinesiology curricula.
-                    </p>
-                </div>
-                <a href="https://wpe-toolkit-pro.lovable.app" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-navy-900 hover:underline inline-flex items-center gap-1 mt-2">
-                    Launch App &rarr;
-                </a>
-            </div>
-
-            <div class="bg-white p-8 rounded-2xl border border-creme-200 shadow-sm flex flex-col justify-between">
-                <div>
-                    <div class="flex items-center justify-between mb-4">
-                        <div class="w-10 h-10 bg-creme-100 rounded-xl flex items-center justify-center text-navy-900 border border-creme-200 font-mono font-bold" aria-hidden="true">
-                            🧪
-                        </div>
-                        <span class="text-xs font-mono bg-creme-100 text-navy-900 px-2.5 py-1 rounded-md border border-creme-200 font-semibold">Vibe-Coded</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-1 text-navy-900">Flavor Architect</h3>
-                    <span class="text-xs font-mono text-navy-800 font-semibold uppercase tracking-wider block mb-3">Molecular Pairing &amp; Culinary Design</span>
-                    <p class="text-sm text-navy-800 leading-relaxed mb-4">
-                        AI-driven molecular culinary workbench built to evaluate flavor compound synergies, bridge ingredients, and profile balances in real time.
-                    </p>
-                </div>
-                <a href="https://flavor-architect-lab.lovable.app" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-navy-900 hover:underline inline-flex items-center gap-1 mt-2">
-                    Launch App &rarr;
-                </a>
-            </div>
-
-            <div class="bg-white p-8 rounded-2xl border border-creme-200 shadow-sm md:col-span-3">
-                <div class="flex items-center justify-between mb-6 pb-4 border-b border-creme-100">
-                    <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 bg-creme-100 rounded-xl flex items-center justify-center text-navy-900 border border-creme-200 font-mono font-bold" aria-hidden="true">
-                            📝
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold text-navy-900">Curriculum-as-Code Essays</h3>
-                        </div>
-                    </div>
-                    <a href="/articles/index.html" class="text-sm font-semibold text-navy-900 hover:underline inline-flex items-center gap-1">
-                        View All Articles &rarr;
-                    </a>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    
-                    <div class="p-5 rounded-xl bg-creme-50 border border-creme-200 flex flex-col justify-between md:col-span-2">
-                        <div>
-                            <div class="flex items-center justify-between mb-2">
-                                <div class="text-xs font-mono text-navy-800 font-bold">ESSAY 24</div>
-                                <span class="text-xs font-mono bg-navy-900 text-creme-100 px-2 py-0.5 rounded text-[10px] font-semibold">Latest Release</span>
-                            </div>
-                            <h4 class="text-lg font-bold text-navy-900 mb-2">
-                                <a href="/articles/24-chatbots-canvas-lms-cautionary-tale.html" class="hover:underline">Chatbots &amp; Canvas LMS: A Cautionary Tale &amp; Best Practices</a>
-                            </h4>
-                            <p class="text-xs text-navy-800 leading-relaxed mb-3">
-                                Why rushing unmonitored AI chatbots into the LMS creates data privacy risks, SSoT conflicts, and clinical safety hazards—and how the Auditor Protocol and targeted edge use cases govern secure implementation.
-                            </p>
-                        </div>
-                        <div class="flex items-center gap-4 mt-2 pt-2 border-t border-creme-200/60">
-                            <a href="/articles/24-chatbots-canvas-lms-cautionary-tale.html" class="text-xs font-bold text-navy-900 hover:underline">Read Essay &rarr;</a>
-                            <a href="https://www.linkedin.com/in/alanpruitt/recent-activity/all/" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-navy-800 hover:text-navy-900 hover:underline inline-flex items-center gap-1">View on LinkedIn ↗</a>
-                        </div>
-                    </div>
-
-                    <div class="p-4 rounded-xl bg-creme-50 border border-creme-200 flex flex-col justify-between">
-                        <div>
-                            <div class="text-xs font-mono text-navy-800 font-bold mb-1">ESSAY 23</div>
-                            <h4 class="text-base font-bold text-navy-900 mb-2">
-                                <a href="/articles/23-accessibility-checker-parity-illusion.html" class="hover:underline">The Accessibility Checker Parity Illusion: Schema Divergence &amp; CaC</a>
-                            </h4>
-                            <p class="text-xs text-navy-800 leading-relaxed mb-3">
-                                Why Canvas, Office, and PDF checkers lack structural parity, and why Markdown CaC is the deterministic path to WCAG 2.2 AA.
-                            </p>
-                        </div>
-                        <div class="flex items-center gap-4 mt-2 pt-2 border-t border-creme-200/60">
-                            <a href="/articles/23-accessibility-checker-parity-illusion.html" class="text-xs font-bold text-navy-900 hover:underline">Read Essay &rarr;</a>
-                            <a href="https://www.linkedin.com/in/alanpruitt/recent-activity/all/" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-navy-800 hover:text-navy-900 hover:underline inline-flex items-center gap-1">View on LinkedIn ↗</a>
-                        </div>
-                    </div>
-
-                    <div class="p-4 rounded-xl bg-creme-50 border border-creme-200 flex flex-col justify-between">
-                        <div>
-                            <div class="text-xs font-mono text-navy-800 font-bold mb-1">ESSAY 22</div>
-                            <h4 class="text-base font-bold text-navy-900 mb-2">
-                                <a href="/articles/22-foundational-human-movement-in-the-algorithmic-age.html" class="hover:underline">Foundational Human Movement in the Algorithmic Age: PAGA 2018 SSoT</a>
-                            </h4>
-                            <p class="text-xs text-navy-800 leading-relaxed mb-3">
-                                How EXW101 deploys Curriculum-as-Code, the federal PAGA 2018 SSoT, and the Mission Loop framework to deconstruct systemic inactivity patterns.
-                            </p>
-                        </div>
-                        <div class="flex items-center gap-4 mt-2 pt-2 border-t border-creme-200/60">
-                            <a href="/articles/22-foundational-human-movement-in-the-algorithmic-age.html" class="text-xs font-bold text-navy-900 hover:underline">Read Essay &rarr;</a>
-                            <a href="https://www.linkedin.com/in/alanpruitt/recent-activity/all/" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-navy-800 hover:text-navy-900 hover:underline inline-flex items-center gap-1">View on LinkedIn ↗</a>
-                        </div>
-                    </div>
-
-                    <div class="p-4 rounded-xl bg-creme-50 border border-creme-200 flex flex-col justify-between">
-                        <div>
-                            <div class="text-xs font-mono text-navy-800 font-bold mb-1">ESSAY 21</div>
-                            <h4 class="text-base font-bold text-navy-900 mb-2">
-                                <a href="/articles/21-evidence-based-nutrition-vs-feed.html" class="hover:underline">Evidence-Based Nutrition vs. The Feed: Upstream SSoT Governance</a>
-                            </h4>
-                            <p class="text-xs text-navy-800 leading-relaxed mb-3">
-                                How EXW150 uses Curriculum-as-Code and federal SSoT standards to insulate students from social media fad diets.
-                            </p>
-                        </div>
-                        <div class="flex items-center gap-4 mt-2 pt-2 border-t border-creme-200/60">
-                            <a href="/articles/21-evidence-based-nutrition-vs-feed.html" class="text-xs font-bold text-navy-900 hover:underline">Read Essay &rarr;</a>
-                            <a href="https://www.linkedin.com/in/alanpruitt/recent-activity/all/" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-navy-800 hover:text-navy-900 hover:underline inline-flex items-center gap-1">View on LinkedIn ↗</a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
+            <p>As I navigate this semester, let’s ensure that our tools support the curriculum, not substitute for it. The goal isn't a chatbot that speaks for me; it's a student who no longer needs the chatbot to understand the material.</p>
+        </article>
     </main>
 
-    <footer class="w-full max-w-6xl mx-auto px-6 py-8 mt-12 border-t border-creme-200 flex flex-col md:flex-row justify-between items-center text-xs text-navy-800 gap-4">
+    <!-- Footer -->
+    <footer class="w-full max-w-4xl mx-auto px-6 py-8 mt-12 border-t border-creme-200 flex flex-col md:flex-row justify-between items-center text-xs text-navy-800 gap-4">
         <div class="space-y-1 text-center md:text-left">
             <div>&copy; <span id="year"></span> Alan Pruitt. All rights reserved.</div>
             <div style="opacity: 0.85;">
@@ -462,6 +178,7 @@
         </div>
     </footer>
 
+    <!-- Client Script -->
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
     </script>
