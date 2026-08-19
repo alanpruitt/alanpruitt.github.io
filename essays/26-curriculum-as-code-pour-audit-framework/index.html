@@ -62,18 +62,22 @@
       <h1 style="font-size: 2rem; font-weight: 700; color: var(--text-navy-900); margin-top: 1rem; margin-bottom: 1.5rem;">Essay 26</h1>
       <h2>The POUR-Audit Framework in Curriculum-as-Code</h2>
 <p>Treating educational content as software—known as *Curriculum-as-Code* (CaC)—enables the integration of automated verification pipelines to enforce instructional quality, semantic hierarchy, and digital accessibility. The **POUR-Audit framework** operationalizes Web Content Accessibility Guidelines (WCAG) into testable, programmatically audited standards directly inside git workflows.</p>
-<h3>1. Robust: Semantic Structure and Hierarchy</h3>
-<p>A robust curriculum is built on standard HTML5 landmarks that assistive technologies can parse reliably. The audit checks heading structures to confirm strict semantic progression:</p>
-<li>**Entry Constraints:** The content body must start with a `##` (H2) heading level. H1 is reserved exclusively for the Canvas LMS Page Title.</li>
-<li>**Structural Parity:** Audits scan header trees programmatically, ensuring no skipped heading levels (e.g. from H2 to H4) exist, which disorients screen readers.</li>
-<h3>2. Perceivable: Asset Alt-Text Enforcement</h3>
+<h3>1. Perceivable: Asset Alt-Text Enforcement</h3>
 <p>Digital equity requires that all instructional media is perceivable. Programmatic scans analyze `<img ...>` tags in the course fleet:</p>
 <li>**Descriptive Text:** Every image tag must contain a descriptive `alt` attribute.</li>
 <li>**Prohibited Placeholders:** Empty placeholders (`alt=""` or `alt=''`) are flagged as failures to prevent decorative bypass of active educational charts.</li>
+<h3>2. Operable: Navigation and Focus Flow Parity</h3>
+<p>Operable interfaces ensure that all students can navigate course layouts using keyboard controls and adaptive gear:</p>
+<li>**Focus Indicators:** Audits verify that interactive elements within custom Canvas containers retain highly visible focus rings.</li>
+<li>**Focus Traps:** Programmatic checks scan script bindings to ensure custom modal layers do not create keyboard focus traps.</li>
 <h3>3. Understandable: Legacy Term Deprecation</h3>
 <p>To maintain clear and accurate instructional pathways, the audit monitors prohibited legacy terms and references:</p>
 <li>**Legacy Patterns:** References containing deprecated structural patterns (such as `"8.#"`-style module references) are checked and flagged.</li>
 <li>**Unified Terminology:** Ensures course fleet documentation aligns with current academic sources of truth (SSoT).</li>
+<h3>4. Robust: Semantic Structure and Hierarchy</h3>
+<p>A robust curriculum is built on standard HTML5 landmarks that assistive technologies can parse reliably. The audit checks heading structures to confirm strict semantic progression:</p>
+<li>**Entry Constraints:** The content body must start with a `##` (H2) heading level. H1 is reserved exclusively for the Canvas LMS Page Title.</li>
+<li>**Structural Parity:** Audits scan header trees programmatically, ensuring no skipped heading levels (e.g. from H2 to H4) exist, which disorients screen readers.</li>
     </article>
 
     <!-- INJECT SOCIAL SHARE BLOCK -->

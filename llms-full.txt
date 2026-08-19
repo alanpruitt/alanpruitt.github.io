@@ -2552,22 +2552,7 @@ Treating educational content as software—known as *Curriculum-as-Code* (CaC)�
 
                     
 
-## 1. Robust: Semantic Structure and Hierarchy
-
-                    
-A robust curriculum is built on standard HTML5 landmarks that assistive technologies can parse reliably. The audit checks heading structures to confirm strict semantic progression:
-
-                    
-
-                        * **Entry Constraints:** The content body must start with a `##` (H2) heading level. H1 is reserved exclusively for the Canvas LMS Page Title.
-
-                        * **Structural Parity:** Audits scan header trees programmatically, ensuring no skipped heading levels (e.g. from H2 to H4) exist, which disorients screen readers.
-
-                    
-
-                    
-
-## 2. Perceivable: Asset Alt-Text Enforcement
+## 1. Perceivable: Asset Alt-Text Enforcement
 
                     
 Digital equity requires that all instructional media is perceivable. Programmatic scans analyze `` tags in the course fleet:
@@ -2577,6 +2562,21 @@ Digital equity requires that all instructional media is perceivable. Programmati
                         * **Descriptive Text:** Every image tag must contain a descriptive `alt` attribute.
 
                         * **Prohibited Placeholders:** Empty placeholders (`alt=""` or `alt=''`) are flagged as failures to prevent decorative bypass of active educational charts.
+
+                    
+
+                    
+
+## 2. Operable: Navigation and Focus Flow Parity
+
+                    
+Operable interfaces ensure that all students can navigate course layouts using keyboard controls and adaptive gear:
+
+                    
+
+                        * **Focus Indicators:** Audits verify that interactive elements within custom Canvas containers retain highly visible focus rings.
+
+                        * **Focus Traps:** Programmatic checks scan script bindings to ensure custom modal layers do not create keyboard focus traps.
 
                     
 
@@ -2595,6 +2595,21 @@ To maintain clear and accurate instructional pathways, the audit monitors prohib
 
                     
 
+                    
+
+## 4. Robust: Semantic Structure and Hierarchy
+
+                    
+A robust curriculum is built on standard HTML5 landmarks that assistive technologies can parse reliably. The audit checks heading structures to confirm strict semantic progression:
+
+                    
+
+                        * **Entry Constraints:** The content body must start with a `##` (H2) heading level. H1 is reserved exclusively for the Canvas LMS Page Title.
+
+                        * **Structural Parity:** Audits scan header trees programmatically, ensuring no skipped heading levels (e.g. from H2 to H4) exist, which disorients screen readers.
+
+                    
+
                 
 
                 
@@ -2603,22 +2618,7 @@ Tratar el contenido educativo como software, conocido como *Currículum como Có
 
                     
 
-## 1. Robusto: Estructura Semántica y Jerarquía
-
-                    
-Un currículo robusto se construye sobre hitos estándar de HTML5 que las tecnologías de asistencia pueden analizar de manera confiable. La auditoría verifica las estructuras de encabezado para confirmar una progresión semántica estricta:
-
-                    
-
-                        * **Restricciones de entrada:** El cuerpo del contenido debe comenzar con un nivel de encabezado `##` (H2). H1 está reservado exclusivamente para el Título de la Página de Canvas LMS.
-
-                        * **Paridad estructural:** Las auditorías escanean árboles de encabezados mediante programación, asegurando que no existan niveles de encabezado omitidos (por ejemplo, de H2 a H4), lo que desorienta a los lectores de pantalla.
-
-                    
-
-                    
-
-## 2. Percebible: Aplicación de Texto Alternativo para Recursos
+## 1. Percebible: Aplicación de Texto Alternativo para Recursos
 
                     
 La equidad digital requiere que todos los medios instruccionales sean percibidos. Los escaneos programáticos analizan las etiquetas `` en el conjunto de cursos:
@@ -2628,6 +2628,21 @@ La equidad digital requiere que todos los medios instruccionales sean percibidos
                         * **Texto descriptivo:** Cada etiqueta de imagen debe contener un atributo `alt` descriptivo.
 
                         * **Marcadores de posición prohibidos:** Los marcadores de posición vacíos (`alt=""` o `alt=''`) se marcan como fallas para evitar la elusión decorativa de gráficos educativos activos.
+
+                    
+
+                    
+
+## 2. Operable: Navegación y Paridad en el Flujo de Foco
+
+                    
+Las interfaces operables garantizan que todos los estudiantes puedan navegar por los diseños de los cursos utilizando controles de teclado y dispositivos adaptativos:
+
+                    
+
+                        * **Indicadores de foco:** Las auditorías verifican que los elementos interactivos dentro de los contenedores personalizados de Canvas conserven anillos de foco altamente visibles.
+
+                        * **Trampas de foco:** Los controles programáticos escanean las vinculaciones de scripts para garantizar que las capas modales personalizadas no creen trampas de foco en el teclado.
 
                     
 
@@ -2643,3 +2658,18 @@ Para mantener rutas de instrucción claras y precisas, la auditoría supervisa l
                         * **Patrones heredados:** Se verifican y marcan las referencias que contienen patrones estructurales obsoletos (como referencias de módulos al estilo `"8.#"`).
 
                         * **Terminología unificada:** Garantiza que la documentación del conjunto de cursos se alinee con las fuentes de verdad académicas actuales (SSoT).
+
+                    
+
+                    
+
+## 4. Robusto: Estructura Semántica y Jerarquía
+
+                    
+Un currículo robusto se construye sobre hitos estándar de HTML5 que las tecnologías de asistencia pueden analizar de manera confiable. La auditoría verifica las estructuras de encabezado para confirmar una progresión semántica estricta:
+
+                    
+
+                        * **Restricciones de entrada:** El cuerpo del contenido debe comenzar con un nivel de encabezado `##` (H2). H1 está reservado exclusivamente para el Título de la Página de Canvas LMS.
+
+                        * **Paridad estructural:** Las auditorías escanean árboles de encabezados mediante programación, asegurando que no existan niveles de encabezado omitidos (por ejemplo, de H2 a H4), lo que desorienta a los lectores de pantalla.

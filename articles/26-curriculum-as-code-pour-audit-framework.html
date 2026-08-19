@@ -176,18 +176,18 @@
                 <div data-lang="en">
                     <p>Treating educational content as software—known as <em>Curriculum-as-Code</em> (CaC)—enables the integration of automated verification pipelines to enforce instructional quality, semantic hierarchy, and digital accessibility. The <strong>POUR-Audit framework</strong> operationalizes Web Content Accessibility Guidelines (WCAG) into testable, programmatically audited standards directly inside git workflows.</p>
 
-                    <h2>1. Robust: Semantic Structure and Hierarchy</h2>
-                    <p>A robust curriculum is built on standard HTML5 landmarks that assistive technologies can parse reliably. The audit checks heading structures to confirm strict semantic progression:</p>
-                    <ul>
-                        <li><strong>Entry Constraints:</strong> The content body must start with a <code>##</code> (H2) heading level. H1 is reserved exclusively for the Canvas LMS Page Title.</li>
-                        <li><strong>Structural Parity:</strong> Audits scan header trees programmatically, ensuring no skipped heading levels (e.g. from H2 to H4) exist, which disorients screen readers.</li>
-                    </ul>
-
-                    <h2>2. Perceivable: Asset Alt-Text Enforcement</h2>
+                    <h2>1. Perceivable: Asset Alt-Text Enforcement</h2>
                     <p>Digital equity requires that all instructional media is perceivable. Programmatic scans analyze <code>&lt;img ...&gt;</code> tags in the course fleet:</p>
                     <ul>
                         <li><strong>Descriptive Text:</strong> Every image tag must contain a descriptive <code>alt</code> attribute.</li>
                         <li><strong>Prohibited Placeholders:</strong> Empty placeholders (<code>alt=""</code> or <code>alt=''</code>) are flagged as failures to prevent decorative bypass of active educational charts.</li>
+                    </ul>
+
+                    <h2>2. Operable: Navigation and Focus Flow Parity</h2>
+                    <p>Operable interfaces ensure that all students can navigate course layouts using keyboard controls and adaptive gear:</p>
+                    <ul>
+                        <li><strong>Focus Indicators:</strong> Audits verify that interactive elements within custom Canvas containers retain highly visible focus rings.</li>
+                        <li><strong>Focus Traps:</strong> Programmatic checks scan script bindings to ensure custom modal layers do not create keyboard focus traps.</li>
                     </ul>
 
                     <h2>3. Understandable: Legacy Term Deprecation</h2>
@@ -196,23 +196,30 @@
                         <li><strong>Legacy Patterns:</strong> References containing deprecated structural patterns (such as <code>"8.#"</code>-style module references) are checked and flagged.</li>
                         <li><strong>Unified Terminology:</strong> Ensures course fleet documentation aligns with current academic sources of truth (SSoT).</li>
                     </ul>
+
+                    <h2>4. Robust: Semantic Structure and Hierarchy</h2>
+                    <p>A robust curriculum is built on standard HTML5 landmarks that assistive technologies can parse reliably. The audit checks heading structures to confirm strict semantic progression:</p>
+                    <ul>
+                        <li><strong>Entry Constraints:</strong> The content body must start with a <code>##</code> (H2) heading level. H1 is reserved exclusively for the Canvas LMS Page Title.</li>
+                        <li><strong>Structural Parity:</strong> Audits scan header trees programmatically, ensuring no skipped heading levels (e.g. from H2 to H4) exist, which disorients screen readers.</li>
+                    </ul>
                 </div>
 
                 <div data-lang="es" class="hidden-lang">
                     <p>Tratar el contenido educativo como software, conocido como <em>Currículum como Código</em> (CaC), permite la integración de flujos de verificación automatizados para aplicar la calidad instruccional, la jerarquía semántica y la accesibilidad digital. El <strong>marco de auditoría POUR</strong> operacionaliza las Pautas de Accesibilidad para el Contenido Web (WCAG) en estándares probables y auditados mediante programación directamente dentro de los flujos de trabajo de git.</p>
 
-                    <h2>1. Robusto: Estructura Semántica y Jerarquía</h2>
-                    <p>Un currículo robusto se construye sobre hitos estándar de HTML5 que las tecnologías de asistencia pueden analizar de manera confiable. La auditoría verifica las estructuras de encabezado para confirmar una progresión semántica estricta:</p>
-                    <ul>
-                        <li><strong>Restricciones de entrada:</strong> El cuerpo del contenido debe comenzar con un nivel de encabezado <code>##</code> (H2). H1 está reservado exclusivamente para el Título de la Página de Canvas LMS.</li>
-                        <li><strong>Paridad estructural:</strong> Las auditorías escanean árboles de encabezados mediante programación, asegurando que no existan niveles de encabezado omitidos (por ejemplo, de H2 a H4), lo que desorienta a los lectores de pantalla.</li>
-                    </ul>
-
-                    <h2>2. Percebible: Aplicación de Texto Alternativo para Recursos</h2>
+                    <h2>1. Percebible: Aplicación de Texto Alternativo para Recursos</h2>
                     <p>La equidad digital requiere que todos los medios instruccionales sean percibidos. Los escaneos programáticos analizan las etiquetas <code>&lt;img ...&gt;</code> en el conjunto de cursos:</p>
                     <ul>
                         <li><strong>Texto descriptivo:</strong> Cada etiqueta de imagen debe contener un atributo <code>alt</code> descriptivo.</li>
                         <li><strong>Marcadores de posición prohibidos:</strong> Los marcadores de posición vacíos (<code>alt=""</code> o <code>alt=''</code>) se marcan como fallas para evitar la elusión decorativa de gráficos educativos activos.</li>
+                    </ul>
+
+                    <h2>2. Operable: Navegación y Paridad en el Flujo de Foco</h2>
+                    <p>Las interfaces operables garantizan que todos los estudiantes puedan navegar por los diseños de los cursos utilizando controles de teclado y dispositivos adaptativos:</p>
+                    <ul>
+                        <li><strong>Indicadores de foco:</strong> Las auditorías verifican que los elementos interactivos dentro de los contenedores personalizados de Canvas conserven anillos de foco altamente visibles.</li>
+                        <li><strong>Trampas de foco:</strong> Los controles programáticos escanean las vinculaciones de scripts para garantizar que las capas modales personalizadas no creen trampas de foco en el teclado.</li>
                     </ul>
 
                     <h2>3. Comprensible: Depreciación de Términos Heredados</h2>
@@ -220,6 +227,13 @@
                     <ul>
                         <li><strong>Patrones heredados:</strong> Se verifican y marcan las referencias que contienen patrones estructurales obsoletos (como referencias de módulos al estilo <code>"8.#"</code>).</li>
                         <li><strong>Terminología unificada:</strong> Garantiza que la documentación del conjunto de cursos se alinee con las fuentes de verdad académicas actuales (SSoT).</li>
+                    </ul>
+
+                    <h2>4. Robusto: Estructura Semántica y Jerarquía</h2>
+                    <p>Un currículo robusto se construye sobre hitos estándar de HTML5 que las tecnologías de asistencia pueden analizar de manera confiable. La auditoría verifica las estructuras de encabezado para confirmar una progresión semántica estricta:</p>
+                    <ul>
+                        <li><strong>Restricciones de entrada:</strong> El cuerpo del contenido debe comenzar con un nivel de encabezado <code>##</code> (H2). H1 está reservado exclusivamente para el Título de la Página de Canvas LMS.</li>
+                        <li><strong>Paridad estructural:</strong> Las auditorías escanean árboles de encabezados mediante programación, asegurando que no existan niveles de encabezado omitidos (por ejemplo, de H2 a H4), lo que desorienta a los lectores de pantalla.</li>
                     </ul>
                 </div>
             </article>
