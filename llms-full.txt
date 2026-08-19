@@ -2542,3 +2542,104 @@ No debo prohibir la innovación, pero debo someterla al mismo rigor que aplico a
 
                     
 A medida que navego por este semestre, asegurémonos de que nuestras herramientas apoyen el plan de estudios, no lo sustituyan. El objetivo no es un chatbot que hable por mí; es un estudiante que ya no necesita el chatbot para comprender la materia.
+
+---
+
+# Essay 26: The POUR-Audit Framework in Curriculum-as-Code
+URL: https://alanpruitt.com/articles/26-curriculum-as-code-pour-audit-framework.html
+
+Treating educational content as software—known as *Curriculum-as-Code* (CaC)—enables the integration of automated verification pipelines to enforce instructional quality, semantic hierarchy, and digital accessibility. The **POUR-Audit framework** operationalizes Web Content Accessibility Guidelines (WCAG) into testable, programmatically audited standards directly inside git workflows.
+
+                    
+
+## 1. Robust: Semantic Structure and Hierarchy
+
+                    
+A robust curriculum is built on standard HTML5 landmarks that assistive technologies can parse reliably. The audit checks heading structures to confirm strict semantic progression:
+
+                    
+
+                        * **Entry Constraints:** The content body must start with a `##` (H2) heading level. H1 is reserved exclusively for the Canvas LMS Page Title.
+
+                        * **Structural Parity:** Audits scan header trees programmatically, ensuring no skipped heading levels (e.g. from H2 to H4) exist, which disorients screen readers.
+
+                    
+
+                    
+
+## 2. Perceivable: Asset Alt-Text Enforcement
+
+                    
+Digital equity requires that all instructional media is perceivable. Programmatic scans analyze `` tags in the course fleet:
+
+                    
+
+                        * **Descriptive Text:** Every image tag must contain a descriptive `alt` attribute.
+
+                        * **Prohibited Placeholders:** Empty placeholders (`alt=""` or `alt=''`) are flagged as failures to prevent decorative bypass of active educational charts.
+
+                    
+
+                    
+
+## 3. Understandable: Legacy Term Deprecation
+
+                    
+To maintain clear and accurate instructional pathways, the audit monitors prohibited legacy terms and references:
+
+                    
+
+                        * **Legacy Patterns:** References containing deprecated structural patterns (such as `"8.#"`-style module references) are checked and flagged.
+
+                        * **Unified Terminology:** Ensures course fleet documentation aligns with current academic sources of truth (SSoT).
+
+                    
+
+                
+
+                
+                    
+Tratar el contenido educativo como software, conocido como *Currículum como Código* (CaC), permite la integración de flujos de verificación automatizados para aplicar la calidad instruccional, la jerarquía semántica y la accesibilidad digital. El **marco de auditoría POUR** operacionaliza las Pautas de Accesibilidad para el Contenido Web (WCAG) en estándares probables y auditados mediante programación directamente dentro de los flujos de trabajo de git.
+
+                    
+
+## 1. Robusto: Estructura Semántica y Jerarquía
+
+                    
+Un currículo robusto se construye sobre hitos estándar de HTML5 que las tecnologías de asistencia pueden analizar de manera confiable. La auditoría verifica las estructuras de encabezado para confirmar una progresión semántica estricta:
+
+                    
+
+                        * **Restricciones de entrada:** El cuerpo del contenido debe comenzar con un nivel de encabezado `##` (H2). H1 está reservado exclusivamente para el Título de la Página de Canvas LMS.
+
+                        * **Paridad estructural:** Las auditorías escanean árboles de encabezados mediante programación, asegurando que no existan niveles de encabezado omitidos (por ejemplo, de H2 a H4), lo que desorienta a los lectores de pantalla.
+
+                    
+
+                    
+
+## 2. Percebible: Aplicación de Texto Alternativo para Recursos
+
+                    
+La equidad digital requiere que todos los medios instruccionales sean percibidos. Los escaneos programáticos analizan las etiquetas `` en el conjunto de cursos:
+
+                    
+
+                        * **Texto descriptivo:** Cada etiqueta de imagen debe contener un atributo `alt` descriptivo.
+
+                        * **Marcadores de posición prohibidos:** Los marcadores de posición vacíos (`alt=""` o `alt=''`) se marcan como fallas para evitar la elusión decorativa de gráficos educativos activos.
+
+                    
+
+                    
+
+## 3. Comprensible: Depreciación de Términos Heredados
+
+                    
+Para mantener rutas de instrucción claras y precisas, la auditoría supervisa los términos y referencias heredados que están prohibidos:
+
+                    
+
+                        * **Patrones heredados:** Se verifican y marcan las referencias que contienen patrones estructurales obsoletos (como referencias de módulos al estilo `"8.#"`).
+
+                        * **Terminología unificada:** Garantiza que la documentación del conjunto de cursos se alinee con las fuentes de verdad académicas actuales (SSoT).
