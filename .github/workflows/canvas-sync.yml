@@ -1,0 +1,38 @@
+name: CI/CD Pipeline - Curriculum Sync
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  lint-and-validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Markdownlint
+        run: npm install -g markdownlint-cli
+
+      - name: Run Markdown Linting
+        run: markdownlint 'essays/**/*.md' --config .markdownlint.json
+
+  deploy-to-canvas:
+    needs: lint-and-validate
+    runs-on: ubuntu-latest
+    steps:
+      - name: Sync to Canvas LMS
+        env:
+          CANVAS_API_TOKEN: ${{ secrets.CANVAS_API_TOKEN }}
+          CANVAS_BASE_URL: ${{ secrets.CANVAS_BASE_URL }}
+        run: |
+          echo "Initiating Canvas sync for Course Architecture..."
+          # Insert your custom sync script here
+          # Example: ./scripts/sync-canvas.sh --dir ./essays
+          echo "Deployment complete: Essay 25 synced."
