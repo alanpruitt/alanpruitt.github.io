@@ -37,5 +37,5 @@ Students increasingly access course materials on mobile devices. Designing with 
 True digital equity requires strict adherence to web accessibility standards. Educational content must be fully navigable by screen readers and compliant with modern contrast guidelines to support diverse student populations.
 
 * **Semantic Structure:** Always start page headings at the `##` (H2) level, reserving H1 exclusively for the Canvas Page Title.
-* **Contrast Compliance:** Enforce WCAG 2.1 AA standards (minimum 4.5:1 contrast ratio, with an EXW Master Library contrast override threshold of 9:1 for enhanced visibility) for all normal text and background pairings.
+* **Contrast Compliance:** Enforce WCAG 2.1 AA standards (minimum 4.5:1 contrast ratio) for all normal text and background pairings.
 * **Screen Reader Compatibility:** Providing descriptive alternative text and clean structural tags for all informative graphics.
