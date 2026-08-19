@@ -9,3 +9,10 @@ html, body {
   margin: 0;
   padding: 0;
 }
+
+/* Ensure article containers don't default to white */
+article, .article-container, .main-content {
+  background-color: var(--color-creme);
+  color: var(--color-navy);
+}
+
