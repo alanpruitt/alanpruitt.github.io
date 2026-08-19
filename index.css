@@ -1,0 +1,11 @@
+:root {
+  --color-creme: #F9F6F0; /* Adjust to your exact creme hex code */
+  --color-navy: #0A192F;  /* Adjust to your exact navy hex code */
+}
+
+html, body {
+  background-color: var(--color-creme);
+  color: var(--color-navy);
+  margin: 0;
+  padding: 0;
+}
