@@ -473,8 +473,8 @@ function run() {
   // 2. Build Alias / Backward-Compatible Archive: articles/index.html
   const articlesDir = resolve(DIST_DIR, 'articles');
   if (!existsSync(articlesDir)) mkdirSync(articlesDir, { recursive: true });
-  writeFileSync(resolve(articlesDir, 'index.html'), generateArchiveHtml(essays), 'utf-8');
-  console.log('📚 Generated Alias Archive: articles/index.html');
+  // writeFileSync(resolve(articlesDir, 'index.html'), generateArchiveHtml(essays), 'utf-8');
+  console.log('📚 Preserved custom Alias Archive: articles/index.html');
 
   console.log('\n🎉 Dual-Route generation and syndication builds complete.\n');
 }
