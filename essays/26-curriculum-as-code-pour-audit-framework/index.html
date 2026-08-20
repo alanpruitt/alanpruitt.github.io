@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Essay 27 | Coach Alan</title>
+  <title>Essay 26 | Coach Alan</title>
   <meta name="description" content="An analysis of the POUR-Audit framework within Curriculum-as-Code paradigms, highlighting automated verification checks for heading hierarchies, image alt-text, and legacy reference deprecation.">
-  <link rel="canonical" href="https://alanpruitt.com/essays/27-curriculum-as-code-pour-audit-framework">
+  <link rel="canonical" href="https://alanpruitt.com/essays/26-curriculum-as-code-pour-audit-framework">
   
   <!-- Feed Discovery -->
   <link rel="alternate" type="application/rss+xml" title="Alan Pruitt - RSS Feed" href="https://alanpruitt.com/rss.xml">
@@ -13,9 +13,9 @@
   
   <!-- OpenGraph Metadata -->
   <meta property="og:type" content="article">
-  <meta property="og:title" content="Essay 27">
+  <meta property="og:title" content="Essay 26">
   <meta property="og:description" content="An analysis of the POUR-Audit framework within Curriculum-as-Code paradigms, highlighting automated verification checks for heading hierarchies, image alt-text, and legacy reference deprecation.">
-  <meta property="og:url" content="https://alanpruitt.com/essays/27-curriculum-as-code-pour-audit-framework">
+  <meta property="og:url" content="https://alanpruitt.com/essays/26-curriculum-as-code-pour-audit-framework">
   <meta property="og:site_name" content="alanpruitt.com">
 
   <!-- Premium Style Guard -->
@@ -59,7 +59,7 @@
 
   <main>
     <article class="content">
-      <h1 style="font-size: 2rem; font-weight: 700; color: var(--text-navy-900); margin-top: 1rem; margin-bottom: 1.5rem;">Essay 27</h1>
+      <h1 style="font-size: 2rem; font-weight: 700; color: var(--text-navy-900); margin-top: 1rem; margin-bottom: 1.5rem;">Essay 26</h1>
       <h2>The POUR-Audit Framework in Curriculum-as-Code</h2>
 <p>Treating educational content as software—known as *Curriculum-as-Code* (CaC)—enables the integration of automated verification pipelines to enforce instructional quality, semantic hierarchy, and digital accessibility. The **POUR-Audit framework** operationalizes Web Content Accessibility Guidelines (WCAG) into testable, programmatically audited standards directly inside git workflows.</p>
 <h3>1. Perceivable: Asset Alt-Text Enforcement</h3>
@@ -78,9 +78,6 @@
 <p>A robust curriculum is built on standard HTML5 landmarks that assistive technologies can parse reliably. The audit checks heading structures to confirm strict semantic progression:</p>
 <li>**Entry Constraints:** The content body must start with a `##` (H2) heading level. H1 is reserved exclusively for the Canvas LMS Page Title.</li>
 <li>**Structural Parity:** Audits scan header trees programmatically, ensuring no skipped heading levels (e.g. from H2 to H4) exist, which disorients screen readers.</li>
-<h3>5. Case Study: The Fleet-Wide Refactor Edge Case</h3>
-<p>An illustrative edge case occurred during a repository-wide emoji refactor to meet ADA Title II requirements. An automated python script stripped all decorative emoticons from markdown headings, but left behind multiple spaces after ATX hashes (e.g., changing `## 🎯 Learning Objectives` to `##  Learning Objectives`).</p>
-<p>Because the pre-commit hook runs `markdownlint`, the commit was automatically rejected for MD019 (multiple space ATX heading violations). This highlights the necessity of coupling content transformation scripts with automated syntax gates before any assets reach the production LMS.</p>
     </article>
 
     <!-- INJECT SOCIAL SHARE BLOCK -->
@@ -91,16 +88,16 @@
         Share this Architecture:
       </span>
       <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center;">
-        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Falanpruitt.com%2Fessays%2F27-curriculum-as-code-pour-audit-framework" target="_blank" rel="noopener noreferrer" aria-label="Share on LinkedIn" style="font-family: monospace; font-size: 0.75rem; font-weight: 600; text-decoration: none; padding: 6px 12px; border-radius: 8px; border: 1px solid var(--bg-creme-200, #E6E6DC); color: var(--navy-dark); background-color: var(--bg-cream);">
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Falanpruitt.com%2Fessays%2F26-curriculum-as-code-pour-audit-framework" target="_blank" rel="noopener noreferrer" aria-label="Share on LinkedIn" style="font-family: monospace; font-size: 0.75rem; font-weight: 600; text-decoration: none; padding: 6px 12px; border-radius: 8px; border: 1px solid var(--bg-creme-200, #E6E6DC); color: var(--navy-dark); background-color: var(--bg-cream);">
           LinkedIn
         </a>
-        <a href="https://x.com/intent/post?text=Essay%2027&url=https%3A%2F%2Falanpruitt.com%2Fessays%2F27-curriculum-as-code-pour-audit-framework&via=alanpruitt" target="_blank" rel="noopener noreferrer" aria-label="Share on X" style="font-family: monospace; font-size: 0.75rem; font-weight: 600; text-decoration: none; padding: 6px 12px; border-radius: 8px; border: 1px solid var(--bg-creme-200, #E6E6DC); color: var(--navy-dark); background-color: var(--bg-cream);">
+        <a href="https://x.com/intent/post?text=Essay%2026&url=https%3A%2F%2Falanpruitt.com%2Fessays%2F26-curriculum-as-code-pour-audit-framework&via=alanpruitt" target="_blank" rel="noopener noreferrer" aria-label="Share on X" style="font-family: monospace; font-size: 0.75rem; font-weight: 600; text-decoration: none; padding: 6px 12px; border-radius: 8px; border: 1px solid var(--bg-creme-200, #E6E6DC); color: var(--navy-dark); background-color: var(--bg-cream);">
           X
         </a>
-        <a href="https://reddit.com/submit?url=https%3A%2F%2Falanpruitt.com%2Fessays%2F27-curriculum-as-code-pour-audit-framework&title=Essay%2027" target="_blank" rel="noopener noreferrer" aria-label="Share on Reddit" style="font-family: monospace; font-size: 0.75rem; font-weight: 600; text-decoration: none; padding: 6px 12px; border-radius: 8px; border: 1px solid var(--bg-creme-200, #E6E6DC); color: var(--navy-dark); background-color: var(--bg-cream);">
+        <a href="https://reddit.com/submit?url=https%3A%2F%2Falanpruitt.com%2Fessays%2F26-curriculum-as-code-pour-audit-framework&title=Essay%2026" target="_blank" rel="noopener noreferrer" aria-label="Share on Reddit" style="font-family: monospace; font-size: 0.75rem; font-weight: 600; text-decoration: none; padding: 6px 12px; border-radius: 8px; border: 1px solid var(--bg-creme-200, #E6E6DC); color: var(--navy-dark); background-color: var(--bg-cream);">
           Reddit
         </a>
-        <a href="mailto:?subject=Essay%2027&body=Read%20this%20Curriculum-as-Code%20architecture:%20https%3A%2F%2Falanpruitt.com%2Fessays%2F27-curriculum-as-code-pour-audit-framework" aria-label="Share via Email" style="font-family: monospace; font-size: 0.75rem; font-weight: 600; text-decoration: none; padding: 6px 12px; border-radius: 8px; border: 1px solid var(--bg-creme-200, #E6E6DC); color: var(--navy-dark); background-color: var(--bg-cream);">
+        <a href="mailto:?subject=Essay%2026&body=Read%20this%20Curriculum-as-Code%20architecture:%20https%3A%2F%2Falanpruitt.com%2Fessays%2F26-curriculum-as-code-pour-audit-framework" aria-label="Share via Email" style="font-family: monospace; font-size: 0.75rem; font-weight: 600; text-decoration: none; padding: 6px 12px; border-radius: 8px; border: 1px solid var(--bg-creme-200, #E6E6DC); color: var(--navy-dark); background-color: var(--bg-cream);">
           Email
         </a>
       </div>

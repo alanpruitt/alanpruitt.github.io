@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essay 26: The POUR-Audit Framework in Curriculum-as-Code | Alan Pruitt</title>
+    <meta name="description" content="An analysis of the POUR-Audit framework within Curriculum-as-Code paradigms, highlighting automated verification checks for heading hierarchies, image alt-text, and legacy reference deprecation.">
+    <link rel="canonical" href="https://alanpruitt.com/articles/26-curriculum-as-code-pour-audit-framework.html">
+
+    <!-- OpenGraph Meta Tags (LinkedIn / Facebook Preview) -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Alan Pruitt">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="The POUR-Audit Framework in Curriculum-as-Code">
+    <meta property="og:description" content="Operationalizing Web Content Accessibility Guidelines (WCAG) into testable, programmatically audited standards directly inside git workflows.">
+    <meta property="og:url" content="https://alanpruitt.com/articles/26-curriculum-as-code-pour-audit-framework.html">
+    <meta property="og:image" content="https://alanpruitt.com/assets/og-preview.png">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The POUR-Audit Framework in Curriculum-as-Code">
+    <meta name="twitter:description" content="Automating WCAG accessibility audits inside git Curriculum-as-Code pipelines.">
+    <meta name="twitter:image" content="https://alanpruitt.com/assets/og-preview.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%230B192C'/></svg>">
+
+    <!-- Schema.org Knowledge Graph -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "The POUR-Audit Framework in Curriculum-as-Code",
+      "author": {
+        "@type": "Person",
+        "name": "Alan Pruitt",
+        "url": "https://alanpruitt.com/"
+      },
+      "datePublished": "2026-08-19",
+      "description": "An analysis of the POUR-Audit framework within Curriculum-as-Code paradigms, highlighting automated verification checks for accessibility, structure, and quality standards."
+    }
+    </script>
+
+    <!-- Inlined Zero-JS Pure Critical CSS -->
+    <style>
+        :root {
+            --bg-creme-50: #FAFBF7;
+            --bg-creme-100: #F5F5F0;
+            --bg-creme-200: #E6E6DC;
+            --text-navy-800: #1E3E62;
+            --text-navy-900: #0B192C;
+            --text-navy-950: #060E1A;
+        }
+
+        *, ::before, ::after { box-sizing: border-box; border-width: 0; }
+        html { line-height: 1.6; -webkit-text-size-adjust: 100%; tab-size: 4; font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; height: 100%; }
+        body { margin: 0; background-color: var(--bg-creme-100); color: var(--text-navy-900); }
+
+        .w-full { width: 100%; }
+        .max-w-4xl { max-width: 56rem; }
+        .max-w-6xl { max-width: 72rem; }
+        .mx-auto { margin-left: auto; margin-right: auto; }
+        .flex { display: flex; }
+        .flex-col { flex-direction: column; }
+        .items-center { align-items: center; }
+        .justify-between { justify-content: space-between; }
+        
+        .bg-white { background-color: #ffffff; }
+        .bg-creme-50 { background-color: var(--bg-creme-50); }
+        .bg-creme-100 { background-color: var(--bg-creme-100); }
+        .bg-creme-200 { background-color: var(--bg-creme-200); }
+        .bg-navy-900 { background-color: var(--text-navy-900); }
+
+        .text-navy-800 { color: var(--text-navy-800); }
+        .text-navy-900 { color: var(--text-navy-900); }
+        .text-creme-100 { color: var(--bg-creme-100); }
+
+        .p-1 { padding: 0.25rem; }
+        .p-4 { padding: 1rem; }
+        .p-6 { padding: 1.5rem; }
+        .p-8 { padding: 2rem; }
+        .px-3 { padding-left: 0.75rem; padding-right: 0.75rem; }
+        .px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+        .py-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+        .py-6 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+        .py-8 { padding-top: 2rem; padding-bottom: 2rem; }
+        .mb-2 { margin-bottom: 0.5rem; }
+        .mb-4 { margin-bottom: 1rem; }
+        .mb-6 { margin-bottom: 1.5rem; }
+        .mb-8 { margin-bottom: 2rem; }
+        .mt-2 { margin-top: 0.5rem; }
+        .mt-8 { margin-top: 2rem; }
+        .mt-12 { margin-top: 3rem; }
+
+        .border { border-style: solid; border-width: 1px; }
+        .border-t { border-top-style: solid; border-top-width: 1px; }
+        .border-b { border-bottom-style: solid; border-bottom-width: 1px; }
+        .border-creme-200 { border-color: var(--bg-creme-200); }
+
+        .rounded-md { border-radius: 0.375rem; }
+        .rounded-full { border-radius: 9999px; }
+        .rounded-lg { border-radius: 0.5rem; }
+        .rounded-2xl { border-radius: 1rem; }
+
+        .font-mono { font-family: 'Fira Code', monospace; }
+        .font-semibold { font-weight: 600; }
+        .font-bold { font-weight: 700; }
+        .font-extrabold { font-weight: 800; }
+
+        .text-xs { font-size: 0.75rem; }
+        .text-sm { font-size: 0.875rem; }
+        .text-base { font-size: 1rem; }
+        .text-lg { font-size: 1.125rem; }
+        .text-2xl { font-size: 1.5rem; }
+        .text-3xl { font-size: 1.875rem; }
+
+        .shadow-sm { box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); }
+        .hover\:underline:hover { text-decoration: underline; }
+
+        /* Article Prose Styling */
+        article h2 { font-size: 1.5rem; font-weight: 800; margin-top: 2rem; margin-bottom: 0.75rem; color: var(--text-navy-900); }
+        article h3 { font-size: 1.25rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.5rem; color: var(--text-navy-900); }
+        article p { margin-bottom: 1.25rem; color: var(--text-navy-800); }
+        article ul, article ol { margin-bottom: 1.25rem; padding-left: 1.5rem; color: var(--text-navy-800); }
+        article li { margin-bottom: 0.5rem; }
+        article blockquote { border-left: 4px solid var(--text-navy-800); padding-left: 1rem; margin: 1.5rem 0; font-style: italic; background-color: var(--bg-creme-50); padding: 1rem; border-radius: 0.375rem; }
+        article table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.875rem; }
+        article th, article td { border: 1px solid var(--bg-creme-200); padding: 0.75rem; text-align: left; }
+        article th { background-color: var(--bg-creme-50); font-weight: 700; color: var(--text-navy-900); }
+        article pre { background-color: var(--text-navy-900); color: var(--bg-creme-100); padding: 1rem; border-radius: 0.5rem; overflow-x: auto; font-family: 'Fira Code', monospace; font-size: 0.85rem; margin: 1.5rem 0; }
+
+        [data-lang] { transition: opacity 0.15s ease-in-out; }
+        .hidden-lang { display: none !important; }
+    </style>
+</head>
+<body class="bg-creme-100 text-navy-900 antialiased min-h-full flex flex-col justify-between">
+
+    <!-- Header / Navigation -->
+    <header class="w-full max-w-6xl mx-auto px-6 py-6 flex justify-between items-center border-b border-creme-200">
+        <div class="flex items-center space-x-3">
+            <span class="w-3 h-3 bg-navy-900 rounded-full inline-block" aria-hidden="true"></span>
+            <a href="/" class="text-xl font-bold tracking-tight text-navy-900 hover:text-navy-800" style="text-decoration: none;">
+                alanpruitt.com
+            </a>
+        </div>
+        
+        <div class="flex items-center bg-creme-200 p-1 rounded-lg border border-creme-200 text-sm font-semibold" role="group" aria-label="Language selector">
+            <button id="btn-en" onclick="setLanguage('en')" class="px-3 py-1 rounded-md transition-all bg-navy-900 text-creme-100 shadow-sm">EN</button>
+            <button id="btn-es" onclick="setLanguage('es')" class="px-3 py-1 rounded-md transition-all text-navy-900 hover:text-navy-800">ES</button>
+        </div>
+    </header>
+
+    <!-- Main Article Body -->
+    <main class="w-full max-w-4xl mx-auto px-6 py-8 flex-grow">
+        <nav class="mb-6">
+            <a href="/" class="text-xs font-mono font-semibold text-navy-800 hover:underline">&larr; Back to Home</a>
+        </nav>
+
+        <div class="bg-white p-8 md:p-10 rounded-2xl border border-creme-200 shadow-sm">
+            <div class="inline-block px-3 py-1 bg-creme-100 text-navy-900 text-xs font-mono font-bold tracking-wider uppercase rounded-full border border-creme-200 mb-4">
+                ESSAY 26 &bull; AUTOMATED COMPLIANCE
+            </div>
+
+            <h1 class="text-3xl md:text-4xl font-extrabold text-navy-900 leading-tight mb-4" data-lang="en">
+                The POUR-Audit Framework in Curriculum-as-Code
+            </h1>
+            <h1 class="text-3xl md:text-4xl font-extrabold text-navy-900 leading-tight mb-4 hidden-lang" data-lang="es">
+                Currículum como Código y el Marco de Auditoría POUR
+            </h1>
+
+            <div class="text-xs font-mono text-navy-800 pb-6 border-b border-creme-200 mb-6">
+                Published: August 19, 2026 &bull; Author: Alan Pruitt &bull; POUR-Audit SSoT
+            </div>
+
+            <article>
+                <div data-lang="en">
+                    <p>Treating educational content as software—known as <em>Curriculum-as-Code</em> (CaC)—enables the integration of automated verification pipelines to enforce instructional quality, semantic hierarchy, and digital accessibility. The <strong>POUR-Audit framework</strong> operationalizes Web Content Accessibility Guidelines (WCAG) into testable, programmatically audited standards directly inside git workflows.</p>
+
+                    <h2>1. Perceivable: Asset Alt-Text Enforcement</h2>
+                    <p>Digital equity requires that all instructional media is perceivable. Programmatic scans analyze <code>&lt;img ...&gt;</code> tags in the course fleet:</p>
+                    <ul>
+                        <li><strong>Descriptive Text:</strong> Every image tag must contain a descriptive <code>alt</code> attribute.</li>
+                        <li><strong>Prohibited Placeholders:</strong> Empty placeholders (<code>alt=""</code> or <code>alt=''</code>) are flagged as failures to prevent decorative bypass of active educational charts.</li>
+                    </ul>
+
+                    <h2>2. Operable: Navigation and Focus Flow Parity</h2>
+                    <p>Operable interfaces ensure that all students can navigate course layouts using keyboard controls and adaptive gear:</p>
+                    <ul>
+                        <li><strong>Focus Indicators:</strong> Audits verify that interactive elements within custom Canvas containers retain highly visible focus rings.</li>
+                        <li><strong>Focus Traps:</strong> Programmatic checks scan script bindings to ensure custom modal layers do not create keyboard focus traps.</li>
+                    </ul>
+
+                    <h2>3. Understandable: Legacy Term Deprecation</h2>
+                    <p>To maintain clear and accurate instructional pathways, the audit monitors prohibited legacy terms and references:</p>
+                    <ul>
+                        <li><strong>Legacy Patterns:</strong> References containing deprecated structural patterns (such as <code>"8.#"</code>-style module references) are checked and flagged.</li>
+                        <li><strong>Unified Terminology:</strong> Ensures course fleet documentation aligns with current academic sources of truth (SSoT).</li>
+                    </ul>
+
+                    <h2>4. Robust: Semantic Structure and Hierarchy</h2>
+                    <p>A robust curriculum is built on standard HTML5 landmarks that assistive technologies can parse reliably. The audit checks heading structures to confirm strict semantic progression:</p>
+                    <ul>
+                        <li><strong>Entry Constraints:</strong> The content body must start with a <code>##</code> (H2) heading level. H1 is reserved exclusively for the Canvas LMS Page Title.</li>
+                        <li><strong>Structural Parity:</strong> Audits scan header trees programmatically, ensuring no skipped heading levels (e.g. from H2 to H4) exist, which disorients screen readers.</li>
+                    </ul>
+                </div>
+
+                <div data-lang="es" class="hidden-lang">
+                    <p>Tratar el contenido educativo como software, conocido como <em>Currículum como Código</em> (CaC), permite la integración de flujos de verificación automatizados para aplicar la calidad instruccional, la jerarquía semántica y la accesibilidad digital. El <strong>marco de auditoría POUR</strong> operacionaliza las Pautas de Accesibilidad para el Contenido Web (WCAG) en estándares probables y auditados mediante programación directamente dentro de los flujos de trabajo de git.</p>
+
+                    <h2>1. Robusto: Estructura Semántica y Jerarquía</h2>
+                    <p>Un currículo robusto se construye sobre hitos estándar de HTML5 que las tecnologías de asistencia pueden analizar de manera confiable. La auditoría verifica las estructuras de encabezado para confirmar una progresión semántica estricta:</p>
+                    <ul>
+                        <li><strong>Restricciones de entrada:</strong> El cuerpo del contenido debe comenzar con un nivel de encabezado <code>##</code> (H2). H1 está reservado exclusivamente para el Título de la Página de Canvas LMS.</li>
+                        <li><strong>Paridad estructural:</strong> Las auditorías escanean árboles de encabezados mediante programación, asegurando que no existan niveles de encabezado omitidos (por ejemplo, de H2 a H4), lo que desorienta a los lectores de pantalla.</li>
+                    </ul>
+
+                    <h2>2. Percebible: Aplicación de Texto Alternativo para Recursos</h2>
+                    <p>La equidad digital requiere que todos los medios instruccionales sean percibidos. Los escaneos programáticos analizan las etiquetas <code>&lt;img ...&gt;</code> en el conjunto de cursos:</p>
+                    <ul>
+                        <li><strong>Texto descriptivo:</strong> Cada etiqueta de imagen debe contener un atributo <code>alt</code> descriptivo.</li>
+                        <li><strong>Marcadores de posición prohibidos:</strong> Los marcadores de posición vacíos (<code>alt=""</code> o <code>alt=''</code>) se marcan como fallas para evitar la elusión decorativa de gráficos educativos activos.</li>
+                    </ul>
+
+                    <h2>3. Comprensible: Depreciación de Términos Heredados</h2>
+                    <p>Para mantener rutas de instrucción claras y precisas, la auditoría supervisa los términos y referencias heredados que están prohibidos:</p>
+                    <ul>
+                        <li><strong>Patrones heredados:</strong> Se verifican y marcan las referencias que contienen patrones estructurales obsoletos (como referencias de módulos al estilo <code>"8.#"</code>).</li>
+                        <li><strong>Terminología unificada:</strong> Garantiza que la documentación del conjunto de cursos se alinee con las fuentes de verdad académicas actuales (SSoT).</li>
+                    </ul>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full max-w-6xl mx-auto px-6 py-8 mt-12 border-t border-creme-200 flex flex-col md:flex-row justify-between items-center text-xs text-navy-800 gap-4">
+        <div class="space-y-1 text-center md:text-left">
+            <div>&copy; <span id="year"></span> Alan Pruitt. All rights reserved.</div>
+        </div>
+        <div class="flex space-x-6" style="gap: 1.5rem;">
+            <a href="https://github.com/alanpruitt" target="_blank" rel="noopener noreferrer" class="hover:text-navy-900">GitHub</a>
+            <a href="https://www.linkedin.com/in/alanpruitt/" target="_blank" rel="noopener noreferrer" class="hover:text-navy-900">LinkedIn</a>
+            <a href="https://www.webcognita.com" target="_blank" rel="noopener noreferrer" class="hover:text-navy-900">Webcognita</a>
+        </div>
+    </footer>
+
+    <!-- Client Script -->
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        function setLanguage(lang) {
+            const enElements = document.querySelectorAll('[data-lang="en"]');
+            const esElements = document.querySelectorAll('[data-lang="es"]');
+            const btnEn = document.getElementById('btn-en');
+            const btnEs = document.getElementById('btn-es');
+
+            if (lang === 'en') {
+                enElements.forEach(el => el.classList.remove('hidden-lang'));
+                esElements.forEach(el => el.classList.add('hidden-lang'));
+                btnEn.className = "px-3 py-1 rounded-md transition-all bg-navy-900 text-creme-100 shadow-sm";
+                btnEs.className = "px-3 py-1 rounded-md transition-all text-navy-900 hover:text-navy-800";
+            } else {
+                enElements.forEach(el => el.classList.add('hidden-lang'));
+                esElements.forEach(el => el.classList.remove('hidden-lang'));
+                btnEs.className = "px-3 py-1 rounded-md transition-all bg-navy-900 text-creme-100 shadow-sm";
+                btnEn.className = "px-3 py-1 rounded-md transition-all text-navy-900 hover:text-navy-800";
+            }
+            localStorage.setItem('preferred_lang', lang);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('preferred_lang') || 'en';
+            setLanguage(savedLang);
+        });
+    </script>
+</body>
+</html>

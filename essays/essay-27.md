@@ -3,53 +3,40 @@ layout: post
 title: "Essay 27"
 permalink: /essay-27/
 id: "27"
-slug: "27-curriculum-as-code-pour-audit-framework"
-title_es: "Currículum como Código y el Marco de Auditoría POUR"
-date: "2026-08-19"
+slug: "27-ada-title-ii-fleet-refactor"
+title_es: "Título II de la ADA y la Reestructuración de la Flota"
+date: "2026-08-20"
 course: "EXW101"
 term: "Fall 2026"
 ssot: "The Einstein Protocol"
-tags: ["AI", "CurriculumAsCode", "EdTech", "LMS", "Accessibility", "OpenSource", "POUR"]
-summary: "An analysis of the POUR-Audit framework within Curriculum-as-Code paradigms, highlighting automated verification checks for heading hierarchies, image alt-text, and legacy reference deprecation."
-summary_es: "Un análisis del marco de auditoría POUR dentro de los paradigmas de Currículum como Código, destacando la verificación automatizada de accesibilidad."
+tags: ["AI", "CurriculumAsCode", "EdTech", "LMS", "Accessibility", "OpenSource", "ADA"]
+summary: "A case study of the fleet-wide emoji stripping sweep, detailing the regex patterns and pre-commit hooks that catch spacing errors and ensure strict compliance."
+summary_es: "Un caso de estudio de la limpieza de emojis en toda la flota, detallando los patrones de regex y los ganchos de pre-commit."
 lang_default: "en"
-canonical_url: "https://alanpruitt.com/articles/27-curriculum-as-code-pour-audit-framework.html"
+canonical_url: "https://alanpruitt.com/articles/27-ada-title-ii-fleet-refactor.html"
 ---
 
-## The POUR-Audit Framework in Curriculum-as-Code
+## ADA Title II and the Fleet-Wide Refactor
 
-Treating educational content as software—known as *Curriculum-as-Code* (CaC)—enables the integration of automated verification pipelines to enforce instructional quality, semantic hierarchy, and digital accessibility. The **POUR-Audit framework** operationalizes Web Content Accessibility Guidelines (WCAG) into testable, programmatically audited standards directly inside git workflows.
+Meeting the federal ADA Title II compliance deadlines requires absolute uniformity in structural content across learning management systems. When executing massive, fleet-wide content transformations—such as removing decorative emojis and non-standard unicode characters—automated scripts must be governed by strict syntax validation gates.
 
-### 1. Perceivable: Asset Alt-Text Enforcement
+### 1. The Decorative Emojis Clean Sweep
 
-Digital equity requires that all instructional media is perceivable. Programmatic scans analyze `<img ...>` tags in the course fleet:
+Decorative characters and emoticons introduce screen reader friction, resulting in poor perceivability. Programmatic regex patterns are deployed recursively across Markdown and HTML course content to purge these symbols:
 
-* **Descriptive Text:** Every image tag must contain a descriptive `alt` attribute.
-* **Prohibited Placeholders:** Empty placeholders (`alt=""` or `alt=''`) are flagged as failures to prevent decorative bypass of active educational charts.
+* **Emoji Ranges:** Scanning and matching standard Unicode emoji groups, transport icons, transport symbols, emoticons, and geometric flags.
+* **Content Preservation:** Ensure actual alphanumeric characters and code block layouts are left intact.
 
-### 2. Operable: Navigation and Focus Flow Parity
+### 2. Spacing Violations in Automated Substitution
 
-Operable interfaces ensure that all students can navigate course layouts using keyboard controls and adaptive gear:
+Automated replacement pipelines are highly efficient but prone to introducing subtle syntax regressions:
 
-* **Focus Indicators:** Audits verify that interactive elements within custom Canvas containers retain highly visible focus rings.
-* **Focus Traps:** Programmatic checks scan script bindings to ensure custom modal layers do not create keyboard focus traps.
+* **Hash Spacing:** Stripping an emoji immediately following header hashes (e.g., `## 🎯 Learning Objectives`) leaves behind a duplicate space (`##  Learning Objectives`).
+* **ATX Heading Rules:** Duplicate spacing after ATX header hashes violates standard Markdown rules (`MD019`), creating rendering conflicts for content parsing engines.
 
-### 3. Understandable: Legacy Term Deprecation
+### 3. Pre-Commit Gates as Safe Release Pipelines
 
-To maintain clear and accurate instructional pathways, the audit monitors prohibited legacy terms and references:
+A key lesson from the fleet-wide sweep is the vital role of pre-commit validation hook check points:
 
-* **Legacy Patterns:** References containing deprecated structural patterns (such as `"8.#"`-style module references) are checked and flagged.
-* **Unified Terminology:** Ensures course fleet documentation aligns with current academic sources of truth (SSoT).
-
-### 4. Robust: Semantic Structure and Hierarchy
-
-A robust curriculum is built on standard HTML5 landmarks that assistive technologies can parse reliably. The audit checks heading structures to confirm strict semantic progression:
-
-* **Entry Constraints:** The content body must start with a `##` (H2) heading level. H1 is reserved exclusively for the Canvas LMS Page Title.
-* **Structural Parity:** Audits scan header trees programmatically, ensuring no skipped heading levels (e.g. from H2 to H4) exist, which disorients screen readers.
-
-### 5. Case Study: The Fleet-Wide Refactor Edge Case
-
-An illustrative edge case occurred during a repository-wide emoji refactor to meet ADA Title II requirements. An automated python script stripped all decorative emoticons from markdown headings, but left behind multiple spaces after ATX hashes (e.g., changing `## 🎯 Learning Objectives` to `##  Learning Objectives`).
-
-Because the pre-commit hook runs `markdownlint`, the commit was automatically rejected for MD019 (multiple space ATX heading violations). This highlights the necessity of coupling content transformation scripts with automated syntax gates before any assets reach the production LMS.
+* **Early Detection:** When automated scripts introduce double-space regressions, pre-commit lint gates programmatically reject the commit.
+* **Auto-Correction Integration:** Developers must combine regex cleansers with automatic syntax formatters (`markdownlint --fix`) to reconcile spacing issues before pushing changes to remote tracking branches.

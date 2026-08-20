@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essay 27: ADA Title II and the Fleet-Wide Refactor | Alan Pruitt</title>
+    <meta name="description" content="A case study of the fleet-wide emoji stripping sweep, detailing the regex patterns and pre-commit hooks that catch spacing errors and ensure strict compliance.">
+    <link rel="canonical" href="https://alanpruitt.com/articles/27-ada-title-ii-fleet-refactor.html">
+
+    <!-- OpenGraph Meta Tags (LinkedIn / Facebook Preview) -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Alan Pruitt">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="ADA Title II and the Fleet-Wide Refactor">
+    <meta property="og:description" content="Meeting federal accessibility compliance via automated regex sweeps and pre-commit git validation gates.">
+    <meta property="og:url" content="https://alanpruitt.com/articles/27-ada-title-ii-fleet-refactor.html">
+    <meta property="og:image" content="https://alanpruitt.com/assets/og-preview.png">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ADA Title II and the Fleet-Wide Refactor">
+    <meta name="twitter:description" content="Automating emoji cleanups and ensuring WCAG compliance across a learning course fleet.">
+    <meta name="twitter:image" content="https://alanpruitt.com/assets/og-preview.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%230B192C'/></svg>">
+
+    <!-- Schema.org Knowledge Graph -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "ADA Title II and the Fleet-Wide Refactor",
+      "author": {
+        "@type": "Person",
+        "name": "Alan Pruitt",
+        "url": "https://alanpruitt.com/"
+      },
+      "datePublished": "2026-08-20",
+      "description": "A case study of the fleet-wide emoji stripping sweep, detailing the regex patterns and pre-commit hooks that catch spacing errors."
+    }
+    </script>
+
+    <!-- Inlined Zero-JS Pure Critical CSS -->
+    <style>
+        :root {
+            --bg-creme-50: #FAFBF7;
+            --bg-creme-100: #F5F5F0;
+            --bg-creme-200: #E6E6DC;
+            --text-navy-800: #1E3E62;
+            --text-navy-900: #0B192C;
+            --text-navy-950: #060E1A;
+        }
+
+        *, ::before, ::after { box-sizing: border-box; border-width: 0; }
+        html { line-height: 1.6; -webkit-text-size-adjust: 100%; tab-size: 4; font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; height: 100%; }
+        body { margin: 0; background-color: var(--bg-creme-100); color: var(--text-navy-900); }
+
+        .w-full { width: 100%; }
+        .max-w-4xl { max-width: 56rem; }
+        .max-w-6xl { max-width: 72rem; }
+        .mx-auto { margin-left: auto; margin-right: auto; }
+        .flex { display: flex; }
+        .flex-col { flex-direction: column; }
+        .items-center { align-items: center; }
+        .justify-between { justify-content: space-between; }
+        
+        .bg-white { background-color: #ffffff; }
+        .bg-creme-50 { background-color: var(--bg-creme-50); }
+        .bg-creme-100 { background-color: var(--bg-creme-100); }
+        .bg-creme-200 { background-color: var(--bg-creme-200); }
+        .bg-navy-900 { background-color: var(--text-navy-900); }
+
+        .text-navy-800 { color: var(--text-navy-800); }
+        .text-navy-900 { color: var(--text-navy-900); }
+        .text-creme-100 { color: var(--bg-creme-100); }
+
+        .p-1 { padding: 0.25rem; }
+        .p-4 { padding: 1rem; }
+        .p-6 { padding: 1.5rem; }
+        .p-8 { padding: 2rem; }
+        .px-3 { padding-left: 0.75rem; padding-right: 0.75rem; }
+        .px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+        .py-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+        .py-6 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+        .py-8 { padding-top: 2rem; padding-bottom: 2rem; }
+        .mb-2 { margin-bottom: 0.5rem; }
+        .mb-4 { margin-bottom: 1rem; }
+        .mb-6 { margin-bottom: 1.5rem; }
+        .mb-8 { margin-bottom: 2rem; }
+        .mt-2 { margin-top: 0.5rem; }
+        .mt-8 { margin-top: 2rem; }
+        .mt-12 { margin-top: 3rem; }
+
+        .border { border-style: solid; border-width: 1px; }
+        .border-t { border-top-style: solid; border-top-width: 1px; }
+        .border-b { border-bottom-style: solid; border-bottom-width: 1px; }
+        .border-creme-200 { border-color: var(--bg-creme-200); }
+
+        .rounded-md { border-radius: 0.375rem; }
+        .rounded-full { border-radius: 9999px; }
+        .rounded-lg { border-radius: 0.5rem; }
+        .rounded-2xl { border-radius: 1rem; }
+
+        .font-mono { font-family: 'Fira Code', monospace; }
+        .font-semibold { font-weight: 600; }
+        .font-bold { font-weight: 700; }
+        .font-extrabold { font-weight: 800; }
+
+        .text-xs { font-size: 0.75rem; }
+        .text-sm { font-size: 0.875rem; }
+        .text-base { font-size: 1rem; }
+        .text-lg { font-size: 1.125rem; }
+        .text-2xl { font-size: 1.5rem; }
+        .text-3xl { font-size: 1.875rem; }
+
+        .shadow-sm { box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); }
+        .hover\:underline:hover { text-decoration: underline; }
+
+        /* Article Prose Styling */
+        article h2 { font-size: 1.5rem; font-weight: 800; margin-top: 2rem; margin-bottom: 0.75rem; color: var(--text-navy-900); }
+        article h3 { font-size: 1.25rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.5rem; color: var(--text-navy-900); }
+        article p { margin-bottom: 1.25rem; color: var(--text-navy-800); }
+        article ul, article ol { margin-bottom: 1.25rem; padding-left: 1.5rem; color: var(--text-navy-800); }
+        article li { margin-bottom: 0.5rem; }
+        article blockquote { border-left: 4px solid var(--text-navy-800); padding-left: 1rem; margin: 1.5rem 0; font-style: italic; background-color: var(--bg-creme-50); padding: 1rem; border-radius: 0.375rem; }
+        article table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.875rem; }
+        article th, article td { border: 1px solid var(--bg-creme-200); padding: 0.75rem; text-align: left; }
+        article th { background-color: var(--bg-creme-50); font-weight: 700; color: var(--text-navy-900); }
+        article pre { background-color: var(--text-navy-900); color: var(--bg-creme-100); padding: 1rem; border-radius: 0.5rem; overflow-x: auto; font-family: 'Fira Code', monospace; font-size: 0.85rem; margin: 1.5rem 0; }
+
+        [data-lang] { transition: opacity 0.15s ease-in-out; }
+        .hidden-lang { display: none !important; }
+    </style>
+</head>
+<body class="bg-creme-100 text-navy-900 antialiased min-h-full flex flex-col justify-between">
+
+    <!-- Header / Navigation -->
+    <header class="w-full max-w-6xl mx-auto px-6 py-6 flex justify-between items-center border-b border-creme-200">
+        <div class="flex items-center space-x-3">
+            <span class="w-3 h-3 bg-navy-900 rounded-full inline-block" aria-hidden="true"></span>
+            <a href="/" class="text-xl font-bold tracking-tight text-navy-900 hover:text-navy-800" style="text-decoration: none;">
+                alanpruitt.com
+            </a>
+        </div>
+        
+        <div class="flex items-center bg-creme-200 p-1 rounded-lg border border-creme-200 text-sm font-semibold" role="group" aria-label="Language selector">
+            <button id="btn-en" onclick="setLanguage('en')" class="px-3 py-1 rounded-md transition-all bg-navy-900 text-creme-100 shadow-sm">EN</button>
+            <button id="btn-es" onclick="setLanguage('es')" class="px-3 py-1 rounded-md transition-all text-navy-900 hover:text-navy-800">ES</button>
+        </div>
+    </header>
+
+    <!-- Main Article Body -->
+    <main class="w-full max-w-4xl mx-auto px-6 py-8 flex-grow">
+        <nav class="mb-6">
+            <a href="/" class="text-xs font-mono font-semibold text-navy-800 hover:underline">&larr; Back to Home</a>
+        </nav>
+
+        <div class="bg-white p-8 md:p-10 rounded-2xl border border-creme-200 shadow-sm">
+            <div class="inline-block px-3 py-1 bg-creme-100 text-navy-900 text-xs font-mono font-bold tracking-wider uppercase rounded-full border border-creme-200 mb-4">
+                ESSAY 27 &bull; ADA Title II
+            </div>
+
+            <h1 class="text-3xl md:text-4xl font-extrabold text-navy-900 leading-tight mb-4" data-lang="en">
+                ADA Title II and the Fleet-Wide Refactor
+            </h1>
+            <h1 class="text-3xl md:text-4xl font-extrabold text-navy-900 leading-tight mb-4 hidden-lang" data-lang="es">
+                Título II de la ADA y la Reestructuración de la Flota
+            </h1>
+
+            <div class="text-xs font-mono text-navy-800 pb-6 border-b border-creme-200 mb-6">
+                Published: August 20, 2026 &bull; Author: Alan Pruitt &bull; ADA Title II Compliance
+            </div>
+
+            <article>
+                <div data-lang="en">
+                    <p>Meeting the federal ADA Title II compliance deadlines requires absolute uniformity in structural content across learning management systems. When executing massive, fleet-wide content transformations—such as removing decorative emojis and non-standard unicode characters—automated scripts must be governed by strict syntax validation gates.</p>
+
+                    <h2>1. The Decorative Emojis Clean Sweep</h2>
+                    <p>Decorative characters and emoticons introduce screen reader friction, resulting in poor perceivability. Programmatic regex patterns are deployed recursively across Markdown and HTML course content to purge these symbols:</p>
+                    <ul>
+                        <li><strong>Emoji Ranges:</strong> Scanning and matching standard Unicode emoji groups, transport icons, transport symbols, emoticons, and geometric flags.</li>
+                        <li><strong>Content Preservation:</strong> Ensure actual alphanumeric characters and code block layouts are left intact.</li>
+                    </ul>
+
+                    <h2>2. Spacing Violations in Automated Substitution</h2>
+                    <p>Automated replacement pipelines are highly efficient but prone to introducing subtle syntax regressions:</p>
+                    <ul>
+                        <li><strong>Hash Spacing:</strong> Stripping an emoji immediately following header hashes (e.g., <code>## 🎯 Learning Objectives</code>) leaves behind a duplicate space (<code>##  Learning Objectives</code>).</li>
+                        <li><strong>ATX Heading Rules:</strong> Duplicate spacing after ATX header hashes violates standard Markdown rules (<code>MD019</code>), creating rendering conflicts for content parsing engines.</li>
+                    </ul>
+
+                    <h2>3. Pre-Commit Gates as Safe Release Pipelines</h2>
+                    <p>A key lesson from the fleet-wide sweep is the vital role of pre-commit validation hook check points:</p>
+                    <ul>
+                        <li><strong>Early Detection:</strong> When automated scripts introduce double-space regressions, pre-commit lint gates programmatically reject the commit.</li>
+                        <li><strong>Auto-Correction Integration:</strong> Developers must combine regex cleansers with automatic syntax formatters (<code>markdownlint --fix</code>) to reconcile spacing issues before pushing changes to remote tracking branches.</li>
+                    </ul>
+                </div>
+
+                <div data-lang="es" class="hidden-lang">
+                    <p>Cumplir con los plazos de cumplimiento del Título II de la ADA federal requiere una uniformidad absoluta en el contenido estructural de los sistemas de gestión del aprendizaje. Al ejecutar transformaciones de contenido masivas en toda la flota, como la eliminación de emojis decorativos y caracteres unicode no estándar, los scripts automatizados deben regirse por puertas de validación de sintaxis estrictas.</p>
+
+                    <h2>1. La Limpieza de Emojis Decorativos</h2>
+                    <p>Los caracteres decorativos y los emoticonos introducen fricción en el lector de pantalla, lo que genera una mala percepción. Se despliegan patrones de expresiones regulares programáticos de forma recursiva a lo largo del contenido del curso en Markdown y HTML para purgar estos símbolos:</p>
+                    <ul>
+                        <li><strong>Rangos de emojis:</strong> Escaneo y coincidencia de grupos de emojis Unicode estándar, iconos de transporte, símbolos de transporte, emoticonos y banderas geométricas.</li>
+                        <li><strong>Preservación de contenido:</strong> Garantiza que los caracteres alfanuméricos reales y los diseños de los bloques de código se mantengan intactos.</li>
+                    </ul>
+
+                    <h2>2. Violaciones de Espaciado en la Sustitución Automatizada</h2>
+                    <p>Las canalizaciones de reemplazo automatizadas son altamente eficientes pero propensas a introducir regresiones de sintaxis sutiles:</p>
+                    <ul>
+                        <li><strong>Espaciado de hash:</strong> Eliminar un emoji inmediatamente después de los hashes de encabezado (por ejemplo, <code>## 🎯 Learning Objectives</code>) deja un espacio duplicado (<code>##  Learning Objectives</code>).</li>
+                        <li><strong>Reglas de encabezado ATX:</strong> El espaciado duplicado después de los hashes de encabezado ATX viola las reglas estándar de Markdown (<code>MD019</code>), lo que crea conflictos de renderizado para los motores de análisis de contenido.</li>
+                    </ul>
+
+                    <h2>3. Puertas de Pre-Commit como Canalizaciones de Lanzamiento Seguras</h2>
+                    <p>Una lección clave de la limpieza en toda la flota es el papel vital de los puntos de control de los ganchos de validación de pre-commit:</p>
+                    <ul>
+                        <li><strong>Detección temprana:</strong> Cuando los scripts automatizados introducen regresiones de doble espacio, las puertas de enlace de pre-commit rechazan el envío mediante programación.</li>
+                        <li><strong>Integración de corrección automática:</strong> Los desarrolladores deben combinar limpiadores de expresiones regulares con formateadores de sintaxis automáticos (<code>markdownlint --fix</code>) para conciliar los problemas de espaciado antes de enviar los cambios a las ramas de seguimiento remotas.</li>
+                    </ul>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full max-w-6xl mx-auto px-6 py-8 mt-12 border-t border-creme-200 flex flex-col md:flex-row justify-between items-center text-xs text-navy-800 gap-4">
+        <div class="space-y-1 text-center md:text-left">
+            <div>&copy; <span id="year"></span> Alan Pruitt. All rights reserved.</div>
+        </div>
+        <div class="flex space-x-6" style="gap: 1.5rem;">
+            <a href="https://github.com/alanpruitt" target="_blank" rel="noopener noreferrer" class="hover:text-navy-900">GitHub</a>
+            <a href="https://www.linkedin.com/in/alanpruitt/" target="_blank" rel="noopener noreferrer" class="hover:text-navy-900">LinkedIn</a>
+            <a href="https://www.webcognita.com" target="_blank" rel="noopener noreferrer" class="hover:text-navy-900">Webcognita</a>
+        </div>
+    </footer>
+
+    <!-- Client Script -->
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        function setLanguage(lang) {
+            const enElements = document.querySelectorAll('[data-lang="en"]');
+            const esElements = document.querySelectorAll('[data-lang="es"]');
+            const btnEn = document.getElementById('btn-en');
+            const btnEs = document.getElementById('btn-es');
+
+            if (lang === 'en') {
+                enElements.forEach(el => el.classList.remove('hidden-lang'));
+                esElements.forEach(el => el.classList.add('hidden-lang'));
+                btnEn.className = "px-3 py-1 rounded-md transition-all bg-navy-900 text-creme-100 shadow-sm";
+                btnEs.className = "px-3 py-1 rounded-md transition-all text-navy-900 hover:text-navy-800";
+            } else {
+                enElements.forEach(el => el.classList.add('hidden-lang'));
+                esElements.forEach(el => el.classList.remove('hidden-lang'));
+                btnEs.className = "px-3 py-1 rounded-md transition-all bg-navy-900 text-creme-100 shadow-sm";
+                btnEn.className = "px-3 py-1 rounded-md transition-all text-navy-900 hover:text-navy-800";
+            }
+            localStorage.setItem('preferred_lang', lang);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('preferred_lang') || 'en';
+            setLanguage(savedLang);
+        });
+    </script>
+</body>
+</html>

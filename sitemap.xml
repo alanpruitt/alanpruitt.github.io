@@ -48,7 +48,13 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://alanpruitt.com/essays/27-curriculum-as-code-pour-audit-framework</loc>
+    <loc>https://alanpruitt.com/essays/27-ada-title-ii-fleet-refactor</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://alanpruitt.com/essays/26-curriculum-as-code-pour-audit-framework</loc>
     <lastmod>2026-08-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
