@@ -47,3 +47,9 @@ A robust curriculum is built on standard HTML5 landmarks that assistive technolo
 
 * **Entry Constraints:** The content body must start with a `##` (H2) heading level. H1 is reserved exclusively for the Canvas LMS Page Title.
 * **Structural Parity:** Audits scan header trees programmatically, ensuring no skipped heading levels (e.g. from H2 to H4) exist, which disorients screen readers.
+
+### 5. Case Study: The Fleet-Wide Refactor Edge Case
+
+An illustrative edge case occurred during a repository-wide emoji refactor to meet ADA Title II requirements. An automated python script stripped all decorative emoticons from markdown headings, but left behind multiple spaces after ATX hashes (e.g., changing `## 🎯 Learning Objectives` to `##  Learning Objectives`).
+
+Because the pre-commit hook runs `markdownlint`, the commit was automatically rejected for MD019 (multiple space ATX heading violations). This highlights the necessity of coupling content transformation scripts with automated syntax gates before any assets reach the production LMS.

@@ -2610,6 +2610,16 @@ A robust curriculum is built on standard HTML5 landmarks that assistive technolo
 
                     
 
+                    
+
+## 5. Case Study: The Fleet-Wide Refactor Edge Case
+
+                    
+An illustrative edge case occurred during a repository-wide emoji refactor to meet ADA Title II requirements. An automated python script stripped all decorative emoticons from markdown headings, but left behind multiple spaces after ATX hashes (e.g., changing `## 🎯 Learning Objectives` to `##  Learning Objectives`).
+
+                    
+Because the pre-commit hook runs `markdownlint`, the commit was automatically rejected for MD019 (multiple space ATX heading violations). This highlights the necessity of coupling content transformation scripts with automated syntax gates before any assets reach the production LMS.
+
                 
 
                 
@@ -2673,3 +2683,15 @@ Un currículo robusto se construye sobre hitos estándar de HTML5 que las tecnol
                         * **Restricciones de entrada:** El cuerpo del contenido debe comenzar con un nivel de encabezado `##` (H2). H1 está reservado exclusivamente para el Título de la Página de Canvas LMS.
 
                         * **Paridad estructural:** Las auditorías escanean árboles de encabezados mediante programación, asegurando que no existan niveles de encabezado omitidos (por ejemplo, de H2 a H4), lo que desorienta a los lectores de pantalla.
+
+                    
+
+                    
+
+## 5. Caso de Estudio: El Caso Borde del Refactor en Todo el Repositorio
+
+                    
+Un caso de estudio ilustrativo ocurrió durante un refactor de emojis en todo el repositorio para cumplir con los requisitos del Título II de la ADA. Un script de python automatizado eliminó todos los emoticonos decorativos de los encabezados de markdown, pero dejó espacios múltiples después de los caracteres hash de ATX (por ejemplo, cambiando `## 🎯 Learning Objectives` a `##  Learning Objectives`).
+
+                    
+Debido a que el gancho de pre-commit ejecuta `markdownlint`, el commit fue rechazado automáticamente por violaciones MD019 (múltiples espacios en encabezados ATX). Esto resalta la necesidad de acoplar los scripts de transformación de contenido con puertas de sintaxis automatizadas antes de que cualquier recurso llegue al LMS de producción.

@@ -203,6 +203,10 @@
                         <li><strong>Entry Constraints:</strong> The content body must start with a <code>##</code> (H2) heading level. H1 is reserved exclusively for the Canvas LMS Page Title.</li>
                         <li><strong>Structural Parity:</strong> Audits scan header trees programmatically, ensuring no skipped heading levels (e.g. from H2 to H4) exist, which disorients screen readers.</li>
                     </ul>
+
+                    <h2>5. Case Study: The Fleet-Wide Refactor Edge Case</h2>
+                    <p>An illustrative edge case occurred during a repository-wide emoji refactor to meet ADA Title II requirements. An automated python script stripped all decorative emoticons from markdown headings, but left behind multiple spaces after ATX hashes (e.g., changing <code>## 🎯 Learning Objectives</code> to <code>##  Learning Objectives</code>).</p>
+                    <p>Because the pre-commit hook runs <code>markdownlint</code>, the commit was automatically rejected for MD019 (multiple space ATX heading violations). This highlights the necessity of coupling content transformation scripts with automated syntax gates before any assets reach the production LMS.</p>
                 </div>
 
                 <div data-lang="es" class="hidden-lang">
@@ -235,6 +239,10 @@
                         <li><strong>Restricciones de entrada:</strong> El cuerpo del contenido debe comenzar con un nivel de encabezado <code>##</code> (H2). H1 está reservado exclusivamente para el Título de la Página de Canvas LMS.</li>
                         <li><strong>Paridad estructural:</strong> Las auditorías escanean árboles de encabezados mediante programación, asegurando que no existan niveles de encabezado omitidos (por ejemplo, de H2 a H4), lo que desorienta a los lectores de pantalla.</li>
                     </ul>
+
+                    <h2>5. Caso de Estudio: El Caso Borde del Refactor en Todo el Repositorio</h2>
+                    <p>Un caso de estudio ilustrativo ocurrió durante un refactor de emojis en todo el repositorio para cumplir con los requisitos del Título II de la ADA. Un script de python automatizado eliminó todos los emoticonos decorativos de los encabezados de markdown, pero dejó espacios múltiples después de los caracteres hash de ATX (por ejemplo, cambiando <code>## 🎯 Learning Objectives</code> a <code>##  Learning Objectives</code>).</p>
+                    <p>Debido a que el gancho de pre-commit ejecuta <code>markdownlint</code>, el commit fue rechazado automáticamente por violaciones MD019 (múltiples espacios en encabezados ATX). Esto resalta la necesidad de acoplar los scripts de transformación de contenido con puertas de sintaxis automatizadas antes de que cualquier recurso llegue al LMS de producción.</p>
                 </div>
             </article>
         </div>
