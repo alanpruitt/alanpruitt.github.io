@@ -1,13 +1,13 @@
 # Essay 18: The Illusion of the Feed: Upstream SSoT and Feed Link Rot Governance
 
-## 🎯 Learning Objectives
+##  Learning Objectives
 * Analyze the impact of link rot on digital course content.
 * Establish upstream Single Source of Truth (SSoT) configuration control.
 * Design glare-resilient, high-contrast, offline-first course architectures.
 
 ---
 
-## 📖 Instructional Content
+##  Instructional Content
 
 > **Key Concept:** Relying on live external web links and dynamic social media widgets inside an LMS creates an illusion of real-time engagement while introducing a compounding vulnerability of link rot. Upstream Single Source of Truth (SSoT) governance mitigates this risk by externalizing external resources as config-controlled assets in centralized database manifests.
 

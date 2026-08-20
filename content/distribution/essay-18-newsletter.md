@@ -12,7 +12,7 @@ When instructional designers embed external feeds or unversioned links into cour
 
 In **Essay 18: The Illusion of the Feed**, I explore how treating your curriculum like version-controlled software (Curriculum-as-Code) and establishing an upstream Single Source of Truth (SSoT) permanently eliminates link rot before it ever reaches students.
 
-👉 **Read the full essay here:** [alanpruitt.com/articles/18-the-illusion-of-the-feed.html](https://alanpruitt.com/articles/18-the-illusion-of-the-feed.html)
+ **Read the full essay here:** [alanpruitt.com/articles/18-the-illusion-of-the-feed.html](https://alanpruitt.com/articles/18-the-illusion-of-the-feed.html)
 
 Best,  
 Alan
