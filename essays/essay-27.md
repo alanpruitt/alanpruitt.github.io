@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Essay 26"
-permalink: /essay-26/
-id: "26"
-slug: "26-curriculum-as-code-pour-audit-framework"
+title: "Essay 27"
+permalink: /essay-27/
+id: "27"
+slug: "27-curriculum-as-code-pour-audit-framework"
 title_es: "Currículum como Código y el Marco de Auditoría POUR"
 date: "2026-08-19"
 course: "EXW101"
@@ -13,7 +13,7 @@ tags: ["AI", "CurriculumAsCode", "EdTech", "LMS", "Accessibility", "OpenSource",
 summary: "An analysis of the POUR-Audit framework within Curriculum-as-Code paradigms, highlighting automated verification checks for heading hierarchies, image alt-text, and legacy reference deprecation."
 summary_es: "Un análisis del marco de auditoría POUR dentro de los paradigmas de Currículum como Código, destacando la verificación automatizada de accesibilidad."
 lang_default: "en"
-canonical_url: "https://alanpruitt.com/articles/26-curriculum-as-code-pour-audit-framework.html"
+canonical_url: "https://alanpruitt.com/articles/27-curriculum-as-code-pour-audit-framework.html"
 ---
 
 ## The POUR-Audit Framework in Curriculum-as-Code
