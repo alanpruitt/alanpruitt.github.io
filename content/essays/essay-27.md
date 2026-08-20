@@ -16,27 +16,33 @@ lang_default: "en"
 canonical_url: "https://alanpruitt.com/articles/27-ada-title-ii-fleet-refactor.html"
 ---
 
-## ADA Title II and the Fleet-Wide Refactor
+## Essay 27: Curriculum-as-Code, ADA Title II Compliance, and Fleet-Wide Accessibility Refactoring
 
-Meeting the federal ADA Title II compliance deadlines requires absolute uniformity in structural content across learning management systems. When executing massive, fleet-wide content transformations—such as removing decorative emojis and non-standard unicode characters—automated scripts must be governed by strict syntax validation gates.
+### Introduction
 
-### 1. The Decorative Emojis Clean Sweep
+In modern instructional design, scaling course materials across a multi-course fleet requires a rigorous engineering approach. At Arizona Western College, my approach to building robust, equitable, and accessible learning environments for courses like EXW 101, 150, 245, and 265 relies on a **Curriculum-as-Code (C-as-C)** methodology. By treating curriculum files as version-controlled code, I can automate quality assurance, enforce strict institutional standards, and rapidly execute critical compliance refactors across live production shells.
 
-Decorative characters and emoticons introduce screen reader friction, resulting in poor perceivability. Programmatic regex patterns are deployed recursively across Markdown and HTML course content to purge these symbols:
+### The Intersection of Curriculum-as-Code and the POUR Framework
 
-* **Emoji Ranges:** Scanning and matching standard Unicode emoji groups, transport icons, transport symbols, emoticons, and geometric flags.
-* **Content Preservation:** Ensure actual alphanumeric characters and code block layouts are left intact.
+Digital accessibility is frequently treated as an afterthought—a manual remediation checklist applied after a course goes live. However, by embedding accessibility guidelines directly into my repository structures, I operationalize compliance from inception.
 
-### 2. Spacing Violations in Automated Substitution
+My integration of the **POUR framework (Perceivable, Operable, Understandable, and Robust)** into my C-as-C pipeline transforms accessibility from a static policy into an active, automated engineering standard:
 
-Automated replacement pipelines are highly efficient but prone to introducing subtle syntax regressions:
+* **Perceivable:** I enforce high-contrast color palettes (such as Creme and Navy) and automated checks for descriptive alt text across all physiological diagrams and nutritional charts.
+* **Operable:** I ensure that my mobile-first Markdown and HTML layouts provide predictable, consistent navigation that works seamlessly across devices and assistive technologies.
+* **Understandable:** I utilize my consistent **Mission Loop** (Pattern / Rule / Solve) framework and my professional, supportive **Narrator voice** to maintain cognitive accessibility and clear readability.
+* **Robust:** I implement strict semantic HTML hierarchies (mandating that my content starts at `<h2>` and nests sequentially without skipping levels) so that screen readers interpret my course code reliably.
 
-* **Hash Spacing:** Stripping an emoji immediately following header hashes (e.g., `## 🎯 Learning Objectives`) leaves behind a duplicate space (`##  Learning Objectives`).
-* **ATX Heading Rules:** Duplicate spacing after ATX header hashes violates standard Markdown rules (`MD019`), creating rendering conflicts for content parsing engines.
+### Edge Use Case: Fleet-Wide Emoji and Icon Stripping for ADA Title II
 
-### 3. Pre-Commit Gates as Safe Release Pipelines
+A prime example of Curriculum-as-Code agility occurred during an active semester rollout in EXW 150. Recognizing that screen readers voice non-text symbols—such as decorative emojis and pictographs—as disruptive audio clutter (e.g., announcing "open book emoji" mid-sentence), and anticipating stricter upcoming **ADA Title II** mandates for public higher education, I identified a potential screen reader friction point.
 
-A key lesson from the fleet-wide sweep is the vital role of pre-commit validation hook check points:
+Rather than manually editing hundreds of pages across live Canvas production shells, I treated the issue as an infrastructure edge case:
 
-* **Early Detection:** When automated scripts introduce double-space regressions, pre-commit lint gates programmatically reject the commit.
-* **Auto-Correction Integration:** Developers must combine regex cleansers with automatic syntax formatters (`markdownlint --fix`) to reconcile spacing issues before pushing changes to remote tracking branches.
+1. **Automated Scripting:** I engineered a recursive Python stripping utility (`scripts/strip_emojis.py`) designed to target and purge decorative unicode symbols and emoticons across all Markdown and HTML files in the repository.
+2. **Pipeline Integration:** I paired this with automated validation tools like `scripts/pour_audit.py` to continuously check semantic structures and heading hierarchies.
+3. **Synchronized Deployment:** I committed the refactor and force-pushed the synchronized updates across both `master` and `main` remote branches, instantly sanitizing the production environment before any student assistive technology friction could occur.
+
+### Conclusion
+
+Aligning my Curriculum-as-Code workflows with the POUR framework and automated refactoring scripts ensures that my wellness and physical education programs remain fully accessible under updated ADA Title II regulations. By engineering accessibility directly into our infrastructure, I guarantee that all of my students—regardless of ability or device—have equitable access to foundational kinesiology and nutrition principles.

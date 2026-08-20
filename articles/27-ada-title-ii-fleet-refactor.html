@@ -162,10 +162,10 @@
             </div>
 
             <h1 class="text-3xl md:text-4xl font-extrabold text-navy-900 leading-tight mb-4" data-lang="en">
-                ADA Title II and the Fleet-Wide Refactor
+                Curriculum-as-Code, ADA Title II Compliance, and Fleet-Wide Accessibility Refactoring
             </h1>
             <h1 class="text-3xl md:text-4xl font-extrabold text-navy-900 leading-tight mb-4 hidden-lang" data-lang="es">
-                Título II de la ADA y la Reestructuración de la Flota
+                Currículum como Código, Cumplimiento del Título II de la ADA y Reestructuración de Accesibilidad en Toda la Flota
             </h1>
 
             <div class="text-xs font-mono text-navy-800 pb-6 border-b border-creme-200 mb-6">
@@ -174,53 +174,57 @@
 
             <article>
                 <div data-lang="en">
-                    <p>Meeting the federal ADA Title II compliance deadlines requires absolute uniformity in structural content across learning management systems. When executing massive, fleet-wide content transformations—such as removing decorative emojis and non-standard unicode characters—automated scripts must be governed by strict syntax validation gates.</p>
+                    <h3>Introduction</h3>
+                    <p>In modern instructional design, scaling course materials across a multi-course fleet requires a rigorous engineering approach. At Arizona Western College, my approach to building robust, equitable, and accessible learning environments for courses like EXW 101, 150, 245, and 265 relies on a <strong>Curriculum-as-Code (C-as-C)</strong> methodology. By treating curriculum files as version-controlled code, I can automate quality assurance, enforce strict institutional standards, and rapidly execute critical compliance refactors across live production shells.</p>
 
-                    <h2>1. The Decorative Emojis Clean Sweep</h2>
-                    <p>Decorative characters and emoticons introduce screen reader friction, resulting in poor perceivability. Programmatic regex patterns are deployed recursively across Markdown and HTML course content to purge these symbols:</p>
+                    <h3>The Intersection of Curriculum-as-Code and the POUR Framework</h3>
+                    <p>Digital accessibility is frequently treated as an afterthought—a manual remediation checklist applied after a course goes live. However, by embedding accessibility guidelines directly into my repository structures, I operationalize compliance from inception.</p>
+                    <p>My integration of the <strong>POUR framework (Perceivable, Operable, Understandable, and Robust)</strong> into my C-as-C pipeline transforms accessibility from a static policy into an active, automated engineering standard:</p>
                     <ul>
-                        <li><strong>Emoji Ranges:</strong> Scanning and matching standard Unicode emoji groups, transport icons, transport symbols, emoticons, and geometric flags.</li>
-                        <li><strong>Content Preservation:</strong> Ensure actual alphanumeric characters and code block layouts are left intact.</li>
+                        <li><strong>Perceivable:</strong> I enforce high-contrast color palettes (such as Creme and Navy) and automated checks for descriptive alt text across all physiological diagrams and nutritional charts.</li>
+                        <li><strong>Operable:</strong> I ensure that my mobile-first Markdown and HTML layouts provide predictable, consistent navigation that works seamlessly across devices and assistive technologies.</li>
+                        <li><strong>Understandable:</strong> I utilize my consistent <strong>Mission Loop</strong> (Pattern / Rule / Solve) framework and my professional, supportive <strong>Narrator voice</strong> to maintain cognitive accessibility and clear readability.</li>
+                        <li><strong>Robust:</strong> I implement strict semantic HTML hierarchies (mandating that my content starts at <code>&lt;h2&gt;</code> and nests sequentially without skipping levels) so that screen readers interpret my course code reliably.</li>
                     </ul>
 
-                    <h2>2. Spacing Violations in Automated Substitution</h2>
-                    <p>Automated replacement pipelines are highly efficient but prone to introducing subtle syntax regressions:</p>
-                    <ul>
-                        <li><strong>Hash Spacing:</strong> Stripping an emoji immediately following header hashes (e.g., <code>## 🎯 Learning Objectives</code>) leaves behind a duplicate space (<code>##  Learning Objectives</code>).</li>
-                        <li><strong>ATX Heading Rules:</strong> Duplicate spacing after ATX header hashes violates standard Markdown rules (<code>MD019</code>), creating rendering conflicts for content parsing engines.</li>
-                    </ul>
+                    <h3>Edge Use Case: Fleet-Wide Emoji and Icon Stripping for ADA Title II</h3>
+                    <p>A prime example of Curriculum-as-Code agility occurred during an active semester rollout in EXW 150. Recognizing that screen readers voice non-text symbols—such as decorative emojis and pictographs—as disruptive audio clutter (e.g., announcing "open book emoji" mid-sentence), and anticipating stricter upcoming <strong>ADA Title II</strong> mandates for public higher education, I identified a potential screen reader friction point.</p>
+                    <p>Rather than manually editing hundreds of pages across live Canvas production shells, I treated the issue as an infrastructure edge case:</p>
+                    <ol>
+                        <li><strong>Automated Scripting:</strong> I engineered a recursive Python stripping utility (<code>scripts/strip_emojis.py</code>) designed to target and purge decorative unicode symbols and emoticons across all Markdown and HTML files in the repository.</li>
+                        <li><strong>Pipeline Integration:</strong> I paired this with automated validation tools like <code>scripts/pour_audit.py</code> to continuously check semantic structures and heading hierarchies.</li>
+                        <li><strong>Synchronized Deployment:</strong> I committed the refactor and force-pushed the synchronized updates across both <code>master</code> and <code>main</code> remote branches, instantly sanitizing the production environment before any student assistive technology friction could occur.</li>
+                    </ol>
 
-                    <h2>3. Pre-Commit Gates as Safe Release Pipelines</h2>
-                    <p>A key lesson from the fleet-wide sweep is the vital role of pre-commit validation hook check points:</p>
-                    <ul>
-                        <li><strong>Early Detection:</strong> When automated scripts introduce double-space regressions, pre-commit lint gates programmatically reject the commit.</li>
-                        <li><strong>Auto-Correction Integration:</strong> Developers must combine regex cleansers with automatic syntax formatters (<code>markdownlint --fix</code>) to reconcile spacing issues before pushing changes to remote tracking branches.</li>
-                    </ul>
+                    <h3>Conclusion</h3>
+                    <p>Aligning my Curriculum-as-Code workflows with the POUR framework and automated refactoring scripts ensures that my wellness and physical education programs remain fully accessible under updated ADA Title II regulations. By engineering accessibility directly into our infrastructure, I guarantee that all of my students—regardless of ability or device—have equitable access to foundational kinesiology and nutrition principles.</p>
                 </div>
 
                 <div data-lang="es" class="hidden-lang">
-                    <p>Cumplir con los plazos de cumplimiento del Título II de la ADA federal requiere una uniformidad absoluta en el contenido estructural de los sistemas de gestión del aprendizaje. Al ejecutar transformaciones de contenido masivas en toda la flota, como la eliminación de emojis decorativos y caracteres unicode no estándar, los scripts automatizados deben regirse por puertas de validación de sintaxis estrictas.</p>
+                    <h3>Introducción</h3>
+                    <p>En el diseño instruccional moderno, escalar los materiales de los cursos a través de una flota de múltiples cursos requiere un enfoque de ingeniería riguroso. En Arizona Western College, mi enfoque para construir entornos de aprendizaje robustos, equitativos y accesibles para cursos como EXW 101, 150, 245 y 265 se basa en una metodología de <strong>Currículum como Código (C-as-C)</strong>. Al tratar los archivos del plan de estudios como código controlado por versiones, puedo automatizar la garantía de calidad, hacer cumplir los estándares institucionales estrictos y ejecutar rápidamente reestructuraciones de cumplimiento críticas en entornos de producción en vivo.</p>
 
-                    <h2>1. La Limpieza de Emojis Decorativos</h2>
-                    <p>Los caracteres decorativos y los emoticonos introducen fricción en el lector de pantalla, lo que genera una mala percepción. Se despliegan patrones de expresiones regulares programáticos de forma recursiva a lo largo del contenido del curso en Markdown y HTML para purgar estos símbolos:</p>
+                    <h3>La Intersección de Currículum como Código y el Marco POUR</h3>
+                    <p>La accesibilidad digital se trata con frecuencia como una idea tardía: una lista de verificación de remediación manual aplicada después de que un curso se publica. Sin embargo, al incorporar pautas de accesibilidad directamente en las estructuras de mi repositorio, operacionalizo el cumplimiento desde el inicio.</p>
+                    <p>Mi integración del marco <strong>POUR (Percebible, Operable, Comprensible y Robusto)</strong> en mi canalización C-as-C transforma la accesibilidad de una política estática en un estándar de ingeniería activo y automatizado:</p>
                     <ul>
-                        <li><strong>Rangos de emojis:</strong> Escaneo y coincidencia de grupos de emojis Unicode estándar, iconos de transporte, símbolos de transporte, emoticonos y banderas geométricas.</li>
-                        <li><strong>Preservación de contenido:</strong> Garantiza que los caracteres alfanuméricos reales y los diseños de los bloques de código se mantengan intactos.</li>
+                        <li><strong>Percebible:</strong> Hago cumplir paletas de colores de alto contraste (como crema y azul marino) y comprobaciones automatizadas para texto alternativo descriptivo en todos los diagramas fisiológicos y tablas nutricionales.</li>
+                        <li><strong>Operable:</strong> Garantizo que mis diseños de Markdown y HTML adaptados a dispositivos móviles proporcionen una navegación predecible y consistente que funcione sin problemas en todos los dispositivos y tecnologías de asistencia.</li>
+                        <li><strong>Comprensible:</strong> Utilizo mi marco consistente del <strong>Bucle de la Misión</strong> (Patrón / Regla / Resolver) y mi voz de narrador profesional y de apoyo para mantener la accesibilidad cognitiva y la legibilidad clara.</li>
+                        <li><strong>Robusto:</strong> Implemento jerarquías semánticas estrictas de HTML (mandando que mi contenido comience en <code>&lt;h2&gt;</code> y se anide secuencialmente sin omitir niveles) para que los lectores de pantalla interpreten el código de mi curso de manera confiable.</li>
                     </ul>
 
-                    <h2>2. Violaciones de Espaciado en la Sustitución Automatizada</h2>
-                    <p>Las canalizaciones de reemplazo automatizadas son altamente eficientes pero propensas a introducir regresiones de sintaxis sutiles:</p>
-                    <ul>
-                        <li><strong>Espaciado de hash:</strong> Eliminar un emoji inmediatamente después de los hashes de encabezado (por ejemplo, <code>## 🎯 Learning Objectives</code>) deja un espacio duplicado (<code>##  Learning Objectives</code>).</li>
-                        <li><strong>Reglas de encabezado ATX:</strong> El espaciado duplicado después de los hashes de encabezado ATX viola las reglas estándar de Markdown (<code>MD019</code>), lo que crea conflictos de renderizado para los motores de análisis de contenido.</li>
-                    </ul>
+                    <h3>Caso de Uso Borde: Limpieza de Emojis e Iconos en Toda la Flota para el Título II de la ADA</h3>
+                    <p>Un ejemplo principal de la agilidad del Currículum como Código ocurrió durante el lanzamiento de un semestre activo en EXW 150. Reconociendo que los lectores de pantalla expresan símbolos que no son texto, como emojis decorativos y pictogramas, como un desorden de audio perturbador (por ejemplo, anunciando 'emoji de libro abierto' a mitad de la frase), y anticipando mandatos del Título II de la ADA más estrictos para la educación superior pública, identifiqué un punto potencial de fricción para los lectores de pantalla.</p>
+                    <p>En lugar de editar manualmente cientos de páginas en los entornos de producción de Canvas, traté el problema como un caso borde de infraestructura:</p>
+                    <ol>
+                        <li><strong>Scripting Automatizado:</strong> Diseñé una utilidad de limpieza de Python recursiva (<code>scripts/strip_emojis.py</code>) diseñada para detectar y purgar símbolos y emoticonos unicode decorativos en todos los archivos Markdown y HTML del repositorio.</li>
+                        <li><strong>Integración de la Canalización:</strong> Combiné esto con herramientas de validación automatizadas como <code>scripts/pour_audit.py</code> para verificar continuamente las estructuras semánticas y las jerarquías de encabezados.</li>
+                        <li><strong>Implementación Sincronizada:</strong> Realicé el commit del refactor y forcé el push de las actualizaciones sincronizadas a través de las ramas remotas master y main, desinfectando instantáneamente el entorno de producción antes de que pudiera ocurrir cualquier fricción con la tecnología de asistencia para los estudiantes.</li>
+                    </ol>
 
-                    <h2>3. Puertas de Pre-Commit como Canalizaciones de Lanzamiento Seguras</h2>
-                    <p>Una lección clave de la limpieza en toda la flota es el papel vital de los puntos de control de los ganchos de validación de pre-commit:</p>
-                    <ul>
-                        <li><strong>Detección temprana:</strong> Cuando los scripts automatizados introducen regresiones de doble espacio, las puertas de enlace de pre-commit rechazan el envío mediante programación.</li>
-                        <li><strong>Integración de corrección automática:</strong> Los desarrolladores deben combinar limpiadores de expresiones regulares con formateadores de sintaxis automáticos (<code>markdownlint --fix</code>) para conciliar los problemas de espaciado antes de enviar los cambios a las ramas de seguimiento remotas.</li>
-                    </ul>
+                    <h3>Conclusión</h3>
+                    <p>Alinear mis flujos de trabajo de Currículum como Código con el marco POUR y los scripts de refactorización automatizados garantiza que mis programas de bienestar y educación física sigan siendo totalmente accesibles bajo las regulaciones actualizadas del Título II de la ADA. Al diseñar la accesibilidad directamente en nuestra infraestructura, garantizo que todos mis estudiantes, independientemente de sus capacidades o dispositivos, tengan un acceso equitativo a los principios fundamentales de la kinesiología y la nutrición.</p>
                 </div>
             </article>
         </div>
