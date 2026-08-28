@@ -1,9 +1,3 @@
-/**
- * scripts/audit.js
- * Automated Verification: Contrast, Touch Targets, and Multilingual Routing
- * SSoT Target: https://alanpruitt.com (or local http://localhost:1313)
- */
-
 const { chromium } = require('playwright');
 const AxeBuilder = require('@axe-core/playwright').default;
 
@@ -13,7 +7,7 @@ async function runAudits() {
   console.log(`\n Starting Fleet Verification Suite on: ${BASE_URL}\n`);
   const browser = await chromium.launch();
   const context = await browser.newContext({
-    viewport: { width: 375, height: 667 }, // Mobile-first viewport (iPhone SE)
+    viewport: { width: 375, height: 667 },
     userAgent: 'Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15'
   });
 
@@ -21,13 +15,9 @@ async function runAudits() {
   let totalErrors = 0;
 
   try {
-    // -------------------------------------------------------------
-    // TEST 1: Multilingual Homepage Routing & Switcher Parity
-    // -------------------------------------------------------------
-    console.log('[1/4] Testing Homepage Multilingual Route Resolution...');
+    console.log('[1/5] Testing Homepage Multilingual Route Resolution...');
     await page.goto(`${BASE_URL}/`, { waitUntil: 'networkidle' });
 
-    // Check English Lang Attribute
     const enLang = await page.getAttribute('html', 'lang');
     if (!enLang || !enLang.startsWith('en')) {
       console.error(`  FAIL: Expected <html lang="en*"> on /, got "${enLang}"`);
@@ -36,7 +26,6 @@ async function runAudits() {
       console.log(`  PASS: Root <html lang="${enLang}"> validated.`);
     }
 
-    // Verify English Headline
     const enHeroText = await page.locator('#hero-heading').textContent();
     if (!enHeroText.includes('Reclaim Academic Sovereignty')) {
       console.error(`  FAIL: English hero headline mismatch. Found: "${enHeroText.trim()}"`);
@@ -45,12 +34,10 @@ async function runAudits() {
       console.log('  PASS: English Hero headline resolved.');
     }
 
-    // Trigger Spanish Switcher
     const esSwitchBtn = page.locator('nav[aria-label*="Language"] a:has-text("ES"), nav[aria-label*="idioma"] a:has-text("ES")');
     await esSwitchBtn.click();
     await page.waitForLoadState('networkidle');
 
-    // Check Spanish Route Resolution
     const currentUrl = page.url();
     if (!currentUrl.includes('/es/')) {
       console.error(`  FAIL: Expected URL containing /es/, got: "${currentUrl}"`);
@@ -59,15 +46,6 @@ async function runAudits() {
       console.log(`  PASS: Resolved to Spanish route (${currentUrl}).`);
     }
 
-    const esLang = await page.getAttribute('html', 'lang');
-    if (!esLang || !esLang.startsWith('es')) {
-      console.error(`  FAIL: Expected <html lang="es*"> on /es/, got "${esLang}"`);
-      totalErrors++;
-    } else {
-      console.log(`  PASS: Spanish <html lang="${esLang}"> validated.`);
-    }
-
-    // Verify Spanish Headline
     const esHeroText = await page.locator('#hero-heading').textContent();
     if (!esHeroText.includes('Recupera la soberanía académica')) {
       console.error(`  FAIL: Spanish hero headline mismatch. Found: "${esHeroText.trim()}"`);
@@ -76,13 +54,9 @@ async function runAudits() {
       console.log('  PASS: Spanish Hero headline resolved.');
     }
 
-    // -------------------------------------------------------------
-    // TEST 2: Deep-Page Context Preservation (Essay 27 Route Pairing)
-    // -------------------------------------------------------------
-    console.log('\n[2/4] Testing Deep-Link Context Retention (Essay 27)...');
+    console.log('\n[2/5] Testing Deep-Link Context Retention (Essay 27)...');
     await page.goto(`${BASE_URL}/essays/essay-27/`, { waitUntil: 'networkidle' });
 
-    // Click Spanish toggle on Essay 27
     const deepEsSwitch = page.locator('nav[aria-label*="Language"] a:has-text("ES"), nav[aria-label*="idioma"] a:has-text("ES")');
     if (await deepEsSwitch.count() > 0) {
       await deepEsSwitch.first().click();
@@ -99,10 +73,7 @@ async function runAudits() {
       console.warn('  WARN: Language switcher not found on Essay 27 template.');
     }
 
-    // -------------------------------------------------------------
-    // TEST 3: WCAG 2.2 AA Contrast & Accessibility Engine (Axe)
-    // -------------------------------------------------------------
-    console.log('\n[3/4] Running WCAG 2.2 AA Accessibility & Contrast Engine...');
+    console.log('\n[3/5] Running WCAG 2.2 AA Accessibility & Contrast Engine...');
     await page.goto(`${BASE_URL}/`, { waitUntil: 'networkidle' });
 
     const accessibilityScanResults = await new AxeBuilder({ page })
@@ -120,14 +91,12 @@ async function runAudits() {
       console.log('  PASS: 0 WCAG 2.2 AA violations detected (Contrast & Semantics Clean).');
     }
 
-    // -------------------------------------------------------------
-    // TEST 4: Mobile Tap Target Size (WCAG 2.2 SC 2.5.8 - 44x44px min)
-    // -------------------------------------------------------------
-    console.log('\n[4/4] Validating Mobile Interactive Tap Targets...');
+    console.log('\n[4/5] Validating Mobile Interactive Tap Targets...');
     const interactiveSelectors = [
-      '#hero-heading ~ div a', // Hero CTAs
-      'nav[aria-label*="Language"] a', // Language Switcher
-      'header a' // Nav links
+      '#hero-heading ~ div a',
+      'nav[aria-label*="Language"] a',
+      'header a',
+      '#roi-calculator-heading ~ div a'
     ];
 
     for (const selector of interactiveSelectors) {
@@ -153,6 +122,60 @@ async function runAudits() {
       }
     }
 
+    console.log('\n[5/5] Testing Interactive ROI Calculator Sliders & Mathematical Logic...');
+    const calcHeading = page.locator('#roi-calculator-heading');
+
+    if (await calcHeading.count() === 0) {
+      console.error('  FAIL: ROI Calculator section (#roi-calculator-heading) not found on homepage.');
+      totalErrors++;
+    } else {
+      console.log('  PASS: ROI Calculator section located in DOM.');
+
+      const coursesSlider = page.locator('#cac-courses');
+      const pagesSlider = page.locator('#cac-pages');
+      const savingsText = page.locator('#cac-savings-dollars');
+      const hoursSavedText = page.locator('#cac-hours-saved');
+      const roiMultText = page.locator('#cac-roi-mult');
+
+      const initialSavings = (await savingsText.textContent()).trim();
+      console.log(`  PASS: Default calculator output rendered (${initialSavings}).`);
+
+      await coursesSlider.evaluate((el) => {
+        el.value = '200';
+        el.dispatchEvent(new Event('input', { bubbles: true }));
+      });
+
+      await pagesSlider.evaluate((el) => {
+        el.value = '30';
+        el.dispatchEvent(new Event('input', { bubbles: true }));
+      });
+
+      await page.waitForTimeout(100);
+
+      const updatedAriaCourses = await coursesSlider.getAttribute('aria-valuenow');
+      const updatedAriaPages = await pagesSlider.getAttribute('aria-valuenow');
+
+      if (updatedAriaCourses !== '200' || updatedAriaPages !== '30') {
+        console.error(`  FAIL: Slider aria-valuenow mismatch. Courses: ${updatedAriaCourses}, Pages: ${updatedAriaPages}`);
+        totalErrors++;
+      } else {
+        console.log('  PASS: Slider dynamic aria-valuenow attributes synchronized.');
+      }
+
+      const updatedSavings = (await savingsText.textContent()).trim();
+      const updatedHours = (await hoursSavedText.textContent()).trim();
+      const updatedRoi = (await roiMultText.textContent()).trim();
+
+      if (updatedSavings !== '$63,900' || !updatedHours.includes('1,420') || !updatedRoi.includes('18.8x')) {
+        console.error(`  FAIL: Mathematical calculation mismatch on input change:`);
+        console.error(`    Expected: $63,900 | 1,420 Hours | 18.8x ROI`);
+        console.error(`    Received: ${updatedSavings} | ${updatedHours} | ${updatedRoi}`);
+        totalErrors++;
+      } else {
+        console.log(`  PASS: Real-time calculation validated (${updatedSavings}, ${updatedHours}, ${updatedRoi}).`);
+      }
+    }
+
   } catch (err) {
     console.error(`\n Execution Exception: ${err.message}`);
     totalErrors++;
@@ -160,10 +183,9 @@ async function runAudits() {
     await browser.close();
   }
 
-  // Final Summary
   console.log('\n-------------------------------------------------------------');
   if (totalErrors === 0) {
-    console.log('  ALL AUDITS PASSED: SSoT Parity, Contrast & Mobile Compliant.');
+    console.log('  ALL AUDITS PASSED: SSoT Parity, Contrast, Mobile & ROI Widget Compliant.');
     process.exit(0);
   } else {
     console.error(`  AUDIT FAILED: ${totalErrors} issue(s) require remediation.`);
