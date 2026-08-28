@@ -50,11 +50,14 @@ jobs:
 
       - name: Start Local Static Server & Run Playwright Audit
         run: |
-          npx serve public -l 1313 &
+          mkdir -p dist/alanpruitt
+          cp -r public/* dist/alanpruitt/
+          npx serve dist -l 1313 &
           SERVER_PID=$!
-          npx wait-on http://localhost:1313
+          npx wait-on http://localhost:1313/alanpruitt/
           BASE_URL=http://localhost:1313/alanpruitt node scripts/audit.js
           kill $SERVER_PID
+          rm -rf dist
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
