@@ -46,7 +46,7 @@ jobs:
         run: hugo --minify
 
       - name: Run Markdown Linter Check
-        run: npx markdownlint-cli2 "**/*.md"
+        run: npm run lint:md
 
       - name: Start Local Static Server & Run Playwright Audit
         run: |
