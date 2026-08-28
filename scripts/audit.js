@@ -15,7 +15,7 @@ async function runAudits() {
   let totalErrors = 0;
 
   try {
-    console.log('[1/5] Testing Homepage Multilingual Route Resolution...');
+    console.log('[1/6] Testing Homepage Multilingual Route Resolution...');
     await page.goto(`${BASE_URL}/`, { waitUntil: 'networkidle' });
 
     const enLang = await page.getAttribute('html', 'lang');
@@ -54,7 +54,7 @@ async function runAudits() {
       console.log('  PASS: Spanish Hero headline resolved.');
     }
 
-    console.log('\n[2/5] Testing Deep-Link Context Retention (Essay 27)...');
+    console.log('\n[2/6] Testing Deep-Link Context Retention (Essay 27)...');
     await page.goto(`${BASE_URL}/essays/essay-27/`, { waitUntil: 'networkidle' });
 
     const deepEsSwitch = page.locator('nav[aria-label*="Language"] a:has-text("ES"), nav[aria-label*="idioma"] a:has-text("ES")');
@@ -73,7 +73,7 @@ async function runAudits() {
       console.warn('  WARN: Language switcher not found on Essay 27 template.');
     }
 
-    console.log('\n[3/5] Running WCAG 2.2 AA Accessibility & Contrast Engine...');
+    console.log('\n[3/6] Running WCAG 2.2 AA Accessibility & Contrast Engine...');
     await page.goto(`${BASE_URL}/`, { waitUntil: 'networkidle' });
 
     const accessibilityScanResults = await new AxeBuilder({ page })
@@ -91,7 +91,7 @@ async function runAudits() {
       console.log('  PASS: 0 WCAG 2.2 AA violations detected (Contrast & Semantics Clean).');
     }
 
-    console.log('\n[4/5] Validating Mobile Interactive Tap Targets...');
+    console.log('\n[4/6] Validating Mobile Interactive Tap Targets...');
     const interactiveSelectors = [
       '#hero-heading ~ div a',
       'nav[aria-label*="Language"] a',
@@ -122,7 +122,7 @@ async function runAudits() {
       }
     }
 
-    console.log('\n[5/5] Testing Interactive ROI Calculator Sliders & Mathematical Logic...');
+    console.log('\n[5/6] Testing Interactive ROI Calculator Sliders & Mathematical Logic...');
     const calcHeading = page.locator('#roi-calculator-heading');
 
     if (await calcHeading.count() === 0) {
@@ -176,6 +176,27 @@ async function runAudits() {
       }
     }
 
+    console.log('\n[6/6] Testing Legacy Alias Redirection (/alanpruitt/essays/ -> /essays/)...');
+    const legacyUrl = `${BASE_URL}/alanpruitt/essays/`;
+    const response = await page.goto(legacyUrl, { waitUntil: 'networkidle' });
+
+    const statusCode = response ? response.status() : null;
+    const finalResolvedUrl = page.url();
+
+    if (statusCode === 404) {
+      console.error(`  FAIL: ${legacyUrl} returned HTTP 404 Not Found.`);
+      totalErrors++;
+    } else {
+      console.log(`  PASS: ${legacyUrl} responded with HTTP status ${statusCode}.`);
+    }
+
+    if (!finalResolvedUrl.includes('/essays/')) {
+      console.error(`  FAIL: Expected final URL containing /essays/, but landed on: "${finalResolvedUrl}"`);
+      totalErrors++;
+    } else {
+      console.log(`  PASS: Successfully redirected to canonical archive route (${finalResolvedUrl}).`);
+    }
+
   } catch (err) {
     console.error(`\n Execution Exception: ${err.message}`);
     totalErrors++;
@@ -185,7 +206,7 @@ async function runAudits() {
 
   console.log('\n-------------------------------------------------------------');
   if (totalErrors === 0) {
-    console.log('  ALL AUDITS PASSED: SSoT Parity, Contrast, Mobile & ROI Widget Compliant.');
+    console.log('  ALL AUDITS PASSED: SSoT Parity, Contrast, Mobile, ROI & Alias Compliant.');
     process.exit(0);
   } else {
     console.error(`  AUDIT FAILED: ${totalErrors} issue(s) require remediation.`);
