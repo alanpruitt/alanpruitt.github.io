@@ -53,7 +53,7 @@ jobs:
           npx serve public -l 1313 &
           SERVER_PID=$!
           npx wait-on http://localhost:1313
-          BASE_URL=http://localhost:1313 node scripts/audit.js
+          BASE_URL=http://localhost:1313/alanpruitt node scripts/audit.js
           kill $SERVER_PID
 
       - name: Setup Pages
