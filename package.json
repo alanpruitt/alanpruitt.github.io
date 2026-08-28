@@ -4,6 +4,8 @@
   "private": true,
   "scripts": {
     "audit": "npm run lint:md",
+    "audit:lighthouse": "BASE_URL=http://localhost:1313/alanpruitt node scripts/audit-lighthouse.js",
+    "audit:lighthouse:live": "BASE_URL=https://alanpruitt.com node scripts/audit-lighthouse.js",
     "audit:live": "node scripts/audit.js",
     "audit:local": "BASE_URL=http://localhost:1313/alanpruitt node scripts/audit.js",
     "lint:md": "markdownlint --config .markdownlint.json \"content/**/*.md\"",
@@ -13,6 +15,8 @@
   "devDependencies": {
     "@axe-core/playwright": "^4.13.0",
     "@playwright/test": "^1.62.1",
+    "chrome-launcher": "^1.2.1",
+    "lighthouse": "^13.4.1",
     "markdownlint-cli": "^0.41.0",
     "playwright": "^1.62.1"
   }
