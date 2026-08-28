@@ -1,0 +1,62 @@
+<section id="services" class="py-12 sm:py-16 border-b border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-950" aria-labelledby="services-heading">
+  <div class="w-full max-w-5xl px-4 sm:px-6 lg:px-8 mr-auto ml-0 text-left">
+    
+    <div class="mb-10 text-left">
+      <h2 id="services-heading" class="text-2xl font-extrabold tracking-tight text-zinc-950 dark:text-white sm:text-3xl">
+        {{ if eq .Lang "es" }}Servicios de Arquitectura Institucional y Cumplimiento{{ else }}Institutional Curriculum Architecture & Compliance Services{{ end }}
+      </h2>
+      <p class="mt-2 text-base text-zinc-900 dark:text-zinc-100">
+        {{ if eq .Lang "es" }}Elimine la responsabilidad regulatoria del Título II de la ADA mediante automatización determinista y soberanía de contenidos.{{ else }}Eliminate ADA Title II regulatory liability through deterministic automation and content sovereignty.{{ end }}
+      </p>
+    </div>
+
+    <!-- Service Matrix Table (WCAG 2.2 AA Compliant Scope Mapping) -->
+    <div class="overflow-x-auto rounded-xl border border-zinc-200 dark:border-zinc-800">
+      <table class="w-full border-collapse text-left text-sm">
+        <thead>
+          <tr class="border-b border-zinc-200 bg-zinc-50 text-zinc-900 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-100">
+            <th scope="col" class="p-4 font-bold uppercase tracking-wider text-xs">Pillar / Service Track</th>
+            <th scope="col" class="p-4 font-bold uppercase tracking-wider text-xs">Methodology</th>
+            <th scope="col" class="p-4 font-bold uppercase tracking-wider text-xs">Institutional Deliverable</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-zinc-200 dark:divide-zinc-800">
+          <tr>
+            <th scope="row" class="p-4 font-bold text-zinc-950 dark:text-white">
+              1. Fleet ADA Title II Audit
+            </th>
+            <td class="p-4 text-zinc-900 dark:text-zinc-100">
+              POUR-Audit Framework (Axe-core + Playwright CI/CD)
+            </td>
+            <td class="p-4 text-zinc-900 dark:text-zinc-100">
+              Full-fleet compliance ledger, contrast remediation, and heading hierarchy verification.
+            </td>
+          </tr>
+          <tr>
+            <th scope="row" class="p-4 font-bold text-zinc-950 dark:text-white">
+              2. Curriculum-as-Code Migration
+            </th>
+            <td class="p-4 text-zinc-900 dark:text-zinc-100">
+              Git SSoT + Headless Canvas REST API Pipelines
+            </td>
+            <td class="p-4 text-zinc-900 dark:text-zinc-100">
+              Decoupling from LMS lock-in, automated syllabus deployments, zero configuration drift.
+            </td>
+          </tr>
+          <tr>
+            <th scope="row" class="p-4 font-bold text-zinc-950 dark:text-white">
+              3. Faculty GenAI Enablement
+            </th>
+            <td class="p-4 text-zinc-900 dark:text-zinc-100">
+              Gemini & NotebookLM Secure Mission Loop Workflows
+            </td>
+            <td class="p-4 text-zinc-900 dark:text-zinc-100">
+              60-min hands-on workshop blueprint: administrative reclamation and AI assessment safety.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</section>
