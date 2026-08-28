@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="{{ .Lang | default "en" }}" class="h-full scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alan Pruitt | Curriculum Architect &amp; AI Strategist</title>
+    <meta name="description" content="Personal portfolio and Curriculum-as-Code repository of Alan Pruitt.">
+    <link rel="canonical" href="https://alanpruitt.com/">
+
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%230B192C'/></svg>">
+
+    <link rel="alternate" type="application/rss+xml" title="Alan Pruitt | RSS Feed" href="https://alanpruitt.com/feed.xml" />
+    <link rel="alternate" type="application/atom+xml" title="Alan Pruitt | Atom Feed" href="https://alanpruitt.com/atom.xml" />
+    <link rel="alternate" type="application/feed+json" title="Alan Pruitt | JSON Feed" href="https://alanpruitt.com/feed.json" />
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Alan Pruitt">
+    <meta property="og:title" content="Alan Pruitt | Curriculum Architect &amp; AI Strategist">
+    <meta property="og:description" content="Pioneering Curriculum-as-Code (CaC) frameworks and sovereign, human-in-the-loop Generative AI strategies for high-accessibility environments.">
+    <meta property="og:url" content="https://alanpruitt.com/">
+    <meta property="og:image" content="https://alanpruitt.com/assets/og-preview.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://alanpruitt.com/#website",
+          "url": "https://alanpruitt.com/",
+          "name": "Alan Pruitt | Curriculum Architect & AI Strategist",
+          "description": "Personal portfolio, research hub, and Curriculum-as-Code repository of Alan Pruitt.",
+          "inLanguage": "en",
+          "publisher": {
+            "@id": "https://alanpruitt.com/#person"
+          }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://alanpruitt.com/#person",
+          "name": "Alan Pruitt",
+          "alternateName": ["Coach Alan", "Alan E. Pruitt"],
+          "url": "https://alanpruitt.com/",
+          "image": "https://alanpruitt.com/assets/Coach-Alan-Sketch-Headshot.webp",
+          "jobTitle": "Founder & Chief Curriculum Architect",
+          "description": "Pioneering Curriculum-as-Code (CaC) frameworks and sovereign, human-in-the-loop Generative AI strategies for high-accessibility academic and enterprise environments.",
+          "affiliation": {
+            "@id": "https://alanpruitt.com/#organization"
+          },
+          "knowsAbout": [
+            "Curriculum-as-Code (CaC)",
+            "Compliance-as-Code",
+            "Algorithmic Pedagogy",
+            "Generative AI Strategy",
+            "WCAG 2.2 AA Accessibility & ADA Title II Compliance",
+            "Instructional Design & Canvas LMS Architecture",
+            "Kinesiology & Exercise Science",
+            "Vibe Coding & Rapid Prototyping"
+          ],
+          "hasCredential": [
+            {
+              "@type": "EducationalOccupationalCredential",
+              "name": "Google Gemini Certified Faculty"
+            },
+            {
+              "@type": "EducationalOccupationalCredential",
+              "name": "United States Marine Corps Veteran"
+            }
+          ],
+          "sameAs": [
+            "https://www.linkedin.com/in/alanpruitt/",
+            "https://github.com/alanpruitt",
+            "https://www.webcognita.com"
+          ]
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://alanpruitt.com/#organization",
+          "name": "Webcognita LLC",
+          "url": "https://www.webcognita.com",
+          "logo": "https://alanpruitt.com/assets/og-preview.png",
+          "founder": {
+            "@id": "https://alanpruitt.com/#person"
+          },
+          "description": "Technical consulting, edge-native AI infrastructure, and compliance-driven instructional engineering."
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        :root {
+            --bg-creme-50: #FAFBF7;
+            --bg-creme-100: #F5F5F0;
+            --bg-creme-200: #E6E6DC;
+            --text-navy-800: #1E3E62;
+            --text-navy-900: #0B192C;
+            --text-navy-950: #060E1A;
+        }
+
+        *, ::before, ::after { box-sizing: border-box; border-width: 0; }
+        html { line-height: 1.5; -webkit-text-size-adjust: 100%; tab-size: 4; font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+        body { margin: 0; background-color: var(--bg-creme-100); color: var(--text-navy-900); }
+
+        .w-full { width: 100%; }
+        .max-w-6xl { max-width: 72rem; }
+        .mx-auto { margin-left: auto; margin-right: auto; }
+        .flex { display: flex; }
+        .flex-col { flex-direction: column; }
+        .flex-grow { flex-grow: 1; }
+        .items-center { align-items: center; }
+        .justify-between { justify-content: space-between; }
+        .grid { display: grid; }
+        .grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+
+        @media (min-width: 768px) {
+            .md\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+            .md\:col-span-2 { grid-column: span 2 / span 2; }
+            .md\:col-span-3 { grid-column: span 3 / span 3; }
+            .md\:flex-row { flex-direction: row; }
+        }
+
+        .gap-3 { gap: 0.75rem; }
+        .gap-4 { gap: 1rem; }
+        .gap-5 { gap: 1.25rem; }
+        .gap-6 { gap: 1.5rem; }
+
+        .bg-white { background-color: #ffffff; }
+        .bg-creme-50 { background-color: var(--bg-creme-50); }
+        .bg-creme-100 { background-color: var(--bg-creme-100); }
+        .bg-creme-200 { background-color: var(--bg-creme-200); }
+        .bg-navy-900 { background-color: var(--text-navy-900); }
+
+        .text-navy-800 { color: var(--text-navy-800); }
+        .text-navy-900 { color: var(--text-navy-900); }
+        .text-creme-50 { color: var(--bg-creme-50); }
+        .text-creme-100 { color: var(--bg-creme-100); }
+        .text-creme-200 { color: var(--bg-creme-200); }
+
+        .p-1 { padding: 0.25rem; }
+        .p-4 { padding: 1rem; }
+        .p-5 { padding: 1.25rem; }
+        .p-6 { padding: 1.5rem; }
+        .p-8 { padding: 2rem; }
+        .px-3 { padding-left: 0.75rem; padding-right: 0.75rem; }
+        .px-4 { padding-left: 1rem; padding-right: 1rem; }
+        .px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+        .py-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+        .py-1\.5 { padding-top: 0.375rem; padding-bottom: 0.375rem; }
+        .py-3 { padding-top: 0.75rem; padding-bottom: 0.75rem; }
+        .py-6 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+        .py-8 { padding-top: 2rem; padding-bottom: 2rem; }
+        .my-5 { margin-top: 1.25rem; margin-bottom: 1.25rem; }
+        .mb-0 { margin-bottom: 0; }
+        .mb-1 { margin-bottom: 0.25rem; }
+        .mb-2 { margin-bottom: 0.5rem; }
+        .mb-3 { margin-bottom: 0.75rem; }
+        .mb-4 { margin-bottom: 1rem; }
+        .mb-6 { margin-bottom: 1.5rem; }
+        .mt-1 { margin-top: 0.25rem; }
+        .mt-2 { margin-top: 0.5rem; }
+        .mt-6 { margin-top: 1.5rem; }
+        .mt-8 { margin-top: 2rem; }
+        .mt-12 { margin-top: 3rem; }
+
+        .border { border-style: solid; border-width: 1px; }
+        .border-t { border-top-style: solid; border-top-width: 1px; }
+        .border-b { border-bottom-style: solid; border-bottom-width: 1px; }
+        .border-2 { border-style: solid; border-width: 2px; }
+        .border-l-4 { border-left-style: solid; border-left-width: 4px; }
+        .border-creme-100 { border-color: var(--bg-creme-100); }
+        .border-creme-200 { border-color: var(--bg-creme-200); }
+        .border-l-navy-900 { border-left-color: var(--text-navy-900); }
+
+        .rounded-md { border-radius: 0.375rem; }
+        .rounded-full { border-radius: 9999px; }
+        .rounded-lg { border-radius: 0.5rem; }
+        .rounded-xl { border-radius: 0.75rem; }
+        .rounded-2xl { border-radius: 1rem; }
+
+        .font-sans { font-family: Inter, sans-serif; }
+        .font-mono { font-family: 'Fira Code', monospace; }
+        .font-semibold { font-weight: 600; }
+        .font-bold { font-weight: 700; }
+        .font-extrabold { font-weight: 800; }
+        .italic { font-style: italic; }
+        .text-xs { font-size: 0.75rem; line-height: 1rem; }
+        .text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+        .text-base { font-size: 1rem; line-height: 1.5rem; }
+        .text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+        .text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+        .text-2xl { font-size: 1.5rem; line-height: 2rem; }
+        .text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+        .text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+
+        .shadow-sm { box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); }
+        .object-cover { object-fit: cover; }
+        .flex-shrink-0 { flex-shrink: 0; }
+        .hover\:underline:hover { text-decoration: underline; }
+    </style>
+</head>
+<body class="bg-creme-100 text-navy-900 font-sans antialiased min-h-full flex flex-col justify-between">
+
+    <header class="w-full max-w-6xl mx-auto px-6 py-6 flex justify-between items-center border-b border-creme-200">
+        <div class="flex items-center space-x-3">
+            <span class="w-3 h-3 bg-navy-900 rounded-full inline-block" aria-hidden="true"></span>
+            <a href="/" class="text-xl font-bold tracking-tight text-navy-900 hover:text-navy-800 transition-colors" style="text-decoration: none;">
+                alanpruitt.com
+            </a>
+        </div>
+        {{ partial "language-switcher.html" . }}
+    </header>
+
+    <main class="w-full max-w-6xl mx-auto px-6 py-8 flex-grow">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            <div class="md:col-span-2">
+                {{ partial (printf "%s/hero.html" .Lang) . }}
+            </div>
+
+            <div class="bg-navy-900 text-creme-100 p-8 rounded-2xl shadow-sm flex flex-col justify-between">
+                <div>
+                    <span class="text-xs font-mono text-creme-200 uppercase tracking-widest block mb-2">Commercial Practice</span>
+                    <h2 class="text-2xl font-bold mb-3 text-creme-50">Webcognita LLC</h2>
+                    <p class="text-creme-200 text-sm leading-relaxed mb-6">
+                        Technical consulting, edge-native AI infrastructure, and compliance-driven instructional engineering.
+                    </p>
+                </div>
+                <a href="https://www.webcognita.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-between w-full px-4 py-3 bg-creme-100 text-navy-900 font-semibold rounded-xl hover:bg-white transition-all text-sm group" style="text-decoration: none;">
+                    <span>Visit webcognita.com</span>
+                    <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </a>
+            </div>
+
+            <div class="bg-white p-8 rounded-2xl border border-creme-200 shadow-sm flex flex-col justify-between">
+                <div>
+                    <div class="w-10 h-10 bg-creme-100 rounded-xl flex items-center justify-center mb-4 text-navy-900 border border-creme-200 font-mono font-bold" aria-hidden="true">
+                        &lt;/&gt;
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-navy-900">Curriculum-as-Code</h3>
+                    <p class="text-sm text-navy-800 leading-relaxed mb-4">
+                        Treating educational materials like software development: Markdown Single Source of Truth (SSoT), Git version control, CI/CD automated validation, born-accessible outputs, automated ADA Title II/WCAG 2.2 AA linting, and zero-trust data safety auditing.
+                    </p>
+                </div>
+                <a href="/articles/02-curriculum-as-code.html" class="text-sm font-semibold text-navy-900 hover:underline inline-flex items-center gap-1 mt-2">
+                    Read Essay 02 &rarr;
+                </a>
+            </div>
+
+            <div class="bg-white p-8 rounded-2xl border border-creme-200 shadow-sm flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-10 h-10 bg-creme-100 rounded-xl flex items-center justify-center text-navy-900 border border-creme-200 font-mono font-bold" aria-hidden="true">
+                            
+                        </div>
+                        <span class="text-xs font-mono bg-creme-100 text-navy-900 px-2.5 py-1 rounded-md border border-creme-200 font-semibold">Rapid Execution</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-navy-900">Vibe Coding &amp; CaC</h3>
+                    <p class="text-sm text-navy-800 leading-relaxed mb-4">
+                        Bridging domain intuition and production-grade execution: translating pedagogical concepts directly into interactive PWAs and lab simulations at speed, governed upstream by deterministic Curriculum-as-Code standards.
+                    </p>
+                </div>
+                <a href="/articles/13-vibe-coding-paradigm.html" class="text-sm font-semibold text-navy-900 hover:underline inline-flex items-center gap-1 mt-2">
+                    Read Essay 13 &rarr;
+                </a>
+            </div>
+
+            <div class="bg-white p-8 rounded-2xl border border-creme-200 shadow-sm flex flex-col justify-between">
+                <div>
+                    <div class="w-10 h-10 bg-creme-100 rounded-xl flex items-center justify-center mb-4 text-navy-900 border border-creme-200 font-mono font-bold" aria-hidden="true">
+                        ️
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-navy-900">Compliance-as-Code</h3>
+                    <p class="text-sm text-navy-800 leading-relaxed mb-4">
+                        Automating regulatory, accessibility, and clinical governance into continuous deployment pipelines: deterministic SSoT rules, automated ADA Title II/WCAG 2.2 AA linting, and zero-trust data safety auditing.
+                    </p>
+                </div>
+                <a href="/articles/04-ada-title-ii-accessibility.html" class="text-sm font-semibold text-navy-900 hover:underline inline-flex items-center gap-1 mt-2">
+                    Read Essay 04 &rarr;
+                </a>
+            </div>
+
+            <div class="bg-white p-8 rounded-2xl border border-creme-200 shadow-sm flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-10 h-10 bg-creme-100 rounded-xl flex items-center justify-center text-navy-900 border border-creme-200 font-mono font-bold" aria-hidden="true">
+                            
+                        </div>
+                        <span class="text-xs font-mono bg-creme-100 text-navy-900 px-2.5 py-1 rounded-md border border-creme-200 font-semibold">Vibe-Coded</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-navy-900">WPE Digital Toolkit</h3>
+                    <p class="text-sm text-navy-800 leading-relaxed mb-4">
+                        Agentic PWA framework integrating ACSM 12th Ed. clinical standards, NWS/EPA environmental factors, and kinesiology curricula.
+                    </p>
+                </div>
+                <a href="https://wpe-toolkit-pro.lovable.app" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-navy-900 hover:underline inline-flex items-center gap-1 mt-2">
+                    Launch App &rarr;
+                </a>
+            </div>
+
+            <div class="bg-white p-8 rounded-2xl border border-creme-200 shadow-sm flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-10 h-10 bg-creme-100 rounded-xl flex items-center justify-center text-navy-900 border border-creme-200 font-mono font-bold" aria-hidden="true">
+                            
+                        </div>
+                        <span class="text-xs font-mono bg-creme-100 text-navy-900 px-2.5 py-1 rounded-md border border-creme-200 font-semibold">Vibe-Coded</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-1 text-navy-900">Flavor Architect</h3>
+                    <span class="text-xs font-mono text-navy-800 font-semibold uppercase tracking-wider block mb-3">Molecular Pairing &amp; Culinary Design</span>
+                    <p class="text-sm text-navy-800 leading-relaxed mb-4">
+                        AI-driven molecular culinary workbench built to evaluate flavor compound synergies, bridge ingredients, and profile balances in real time.
+                    </p>
+                </div>
+                <a href="https://flavor-architect-lab.lovable.app" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-navy-900 hover:underline inline-flex items-center gap-1 mt-2">
+                    Launch App &rarr;
+                </a>
+            </div>
+
+            <div class="bg-white p-8 rounded-2xl border border-creme-200 shadow-sm md:col-span-3">
+                <div class="flex items-center justify-between mb-6 pb-4 border-b border-creme-100">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-creme-100 rounded-xl flex items-center justify-center text-navy-900 border border-creme-200 font-mono font-bold" aria-hidden="true">
+                            
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-navy-900">Curriculum-as-Code Essays</h3>
+                        </div>
+                    </div>
+                    <a href="/articles/index.html" class="text-sm font-semibold text-navy-900 hover:underline inline-flex items-center gap-1">
+                        View All Articles &rarr;
+                    </a>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    
+                    <!-- ESSAY 27 CARD (NEW) -->
+                    <div class="p-5 rounded-xl bg-creme-50 border border-creme-200 flex flex-col justify-between md:col-span-2">
+                        <div>
+                            <div class="flex items-center justify-between mb-2">
+                                <div class="text-xs font-mono text-navy-800 font-bold">ESSAY 27</div>
+                                <span class="text-xs font-mono bg-navy-900 text-creme-100 px-2 py-0.5 rounded text-[10px] font-semibold">Latest Release</span>
+                            </div>
+                            <h4 class="text-lg font-bold text-navy-900 mb-2">
+                                <a href="/articles/27-ada-title-ii-fleet-refactor.html" class="hover:underline">ADA Title II and the Fleet-Wide Refactor</a>
+                            </h4>
+                            <p class="text-xs text-navy-800 leading-relaxed mb-3">
+                                Meeting federal accessibility compliance deadlines via automated regex sweeps, pre-commit validation hook checkpoints, and automated syntax formatters.
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-4 mt-2 pt-2 border-t border-creme-200/60">
+                            <a href="/articles/27-ada-title-ii-fleet-refactor.html" class="text-xs font-bold text-navy-900 hover:underline">Read Essay &rarr;</a>
+                            <a href="https://www.linkedin.com/in/alanpruitt/recent-activity/all/" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-navy-800 hover:text-navy-900 hover:underline inline-flex items-center gap-1">View on LinkedIn ↗</a>
+                        </div>
+                    </div>
+
+                    <!-- ESSAY 26 CARD -->
+                    <div class="p-4 rounded-xl bg-creme-50 border border-creme-200 flex flex-col justify-between">
+                        <div>
+                            <div class="text-xs font-mono text-navy-800 font-bold mb-1">ESSAY 26</div>
+                            <h4 class="text-base font-bold text-navy-900 mb-2">
+                                <a href="/articles/26-curriculum-as-code-pour-audit-framework.html" class="hover:underline">The POUR-Audit Framework inside git workflows</a>
+                            </h4>
+                            <p class="text-xs text-navy-800 leading-relaxed mb-3">
+                                Operationalizing Web Content Accessibility Guidelines (WCAG) into testable, programmatically audited standards directly inside git workflows.
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-4 mt-2 pt-2 border-t border-creme-200/60">
+                            <a href="/articles/26-curriculum-as-code-pour-audit-framework.html" class="text-xs font-bold text-navy-900 hover:underline">Read Essay &rarr;</a>
+                            <a href="https://www.linkedin.com/in/alanpruitt/recent-activity/all/" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-navy-800 hover:text-navy-900 hover:underline inline-flex items-center gap-1">View on LinkedIn ↗</a>
+                        </div>
+                    </div>
+
+                    <!-- ESSAY 25 CARD -->
+                    <div class="p-5 rounded-xl bg-creme-50 border border-creme-200 flex flex-col justify-between md:col-span-2">
+                        <div>
+                            <div class="text-xs font-mono text-navy-800 font-bold mb-1">ESSAY 25</div>
+                            <h4 class="text-lg font-bold text-navy-900 mb-2">
+                                <a href="/articles/25-curriculum-as-code-sovereign-infrastructure.html" class="hover:underline">Curriculum-as-Code: The Sovereign Academic Infrastructure</a>
+                            </h4>
+                            <p class="text-xs text-navy-800 leading-relaxed mb-3">
+                                How treating course materials as software—using Markdown, version control, and static site generators—protects faculty authority, enforces accessibility, and eliminates publisher costs.
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-4 mt-2 pt-2 border-t border-creme-200/60">
+                            <a href="/articles/25-curriculum-as-code-sovereign-infrastructure.html" class="text-xs font-bold text-navy-900 hover:underline">Read Essay &rarr;</a>
+                            <a href="https://www.linkedin.com/in/alanpruitt/recent-activity/all/" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-navy-800 hover:text-navy-900 hover:underline inline-flex items-center gap-1">View on LinkedIn ↗</a>
+                        </div>
+                    </div>
+
+                    <!-- ESSAY 24 CARD -->
+                    <div class="p-4 rounded-xl bg-creme-50 border border-creme-200 flex flex-col justify-between">
+                        <div>
+                            <div class="text-xs font-mono text-navy-800 font-bold mb-1">ESSAY 24</div>
+                            <h4 class="text-base font-bold text-navy-900 mb-2">
+                                <a href="/articles/24-chatbots-canvas-lms-cautionary-tale.html" class="hover:underline">Chatbots &amp; Canvas LMS: A Cautionary Tale &amp; Best Practices</a>
+                            </h4>
+                            <p class="text-xs text-navy-800 leading-relaxed mb-3">
+                                Why rushing unmonitored AI chatbots into the LMS creates data privacy risks, SSoT conflicts, and clinical safety hazards—and how the Auditor Protocol governs secure implementation.
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-4 mt-2 pt-2 border-t border-creme-200/60">
+                            <a href="/articles/24-chatbots-canvas-lms-cautionary-tale.html" class="text-xs font-bold text-navy-900 hover:underline">Read Essay &rarr;</a>
+                            <a href="https://www.linkedin.com/in/alanpruitt/recent-activity/all/" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-navy-800 hover:text-navy-900 hover:underline inline-flex items-center gap-1">View on LinkedIn ↗</a>
+                        </div>
+                    </div>
+
+                    <div class="p-4 rounded-xl bg-creme-50 border border-creme-200 flex flex-col justify-between">
+                        <div>
+                            <div class="text-xs font-mono text-navy-800 font-bold mb-1">ESSAY 23</div>
+                            <h4 class="text-base font-bold text-navy-900 mb-2">
+                                <a href="/articles/23-accessibility-checker-parity-illusion.html" class="hover:underline">The Accessibility Checker Parity Illusion: Schema Divergence &amp; CaC</a>
+                            </h4>
+                            <p class="text-xs text-navy-800 leading-relaxed mb-3">
+                                Why Canvas, Office, and PDF checkers lack structural parity, and why Markdown CaC is the deterministic path to WCAG 2.2 AA.
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-4 mt-2 pt-2 border-t border-creme-200/60">
+                            <a href="/articles/23-accessibility-checker-parity-illusion.html" class="text-xs font-bold text-navy-900 hover:underline">Read Essay &rarr;</a>
+                            <a href="https://www.linkedin.com/in/alanpruitt/recent-activity/all/" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-navy-800 hover:text-navy-900 hover:underline inline-flex items-center gap-1">View on LinkedIn ↗</a>
+                        </div>
+                    </div>
+
+                    <div class="p-4 rounded-xl bg-creme-50 border border-creme-200 flex flex-col justify-between">
+                        <div>
+                            <div class="text-xs font-mono text-navy-800 font-bold mb-1">ESSAY 23</div>
+                            <h4 class="text-base font-bold text-navy-900 mb-2">
+                                <a href="/articles/22-foundational-human-movement-in-the-algorithmic-age.html" class="hover:underline">Foundational Human Movement in the Algorithmic Age: PAGA 2018 SSoT</a>
+                            </h4>
+                            <p class="text-xs text-navy-800 leading-relaxed mb-3">
+                                How EXW101 deploys Curriculum-as-Code, the federal PAGA 2018 SSoT, and the Mission Loop framework to deconstruct systemic inactivity patterns.
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-4 mt-2 pt-2 border-t border-creme-200/60">
+                            <a href="/articles/22-foundational-human-movement-in-the-algorithmic-age.html" class="text-xs font-bold text-navy-900 hover:underline">Read Essay &rarr;</a>
+                            <a href="https://www.linkedin.com/in/alanpruitt/recent-activity/all/" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-navy-800 hover:text-navy-900 hover:underline inline-flex items-center gap-1">View on LinkedIn ↗</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="w-full max-w-6xl mx-auto px-6 py-8 mt-12 border-t border-creme-200 flex flex-col md:flex-row justify-between items-center text-xs text-navy-800 gap-4">
+        <div class="space-y-1 text-center md:text-left">
+            <div>&copy; <span id="year"></span> Alan Pruitt. All rights reserved.</div>
+            <div style="opacity: 0.85;">
+                Code licensed under <a href="/LICENSE" class="underline hover:text-navy-900">MIT</a>. 
+                Content licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer" class="underline hover:text-navy-900">CC BY 4.0</a>.
+            </div>
+        </div>
+        <div class="flex space-x-6" style="gap: 1.5rem;">
+            <a href="https://github.com/alanpruitt" target="_blank" rel="noopener noreferrer" class="hover:text-navy-900 transition-colors">GitHub</a>
+            <a href="https://www.linkedin.com/in/alanpruitt/" target="_blank" rel="noopener noreferrer" class="hover:text-navy-900 transition-colors">LinkedIn</a>
+            <a href="https://www.webcognita.com" target="_blank" rel="noopener noreferrer" class="hover:text-navy-900 transition-colors">Webcognita</a>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
