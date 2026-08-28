@@ -16,6 +16,7 @@ tags:
   - "Curriculum-as-Code"
 lang_default: "en"
 canonical_url: "https://alanpruitt.com/articles/13-vibe-coding-paradigm.html"
+categories: ["curriculum-as-code"]
 ---
 <!-- =========================================================================
   LANG: ENGLISH

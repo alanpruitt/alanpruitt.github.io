@@ -16,6 +16,7 @@ tags:
   - "Curriculum-as-Code"
 lang_default: "en"
 canonical_url: "https://alanpruitt.com/articles/14-guided-learning-trifecta.html"
+categories: ["ai-safety-protocols"]
 ---
 <!-- =========================================================================
   LANG: ENGLISH

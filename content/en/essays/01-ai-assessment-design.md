@@ -4,6 +4,7 @@ essay_number: "01"
 date: "2026-07-30"
 author: "Alan Pruitt"
 canonical_url: "https://alanpruitt.com/articles/01-ai-assessment-design.html"
+categories: ["curriculum-as-code"]
 ---
 # Shifting from AI Fear to Strategic Assessment Design
 

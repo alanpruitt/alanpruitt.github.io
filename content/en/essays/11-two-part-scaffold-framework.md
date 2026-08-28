@@ -16,6 +16,7 @@ tags:
   - "Cycle Ergometry"
 lang_default: "en"
 canonical_url: "https://alanpruitt.com/articles/11-two-part-scaffold-framework.html"
+categories: ["curriculum-as-code"]
 ---
 <!-- =========================================================================
   LANG: ENGLISH

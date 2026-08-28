@@ -16,6 +16,7 @@ tags:
   - "Instructional Engineering"
 lang_default: "en"
 canonical_url: "https://alanpruitt.com/articles/07-continuous-integration-pedagogy.html"
+categories: ["curriculum-as-code"]
 ---
 <!-- =========================================================================
   LANG: ENGLISH

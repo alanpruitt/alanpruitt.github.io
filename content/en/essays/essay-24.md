@@ -14,6 +14,7 @@ summary: "Why integrating commercial AI chatbots inside Canvas LMS introduces se
 summary_es: "Por qué la integración de chatbots comerciales en Canvas LMS introduce riesgos institucionales graves, compromete FERPA/ADA y cómo las evaluaciones socráticas conservan la voz humana."
 lang_default: "en"
 canonical_url: "https://alanpruitt.com/articles/24-chatbots-canvas-lms-cautionary-tale.html"
+categories: ["curriculum-as-code"]
 ---
 ## Essay 24: Chatbots & Canvas LMS: A Cautionary Tale
 

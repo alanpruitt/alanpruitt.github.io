@@ -15,6 +15,7 @@ tags:
   - "WCAG 2.1 AA"
 lang_default: "en"
 canonical_url: "https://alanpruitt.com/articles/05-instructional-engineering.html"
+categories: ["curriculum-as-code"]
 ---
 <!-- =========================================================================
   LANG: ENGLISH

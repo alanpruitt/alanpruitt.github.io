@@ -5,10 +5,7 @@ draft: false
 slug: "essay-27"
 translationKey: "essay-27"
 description: "Cómo implementar canalizaciones de Curriculum-as-Code (CaC) con linters automatizados y paridad SSoT en Canvas LMS para resolver el mandato federal de ADA Título II a nivel institucional."
-categories:
-  - "Curriculum-as-Code"
-  - "Accesibilidad Digital"
-  - "Gobernanza Institucional"
+categories: ["ada-title-ii"]
 tags:
   - "ADA Title II"
   - "WCAG 2.2 AA"

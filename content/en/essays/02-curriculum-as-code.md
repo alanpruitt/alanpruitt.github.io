@@ -4,6 +4,7 @@ essay_number: "02"
 date: "2026-07-30"
 author: "Alan Pruitt"
 canonical_url: "https://alanpruitt.com/articles/02-curriculum-as-code.html"
+categories: ["curriculum-as-code"]
 ---
 # Curriculum-as-Code: Treating Educational Content Like Software Development
 

@@ -12,6 +12,7 @@ summary: "How EXW245 decouples cognitive pre-flight mathematical verification fr
 summary_es: "Cómo EXW245 desacopla la verificación matemática cognitiva previa al vuelo de la ejecución física en el laboratorio mediante un andamio de dos partes que empareja entornos de simulación de IA con ergómetros de ciclo Lode Corival."
 lang_default: "en"
 canonical_url: "https://alanpruitt.com/articles/19-hybrid-ergometer-scaffold.html"
+categories: ["ai-safety-protocols"]
 ---
 # The Hybrid Ergometer Scaffold: Synchronizing AI Simulation with Lab Precision
 

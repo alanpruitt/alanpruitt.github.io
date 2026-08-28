@@ -3,7 +3,7 @@ title: "Curriculum-as-Code, ADA Title II Compliance, and Fleet-Wide Accessibilit
 date: 2026-08-25T16:53:00-07:00
 draft: false
 tags: ["Accessibility", "Instructional Design", "Curriculum-as-Code", "Higher Ed", "ADA Title II"]
-categories: ["Essays"]
+categories: ["ada-title-ii"]
 description: "How engineering course architectures in plain Markdown with automated CI/CD linters solves ADA Title II compliance and enables fleet-wide accessibility refactoring."
 translationKey: "essay-27"
 slug: "essay-27"

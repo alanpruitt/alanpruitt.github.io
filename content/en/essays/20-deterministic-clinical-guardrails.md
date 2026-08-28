@@ -12,6 +12,7 @@ summary: "How EXW265 deploys deterministic prompt guardrails, strict delimiter e
 summary_es: "Cómo EXW265 despliega barreras deterministas, encapsulamiento estricto de delimitadores y la Fuente Única de Verdad de PAGA 2018 para eliminar la deriva de alucinaciones de IA en prescripciones de ejercicio para condiciones crónicas."
 lang_default: "en"
 canonical_url: "https://alanpruitt.com/articles/20-deterministic-clinical-guardrails.html"
+categories: ["ai-safety-protocols"]
 ---
 # Deterministic Clinical Guardrails: Preventing Hallucination Drift in Special Population Prescriptions
 

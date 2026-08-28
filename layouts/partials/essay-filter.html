@@ -1,33 +1,33 @@
 <div class="mb-10" aria-label="Filter Essays by Topic">
-  <div class="flex flex-wrap items-center gap-2 sm:gap-3" role="group" aria-label="Topic Filter Options">
+  <div id="filter-pill-group" class="flex flex-wrap items-center gap-2.5 sm:gap-3" role="group" aria-label="Topic Filter Options">
     <button 
       type="button" 
-      data-filter="all" 
-      class="essay-filter-btn active inline-flex min-h-[44px] items-center justify-center rounded-lg border border-zinc-950 bg-zinc-950 px-4 py-2 text-xs font-bold uppercase tracking-wider text-white shadow-sm transition hover:bg-zinc-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:border-white dark:bg-white dark:text-zinc-950 dark:hover:bg-zinc-200 dark:focus-visible:outline-white"
+      onclick="filterEssays(this, 'all')"
+      class="essay-filter-btn inline-flex min-h-[44px] items-center justify-center rounded-lg border border-zinc-950 bg-zinc-950 px-4 py-2 text-xs font-bold uppercase tracking-wider text-white shadow-sm transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:border-white dark:bg-white dark:text-zinc-950 dark:focus-visible:outline-white"
       aria-pressed="true"
     >
       {{ if eq .Lang "es" }}Todos los Ensayos{{ else }}All Essays (01–27){{ end }}
     </button>
     <button 
       type="button" 
-      data-filter="curriculum-as-code" 
-      class="essay-filter-btn inline-flex min-h-[44px] items-center justify-center rounded-lg border border-zinc-300 bg-white px-4 py-2 text-xs font-bold uppercase tracking-wider text-zinc-800 shadow-sm transition hover:bg-zinc-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-200 dark:hover:bg-zinc-800 dark:focus-visible:outline-white"
+      onclick="filterEssays(this, 'curriculum-as-code')"
+      class="essay-filter-btn inline-flex min-h-[44px] items-center justify-center rounded-lg border border-zinc-300 bg-white px-4 py-2 text-xs font-bold uppercase tracking-wider text-zinc-800 shadow-sm transition-colors hover:bg-zinc-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-200 dark:hover:bg-zinc-800 dark:focus-visible:outline-white"
       aria-pressed="false"
     >
       Curriculum-as-Code
     </button>
     <button 
       type="button" 
-      data-filter="ai-safety-protocols" 
-      class="essay-filter-btn inline-flex min-h-[44px] items-center justify-center rounded-lg border border-zinc-300 bg-white px-4 py-2 text-xs font-bold uppercase tracking-wider text-zinc-800 shadow-sm transition hover:bg-zinc-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-200 dark:hover:bg-zinc-800 dark:focus-visible:outline-white"
+      onclick="filterEssays(this, 'ai-safety-protocols')"
+      class="essay-filter-btn inline-flex min-h-[44px] items-center justify-center rounded-lg border border-zinc-300 bg-white px-4 py-2 text-xs font-bold uppercase tracking-wider text-zinc-800 shadow-sm transition-colors hover:bg-zinc-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-200 dark:hover:bg-zinc-800 dark:focus-visible:outline-white"
       aria-pressed="false"
     >
       {{ if eq .Lang "es" }}Protocolos de Seguridad en IA{{ else }}AI Safety Protocols{{ end }}
     </button>
     <button 
       type="button" 
-      data-filter="ada-title-ii" 
-      class="essay-filter-btn inline-flex min-h-[44px] items-center justify-center rounded-lg border border-zinc-300 bg-white px-4 py-2 text-xs font-bold uppercase tracking-wider text-zinc-800 shadow-sm transition hover:bg-zinc-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-200 dark:hover:bg-zinc-800 dark:focus-visible:outline-white"
+      onclick="filterEssays(this, 'ada-title-ii')"
+      class="essay-filter-btn inline-flex min-h-[44px] items-center justify-center rounded-lg border border-zinc-300 bg-white px-4 py-2 text-xs font-bold uppercase tracking-wider text-zinc-800 shadow-sm transition-colors hover:bg-zinc-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-200 dark:hover:bg-zinc-800 dark:focus-visible:outline-white"
       aria-pressed="false"
     >
       {{ if eq .Lang "es" }}ADA Título II y Accesibilidad{{ else }}ADA Title II & Accessibility{{ end }}
@@ -36,31 +36,33 @@
 </div>
 
 <script>
-  (function () {
-    const filterButtons = document.querySelectorAll('.essay-filter-btn');
-    const essayCards = document.querySelectorAll('.essay-card-item');
+  window.filterEssays = function (activeBtn, targetFilter) {
+    const group = document.getElementById('filter-pill-group');
+    const buttons = group ? group.querySelectorAll('.essay-filter-btn') : document.querySelectorAll('.essay-filter-btn');
+    const cards = document.querySelectorAll('.essay-card-item');
 
-    filterButtons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const filter = btn.getAttribute('data-filter');
+    const activeClasses = ['border-zinc-950', 'bg-zinc-950', 'text-white', 'dark:border-white', 'dark:bg-white', 'dark:text-zinc-950'];
+    const inactiveClasses = ['border-zinc-300', 'bg-white', 'text-zinc-800', 'dark:border-zinc-700', 'dark:bg-zinc-900', 'dark:text-zinc-200'];
 
-        filterButtons.forEach(b => {
-          b.setAttribute('aria-pressed', 'false');
-          b.className = 'essay-filter-btn inline-flex min-h-[44px] items-center justify-center rounded-lg border border-zinc-300 bg-white px-4 py-2 text-xs font-bold uppercase tracking-wider text-zinc-800 shadow-sm transition hover:bg-zinc-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-200 dark:hover:bg-zinc-800 dark:focus-visible:outline-white';
-        });
-
-        btn.setAttribute('aria-pressed', 'true');
-        btn.className = 'essay-filter-btn active inline-flex min-h-[44px] items-center justify-center rounded-lg border border-zinc-950 bg-zinc-950 px-4 py-2 text-xs font-bold uppercase tracking-wider text-white shadow-sm transition hover:bg-zinc-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:border-white dark:bg-white dark:text-zinc-950 dark:hover:bg-zinc-200 dark:focus-visible:outline-white';
-
-        essayCards.forEach(card => {
-          const cardCategories = card.getAttribute('data-categories') || '';
-          if (filter === 'all' || cardCategories.includes(filter)) {
-            card.style.display = '';
-          } else {
-            card.style.display = 'none';
-          }
-        });
-      });
+    buttons.forEach(function (btn) {
+      btn.setAttribute('aria-pressed', 'false');
+      btn.classList.remove(...activeClasses);
+      btn.classList.add(...inactiveClasses);
     });
-  })();
+
+    if (activeBtn) {
+      activeBtn.setAttribute('aria-pressed', 'true');
+      activeBtn.classList.remove(...inactiveClasses);
+      activeBtn.classList.add(...activeClasses);
+    }
+
+    cards.forEach(function (card) {
+      const rawCats = (card.getAttribute('data-categories') || '').toLowerCase();
+      if (targetFilter === 'all' || rawCats.indexOf(targetFilter) !== -1) {
+        card.style.removeProperty('display');
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  };
 </script>

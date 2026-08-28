@@ -4,6 +4,7 @@ essay_number: "03"
 date: "2026-07-30"
 author: "Alan Pruitt"
 canonical_url: "https://alanpruitt.com/articles/03-air-gapped-sovereign-ai.html"
+categories: ["ai-safety-protocols"]
 ---
 # Air-Gapped & Sovereign AI: Local Intelligence in High-Compliance Environments
 
