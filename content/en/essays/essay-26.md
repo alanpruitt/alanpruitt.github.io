@@ -15,7 +15,6 @@ summary_es: "Un análisis del marco de auditoría POUR dentro de los paradigmas 
 lang_default: "en"
 canonical_url: "https://alanpruitt.com/articles/26-curriculum-as-code-pour-audit-framework.html"
 ---
-
 ## The POUR-Audit Framework in Curriculum-as-Code
 
 Treating educational content as software—known as *Curriculum-as-Code* (CaC)—enables the integration of automated verification pipelines to enforce instructional quality, semantic hierarchy, and digital accessibility. The **POUR-Audit framework** operationalizes Web Content Accessibility Guidelines (WCAG) into testable, programmatically audited standards directly inside git workflows.

@@ -15,7 +15,6 @@ summary_es: "Por qué la integración de chatbots comerciales en Canvas LMS intr
 lang_default: "en"
 canonical_url: "https://alanpruitt.com/articles/24-chatbots-canvas-lms-cautionary-tale.html"
 ---
-
 ## Essay 24: Chatbots & Canvas LMS: A Cautionary Tale
 
 ### Executive Summary

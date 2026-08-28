@@ -16,7 +16,6 @@ tags:
   - "CI/CD"
   - "POUR-Audit"
 ---
-
 ## El Mandato Federal: El Fin de las Soluciones Parche
 
 Para las instituciones de educación superior públicas, el reloj del mandato de accesibilidad de **ADA Título II** ya está corriendo. La exigencia federal no deja margen de maniobra: para 2026, cada curso, documento digital, tabla y recurso montado en el LMS debe cumplir a rajatabla con el estándar **WCAG 2.2 AA**.

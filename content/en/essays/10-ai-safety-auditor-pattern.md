@@ -17,7 +17,6 @@ tags:
 lang_default: "en"
 canonical_url: "https://alanpruitt.com/articles/10-ai-safety-auditor-pattern.html"
 ---
-
 <!-- =========================================================================
   LANG: ENGLISH
   ========================================================================= -->

@@ -17,7 +17,6 @@ tags:
 lang_default: "en"
 canonical_url: "https://alanpruitt.com/articles/14-guided-learning-trifecta.html"
 ---
-
 <!-- =========================================================================
   LANG: ENGLISH
   ========================================================================= -->

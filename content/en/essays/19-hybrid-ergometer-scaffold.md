@@ -13,7 +13,6 @@ summary_es: "Cómo EXW245 desacopla la verificación matemática cognitiva previ
 lang_default: "en"
 canonical_url: "https://alanpruitt.com/articles/19-hybrid-ergometer-scaffold.html"
 ---
-
 # The Hybrid Ergometer Scaffold: Synchronizing AI Simulation with Lab Precision
 
 In clinical kinesiology and exercise physiology curricula, laboratory courses face a persistent pedagogical bottleneck: **the high-stakes cognitive choke point**.

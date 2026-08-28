@@ -17,7 +17,6 @@ tags:
 lang_default: "en"
 canonical_url: "https://alanpruitt.com/articles/06-canvas-ai-course-design.html"
 ---
-
 <!-- =========================================================================
   LANG: ENGLISH
   ========================================================================= -->

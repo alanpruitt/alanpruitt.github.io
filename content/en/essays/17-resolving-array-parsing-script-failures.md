@@ -17,7 +17,6 @@ tags:
 lang_default: "en"
 canonical_url: "https://alanpruitt.com/articles/17-resolving-array-parsing-script-failures.html"
 ---
-
 <!-- =========================================================================
   LANG: ENGLISH
   ========================================================================= -->

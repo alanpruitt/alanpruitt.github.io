@@ -13,7 +13,6 @@ summary_es: "Cómo EXW150 utiliza Currículum como Código, el marco del Bucle d
 lang_default: "en"
 canonical_url: "https://alanpruitt.com/articles/21-evidence-based-nutrition-vs-feed.html"
 ---
-
 # Evidence-Based Nutrition vs. The Feed: Upstream SSoT Governance in Sports Nutrition
 
 In collegiate health sciences, introductory sports nutrition occupies the most culturally polluted informational space in higher education. Long before community college students enroll in an academic exercise science course, their understanding of human fuel, energy balance, and macronutrient metabolism has been shaped by algorithmic social media feeds, commercial fitness influencers, and predatory supplement marketing.

@@ -17,7 +17,6 @@ tags:
 lang_default: "en"
 canonical_url: "https://alanpruitt.com/articles/13-vibe-coding-paradigm.html"
 ---
-
 <!-- =========================================================================
   LANG: ENGLISH
   ========================================================================= -->

@@ -16,7 +16,6 @@ tags:
 lang_default: "en"
 canonical_url: "https://alanpruitt.com/articles/05-instructional-engineering.html"
 ---
-
 <!-- =========================================================================
   LANG: ENGLISH
   ========================================================================= -->

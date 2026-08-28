@@ -13,7 +13,6 @@ summary_es: "Cómo EXW101 utiliza Currículum como Código, el estándar federal
 lang_default: "en"
 canonical_url: "https://alanpruitt.com/articles/22-foundational-human-movement-in-the-algorithmic-age.html"
 ---
-
 # Foundational Human Movement in the Algorithmic Age: PAGA 2018 SSoT & Community Inactivity Interventions
 
 Introductory kinesiology and physical education courses are the front lines of the public health movement. Yet first- and second-year college students enter higher education at a moment of unprecedented physical displacement: average daily sedentary screen time exceeds seven hours, while popular culture equates physical activity exclusively with elite competitive athletics, bodybuilding, or high-cost commercial gyms.
