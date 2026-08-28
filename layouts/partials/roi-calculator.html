@@ -1,6 +1,5 @@
 <section id="roi-calculator" class="py-12 border-b border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-950" aria-labelledby="roi-calculator-heading">
   <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-    
     <div class="mb-8 text-left">
       <h2 id="roi-calculator-heading" class="text-2xl font-extrabold tracking-tight text-zinc-950 dark:text-white sm:text-3xl">
         {{ if eq .Lang "es" }}Calculadora de ROI de Curriculum-as-Code{{ else }}Curriculum-as-Code ROI & Efficiency Calculator{{ end }}
@@ -10,10 +9,8 @@
       </p>
     </div>
 
-    <!-- Sliders & Interactive Controls -->
     <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
       <div class="space-y-6">
-        <!-- Courses Slider -->
         <div>
           <div class="flex justify-between items-center mb-2">
             <label for="cac-courses" class="text-sm font-semibold text-zinc-900 dark:text-zinc-100">
@@ -32,11 +29,10 @@
           />
         </div>
 
-        <!-- Pages Per Course Slider -->
         <div>
           <div class="flex justify-between items-center mb-2">
             <label for="cac-pages" class="text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-              {{ if eq .Lang "es" }}Páginas / Unidades por Cursos{{ else }}Pages / Units per Course{{ end }}
+              {{ if eq .Lang "es" }}Páginas / Unidades por Curso{{ else }}Pages / Units per Course{{ end }}
             </label>
             <span id="cac-pages-val" class="font-mono text-sm font-bold text-zinc-900 dark:text-zinc-100">30</span>
           </div>
@@ -52,7 +48,6 @@
         </div>
       </div>
 
-      <!-- Output KPI Cards -->
       <div class="rounded-2xl border border-zinc-200 bg-zinc-50 p-6 dark:border-zinc-800 dark:bg-zinc-900/60 flex flex-col justify-between">
         <div class="grid grid-cols-2 gap-4">
           <div>
@@ -80,7 +75,6 @@
       </div>
     </div>
 
-    <!-- WCAG 2.2 AA ARIA Live Announcer for Assistive Technology -->
     <div 
       id="cac-live-announcer" 
       class="sr-only" 
@@ -90,7 +84,6 @@
     >
       Calculated net savings: $63,900 with 1,420 faculty hours reclaimed and an 18.8x ROI multiplier.
     </div>
-
   </div>
 </section>
 
@@ -106,7 +99,6 @@
     const liveAnnouncer = document.getElementById('cac-live-announcer');
 
     if (!coursesInput || !pagesInput) return;
-
     let debounceTimer;
 
     function recalculate() {
@@ -116,11 +108,10 @@
       coursesVal.textContent = courses;
       pagesVal.textContent = pages;
 
-      // Benchmark model parameters
       const totalUnits = courses * pages;
-      const manualHours = (totalUnits * 15) / 60; // 15 mins per unit manual remediation
-      const cacHours = Math.max(20, Math.round(courses * 0.4)); // Automated pipeline setup & audit
-      const hourlyRate = 45; // $45/hr blended institutional labor
+      const manualHours = (totalUnits * 15) / 60;
+      const cacHours = Math.max(20, Math.round(courses * 0.4));
+      const hourlyRate = 45;
 
       const manualCost = manualHours * hourlyRate;
       const cacCost = cacHours * hourlyRate;
@@ -136,7 +127,6 @@
       hoursEl.textContent = formattedHours;
       roiEl.textContent = formattedRoi;
 
-      // Update screen reader status with debounce
       clearTimeout(debounceTimer);
       debounceTimer = setTimeout(() => {
         if (liveAnnouncer) {
