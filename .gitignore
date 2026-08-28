@@ -12,3 +12,5 @@ node_modules/
 dist/
 _site/
 .jekyll-cache/
+public/
+resources/
