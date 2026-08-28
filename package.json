@@ -4,10 +4,10 @@
   "private": true,
   "scripts": {
     "audit": "npm run lint:md",
-    "audit:lighthouse": "BASE_URL=http://localhost:1313/alanpruitt node scripts/audit-lighthouse.js",
+    "audit:lighthouse": "BASE_URL=http://localhost:1313 node scripts/audit-lighthouse.js",
     "audit:lighthouse:live": "BASE_URL=https://alanpruitt.com node scripts/audit-lighthouse.js",
     "audit:live": "node scripts/audit.js",
-    "audit:local": "BASE_URL=http://localhost:1313/alanpruitt node scripts/audit.js",
+    "audit:local": "BASE_URL=http://localhost:1313 node scripts/audit.js",
     "lint:md": "markdownlint --config .markdownlint.json \"content/**/*.md\"",
     "lint:md:fix": "markdownlint --config .markdownlint.json --fix \"content/**/*.md\"",
     "predeploy": "npm run audit"
