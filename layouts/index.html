@@ -226,15 +226,7 @@
 </head>
 <body class="bg-creme-100 text-navy-900 font-sans antialiased min-h-full flex flex-col justify-between">
 
-    <header class="w-full max-w-6xl mx-auto px-6 py-6 flex justify-between items-center border-b border-creme-200">
-        <div class="flex items-center space-x-3">
-            <span class="w-3 h-3 bg-navy-900 rounded-full inline-block" aria-hidden="true"></span>
-            <a href="/" class="text-xl font-bold tracking-tight text-navy-900 hover:text-navy-800 transition-colors" style="text-decoration: none;">
-                alanpruitt.com
-            </a>
-        </div>
-        {{ partial "language-switcher.html" . }}
-    </header>
+    {{ partial "header.html" . }}
 
     <main class="w-full max-w-6xl mx-auto px-6 py-8 flex-grow">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">

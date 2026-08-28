@@ -1,0 +1,34 @@
+<header class="sticky top-0 z-50 w-full border-b border-zinc-200 bg-white/90 backdrop-blur-md dark:border-zinc-800 dark:bg-zinc-950/90">
+  <div class="mx-auto flex max-w-5xl items-center justify-between px-4 sm:px-6 lg:px-8 h-16">
+    <a href="{{ if eq .Lang "es" }}/es/{{ else }}/{{ end }}" class="flex items-center gap-2 font-bold tracking-tight text-zinc-950 dark:text-white" style="text-decoration: none;">
+      <span class="text-base sm:text-lg">Alan Pruitt</span>
+      <span class="hidden sm:inline-block rounded bg-zinc-100 px-2 py-0.5 text-xs font-semibold text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400">CaC Architect</span>
+    </a>
+    <nav aria-label="Main Navigation" class="flex items-center gap-4 sm:gap-6 text-sm font-medium text-zinc-600 dark:text-zinc-300">
+      <a href="#roi-calculator-heading" class="transition hover:text-zinc-950 dark:hover:text-white" style="text-decoration: none;">
+        {{ if eq .Lang "es" }}Calculadora ROI{{ else }}ROI Calculator{{ end }}
+      </a>
+      <a href="#{{ if eq .Lang "es" }}ensayos{{ else }}essays{{ end }}" class="transition hover:text-zinc-950 dark:hover:text-white" style="text-decoration: none;">
+        {{ if eq .Lang "es" }}Ensayos{{ else }}Essays{{ end }}
+      </a>
+      <nav class="flex items-center rounded-lg border border-zinc-200 bg-zinc-50 p-1 dark:border-zinc-800 dark:bg-zinc-900" aria-label="Language / Idioma">
+        <a 
+          href="{{ if .IsTranslated }}{{ (index .Translations 0).RelPermalink }}{{ else }}/{{ end }}" 
+          class="min-h-[32px] min-w-[32px] flex items-center justify-center rounded px-2 text-xs font-bold uppercase transition {{ if eq .Lang "en" }}bg-white text-zinc-950 shadow-sm dark:bg-zinc-800 dark:text-white{{ else }}text-zinc-500 hover:text-zinc-900 dark:hover:text-white{{ end }}"
+          aria-label="Switch to English"
+          style="text-decoration: none;"
+        >
+          EN
+        </a>
+        <a 
+          href="{{ if .IsTranslated }}{{ (index .Translations 0).RelPermalink }}{{ else }}/es/{{ end }}" 
+          class="min-h-[32px] min-w-[32px] flex items-center justify-center rounded px-2 text-xs font-bold uppercase transition {{ if eq .Lang "es" }}bg-white text-zinc-950 shadow-sm dark:bg-zinc-800 dark:text-white{{ else }}text-zinc-500 hover:text-zinc-900 dark:hover:text-white{{ end }}"
+          aria-label="Cambiar a Español"
+          style="text-decoration: none;"
+        >
+          ES
+        </a>
+      </nav>
+    </nav>
+  </div>
+</header>

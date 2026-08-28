@@ -119,7 +119,8 @@
               <span id="cac-roi-mult" class="text-lg font-extrabold text-zinc-900 dark:text-white">10.1x ROI</span>
             </div>
             <a 
-              href="mailto:alan.pruitt@gmail.com?subject=Request%20LMS%20Fleet%20Accessibility%20Audit&body=Hi%20Alan%2C%0A%0AI%20have%20completed%20the%20ADA%20Title%20II%20Compliance%20%26%20CaC%20ROI%20Calculator%20and%20would%20like%20to%20request%20a%20formal%20accessibility%20audit%20for%20our%20institution's%20LMS%20fleet.%0A%0AInstitution%20Name%3A%20%0AContact%20Name%3A%20%0AContact%20Email%3A%20%0A%0AThank%20you!" 
+              id="cac-calc-cta"
+              href="mailto:alan.pruitt@gmail.com?subject=CaC%20Fleet%20Audit%20Inquiry" 
               class="inline-flex min-h-[44px] items-center justify-center rounded-md bg-zinc-950 px-4 py-2 text-xs font-bold uppercase tracking-wider text-white transition-colors hover:bg-zinc-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-950 dark:bg-white dark:text-zinc-950 dark:hover:bg-zinc-200 dark:focus-visible:outline-white"
             >
               Audit Fleet Now
@@ -148,6 +149,13 @@
       const pipelineSummary = document.getElementById('cac-pipeline-summary');
       const hoursSaved = document.getElementById('cac-hours-saved');
       const roiMult = document.getElementById('cac-roi-mult');
+      const calcCta = document.getElementById('cac-calc-cta');
+
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.has('courses')) coursesInput.value = urlParams.get('courses');
+      if (urlParams.has('pages')) pagesInput.value = urlParams.get('pages');
+      if (urlParams.has('mins')) minsInput.value = urlParams.get('mins');
+      if (urlParams.has('rate')) rateInput.value = urlParams.get('rate');
 
       function recalculate() {
         const courses = parseInt(coursesInput.value, 10);
@@ -181,6 +189,19 @@
         pipelineSummary.textContent = cacHours.toLocaleString() + ' hrs ($' + cacCost.toLocaleString() + ')';
         hoursSaved.textContent = netHoursSaved.toLocaleString() + ' Hours';
         roiMult.textContent = multiplier + 'x ROI';
+
+        if (calcCta) {
+          const subject = encodeURIComponent('CaC Fleet Audit Inquiry (' + courses + ' courses)');
+          const body = encodeURIComponent(
+            'Hello Alan,\n\nI evaluated our fleet using the CaC ROI Calculator with the following parameters:\n' +
+            '- Active Course Shells: ' + courses + '\n' +
+            '- Pages per Course: ' + pages + '\n' +
+            '- Blended Labor Rate: $' + rate + '/hr\n' +
+            '- Estimated Net Savings: $' + netSavingsCost.toLocaleString() + '\n\n' +
+            'I would like to schedule an Executive Briefing to discuss automated fleet remediation.'
+          );
+          calcCta.href = 'mailto:alan.pruitt@gmail.com?subject=' + subject + '&body=' + body;
+        }
       }
 
       [coursesInput, pagesInput, minsInput, rateInput].forEach(function (el) {
