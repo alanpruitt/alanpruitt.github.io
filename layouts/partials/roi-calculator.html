@@ -1,0 +1,193 @@
+<section 
+  aria-labelledby="roi-calculator-heading" 
+  class="w-full border-t border-b border-zinc-200 bg-zinc-50 dark:border-zinc-800 dark:bg-zinc-900/50 py-12 sm:py-16"
+>
+  <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+    <div class="mb-8 text-left">
+      <h2 
+        id="roi-calculator-heading" 
+        class="text-2xl font-bold tracking-tight text-zinc-950 dark:text-white sm:text-3xl"
+      >
+        ADA Title II Compliance & CaC ROI Calculator
+      </h2>
+      <p class="mt-2 text-base text-zinc-600 dark:text-zinc-400">
+        Quantify labor hours and financial investment required for fleet-wide WCAG 2.2 AA remediation: manual LMS cleanup versus automated Curriculum-as-Code pipelines.
+      </p>
+    </div>
+
+    <div class="rounded-xl border border-zinc-300 bg-white p-6 shadow-sm dark:border-zinc-700 dark:bg-zinc-950 sm:p-8">
+      <div class="grid grid-cols-1 gap-8 lg:grid-cols-12">
+        
+        <div class="flex flex-col gap-6 lg:col-span-6">
+          <div>
+            <div class="flex justify-between text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+              <label for="cac-courses">Active Course Shells</label>
+              <span id="cac-courses-val" class="font-mono text-emerald-700 dark:text-emerald-400">120 courses</span>
+            </div>
+            <input 
+              type="range" 
+              id="cac-courses" 
+              min="10" 
+              max="1000" 
+              step="10" 
+              value="120"
+              class="mt-2 h-2 w-full cursor-pointer appearance-none rounded-lg bg-zinc-200 accent-zinc-950 dark:bg-zinc-800 dark:accent-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white"
+            />
+          </div>
+
+          <div>
+            <div class="flex justify-between text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+              <label for="cac-pages">Avg. Pages / Content Units per Shell</label>
+              <span id="cac-pages-val" class="font-mono text-emerald-700 dark:text-emerald-400">25 pages</span>
+            </div>
+            <input 
+              type="range" 
+              id="cac-pages" 
+              min="5" 
+              max="60" 
+              step="5" 
+              value="25"
+              class="mt-2 h-2 w-full cursor-pointer appearance-none rounded-lg bg-zinc-200 accent-zinc-950 dark:bg-zinc-800 dark:accent-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white"
+            />
+          </div>
+
+          <div>
+            <div class="flex justify-between text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+              <label for="cac-mins">Manual Remediation Time (Mins / Page)</label>
+              <span id="cac-mins-val" class="font-mono text-emerald-700 dark:text-emerald-400">15 mins</span>
+            </div>
+            <input 
+              type="range" 
+              id="cac-mins" 
+              min="5" 
+              max="45" 
+              step="5" 
+              value="15"
+              class="mt-2 h-2 w-full cursor-pointer appearance-none rounded-lg bg-zinc-200 accent-zinc-950 dark:bg-zinc-800 dark:accent-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white"
+            />
+          </div>
+
+          <div>
+            <div class="flex justify-between text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+              <label for="cac-rate">Blended Hourly Labor Rate ($/hr)</label>
+              <span id="cac-rate-val" class="font-mono text-emerald-700 dark:text-emerald-400">$45 / hr</span>
+            </div>
+            <input 
+              type="range" 
+              id="cac-rate" 
+              min="25" 
+              max="120" 
+              step="5" 
+              value="45"
+              class="mt-2 h-2 w-full cursor-pointer appearance-none rounded-lg bg-zinc-200 accent-zinc-950 dark:bg-zinc-800 dark:accent-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white"
+            />
+          </div>
+        </div>
+
+        <div class="flex flex-col justify-between rounded-lg border border-zinc-200 bg-zinc-50 p-6 dark:border-zinc-800 dark:bg-zinc-900/40 lg:col-span-6">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
+              Fleet Remediations Comparison
+            </span>
+
+            <div class="mt-4 flex items-baseline gap-2">
+              <span id="cac-savings-dollars" class="text-3xl font-extrabold tracking-tight text-emerald-700 dark:text-emerald-400 sm:text-4xl">
+                $30,420
+              </span>
+              <span class="text-sm font-semibold text-zinc-600 dark:text-zinc-400">Est. Net Budget Saved</span>
+            </div>
+
+            <div class="mt-6 flex flex-col gap-3 border-t border-zinc-200 pt-4 dark:border-zinc-800 text-sm">
+              <div class="flex justify-between">
+                <span class="text-zinc-600 dark:text-zinc-400">Manual LMS Labor:</span>
+                <span id="cac-manual-summary" class="font-semibold text-zinc-900 dark:text-zinc-100">750 hrs ($33,750)</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-zinc-600 dark:text-zinc-400">Curriculum-as-Code Pipeline:</span>
+                <span id="cac-pipeline-summary" class="font-semibold text-zinc-900 dark:text-zinc-100">74 hrs ($3,330)</span>
+              </div>
+              <div class="flex justify-between border-t border-zinc-200 pt-2 dark:border-zinc-800">
+                <span class="font-semibold text-zinc-900 dark:text-zinc-100">Staff Time Recaptured:</span>
+                <span id="cac-hours-saved" class="font-bold text-emerald-700 dark:text-emerald-400">676 Hours</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-zinc-200 dark:border-zinc-800 flex items-center justify-between">
+            <div>
+              <span class="block text-xs text-zinc-500 dark:text-zinc-400 uppercase tracking-wider">Efficiency Gain</span>
+              <span id="cac-roi-mult" class="text-lg font-extrabold text-zinc-900 dark:text-white">10.1x ROI</span>
+            </div>
+            <a 
+              href="#consultation" 
+              class="inline-flex min-h-[44px] items-center justify-center rounded-md bg-zinc-950 px-4 py-2 text-xs font-bold uppercase tracking-wider text-white transition-colors hover:bg-zinc-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-950 dark:bg-white dark:text-zinc-950 dark:hover:bg-zinc-200 dark:focus-visible:outline-white"
+            >
+              Audit Fleet Now
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const coursesInput = document.getElementById('cac-courses');
+      const pagesInput = document.getElementById('cac-pages');
+      const minsInput = document.getElementById('cac-mins');
+      const rateInput = document.getElementById('cac-rate');
+
+      const coursesVal = document.getElementById('cac-courses-val');
+      const pagesVal = document.getElementById('cac-pages-val');
+      const minsVal = document.getElementById('cac-mins-val');
+      const rateVal = document.getElementById('cac-rate-val');
+
+      const savingsDollars = document.getElementById('cac-savings-dollars');
+      const manualSummary = document.getElementById('cac-manual-summary');
+      const pipelineSummary = document.getElementById('cac-pipeline-summary');
+      const hoursSaved = document.getElementById('cac-hours-saved');
+      const roiMult = document.getElementById('cac-roi-mult');
+
+      function recalculate() {
+        const courses = parseInt(coursesInput.value, 10);
+        const pages = parseInt(pagesInput.value, 10);
+        const minsPerPage = parseInt(minsInput.value, 10);
+        const rate = parseInt(rateInput.value, 10);
+
+        coursesVal.textContent = courses + ' courses';
+        pagesVal.textContent = pages + ' pages';
+        minsVal.textContent = minsPerPage + ' mins';
+        rateVal.textContent = '$' + rate + ' / hr';
+
+        coursesInput.setAttribute('aria-valuenow', courses);
+        pagesInput.setAttribute('aria-valuenow', pages);
+        minsInput.setAttribute('aria-valuenow', minsPerPage);
+        rateInput.setAttribute('aria-valuenow', rate);
+
+        const totalPages = courses * pages;
+        const manualHours = Math.round((totalPages * minsPerPage) / 60);
+        const manualCost = manualHours * rate;
+
+        const cacHours = Math.round(40 + (courses * 0.2));
+        const cacCost = cacHours * rate;
+
+        const netSavingsCost = Math.max(0, manualCost - cacCost);
+        const netHoursSaved = Math.max(0, manualHours - cacHours);
+        const multiplier = cacCost > 0 ? (manualCost / cacCost).toFixed(1) : '0';
+
+        savingsDollars.textContent = '$' + netSavingsCost.toLocaleString();
+        manualSummary.textContent = manualHours.toLocaleString() + ' hrs ($' + manualCost.toLocaleString() + ')';
+        pipelineSummary.textContent = cacHours.toLocaleString() + ' hrs ($' + cacCost.toLocaleString() + ')';
+        hoursSaved.textContent = netHoursSaved.toLocaleString() + ' Hours';
+        roiMult.textContent = multiplier + 'x ROI';
+      }
+
+      [coursesInput, pagesInput, minsInput, rateInput].forEach(function (el) {
+        el.addEventListener('input', recalculate);
+      });
+
+      recalculate();
+    })();
+  </script>
+</section>
