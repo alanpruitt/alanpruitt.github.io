@@ -4,6 +4,8 @@
   "private": true,
   "scripts": {
     "audit": "npm run lint:md",
+    "audit:live": "node scripts/audit.js",
+    "audit:local": "BASE_URL=http://localhost:1313/alanpruitt node scripts/audit.js",
     "lint:md": "markdownlint --config .markdownlint.json \"content/**/*.md\"",
     "lint:md:fix": "markdownlint --config .markdownlint.json --fix \"content/**/*.md\"",
     "predeploy": "npm run audit"
