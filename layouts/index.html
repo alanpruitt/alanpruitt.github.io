@@ -197,6 +197,31 @@
         .object-cover { object-fit: cover; }
         .flex-shrink-0 { flex-shrink: 0; }
         .hover\:underline:hover { text-decoration: underline; }
+
+        /* Ensure interactive elements meet touch target requirements (min 44x44px on mobile) */
+        nav[aria-label*="Language"] a, nav[aria-label*="idioma"] a {
+            display: inline-flex;
+            min-height: 44px;
+            min-width: 44px;
+            align-items: center;
+            justify-content: center;
+            padding: 0.375rem 0.75rem;
+            text-decoration: none;
+            box-sizing: border-box;
+        }
+        @media (min-width: 640px) {
+            nav[aria-label*="Language"] a, nav[aria-label*="idioma"] a {
+                min-height: 36px;
+                min-width: 36px;
+            }
+        }
+        header a {
+            display: inline-flex;
+            align-items: center;
+            min-height: 44px;
+            min-width: 44px;
+            box-sizing: border-box;
+        }
     </style>
 </head>
 <body class="bg-creme-100 text-navy-900 font-sans antialiased min-h-full flex flex-col justify-between">
