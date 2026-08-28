@@ -5,6 +5,8 @@ draft: false
 tags: ["Accessibility", "Instructional Design", "Curriculum-as-Code", "Higher Ed", "ADA Title II"]
 categories: ["Essays"]
 description: "How engineering course architectures in plain Markdown with automated CI/CD linters solves ADA Title II compliance and enables fleet-wide accessibility refactoring."
+translationKey: "essay-27"
+slug: "essay-27"
 ---
 
 When the Department of Justice codified WCAG 2.1 AA standards under ADA Title II for public higher education institutions, it ended the era of reactive, page-by-page accessibility audits. Traditional post-publication fixes inside LMS rich text editors fail to scale across multi-section course fleets.

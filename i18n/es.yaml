@@ -1,0 +1,20 @@
+hero_veteran:
+  other: "Veterano USMC"
+hero_gemini:
+  other: "Facultad Certificada Google Gemini"
+hero_wcag:
+  other: "Certificación WCAG 2.2 AA"
+hero_heading:
+  other: "Recupera la soberanía académica y escala infraestructura accesible desde el origen."
+hero_cta_primary:
+  other: "Solicitar sesión estratégica institucional"
+hero_cta_secondary:
+  other: "Explorar ensayos CaC (01–27)"
+hero_subheading:
+  other: "Integrando cumplimiento institucional, <span class=\"font-semibold text-zinc-950 dark:text-white\">Plan de Estudios como Código (CaC)</span> y flujos deterministas de IA generativa—estructurados para el cumplimiento total de ADA Título II, seguridad de datos sin intermediarios y cero dependencia de proveedores."
+hero_footer:
+  other: "Arquitectura con validación automatizada, tuberías Hugo SSG y paridad SSoT en Canvas LMS."
+hero_aria_credentials:
+  other: "Credenciales Profesionales"
+hero_aria_standards:
+  other: "Estándares de Arquitectura"

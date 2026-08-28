@@ -1,0 +1,20 @@
+hero_veteran:
+  other: "USMC Veteran"
+hero_gemini:
+  other: "Google Gemini Certified Faculty"
+hero_wcag:
+  other: "WCAG 2.2 AA Certified"
+hero_heading:
+  other: "Reclaim Academic Sovereignty and Scale Born-Accessible Infrastructure."
+hero_cta_primary:
+  other: "Request Institutional Strategy Briefing"
+hero_cta_secondary:
+  other: "Explore CaC Essays (01–27)"
+hero_subheading:
+  other: "Bridging institutional compliance, <span class=\"font-semibold text-zinc-950 dark:text-white\">Curriculum-as-Code (CaC)</span>, and deterministic Generative AI pipelines—engineered for ADA Title II fleet compliance, zero-trust data safety, and zero vendor lock-in."
+hero_footer:
+  other: "Architected with deterministic linting, Hugo SSG pipelines, and Canvas LMS SSoT parity."
+hero_aria_credentials:
+  other: "Professional Credentials"
+hero_aria_standards:
+  other: "Architectural Standards"

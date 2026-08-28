@@ -1,11 +1,47 @@
-<nav aria-label="Language Selector" class="language-switcher">
-  <ul>
+<nav 
+  aria-label="Selector de idioma / Language selector" 
+  class="inline-flex items-center rounded-lg border border-zinc-300 bg-zinc-50 p-1 dark:border-zinc-700 dark:bg-zinc-900"
+>
+  <ul class="flex items-center gap-1 list-none m-0 p-0">
+    {{ $currentLang := .Lang }}
     {{ range .AllTranslations }}
       <li>
-        <a href="{{ .Permalink }}" hreflang="{{ .Language.Lang }}" {{ if eq $.Language.Lang .Language.Lang }}aria-current="page"{{ end }}>
-          {{ .Language.LanguageName }}
+        {{ $isActive := eq .Lang $currentLang }}
+        <a 
+          href="{{ .RelPermalink }}" 
+          hreflang="{{ .Language.LanguageCode | default .Lang }}" 
+          lang="{{ .Language.LanguageCode | default .Lang }}"
+          {{ if $isActive }}aria-current="page"{{ end }}
+          class="inline-flex min-h-[44px] min-w-[44px] sm:min-h-[36px] sm:min-w-[36px] items-center justify-center rounded-md px-3 py-1.5 text-xs font-bold uppercase tracking-wider transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white
+          {{ if $isActive }}
+            bg-zinc-950 text-white shadow-sm dark:bg-white dark:text-zinc-950 pointer-events-none
+          {{ else }}
+            text-zinc-600 hover:text-zinc-950 hover:bg-zinc-200/60 dark:text-zinc-400 dark:hover:text-white dark:hover:bg-zinc-800
+          {{ end }}"
+        >
+          {{ .Language.LanguageName | default .Lang }}
         </a>
       </li>
+    {{ else }}
+      {{ range .Site.Languages }}
+        {{ $isSiteLangActive := eq .Lang $currentLang }}
+        <li>
+          <a 
+            href="{{ if eq .Lang $.Site.Language.Lang }}/{{ else }}/{{ .Lang }}/{{ end }}" 
+            hreflang="{{ .LanguageCode | default .Lang }}" 
+            lang="{{ .LanguageCode | default .Lang }}"
+            {{ if $isSiteLangActive }}aria-current="page"{{ end }}
+            class="inline-flex min-h-[44px] min-w-[44px] sm:min-h-[36px] sm:min-w-[36px] items-center justify-center rounded-md px-3 py-1.5 text-xs font-bold uppercase tracking-wider transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white
+            {{ if $isSiteLangActive }}
+              bg-zinc-950 text-white shadow-sm dark:bg-white dark:text-zinc-950 pointer-events-none
+            {{ else }}
+              text-zinc-600 hover:text-zinc-950 hover:bg-zinc-200/60 dark:text-zinc-400 dark:hover:text-white dark:hover:bg-zinc-800
+            {{ end }}"
+          >
+            {{ .LanguageName | default .Lang }}
+          </a>
+        </li>
+      {{ end }}
     {{ end }}
   </ul>
 </nav>
