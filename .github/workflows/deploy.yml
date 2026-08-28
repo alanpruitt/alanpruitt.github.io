@@ -43,7 +43,11 @@ jobs:
           extended: true
 
       - name: Build Hugo Static Site
-        run: hugo --minify
+        run: |
+          mkdir -p public
+          cp -r essays public/ 2>/dev/null || true
+          cp -r articles public/ 2>/dev/null || true
+          hugo --minify
 
       - name: Run Markdown Linter Check
         run: npm run lint:md
