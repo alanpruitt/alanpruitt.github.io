@@ -1,78 +1,252 @@
-{{ define "main" }}
-<div class="py-12 sm:py-16">
-  <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-    
-    <div class="mb-10 text-left">
-      <h1 class="text-3xl font-extrabold tracking-tight text-zinc-950 dark:text-white sm:text-4xl">
-        {{ if eq .Lang "es" }}Ensayos de Estrategia Institucional y Curriculum-as-Code{{ else }}Curriculum-as-Code & Institutional Strategy Essays{{ end }}
-      </h1>
-      <p class="mt-3 max-w-3xl text-base text-zinc-600 dark:text-zinc-400">
-        {{ if eq .Lang "es" }}
-          Explora la colección completa de ensayos que documentan la soberanía digital, el cumplimiento de ADA Título II y los protocolos de seguridad en IA.
-        {{ else }}
-          Explore the complete collection of essays documenting digital sovereignty, ADA Title II accessibility refactoring, and deterministic AI safety protocols.
-        {{ end }}
-      </p>
-    </div>
+<!DOCTYPE html>
+<html lang="{{ .Lang | default "en" }}" class="h-full scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ if eq .Lang "es" }}Ensayos de Estrategia Institucional{{ else }}Curriculum-as-Code & Institutional Strategy Essays{{ end }} | Alan Pruitt</title>
+    <meta name="description" content="Explore the complete collection of Curriculum-as-Code and digital sovereignty essays by Alan Pruitt.">
+    <link rel="canonical" href="{{ .Permalink }}">
 
-    {{ partial "essay-filter.html" . }}
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%230B192C'/></svg>">
 
-    <div id="essays-grid" class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-      {{ range .Pages.ByDate.Reverse }}
-        {{ $catList := "" }}
-        {{ with .Params.categories }}
-          {{ $catList = delimit . " " }}
-        {{ end }}
+    <style>
+        :root {
+            --bg-creme-50: #fbfbfb;
+            --bg-creme-100: #FAF8F5;
+            --bg-creme-200: #EAE3D2;
+            --text-navy-800: #1B2A4A;
+            --text-navy-900: #0B192C;
+        }
 
-        {{ $numMatch := findRE "[0-9]+" .File.BaseFileName 1 }}
-        {{ $essayNum := index $numMatch 0 | default "" }}
+        *, ::before, ::after { box-sizing: border-box; border-width: 0; }
+        html { line-height: 1.5; -webkit-text-size-adjust: 100%; tab-size: 4; font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+        body { margin: 0; background-color: var(--bg-creme-100); color: var(--text-navy-900); }
 
-        <article 
-          class="essay-card-item flex flex-col justify-between rounded-xl border border-zinc-200 bg-white p-6 shadow-sm transition hover:border-zinc-400 hover:shadow-md dark:border-zinc-800 dark:bg-zinc-900/60 dark:hover:border-zinc-600"
-          data-categories="{{ $catList }}"
-        >
-          <div>
-            <div class="mb-3 flex items-center justify-between">
-              {{ if $essayNum }}
-                <span class="inline-flex items-center rounded border border-zinc-300 bg-zinc-100 px-2 py-0.5 text-[11px] font-bold uppercase tracking-wider text-zinc-800 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-200">
-                  Essay {{ $essayNum }}
-                </span>
-              {{ end }}
-              
-              <div class="flex flex-wrap gap-1">
-                {{ range .Params.categories }}
-                  <span class="rounded bg-zinc-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400">
-                    {{ . }}
-                  </span>
+        .w-full { width: 100%; }
+        .max-w-5xl { max-width: 64rem; }
+        .max-w-6xl { max-width: 72rem; }
+        .mx-auto { margin-left: auto; margin-right: auto; }
+        .flex { display: flex; }
+        .flex-col { flex-direction: column; }
+        .flex-grow { flex-grow: 1; }
+        .items-center { align-items: center; }
+        .justify-between { justify-content: space-between; }
+        .grid { display: grid; }
+        .grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+
+        @media (min-width: 640px) {
+            .sm\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        }
+
+        @media (min-width: 1024px) {
+            .lg\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+        }
+
+        .flex-wrap { flex-wrap: wrap; }
+        .gap-2 { gap: 0.5rem; }
+        .gap-3 { gap: 0.75rem; }
+        .gap-4 { gap: 1rem; }
+        .gap-6 { gap: 1.5rem; }
+
+        .bg-white { background-color: #ffffff; }
+        .bg-zinc-50 { background-color: #f9f9fb; }
+        .bg-zinc-100 { background-color: #f4f4f5; }
+        .bg-zinc-950 { background-color: #09090b; }
+        .text-white { color: #ffffff; }
+        .text-zinc-500 { color: #71717a; }
+        .text-zinc-600 { color: #52525b; }
+        .text-zinc-750 { color: #27272a; }
+        .text-zinc-800 { color: #27272a; }
+        .text-zinc-900 { color: #18181b; }
+        .text-zinc-950 { color: #09090b; }
+        .text-emerald-700 { color: #047857; }
+
+        .p-1 { padding: 0.25rem; }
+        .p-6 { padding: 1.5rem; }
+        .p-8 { padding: 2rem; }
+        .px-2 { padding-left: 0.5rem; padding-right: 0.5rem; }
+        .px-4 { padding-left: 1rem; padding-right: 1rem; }
+        .px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+        .py-0.5 { padding-top: 0.125rem; padding-bottom: 0.125rem; }
+        .py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+        .py-12 { padding-top: 3rem; padding-bottom: 3rem; }
+        .py-16 { padding-top: 4rem; padding-bottom: 4rem; }
+        .pt-4 { padding-top: 1rem; }
+
+        .mt-3 { margin-top: 0.75rem; }
+        .mt-6 { margin-top: 1.5rem; }
+        .mb-3 { margin-top: 0; margin-bottom: 0.75rem; }
+        .mb-8 { margin-bottom: 2rem; }
+        .mb-10 { margin-bottom: 2.5rem; }
+
+        .border { border-style: solid; border-width: 1px; }
+        .border-t { border-top-style: solid; border-top-width: 1px; }
+        .border-b { border-bottom-style: solid; border-bottom-width: 1px; }
+        .border-zinc-200 { border-color: #e4e4e7; }
+        .border-zinc-300 { border-color: #d4d4d8; }
+        .border-zinc-950 { border-color: #09090b; }
+
+        .rounded { border-radius: 0.25rem; }
+        .rounded-lg { border-radius: 0.5rem; }
+        .rounded-xl { border-radius: 0.75rem; }
+
+        .font-semibold { font-weight: 600; }
+        .font-bold { font-weight: 700; }
+        .font-extrabold { font-weight: 800; }
+
+        .text-xs { font-size: 0.75rem; line-height: 1rem; }
+        .text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+        .text-base { font-size: 1rem; line-height: 1.5rem; }
+        .text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+        .text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+        .text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+        
+        .tracking-tight { letter-spacing: -0.025em; }
+        .tracking-wider { letter-spacing: 0.05em; }
+        .uppercase { text-transform: uppercase; }
+
+        .shadow-sm { box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); }
+        .transition { transition-property: all; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
+        .hover\:bg-zinc-100:hover { background-color: #f4f4f5; }
+        .hover\:bg-zinc-800:hover { background-color: #27272a; }
+        .hover\:underline:hover { text-decoration: underline; }
+        .hover\:shadow-md:hover { box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); }
+        .hover\:border-zinc-400:hover { border-color: #a1a1aa; }
+
+        /* Line Clamp */
+        .line-clamp-3 {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;  
+            overflow: hidden;
+        }
+
+        /* Nav active switch visual styles */
+        .sticky { position: sticky; }
+        .top-0 { top: 0; }
+        .z-50 { z-index: 50; }
+        .backdrop-blur-md { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+        .bg-white\/90 { background-color: rgba(255, 255, 255, 0.9); }
+        .h-16 { height: 4rem; }
+        .text-navy-900 { color: var(--text-navy-900); }
+        
+        /* Language Selector sizing override */
+        .min-h-\[32px\] { min-height: 32px; }
+        .min-w-\[32px\] { min-width: 32px; }
+        .min-h-\[44px\] { min-height: 44px; }
+        
+        /* Focus Outline */
+        .focus-visible\:outline:focus-visible { outline: 2px solid var(--text-navy-900); outline-offset: 2px; }
+    </style>
+</head>
+<body class="bg-creme-100 text-navy-900 font-sans antialiased min-h-full flex flex-col justify-between">
+
+    {{ partial "header.html" . }}
+
+    <main class="w-full max-w-6xl mx-auto px-6 py-8 flex-grow">
+        <div class="py-12 sm:py-16">
+          <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+            
+            <!-- Section Header -->
+            <div class="mb-10 text-left">
+              <h1 class="text-3xl font-extrabold tracking-tight text-zinc-950 dark:text-white sm:text-4xl">
+                {{ if eq .Lang "es" }}Ensayos de Estrategia Institucional y Plan de Estudios como Código{{ else }}Curriculum-as-Code & Institutional Strategy Essays{{ end }}
+              </h1>
+              <p class="mt-3 max-w-3xl text-base text-zinc-600 dark:text-zinc-400">
+                {{ if eq .Lang "es" }}
+                  Explora la colección completa de ensayos que documentan la soberanía digital, el cumplimiento de ADA Título II y los protocolos de seguridad en IA.
+                {{ else }}
+                  Explore the complete collection of essays documenting digital sovereignty, ADA Title II accessibility refactoring, and deterministic AI safety protocols.
                 {{ end }}
-              </div>
+              </p>
             </div>
 
-            <h2 class="text-lg font-bold leading-snug text-zinc-950 dark:text-white">
-              <a href="{{ .RelPermalink }}" class="hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white">
-                {{ .Title }}
-              </a>
-            </h2>
+            <!-- Category Filter Bar -->
+            {{ partial "essay-filter.html" . }}
 
-            <p class="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400 line-clamp-3">
-              {{ .Description | default .Summary }}
-            </p>
+            <!-- Essay Cards Grid -->
+            <div id="essays-grid" class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {{ range .Pages.ByDate.Reverse }}
+                {{ $catList := "" }}
+                {{ with .Params.categories }}
+                  {{ $catList = delimit . " " }}
+                {{ end }}
+
+                {{ $numMatch := findRE "[0-9]+" .File.BaseFileName 1 }}
+                {{ $essayNum := index $numMatch 0 | default "" }}
+
+                <article 
+                  class="essay-card-item flex flex-col justify-between rounded-xl border border-zinc-200 bg-white p-6 shadow-sm transition hover:border-zinc-400 hover:shadow-md dark:border-zinc-800 dark:bg-zinc-900/60 dark:hover:border-zinc-600"
+                  data-categories="{{ $catList }}"
+                >
+                  <div>
+                    <!-- Header Meta: Essay Number & Category Badges -->
+                    <div class="mb-3 flex items-center justify-between">
+                      {{ if $essayNum }}
+                        <span class="inline-flex items-center rounded border border-zinc-300 bg-zinc-100 px-2 py-0.5 text-[11px] font-bold uppercase tracking-wider text-zinc-800 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-200">
+                          Essay {{ $essayNum }}
+                        </span>
+                      {{ end }}
+                      
+                      <div class="flex flex-wrap gap-1">
+                        {{ range .Params.categories }}
+                          <span class="rounded bg-zinc-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400">
+                            {{ . }}
+                          </span>
+                        {{ end }}
+                      </div>
+                    </div>
+
+                    <!-- Polished Essay Title -->
+                    <h2 class="text-lg font-bold leading-snug text-zinc-950 dark:text-white">
+                      <a href="{{ .RelPermalink }}" class="hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white" style="text-decoration: none; color: inherit;">
+                        {{ .Title }}
+                      </a>
+                    </h2>
+
+                    <!-- Summary / Excerpt -->
+                    <p class="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400 line-clamp-3">
+                      {{ .Description | default .Summary }}
+                    </p>
+                  </div>
+
+                  <!-- Card Footer Meta -->
+                  <div class="mt-6 flex items-center justify-between border-t border-zinc-100 pt-4 text-xs font-semibold text-zinc-500 dark:border-zinc-800 dark:text-zinc-400">
+                    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 02, 2006" }}</time>
+                    <a 
+                      href="{{ .RelPermalink }}" 
+                      class="inline-flex min-h-[32px] items-center text-zinc-950 hover:underline dark:text-white"
+                      aria-label="Read {{ .Title }}"
+                      style="text-decoration: none; color: inherit;"
+                    >
+                      {{ if eq $.Lang "es" }}Leer Ensayo →{{ else }}Read Essay →{{ end }}
+                    </a>
+                  </div>
+                </article>
+              {{ end }}
+            </div>
+
           </div>
+        </div>
+    </main>
 
-          <div class="mt-6 flex items-center justify-between border-t border-zinc-100 pt-4 text-xs font-semibold text-zinc-500 dark:border-zinc-800 dark:text-zinc-400">
-            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 02, 2006" }}</time>
-            <a 
-              href="{{ .RelPermalink }}" 
-              class="inline-flex min-h-[32px] items-center text-zinc-950 hover:underline dark:text-white"
-              aria-label="Read {{ .Title }}"
-            >
-              {{ if eq $.Lang "es" }}Leer Ensayo →{{ else }}Read Essay →{{ end }}
-            </a>
-          </div>
-        </article>
-      {{ end }}
-    </div>
+    <footer class="w-full max-w-6xl mx-auto px-6 py-8 mt-12 border-t border-creme-200 flex flex-col md:flex-row justify-between items-center text-xs text-navy-800 gap-4">
+        <div class="space-y-1 text-center md:text-left">
+            <div>&copy; <span id="year"></span> Alan Pruitt. All rights reserved.</div>
+            <div style="opacity: 0.85;">
+                Code licensed under <a href="/LICENSE" class="underline hover:text-navy-900" style="color: inherit;">MIT</a>. 
+                Content licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer" class="underline hover:text-navy-900" style="color: inherit;">CC BY 4.0</a>.
+            </div>
+        </div>
+        <div class="flex space-x-6" style="gap: 1.5rem;">
+            <a href="https://github.com/alanpruitt" target="_blank" rel="noopener noreferrer" class="hover:text-navy-900 transition-colors" style="color: inherit; text-decoration: none;">GitHub</a>
+            <a href="https://www.linkedin.com/in/alanpruitt/" target="_blank" rel="noopener noreferrer" class="hover:text-navy-900 transition-colors" style="color: inherit; text-decoration: none;">LinkedIn</a>
+            <a href="https://www.webcognita.com" target="_blank" rel="noopener noreferrer" class="hover:text-navy-900 transition-colors" style="color: inherit; text-decoration: none;">Webcognita</a>
+        </div>
+    </footer>
 
-  </div>
-</div>
-{{ end }}
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
