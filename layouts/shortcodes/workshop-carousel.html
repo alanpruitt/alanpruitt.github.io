@@ -1,55 +1,282 @@
-<div class="not-prose my-8 overflow-hidden rounded-2xl border border-zinc-300 bg-zinc-950 p-4 shadow-xl dark:border-zinc-800" aria-roledescription="carousel" aria-label="Workshop Visual Presentation Deck">
+<div class="not-prose my-8 overflow-hidden rounded-2xl border border-zinc-300 bg-zinc-950 p-4 sm:p-6 shadow-2xl dark:border-zinc-800" aria-roledescription="carousel" aria-label="Workshop Executive Slide Deck">
   
-  <!-- Carousel Header & Slide Counter -->
+  <!-- Carousel Navigation Header & Live Slide Counter -->
   <div class="flex items-center justify-between border-b border-zinc-800 pb-3 mb-4 text-left">
     <div class="flex items-center gap-2">
-      <span class="inline-flex h-2.5 w-2.5 rounded-full bg-emerald-500" aria-hidden="true"></span>
-      <span class="text-xs font-extrabold uppercase tracking-wider text-zinc-300">Executive Slide Deck</span>
+      <span class="inline-flex h-2.5 w-2.5 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true"></span>
+      <span class="text-xs font-extrabold uppercase tracking-wider text-zinc-300">Executive Blueprint Presentation</span>
     </div>
     <div class="flex items-center gap-3">
-      <span id="carousel-counter" class="text-xs font-mono font-bold text-zinc-400" aria-live="polite">Slide 1 of 12</span>
+      <span id="deck-counter" class="text-xs font-mono font-bold text-emerald-400 bg-zinc-900 border border-zinc-800 px-2.5 py-1 rounded-md" aria-live="polite">Slide 1 of 12</span>
     </div>
   </div>
 
-  <!-- Slide Viewport -->
-  <div class="relative aspect-[16/9] w-full overflow-hidden rounded-xl bg-zinc-900 flex items-center justify-center">
+  <!-- Slide Viewport (Strict 16:9 Aspect Ratio Container) -->
+  <div class="relative w-full aspect-[16/9] min-h-[320px] sm:min-h-[440px] overflow-hidden rounded-xl bg-zinc-900 border border-zinc-800 text-white select-none">
     
-    <!-- Slides 1 through 12 -->
-    <div class="carousel-slide block w-full h-full" data-slide="1" role="group" aria-roledescription="slide" aria-label="1 of 12: Workshop Title and Scope">
-      <img src="/images/workshops/reclaiming-our-time/slide-01.png" alt="Reclaiming Our Time: Secure and Practical GenAI Workflows for Faculty and Staff - Facilitated by Alan Pruitt" class="h-full w-full object-contain">
+    <!-- SLIDE 1: Title & Operational Blueprint -->
+    <div class="deck-slide absolute inset-0 p-6 sm:p-10 flex flex-col justify-between bg-slate-900" data-slide="1" role="group" aria-roledescription="slide" aria-label="Slide 1 of 12: Title">
+      <div class="flex justify-between items-start">
+        <span class="text-[11px] font-bold uppercase tracking-widest text-emerald-400 bg-emerald-950/60 border border-emerald-800 px-3 py-1 rounded-full">Operational Blueprint</span>
+        <span class="text-xs font-mono text-zinc-500">Slide 01</span>
+      </div>
+      <div class="text-center my-auto">
+        <div class="inline-block p-3 rounded-2xl bg-slate-800/80 border border-slate-700 mb-4 shadow-inner">
+          <svg class="w-10 h-10 sm:w-14 sm:h-14 text-emerald-400 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+          </svg>
+        </div>
+        <h3 class="text-2xl sm:text-4xl font-black text-white tracking-tight">Reclaiming Our Time</h3>
+        <p class="mt-2 text-sm sm:text-lg text-slate-300 font-medium">Secure and Practical GenAI Workflows for Faculty and Staff</p>
+      </div>
+      <div class="border-t border-slate-800 pt-3 flex flex-wrap justify-between items-center text-[11px] sm:text-xs text-slate-400">
+        <span><strong>Facilitator:</strong> Alan Pruitt (DCC - Yuma) | alanpruitt@arizona.edu</span>
+        <span><strong>Target:</strong> U of A Faculty & Staff</span>
+      </div>
     </div>
-    <div class="carousel-slide hidden w-full h-full" data-slide="2" role="group" aria-roledescription="slide" aria-label="2 of 12: Administrative Relief and Institutional Pillars">
-      <img src="/images/workshops/reclaiming-our-time/slide-02.png" alt="Three Pillars: Office of Responsible AI, Information Security Office, Enterprise AI Infrastructure" class="h-full w-full object-contain">
+
+    <!-- SLIDE 2: Administrative Relief & 3 Pillars -->
+    <div class="deck-slide absolute inset-0 p-6 sm:p-10 flex flex-col justify-between bg-slate-900" style="display:none;" data-slide="2" role="group" aria-roledescription="slide" aria-label="Slide 2 of 12: Administrative Relief">
+      <div class="flex justify-between items-start">
+        <span class="text-[11px] font-bold uppercase tracking-widest text-emerald-400 bg-emerald-950/60 border border-emerald-800 px-3 py-1 rounded-full">Institutional Foundations</span>
+        <span class="text-xs font-mono text-zinc-500">Slide 02</span>
+      </div>
+      <div class="my-auto">
+        <h3 class="text-xl sm:text-3xl font-extrabold text-white text-center mb-6">Administrative Relief: Three Institutional Pillars</h3>
+        <div class="grid grid-cols-3 gap-3 sm:gap-6">
+          <div class="bg-slate-800 border border-slate-700 p-4 sm:p-6 rounded-xl text-center flex flex-col justify-center">
+            <h4 class="text-xs sm:text-base font-bold text-emerald-400">Office of Responsible AI</h4>
+            <p class="mt-2 text-[10px] sm:text-xs text-slate-300">Policy alignment, pedagogical integrity, and ethical adoption standards.</p>
+          </div>
+          <div class="bg-slate-800 border border-slate-700 p-4 sm:p-6 rounded-xl text-center flex flex-col justify-center">
+            <h4 class="text-xs sm:text-base font-bold text-emerald-400">Information Security Office (ISO)</h4>
+            <p class="mt-2 text-[10px] sm:text-xs text-slate-300">FERPA protection, data classification, and institutional compliance.</p>
+          </div>
+          <div class="bg-slate-800 border border-slate-700 p-4 sm:p-6 rounded-xl text-center flex flex-col justify-center">
+            <h4 class="text-xs sm:text-base font-bold text-emerald-400">Enterprise AI Infrastructure</h4>
+            <p class="mt-2 text-[10px] sm:text-xs text-slate-300">NetID authenticated instances (Google Gemini Enterprise, U of A GenAI).</p>
+          </div>
+        </div>
+      </div>
+      <p class="text-center text-xs text-slate-400 border-t border-slate-800 pt-3">The University of Arizona supports legally sound, academically rigorous AI integration to eliminate friction.</p>
     </div>
-    <div class="carousel-slide hidden w-full h-full" data-slide="3" role="group" aria-roledescription="slide" aria-label="3 of 12: NetID Authenticated Enterprise Portals vs Consumer Harvesters">
-      <img src="/images/workshops/reclaiming-our-time/slide-03.png" alt="Comparison between unauthenticated consumer AI where data is harvested, and NetID authenticated zero-training enterprise sandboxes" class="h-full w-full object-contain">
+
+    <!-- SLIDE 3: Consumer vs Enterprise AI -->
+    <div class="deck-slide absolute inset-0 p-6 sm:p-10 flex flex-col justify-between bg-slate-900" style="display:none;" data-slide="3" role="group" aria-roledescription="slide" aria-label="Slide 3 of 12: Enterprise Portals">
+      <div class="flex justify-between items-start">
+        <span class="text-[11px] font-bold uppercase tracking-widest text-emerald-400 bg-emerald-950/60 border border-emerald-800 px-3 py-1 rounded-full">Security Boundary</span>
+        <span class="text-xs font-mono text-zinc-500">Slide 03</span>
+      </div>
+      <div class="my-auto grid grid-cols-2 gap-4 sm:gap-8">
+        <div class="bg-red-950/30 border border-red-800/60 p-4 sm:p-6 rounded-xl">
+          <div class="flex items-center gap-2 text-red-400 font-bold text-xs sm:text-base mb-2">
+            <span class="text-lg">❌</span> Unauthenticated Consumer AI
+          </div>
+          <ul class="text-[11px] sm:text-xs text-red-200/80 space-y-1.5 list-disc pl-4">
+            <li>Prompts & documents ingested for public model training.</li>
+            <li>No enterprise data confidentiality agreements.</li>
+            <li>Direct violation of institutional compliance guidelines.</li>
+          </ul>
+        </div>
+        <div class="bg-emerald-950/30 border border-emerald-800/60 p-4 sm:p-6 rounded-xl">
+          <div class="flex items-center gap-2 text-emerald-400 font-bold text-xs sm:text-base mb-2">
+            <span class="text-lg">✅</span> NetID Enterprise Portals
+          </div>
+          <ul class="text-[11px] sm:text-xs text-emerald-200/80 space-y-1.5 list-disc pl-4">
+            <li>Google Gemini Enterprise, U of A GenAI, Copilot.</li>
+            <li><strong>Zero-Training Environment:</strong> Internal data is protected.</li>
+            <li>Strictly walled sandbox for instructional drafting.</li>
+          </ul>
+        </div>
+      </div>
+      <p class="text-center text-xs text-slate-400 border-t border-slate-800 pt-3">Rule: Never paste university data into unauthenticated consumer chatbots.</p>
     </div>
-    <div class="carousel-slide hidden w-full h-full" data-slide="4" role="group" aria-roledescription="slide" aria-label="4 of 12: Workflow 1 Instant Syllabus Compliance Auditing">
-      <img src="/images/workshops/reclaiming-our-time/slide-04.png" alt="Workflow 1: Ingesting draft course syllabus and institutional checklist to automatically audit grading scales and accommodation policies" class="h-full w-full object-contain">
+
+    <!-- SLIDE 4: Workflow 1: Syllabus Auditing -->
+    <div class="deck-slide absolute inset-0 p-6 sm:p-10 flex flex-col justify-between bg-slate-900" style="display:none;" data-slide="4" role="group" aria-roledescription="slide" aria-label="Slide 4 of 12: Syllabus Auditing">
+      <div class="flex justify-between items-start">
+        <span class="text-[11px] font-bold uppercase tracking-widest text-emerald-400 bg-emerald-950/60 border border-emerald-800 px-3 py-1 rounded-full">High-Yield Workflow 1</span>
+        <span class="text-xs font-mono text-zinc-500">Slide 04</span>
+      </div>
+      <div class="my-auto">
+        <h3 class="text-lg sm:text-2xl font-bold text-white mb-4 text-center">Instant Syllabus Compliance Auditing</h3>
+        <div class="grid grid-cols-3 gap-3 items-center text-center">
+          <div class="bg-slate-800 p-3 sm:p-4 rounded-xl border border-slate-700">
+            <span class="text-xs font-bold text-slate-400 block mb-1">Raw Input</span>
+            <p class="text-[11px] sm:text-xs text-slate-200">Draft Course Syllabus + Institutional Policy Checklist</p>
+          </div>
+          <div class="text-emerald-400 text-xl font-bold">&rarr; AI Engine &rarr;</div>
+          <div class="bg-emerald-950/40 p-3 sm:p-4 rounded-xl border border-emerald-800">
+            <span class="text-xs font-bold text-emerald-400 block mb-1">Refined Output</span>
+            <p class="text-[11px] sm:text-xs text-emerald-200">Audited grading scales, ADA statements, and required disclosures in seconds.</p>
+          </div>
+        </div>
+      </div>
+      <p class="text-center text-xs text-slate-400 border-t border-slate-800 pt-3">Reclaims 45–60 minutes per course shell during start-of-term preparation.</p>
     </div>
-    <div class="carousel-slide hidden w-full h-full" data-slide="5" role="group" aria-roledescription="slide" aria-label="5 of 12: Workflow 2 Transcript Synthesis and Action Items">
-      <img src="/images/workshops/reclaiming-our-time/slide-05.png" alt="Workflow 2: Ingesting meeting transcripts to generate executive summaries, decision logs, and action-item matrices" class="h-full w-full object-contain">
+
+    <!-- SLIDE 5: Workflow 2: Transcript Synthesis -->
+    <div class="deck-slide absolute inset-0 p-6 sm:p-10 flex flex-col justify-between bg-slate-900" style="display:none;" data-slide="5" role="group" aria-roledescription="slide" aria-label="Slide 5 of 12: Transcript Synthesis">
+      <div class="flex justify-between items-start">
+        <span class="text-[11px] font-bold uppercase tracking-widest text-emerald-400 bg-emerald-950/60 border border-emerald-800 px-3 py-1 rounded-full">High-Yield Workflow 2</span>
+        <span class="text-xs font-mono text-zinc-500">Slide 05</span>
+      </div>
+      <div class="my-auto">
+        <h3 class="text-lg sm:text-2xl font-bold text-white mb-4 text-center">Transcript Synthesis & Action Items</h3>
+        <div class="grid grid-cols-3 gap-3 items-center text-center">
+          <div class="bg-slate-800 p-3 sm:p-4 rounded-xl border border-slate-700">
+            <span class="text-xs font-bold text-slate-400 block mb-1">Raw Input</span>
+            <p class="text-[11px] sm:text-xs text-slate-200">Sanitized Committee Meeting Audio/Video Transcripts</p>
+          </div>
+          <div class="text-emerald-400 text-xl font-bold">&rarr; AI Engine &rarr;</div>
+          <div class="bg-emerald-950/40 p-3 sm:p-4 rounded-xl border border-emerald-800">
+            <span class="text-xs font-bold text-emerald-400 block mb-1">Refined Output</span>
+            <p class="text-[11px] sm:text-xs text-emerald-200">Executive summaries, chronological decision logs, and action-item matrices.</p>
+          </div>
+        </div>
+      </div>
+      <p class="text-center text-xs text-slate-400 border-t border-slate-800 pt-3">Turns 2-hour recorded meetings into clear, structured roadmaps.</p>
     </div>
-    <div class="carousel-slide hidden w-full h-full" data-slide="6" role="group" aria-roledescription="slide" aria-label="6 of 12: Workflow 3 Rubric Scaling and Formative Feedback">
-      <img src="/images/workshops/reclaiming-our-time/slide-06.png" alt="Workflow 3: Ingesting assignment prompts, scoring rubrics, and de-identified student work to draft formative feedback" class="h-full w-full object-contain">
+
+    <!-- SLIDE 6: Workflow 3: Rubric Scaling -->
+    <div class="deck-slide absolute inset-0 p-6 sm:p-10 flex flex-col justify-between bg-slate-900" style="display:none;" data-slide="6" role="group" aria-roledescription="slide" aria-label="Slide 6 of 12: Rubric Scaling">
+      <div class="flex justify-between items-start">
+        <span class="text-[11px] font-bold uppercase tracking-widest text-emerald-400 bg-emerald-950/60 border border-emerald-800 px-3 py-1 rounded-full">High-Yield Workflow 3</span>
+        <span class="text-xs font-mono text-zinc-500">Slide 06</span>
+      </div>
+      <div class="my-auto">
+        <h3 class="text-lg sm:text-2xl font-bold text-white mb-4 text-center">Rubric Scaling & Formative Feedback</h3>
+        <div class="grid grid-cols-3 gap-3 items-center text-center">
+          <div class="bg-slate-800 p-3 sm:p-4 rounded-xl border border-slate-700">
+            <span class="text-xs font-bold text-slate-400 block mb-1">Raw Input</span>
+            <p class="text-[11px] sm:text-xs text-slate-200">Assignment Prompt + Scoring Rubric + De-identified Student Draft</p>
+          </div>
+          <div class="text-emerald-400 text-xl font-bold">&rarr; AI Engine &rarr;</div>
+          <div class="bg-emerald-950/40 p-3 sm:p-4 rounded-xl border border-emerald-800">
+            <span class="text-xs font-bold text-emerald-400 block mb-1">Refined Output</span>
+            <p class="text-[11px] sm:text-xs text-emerald-200">Structured formative feedback mapped to criteria, awaiting instructor review.</p>
+          </div>
+        </div>
+      </div>
+      <p class="text-center text-xs text-slate-400 border-t border-slate-800 pt-3">AI drafts the feedback; human educators retain 100% final grading authority.</p>
     </div>
-    <div class="carousel-slide hidden w-full h-full" data-slide="7" role="group" aria-roledescription="slide" aria-label="7 of 12: Human Sanitization Protocol and FERPA">
-      <img src="/images/workshops/reclaiming-our-time/slide-07.png" alt="Sanitization protocol showing stripping PII before entering prompts and maintaining ephemeral chat lifecycles" class="h-full w-full object-contain">
+
+    <!-- SLIDE 7: FERPA & Sanitization -->
+    <div class="deck-slide absolute inset-0 p-6 sm:p-10 flex flex-col justify-between bg-slate-900" style="display:none;" data-slide="7" role="group" aria-roledescription="slide" aria-label="Slide 7 of 12: FERPA Sanitization">
+      <div class="flex justify-between items-start">
+        <span class="text-[11px] font-bold uppercase tracking-widest text-amber-400 bg-amber-950/60 border border-amber-800 px-3 py-1 rounded-full">Compliance Guardrail</span>
+        <span class="text-xs font-mono text-zinc-500">Slide 07</span>
+      </div>
+      <div class="my-auto text-center">
+        <h3 class="text-lg sm:text-2xl font-bold text-white mb-3">The Human Sanitization Protocol</h3>
+        <div class="max-w-xl mx-auto bg-slate-800/90 border border-slate-700 p-4 rounded-xl text-left text-xs text-slate-300 space-y-2">
+          <p class="text-red-300 font-bold">❌ Strip all Personally Identifiable Information (PII) before input:</p>
+          <p class="text-slate-300 pl-4">• Student full names, NetIDs, Student IDs, email addresses.<br>• Identifiable personal anecdotes or unique medical/clinical details.</p>
+          <p class="text-emerald-300 font-bold mt-2">✅ Safe Context: Sanitized course outlines, prompts, generic rubrics.</p>
+        </div>
+      </div>
+      <p class="text-center text-xs text-amber-300 border-t border-slate-800 pt-3">⚠️ FERPA Warning: Stored student outputs can become official records. Maintain ephemeral chat sessions.</p>
     </div>
-    <div class="carousel-slide hidden w-full h-full" data-slide="8" role="group" aria-roledescription="slide" aria-label="8 of 12: The Anatomical Prompt Scaffold">
-      <img src="/images/workshops/reclaiming-our-time/slide-08.png" alt="Structured prompt vault using triple-hash delimiters to isolate Role, Context, and Constraints" class="h-full w-full object-contain">
+
+    <!-- SLIDE 8: Delimiter Prompt Scaffold -->
+    <div class="deck-slide absolute inset-0 p-6 sm:p-10 flex flex-col justify-between bg-slate-900" style="display:none;" data-slide="8" role="group" aria-roledescription="slide" aria-label="Slide 8 of 12: Prompt Delimiters">
+      <div class="flex justify-between items-start">
+        <span class="text-[11px] font-bold uppercase tracking-widest text-emerald-400 bg-emerald-950/60 border border-emerald-800 px-3 py-1 rounded-full">Prompt Vault Architecture</span>
+        <span class="text-xs font-mono text-zinc-500">Slide 08</span>
+      </div>
+      <div class="my-auto">
+        <h3 class="text-lg sm:text-xl font-bold text-white mb-2 text-center">The Anatomical Prompt Scaffold (Preventing Model Drift)</h3>
+        <div class="bg-zinc-950 border border-zinc-800 p-3.5 sm:p-4 rounded-xl font-mono text-[10px] sm:text-xs text-emerald-300 max-w-xl mx-auto">
+          <p class="text-zinc-500 font-sans text-[11px] mb-1">### Triple-Hash Delimiters Act as Concrete Containment Walls ###</p>
+          <p><span class="text-amber-400">### ROLE & OBJECTIVE ###</span><br>You are an expert curriculum designer and higher-ed administrator.</p>
+          <p class="mt-1"><span class="text-amber-400">### CONTEXT ###</span><br>[Insert sanitized course outline or meeting notes here]</p>
+          <p class="mt-1"><span class="text-amber-400">### TASK & CONSTRAINTS ###</span><br>Audit context against standards. Enforce professional tone and tabular output.</p>
+        </div>
+      </div>
+      <p class="text-center text-xs text-slate-400 border-t border-slate-800 pt-3">Explicit delimiter boundaries eliminate hallucinations and enforce clean table outputs.</p>
     </div>
-    <div class="carousel-slide hidden w-full h-full" data-slide="9" role="group" aria-roledescription="slide" aria-label="9 of 12: Institutional Data Routing Matrix">
-      <img src="/images/workshops/reclaiming-our-time/slide-09.png" alt="Data routing matrix routing HIPAA data strictly to Soteria and enterprise drafting to Gemini" class="h-full w-full object-contain">
+
+    <!-- SLIDE 9: Compliance Matrix -->
+    <div class="deck-slide absolute inset-0 p-6 sm:p-10 flex flex-col justify-between bg-slate-900" style="display:none;" data-slide="9" role="group" aria-roledescription="slide" aria-label="Slide 9 of 12: Compliance Matrix">
+      <div class="flex justify-between items-start">
+        <span class="text-[11px] font-bold uppercase tracking-widest text-emerald-400 bg-emerald-950/60 border border-emerald-800 px-3 py-1 rounded-full">Data Routing Matrix</span>
+        <span class="text-xs font-mono text-zinc-500">Slide 09</span>
+      </div>
+      <div class="my-auto overflow-x-auto">
+        <table class="w-full text-left text-[10px] sm:text-xs border-collapse">
+          <thead>
+            <tr class="border-b border-slate-700 text-slate-300">
+              <th class="py-1.5 px-2">Data Classification</th>
+              <th class="py-1.5 px-2">Consumer AI</th>
+              <th class="py-1.5 px-2">Enterprise AI (Gemini)</th>
+              <th class="py-1.5 px-2 text-emerald-400">U of A Soteria</th>
+            </tr>
+          </thead>
+          <tbody class="text-slate-300 divide-y divide-slate-800">
+            <tr><td class="py-1 px-2 font-semibold">Instructional Drafts</td><td class="text-red-400">❌ Prohibited</td><td class="text-emerald-400 font-bold">✅ Approved</td><td class="text-emerald-400">✅ Approved</td></tr>
+            <tr><td class="py-1 px-2 font-semibold">Sanitized Student Work</td><td class="text-red-400">❌ Prohibited</td><td class="text-emerald-400 font-bold">✅ De-identified</td><td class="text-emerald-400">✅ Approved</td></tr>
+            <tr><td class="py-1 px-2 font-semibold">HIPAA / Clinical Data</td><td class="text-red-400">❌ Prohibited</td><td class="text-red-400">❌ Prohibited</td><td class="text-emerald-400 font-bold">✅ Exclusive</td></tr>
+            <tr><td class="py-1 px-2 font-semibold">Restricted (SSN / ITAR)</td><td class="text-red-400 font-bold">❌ NEVER</td><td class="text-red-400 font-bold">❌ NEVER</td><td class="text-red-400 font-bold">❌ NEVER</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-center text-xs text-slate-400 border-t border-slate-800 pt-3">Regulated clinical and health data must route exclusively to U of A Soteria.</p>
     </div>
-    <div class="carousel-slide hidden w-full h-full" data-slide="10" role="group" aria-roledescription="slide" aria-label="10 of 12: The Closed-Loop GenAI Workflow">
-      <img src="/images/workshops/reclaiming-our-time/slide-10.png" alt="Closed loop workflow: Authenticate, Sanitize, Structure, Supervise" class="h-full w-full object-contain">
+
+    <!-- SLIDE 10: Closed Loop Workflow -->
+    <div class="deck-slide absolute inset-0 p-6 sm:p-10 flex flex-col justify-between bg-slate-900" style="display:none;" data-slide="10" role="group" aria-roledescription="slide" aria-label="Slide 10 of 12: Closed Loop Workflow">
+      <div class="flex justify-between items-start">
+        <span class="text-[11px] font-bold uppercase tracking-widest text-emerald-400 bg-emerald-950/60 border border-emerald-800 px-3 py-1 rounded-full">Execution Cycle</span>
+        <span class="text-xs font-mono text-zinc-500">Slide 10</span>
+      </div>
+      <div class="my-auto text-center">
+        <h3 class="text-lg sm:text-2xl font-bold text-white mb-4">Structure = Security + Speed</h3>
+        <div class="grid grid-cols-4 gap-2 sm:gap-4 max-w-2xl mx-auto">
+          <div class="bg-slate-800 border border-slate-700 p-2.5 sm:p-3 rounded-lg"><span class="text-emerald-400 font-bold block text-sm">1. Auth</span><p class="text-[10px] text-slate-300 mt-1">Log in via NetID.</p></div>
+          <div class="bg-slate-800 border border-slate-700 p-2.5 sm:p-3 rounded-lg"><span class="text-emerald-400 font-bold block text-sm">2. Sanitize</span><p class="text-[10px] text-slate-300 mt-1">Scrub all PII/FERPA.</p></div>
+          <div class="bg-slate-800 border border-slate-700 p-2.5 sm:p-3 rounded-lg"><span class="text-emerald-400 font-bold block text-sm">3. Structure</span><p class="text-[10px] text-slate-300 mt-1">Use ### delimiters.</p></div>
+          <div class="bg-slate-800 border border-slate-700 p-2.5 sm:p-3 rounded-lg"><span class="text-emerald-400 font-bold block text-sm">4. Supervise</span><p class="text-[10px] text-slate-300 mt-1">Human approval.</p></div>
+        </div>
+      </div>
+      <p class="text-center text-xs text-slate-400 border-t border-slate-800 pt-3">The closed-loop system protects both university assets and student privacy.</p>
     </div>
-    <div class="carousel-slide hidden w-full h-full" data-slide="11" role="group" aria-roledescription="slide" aria-label="11 of 12: Human Authority and Syllabus Disclosures">
-      <img src="/images/workshops/reclaiming-our-time/slide-11.png" alt="AI drafts, humans decide. Syllabus disclosures ensure transparency and academic integrity" class="h-full w-full object-contain">
+
+    <!-- SLIDE 11: Human Authority & Syllabus Disclosures -->
+    <div class="deck-slide absolute inset-0 p-6 sm:p-10 flex flex-col justify-between bg-slate-900" style="display:none;" data-slide="11" role="group" aria-roledescription="slide" aria-label="Slide 11 of 12: Human Authority">
+      <div class="flex justify-between items-start">
+        <span class="text-[11px] font-bold uppercase tracking-widest text-emerald-400 bg-emerald-950/60 border border-emerald-800 px-3 py-1 rounded-full">Pedagogical Governance</span>
+        <span class="text-xs font-mono text-zinc-500">Slide 11</span>
+      </div>
+      <div class="my-auto grid grid-cols-2 gap-4 sm:gap-8">
+        <div class="bg-slate-800/80 border border-slate-700 p-4 sm:p-6 rounded-xl">
+          <h4 class="text-sm sm:text-base font-bold text-white mb-2">AI Drafts, Humans Decide</h4>
+          <p class="text-[11px] sm:text-xs text-slate-300 leading-relaxed">Faculty and staff retain absolute final authority and accountability for all pedagogical, administrative, and grading artifacts.</p>
+        </div>
+        <div class="bg-slate-800/80 border border-slate-700 p-4 sm:p-6 rounded-xl">
+          <h4 class="text-sm sm:text-base font-bold text-white mb-2">Syllabus Disclosures</h4>
+          <p class="text-[11px] sm:text-xs text-slate-300 leading-relaxed">Utilize standard institutional language for transparent course-level AI use disclosures to maintain student trust and academic integrity.</p>
+        </div>
+      </div>
+      <p class="text-center text-xs text-slate-400 border-t border-slate-800 pt-3">AI generates the rough draft; human expertise provides the final decision.</p>
     </div>
-    <div class="carousel-slide hidden w-full h-full" data-slide="12" role="group" aria-roledescription="slide" aria-label="12 of 12: Five Operational Rules">
-      <img src="/images/workshops/reclaiming-our-time/slide-12.png" alt="Summary card: 1. Enterprise Auth, 2. De-Identify Context, 3. Triple Hash Delimiters, 4. Route Data, 5. Human Authority" class="h-full w-full object-contain">
+
+    <!-- SLIDE 12: 5 Operational Rules Summary -->
+    <div class="deck-slide absolute inset-0 p-6 sm:p-10 flex flex-col justify-between bg-slate-900" style="display:none;" data-slide="12" role="group" aria-roledescription="slide" aria-label="Slide 12 of 12: Five Operational Rules">
+      <div class="flex justify-between items-start">
+        <span class="text-[11px] font-bold uppercase tracking-widest text-emerald-400 bg-emerald-950/60 border border-emerald-800 px-3 py-1 rounded-full">Executive Quick-Reference</span>
+        <span class="text-xs font-mono text-zinc-500">Slide 12</span>
+      </div>
+      <div class="my-auto">
+        <h3 class="text-base sm:text-xl font-black text-white text-center mb-3">### U OF A GENAI OPERATIONAL RULES ###</h3>
+        <ol class="text-[10px] sm:text-xs text-slate-200 space-y-1.5 max-w-xl mx-auto list-decimal pl-5">
+          <li><strong>Enterprise Auth:</strong> Always log in using NetID into approved enterprise tools.</li>
+          <li><strong>De-Identify Context:</strong> Strip all student names, IDs, and PII before generating feedback.</li>
+          <li><strong>Structured Delimiters:</strong> Wrap reference context inside <code class="text-emerald-400 font-mono">###</code> blocks.</li>
+          <li><strong>Route Regulated Data:</strong> Route HIPAA data strictly to Soteria; never input restricted data.</li>
+          <li><strong>Human Authority:</strong> AI drafts; you retain 100% final pedagogical responsibility.</li>
+        </ol>
+      </div>
+      <p class="text-center text-xs text-emerald-400 font-semibold border-t border-slate-800 pt-3">Reclaim hours of administrative time while safeguarding institutional integrity.</p>
     </div>
 
   </div>
@@ -57,18 +284,18 @@
   <!-- Carousel Controls (44x44px minimum touch targets) -->
   <div class="mt-4 flex items-center justify-between">
     <button 
-      id="carousel-prev-btn" 
+      id="deck-prev-btn" 
       type="button" 
       class="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-lg bg-zinc-900 px-4 py-2 text-xs font-bold uppercase tracking-wider text-white transition hover:bg-zinc-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white"
       aria-label="Previous Slide"
     >
       &larr; Previous
     </button>
-    <div class="flex items-center gap-1.5" id="carousel-dots" aria-hidden="true">
-      <!-- Generated dynamically by JS -->
-    </div>
+    
+    <div class="flex items-center gap-1.5" id="deck-dots" aria-hidden="true"></div>
+    
     <button 
-      id="carousel-next-btn" 
+      id="deck-next-btn" 
       type="button" 
       class="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-lg bg-zinc-900 px-4 py-2 text-xs font-bold uppercase tracking-wider text-white transition hover:bg-zinc-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white"
       aria-label="Next Slide"
@@ -79,30 +306,32 @@
 
 </div>
 
-<!-- Zero-Dependency Accessible Carousel Logic -->
+<!-- Zero-Dependency Slide Navigation Logic with Keyboard Operability -->
 <script>
   (function() {
     let currentSlide = 1;
     const totalSlides = 12;
 
-    function initCarousel() {
-      const slides = document.querySelectorAll('.carousel-slide');
-      const counter = document.getElementById('carousel-counter');
-      const prevBtn = document.getElementById('carousel-prev-btn');
-      const nextBtn = document.getElementById('carousel-next-btn');
-      const dotsContainer = document.getElementById('carousel-dots');
+    function initDeck() {
+      const slides = document.querySelectorAll('.deck-slide');
+      const counter = document.getElementById('deck-counter');
+      const prevBtn = document.getElementById('deck-prev-btn');
+      const nextBtn = document.getElementById('deck-next-btn');
+      const dotsContainer = document.getElementById('deck-dots');
 
       if (!slides.length || !counter) return;
 
-      // Generate accessible indicator dots
-      dotsContainer.innerHTML = '';
-      for (let i = 1; i <= totalSlides; i++) {
-        const dot = document.createElement('button');
-        dot.type = 'button';
-        dot.className = 'h-2 w-2 rounded-full transition ' + (i === 1 ? 'bg-white' : 'bg-zinc-700');
-        dot.setAttribute('aria-label', 'Go to slide ' + i);
-        dot.addEventListener('click', () => showSlide(i));
-        dotsContainer.appendChild(dot);
+      // Build dot navigation
+      if (dotsContainer) {
+        dotsContainer.innerHTML = '';
+        for (let i = 1; i <= totalSlides; i++) {
+          const dot = document.createElement('button');
+          dot.type = 'button';
+          dot.className = 'h-2 w-2 rounded-full transition ' + (i === 1 ? 'bg-emerald-400' : 'bg-zinc-700');
+          dot.setAttribute('aria-label', 'Go to slide ' + i);
+          dot.addEventListener('click', () => showSlide(i));
+          dotsContainer.appendChild(dot);
+        }
       }
 
       function showSlide(index) {
@@ -112,37 +341,39 @@
 
         slides.forEach((slide, idx) => {
           if (idx + 1 === currentSlide) {
-            slide.classList.remove('hidden');
-            slide.classList.add('block');
+            slide.style.display = 'flex';
           } else {
-            slide.classList.remove('block');
-            slide.classList.add('hidden');
+            slide.style.display = 'none';
           }
         });
 
         counter.textContent = 'Slide ' + currentSlide + ' of ' + totalSlides;
 
-        // Update dots
-        const dots = dotsContainer.querySelectorAll('button');
-        dots.forEach((dot, idx) => {
-          dot.className = 'h-2 w-2 rounded-full transition ' + (idx + 1 === currentSlide ? 'bg-white' : 'bg-zinc-700');
-        });
+        if (dotsContainer) {
+          const dots = dotsContainer.querySelectorAll('button');
+          dots.forEach((dot, idx) => {
+            dot.className = 'h-2 w-2 rounded-full transition ' + (idx + 1 === currentSlide ? 'bg-emerald-400' : 'bg-zinc-700');
+          });
+        }
       }
 
       if (prevBtn) prevBtn.addEventListener('click', () => showSlide(currentSlide - 1));
       if (nextBtn) nextBtn.addEventListener('click', () => showSlide(currentSlide + 1));
 
-      // Enable Keyboard Navigation (ArrowLeft / ArrowRight) when focused on carousel
+      // Global Arrow Left/Right keyboard listener
       document.addEventListener('keydown', (e) => {
+        if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
         if (e.key === 'ArrowLeft') showSlide(currentSlide - 1);
         if (e.key === 'ArrowRight') showSlide(currentSlide + 1);
       });
+
+      showSlide(1);
     }
 
     if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', initCarousel);
+      document.addEventListener('DOMContentLoaded', initDeck);
     } else {
-      initCarousel();
+      initDeck();
     }
   })();
 </script>
