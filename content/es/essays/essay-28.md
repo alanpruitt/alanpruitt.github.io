@@ -1,8 +1,9 @@
 ---
 title: "Ensayo 28: Más Allá del Cumplimiento Performativo — Título II de la ADA, Declaraciones Vivas de Conformidad y Gobernanza Institucional Automatizada"
-date: 2026-08-28T12:00:00-07:00
-publishDate: 2026-08-28T12:00:00-07:00
+date: 2026-08-28T08:00:00-07:00
+publishDate: 2026-08-28T08:00:00-07:00
 draft: false
+slug: "essay-28"
 description: "Por qué los descargos estáticos de accesibilidad fallan ante el mandato del Título II de la ADA y cómo implementar declaraciones vivas respaldadas por CI/CD."
 categories: ["Curriculum-as-Code", "Accesibilidad", "Gobernanza en Educación Superior", "Título II de la ADA"]
 layout: "single"

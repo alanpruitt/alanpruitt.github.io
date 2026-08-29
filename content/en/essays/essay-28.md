@@ -1,8 +1,9 @@
 ---
 title: "Essay 28: Beyond Performative Compliance — ADA Title II, Living Conformance Statements, and Automated Institutional Governance"
-date: 2026-08-28T12:00:00-07:00
-publishDate: 2026-08-28T12:00:00-07:00
+date: 2026-08-28T08:00:00-07:00
+publishDate: 2026-08-28T08:00:00-07:00
 draft: false
+slug: "essay-28"
 description: "Why static accessibility disclaimers fail the ADA Title II mandate, and how higher-ed leadership can deploy living, CI/CD-backed conformance statements."
 categories: ["Curriculum-as-Code", "Accessibility", "Higher Education Governance", "ADA Title II"]
 layout: "single"
