@@ -33,6 +33,16 @@
         <span class="text-zinc-300 dark:text-zinc-700" aria-hidden="true">&bull;</span>
 
         <a 
+          href="{{ relLangURL "accessibility/" }}" 
+          class="inline-flex items-center justify-center rounded-md px-2.5 py-1 text-zinc-900 transition-colors hover:text-zinc-950 dark:text-zinc-100 dark:hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white"
+          style="min-height: 44px; min-width: 44px; text-decoration: none; display: inline-flex;"
+        >
+          {{ if eq .Lang "es" }}Accesibilidad{{ else }}Accessibility{{ end }}
+        </a>
+
+        <span class="text-zinc-300 dark:text-zinc-700" aria-hidden="true">&bull;</span>
+
+        <a 
           href="{{ relLangURL "privacy/" }}" 
           class="inline-flex items-center justify-center rounded-md px-2.5 py-1 text-zinc-900 transition-colors hover:text-zinc-950 dark:text-zinc-100 dark:hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white"
           style="min-height: 44px; min-width: 44px; text-decoration: none; display: inline-flex;"
