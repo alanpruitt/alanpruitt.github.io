@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -61,6 +61,14 @@ jobs:
           AUDIT_EXIT=$?
           cat audit.log
           kill $SERVER_PID
+          if [ $AUDIT_EXIT -ne 0 ]; then
+            git config --global user.name "github-actions[bot]"
+            git config --global user.email "github-actions[bot]@users.noreply.github.com"
+            git checkout -b debug-audit-logs || git checkout debug-audit-logs
+            git add audit.log
+            git commit -m "chore: debug audit failure log" || true
+            git push -f origin debug-audit-logs || true
+          fi
           exit $AUDIT_EXIT
 
       - name: Upload Audit Log Artifact
