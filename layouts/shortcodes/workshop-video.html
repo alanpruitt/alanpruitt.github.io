@@ -1,0 +1,46 @@
+<div class="not-prose my-6 overflow-hidden rounded-2xl border border-zinc-300 bg-zinc-950 p-2 shadow-lg dark:border-zinc-800">
+  <div class="relative aspect-video w-full overflow-hidden rounded-xl bg-zinc-900">
+    <video 
+      id="workshop-video-player"
+      controls 
+      preload="metadata"
+      class="h-full w-full object-contain"
+      aria-label="Reclaiming Our Time: Secure and Practical GenAI Workflows for Faculty and Staff Video Overview"
+    >
+      <source src="{{ .Get "src" | default "/videos/reclaiming-our-time.mp4" }}" type="video/mp4">
+      <track 
+        label="English Captions" 
+        kind="captions" 
+        srclang="en" 
+        src="{{ .Get "vtt" | default "/videos/reclaiming-our-time.vtt" }}" 
+        default
+      >
+      Your browser does not support HTML5 video with closed captions.
+    </video>
+  </div>
+</div>
+
+<script>
+  (function() {
+    function initVideoCaptions() {
+      var video = document.getElementById('workshop-video-player');
+      if (video) {
+        var activate = function() {
+          if (video.textTracks && video.textTracks.length > 0) {
+            for (var i = 0; i < video.textTracks.length; i++) {
+              video.textTracks[i].mode = 'showing';
+            }
+          }
+        };
+        video.addEventListener('loadedmetadata', activate);
+        video.addEventListener('play', activate);
+        activate();
+      }
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initVideoCaptions);
+    } else {
+      initVideoCaptions();
+    }
+  })();
+</script>

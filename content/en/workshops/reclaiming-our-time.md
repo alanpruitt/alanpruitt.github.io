@@ -16,46 +16,7 @@ duration: "60 Minutes"
 
 ## Workshop Video Overview
 
-<div class="not-prose my-6 overflow-hidden rounded-2xl border border-zinc-300 bg-zinc-950 p-2 shadow-lg dark:border-zinc-800">
-  <div class="relative aspect-video w-full overflow-hidden rounded-xl bg-zinc-900">
-    <video
-      id="workshop-video-player"
-      controls
-      preload="metadata"
-      class="h-full w-full object-contain"
-      aria-label="Reclaiming Our Time: Secure and Practical GenAI Workflows for Faculty and Staff Video Overview with Auto-Captions"
-    >
-      <source src="/videos/reclaiming-our-time.mp4" type="video/mp4">
-      <track
-        label="English Captions"
-        kind="captions"
-        srclang="en"
-        src="/videos/reclaiming-our-time.vtt"
-        default
-      >
-      Your browser does not support HTML5 video with closed captions.
-    </video>
-  </div>
-</div>
-
-<script>
-  // Ensure closed captions automatically launch across all browsers (WebKit/Safari, Chromium, Gecko)
-  document.addEventListener('DOMContentLoaded', function() {
-    const video = document.getElementById('workshop-video-player');
-    if (video) {
-      function enableCaptions() {
-        if (video.textTracks && video.textTracks.length > 0) {
-          for (let i = 0; i < video.textTracks.length; i++) {
-            video.textTracks[i].mode = 'showing';
-          }
-        }
-      }
-      video.addEventListener('loadedmetadata', enableCaptions);
-      video.addEventListener('play', enableCaptions);
-      enableCaptions();
-    }
-  });
-</script>
+{{< workshop-video src="/videos/reclaiming-our-time.mp4" vtt="/videos/reclaiming-our-time.vtt" >}}
 
 ---
 
