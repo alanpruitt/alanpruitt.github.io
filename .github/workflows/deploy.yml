@@ -57,8 +57,18 @@ jobs:
           npx serve public -l 1313 &
           SERVER_PID=$!
           npx wait-on http://localhost:1313/
-          BASE_URL=http://localhost:1313 node scripts/audit.js
+          BASE_URL=http://localhost:1313 node scripts/audit.js > audit.log 2>&1
+          AUDIT_EXIT=$?
+          cat audit.log
           kill $SERVER_PID
+          exit $AUDIT_EXIT
+
+      - name: Upload Audit Log Artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: audit-log
+          path: audit.log
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
