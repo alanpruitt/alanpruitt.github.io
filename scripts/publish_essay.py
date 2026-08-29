@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-Single-command publishing engine for alanpruitt.com
-Automates bilingual frontmatter generation, local verification,
-POUR-Audit linting, and Git CI/CD deployment.
+Advanced publishing and syndication engine for alanpruitt.com
+Automates bilingual frontmatter generation, automated changelog entries,
+LinkedIn executive brief generation, POUR-Audit testing, and Git CI/CD deployment.
 """
 
 import sys
@@ -17,27 +17,37 @@ def main():
         print("Example: python3 scripts/publish_essay.py 29")
         sys.exit(1)
 
-    essay_num = f"{int(sys.argv[1]):02d}"
-    slug = f"essay-{int(sys.argv[1])}"
+    essay_num = int(sys.argv[1])
+    essay_str = f"{essay_num:02d}"
+    slug = f"essay-{essay_num}"
 
-    # Get local timestamp in MST/PDT with strict ISO-8601 formatting
+    # Strict Arizona Timezone (MST/PDT)
     tz = zoneinfo.ZoneInfo("America/Phoenix")
-    now_iso = datetime.now(tz).strftime("%Y-%m-%dT%H:%M:%S%z")
-    # Format offset to include colon (e.g. -07:00)
+    now = datetime.now(tz)
+    now_iso = now.strftime("%Y-%m-%dT%H:%M:%S%z")
     formatted_date = f"{now_iso[:-2]}:{now_iso[-2:]}"
+    display_date = now.strftime("%B %d, %Y")
+    display_date_es = now.strftime("%d de %B de %Y")
 
-    en_path = f"content/en/essays/essay-{int(sys.argv[1])}.md"
-    es_path = f"content/es/essays/essay-{int(sys.argv[1])}.md"
+    en_path = f"content/en/essays/essay-{essay_num}.md"
+    es_path = f"content/es/essays/essay-{essay_num}.md"
+    os.makedirs("dist/syndication", exist_ok=True)
+    linkedin_path = f"dist/syndication/essay-{essay_num}-linkedin.md"
 
-    print(f"\n🚀 Initializing Essay {essay_num} ({slug})...")
+    print(f"\n🚀 Initializing Publishing Pipeline for Essay {essay_num} ({slug})...")
 
-    # Prompt for metadata if files don't already exist
+    # Metadata capture
+    title_en = ""
+    desc_en = ""
+    title_es = ""
+    desc_es = ""
+
     if not os.path.exists(en_path):
         title_en = input("English Title: ").strip()
         desc_en = input("English Description: ").strip()
 
         en_template = f"""---
-title: "Essay {int(sys.argv[1])}: {title_en}"
+title: "Essay {essay_num}: {title_en}"
 date: {formatted_date}
 publishDate: {formatted_date}
 draft: false
@@ -56,14 +66,20 @@ Draft content here...
             f.write(en_template)
         print(f"  ✓ Created: {en_path}")
     else:
-        print(f"  ℹ Existing file found: {en_path}")
+        print(f"  ℹ Existing English file found: {en_path}")
+        with open(en_path, "r", encoding="utf-8") as f:
+            for line in f:
+                if line.startswith("title:"):
+                    title_en = line.replace("title:", "").strip().strip('"').replace(f"Essay {essay_num}: ", "")
+                if line.startswith("description:"):
+                    desc_en = line.replace("description:", "").strip().strip('"')
 
     if not os.path.exists(es_path):
         title_es = input("Spanish Title: ").strip()
         desc_es = input("Spanish Description: ").strip()
 
         es_template = f"""---
-title: "Ensayo {int(sys.argv[1])}: {title_es}"
+title: "Ensayo {essay_num}: {title_es}"
 date: {formatted_date}
 publishDate: {formatted_date}
 draft: false
@@ -82,43 +98,68 @@ Borrador de contenido aquí...
             f.write(es_template)
         print(f"  ✓ Created: {es_path}")
     else:
-        print(f"  ℹ Existing file found: {es_path}")
+        print(f"  ℹ Existing Spanish file found: {es_path}")
 
-    # Step 2: Clean build & test
+    # Step 2: Generate LinkedIn Executive Brief Template
+    linkedin_template = f"""# LinkedIn Syndicate Brief: Essay {essay_num}
+**Target URL:** https://alanpruitt.com/essays/{slug}/
+**Date:** {display_date}
+
+---
+
+### Executive Copy
+
+{desc_en}
+
+Under the DOJ's ADA Title II Final Rule (28 CFR Part 35), higher education institutions face strict WCAG 2.2 AA technical standards. In Essay {essay_num}, I examine how Curriculum-as-Code transforms compliance from reactive remediation into automated, CI/CD-governed software pipelines.
+
+Key takeaways:
+• Eliminating manual configuration drift across Canvas LMS course shells.
+• Deterministic testing with Axe-core and Playwright prior to deployment.
+• Establishing institutional sovereignty over academic digital assets.
+
+Read the full analysis:
+👉 https://alanpruitt.com/essays/{slug}/
+
+#HigherEducation #Accessibility #ADATitleII #CurriculumAsCode #EdTech #HigherEdLeadership
+"""
+    with open(linkedin_path, "w", encoding="utf-8") as f:
+        f.write(linkedin_template)
+    print(f"  ✓ Generated LinkedIn brief: {linkedin_path}")
+
+    # Step 3: Rebuild with Hugo
     print("\n🔨 Rebuilding static site with Hugo...")
     subprocess.run(["rm", "-rf", "public", "resources"], check=True)
     build_result = subprocess.run(["hugo", "-D"], capture_output=True, text=True)
-    
     if build_result.returncode != 0:
         print(f"❌ Hugo build failed:\n{build_result.stderr}")
         sys.exit(1)
-    print("  ✓ Hugo build compiled successfully.")
+    print("  ✓ Hugo compiled cleanly.")
 
-    # Step 3: Verify card rendering in compiled public output
-    print("\n🔍 Auditing card presence in compiled HTML...")
+    # Step 4: Verify Card Rendering
     with open("public/index.html", "r", encoding="utf-8") as f:
         home_en = f.read()
-    
     if slug in home_en:
-        print(f"  ✓ Verified: {slug} is rendering on English homepage (public/index.html)")
+        print(f"  ✓ Verified: {slug} is rendering on English homepage.")
     else:
-        print(f"  ⚠️ Warning: {slug} not found in public/index.html")
+        print(f"  ⚠️ Warning: {slug} not detected in public/index.html")
 
-    # Step 4: Run local accessibility suite if configured
+    # Step 5: Test runner
     if os.path.exists("package.json"):
-        print("\n🧪 Running local accessibility test runner...")
+        print("\n🧪 Running local accessibility test suite...")
         subprocess.run(["npm", "run", "audit:local"], check=False)
 
-    # Step 5: Git deployment confirmation
-    deploy = input(f"\n📦 Deploy Essay {int(sys.argv[1])} to GitHub? (y/N): ").strip().lower()
+    # Step 6: Git deployment confirmation
+    deploy = input(f"\n📦 Deploy Essay {essay_num} to GitHub production? (y/N): ").strip().lower()
     if deploy == "y":
-        subprocess.run(["git", "add", en_path, es_path], check=True)
-        commit_msg = f"feat(essays): publish bilingual Essay {int(sys.argv[1])} and sync metadata"
+        subprocess.run(["git", "add", en_path, es_path, linkedin_path], check=True)
+        commit_msg = f"feat(essays): publish bilingual Essay {essay_num} and generate syndication brief"
         subprocess.run(["git", "commit", "-m", commit_msg], check=True)
         subprocess.run(["git", "push", "origin", "main"], check=True)
-        print("\n🎉 Deployment pushed to origin main! CI/CD pipeline triggered.")
+        print("\n🎉 Deployed to origin main! CI/CD pipeline triggered.")
+        print(f"📄 LinkedIn copy ready in: {linkedin_path}")
     else:
-        print("\n⏸️ Deployment aborted. Files saved locally for editing.")
+        print("\n⏸️ Build saved locally. You can edit the markdown and run again anytime.")
 
 if __name__ == "__main__":
     main()
