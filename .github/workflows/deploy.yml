@@ -53,6 +53,8 @@ jobs:
         run: npm run lint:md
 
       - name: Start Local Static Server & Run Playwright Audit
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           npx serve public -l 1313 &
           SERVER_PID=$!
@@ -67,7 +69,7 @@ jobs:
             git checkout -b debug-audit-logs || git checkout debug-audit-logs
             git add audit.log
             git commit -m "chore: debug audit failure log" || true
-            git push -f origin debug-audit-logs || true
+            git push -f https://x-access-token:$GH_TOKEN@github.com/alanpruitt/alanpruitt.github.io.git debug-audit-logs || true
           fi
           exit $AUDIT_EXIT
 
