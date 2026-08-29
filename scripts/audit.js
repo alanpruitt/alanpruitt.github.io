@@ -74,6 +74,15 @@ async function runAudits() {
 
     if (accessibilityScanResults.violations.length > 0) {
       console.error(`  ❌ FAIL: ${accessibilityScanResults.violations.length} accessibility violation(s) detected.`);
+      for (const violation of accessibilityScanResults.violations) {
+        console.error(`    - Violation: ${violation.id} (Impact: ${violation.impact})`);
+        console.error(`      Description: ${violation.description}`);
+        console.error(`      Help URL: ${violation.helpUrl}`);
+        for (const node of violation.nodes) {
+          console.error(`      Target: ${node.target.join(', ')}`);
+          console.error(`      HTML: ${node.html}`);
+        }
+      }
       totalErrors += accessibilityScanResults.violations.length;
     } else {
       console.log('  ✓ PASS: 0 WCAG 2.2 AA violations detected (Contrast & Semantics Clean).');
