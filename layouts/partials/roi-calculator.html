@@ -1,141 +1,197 @@
-<section id="roi-calculator" class="py-12 border-b border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-950" aria-labelledby="roi-calculator-heading">
-  <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-    <div class="mb-8 text-left">
-      <h2 id="roi-calculator-heading" class="text-2xl font-extrabold tracking-tight text-zinc-950 dark:text-white sm:text-3xl">
-        {{ if eq .Lang "es" }}Calculadora de ROI de Curriculum-as-Code{{ else }}Curriculum-as-Code ROI & Efficiency Calculator{{ end }}
+<section id="roi-calculator" class="py-12 sm:py-16 border-b border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-950" aria-labelledby="calculator-heading">
+  <div class="w-full max-w-4xl px-4 sm:px-6 lg:px-8 mr-auto ml-0 text-left">
+    
+    <!-- Section Header -->
+    <div class="mb-8 text-left mr-auto ml-0">
+      <div class="inline-flex items-center gap-1.5 rounded-full border border-zinc-300 bg-zinc-50 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-zinc-900 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-200 shadow-sm">
+        {{ if eq .Lang "es" }}Modelo de Impacto Institucional{{ else }}Institutional Impact Modeling{{ end }}
+      </div>
+      <h2 id="calculator-heading" class="mt-3 text-2xl font-extrabold tracking-tight text-zinc-950 dark:text-white sm:text-3xl text-left">
+        {{ if eq .Lang "es" }}Calculadora de ROI y Mitigación ADA Título II{{ else }}ADA Title II Compliance & ROI Calculator{{ end }}
       </h2>
-      <p class="mt-2 text-base text-zinc-600 dark:text-zinc-400">
-        {{ if eq .Lang "es" }}Calcule el ahorro presupuestario y las horas de trabajo docente recuperadas en comparación con la remediación manual en LMS.{{ else }}Calculate budget savings and faculty hours recaptured compared to manual, course-by-course LMS remediation.{{ end }}
+      <p class="mt-2 text-sm text-zinc-850 dark:text-zinc-200 sm:text-base text-left">
+        {{ if eq .Lang "es" }}Estime el costo laboral de la remediación manual frente a la recuperación de presupuesto mediante pipelines automatizados de Curriculum-as-Code.{{ else }}Estimate traditional manual remediation liabilities versus budget and hours recaptured through Curriculum-as-Code automated pipelines.{{ end }}
       </p>
     </div>
 
-    <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
-      <div class="space-y-6">
-        <div>
-          <div class="flex justify-between items-center mb-2">
-            <label for="cac-courses" class="text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-              {{ if eq .Lang "es" }}Cursos Activos (Fleet Shells){{ else }}Active Course Shells{{ end }}
-            </label>
-            <span id="cac-courses-val" class="font-mono text-sm font-bold text-zinc-900 dark:text-zinc-100">200</span>
-          </div>
-          <input 
-            type="range" 
-            id="cac-courses" 
-            min="10" 
-            max="500" 
-            step="10" 
-            value="200"
-            class="w-full h-2 bg-zinc-200 rounded-lg appearance-none cursor-pointer dark:bg-zinc-800 accent-zinc-950 dark:accent-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white"
-          />
-        </div>
-
-        <div>
-          <div class="flex justify-between items-center mb-2">
-            <label for="cac-pages" class="text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-              {{ if eq .Lang "es" }}Páginas / Unidades por Curso{{ else }}Pages / Units per Course{{ end }}
-            </label>
-            <span id="cac-pages-val" class="font-mono text-sm font-bold text-zinc-900 dark:text-zinc-100">30</span>
-          </div>
-          <input 
-            type="range" 
-            id="cac-pages" 
-            min="5" 
-            max="100" 
-            step="5" 
-            value="30"
-            class="w-full h-2 bg-zinc-200 rounded-lg appearance-none cursor-pointer dark:bg-zinc-800 accent-zinc-950 dark:accent-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white"
-          />
-        </div>
-      </div>
-
-      <div class="rounded-2xl border border-zinc-200 bg-zinc-50 p-6 dark:border-zinc-800 dark:bg-zinc-900/60 flex flex-col justify-between">
-        <div class="grid grid-cols-2 gap-4">
+    <!-- Interactive Calculator Card -->
+    <div class="rounded-2xl border border-zinc-300 bg-zinc-50/60 p-6 shadow-sm dark:border-zinc-700 dark:bg-zinc-900/40 sm:p-8 text-left mr-auto ml-0">
+      
+      <form id="roi-form" class="space-y-6" onsubmit="return false;">
+        <div class="grid grid-cols-1 gap-6 sm:grid-cols-3">
+          
+          <!-- Input 1: Course Shell Count -->
           <div>
-            <p class="text-xs font-semibold uppercase tracking-wider text-zinc-600 dark:text-zinc-400">{{ if eq .Lang "es" }}Ahorro Neto{{ else }}Net Budget Recaptured{{ end }}</p>
-            <p id="cac-savings-dollars" class="mt-1 font-mono text-2xl font-extrabold text-emerald-600 dark:text-emerald-400 sm:text-3xl">$63,900</p>
+            <label for="course-count" class="block text-xs font-bold uppercase tracking-wider text-zinc-900 dark:text-zinc-200">
+              {{ if eq .Lang "es" }}Cursos en la Flota{{ else }}Fleet Course Shells{{ end }}
+            </label>
+            <input 
+              type="number" 
+              id="course-count" 
+              name="course-count" 
+              value="120" 
+              min="1" 
+              max="5000" 
+              step="1"
+              class="mt-2 block w-full min-h-[44px] rounded-lg border border-zinc-300 bg-white px-3.5 py-2 text-sm font-semibold text-zinc-950 shadow-sm focus:border-zinc-950 focus:outline-none focus:ring-1 focus:ring-zinc-950 dark:border-zinc-700 dark:bg-zinc-950 dark:text-white dark:focus:border-white dark:focus:ring-white"
+            />
           </div>
+
+          <!-- Input 2: Manual Remediation Hours per Shell -->
           <div>
-            <p class="text-xs font-semibold uppercase tracking-wider text-zinc-600 dark:text-zinc-400">{{ if eq .Lang "es" }}Multiplicador ROI{{ else }}ROI Multiplier{{ end }}</p>
-            <p id="cac-roi-mult" class="mt-1 font-mono text-2xl font-extrabold text-blue-600 dark:text-blue-400 sm:text-3xl">18.8x</p>
+            <label for="hours-per-shell" class="block text-xs font-bold uppercase tracking-wider text-zinc-900 dark:text-zinc-200">
+              {{ if eq .Lang "es" }}Horas Manuales / Curso{{ else }}Manual Hours / Shell{{ end }}
+            </label>
+            <input 
+              type="number" 
+              id="hours-per-shell" 
+              name="hours-per-shell" 
+              value="12" 
+              min="1" 
+              max="100" 
+              step="1"
+              class="mt-2 block w-full min-h-[44px] rounded-lg border border-zinc-300 bg-white px-3.5 py-2 text-sm font-semibold text-zinc-950 shadow-sm focus:border-zinc-950 focus:outline-none focus:ring-1 focus:ring-zinc-950 dark:border-zinc-700 dark:bg-zinc-950 dark:text-white dark:focus:border-white dark:focus:ring-white"
+            />
           </div>
-          <div class="col-span-2 pt-2 border-t border-zinc-200 dark:border-zinc-700">
-            <p class="text-xs font-semibold uppercase tracking-wider text-zinc-600 dark:text-zinc-400">{{ if eq .Lang "es" }}Horas Docentes Reclamadas{{ else }}Faculty Hours Reclaimed{{ end }}</p>
-            <p id="cac-hours-saved" class="mt-1 font-mono text-xl font-bold text-zinc-900 dark:text-zinc-100">1,420 Hours</p>
+
+          <!-- Input 3: Institutional Hourly Rate -->
+          <div>
+            <label for="hourly-rate" class="block text-xs font-bold uppercase tracking-wider text-zinc-900 dark:text-zinc-200">
+              {{ if eq .Lang "es" }}Costo Laboral ($/Hora){{ else }}Blended Labor ($/Hr){{ end }}
+            </label>
+            <input 
+              type="number" 
+              id="hourly-rate" 
+              name="hourly-rate" 
+              value="45" 
+              min="10" 
+              max="250" 
+              step="5"
+              class="mt-2 block w-full min-h-[44px] rounded-lg border border-zinc-300 bg-white px-3.5 py-2 text-sm font-semibold text-zinc-950 shadow-sm focus:border-zinc-950 focus:outline-none focus:ring-1 focus:ring-zinc-950 dark:border-zinc-700 dark:bg-zinc-950 dark:text-white dark:focus:border-white dark:focus:ring-white"
+            />
           </div>
+
+        </div>
+      </form>
+
+      <!-- Results Grid -->
+      <div class="mt-8 border-t border-zinc-200 pt-6 dark:border-zinc-800">
+        
+        <!-- Live Announcer Region for Screen Readers -->
+        <div id="roi-live-announcer" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+
+        <div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
+          
+          <!-- Metric 1: Manual Liability -->
+          <div class="rounded-xl border border-zinc-200 bg-white p-4 dark:border-zinc-800 dark:bg-zinc-950">
+            <p class="text-xs font-semibold text-zinc-800 dark:text-zinc-300">
+              {{ if eq .Lang "es" }}Responsabilidad Manual Total{{ else }}Manual Remediation Cost{{ end }}
+            </p>
+            <p id="stat-manual-cost" class="mt-1 text-xl font-extrabold text-zinc-950 dark:text-white">$64,800</p>
+            <p id="stat-manual-hours" class="mt-0.5 text-xs text-zinc-800 dark:text-zinc-300">1,440 total staff hours</p>
+          </div>
+
+          <!-- Metric 2: Hours Reclaimed -->
+          <div class="rounded-xl border border-zinc-200 bg-white p-4 dark:border-zinc-800 dark:bg-zinc-950">
+            <p class="text-xs font-semibold text-zinc-800 dark:text-zinc-300">
+              {{ if eq .Lang "es" }}Horas Docentes Reclamadas{{ else }}Staff Hours Reclaimed{{ end }}
+            </p>
+            <p id="stat-hours-reclaimed" class="mt-1 text-xl font-extrabold text-emerald-950 dark:text-emerald-200">1,224 hrs</p>
+            <p class="mt-0.5 text-xs text-zinc-800 dark:text-zinc-300">85% automated pipeline reduction</p>
+          </div>
+
+          <!-- Metric 3: Budget Recaptured -->
+          <div class="rounded-xl border border-zinc-200 bg-white p-4 dark:border-zinc-800 dark:bg-zinc-950">
+            <p class="text-xs font-semibold text-zinc-800 dark:text-zinc-300">
+              {{ if eq .Lang "es" }}Presupuesto Recuperado{{ else }}Net Budget Recaptured{{ end }}
+            </p>
+            <p id="stat-budget-recaptured" class="mt-1 text-xl font-extrabold text-emerald-950 dark:text-emerald-200">$55,080</p>
+            <p class="mt-0.5 text-xs text-zinc-800 dark:text-zinc-300">Capital redeployable to core mission</p>
+          </div>
+
         </div>
 
-        <div class="mt-6">
+        <!-- Pre-populated Consultation Routing -->
+        <div class="mt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 rounded-xl bg-zinc-100 p-4 dark:bg-zinc-900">
+          <div>
+            <p class="text-xs font-bold text-zinc-950 dark:text-zinc-100">
+              {{ if eq .Lang "es" }}¿Listo para auditar su flota con estos parámetros?{{ else }}Ready to audit your fleet using these baseline parameters?{{ end }}
+            </p>
+            <p class="text-xs text-zinc-800 dark:text-zinc-300">
+              {{ if eq .Lang "es" }}Inicie una consulta ejecutiva con Webcognita LLC.{{ else }}Initiate an executive advisory consultation with Webcognita LLC.{{ end }}
+            </p>
+          </div>
           <a 
-            href="mailto:alan.pruitt@gmail.com?subject=Institutional%20Strategy%20Briefing%20Inquiry" 
-            class="inline-flex min-h-[44px] w-full items-center justify-center rounded-lg bg-zinc-950 px-4 py-2 text-xs font-bold uppercase tracking-wider text-white transition-colors hover:bg-zinc-800 dark:bg-white dark:text-zinc-950 dark:hover:bg-zinc-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white"
+            id="roi-consult-btn"
+            href="mailto:alan.pruitt@gmail.com?subject=Institutional%20Inquiry:%20ADA%20Title%20II%20Fleet%20Audit&body=Course%20Shells:%20120%0D%0AManual%20Hours%20Per%20Shell:%2012%0D%0AEstimated%20Liability:%20$64,800"
+            class="inline-flex min-h-[44px] shrink-0 items-center justify-center rounded-lg bg-zinc-950 px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-white transition-colors hover:bg-zinc-800 dark:bg-white dark:text-zinc-950 dark:hover:bg-zinc-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white"
           >
-            {{ if eq .Lang "es" }}Solicitar Auditoría de Accesibilidad{{ else }}Schedule Institutional Fleet Audit{{ end }}
+            {{ if eq .Lang "es" }}Solicitar Auditoría de Flota{{ else }}Request Fleet Audit{{ end }}
           </a>
         </div>
+
       </div>
+
     </div>
 
-    <div 
-      id="cac-live-announcer" 
-      class="sr-only" 
-      role="status" 
-      aria-live="polite" 
-      aria-atomic="true"
-    >
-      Calculated net savings: $63,900 with 1,420 faculty hours reclaimed and an 18.8x ROI multiplier.
-    </div>
   </div>
 </section>
 
+<!-- Zero-Dependency Reactive Logic with Accessible Debounced Live Region -->
 <script>
-  (function () {
-    const coursesInput = document.getElementById('cac-courses');
-    const pagesInput = document.getElementById('cac-pages');
-    const coursesVal = document.getElementById('cac-courses-val');
-    const pagesVal = document.getElementById('cac-pages-val');
-    const savingsEl = document.getElementById('cac-savings-dollars');
-    const hoursEl = document.getElementById('cac-hours-saved');
-    const roiEl = document.getElementById('cac-roi-mult');
-    const liveAnnouncer = document.getElementById('cac-live-announcer');
+  (function() {
+    const courseInput = document.getElementById('course-count');
+    const hoursInput = document.getElementById('hours-per-shell');
+    const rateInput = document.getElementById('hourly-rate');
 
-    if (!coursesInput || !pagesInput) return;
+    const statManualCost = document.getElementById('stat-manual-cost');
+    const statManualHours = document.getElementById('stat-manual-hours');
+    const statHoursReclaimed = document.getElementById('stat-hours-reclaimed');
+    const statBudgetRecaptured = document.getElementById('stat-budget-recaptured');
+    const consultBtn = document.getElementById('roi-consult-btn');
+    const liveAnnouncer = document.getElementById('roi-live-announcer');
+
     let debounceTimer;
 
     function recalculate() {
-      const courses = parseInt(coursesInput.value, 10) || 200;
-      const pages = parseInt(pagesInput.value, 10) || 30;
+      const courses = Math.max(1, parseInt(courseInput.value) || 0);
+      const hoursPerShell = Math.max(1, parseInt(hoursInput.value) || 0);
+      const rate = Math.max(1, parseInt(rateInput.value) || 0);
 
-      coursesVal.textContent = courses;
-      pagesVal.textContent = pages;
+      const totalManualHours = courses * hoursPerShell;
+      const totalManualCost = totalManualHours * rate;
 
-      const totalUnits = courses * pages;
-      const manualHours = (totalUnits * 15) / 60;
-      const cacHours = Math.max(20, Math.round(courses * 0.4));
-      const hourlyRate = 45;
+      // CaC delivers an 85% reduction in manual effort
+      const hoursReclaimed = Math.round(totalManualHours * 0.85);
+      const budgetRecaptured = Math.round(totalManualCost * 0.85);
 
-      const manualCost = manualHours * hourlyRate;
-      const cacCost = cacHours * hourlyRate;
-      const netSavings = Math.max(0, manualCost - cacCost);
-      const hoursSaved = Math.max(0, manualHours - cacHours);
-      const roiMult = cacCost > 0 ? (manualCost / cacCost).toFixed(1) : '0.0';
+      statManualCost.textContent = '$' + totalManualCost.toLocaleString();
+      statManualHours.textContent = totalManualHours.toLocaleString() + ' total staff hours';
+      statHoursReclaimed.textContent = hoursReclaimed.toLocaleString() + ' hrs';
+      statBudgetRecaptured.textContent = '$' + budgetRecaptured.toLocaleString();
 
-      const formattedSavings = '$' + netSavings.toLocaleString();
-      const formattedHours = hoursSaved.toLocaleString() + ' Hours';
-      const formattedRoi = roiMult + 'x';
+      const mailBody = encodeURIComponent(
+        'Institutional Fleet Parameters:\n' +
+        '- Estimated Course Shells: ' + courses + '\n' +
+        '- Est. Manual Hours/Shell: ' + hoursPerShell + '\n' +
+        '- Total Manual Exposure: $' + totalManualCost.toLocaleString() + ' (' + totalManualHours.toLocaleString() + ' hrs)\n' +
+        '- Potential Budget Recaptured: $' + budgetRecaptured.toLocaleString()
+      );
+      consultBtn.href = 'mailto:alan.pruitt@gmail.com?subject=Institutional%20Inquiry:%20ADA%20Title%20II%20Fleet%20Audit&body=' + mailBody;
 
-      savingsEl.textContent = formattedSavings;
-      hoursEl.textContent = formattedHours;
-      roiEl.textContent = formattedRoi;
-
+      // Debounced live announcer update for screen readers (500ms)
       clearTimeout(debounceTimer);
       debounceTimer = setTimeout(() => {
         if (liveAnnouncer) {
-          liveAnnouncer.textContent = `Calculated net savings: ${formattedSavings} with ${formattedHours} reclaimed and an ${formattedRoi} ROI multiplier.`;
+          liveAnnouncer.textContent = 'Calculations updated. Total manual cost: $' + totalManualCost.toLocaleString() + '. Budget recaptured: $' + budgetRecaptured.toLocaleString() + '.';
         }
       }, 500);
     }
 
-    coursesInput.addEventListener('input', recalculate);
-    pagesInput.addEventListener('input', recalculate);
+    [courseInput, hoursInput, rateInput].forEach(input => {
+      input.addEventListener('input', recalculate);
+    });
+
+    recalculate();
   })();
 </script>

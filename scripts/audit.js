@@ -93,7 +93,7 @@ async function runAudits() {
       '#hero-heading ~ div a',
       'nav[aria-label*="Navigation"] a',
       'header a',
-      '#roi-calculator-heading ~ div a'
+      '#calculator-heading ~ div a'
     ];
 
     for (const selector of interactiveSelectors) {
@@ -120,39 +120,53 @@ async function runAudits() {
 
     console.log('\n[5/7] Testing Interactive ROI Calculator Sliders & Mathematical Logic...');
     await page.goto(`${BASE_URL}/`, { waitUntil: 'networkidle' });
-    const calcHeading = page.locator('#roi-calculator-heading');
+    const calcHeading = page.locator('#calculator-heading');
 
     if (await calcHeading.count() === 0) {
-      console.error('  ❌ FAIL: ROI Calculator section (#roi-calculator-heading) not found on homepage.');
+      console.error('  ❌ FAIL: ROI Calculator section (#calculator-heading) not found on homepage.');
       totalErrors++;
     } else {
-      const coursesSlider = page.locator('#cac-courses');
-      const pagesSlider = page.locator('#cac-pages');
-      const savingsText = page.locator('#cac-savings-dollars');
-      const hoursSavedText = page.locator('#cac-hours-saved');
-      const roiMultText = page.locator('#cac-roi-mult');
+      const courseCount = page.locator('#course-count');
+      const hoursPerShell = page.locator('#hours-per-shell');
+      const hourlyRate = page.locator('#hourly-rate');
+      
+      const manualCost = page.locator('#stat-manual-cost');
+      const hoursReclaimed = page.locator('#stat-hours-reclaimed');
+      const budgetRecaptured = page.locator('#stat-budget-recaptured');
 
-      await coursesSlider.evaluate((el) => {
+      // Test default values first:
+      const defaultCost = (await manualCost.textContent()).trim();
+      const defaultHours = (await hoursReclaimed.textContent()).trim();
+      const defaultBudget = (await budgetRecaptured.textContent()).trim();
+
+      if (defaultCost !== '$64,800' || defaultHours !== '1,224 hrs' || defaultBudget !== '$55,080') {
+        console.error(`  ❌ FAIL: Default calculation mismatch: ${defaultCost} | ${defaultHours} | ${defaultBudget}`);
+        totalErrors++;
+      } else {
+        console.log(`  ✓ PASS: Default calculation validated (${defaultCost}, ${defaultHours}, ${defaultBudget}).`);
+      }
+
+      // Update inputs:
+      await courseCount.evaluate((el) => {
         el.value = '200';
         el.dispatchEvent(new Event('input', { bubbles: true }));
       });
-
-      await pagesSlider.evaluate((el) => {
+      await hoursPerShell.evaluate((el) => {
         el.value = '30';
         el.dispatchEvent(new Event('input', { bubbles: true }));
       });
 
       await page.waitForTimeout(100);
 
-      const updatedSavings = (await savingsText.textContent()).trim();
-      const updatedHours = (await hoursSavedText.textContent()).trim();
-      const updatedRoi = (await roiMultText.textContent()).trim();
+      const updatedCost = (await manualCost.textContent()).trim();
+      const updatedHours = (await hoursReclaimed.textContent()).trim();
+      const updatedBudget = (await budgetRecaptured.textContent()).trim();
 
-      if (updatedSavings !== '$63,900' || !updatedHours.includes('1,420') || !updatedRoi.includes('18.8x')) {
-        console.error(`  ❌ FAIL: Mathematical calculation mismatch: ${updatedSavings} | ${updatedHours} | ${updatedRoi}`);
+      if (updatedCost !== '$270,000' || updatedHours !== '5,100 hrs' || updatedBudget !== '$229,500') {
+        console.error(`  ❌ FAIL: Updated calculation mismatch: ${updatedCost} | ${updatedHours} | ${updatedBudget}`);
         totalErrors++;
       } else {
-        console.log(`  ✓ PASS: Real-time calculation validated (${updatedSavings}, ${updatedHours}, ${updatedRoi}).`);
+        console.log(`  ✓ PASS: Updated calculation validated (${updatedCost}, ${updatedHours}, ${updatedBudget}).`);
       }
     }
 
