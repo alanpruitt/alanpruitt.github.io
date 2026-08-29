@@ -108,6 +108,10 @@ Without explicit delimiters, LLMs frequently merge user instructions with contex
 
 ---
 
+{{< workshop-infographic >}}
+
+---
+
 ## Synthesis & Reference Portal (5 mins)
 
 ### Quick-Start Faculty Checklist

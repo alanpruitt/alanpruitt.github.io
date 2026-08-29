@@ -108,6 +108,10 @@ Sin delimitadores explícitos, los LLM a menudo fusionan las instrucciones con e
 
 ---
 
+{{< workshop-infographic >}}
+
+---
+
 ## Portal de Síntesis y Referencias (5 mins)
 
 ### Lista de Verificación Rápida para Docentes

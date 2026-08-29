@@ -1,0 +1,63 @@
+<div class="not-prose my-10 overflow-hidden rounded-2xl border border-zinc-300 bg-white p-4 sm:p-6 shadow-xl dark:border-zinc-800 dark:bg-zinc-950 text-left">
+  
+  <div class="flex items-center justify-between border-b border-zinc-200 pb-3 mb-6 dark:border-zinc-800">
+    <div class="flex items-center gap-2">
+      <span class="inline-flex h-2.5 w-2.5 rounded-full bg-emerald-500" aria-hidden="true"></span>
+      <h3 class="text-xs font-extrabold uppercase tracking-wider text-zinc-900 dark:text-zinc-100">
+        Executive Visual Summary & Workflow Map
+      </h3>
+    </div>
+    <span class="text-[11px] font-mono text-zinc-500 dark:text-zinc-400">Blueprint Synthesis</span>
+  </div>
+
+  <!-- Responsive Image Container with Click-to-Enlarge / Open in New Tab -->
+  <div class="relative w-full overflow-hidden rounded-xl border border-zinc-200 bg-zinc-50 dark:border-zinc-800 dark:bg-zinc-900 text-center">
+    <a href="/images/workshops/reclaiming-our-time/secure-workflow-guide.png" target="_blank" rel="noopener noreferrer" title="Click to view full-resolution infographic" class="block group">
+      <img 
+        src="/images/workshops/reclaiming-our-time/secure-workflow-guide.png" 
+        alt="Reclaiming Our Time: Secure GenAI Workflows for Faculty and Staff Infographic Map" 
+        class="w-full h-auto max-h-[850px] object-contain mx-auto transition group-hover:opacity-95"
+        loading="lazy"
+      >
+      <div class="py-2 bg-zinc-100 dark:bg-zinc-900 border-t border-zinc-200 dark:border-zinc-800 text-[11px] font-semibold text-zinc-600 dark:text-zinc-400">
+        Click image to expand full-resolution infographic in a new window &rarr;
+      </div>
+    </a>
+  </div>
+
+  <!-- Semantic Accessible DOM Transcript for Screen Readers & Search Indexing -->
+  <details class="mt-6 rounded-xl border border-zinc-200 bg-zinc-50 p-4 dark:border-zinc-800 dark:bg-zinc-900/60">
+    <summary class="cursor-pointer text-xs font-bold uppercase tracking-wider text-zinc-800 dark:text-zinc-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-zinc-950 dark:focus-visible:ring-white">
+      View Text Transcript & High-Yield Summary (Accessibility Alternative)
+    </summary>
+    <div class="mt-4 space-y-4 text-xs text-zinc-700 dark:text-zinc-300 border-t border-zinc-200 pt-3 dark:border-zinc-800 leading-relaxed">
+      <div>
+        <h4 class="font-bold text-zinc-900 dark:text-white uppercase">1. The Secure Workflow</h4>
+        <ul class="list-disc pl-4 mt-1 space-y-1">
+          <li><strong>Authenticate via NetID:</strong> Use only enterprise-licensed tools like Google Gemini Enterprise to prevent public data training.</li>
+          <li><strong>Use Structured Prompt Delimiters:</strong> Wrap context and tasks in triple hashes (###) to minimize model hallucinations.</li>
+          <li><strong>Automate High-Yield Tasks:</strong> Use AI for syllabus compliance auditing, transcript synthesis, and rubric scaling.</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-bold text-zinc-900 dark:text-white uppercase">2. Institutional Guardrails</h4>
+        <ul class="list-disc pl-4 mt-1 space-y-1">
+          <li><strong>Sanitize Data for FERPA Compliance:</strong> Manually scrub all student names, IDs, and PII before entering text into prompts.</li>
+          <li><strong>Route Regulated Data Correctly:</strong> Direct all HIPAA or clinical workflows exclusively to U of A Soteria.</li>
+          <li><strong>Maintain Human Authority:</strong> Faculty and staff retain final responsibility for all AI-generated pedagogical and administrative artifacts.</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-bold text-zinc-900 dark:text-white uppercase">3. Tool Selection Guide</h4>
+        <ul class="list-disc pl-4 mt-1 space-y-1">
+          <li><strong>Google Gemini Enterprise / U of A GenAI:</strong> Internal administrative data, syllabus auditing, drafting, meeting summaries.</li>
+          <li><strong>U of A Soteria:</strong> HIPAA / Regulated clinical workflows and protected health data.</li>
+          <li><strong>Consumer AI (Unauthenticated):</strong> Public information only. Strictly prohibited for sensitive institutional or student data.</li>
+        </ul>
+      </div>
+    </div>
+  </details>
+
+</div>
