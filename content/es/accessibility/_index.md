@@ -23,7 +23,7 @@ Alan Pruitt está comprometido con garantizar la accesibilidad digital para todo
 
 * **Jerarquía Semántica HTML:** Las plantillas reservan `<h1>` exclusivamente para el título principal y estructuran el contenido a partir de `<h2>` sin omitir niveles.
 * **Tipografía de Alto Contraste:** Los textos cumplen con una relación mínima de contraste de 4.5:1 para texto normal y 3:1 para texto grande en modos claro y oscuro.
-* **Controles Interactivos:** Todos los botones, filtros y enlaces cuentan con áreas de contacto mínimas de $44 \times 44\text{px}$ con indicadores visibles `:focus-visible`.
+* **Controles Interactivos:** Todos los botones, filtros y enlaces cuentan con áreas de contacto mínimas de 44 × 44px con indicadores visibles `:focus-visible`.
 * **Alternativas a Contenido No Textual:** Los diagramas complejos (incluyendo la infografía de Curriculum-as-Code) incluyen transcripciones completas en texto semántico.
 * **Anunciadores para Lectores de Pantalla:** Las herramientas interactivas utilizan regiones `aria-live="polite"` para comunicar cálculos dinámicos sin interrumpir la lectura.
 
