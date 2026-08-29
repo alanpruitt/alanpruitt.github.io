@@ -335,6 +335,10 @@
                 </a>
             </div>
 
+            <div class="md:col-span-3">
+                {{ partial "executive-tracks.html" . }}
+            </div>
+
             <div id="{{ if eq .Lang "es" }}ensayos{{ else }}essays{{ end }}" class="bg-white p-8 rounded-2xl border border-creme-200 shadow-sm md:col-span-3">
                 <div class="flex items-center justify-between mb-6 pb-4 border-b border-creme-100">
                     <div class="flex items-center gap-3">
