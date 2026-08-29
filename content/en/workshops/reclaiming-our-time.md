@@ -1,7 +1,7 @@
 ---
 title: "Reclaiming Our Time: Secure and Practical GenAI Workflows for Faculty and Staff"
-date: 2026-08-29T09:00:00-07:00
-publishDate: 2026-08-29T09:00:00-07:00
+date: 2026-08-29T10:00:00-07:00
+publishDate: 2026-08-29T10:00:00-07:00
 draft: false
 slug: "reclaiming-our-time"
 description: "A 60-minute interactive professional development blueprint and reference portal for secure enterprise GenAI workflows, prompt delimiter architecture, and FERPA/HIPAA compliance."

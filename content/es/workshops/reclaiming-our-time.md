@@ -1,7 +1,7 @@
 ---
 title: "Recuperando Nuestro Tiempo: Flujos de Trabajo de GenAI Seguros y Prácticos para Profesores y Personal"
-date: 2026-08-29T09:00:00-07:00
-publishDate: 2026-08-29T09:00:00-07:00
+date: 2026-08-29T10:00:00-07:00
+publishDate: 2026-08-29T10:00:00-07:00
 draft: false
 slug: "reclaiming-our-time"
 description: "Una guía interactiva de desarrollo profesional de 60 minutos y portal de referencia para flujos de trabajo de GenAI empresariales seguros, arquitectura de delimitadores de prompts y cumplimiento de FERPA/HIPAA."
