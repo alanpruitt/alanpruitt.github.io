@@ -1,0 +1,183 @@
+<section id="advisory-intake" class="py-12 sm:py-16 border-b border-zinc-200 bg-zinc-50 dark:border-zinc-800 dark:bg-zinc-900/40" aria-labelledby="intake-heading">
+  <div class="w-full max-w-4xl px-4 sm:px-6 lg:px-8 mr-auto ml-0 text-left">
+    
+    <div class="mb-8 text-left">
+      <h2 id="intake-heading" class="text-2xl font-extrabold tracking-tight text-zinc-950 dark:text-white sm:text-3xl">
+        {{ if eq .Lang "es" }}Solicitud de Auditoría y Asesoría Institucional{{ else }}Institutional Advisory & Fleet Audit Intake{{ end }}
+      </h2>
+      <p class="mt-2 text-base text-zinc-900 dark:text-zinc-100">
+        {{ if eq .Lang "es" }}Inicie una evaluación de cumplimiento ADA Título II, migración a Curriculum-as-Code o habilitación docente en IA generativa.{{ else }}Initiate an executive ADA Title II fleet evaluation, Curriculum-as-Code pipeline migration, or GenAI faculty enablement engagement.{{ end }}
+      </p>
+    </div>
+
+    <!-- Executive Intake Form -->
+    <form 
+      action="https://formspree.io/f/your-form-id" 
+      method="POST" 
+      class="space-y-6 rounded-2xl border border-zinc-300 bg-white p-6 shadow-sm dark:border-zinc-700 dark:bg-zinc-950 sm:p-8"
+      novalidate
+    >
+      
+      <!-- Institutional Contact Grid -->
+      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+        <div>
+          <label for="lead-name" class="block text-sm font-bold text-zinc-950 dark:text-white">
+            {{ if eq .Lang "es" }}Nombre Completo *{{ else }}Full Name *{{ end }}
+          </label>
+          <input 
+            type="text" 
+            id="lead-name" 
+            name="name" 
+            required 
+            aria-required="true"
+            autocomplete="name"
+            class="mt-2 block w-full min-h-[44px] rounded-lg border border-zinc-300 bg-white px-3.5 py-2.5 text-sm text-zinc-950 dark:border-zinc-700 dark:bg-zinc-900 dark:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white"
+            placeholder="Dr. Jane Smith"
+          />
+        </div>
+
+        <div>
+          <label for="lead-title" class="block text-sm font-bold text-zinc-950 dark:text-white">
+            {{ if eq .Lang "es" }}Cargo Institucional *{{ else }}Institutional Title *{{ end }}
+          </label>
+          <input 
+            type="text" 
+            id="lead-title" 
+            name="title" 
+            required 
+            aria-required="true"
+            autocomplete="organization-title"
+            class="mt-2 block w-full min-h-[44px] rounded-lg border border-zinc-300 bg-white px-3.5 py-2.5 text-sm text-zinc-950 dark:border-zinc-700 dark:bg-zinc-900 dark:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white"
+            placeholder="Provost / CIO / Dean of Academic Tech"
+          />
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+        <div>
+          <label for="lead-email" class="block text-sm font-bold text-zinc-950 dark:text-white">
+            {{ if eq .Lang "es" }}Correo Institucional (.edu) *{{ else }}Institutional Email (.edu) *{{ end }}
+          </label>
+          <input 
+            type="email" 
+            id="lead-email" 
+            name="email" 
+            required 
+            aria-required="true"
+            autocomplete="email"
+            class="mt-2 block w-full min-h-[44px] rounded-lg border border-zinc-300 bg-white px-3.5 py-2.5 text-sm text-zinc-950 dark:border-zinc-700 dark:bg-zinc-900 dark:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white"
+            placeholder="jsmith@university.edu"
+          />
+        </div>
+
+        <div>
+          <label for="lead-institution" class="block text-sm font-bold text-zinc-950 dark:text-white">
+            {{ if eq .Lang "es" }}Institución / Colegio / Universidad *{{ else }}College / University Name *{{ end }}
+          </label>
+          <input 
+            type="text" 
+            id="lead-institution" 
+            name="institution" 
+            required 
+            aria-required="true"
+            autocomplete="organization"
+            class="mt-2 block w-full min-h-[44px] rounded-lg border border-zinc-300 bg-white px-3.5 py-2.5 text-sm text-zinc-950 dark:border-zinc-700 dark:bg-zinc-900 dark:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white"
+            placeholder="Arizona Western College"
+          />
+        </div>
+      </div>
+
+      <!-- Advisory Track Selection -->
+      <fieldset class="space-y-3 pt-2">
+        <legend class="text-sm font-bold text-zinc-950 dark:text-white">
+          {{ if eq .Lang "es" }}Área de Interés Principal *{{ else }}Primary Advisory Track *{{ end }}
+        </legend>
+        <p id="track-desc" class="text-xs text-zinc-900 dark:text-zinc-100">
+          {{ if eq .Lang "es" }}Seleccione el servicio institucional que mejor se adapte a sus prioridades de cumplimiento o infraestructura.{{ else }}Select the engagement focus that aligns with your institutional timeline.{{ end }}
+        </p>
+
+        <div class="grid grid-cols-1 gap-3 sm:grid-cols-3 pt-1" aria-describedby="track-desc">
+          <label class="flex items-start gap-3 rounded-lg border border-zinc-200 p-3.5 cursor-pointer dark:border-zinc-800 dark:hover:bg-zinc-900 hover:bg-zinc-50 transition-colors">
+            <input 
+              type="radio" 
+              name="advisory_track" 
+              value="fleet-ada-audit" 
+              checked
+              class="mt-1 h-4 w-4 accent-zinc-950 dark:accent-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white"
+            />
+            <span class="text-xs font-semibold text-zinc-900 dark:text-zinc-100">
+              {{ if eq .Lang "es" }}Auditoría Título II ADA{{ else }}ADA Title II Fleet Audit{{ end }}
+            </span>
+          </label>
+
+          <label class="flex items-start gap-3 rounded-lg border border-zinc-200 p-3.5 cursor-pointer dark:border-zinc-800 dark:hover:bg-zinc-900 hover:bg-zinc-50 transition-colors">
+            <input 
+              type="radio" 
+              name="advisory_track" 
+              value="cac-migration"
+              class="mt-1 h-4 w-4 accent-zinc-950 dark:accent-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white"
+            />
+            <span class="text-xs font-semibold text-zinc-900 dark:text-zinc-100">
+              {{ if eq .Lang "es" }}Migración CaC / API LMS{{ else }}Curriculum-as-Code Migration{{ end }}
+            </span>
+          </label>
+
+          <label class="flex items-start gap-3 rounded-lg border border-zinc-200 p-3.5 cursor-pointer dark:border-zinc-800 dark:hover:bg-zinc-900 hover:bg-zinc-50 transition-colors">
+            <input 
+              type="radio" 
+              name="advisory_track" 
+              value="genai-faculty-workshop"
+              class="mt-1 h-4 w-4 accent-zinc-950 dark:accent-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white"
+            />
+            <span class="text-xs font-semibold text-zinc-900 dark:text-zinc-100">
+              {{ if eq .Lang "es" }}Taller de GenAI Docente{{ else }}Faculty GenAI Workshop{{ end }}
+            </span>
+          </label>
+        </div>
+      </fieldset>
+
+      <!-- Fleet Scope & Details -->
+      <div>
+        <label for="fleet-scope" class="block text-sm font-bold text-zinc-950 dark:text-white">
+          {{ if eq .Lang "es" }}Volumen Estimado de Cursos Activos{{ else }}Estimated Active Course Fleet Volume{{ end }}
+        </label>
+        <select 
+          id="fleet-scope" 
+          name="fleet_scope"
+          class="mt-2 block w-full min-h-[44px] rounded-lg border border-zinc-300 bg-white px-3.5 py-2.5 text-sm text-zinc-950 dark:border-zinc-700 dark:bg-zinc-900 dark:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white"
+        >
+          <option value="1-50">1 – 50 Course Shells (Department / Pilot)</option>
+          <option value="51-200" selected>51 – 200 Course Shells (Division / Mid-Scale)</option>
+          <option value="201-500">201 – 500 Course Shells (Institution-Wide)</option>
+          <option value="500+">500+ Course Shells (Multi-Campus / Enterprise Fleet)</option>
+        </select>
+      </div>
+
+      <!-- Scope Summary / Problem Statement -->
+      <div>
+        <label for="project-details" class="block text-sm font-bold text-zinc-950 dark:text-white">
+          {{ if eq .Lang "es" }}Objetivos del Proyecto y Plazos de Cumplimiento{{ else }}Project Objectives & Target Timeline{{ end }}
+        </label>
+        <textarea 
+          id="project-details" 
+          name="details" 
+          rows="4" 
+          class="mt-2 block w-full rounded-lg border border-zinc-300 bg-white p-3 text-sm text-zinc-950 dark:border-zinc-700 dark:bg-zinc-900 dark:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white"
+          placeholder="Briefly describe your current LMS setup (e.g., Canvas), compliance audit goals, or faculty workshop objectives..."
+        ></textarea>
+      </div>
+
+      <!-- Submit Action Button (WCAG 2.2 Min 48x48px target) -->
+      <div>
+        <button 
+          type="submit" 
+          class="inline-flex min-h-[48px] w-full items-center justify-center rounded-lg bg-zinc-950 px-6 py-3 text-sm font-bold uppercase tracking-wider text-white shadow-sm transition-colors hover:bg-zinc-800 dark:bg-white dark:text-zinc-950 dark:hover:bg-zinc-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white"
+        >
+          {{ if eq .Lang "es" }}Enviar Solicitud de Consulta Institucional{{ else }}Submit Institutional Advisory Request{{ end }}
+        </button>
+      </div>
+
+    </form>
+
+  </div>
+</section>
