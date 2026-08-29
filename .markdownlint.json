@@ -29,7 +29,9 @@
       "div",
       "span",
       "strong",
-      "em"
+      "em",
+      "video",
+      "source"
     ]
   },
   "MD029": {

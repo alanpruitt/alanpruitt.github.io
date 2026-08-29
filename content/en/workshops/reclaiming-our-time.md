@@ -41,6 +41,25 @@ duration: "60 Minutes"
 
 ---
 
+## Workshop Video Overview
+
+<div class="not-prose my-6 overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-950 p-2 shadow-lg dark:border-zinc-800">
+  <div class="relative aspect-video w-full overflow-hidden rounded-xl bg-zinc-900">
+    <video
+      controls
+      preload="metadata"
+      poster="/images/reclaiming-our-time-poster.jpg"
+      class="h-full w-full object-contain"
+      aria-label="Reclaiming Our Time: Secure and Practical GenAI Workflows for Faculty and Staff Video Overview"
+    >
+      <source src="/videos/reclaiming-our-time.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</div>
+
+---
+
 ## Module 1: Policy Grounding & The Enterprise Ecosystem (10 mins)
 
 * **Institutional Stance:** The University of Arizona supports legally sound, academically rigorous AI integration to deliver meaningful administrative and pedagogical relief.

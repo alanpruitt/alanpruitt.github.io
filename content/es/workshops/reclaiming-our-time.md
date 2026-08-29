@@ -41,6 +41,25 @@ duration: "60 Minutos"
 
 ---
 
+## Video de Presentación del Taller
+
+<div class="not-prose my-6 overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-950 p-2 shadow-lg dark:border-zinc-800">
+  <div class="relative aspect-video w-full overflow-hidden rounded-xl bg-zinc-900">
+    <video
+      controls
+      preload="metadata"
+      poster="/images/reclaiming-our-time-poster.jpg"
+      class="h-full w-full object-contain"
+      aria-label="Recuperando Nuestro Tiempo: Flujos de Trabajo de GenAI Seguros y Prácticos para Profesores y Personal Video de Presentación"
+    >
+      <source src="/videos/reclaiming-our-time.mp4" type="video/mp4">
+      Su navegador no soporta la etiqueta de video.
+    </video>
+  </div>
+</div>
+
+---
+
 ## Módulo 1: Fundamento de Políticas y el Ecosistema Empresarial (10 mins)
 
 * **Postura Institucional:** La Universidad de Arizona apoya la integración de IA legalmente sólida y académicamente rigurosa para proporcionar un alivio administrativo y pedagógico real.
