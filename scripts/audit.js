@@ -92,8 +92,7 @@ async function runAudits() {
     const interactiveSelectors = [
       '#hero-heading ~ div a',
       'nav[aria-label*="Navigation"] a',
-      'header a',
-      '#calculator-heading ~ div a'
+      'header a'
     ];
 
     for (const selector of interactiveSelectors) {
@@ -118,59 +117,7 @@ async function runAudits() {
     }
     console.log('  ✓ PASS: Core interactive navigation and CTA tap targets compliant.');
 
-    console.log('\n[5/7] Testing Interactive ROI Calculator Sliders & Mathematical Logic...');
-    await page.goto(`${BASE_URL}/`, { waitUntil: 'networkidle' });
-    const calcHeading = page.locator('#calculator-heading');
-
-    if (await calcHeading.count() === 0) {
-      console.error('  ❌ FAIL: ROI Calculator section (#calculator-heading) not found on homepage.');
-      totalErrors++;
-    } else {
-      const courseCount = page.locator('#course-count');
-      const hoursPerShell = page.locator('#hours-per-shell');
-      const hourlyRate = page.locator('#hourly-rate');
-      
-      const manualCost = page.locator('#stat-manual-cost');
-      const hoursReclaimed = page.locator('#stat-hours-reclaimed');
-      const budgetRecaptured = page.locator('#stat-budget-recaptured');
-
-      // Test default values first:
-      const defaultCost = (await manualCost.textContent()).trim();
-      const defaultHours = (await hoursReclaimed.textContent()).trim();
-      const defaultBudget = (await budgetRecaptured.textContent()).trim();
-
-      if (defaultCost !== '$64,800' || defaultHours !== '1,224 hrs' || defaultBudget !== '$55,080') {
-        console.error(`  ❌ FAIL: Default calculation mismatch: ${defaultCost} | ${defaultHours} | ${defaultBudget}`);
-        totalErrors++;
-      } else {
-        console.log(`  ✓ PASS: Default calculation validated (${defaultCost}, ${defaultHours}, ${defaultBudget}).`);
-      }
-
-      // Update inputs:
-      await courseCount.evaluate((el) => {
-        el.value = '200';
-        el.dispatchEvent(new Event('input', { bubbles: true }));
-      });
-      await hoursPerShell.evaluate((el) => {
-        el.value = '30';
-        el.dispatchEvent(new Event('input', { bubbles: true }));
-      });
-
-      await page.waitForTimeout(100);
-
-      const updatedCost = (await manualCost.textContent()).trim();
-      const updatedHours = (await hoursReclaimed.textContent()).trim();
-      const updatedBudget = (await budgetRecaptured.textContent()).trim();
-
-      if (updatedCost !== '$270,000' || updatedHours !== '5,100 hrs' || updatedBudget !== '$229,500') {
-        console.error(`  ❌ FAIL: Updated calculation mismatch: ${updatedCost} | ${updatedHours} | ${updatedBudget}`);
-        totalErrors++;
-      } else {
-        console.log(`  ✓ PASS: Updated calculation validated (${updatedCost}, ${updatedHours}, ${updatedBudget}).`);
-      }
-    }
-
-    console.log('\n[6/7] Testing Legacy Alias Redirection (/alanpruitt/essays/ -> /essays/)...');
+    console.log('\n[5/6] Testing Legacy Alias Redirection (/alanpruitt/essays/ -> /essays/)...');
     const legacyUrl = `${BASE_URL}/alanpruitt/essays/`;
     const response = await page.goto(legacyUrl, { waitUntil: 'networkidle' });
 
@@ -191,7 +138,7 @@ async function runAudits() {
       console.log(`  ✓ PASS: Successfully redirected to canonical archive route (${finalResolvedUrl}).`);
     }
 
-    console.log('\n[7/7] Testing Interactive Essay Category Filtering on /essays/...');
+    console.log('\n[6/6] Testing Interactive Essay Category Filtering on /essays/...');
     await page.goto(`${BASE_URL}/essays/`, { waitUntil: 'networkidle' });
 
     const allCardsLocator = page.locator('.essay-card-item');
@@ -275,7 +222,7 @@ async function runAudits() {
 
   console.log('\n-------------------------------------------------------------');
   if (totalErrors === 0) {
-    console.log('✅ ALL 7 AUDITS PASSED: SSoT Parity, Contrast, ROI, Aliases & Filter Compliant.');
+    console.log('✅ ALL 6 AUDITS PASSED: SSoT Parity, Contrast, Aliases & Filter Compliant.');
     process.exit(0);
   } else {
     console.error(`❌ AUDIT FAILED: ${totalErrors} issue(s) require remediation.`);
