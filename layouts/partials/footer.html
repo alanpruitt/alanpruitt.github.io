@@ -1,0 +1,45 @@
+<footer class="border-t border-zinc-200 bg-white py-8 dark:border-zinc-800 dark:bg-zinc-950" aria-label="Site Footer">
+  <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col items-center justify-between gap-4 sm:flex-row text-left">
+      
+      <!-- Identity & Copyright -->
+      <div class="text-xs text-zinc-900 dark:text-zinc-100">
+        <p>&copy; {{ now.Format "2006" }} Alan Pruitt. {{ if eq .Lang "es" }}Todos los derechos reservados.{{ else }}All rights reserved.{{ end }}</p>
+        <p class="mt-1">
+          {{ if eq .Lang "es" }}Arquitectura Curriculum-as-Code &bull; Verificado WCAG 2.2 AA{{ else }}Curriculum-as-Code Architecture &bull; WCAG 2.2 AA Verified{{ end }}
+        </p>
+      </div>
+
+      <!-- Navigation & System Links (WCAG 2.2 AA Min 44x44px Touch Targets) -->
+      <nav class="flex flex-wrap items-center gap-2 text-xs font-bold uppercase tracking-wider" aria-label="Footer Navigation">
+        <a 
+          href="{{ relLangURL "essays/" }}" 
+          class="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-md px-2.5 py-1 text-zinc-900 transition-colors hover:text-zinc-950 dark:text-zinc-100 dark:hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white"
+        >
+          {{ if eq .Lang "es" }}Ensayos{{ else }}Essays{{ end }}
+        </a>
+
+        <span class="text-zinc-300 dark:text-zinc-700" aria-hidden="true">&bull;</span>
+
+        <a 
+          href="{{ relLangURL "changelog/" }}" 
+          class="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-md px-2.5 py-1 text-zinc-900 transition-colors hover:text-zinc-950 dark:text-zinc-100 dark:hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white"
+        >
+          {{ if eq .Lang "es" }}Registro de Cambios{{ else }}Changelog{{ end }}
+        </a>
+
+        <span class="text-zinc-300 dark:text-zinc-700" aria-hidden="true">&bull;</span>
+
+        <a 
+          href="https://webcognita.com" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-md px-2.5 py-1 text-zinc-900 transition-colors hover:text-zinc-950 dark:text-zinc-100 dark:hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white"
+        >
+          Webcognita
+        </a>
+      </nav>
+
+    </div>
+  </div>
+</footer>
