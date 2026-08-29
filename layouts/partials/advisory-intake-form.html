@@ -1,27 +1,27 @@
 <section id="advisory-intake" class="py-12 sm:py-16 border-b border-zinc-200 bg-zinc-50 dark:border-zinc-800 dark:bg-zinc-900/40" aria-labelledby="intake-heading">
   <div class="w-full max-w-4xl px-4 sm:px-6 lg:px-8 mr-auto ml-0 text-left">
     
-    <div class="mb-8 text-left">
-      <h2 id="intake-heading" class="text-2xl font-extrabold tracking-tight text-zinc-950 dark:text-white sm:text-3xl">
+    <div class="mb-8 text-left mr-auto ml-0">
+      <h2 id="intake-heading" class="text-2xl font-extrabold tracking-tight text-zinc-950 dark:text-white sm:text-3xl text-left">
         {{ if eq .Lang "es" }}Solicitud de Auditoría y Asesoría Institucional{{ else }}Institutional Advisory & Fleet Audit Intake{{ end }}
       </h2>
-      <p class="mt-2 text-base text-zinc-900 dark:text-zinc-100">
+      <p class="mt-2 text-base text-zinc-900 dark:text-zinc-100 text-left">
         {{ if eq .Lang "es" }}Inicie una evaluación de cumplimiento ADA Título II, migración a Curriculum-as-Code o habilitación docente en IA generativa.{{ else }}Initiate an executive ADA Title II fleet evaluation, Curriculum-as-Code pipeline migration, or GenAI faculty enablement engagement.{{ end }}
       </p>
     </div>
 
-    <!-- Executive Intake Form -->
+    <!-- Executive Intake Form with WCAG 2.2 AA Semantics -->
     <form 
       action="https://formspree.io/f/your-form-id" 
       method="POST" 
-      class="space-y-6 rounded-2xl border border-zinc-300 bg-white p-6 shadow-sm dark:border-zinc-700 dark:bg-zinc-950 sm:p-8"
+      class="space-y-6 rounded-2xl border border-zinc-300 bg-white p-6 shadow-sm dark:border-zinc-700 dark:bg-zinc-950 sm:p-8 text-left mr-auto ml-0"
       novalidate
     >
       
-      <!-- Institutional Contact Grid -->
+      <!-- Contact Details -->
       <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
         <div>
-          <label for="lead-name" class="block text-sm font-bold text-zinc-950 dark:text-white">
+          <label for="lead-name" class="block text-sm font-bold text-zinc-950 dark:text-white text-left">
             {{ if eq .Lang "es" }}Nombre Completo *{{ else }}Full Name *{{ end }}
           </label>
           <input 
@@ -37,7 +37,7 @@
         </div>
 
         <div>
-          <label for="lead-title" class="block text-sm font-bold text-zinc-950 dark:text-white">
+          <label for="lead-title" class="block text-sm font-bold text-zinc-950 dark:text-white text-left">
             {{ if eq .Lang "es" }}Cargo Institucional *{{ else }}Institutional Title *{{ end }}
           </label>
           <input 
@@ -55,7 +55,7 @@
 
       <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
         <div>
-          <label for="lead-email" class="block text-sm font-bold text-zinc-950 dark:text-white">
+          <label for="lead-email" class="block text-sm font-bold text-zinc-950 dark:text-white text-left">
             {{ if eq .Lang "es" }}Correo Institucional (.edu) *{{ else }}Institutional Email (.edu) *{{ end }}
           </label>
           <input 
@@ -71,7 +71,7 @@
         </div>
 
         <div>
-          <label for="lead-institution" class="block text-sm font-bold text-zinc-950 dark:text-white">
+          <label for="lead-institution" class="block text-sm font-bold text-zinc-950 dark:text-white text-left">
             {{ if eq .Lang "es" }}Institución / Colegio / Universidad *{{ else }}College / University Name *{{ end }}
           </label>
           <input 
@@ -88,12 +88,12 @@
       </div>
 
       <!-- Advisory Track Selection -->
-      <fieldset class="space-y-3 pt-2">
-        <legend class="text-sm font-bold text-zinc-950 dark:text-white">
+      <fieldset class="space-y-3 pt-2 text-left mr-auto ml-0">
+        <legend class="text-sm font-bold text-zinc-950 dark:text-white text-left">
           {{ if eq .Lang "es" }}Área de Interés Principal *{{ else }}Primary Advisory Track *{{ end }}
         </legend>
-        <p id="track-desc" class="text-xs text-zinc-900 dark:text-zinc-100">
-          {{ if eq .Lang "es" }}Seleccione el servicio institucional que mejor se adapte a sus prioridades de cumplimiento o infraestructura.{{ else }}Select the engagement focus that aligns with your institutional timeline.{{ end }}
+        <p id="track-desc" class="text-xs text-zinc-900 dark:text-zinc-100 text-left">
+          {{ if eq .Lang "es" }}Seleccione el servicio institucional prioritario.{{ else }}Select the engagement focus that aligns with your institutional timeline.{{ end }}
         </p>
 
         <div class="grid grid-cols-1 gap-3 sm:grid-cols-3 pt-1" aria-describedby="track-desc">
@@ -136,9 +136,9 @@
         </div>
       </fieldset>
 
-      <!-- Fleet Scope & Details -->
+      <!-- Fleet Scope Selection -->
       <div>
-        <label for="fleet-scope" class="block text-sm font-bold text-zinc-950 dark:text-white">
+        <label for="fleet-scope" class="block text-sm font-bold text-zinc-950 dark:text-white text-left">
           {{ if eq .Lang "es" }}Volumen Estimado de Cursos Activos{{ else }}Estimated Active Course Fleet Volume{{ end }}
         </label>
         <select 
@@ -153,9 +153,9 @@
         </select>
       </div>
 
-      <!-- Scope Summary / Problem Statement -->
+      <!-- Scope / Details Field -->
       <div>
-        <label for="project-details" class="block text-sm font-bold text-zinc-950 dark:text-white">
+        <label for="project-details" class="block text-sm font-bold text-zinc-950 dark:text-white text-left">
           {{ if eq .Lang "es" }}Objetivos del Proyecto y Plazos de Cumplimiento{{ else }}Project Objectives & Target Timeline{{ end }}
         </label>
         <textarea 
@@ -167,7 +167,7 @@
         ></textarea>
       </div>
 
-      <!-- Submit Action Button (WCAG 2.2 Min 48x48px target) -->
+      <!-- Submit Action Button -->
       <div>
         <button 
           type="submit" 
