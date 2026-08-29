@@ -59,26 +59,10 @@ jobs:
           npx serve public -l 1313 &
           SERVER_PID=$!
           npx wait-on http://localhost:1313/
-          BASE_URL=http://localhost:1313 node scripts/audit.js > audit.log 2>&1
+          BASE_URL=http://localhost:1313 node scripts/audit.js
           AUDIT_EXIT=$?
-          cat audit.log
           kill $SERVER_PID
-          if [ $AUDIT_EXIT -ne 0 ]; then
-            git config --global user.name "github-actions[bot]"
-            git config --global user.email "github-actions[bot]@users.noreply.github.com"
-            git checkout -b debug-audit-logs || git checkout debug-audit-logs
-            git add audit.log
-            git commit -m "chore: debug audit failure log" || true
-            git push -f https://x-access-token:$GH_TOKEN@github.com/alanpruitt/alanpruitt.github.io.git debug-audit-logs || true
-          fi
           exit $AUDIT_EXIT
-
-      - name: Upload Audit Log Artifact
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: audit-log
-          path: audit.log
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
