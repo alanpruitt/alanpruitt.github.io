@@ -1,0 +1,115 @@
+WEBVTT - Reclaiming Our Time: Secure and Practical GenAI Workflows
+
+00:00.000 --> 00:05.500
+Let's dive right in. If you work in higher ed, you already know the struggle.
+
+00:05.500 --> 00:15.000
+Trying to balance your real pedagogical goals with an ever-growing, absolutely relentless mountain of administrative tasks can feel like an impossible juggling act.
+
+00:15.000 --> 00:27.500
+But today, we're looking at a blueprint that's a real game changer. We're going to explore how higher education faculty and staff can finally find much-needed administrative relief using smart, highly secure GenAI workflows.
+
+00:27.500 --> 00:36.000
+Administrative burnout isn't just some corporate buzzword, right? For a lot of us, it's just a typical Tuesday night.
+
+00:36.000 --> 00:48.500
+Think about it for a second. How many hours of your week get completely swallowed up by auditing syllabi against endless departmental checklists? Or painstakingly scaling rubrics for formative feedback when you really should be resting?
+
+00:48.500 --> 00:55.500
+It's exhausting. So we have to ask: is there a better, more efficient way to handle this heavy lifting without compromising the quality of your work?
+
+00:55.500 --> 01:19.500
+Well, the answer is a resounding yes! In this explainer, we're zeroing in on a specific, highly structured prompt architecture designed exclusively for faculty and staff. We're talking about engineering a reliable, legally sound system that safely reclaims your time while you keep total control of the wheel.
+
+01:19.500 --> 01:33.000
+Here is the roadmap for this explainer: First, the Secure Enterprise Foundation. Second, Building the Prompt Architecture. Third, Workflows in Action. And finally, Institutional Guardrails.
+
+01:33.000 --> 01:40.000
+Section 1: Secure Enterprise Foundation. Establishing safe AI boundaries.
+
+01:40.000 --> 01:54.000
+Before we build anything, we have to draw a hard line right at the starting gate. You must stay away from unauthenticated consumer AI interfaces. Why? Because your institutional data just gets harvested to train public models.
+
+01:54.000 --> 02:08.500
+Instead, strictly mandate logging in via your NetID to approved, enterprise-licensed tools like Google Gemini Enterprise or U of A GenAI. These portals create a private sandbox where inputs are walled off, giving you a truly safe space for instructional design.
+
+02:08.500 --> 02:16.000
+Moving on to Section 2: Building the Prompt Architecture. Constructing the perfect secure faculty prompt.
+
+02:16.000 --> 02:30.000
+This is where we upgrade from casually chatting to actual prompt engineering. Enter the Prompt Vault. Reusable templates structured with explicit triple-hash (###) delimiter blocks.
+
+02:30.000 --> 02:51.000
+Why use triple hashes? Because these specific characters act like concrete walls for the AI. They explicitly isolate your context from your tasks, and your tasks from your constraints. This drastically minimizes model drift and prevents hallucinations.
+
+02:51.000 --> 03:05.000
+The structured input scaffold is a brilliant 3-step blueprint: First, define the Role & Goal. Telling the AI exactly who it is supposed to be, like a master curriculum designer.
+
+03:05.000 --> 03:14.000
+Second, provide the Context, which is your reference material. And third, lock it all down with Task & Constraints.
+
+03:14.000 --> 03:22.500
+You are deliberately sequencing persona, reference material, and instructions so there is absolutely no room for the AI to wander off-topic.
+
+03:22.500 --> 03:33.500
+Before a single word goes into that context block, we have to talk sanitization. Safe context includes sanitized course outlines, meeting notes, and assignment prompts.
+
+03:33.500 --> 03:45.000
+What absolutely must be scrubbed is Personally Identifiable Information (PII): student names, ID numbers, anything traceable to an actual individual.
+
+03:45.000 --> 03:53.000
+You have to rigorously de-identify this context to ensure absolute FERPA compliance before you ever hit generate.
+
+03:53.000 --> 04:07.000
+Once your context is clean, lock it down with strict constraints: "Enforce a professional tone, tabular output, and zero hallucination."
+
+04:07.000 --> 04:24.500
+It is incredibly precise. You are commanding a specific, formatted administrative output that forces the AI to hand back a clean table you can actually use.
+
+04:24.500 --> 04:31.000
+Section 3: Faculty Workflows in Action. Applying the architecture.
+
+04:31.000 --> 04:42.000
+We've got three proven, high-yield workflows: Instant syllabus compliance auditing, transcript synthesis and action items, and rubric scaling with formative feedback.
+
+04:42.000 --> 05:08.000
+Workflow 1: Feeding a draft syllabus into the context block and placing your institutional checklist into constraints. Boom! The AI automatically audits grading scales, verifies accommodation policies, and checks required statements in seconds.
+
+05:08.000 --> 05:38.000
+Workflow 2: Transcript Synthesis. Ingesting raw sanitized transcripts from committee meetings into your prompt vault to extract executive summaries, chronological decision logs, and action item matrices—turning two hours of debate into an immediate organized roadmap.
+
+05:38.000 --> 06:04.500
+Workflow 3: Rubric Scaling & Formative Feedback. Processing an assignment prompt alongside a scoring rubric and de-identified student work to draft structured formative feedback fast, saving an immense amount of mental energy while preserving instructor authority.
+
+06:04.500 --> 06:11.000
+Section 4: Institutional Compliance and Guardrails. Keeping data safe.
+
+06:11.000 --> 06:26.500
+We really need to talk about FERPA and session hygiene. Because AI outputs about identifiable students can become official educational records, you must maintain an ephemeral chat lifecycle.
+
+06:26.500 --> 06:37.000
+Treat the AI like a whiteboard, not a filing cabinet. Delete your chat sessions the absolute second you are finished with your workflow. Wipe the slate clean every single time.
+
+06:37.000 --> 06:50.000
+When it comes to routing your data: standard enterprise tools like Gemini or U of A GenAI are great for general work, but are strictly prohibited for HIPAA data.
+
+06:50.000 --> 07:00.000
+If you are dealing with clinical workflows or health-related data, they absolutely must be routed exclusively to secure platforms like U of A Soteria.
+
+07:00.000 --> 07:24.000
+Restricted data that should never enter general AI tools: Social Security numbers, financial account details under PCI-DSS, export control data like ITAR, and sensitive human subjects data governed by the IRB.
+
+07:24.000 --> 07:44.500
+Don't forget transparency. If you're integrating AI into your course design, utilize standard institutional language to provide transparent AI disclosures right in your syllabus.
+
+07:44.500 --> 07:51.500
+Finally, Section 5: Secure Operational Rules. The five keys to reclaiming your time.
+
+07:51.500 --> 08:16.500
+1. Always use enterprise authentication via NetID. 2. De-identify your context. 3. Deploy structured delimiters like ### blocks. 4. Route regulated data correctly to Soteria. And 5: Human Authority.
+
+08:16.500 --> 08:34.000
+The AI only drafts. You—the faculty and staff—always retain final authority and responsibility for all pedagogical and administrative artifacts.
+
+08:34.000 --> 08:46.000
+What are you going to do with those reclaimed hours to elevate the truly human element of your teaching?

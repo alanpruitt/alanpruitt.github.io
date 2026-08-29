@@ -31,7 +31,9 @@
       "strong",
       "em",
       "video",
-      "source"
+      "source",
+      "track",
+      "script"
     ]
   },
   "MD029": {

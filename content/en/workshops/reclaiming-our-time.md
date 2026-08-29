@@ -14,6 +14,51 @@ institutional_alignment: "Office of Responsible AI, Information Security Office 
 duration: "60 Minutes"
 ---
 
+## Workshop Video Overview
+
+<div class="not-prose my-6 overflow-hidden rounded-2xl border border-zinc-300 bg-zinc-950 p-2 shadow-lg dark:border-zinc-800">
+  <div class="relative aspect-video w-full overflow-hidden rounded-xl bg-zinc-900">
+    <video
+      id="workshop-video-player"
+      controls
+      preload="metadata"
+      class="h-full w-full object-contain"
+      aria-label="Reclaiming Our Time: Secure and Practical GenAI Workflows for Faculty and Staff Video Overview with Auto-Captions"
+    >
+      <source src="/videos/reclaiming-our-time.mp4" type="video/mp4">
+      <track
+        label="English Captions"
+        kind="captions"
+        srclang="en"
+        src="/videos/reclaiming-our-time.vtt"
+        default
+      >
+      Your browser does not support HTML5 video with closed captions.
+    </video>
+  </div>
+</div>
+
+<script>
+  // Ensure closed captions automatically launch across all browsers (WebKit/Safari, Chromium, Gecko)
+  document.addEventListener('DOMContentLoaded', function() {
+    const video = document.getElementById('workshop-video-player');
+    if (video) {
+      function enableCaptions() {
+        if (video.textTracks && video.textTracks.length > 0) {
+          for (let i = 0; i < video.textTracks.length; i++) {
+            video.textTracks[i].mode = 'showing';
+          }
+        }
+      }
+      video.addEventListener('loadedmetadata', enableCaptions);
+      video.addEventListener('play', enableCaptions);
+      enableCaptions();
+    }
+  });
+</script>
+
+---
+
 ## Session Architecture & Timing
 
 <div class="timing-grid">
@@ -36,25 +81,6 @@ duration: "60 Minutes"
   <div class="timing-card">
     <span class="timing-span">00:55 - 01:00</span>
     <div class="timing-title">Synthesis & Reference</div>
-  </div>
-</div>
-
----
-
-## Workshop Video Overview
-
-<div class="not-prose my-6 overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-950 p-2 shadow-lg dark:border-zinc-800">
-  <div class="relative aspect-video w-full overflow-hidden rounded-xl bg-zinc-900">
-    <video
-      controls
-      preload="metadata"
-      poster="/images/reclaiming-our-time-poster.jpg"
-      class="h-full w-full object-contain"
-      aria-label="Reclaiming Our Time: Secure and Practical GenAI Workflows for Faculty and Staff Video Overview"
-    >
-      <source src="/videos/reclaiming-our-time.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
   </div>
 </div>
 
