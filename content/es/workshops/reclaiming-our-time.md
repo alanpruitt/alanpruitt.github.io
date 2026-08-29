@@ -20,6 +20,12 @@ duration: "60 Minutos"
 
 ---
 
+## Presentación Ejecutiva
+
+{{< workshop-carousel >}}
+
+---
+
 ## Estructura y Tiempos de la Sesión
 
 <div class="timing-grid">

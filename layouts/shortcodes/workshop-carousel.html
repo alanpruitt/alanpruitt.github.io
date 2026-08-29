@@ -1,0 +1,148 @@
+<div class="not-prose my-8 overflow-hidden rounded-2xl border border-zinc-300 bg-zinc-950 p-4 shadow-xl dark:border-zinc-800" aria-roledescription="carousel" aria-label="Workshop Visual Presentation Deck">
+  
+  <!-- Carousel Header & Slide Counter -->
+  <div class="flex items-center justify-between border-b border-zinc-800 pb-3 mb-4 text-left">
+    <div class="flex items-center gap-2">
+      <span class="inline-flex h-2.5 w-2.5 rounded-full bg-emerald-500" aria-hidden="true"></span>
+      <span class="text-xs font-extrabold uppercase tracking-wider text-zinc-300">Executive Slide Deck</span>
+    </div>
+    <div class="flex items-center gap-3">
+      <span id="carousel-counter" class="text-xs font-mono font-bold text-zinc-400" aria-live="polite">Slide 1 of 12</span>
+    </div>
+  </div>
+
+  <!-- Slide Viewport -->
+  <div class="relative aspect-[16/9] w-full overflow-hidden rounded-xl bg-zinc-900 flex items-center justify-center">
+    
+    <!-- Slides 1 through 12 -->
+    <div class="carousel-slide block w-full h-full" data-slide="1" role="group" aria-roledescription="slide" aria-label="1 of 12: Workshop Title and Scope">
+      <img src="/images/workshops/reclaiming-our-time/slide-01.png" alt="Reclaiming Our Time: Secure and Practical GenAI Workflows for Faculty and Staff - Facilitated by Alan Pruitt" class="h-full w-full object-contain">
+    </div>
+    <div class="carousel-slide hidden w-full h-full" data-slide="2" role="group" aria-roledescription="slide" aria-label="2 of 12: Administrative Relief and Institutional Pillars">
+      <img src="/images/workshops/reclaiming-our-time/slide-02.png" alt="Three Pillars: Office of Responsible AI, Information Security Office, Enterprise AI Infrastructure" class="h-full w-full object-contain">
+    </div>
+    <div class="carousel-slide hidden w-full h-full" data-slide="3" role="group" aria-roledescription="slide" aria-label="3 of 12: NetID Authenticated Enterprise Portals vs Consumer Harvesters">
+      <img src="/images/workshops/reclaiming-our-time/slide-03.png" alt="Comparison between unauthenticated consumer AI where data is harvested, and NetID authenticated zero-training enterprise sandboxes" class="h-full w-full object-contain">
+    </div>
+    <div class="carousel-slide hidden w-full h-full" data-slide="4" role="group" aria-roledescription="slide" aria-label="4 of 12: Workflow 1 Instant Syllabus Compliance Auditing">
+      <img src="/images/workshops/reclaiming-our-time/slide-04.png" alt="Workflow 1: Ingesting draft course syllabus and institutional checklist to automatically audit grading scales and accommodation policies" class="h-full w-full object-contain">
+    </div>
+    <div class="carousel-slide hidden w-full h-full" data-slide="5" role="group" aria-roledescription="slide" aria-label="5 of 12: Workflow 2 Transcript Synthesis and Action Items">
+      <img src="/images/workshops/reclaiming-our-time/slide-05.png" alt="Workflow 2: Ingesting meeting transcripts to generate executive summaries, decision logs, and action-item matrices" class="h-full w-full object-contain">
+    </div>
+    <div class="carousel-slide hidden w-full h-full" data-slide="6" role="group" aria-roledescription="slide" aria-label="6 of 12: Workflow 3 Rubric Scaling and Formative Feedback">
+      <img src="/images/workshops/reclaiming-our-time/slide-06.png" alt="Workflow 3: Ingesting assignment prompts, scoring rubrics, and de-identified student work to draft formative feedback" class="h-full w-full object-contain">
+    </div>
+    <div class="carousel-slide hidden w-full h-full" data-slide="7" role="group" aria-roledescription="slide" aria-label="7 of 12: Human Sanitization Protocol and FERPA">
+      <img src="/images/workshops/reclaiming-our-time/slide-07.png" alt="Sanitization protocol showing stripping PII before entering prompts and maintaining ephemeral chat lifecycles" class="h-full w-full object-contain">
+    </div>
+    <div class="carousel-slide hidden w-full h-full" data-slide="8" role="group" aria-roledescription="slide" aria-label="8 of 12: The Anatomical Prompt Scaffold">
+      <img src="/images/workshops/reclaiming-our-time/slide-08.png" alt="Structured prompt vault using triple-hash delimiters to isolate Role, Context, and Constraints" class="h-full w-full object-contain">
+    </div>
+    <div class="carousel-slide hidden w-full h-full" data-slide="9" role="group" aria-roledescription="slide" aria-label="9 of 12: Institutional Data Routing Matrix">
+      <img src="/images/workshops/reclaiming-our-time/slide-09.png" alt="Data routing matrix routing HIPAA data strictly to Soteria and enterprise drafting to Gemini" class="h-full w-full object-contain">
+    </div>
+    <div class="carousel-slide hidden w-full h-full" data-slide="10" role="group" aria-roledescription="slide" aria-label="10 of 12: The Closed-Loop GenAI Workflow">
+      <img src="/images/workshops/reclaiming-our-time/slide-10.png" alt="Closed loop workflow: Authenticate, Sanitize, Structure, Supervise" class="h-full w-full object-contain">
+    </div>
+    <div class="carousel-slide hidden w-full h-full" data-slide="11" role="group" aria-roledescription="slide" aria-label="11 of 12: Human Authority and Syllabus Disclosures">
+      <img src="/images/workshops/reclaiming-our-time/slide-11.png" alt="AI drafts, humans decide. Syllabus disclosures ensure transparency and academic integrity" class="h-full w-full object-contain">
+    </div>
+    <div class="carousel-slide hidden w-full h-full" data-slide="12" role="group" aria-roledescription="slide" aria-label="12 of 12: Five Operational Rules">
+      <img src="/images/workshops/reclaiming-our-time/slide-12.png" alt="Summary card: 1. Enterprise Auth, 2. De-Identify Context, 3. Triple Hash Delimiters, 4. Route Data, 5. Human Authority" class="h-full w-full object-contain">
+    </div>
+
+  </div>
+
+  <!-- Carousel Controls (44x44px minimum touch targets) -->
+  <div class="mt-4 flex items-center justify-between">
+    <button 
+      id="carousel-prev-btn" 
+      type="button" 
+      class="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-lg bg-zinc-900 px-4 py-2 text-xs font-bold uppercase tracking-wider text-white transition hover:bg-zinc-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white"
+      aria-label="Previous Slide"
+    >
+      &larr; Previous
+    </button>
+    <div class="flex items-center gap-1.5" id="carousel-dots" aria-hidden="true">
+      <!-- Generated dynamically by JS -->
+    </div>
+    <button 
+      id="carousel-next-btn" 
+      type="button" 
+      class="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-lg bg-zinc-900 px-4 py-2 text-xs font-bold uppercase tracking-wider text-white transition hover:bg-zinc-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white"
+      aria-label="Next Slide"
+    >
+      Next &rarr;
+    </button>
+  </div>
+
+</div>
+
+<!-- Zero-Dependency Accessible Carousel Logic -->
+<script>
+  (function() {
+    let currentSlide = 1;
+    const totalSlides = 12;
+
+    function initCarousel() {
+      const slides = document.querySelectorAll('.carousel-slide');
+      const counter = document.getElementById('carousel-counter');
+      const prevBtn = document.getElementById('carousel-prev-btn');
+      const nextBtn = document.getElementById('carousel-next-btn');
+      const dotsContainer = document.getElementById('carousel-dots');
+
+      if (!slides.length || !counter) return;
+
+      // Generate accessible indicator dots
+      dotsContainer.innerHTML = '';
+      for (let i = 1; i <= totalSlides; i++) {
+        const dot = document.createElement('button');
+        dot.type = 'button';
+        dot.className = 'h-2 w-2 rounded-full transition ' + (i === 1 ? 'bg-white' : 'bg-zinc-700');
+        dot.setAttribute('aria-label', 'Go to slide ' + i);
+        dot.addEventListener('click', () => showSlide(i));
+        dotsContainer.appendChild(dot);
+      }
+
+      function showSlide(index) {
+        if (index < 1) index = totalSlides;
+        if (index > totalSlides) index = 1;
+        currentSlide = index;
+
+        slides.forEach((slide, idx) => {
+          if (idx + 1 === currentSlide) {
+            slide.classList.remove('hidden');
+            slide.classList.add('block');
+          } else {
+            slide.classList.remove('block');
+            slide.classList.add('hidden');
+          }
+        });
+
+        counter.textContent = 'Slide ' + currentSlide + ' of ' + totalSlides;
+
+        // Update dots
+        const dots = dotsContainer.querySelectorAll('button');
+        dots.forEach((dot, idx) => {
+          dot.className = 'h-2 w-2 rounded-full transition ' + (idx + 1 === currentSlide ? 'bg-white' : 'bg-zinc-700');
+        });
+      }
+
+      if (prevBtn) prevBtn.addEventListener('click', () => showSlide(currentSlide - 1));
+      if (nextBtn) nextBtn.addEventListener('click', () => showSlide(currentSlide + 1));
+
+      // Enable Keyboard Navigation (ArrowLeft / ArrowRight) when focused on carousel
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') showSlide(currentSlide - 1);
+        if (e.key === 'ArrowRight') showSlide(currentSlide + 1);
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initCarousel);
+    } else {
+      initCarousel();
+    }
+  })();
+</script>

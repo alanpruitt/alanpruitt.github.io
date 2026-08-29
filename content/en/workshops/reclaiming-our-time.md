@@ -20,6 +20,12 @@ duration: "60 Minutes"
 
 ---
 
+## Executive Presentation Deck
+
+{{< workshop-carousel >}}
+
+---
+
 ## Session Architecture & Timing
 
 <div class="timing-grid">
