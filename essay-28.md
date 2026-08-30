@@ -2,8 +2,6 @@
 title: "Reclaiming Our Time: Secure and Practical GenAI Workflows for Faculty and Staff"
 date: 2026-08-30
 draft: false
-url: "/workshop/"
-layout: "workshop"
 ---
 
 ## Reclaiming Our Time: Secure and Practical GenAI Workflows for Faculty and Staff
