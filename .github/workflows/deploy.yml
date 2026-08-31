@@ -48,6 +48,7 @@ jobs:
           cp -r essays public/ 2>/dev/null || true
           cp -r articles public/ 2>/dev/null || true
           hugo --minify
+          cp CNAME public/ 2>/dev/null || true
 
       - name: Run Markdown Linter Check
         run: npm run lint:md
