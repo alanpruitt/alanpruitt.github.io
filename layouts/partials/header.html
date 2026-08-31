@@ -18,10 +18,10 @@
       </span>
     </a>
     <nav aria-label="Main Navigation" class="flex items-center gap-4 sm:gap-6 text-sm font-medium text-zinc-600 dark:text-zinc-300">
-      <a href="#roi-calculator-heading" class="transition hover:text-zinc-950 dark:hover:text-white" style="text-decoration: none;">
+      <a href="{{ if eq .Lang "es" }}/es/roi-calculator/{{ else }}/roi-calculator/{{ end }}" class="transition hover:text-zinc-950 dark:hover:text-white" style="text-decoration: none;">
         {{ if eq .Lang "es" }}Calculadora ROI{{ else }}ROI Calculator{{ end }}
       </a>
-      <a href="#essays" class="transition hover:text-zinc-950 dark:hover:text-white" style="text-decoration: none;">
+      <a href="{{ if eq .Lang "es" }}/es/essays/{{ else }}/essays/{{ end }}" class="transition hover:text-zinc-950 dark:hover:text-white" style="text-decoration: none;">
         {{ if eq .Lang "es" }}Ensayos{{ else }}Essays{{ end }}
       </a>
       <nav class="flex items-center rounded-lg border border-zinc-200 bg-zinc-50 p-1 dark:border-zinc-800 dark:bg-zinc-900" aria-label="Language Switcher">
