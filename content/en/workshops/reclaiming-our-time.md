@@ -2,7 +2,7 @@
 title: "Reclaiming Our Time: Secure and Practical GenAI Workflows for Faculty and Staff"
 date: 2026-08-30
 draft: false
-description: "A hands-on, administrative relief workshop designed for educators and institutional leaders to reclaim operational bandwidth using zero-retention GenAI pipelines and Sovereign Auditor governance."
+description: "A hands-on, administrative relief workshop designed for educators and staff to reclaim operational bandwidth using zero-retention GenAI pipelines and Sovereign Auditor governance."
 video_url: "/videos/reclaiming-our-time.mp4"
 deck_url: "/assets/docs/Reclaiming_Our_Time_Deck_Fall2026.pdf"
 layout: "single"
@@ -10,46 +10,40 @@ layout: "single"
 
 ## Reclaiming Our Time: Secure and Practical GenAI Workflows for Faculty and Staff
 
-A hands-on, administrative relief workshop designed for educators and institutional leaders to reclaim operational bandwidth using zero-retention GenAI pipelines and Sovereign Auditor governance.
+A hands-on, administrative relief workshop designed for educators and instructional staff to reclaim operational bandwidth, streamline course audits, and eliminate routine busywork using zero-retention GenAI pipelines.
 
 ### Workshop Video Overview & Presentation Deck
 
 {{< responsive-video src="/videos/reclaiming-our-time.mp4" title="Reclaiming Our Time Workshop Video" >}}
 
-- **Session Video Overview:** Embedded walkthrough of secure GenAI administrative relief pipelines.
-- **Executive Presentation Deck:** Downloadable executive slide deck in high-contrast PDF format.
-- **Core Standard:** Zero data retention, delimiter isolation, and human-in-the-loop sovereign auditing.
+- **Session Video Overview:** Embedded walkthrough of practical GenAI administrative relief pipelines.
+- **Executive Presentation Deck:** Downloadable presentation slide deck in high-contrast PDF format.
+- **Core Standard:** Zero data retention, delimiter isolation, and instructor-led sovereign auditing.
 
 ---
 
 ### Executive Visual Summary & Workflow Map
 
-1. **Raw Input:** Sanitized institutional data and operational text (FERPA clean).
-2. **Delimiter Box:** Explicit `###` isolation to eliminate drift and prompt injection.
+1. **Raw Input:** Sanitized course data, prompts, or meeting transcripts (FERPA clean).
+2. **Delimiter Box:** Explicit `###` isolation to eliminate drift and maintain strict boundaries.
 3. **Secure Engine:** Processing within enterprise zero-retention parameters.
 4. **Sovereign Auditor Review:** Final faculty editorial control and verification against SSoT.
 
 ---
 
-## Interactive Institutional ROI Model
-
-Model the administrative time and fiscal capacity reclaimed across your department:
-
-{{< roi-calculator >}}
-
----
-
 ### Core Operating Framework: The Mission Loop
 
-- **Pattern:** Identify administrative bottlenecks and workflow friction.
-- **Rule:** Apply governing standards (FERPA, ADA Title II, SSoT institutional policies).
-- **Solve:** Deploy structured prompt packages for immediate administrative relief.
+Every AI-assisted workflow must follow the deterministic three-stage **Mission Loop** to eliminate hallucinations and preserve academic rigor:
+
+- **Pattern:** Identify administrative friction (e.g., cross-referencing a 20-page syllabus against institutional master standards).
+- **Rule:** Bind the model strictly to authoritative policy documents (PAGA, Course Master Outlines, or Institutional Policies) wrapped in explicit delimiters.
+- **Solve:** Instruct the model to audit and output structured gap analyses with zero speculation.
 
 ---
 
 ### Module 1: Instant Syllabus Compliance Auditing
 
-Faculty can audit course syllabi against accreditation or institutional standards in under 60 seconds without manual line-by-line comparison.
+Faculty can audit course syllabi against institutional master standards in under 60 seconds without manual line-by-line comparison.
 
 #### Prompt Architecture: Delimiter Isolation Protocol
 
@@ -114,5 +108,4 @@ All faculty and staff utilizing generative AI must adhere to the three foundatio
 
 - **Enforce the Mission Loop:** Frame every prompt with Pattern &rarr; Rule &rarr; Solve.
 - **Curriculum-as-Code Repository:** [github.com/alanpruitt/alanpruitt.github.io](https://github.com/alanpruitt/alanpruitt.github.io)
-- **Interactive ROI Calculator:** [alanpruitt.com/roi-calculator](/roi-calculator/)
 - **Technical Essays on AI Governance:** [alanpruitt.com/essays](/essays/)
