@@ -1,20 +1,23 @@
-baseURL = "https://alanpruitt.com/"
+bbaseURL = "https://alanpruitt.com/"
 enableMissingTranslationPlaceholders = false
 
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
 
+[markup.goldmark.renderer]
+  unsafe = true
+
 [languages]
   [languages.en]
-    languageName = "EN"
-    languageCode = "en-US"
+    label = "EN"
+    locale = "en-US"
     contentDir = "content/en"
     weight = 1
     title = "Coach Alan"
 
   [languages.es]
-    languageName = "ES"
-    languageCode = "es-MX"
+    label = "ES"
+    locale = "es-MX"
     contentDir = "content/es"
     weight = 2
     title = "Coach Alan"
