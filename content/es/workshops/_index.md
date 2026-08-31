@@ -1,5 +1,5 @@
 ---
-title: "Talleres y Clases Magistrales Institucionales"
-description: "Clases magistrales prácticas sobre Currículo-como-Código, gobernanza de IA con Auditor Soberano y automatización de retención cero para profesores y líderes universitarios."
+title: "Talleres y Clases Magistrales"
+description: "Clases magistrales institucionales sobre Currículo-como-Código, gobernanza de IA con Auditor Soberano y automatización de retención cero."
 layout: "list"
 ---
