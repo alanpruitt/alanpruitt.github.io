@@ -29,11 +29,7 @@
       "div",
       "span",
       "strong",
-      "em",
-      "video",
-      "source",
-      "track",
-      "script"
+      "em"
     ]
   },
   "MD029": {
