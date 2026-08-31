@@ -2,56 +2,117 @@
 title: "Reclaiming Our Time: Secure and Practical GenAI Workflows for Faculty and Staff"
 date: 2026-08-30
 draft: false
-description: "A hands-on, administrative relief workshop designed for educators to eliminate workflow friction, enforce strict institutional compliance, and reclaim hours of instructional time through secure generative AI integration."
+description: "A hands-on, administrative relief workshop designed for educators and institutional leaders to reclaim operational bandwidth using zero-retention GenAI pipelines and Sovereign Auditor governance."
 video_url: "/videos/reclaiming-our-time.mp4"
 deck_url: "/assets/docs/Reclaiming_Our_Time_Deck_Fall2026.pdf"
+layout: "single"
 ---
 
 ## Reclaiming Our Time: Secure and Practical GenAI Workflows for Faculty and Staff
 
-A hands-on, administrative relief workshop designed for educators to eliminate workflow friction, enforce strict institutional compliance, and reclaim hours of instructional time through secure generative AI integration.
+A hands-on, administrative relief workshop designed for educators and institutional leaders to reclaim operational bandwidth using zero-retention GenAI pipelines and Sovereign Auditor governance.
 
 ### Workshop Video Overview & Presentation Deck
 
-- **Session Video Overview:** Embedded walkthrough of secure GenAI workflows and live demonstrations.
-- **Executive Presentation Deck:** Downloadable executive slide deck (PDF).
+{{< responsive-video src="/videos/reclaiming-our-time.mp4" title="Reclaiming Our Time Workshop Video" >}}
+
+- **Session Video Overview:** Embedded walkthrough of secure GenAI administrative relief pipelines.
+- **Executive Presentation Deck:** Downloadable executive slide deck in high-contrast PDF format.
+- **Core Standard:** Zero data retention, delimiter isolation, and human-in-the-loop sovereign auditing.
+
+---
 
 ### Executive Visual Summary & Workflow Map
 
-1. **Raw Input:** Sanitized institutional data and operational notes.
+1. **Raw Input:** Sanitized institutional data and operational text (FERPA clean).
 2. **Delimiter Box:** Explicit `###` isolation to eliminate drift and prompt injection.
-3. **Secure Engine:** Processing within the secure enterprise environment (`google.arizona.edu`).
-4. **Sovereign Auditor Review:** Final faculty editorial control and verification.
+3. **Secure Engine:** Processing within enterprise zero-retention parameters.
+4. **Sovereign Auditor Review:** Final faculty editorial control and verification against SSoT.
+
+---
+
+## Interactive Institutional ROI Model
+
+Model the administrative time and fiscal capacity reclaimed across your department:
+
+{{< roi-calculator >}}
+
+---
 
 ### Core Operating Framework: The Mission Loop
 
 - **Pattern:** Identify administrative bottlenecks and workflow friction.
-- **Rule:** Apply governing standards (FERPA, ADA Title II, SSoT, and delimiters).
+- **Rule:** Apply governing standards (FERPA, ADA Title II, SSoT institutional policies).
 - **Solve:** Deploy structured prompt packages for immediate administrative relief.
+
+---
 
 ### Module 1: Instant Syllabus Compliance Auditing
 
-Ingesting draft course syllabi alongside institutional policy checklists to audit grading scales, ADA Title II accessibility statements, and required institutional disclosures.
+Faculty can audit course syllabi against accreditation or institutional standards in under 60 seconds without manual line-by-line comparison.
+
+#### Prompt Architecture: Delimiter Isolation Protocol
+
+```markdown
+You are an expert Institutional Curriculum Auditor. Audit the submitted syllabus against the institutional policy requirements below.
+
+### INSTITUTIONAL POLICY RULES ###
+1. Grading policy must state late penalty clearly (max 10% deduction per day).
+2. Title IX and Student Accessibility statements must match Fall 2026 official wording verbatim.
+3. Office hours must include at least 2 hours of scheduled student consultation weekly.
+### END POLICY RULES ###
+
+### CANDIDATE SYLLABUS DATA ###
+[Paste Candidate Syllabus Text Here]
+### END CANDIDATE SYLLABUS DATA ###
+
+### OUTPUT REQUIREMENTS ###
+Generate a markdown table with columns: [Policy Requirement | Conformance Status (Pass/Gap) | Specific Finding / Required Revision].
+```
+
+---
 
 ### Module 2: Transcript Synthesis & Action Items
 
-Transforming raw departmental or committee meeting transcripts into executive summaries, chronological decision logs, and accountability matrices.
+Transform messy 60-minute meeting transcripts into structured action matrices and executive summaries with clear ownership tags.
+
+#### Prompt Template: Meeting Action Matrix
+
+```markdown
+You are an Executive Project Coordinator. Extract decisive action items from the meeting transcript enclosed in delimiters.
+
+### RAW TRANSCRIPT DATA ###
+[Paste Sanitized Meeting Transcript Here]
+### END RAW TRANSCRIPT DATA ###
+
+### DELIVERABLE FORMAT ###
+Provide:
+1. Executive Summary (Max 3 concise bullet points).
+2. Decisions Reached (Numbered list).
+3. Action Item Matrix (Markdown table: Owner | Task | Deadline | Dependency).
+```
+
+---
 
 ### Module 3: Hands-On Micro-Lab: Prompt Vault & Delimiters
 
-Practicing explicit triple-hash delimiter architecture to isolate variable data and eliminate instruction leakage and prompt injection.
+Practical execution lab applying triple-hash (`###`) delimiters to isolate case data and prevent algorithmic leakage across institutional tasks.
+
+---
 
 ### Module 4: FERPA Compliance & Secure Routing
 
-Enforcing mandatory PII sanitization workflows before running evaluations, recognizing that enterprise security is never a FERPA bypass.
+All faculty and staff utilizing generative AI must adhere to the three foundational institutional data safety rules:
+
+1. **Sanitize Before Ingestion:** Never input Personally Identifiable Information (PII), student ID numbers, grades tied to names, or health records into commercial AI systems.
+2. **Use Enterprise Zero-Retention Endpoints:** Ensure institutional accounts operate under agreements where vendor model training on user inputs is strictly disabled.
+3. **The Sovereign Auditor Rule:** AI outputs are draft proposals only. The human educator retains sovereign final authority and responsibility for all published curriculum and student assessments.
+
+---
 
 ### Workshop Summary & Resource Index
 
-- **Enforce the Mission Loop:** Diagnose patterns, apply rules, and deploy structured solves.
-- **Protect the Boundary:** Isolate variable data with explicit triple-hash delimiters (`###`).
-- **Sanitize Relentlessly:** Strip all student PII before ingestion.
-- **Retain Authority:** Maintain 100% editorial judgment as a Sovereign Auditor.
-
-### Continue Your AI Journey
-
-Because UArizona is an official Google Workspace Experimentation (GWE) institution, you have robust enterprise access. Explore advanced tutorials and prompt libraries at [Gemini for Education](https://edu.google.com/ai/gemini-for-education/).
+- **Enforce the Mission Loop:** Frame every prompt with Pattern &rarr; Rule &rarr; Solve.
+- **Curriculum-as-Code Repository:** [github.com/alanpruitt/alanpruitt.github.io](https://github.com/alanpruitt/alanpruitt.github.io)
+- **Interactive ROI Calculator:** [alanpruitt.com/roi-calculator](/roi-calculator/)
+- **Technical Essays on AI Governance:** [alanpruitt.com/essays](/essays/)
