@@ -21,3 +21,15 @@ defaultContentLanguageInSubdir = false
     contentDir = "content/es"
     weight = 2
     title = "Coach Alan"
+
+# Inside [languages.en] menu definition:
+[[languages.en.menu.main]]
+  name = "ROI Calculator"
+  url = "/roi-calculator/"
+  weight = 4
+
+# Inside [languages.es] menu definition:
+[[languages.es.menu.main]]
+  name = "Calculadora ROI"
+  url = "/roi-calculator/"
+  weight = 4

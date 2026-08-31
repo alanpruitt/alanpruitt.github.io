@@ -1,0 +1,266 @@
+<section id="roi-calculator" class="roi-calc-container" aria-labelledby="roi-calc-title">
+  <div class="roi-calc-card">
+    <h3 id="roi-calc-title" class="roi-calc-heading">Interactive Faculty & Institutional Time ROI Calculator</h3>
+    <p class="roi-calc-description">
+      Calculate the annual institutional time and fiscal dividend recovered by replacing legacy administrative workflows with Sovereign Auditor and GenAI automation frameworks.
+    </p>
+
+    <div class="roi-calc-grid">
+      <!-- Input Controls Column -->
+      <div class="roi-calc-inputs">
+        <div class="roi-input-group">
+          <label for="faculty-count" class="roi-label">
+            Participating Faculty / Staff
+            <span id="faculty-count-val" class="roi-val-badge">25</span>
+          </label>
+          <input type="range" id="faculty-count" min="1" max="200" value="25" step="1" class="roi-slider" aria-describedby="faculty-count-desc">
+          <span id="faculty-count-desc" class="roi-hint">Total faculty and staff members adopting the workflow.</span>
+        </div>
+
+        <div class="roi-input-group">
+          <label for="hours-saved" class="roi-label">
+            Hours Saved per Person / Week
+            <span id="hours-saved-val" class="roi-val-badge">4.5 hrs</span>
+          </label>
+          <input type="range" id="hours-saved" min="1" max="15" value="4.5" step="0.5" class="roi-slider" aria-describedby="hours-saved-desc">
+          <span id="hours-saved-desc" class="roi-hint">Admin time saved on syllabus auditing, transcripts, and rubric drafts.</span>
+        </div>
+
+        <div class="roi-input-group">
+          <label for="hourly-rate" class="roi-label">
+            Blended Hourly Rate ($/hr)
+            <span id="hourly-rate-val" class="roi-val-badge">$52</span>
+          </label>
+          <input type="range" id="hourly-rate" min="25" max="120" value="52" step="1" class="roi-slider" aria-describedby="hourly-rate-desc">
+          <span id="hourly-rate-desc" class="roi-hint">Average institutional compensation (salary + benefits).</span>
+        </div>
+
+        <div class="roi-input-group">
+          <label for="weeks-per-year" class="roi-label">
+            Academic Weeks per Year
+            <span id="weeks-per-year-val" class="roi-val-badge">32 weeks</span>
+          </label>
+          <input type="range" id="weeks-per-year" min="15" max="52" value="32" step="1" class="roi-slider" aria-describedby="weeks-desc">
+          <span id="weeks-desc" class="roi-hint">Active instruction and administrative service weeks.</span>
+        </div>
+      </div>
+
+      <!-- Output Metrics Column -->
+      <div class="roi-calc-results" aria-live="polite" aria-atomic="true">
+        <div class="roi-metric-card primary">
+          <span class="roi-metric-label">Annual Institutional Value Recovered</span>
+          <span id="roi-annual-savings" class="roi-metric-number">$187,200</span>
+          <span class="roi-metric-subtext">in instructional & operational capacity</span>
+        </div>
+
+        <div class="roi-metric-subgrid">
+          <div class="roi-metric-card">
+            <span class="roi-metric-label">Weekly Hours Reclaimed</span>
+            <span id="roi-weekly-hours" class="roi-metric-number">112.5 hrs</span>
+            <span class="roi-metric-subtext">across institution</span>
+          </div>
+
+          <div class="roi-metric-card">
+            <span class="roi-metric-label">Annual Hours Reclaimed</span>
+            <span id="roi-annual-hours" class="roi-metric-number">3,600 hrs</span>
+            <span class="roi-metric-subtext">redirected to student mentorship</span>
+          </div>
+        </div>
+
+        <div class="roi-callout">
+          <strong>Mission Loop Impact:</strong> Automating repetitive compliance checks creates bandwidth for high-impact human connection and student retention.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .roi-calc-container {
+    margin: 2rem 0;
+    font-family: inherit;
+    scroll-margin-top: 5rem;
+  }
+  .roi-calc-card {
+    background-color: #FFF9F0;
+    border: 2px solid #002147;
+    border-radius: 8px;
+    padding: 1.75rem;
+    color: #1a1a1a;
+  }
+  .roi-calc-heading {
+    color: #002147;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.35rem;
+    font-weight: 700;
+  }
+  .roi-calc-description {
+    color: #333333;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+  }
+  .roi-calc-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+  @media (min-width: 768px) {
+    .roi-calc-grid {
+      grid-template-columns: 1.1fr 0.9fr;
+    }
+  }
+  .roi-calc-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  .roi-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+  .roi-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #002147;
+  }
+  .roi-val-badge {
+    background-color: #002147;
+    color: #FFF9F0;
+    padding: 0.15rem 0.55rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 700;
+  }
+  .roi-slider {
+    width: 100%;
+    accent-color: #003366;
+    cursor: pointer;
+    margin: 0.25rem 0;
+  }
+  .roi-hint {
+    font-size: 0.78rem;
+    color: #555555;
+  }
+  .roi-calc-results {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+  }
+  .roi-metric-card {
+    background-color: #ffffff;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  .roi-metric-card.primary {
+    background-color: #002147;
+    color: #FFF9F0;
+    border: none;
+    padding: 1.25rem 1rem;
+  }
+  .roi-metric-card.primary .roi-metric-label {
+    color: #E2E8F0;
+  }
+  .roi-metric-card.primary .roi-metric-subtext {
+    color: #CBD5E1;
+  }
+  .roi-metric-label {
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #4b5563;
+  }
+  .roi-metric-number {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #002147;
+  }
+  .roi-metric-card.primary .roi-metric-number {
+    color: #FACC15;
+    font-size: 2rem;
+  }
+  .roi-metric-subtext {
+    font-size: 0.8rem;
+    color: #6b7280;
+  }
+  .roi-metric-subgrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+  .roi-callout {
+    background-color: #EBF3FA;
+    border-left: 4px solid #003366;
+    padding: 0.75rem 0.85rem;
+    font-size: 0.82rem;
+    line-height: 1.4;
+    color: #002147;
+    border-radius: 0 4px 4px 0;
+  }
+</style>
+
+<script>
+  (function() {
+    function initRoiCalculator() {
+      const faculty = document.getElementById('faculty-count');
+      const hours = document.getElementById('hours-saved');
+      const rate = document.getElementById('hourly-rate');
+      const weeks = document.getElementById('weeks-per-year');
+
+      if (!faculty || !hours || !rate || !weeks) return;
+
+      const facultyVal = document.getElementById('faculty-count-val');
+      const hoursVal = document.getElementById('hours-saved-val');
+      const rateVal = document.getElementById('hourly-rate-val');
+      const weeksVal = document.getElementById('weeks-per-year-val');
+
+      const annualSavings = document.getElementById('roi-annual-savings');
+      const weeklyHours = document.getElementById('roi-weekly-hours');
+      const annualHours = document.getElementById('roi-annual-hours');
+
+      function calculate() {
+        const f = parseFloat(faculty.value) || 0;
+        const h = parseFloat(hours.value) || 0;
+        const r = parseFloat(rate.value) || 0;
+        const w = parseFloat(weeks.value) || 0;
+
+        facultyVal.textContent = f;
+        hoursVal.textContent = h % 1 === 0 ? h + ' hrs' : h.toFixed(1) + ' hrs';
+        rateVal.textContent = '$' + r;
+        weeksVal.textContent = w + ' weeks';
+
+        const totalWeeklyHours = f * h;
+        const totalAnnualHours = totalWeeklyHours * w;
+        const totalAnnualSavings = totalAnnualHours * r;
+
+        weeklyHours.textContent = totalWeeklyHours.toLocaleString('en-US', { maximumFractionDigits: 1 }) + ' hrs';
+        annualHours.textContent = totalAnnualHours.toLocaleString('en-US', { maximumFractionDigits: 0 }) + ' hrs';
+        annualSavings.textContent = '$' + totalAnnualSavings.toLocaleString('en-US', { maximumFractionDigits: 0 });
+      }
+
+      [faculty, hours, rate, weeks].forEach(el => {
+        el.addEventListener('input', calculate);
+      });
+
+      calculate();
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initRoiCalculator);
+    } else {
+      initRoiCalculator();
+    }
+  })();
+</script>
