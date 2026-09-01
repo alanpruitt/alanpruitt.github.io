@@ -378,30 +378,31 @@
   })();
 </script>
 
-
 <!-- Presentation Laser Pointer Mode -->
-<div id="deck-laser-dot" style="display:none; position:fixed; width:16px; height:16px; border-radius:50%; background:#0C2340; border:2px solid #007D8A; box-shadow:0 0 10px 4px rgba(0, 125, 255, 0.9), 0 0 22px 8px rgba(12, 35, 64, 0.65); pointer-events:none; z-index:99999; transform:translate(-50%, -50%); transition:opacity 0.15s ease;"></div>
+<div id="deck-laser-dot" style="display: none; position: fixed; width: 16px; height: 16px; border-radius: 50%; background: #0C2340; border: 2px solid #007D8A; box-shadow: 0 0 10px 4px rgba(0, 125, 255, 0.9), 0 0 22px 8px rgba(12, 35, 64, 0.65); pointer-events: none; z-index: 999999; transform: translate(-50%, -50%);"></div>
 
 <script>
 (function() {
-  let laserActive = false;
-  const laser = document.getElementById('deck-laser-dot');
-  
-  // Toggle with 'L' key during presentation
-  document.addEventListener('keydown', (e) => {
+  var laserActive = false;
+  var dot = document.getElementById('deck-laser-dot');
+
+  function toggleLaser(state) {
+    laserActive = (state !== undefined) ? state : !laserActive;
+    if (dot) dot.style.display = laserActive ? 'block' : 'none';
+    document.body.style.cursor = laserActive ? 'none' : 'default';
+  }
+
+  document.addEventListener('keydown', function(e) {
     if (e.key === 'l' || e.key === 'L') {
-      // Ignore if typing in an input
-      if (['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName)) return;
-      laserActive = !laserActive;
-      laser.style.display = laserActive ? 'block' : 'none';
-      document.body.style.cursor = laserActive ? 'none' : 'default';
+      if (['INPUT', 'TEXTAREA', 'SELECT'].indexOf(document.activeElement.tagName) !== -1) return;
+      toggleLaser();
     }
   });
 
-  document.addEventListener('mousemove', (e) => {
-    if (!laserActive) return;
-    laser.style.left = e.clientX + 'px';
-    laser.style.top = e.clientY + 'px';
+  document.addEventListener('mousemove', function(e) {
+    if (!laserActive || !dot) return;
+    dot.style.left = e.clientX + 'px';
+    dot.style.top = e.clientY + 'px';
   });
 })();
 </script>
