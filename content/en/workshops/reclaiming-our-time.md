@@ -22,13 +22,15 @@ duration: "60 Minutes"
 
 A hands-on, administrative relief workshop designed for educators and instructional staff to reclaim operational bandwidth, streamline course audits, and eliminate routine busywork using zero-retention GenAI pipelines.
 
-### Workshop Video Overview & Presentation Deck
+## Workshop Video Overview
 
-{{< responsive-video src="/videos/reclaiming-our-time.mp4" title="Reclaiming Our Time Workshop Video" >}}
+{{< workshop-video src="/videos/reclaiming-our-time.mp4" vtt="/videos/reclaiming-our-time.vtt" >}}
 
-- **Session Video Overview:** Embedded walkthrough of practical GenAI administrative relief pipelines.
-- **Executive Presentation Deck:** Downloadable presentation slide deck in high-contrast PDF format.
-- **Core Standard:** Zero data retention, delimiter isolation, and instructor-led sovereign auditing.
+---
+
+## Executive Presentation Deck
+
+{{< workshop-carousel >}}
 
 ---
 
