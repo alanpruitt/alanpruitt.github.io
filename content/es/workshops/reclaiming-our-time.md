@@ -136,28 +136,55 @@ Sin delimitadores explícitos, los LLM a menudo fusionan las instrucciones con e
 Actúe como un Auditor Soberano Experto y Especialista en Currículo. Su tarea es evaluar y alinear el contenido institucional con los estándares de la Fuente Única de Verdad (SSoT) sin retener datos del usuario.
 
 [REGLAS OPERATIVAS]:
-
 1. Opere estrictamente dentro de los límites delimitados proporcionados.
 2. Coteje el texto de entrada exclusivamente contra los estándares de política proporcionados.
 3. Señale brechas de cumplimiento, vectores de accesibilidad faltantes y discrepancias de alineación.
 4. Genere los hallazgos en una tabla Markdown estructurada y accionable.
 
 [DATOS DE ENTRADA / TEXTO A AUDITAR]:
-
 ###
-
 [INSERTE AQUÍ EL PROGRAMA DE ESTUDIOS, RÚBRICA O TRANSCRIPCIÓN NO ESTRUCTURADA]
-
 ###
 
 [DIRECTRIZ DE AUDITORÍA]:
 Genere la matriz de auditoría identificando:
+- Hallazgo / Brecha
+- Referencia de Norma Oficial
+- Elemento de Acción para Corrección
+###</pre>
+</div>
 
-* Hallazgo / Brecha
-* Referencia de Norma Oficial
-* Elemento de Acción para Corrección
+### Plantilla de Prompt: Matriz de Acciones de Reunión
 
-### </pre>
+<div style="background-color: #ffffff; padding: 14px; border-radius: 6px; border-left: 4px solid #003366; margin: 20px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+  <strong style="color: #003366; font-size: 1rem; display: block; margin-bottom: 4px;">Alivio Administrativo / Matriz de Acciones de Reunión</strong>
+  <p style="font-size: 0.88rem; margin: 0 0 8px 0; color: #374151;">Enfoque: Extracción determinista de elementos de acción, responsables y entregables a partir de transcripciones de comités.</p>
+  <div style="background-color: #003366; color: #ffffff; padding: 6px 12px; border-radius: 4px 4px 0 0; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.05em; display: flex; justify-content: space-between;">
+    <span>MATRIZ DE ACCIÓN (CLIC PARA SELECCIONAR TODO &bull; CTRL+C / CMD+C)</span>
+    <span style="color: #d4af37; font-style: italic;">ALIVIO ADMIN</span>
+  </div>
+  <pre style="margin: 0px; background-color: #fdfbf7; border-radius: 0px 0px 4px 4px; padding: 14px; font-family: 'Courier New', monospace; font-size: 0.88rem; color: #1e2a38; line-height: 1.45; user-select: all; -webkit-user-select: all; -moz-user-select: all; cursor: pointer; overflow-x: auto; white-space: pre-wrap; border: 1px solid #003366;" title="Haga clic adentro para copiar los datos del prompt">###
+[ROL Y CONTEXTO]:
+Actúe como Asistente Administrativo Ejecutivo. Transforme las notas no estructuradas del comité o reunión docente en una matriz de ejecución priorizada y procesable.
+
+[REGLAS DE EXTRACCIÓN]:
+1. Aísle entregables explícitos, líderes asignados y plazos de entrega.
+2. Agrupe los elementos por dominio operativo (Currículo, Cumplimiento, Operaciones, Tecnología).
+3. Identifique decisiones no asignadas que requieran seguimiento del liderazgo.
+4. No invente detalles; señale explícitamente cualquier ambigüedad.
+
+[NOTAS DE REUNIÓN EN BRUTO]:
+###
+[INSERTE AQUÍ LAS NOTAS DE REUNIÓN, TRANSCRIPCIONES O PUNTOS DEL COMITÉ]
+###
+
+[FORMATO DE SALIDA]:
+Proporcione una tabla Markdown con las columnas:
+| N.° | Elemento de Acción / Entregable | Responsable | Fecha Límite | Prioridad (Alta/Media/Baja) |
+###</pre>
+</div>
+
+## </pre>
 
 </div>
 

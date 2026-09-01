@@ -71,28 +71,55 @@ Faculty can audit course syllabi against institutional master standards in under
 Act as an Expert Sovereign Auditor and Curriculum Specialist. Your task is to evaluate and align institutional course content against authoritative Single Source of Truth (SSoT) standards without retaining user data.
 
 [OPERATIONAL RULES]:
-
 1. Operate strictly within the provided delimited boundaries.
 2. Cross-reference the input text exclusively against the provided policy standards.
 3. Highlight compliance gaps, missing accessibility vectors, and alignment discrepancies.
 4. Output findings in a structured, actionable Markdown table.
 
 [INPUT DATA / TEXT TO AUDIT]:
-
 ###
-
 [INSERT UNSTRUCTURED SYLLABUS, RUBRIC, OR MEETING TRANSCRIPT HERE]
-
 ###
 
 [AUDIT DIRECTIVE]:
-Generate the audit matrix identifying:
-
+Generate the audit matrix identifying: 
 - Finding / Gap
 - Authoritative Rule Reference
 - Remediation Action Item
+###</pre>
+</div>
 
-### </pre>
+### Prompt Template: Meeting Action Matrix
+
+<div style="background-color: #ffffff; padding: 14px; border-radius: 6px; border-left: 4px solid #003366; margin: 20px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+  <strong style="color: #003366; font-size: 1rem; display: block; margin-bottom: 4px;">Administrative Relief / Matriz de Acciones de Reunión</strong>
+  <p style="font-size: 0.88rem; margin: 0 0 8px 0; color: #374151;">Focus: Extracting deterministic action items, task owners, and deliverables from raw committee transcripts.</p>
+  <div style="background-color: #003366; color: #ffffff; padding: 6px 12px; border-radius: 4px 4px 0 0; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.05em; display: flex; justify-content: space-between;">
+    <span>MEETING MATRIX PROMPT (CLICK TO SELECT ALL &bull; CTRL+C / CMD+C)</span>
+    <span style="color: #d4af37; font-style: italic;">ADMIN RELIEF</span>
+  </div>
+  <pre style="margin: 0px; background-color: #fdfbf7; border-radius: 0px 0px 4px 4px; padding: 14px; font-family: 'Courier New', monospace; font-size: 0.88rem; color: #1e2a38; line-height: 1.45; user-select: all; -webkit-user-select: all; -moz-user-select: all; cursor: pointer; overflow-x: auto; white-space: pre-wrap; border: 1px solid #003366;" title="Click inside to copy prompt data">###
+[ROLE & CONTEXT]:
+Act as an Executive Administrative Assistant. Transform the unstructured committee or faculty meeting notes into an actionable, prioritized execution matrix.
+
+[EXTRACTION RULES]:
+1. Isolate explicit deliverables, appointed task leads, and milestone deadlines.
+2. Group items by operational domain (Curriculum, Compliance, Operations, Technology).
+3. Identify unassigned decisions requiring leadership follow-up.
+4. Do not invent details; flag ambiguity explicitly.
+
+[RAW MEETING NOTES]:
+###
+[INSERT RAW MEETING NOTES, TRANSCRIPTS, OR COMMITTEE BULLETS HERE]
+###
+
+[OUTPUT FORMAT]:
+Provide a Markdown table with columns:
+| Item # | Action Item / Deliverable | Responsible Lead | Target Completion | Priority (High/Med/Low) |
+###</pre>
+</div>
+
+## </pre>
 
 </div>
 
@@ -302,7 +329,7 @@ Act as an Executive Administrative Assistant. Transform the unstructured committ
 Provide a Markdown table with columns:
 | Item # | Action Item / Deliverable | Responsible Lead | Target Completion | Priority (High/Med/Low) |
 ###
-{{< /prompt-card >}}
+
 
 ###
 [ROLE & CONTEXT]:
