@@ -19,6 +19,18 @@ institutional_alignment_url: "https://responsibleai.arizona.edu/tools-support/u-
 
 ## Reclaiming Our Time: Secure and Practical GenAI Workflows for Faculty and Staff
 
+
+<div class="facilitator-card" style="border: 1.5px solid #002147; border-radius: 0.5rem; padding: 1.25rem; background-color: #FFF9F0; margin: 1.5rem 0 2rem 0;">
+  <span class="facilitator-label" style="font-size: 0.75rem; font-weight: 800; text-transform: uppercase; color: #002147; letter-spacing: 0.05em; display: block; margin-bottom: 0.25rem;">Workshop Facilitator</span>
+  <div class="facilitator-name" style="font-size: 1.25rem; font-weight: 800; color: #002147;">Alan Pruitt</div>
+  <div class="facilitator-title" style="font-size: 0.95rem; font-weight: 600; color: #52525b; margin-bottom: 0.75rem;">Generative AI Strategist &amp; Designated Campus Colleague (DCC)</div>
+  <div class="facilitator-meta" style="font-size: 0.875rem; color: #27272a; line-height: 1.6;">
+    <strong>Duration:</strong> 60 Minutes<br>
+    <strong>Contact:</strong> <a href="mailto:alanpruitt@arizona.edu" style="color: #002147; font-weight: 600; text-decoration: underline;">alanpruitt@arizona.edu</a><br>
+    <strong>Institutional Alignment:</strong> <a href="https://responsibleai.arizona.edu/tools-support/u-gen-ai" target="_blank" rel="noopener noreferrer" style="color: #002147; font-weight: 600; text-decoration: underline;">University of Arizona Responsible AI Initiative | U of A GenAI</a>
+  </div>
+</div>
+
 A hands-on, administrative relief workshop designed for educators and instructional staff to reclaim operational bandwidth, streamline course audits, and eliminate routine busywork using zero-retention GenAI pipelines.
 
 
