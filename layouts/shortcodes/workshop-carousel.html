@@ -377,3 +377,31 @@
     }
   })();
 </script>
+
+
+<!-- Presentation Laser Pointer Mode -->
+<div id="deck-laser-dot" style="display:none; position:fixed; width:14px; height:14px; border-radius:50%; background:#ff1e1e; box-shadow:0 0 8px 3px rgba(255, 30, 30, 0.8), 0 0 16px 6px rgba(255, 0, 0, 0.4); pointer-events:none; z-index:99999; transform:translate(-50%, -50%); transition:opacity 0.15s ease;"></div>
+
+<script>
+(function() {
+  let laserActive = false;
+  const laser = document.getElementById('deck-laser-dot');
+  
+  // Toggle with 'L' key during presentation
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'l' || e.key === 'L') {
+      // Ignore if typing in an input
+      if (['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName)) return;
+      laserActive = !laserActive;
+      laser.style.display = laserActive ? 'block' : 'none';
+      document.body.style.cursor = laserActive ? 'none' : 'default';
+    }
+  });
+
+  document.addEventListener('mousemove', (e) => {
+    if (!laserActive) return;
+    laser.style.left = e.clientX + 'px';
+    laser.style.top = e.clientY + 'px';
+  });
+})();
+</script>
