@@ -1,32 +1,38 @@
-<header class="sticky top-0 z-50 w-full border-b border-zinc-200 bg-white/90 backdrop-blur-md dark:border-zinc-800 dark:bg-zinc-950/90">
+<header class="sticky top-0 z-50 w-full border-b border-zinc-200 bg-white/95 backdrop-blur-md dark:border-zinc-800 dark:bg-zinc-950/95">
   <div class="mx-auto flex max-w-5xl items-center justify-between px-4 sm:px-6 lg:px-8 h-16">
+    
+    <!-- Brand / Architect Badge -->
     <a 
       href="{{ if eq .Lang "es" }}/es/{{ else }}/{{ end }}" 
-      class="group inline-flex items-center gap-3 text-zinc-950 focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:text-white dark:focus-visible:outline-white"
+      class="group inline-flex items-center gap-2 sm:gap-3 text-zinc-950 focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:text-white"
       aria-label="Alan Pruitt - Home"
       style="text-decoration: none;"
     >
-      <span class="text-base font-extrabold tracking-tight sm:text-lg">
+      <span class="text-base font-extrabold tracking-tight sm:text-lg text-navy-900 dark:text-white">
         Alan Pruitt
       </span>
       <span class="hidden sm:inline-block text-zinc-300 dark:text-zinc-700" aria-hidden="true">•</span>
       <span 
-        class="hidden sm:inline-flex items-center rounded-md border border-zinc-300 bg-zinc-100 px-2.5 py-0.5 text-xs font-bold uppercase tracking-wider text-zinc-800 shadow-sm dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-200"
-        style="display: inline-flex; align-items: center; padding: 0.15rem 0.6rem; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; border-radius: 0.375rem; border: 1px solid #d4d4d8; background-color: #f4f4f5; color: #27272a;"
+        class="hidden sm:inline-flex items-center rounded-md border border-zinc-300 bg-zinc-100 px-2 py-0.5 text-xs font-bold uppercase tracking-wider text-zinc-800 shadow-sm dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-200"
+        style="border: 1px solid #d4d4d8; background-color: #f4f4f5; color: #27272a;"
       >
         CaC Architect
       </span>
     </a>
-    <nav aria-label="Main Navigation" class="flex items-center gap-4 sm:gap-6 text-sm font-medium text-zinc-600 dark:text-zinc-300">
-      <a href="{{ if eq .Lang "es" }}/es/workshops/{{ else }}/workshops/{{ end }}" class="transition hover:text-zinc-950 dark:hover:text-white" style="text-decoration: none;">
+
+    <!-- Desktop Navigation (md+ screens) -->
+    <nav aria-label="Main Navigation" class="hidden md:flex items-center gap-6 text-sm font-medium text-zinc-600 dark:text-zinc-300">
+      <a href="{{ if eq .Lang "es" }}/es/workshops/{{ else }}/workshops/{{ end }}" class="transition hover:text-navy-900 dark:hover:text-white font-semibold" style="text-decoration: none;">
         {{ if eq .Lang "es" }}Talleres{{ else }}Workshops{{ end }}
       </a>
-      <a href="{{ if eq .Lang "es" }}/es/roi-calculator/{{ else }}/roi-calculator/{{ end }}" class="transition hover:text-zinc-950 dark:hover:text-white" style="text-decoration: none;">
+      <a href="{{ if eq .Lang "es" }}/es/roi-calculator/{{ else }}/roi-calculator/{{ end }}" class="transition hover:text-navy-900 dark:hover:text-white font-semibold" style="text-decoration: none;">
         {{ if eq .Lang "es" }}Calculadora ROI{{ else }}ROI Calculator{{ end }}
       </a>
-      <a href="{{ if eq .Lang "es" }}/es/essays/{{ else }}/essays/{{ end }}" class="transition hover:text-zinc-950 dark:hover:text-white" style="text-decoration: none;">
+      <a href="{{ if eq .Lang "es" }}/es/essays/{{ else }}/essays/{{ end }}" class="transition hover:text-navy-900 dark:hover:text-white font-semibold" style="text-decoration: none;">
         {{ if eq .Lang "es" }}Ensayos{{ else }}Essays{{ end }}
       </a>
+
+      <!-- Desktop Language Switcher -->
       <nav class="flex items-center rounded-lg border border-zinc-200 bg-zinc-50 p-1 dark:border-zinc-800 dark:bg-zinc-900" aria-label="Language Switcher">
         <a 
           href="{{ if .IsTranslated }}{{ (index .Translations 0).RelPermalink }}{{ else }}/{{ end }}" 
@@ -46,5 +52,81 @@
         </a>
       </nav>
     </nav>
+
+    <!-- Mobile Header Controls (Language Switcher + Accordion Menu) -->
+    <div class="flex items-center gap-2 md:hidden">
+      
+      <!-- Mobile Language Toggle -->
+      <nav class="flex items-center rounded-md border border-zinc-200 bg-zinc-50 p-0.5 dark:border-zinc-800 dark:bg-zinc-900" aria-label="Mobile Language Switcher">
+        <a 
+          href="{{ if .IsTranslated }}{{ (index .Translations 0).RelPermalink }}{{ else }}/{{ end }}" 
+          class="min-h-[32px] min-w-[28px] flex items-center justify-center rounded px-1.5 text-xs font-bold uppercase {{ if eq .Lang "en" }}bg-white text-zinc-950 shadow-sm dark:bg-zinc-800 dark:text-white{{ else }}text-zinc-500{{ end }}"
+          style="text-decoration: none;"
+        >
+          EN
+        </a>
+        <a 
+          href="{{ if .IsTranslated }}{{ (index .Translations 0).RelPermalink }}{{ else }}/es/{{ end }}" 
+          class="min-h-[32px] min-w-[28px] flex items-center justify-center rounded px-1.5 text-xs font-bold uppercase {{ if eq .Lang "es" }}bg-white text-zinc-950 shadow-sm dark:bg-zinc-800 dark:text-white{{ else }}text-zinc-500{{ end }}"
+          style="text-decoration: none;"
+        >
+          ES
+        </a>
+      </nav>
+
+      <!-- Mobile Dropdown Accordion Menu -->
+      <details class="relative group" style="margin: 0;">
+        <summary 
+          class="list-none cursor-pointer flex items-center gap-1.5 rounded-md border border-zinc-300 bg-zinc-100 px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-zinc-900 shadow-sm transition hover:bg-zinc-200 focus:outline-none focus:ring-2 focus:ring-navy-900 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100"
+          aria-label="Toggle Mobile Menu"
+          style="min-height: 38px; display: inline-flex; align-items: center;"
+        >
+          <span>{{ if eq .Lang "es" }}Menú{{ else }}Menu{{ end }}</span>
+          <svg class="w-4 h-4 transition-transform group-open:rotate-180" style="width: 1rem; height: 1rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </summary>
+
+        <!-- Dropdown Card -->
+        <div 
+          class="absolute right-0 mt-2 w-56 origin-top-right rounded-lg border bg-white p-2 shadow-xl dark:bg-zinc-900 z-50"
+          style="border: 2px solid #002147; background-color: #FFF9F0; position: absolute; right: 0; width: 14rem; margin-top: 0.5rem; z-index: 50; padding: 0.5rem; border-radius: 0.5rem;"
+        >
+          <div class="flex flex-col gap-1" role="menu" aria-orientation="vertical">
+            <a 
+              href="{{ if eq .Lang "es" }}/es/workshops/{{ else }}/workshops/{{ end }}" 
+              class="flex items-center justify-between rounded-md px-3 py-2.5 text-sm font-bold"
+              style="text-decoration: none; color: #002147; min-height: 44px; display: flex; justify-content: space-between; align-items: center;"
+              role="menuitem"
+            >
+              <span>{{ if eq .Lang "es" }}Talleres{{ else }}Workshops{{ end }}</span>
+              <span style="color: #71717a;">&rarr;</span>
+            </a>
+            
+            <a 
+              href="{{ if eq .Lang "es" }}/es/roi-calculator/{{ else }}/roi-calculator/{{ end }}" 
+              class="flex items-center justify-between rounded-md px-3 py-2.5 text-sm font-bold"
+              style="text-decoration: none; color: #002147; min-height: 44px; display: flex; justify-content: space-between; align-items: center;"
+              role="menuitem"
+            >
+              <span>{{ if eq .Lang "es" }}Calculadora ROI{{ else }}ROI Calculator{{ end }}</span>
+              <span style="color: #71717a;">&rarr;</span>
+            </a>
+
+            <a 
+              href="{{ if eq .Lang "es" }}/es/essays/{{ else }}/essays/{{ end }}" 
+              class="flex items-center justify-between rounded-md px-3 py-2.5 text-sm font-bold"
+              style="text-decoration: none; color: #002147; min-height: 44px; display: flex; justify-content: space-between; align-items: center;"
+              role="menuitem"
+            >
+              <span>{{ if eq .Lang "es" }}Ensayos{{ else }}Essays{{ end }}</span>
+              <span style="color: #71717a;">&rarr;</span>
+            </a>
+          </div>
+        </div>
+      </details>
+
+    </div>
+
   </div>
 </header>
