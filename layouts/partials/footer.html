@@ -77,38 +77,70 @@
   </div>
 </footer>
 
-<!-- Global Code Block Copy Script -->
+<!-- Global Presentation & Copy Utilities -->
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-  document.addEventListener('click', function(e) {
-    var pre = e.target.closest('.copyable-prompt-pre');
-    if (!pre) return;
-    
-    var text = pre.innerText.trim();
-    var statusId = pre.getAttribute('data-target');
-    var label = statusId ? document.getElementById(statusId) : null;
-    
-    if (window.getSelection) {
-      var range = document.createRange();
-      range.selectNodeContents(pre);
-      var sel = window.getSelection();
-      sel.removeAllRanges();
-      sel.addRange(range);
-    }
-    
+window.copyPromptDirect = function(preId, statusId) {
+  var pre = document.getElementById(preId);
+  var label = document.getElementById(statusId);
+  if (!pre) return;
+  
+  var text = pre.innerText.trim();
+  
+  if (navigator.clipboard && navigator.clipboard.writeText) {
     navigator.clipboard.writeText(text).then(function() {
-      if (label) {
-        var origText = label.innerText;
-        label.innerText = '✓ COPIED TO CLIPBOARD!';
-        label.style.color = '#4ade80';
-        setTimeout(function() {
-          label.innerText = origText;
-          label.style.color = '#ffffff';
-        }, 2500);
-      }
-    }).catch(function(err) {
-      console.warn('Clipboard write failed, using selection fallback:', err);
+      showCopiedFeedback(label);
+    }).catch(function() {
+      fallbackSelect(pre, label);
     });
-  });
-});
+  } else {
+    fallbackSelect(pre, label);
+  }
+};
+
+function fallbackSelect(el, label) {
+  var range = document.createRange();
+  range.selectNodeContents(el);
+  var sel = window.getSelection();
+  sel.removeAllRanges();
+  sel.addRange(range);
+  try {
+    document.execCommand('copy');
+    showCopiedFeedback(label);
+  } catch(e) {}
+}
+
+function showCopiedFeedback(label) {
+  if (!label) return;
+  var orig = label.innerText;
+  label.innerText = '✓ COPIED TO CLIPBOARD!';
+  label.style.color = '#4ade80';
+  setTimeout(function() {
+    label.innerText = orig;
+    label.style.color = '#ffffff';
+  }, 2500);
+}
+
+// Global Laser Pointer listener on window capture
+(function() {
+  var laserActive = false;
+  var dot = document.getElementById('deck-laser-dot');
+
+  window.addEventListener('keydown', function(e) {
+    if (e.key === 'l' || e.key === 'L') {
+      var tag = (document.activeElement && document.activeElement.tagName) || '';
+      if (['INPUT', 'TEXTAREA', 'SELECT'].indexOf(tag) !== -1) return;
+      
+      laserActive = !laserActive;
+      if (!dot) dot = document.getElementById('deck-laser-dot');
+      if (dot) dot.style.display = laserActive ? 'block' : 'none';
+      document.body.style.cursor = laserActive ? 'none' : 'default';
+    }
+  }, true);
+
+  window.addEventListener('mousemove', function(e) {
+    if (!laserActive || !dot) return;
+    dot.style.left = e.clientX + 'px';
+    dot.style.top = e.clientY + 'px';
+  }, true);
+})();
 </script>

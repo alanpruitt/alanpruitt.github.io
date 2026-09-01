@@ -3,12 +3,12 @@
 {{ $badge := .Get "badge" | default "PROMPT" }}
 {{ $id := .Get "id" | default (printf "prompt-%d" (now.UnixNano)) }}
 
-<div class="prompt-box-container" style="background-color: #ffffff; padding: 14px; border-radius: 6px; border-left: 4px solid #003366; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+<div class="prompt-box-container" style="background-color: #ffffff; padding: 14px; border-radius: 6px; border-left: 4px solid #003366; margin: 20px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.08);">
   <strong style="color: #003366; font-size: 1rem; display: block; margin-bottom: 4px;">{{ $title }}</strong>
   <p style="font-size: 0.88rem; margin: 0 0 8px 0; color: #374151;">{{ $subtitle }}</p>
   <div style="background-color: #003366; color: #ffffff; padding: 6px 12px; border-radius: 4px 4px 0 0; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.05em; display: flex; justify-content: space-between; align-items: center;">
     <span class="prompt-status-label" id="status-{{ $id }}">CLICK BOX TO COPY PROMPT</span>
     <span style="color: #d4af37; font-style: italic;">{{ $badge }}</span>
   </div>
-  <pre class="copyable-prompt-pre" data-target="status-{{ $id }}" style="margin: 0px; background-color: #fdfbf7; border-radius: 0px 0px 4px 4px; padding: 14px; font-family: 'Courier New', monospace; font-size: 0.88rem; color: #1e2a38; line-height: 1.45; user-select: all; -webkit-user-select: all; cursor: pointer; overflow-x: auto; white-space: pre-wrap; border: 1px solid #003366; border-top: none;" title="Click anywhere inside to copy prompt to clipboard">{{ .Inner | safeHTML }}</pre>
+  <pre id="pre-{{ $id }}" class="copyable-prompt-pre" onclick="copyPromptDirect('pre-{{ $id }}', 'status-{{ $id }}')" style="margin: 0px; background-color: #fdfbf7; border-radius: 0px 0px 4px 4px; padding: 14px; font-family: 'Courier New', monospace; font-size: 0.88rem; color: #1e2a38; line-height: 1.45; cursor: pointer; overflow-x: auto; white-space: pre-wrap; border: 1px solid #003366; border-top: none;" title="Click anywhere inside to copy prompt to clipboard">{{ .Inner | safeHTML }}</pre>
 </div>
