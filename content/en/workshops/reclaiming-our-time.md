@@ -6,11 +6,24 @@ description: "A hands-on, administrative relief workshop designed for educators 
 video_url: "/videos/reclaiming-our-time.mp4"
 deck_url: "/assets/docs/Reclaiming_Our_Time_Deck_Fall2026.pdf"
 layout: "single"
+type: "workshops"
+facilitator: "Alan Pruitt"
+facilitator_title: "Generative AI Strategist & Designated Campus Colleague (DCC)"
+duration: "60 Minutes"
+contact: "alanpruitt@arizona.edu"
+facilitator_email: "alanpruitt@arizona.edu"
+institutional_alignment: "University of Arizona Responsible AI Initiative | U of A GenAI"
+institutional_alignment_url: "https://responsibleai.arizona.edu/tools-support/u-gen-ai"
+
 ---
 
 ## Reclaiming Our Time: Secure and Practical GenAI Workflows for Faculty and Staff
 
 A hands-on, administrative relief workshop designed for educators and instructional staff to reclaim operational bandwidth, streamline course audits, and eliminate routine busywork using zero-retention GenAI pipelines.
+
+
+
+
 
 ### Workshop Video Overview & Presentation Deck
 
