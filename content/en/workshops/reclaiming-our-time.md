@@ -20,14 +20,7 @@ duration: "60 Minutes"
 ---
 ## Reclaiming Our Time: Secure and Practical GenAI Workflows for Faculty and Staff
 
-
-
-
 A hands-on, administrative relief workshop designed for educators and instructional staff to reclaim operational bandwidth, streamline course audits, and eliminate routine busywork using zero-retention GenAI pipelines.
-
-
-
-
 
 ### Workshop Video Overview & Presentation Deck
 
