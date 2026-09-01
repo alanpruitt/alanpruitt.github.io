@@ -1,54 +1,14 @@
 {{ $title := .Get "title" | default "Prompt Architecture" }}
 {{ $subtitle := .Get "subtitle" | default "Delimited Prompt Architecture" }}
-{{ $badge := .Get "badge" | default "PROMPT" }}
-{{ $id := .Get "id" | default (printf "prompt-%d" (now.UnixNano)) }}
+{{ $badge := .Get "badge" | default "DELIMITER PROTOCOL" }}
+{{ $badgeClass := .Get "badgeClass" | default "CLINICA" }}
 
-<div class="prompt-box-container" style="background-color: #ffffff; padding: 14px; border-radius: 6px; border-left: 4px solid #003366; margin: 24px 0; box-shadow: 0 2px 6px rgba(0,33,71,0.08);">
+<div style="background-color: #ffffff; padding: 14px; border-radius: 6px; border-left: 4px solid #003366; margin-bottom: 15px;">
   <strong style="color: #003366; font-size: 1rem; display: block; margin-bottom: 4px;">{{ $title }}</strong>
   <p style="font-size: 0.88rem; margin: 0 0 8px 0; color: #374151;">{{ $subtitle }}</p>
-  <div style="background-color: #003366; color: #ffffff; padding: 6px 12px; border-radius: 4px 4px 0 0; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.05em; display: flex; justify-content: space-between; align-items: center;">
-    <span id="status-{{ $id }}">CLICK BOX TO COPY (CTRL+C / CMD+C)</span>
-    <span style="color: #d4af37; font-style: italic;">{{ $badge }}</span>
+  <div style="background-color: #003366; color: #ffffff; padding: 4px 10px; border-radius: 4px 4px 0 0; font-size: 0.78rem; display: flex; justify-content: space-between;">
+    <span>{{ $badge }} (CLICK TO COPY)</span>
+    <span style="color: #d4af37; font-style: italic;">{{ $badgeClass }}</span>
   </div>
-  <pre id="pre-{{ $id }}" style="margin: 0px; background-color: #fdfbf7; border-radius: 0px 0px 4px 4px; padding: 14px; font-family: 'Courier New', monospace; font-size: 0.88rem; color: #1e2a38; line-height: 1.45; user-select: all; -webkit-user-select: all; -moz-user-select: all; cursor: pointer; overflow-x: auto; white-space: pre-wrap; border: 1px solid #003366; border-top: none;" title="Click anywhere inside to select all and copy prompt">{{ .Inner | safeHTML }}</pre>
+  <pre style="margin: 0px; background-color: #fdfbf7; border-radius: 0px 0px 4px 4px; padding: 12px; font-family: 'Courier New', monospace; font-size: 0.88rem; color: #1e2a38; line-height: 1.4; user-select: all; -webkit-user-select: all; -moz-user-select: all; cursor: pointer; overflow-x: auto; white-space: pre-wrap; border: 1px solid #003366;" title="Click inside to copy prompt data">{{ .Inner | safeHTML }}</pre>
 </div>
-
-<script>
-(function() {
-  var pre = document.getElementById('pre-{{ $id }}');
-  var label = document.getElementById('status-{{ $id }}');
-  if (!pre) return;
-
-  pre.addEventListener('click', function() {
-    var text = pre.innerText.trim();
-    
-    // 1. Instant Select-All (EXW standard)
-    if (window.getSelection) {
-      var range = document.createRange();
-      range.selectNodeContents(pre);
-      var sel = window.getSelection();
-      sel.removeAllRanges();
-      sel.addRange(range);
-    }
-    
-    // 2. Direct Clipboard Copy
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(text).then(function() {
-        if (label) {
-          var orig = label.innerText;
-          label.innerText = '✓ COPIED TO CLIPBOARD!';
-          label.style.color = '#4ade80';
-          setTimeout(function() {
-            label.innerText = orig;
-            label.style.color = '#ffffff';
-          }, 2500);
-        }
-      }).catch(function() {
-        try { document.execCommand('copy'); } catch(e){}
-      });
-    } else {
-      try { document.execCommand('copy'); } catch(e){}
-    }
-  });
-})();
-</script>

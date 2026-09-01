@@ -57,16 +57,12 @@ Every AI-assisted workflow must follow the deterministic three-stage **Mission L
 
 Faculty can audit course syllabi against institutional master standards in under 60 seconds without manual line-by-line comparison.
 
-#### Prompt Architecture: Delimiter Isolation Protocol
+#
 
-<div style="background-color: #ffffff; padding: 14px; border-radius: 6px; border-left: 4px solid #003366; margin: 20px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-  <strong style="color: #003366; font-size: 1rem; display: block; margin-bottom: 4px;">Delimited Prompt Architecture / Protocolo de Aislamiento</strong>
-  <p style="font-size: 0.88rem; margin: 0 0 8px 0; color: #374151;">Focus: Zero-retention data isolation and strict boundary enforcement using triple-hash (###) delimiters.</p>
-  <div style="background-color: #003366; color: #ffffff; padding: 6px 12px; border-radius: 4px 4px 0 0; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.05em; display: flex; justify-content: space-between;">
-    <span>PROMPT TEMPLATE (CLICK TO SELECT ALL &bull; CTRL+C / CMD+C)</span>
-    <span style="color: #d4af37; font-style: italic;">DELIMITER PROTOCOL</span>
-  </div>
-  <pre style="margin: 0px; background-color: #fdfbf7; border-radius: 0px 0px 4px 4px; padding: 14px; font-family: 'Courier New', monospace; font-size: 0.88rem; color: #1e2a38; line-height: 1.45; user-select: all; -webkit-user-select: all; -moz-user-select: all; cursor: pointer; overflow-x: auto; white-space: pre-wrap; border: 1px solid #003366;" title="Click inside to copy prompt data">###
+### Prompt Architecture: Delimiter Isolation Protocol
+
+{{< prompt-card title="Delimited Prompt Architecture / Protocolo de Aislamiento" subtitle="Focus: Zero-retention data isolation and strict boundary enforcement using triple-hash (###) delimiters." badge="PROMPT TEMPLATE" badgeClass="DELIMITER PROTOCOL" >}}
+###
 [ROLE & CONTEXT]:
 Act as an Expert Sovereign Auditor and Curriculum Specialist. Your task is to evaluate and align institutional course content against authoritative Single Source of Truth (SSoT) standards without retaining user data.
 
@@ -79,237 +75,19 @@ Act as an Expert Sovereign Auditor and Curriculum Specialist. Your task is to ev
 [INPUT DATA / TEXT TO AUDIT]:
 ###
 [INSERT UNSTRUCTURED SYLLABUS, RUBRIC, OR MEETING TRANSCRIPT HERE]
-###
-
-[AUDIT DIRECTIVE]:
-Generate the audit matrix identifying: 
-- Finding / Gap
-- Authoritative Rule Reference
-- Remediation Action Item
-###</pre>
-</div>
-
-### Prompt Template: Meeting Action Matrix
-
-<div style="background-color: #ffffff; padding: 14px; border-radius: 6px; border-left: 4px solid #003366; margin: 20px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-  <strong style="color: #003366; font-size: 1rem; display: block; margin-bottom: 4px;">Administrative Relief / Matriz de Acciones de Reunión</strong>
-  <p style="font-size: 0.88rem; margin: 0 0 8px 0; color: #374151;">Focus: Extracting deterministic action items, task owners, and deliverables from raw committee transcripts.</p>
-  <div style="background-color: #003366; color: #ffffff; padding: 6px 12px; border-radius: 4px 4px 0 0; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.05em; display: flex; justify-content: space-between;">
-    <span>MEETING MATRIX PROMPT (CLICK TO SELECT ALL &bull; CTRL+C / CMD+C)</span>
-    <span style="color: #d4af37; font-style: italic;">ADMIN RELIEF</span>
-  </div>
-  <pre style="margin: 0px; background-color: #fdfbf7; border-radius: 0px 0px 4px 4px; padding: 14px; font-family: 'Courier New', monospace; font-size: 0.88rem; color: #1e2a38; line-height: 1.45; user-select: all; -webkit-user-select: all; -moz-user-select: all; cursor: pointer; overflow-x: auto; white-space: pre-wrap; border: 1px solid #003366;" title="Click inside to copy prompt data">###
-[ROLE & CONTEXT]:
-Act as an Executive Administrative Assistant. Transform the unstructured committee or faculty meeting notes into an actionable, prioritized execution matrix.
-
-[EXTRACTION RULES]:
-1. Isolate explicit deliverables, appointed task leads, and milestone deadlines.
-2. Group items by operational domain (Curriculum, Compliance, Operations, Technology).
-3. Identify unassigned decisions requiring leadership follow-up.
-4. Do not invent details; flag ambiguity explicitly.
-
-[RAW MEETING NOTES]:
-###
-[INSERT RAW MEETING NOTES, TRANSCRIPTS, OR COMMITTEE BULLETS HERE]
-###
-
-[OUTPUT FORMAT]:
-Provide a Markdown table with columns:
-| Item # | Action Item / Deliverable | Responsible Lead | Target Completion | Priority (High/Med/Low) |
-###</pre>
-</div>
-
-## </pre>
-
-</div>
-
-### Prompt Template: Meeting Action Matrix
-
-<div style="background-color: #ffffff; padding: 14px; border-radius: 6px; border-left: 4px solid #003366; margin: 20px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-  <strong style="color: #003366; font-size: 1rem; display: block; margin-bottom: 4px;">Administrative Relief / Matriz de Acciones de Reunión</strong>
-  <p style="font-size: 0.88rem; margin: 0 0 8px 0; color: #374151;">Focus: Extracting deterministic action items, task owners, and deliverables from raw committee transcripts.</p>
-  <div style="background-color: #003366; color: #ffffff; padding: 6px 12px; border-radius: 4px 4px 0 0; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.05em; display: flex; justify-content: space-between;">
-    <span>MEETING MATRIX PROMPT (CLICK TO SELECT ALL &bull; CTRL+C / CMD+C)</span>
-    <span style="color: #d4af37; font-style: italic;">ADMIN RELIEF</span>
-  </div>
-  <pre style="margin: 0px; background-color: #fdfbf7; border-radius: 0px 0px 4px 4px; padding: 14px; font-family: 'Courier New', monospace; font-size: 0.88rem; color: #1e2a38; line-height: 1.45; user-select: all; -webkit-user-select: all; -moz-user-select: all; cursor: pointer; overflow-x: auto; white-space: pre-wrap; border: 1px solid #003366;" title="Click inside to copy prompt data">###
-[ROLE & CONTEXT]:
-Act as an Executive Administrative Assistant. Transform the unstructured committee or faculty meeting notes into an actionable, prioritized execution matrix.
-
-[EXTRACTION RULES]:
-
-1. Isolate explicit deliverables, appointed task leads, and milestone deadlines.
-2. Group items by operational domain (Curriculum, Compliance, Operations, Technology).
-3. Identify unassigned decisions requiring leadership follow-up.
-4. Do not invent details; flag ambiguity explicitly.
-
-[RAW MEETING NOTES]:
-
-###
-
-[INSERT RAW MEETING NOTES, TRANSCRIPTS, OR COMMITTEE BULLETS HERE]
-
-###
-
-[OUTPUT FORMAT]:
-Provide a Markdown table with columns:
-| Item # | Action Item / Deliverable | Responsible Lead | Target Completion | Priority (High/Med/Low) |
-
-### </pre>
-
-</div>
-
-## ) delimiters.</p>
-
-  <div style="background-color: #003366; color: #ffffff; padding: 6px 12px; border-radius: 4px 4px 0 0; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.05em; display: flex; justify-content: space-between;">
-    <span id="label-delimiter">PROMPT TEMPLATE (CLICK BOX TO COPY)</span>
-    <span style="color: #d4af37; font-style: italic;">DELIMITER PROTOCOL</span>
-  </div>
-  <pre onclick="navigator.clipboard.writeText(this.innerText); window.getSelection().selectAllChildren(this); const lbl = document.getElementById('label-delimiter'); if(lbl){ lbl.innerText='✓ COPIED TO CLIPBOARD!'; lbl.style.color='#4ade80'; setTimeout(()=>{ lbl.innerText='PROMPT TEMPLATE (CLICK BOX TO COPY)'; lbl.style.color='#ffffff'; }, 2500); }" style="margin: 0px; background-color: #fdfbf7; border-radius: 0px 0px 4px 4px; padding: 14px; font-family: 'Courier New', monospace; font-size: 0.88rem; color: #1e2a38; line-height: 1.45; user-select: all; -webkit-user-select: all; cursor: pointer; overflow-x: auto; white-space: pre-wrap; border: 1px solid #003366; border-top: none;" title="Click anywhere inside to copy prompt to clipboard">###
-[ROLE & CONTEXT]:
-Act as an Expert Sovereign Auditor and Curriculum Specialist. Your task is to evaluate and align institutional course content against authoritative Single Source of Truth (SSoT) standards without retaining user data.
-
-[OPERATIONAL RULES]:
-
-1. Operate strictly within the provided delimited boundaries.
-2. Cross-reference the input text exclusively against the provided policy standards.
-3. Highlight compliance gaps, missing accessibility vectors, and alignment discrepancies.
-4. Output findings in a structured, actionable Markdown table.
-
-[INPUT DATA / TEXT TO AUDIT]:
-
-###
-
-[INSERT UNSTRUCTURED SYLLABUS, RUBRIC, OR MEETING TRANSCRIPT HERE]
-
 ###
 
 [AUDIT DIRECTIVE]:
 Generate the audit matrix identifying:
-
 - Finding / Gap
 - Authoritative Rule Reference
 - Remediation Action Item
-
-### </pre>
-
-</div>
-
-### ) delimiters.</p>
-
-  <div style="background-color: #003366; color: #ffffff; padding: 6px 12px; border-radius: 4px 4px 0 0; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.05em; display: flex; justify-content: space-between;">
-    <span>PROMPT TEMPLATE (CLICK TO SELECT ALL &bull; CTRL+C / CMD+C)</span>
-    <span style="color: #d4af37; font-style: italic;">DELIMITER PROTOCOL</span>
-  </div>
-  <pre style="margin: 0px; background-color: #fdfbf7; border-radius: 0px 0px 4px 4px; padding: 14px; font-family: 'Courier New', monospace; font-size: 0.88rem; color: #1e2a38; line-height: 1.45; user-select: all; -webkit-user-select: all; cursor: pointer; overflow-x: auto; white-space: pre-wrap; border: 1px solid #003366; border-top: none;" title="Click inside to select all prompt text">###
-[ROLE & CONTEXT]:
-Act as an Expert Sovereign Auditor and Curriculum Specialist. Your task is to evaluate and align institutional course content against authoritative Single Source of Truth (SSoT) standards without retaining user data.
-
-[OPERATIONAL RULES]:
-
-1. Operate strictly within the provided delimited boundaries.
-2. Cross-reference the input text exclusively against the provided policy standards.
-3. Highlight compliance gaps, missing accessibility vectors, and alignment discrepancies.
-4. Output findings in a structured, actionable Markdown table.
-
-[INPUT DATA / TEXT TO AUDIT]:
-
 ###
+{{< /prompt-card >}}
 
-[INSERT UNSTRUCTURED SYLLABUS, RUBRIC, OR MEETING TRANSCRIPT HERE]
+### Prompt Template: Meeting Action Matrix
 
-###
-
-[AUDIT DIRECTIVE]:
-Generate the audit matrix identifying:
-
-- Finding / Gap
-- Authoritative Rule Reference
-- Remediation Action Item
-
-### </pre>
-
-</div>
-
-### INSTITUTIONAL POLICY RULES ###
-
-1. Grading policy must state late penalty clearly (max 10% deduction per day).
-2. Title IX and Student Accessibility statements must match Fall 2026 official wording verbatim.
-3. Office hours must include at least 2 hours of scheduled student consultation weekly.
-
-### END POLICY RULES ###
-
-### CANDIDATE SYLLABUS DATA ###
-
-[Paste Candidate Syllabus Text Here]
-
-### END CANDIDATE SYLLABUS DATA ###
-
-### OUTPUT REQUIREMENTS ###
-
-Generate a markdown table with columns: [Policy Requirement | Conformance Status (Pass/Gap) | Specific Finding / Required Revision].
-
-```
-
----
-
-### Module 2: Transcript Synthesis & Action Items
-
-Transform messy 60-minute meeting transcripts into structured action matrices and executive summaries with clear ownership tags.
-
-#### Prompt Template: Meeting Action Matrix
-
-<div style="background-color: #ffffff; padding: 14px; border-radius: 6px; border-left: 4px solid #003366; margin: 24px 0; box-shadow: 0 2px 6px rgba(0,33,71,0.08);">
-  <strong style="color: #003366; font-size: 1rem; display: block; margin-bottom: 4px;">Prompt Template: Meeting Action Matrix</strong>
-  <p style="font-size: 0.88rem; margin: 0 0 8px 0; color: #374151;">Focus: Extracting deterministic action items, task owners, and deliverables from raw committee transcripts.</p>
-  <div style="background-color: #003366; color: #ffffff; padding: 6px 12px; border-radius: 4px 4px 0 0; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.05em; display: flex; justify-content: space-between; align-items: center;">
-    <span id="status-en-matrix">CLICK BOX TO COPY (CTRL+C / CMD+C)</span>
-    <span style="color: #d4af37; font-style: italic;">ADMIN RELIEF</span>
-  </div>
-  <pre id="pre-en-matrix" onclick="
-    var pre = this;
-    var lbl = document.getElementById('status-en-matrix');
-    var text = pre.innerText.trim();
-    if (window.getSelection) {
-      var range = document.createRange();
-      range.selectNodeContents(pre);
-      var sel = window.getSelection();
-      sel.removeAllRanges();
-      sel.addRange(range);
-    }
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(text).then(function() {
-        if (lbl) {
-          lbl.innerText = '✓ COPIED TO CLIPBOARD!';
-          lbl.style.color = '#4ade80';
-          setTimeout(function() {
-            lbl.innerText = 'CLICK BOX TO COPY (CTRL+C / CMD+C)';
-            lbl.style.color = '#ffffff';
-          }, 2500);
-        }
-      });
-    }
-  " style="margin: 0px; background-color: #fdfbf7; border-radius: 0px 0px 4px 4px; padding: 14px; font-family: 'Courier New', monospace; font-size: 0.88rem; color: #1e2a38; line-height: 1.45; user-select: all; -webkit-user-select: all; -moz-user-select: all; cursor: pointer; overflow-x: auto; white-space: pre-wrap; border: 1px solid #003366; border-top: none;" title="Click anywhere inside to select all and copy prompt">###
-[ROLE & CONTEXT]:
-Act as an Executive Administrative Assistant. Transform the unstructured committee or faculty meeting notes into an actionable, prioritized execution matrix.
-
-[EXTRACTION RULES]:
-1. Isolate explicit deliverables, appointed task leads, and milestone deadlines.
-2. Group items by operational domain (Curriculum, Compliance, Operations, Technology).
-3. Identify unassigned decisions requiring leadership follow-up.
-4. Do not invent details; flag ambiguity explicitly.
-
-[RAW MEETING NOTES]:
-###
-[INSERT RAW MEETING NOTES, TRANSCRIPTS, OR COMMITTEE BULLETS HERE]
-###
-
-[OUTPUT FORMAT]:
-Provide a Markdown table with columns:
-| Item # | Action Item / Deliverable | Responsible Lead | Target Completion | Priority (High/Med/Low) |
-###</pre>
-</div>
-
+{{< prompt-card title="Administrative Relief / Matriz de Acciones de Reunión" subtitle="Focus: Extracting deterministic action items, task owners, and deliverables from raw committee transcripts." badge="MEETING MATRIX PROMPT" badgeClass="ADMIN RELIEF" >}}
 ###
 [ROLE & CONTEXT]:
 Act as an Executive Administrative Assistant. Transform the unstructured committee or faculty meeting notes into an actionable, prioritized execution matrix.
@@ -329,70 +107,9 @@ Act as an Executive Administrative Assistant. Transform the unstructured committ
 Provide a Markdown table with columns:
 | Item # | Action Item / Deliverable | Responsible Lead | Target Completion | Priority (High/Med/Low) |
 ###
+{{< /prompt-card >}}
 
-
-###
-[ROLE & CONTEXT]:
-Act as an Executive Administrative Assistant. Transform the unstructured committee or faculty meeting notes into an actionable, prioritized execution matrix.
-
-[EXTRACTION RULES]:
-1. Isolate explicit deliverables, appointed task leads, and milestone deadlines.
-2. Group items by operational domain (Curriculum, Compliance, Operations, Technology).
-3. Identify unassigned decisions requiring leadership follow-up.
-4. Do not invent details; flag ambiguity explicitly.
-
-[RAW MEETING NOTES]:
-###
-[INSERT RAW MEETING NOTES, TRANSCRIPTS, OR COMMITTEE BULLETS HERE]
-###
-
-[OUTPUT FORMAT]:
-Provide a Markdown table with columns:
-| Item # | Action Item / Deliverable | Responsible Lead | Target Completion | Priority (High/Med/Low) |
-###</pre>
-</div>
-
-###
-[ROLE & CONTEXT]:
-Act as an Executive Administrative Assistant. Transform the unstructured committee or faculty meeting notes into an actionable, prioritized execution matrix.
-
-[EXTRACTION RULES]:
-1. Isolate explicit deliverables, appointed task leads, and milestone deadlines.
-2. Group items by operational domain (Curriculum, Compliance, Operations, Technology).
-3. Identify unassigned decisions requiring leadership follow-up.
-4. Do not invent details; flag ambiguity explicitly.
-
-[RAW MEETING NOTES]:
-###
-[INSERT RAW MEETING NOTES, TRANSCRIPTS, OR COMMITTEE BULLETS HERE]
-###
-
-[OUTPUT FORMAT]:
-Provide a Markdown table with columns:
-| Item # | Action Item / Deliverable | Responsible Lead | Target Completion | Priority (High/Med/Low) |
-###</pre>
-</div>
-
-### RAW TRANSCRIPT DATA ###
-[Paste Sanitized Meeting Transcript Here]
-### END RAW TRANSCRIPT DATA ###
-
-### DELIVERABLE FORMAT ###
-Provide:
-1. Executive Summary (Max 3 concise bullet points).
-2. Decisions Reached (Numbered list).
-3. Action Item Matrix (Markdown table: Owner | Task | Deadline | Dependency).
-```
-
----
-
-### Module 3: Hands-On Micro-Lab: Prompt Vault & Delimiters
-
-Practical execution lab applying triple-hash (`###`) delimiters to isolate case data and prevent algorithmic leakage across institutional tasks.
-
----
-
-### Module 4: FERPA Compliance & Secure Routing
+## Module 4: FERPA Compliance & Secure Routing
 
 All faculty and staff utilizing generative AI must adhere to the three foundational institutional data safety rules:
 
