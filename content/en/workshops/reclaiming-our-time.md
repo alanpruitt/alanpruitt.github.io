@@ -5,7 +5,7 @@ draft: false
 description: "A hands-on, administrative relief workshop designed for educators and staff to reclaim operational bandwidth using zero-retention GenAI pipelines and Sovereign Auditor governance."
 video_url: "/videos/reclaiming-our-time.mp4"
 deck_url: "/assets/docs/Reclaiming_Our_Time_Deck_Fall2026.pdf"
-layout: "single"
+layout: "workshop-single"
 type: "workshops"
 facilitator: "Alan Pruitt"
 facilitator_title: "Generative AI Strategist & Designated Campus Colleague (DCC)"
