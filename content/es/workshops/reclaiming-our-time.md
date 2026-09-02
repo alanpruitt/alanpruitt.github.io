@@ -46,7 +46,7 @@ El marco del **Bucle de Misión (Patrón / Regla / Resolver)** estructura la int
 3. **Resolver:** Generar una solución verificada y libre de retención de datos.
 
 
-### Módulo 0: Puerta de Acceso Técnico y Autoauditoría de Privacidad
+### Módulo 0: Puerta de Acceso Institucional y Filtro de Privacidad
 
 
 <div style="background-color: #FFFFFF; border: 1px solid #CBD5E1; border-left: 5px solid #003366; padding: 18px 20px; margin: 20px 0; border-radius: 4px;">
@@ -96,7 +96,7 @@ Antes de ejecutar instrucciones o interactuar con modelos de IA en este taller, 
           <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Declaración de Sílabo</td>
         </tr>
         <tr>
-          <td style="padding: 8px 12px; border: 1px solid #cbd5e1; font-weight: 700; color: #002147;">Módulo 2: Alivio Admin</td>
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1; font-weight: 700; color: #002147;">Módulo 2: Alivio de Chamba Administrativa</td>
           <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Transformación de minutas de comité en matrices estructuradas de planes de acción.</td>
           <td style="padding: 8px 12px; border: 1px solid #cbd5e1; text-align: center; font-weight: 600;">10 min</td>
           <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Matriz de Acción</td>
@@ -122,7 +122,7 @@ Antes de ejecutar instrucciones o interactuar con modelos de IA en este taller, 
         <tr style="font-weight: 700; background-color: #e2e8f0; color: #002147;">
           <td colspan="2" style="padding: 8px 12px; border: 1px solid #cbd5e1; text-align: right;">Tiempo Total Estimado de Dedicación:</td>
           <td style="padding: 8px 12px; border: 1px solid #cbd5e1; text-align: center;">60 min</td>
-          <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Acreditación Final</td>
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Listo para Acreditación</td>
         </tr>
       </tbody>
     </table>
@@ -130,25 +130,25 @@ Antes de ejecutar instrucciones o interactuar con modelos de IA en este taller, 
 </div>
 
 
-{{< prompt-card title="Módulo 0 Intercambio Comunitario: Registro y Presentación (Canvas 2.5)" subtitle="Preséntese y establezca comunidad con sus colegas en el foro de discusión del curso." badge="COMUNIDAD Y PARTICIPACIÓN" badgeClass="USO INSTITUCIONAL" >}}
+{{< prompt-card title="Módulo 0 Intercambio Comunitario: Presentación y Arranque del Grupo (Canvas 2.5)" subtitle="Preséntese y establezca comunidad con sus colegas en el foro de discusión del curso." badge="CONVIVENCIA Y TRABAJO EN EQUIPO" badgeClass="USO INSTITUCIONAL" >}}
 ### FORO DE DISCUSIÓN MÓDULO 0: CREACIÓN DE COMUNIDAD Y OBJETIVOS DE TRABAJO
-¡Bienvenido/a al taller! Para fomentar la colaboración entre disciplinas y unidades académicas, preséntese en el área de discusión del curso respondiendo a los siguientes 3 puntos:
+¡Qué tal, bienvenido al taller! Para ir conociéndonos entre las distintas áreas y facultades, déjese caer con su presentación en el foro siguiendo estos 3 puntos sencillos:
 
 1. Rol Profesional y Departamento:
    - Indique su nombre, departamento o unidad académica, y sus principales responsabilidades docentes o administrativas.
 
-2. Carga Administrativa a Optimizar:
+2. La Chamba o Trámite que más Tiempo le Quita:
    - Identifique una tarea específica y recurrente que consuma tiempo excesivo (p. ej., extracción de tareas de minutas de comité, redacción de políticas de sílabo, elaboración de retroalimentación formativa con rúbricas o alineación curricular).
 
 3. Meta de Autonomía Soberana:
-   - ¿En qué aspecto considera indispensable mantener el control y criterio humano activo mientras utiliza IA empresarial para acelerar borradores preliminares?
+   - ¿En qué tarea dice usted: 'Aquí sí meto mano yo a fuerza', usando la IA nomás para sacar el borrador rápido sin perder el criterio propio?
 
-Interacción con Colegas:
-Revise las publicaciones de sus colegas y responda al menos a un participante de un departamento o área distinta a la suya. Comparta una recomendación o un desafío común en torno a las cargas de trabajo administrativo.
+Platíquelo con los Colegas:
+Revise las publicaciones de sus colegas y responda al menos a un participante de un departamento o área distinta a la suya. Comparta una buena sugerencia o platique qué batallas tienen en común con la papelería del departamento.
 ###
 {{< /prompt-card >}}
 
-<h4 style="margin-top: 0; color: #002147; font-size: 1.05rem; font-weight: 700;">Paso 1: Portal de Autenticación Institucional Empresarial</h4>
+<h4 style="margin-top: 0; color: #002147; font-size: 1.05rem; font-weight: 700;">Paso 1: Arranque Seguro con Cuenta Institucional</h4>
   <p style="font-size: 0.9rem; line-height: 1.6; color: #0C2340; margin-bottom: 12px;">
     Para garantizar que su sesión opere bajo la protección de privacidad institucional (donde los modelos corporativos tienen prohibido entrenarse con sus textos o archivos adjuntos), debe autenticarse a través de su portal institucional con NetID:
   </p>
@@ -164,7 +164,7 @@ Revise las publicaciones de sus colegas y responda al menos a un participante de
 </div>
 
 <div style="background-color: #FFFFFF; border: 1px solid #CBD5E1; border-left: 5px solid #003366; padding: 18px 20px; margin: 20px 0; border-radius: 4px;">
-  <h4 style="margin-top: 0; color: #002147; font-size: 1.05rem; font-weight: 700;">Paso 2: Autoauditoría de Privacidad y Cumplimiento FERPA</h4>
+  <h4 style="margin-top: 0; color: #002147; font-size: 1.05rem; font-weight: 700;">Paso 2: Filtro de Privacidad y Blindaje FERPA</h4>
   <p style="font-size: 0.9rem; line-height: 1.6; color: #0C2340; margin-bottom: 10px;">
     Incluso dentro de un entorno empresarial seguro, aplique el principio de menor privilegio. Verifique cada punto antes de procesar datos:
   </p>
@@ -175,7 +175,7 @@ Revise las publicaciones de sus colegas y responda al menos a un participante de
   </ul>
 </div>
 
-{{< prompt-card title="Paso 3: Verificación de Portapapeles y Delimitadores (Prueba de Diagnóstico)" subtitle="Copie y ejecute esta prueba de diagnóstico en su ventana autenticada de IA para confirmar el formato de texto y markdown." badge="VERIFICACIÓN TÉCNICA" badgeClass="USO INSTITUCIONAL" >}}
+{{< prompt-card title="Paso 3: Calibración del Portapapeles y Delimitadores (Chequeo Rápido)" subtitle="Copie y ejecute esta prueba de diagnóstico en su ventana autenticada de IA para confirmar el formato de texto y markdown." badge="VERIFICACIÓN TÉCNICA" badgeClass="USO INSTITUCIONAL" >}}
 ### INSTRUCCIÓN DEL SISTEMA
 Usted es un auditor de flujos de trabajo institucionales. Confirme que puede procesar parámetros delimitados por tres almohadillas (###) sin errores de formato.
 ###
@@ -189,7 +189,7 @@ Política de Retención de Datos: Cero Entrenamiento de Modelos con Instruccione
 ### FORMATO DE SALIDA REQUERIDO
 Responda con una confirmación de 2 líneas:
 1. "PORTAL DE AUTENTICACIÓN VERIFICADO: [Repita la URL del portal]"
-2. "PROCESAMIENTO DE DELIMITADORES: ACTIVO Y LISTO"
+2. "DELIMITADORES PROCESADOS: AL CIEN Y LISTOS"
 ###
 {{< /prompt-card >}}
 
@@ -207,7 +207,7 @@ Responda con una confirmación de 2 líneas:
 
 ---
 
-## Módulo 2: Demostraciones en Vivo de Alivio Administrativo
+## Módulo 2: Demostraciones en Vivo de Alivio de Chamba Administrativaistrativo
 
 Flujos de trabajo prácticos de alto impacto demostrados en vivo para reducir la carga administrativa docente:
 
@@ -217,7 +217,7 @@ Flujos de trabajo prácticos de alto impacto demostrados en vivo para reducir la
 
 ### Plantilla de Prompt: Matriz de Acciones de Reunión
 
-{{< prompt-card title="Alivio Administrativo / Matriz de Acciones de Reunión" subtitle="Enfoque: Extracción determinista de elementos de acción, responsables y entregables a partir de transcripciones de comités." badge="MATRIZ DE ACCIÓN" badgeClass="ALIVIO ADMIN" >}}
+{{< prompt-card title="Alivio de Chamba Administrativaistrativo / Matriz de Acciones de Reunión" subtitle="Enfoque: Extracción determinista de elementos de acción, responsables y entregables a partir de transcripciones de comités." badge="MATRIZ DE ACCIÓN" badgeClass="ALIVIO ADMIN" >}}
 ###
 [ROL Y CONTEXTO]:
 Actúe como Asistente Administrativo Ejecutivo. Transforme las notas no estructuradas del comité o reunión docente en una matriz de ejecución priorizada y procesable.
@@ -484,7 +484,7 @@ Firma / Fecha: [Nombre / AAAA-MM-DD]
 <div style="margin: 28px 0;">
   <details style="border: 1px solid #CBD5E1; border-left: 5px solid #002147; background-color: #FFFFFF; border-radius: 4px; padding: 12px 16px;">
     <summary style="font-weight: 700; color: #002147; cursor: pointer; font-size: 0.95rem; user-select: none;">
-      &#128221; Panel del Facilitador: Guía Rápida de Monitoreo y Evaluación en SpeedGrader (Clic para desplegar)
+      &#128221; Escritorio del Facilitador: Guía de Monitoreo Rápido y Evaluación en SpeedGrader (Clic para desplegar)
     </summary>
     <div style="margin-top: 14px; border-top: 1px solid #E2D9C8; padding-top: 12px; font-size: 0.88rem; line-height: 1.55; color: #0C2340;">
       <p>
