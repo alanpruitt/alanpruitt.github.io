@@ -334,7 +334,15 @@ Act as an Expert Sovereign Auditor and Curriculum Specialist. Your task is to ev
 
 [INPUT DATA / TEXT TO AUDIT]:
 ###
-[INSERT UNSTRUCTURED SYLLABUS, RUBRIC, OR MEETING TRANSCRIPT HERE]
+Course: EXW101 Concepts of Kinesiology & Physical Education (Fall Term Draft)
+Instructor Notes & Rough Assessment Rubric Outline:
+- Overview: Introduces physical activity benefits, movement history, and community health.
+- Major Project: Community Inactivity Intervention Plan (20 Total Points).
+- Rough Criterion 1 (Aerobic Standards): Students must target 150 minutes of moderate activity per week based on national guidelines. (Note: muscle-strengthening frequency was not written into this draft criteria).
+- Rough Criterion 2 (Local Barriers): Needs to identify community barriers like extreme desert heat and neighborhood walkability, but does not currently require county-level public health demographic data.
+- Rough Criterion 3 (Intervention Feasibility): Solutions should be zero-cost community initiatives (e.g., early morning walking pods along shaded canal pathways).
+- Rough Criterion 4 (Verification & Math): Student must self-calculate MET-minutes and safety checks.
+- Course Shell Accessibility Note: Syllabus tables currently lack explicit table header scope tags (scope="col"), and LMS video links do not yet include synchronized WebVTT caption tracks.
 ###
 
 [AUDIT DIRECTIVE]:

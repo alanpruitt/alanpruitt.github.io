@@ -334,7 +334,15 @@ Act as an Expert Sovereign Auditor and Curriculum Specialist. Your task is to ev
 
 [INPUT DATA / TEXT TO AUDIT]:
 ###
-[INSERT UNSTRUCTURED SYLLABUS, RUBRIC, OR MEETING TRANSCRIPT HERE]
+Curso: EXW101 Conceptos de Kinesiología y Educación Física (Borrador de Otoño)
+Notas del Docente y Esbozo de Rúbrica de Evaluación:
+- Panorama General: Presenta los beneficios del movimiento, historia de la kinesiología y salud comunitaria.
+- Proyecto Principal: Plan de Acción Contra la Inactividad Física Comunitaria (20 puntos totales).
+- Esbozo Criterio 1 (Metas Aeróbicas): El estudiante debe prescribir 150 minutos de actividad moderada semanal con base en guías federales. (Nota: se omitió redactar la frecuencia de fortalecimiento muscular de 2+ días/semana en este borrador).
+- Esbozo Criterio 2 (Barreras Locales): Identifica retos locales como el calor extremo del desierto y falta de banquetas, pero no exige datos demográficos de salud pública del condado.
+- Esbozo Criterio 3 (Viabilidad de la Solución): Propuestas comunitarias de costo cero (ej. grupos de caminata en las mañanas por andadores de canales con sombra).
+- Esbozo Criterio 4 (Auditoría y Cálculos): El alumno debe autoverificar el cálculo de MET-minutos y protocolos de seguridad.
+- Nota de Accesibilidad del Curso: Las tablas del programa carecen de atributos de encabezado (scope="col"), y los videos de Canvas aún no cuentan con pistas de subtítulos WebVTT sincronizadas.
 ###
 
 [AUDIT DIRECTIVE]:
