@@ -45,9 +45,7 @@ El marco del **Bucle de Misión (Patrón / Regla / Resolver)** estructura la int
 2. **Regla:** Aplicar los estándares federales, institucionales o clínicos autorizados.
 3. **Resolver:** Generar una solución verificada y libre de retención de datos.
 
-
 ### Módulo 0: Puerta de Acceso Institucional y Filtro de Privacidad
-
 
 <div style="background-color: #FFFFFF; border: 1px solid #CBD5E1; border-left: 5px solid #003366; padding: 18px 20px; margin: 20px 0; border-radius: 4px;">
   <h4 style="margin-top: 0; color: #002147; font-size: 1.05rem; font-weight: 700;">Información del Instructor y Facilitador (Canvas 1.5)</h4>
@@ -60,7 +58,6 @@ El marco del **Bucle de Misión (Patrón / Regla / Resolver)** estructura la int
     <li><strong>Tiempo de Respuesta y Asesoría:</strong> Las consultas enviadas mediante la mensajería del LMS o correo institucional se responden en un plazo de 24 a 48 horas hábiles.</li>
   </ul>
 </div>
-
 
 Antes de ejecutar instrucciones o interactuar con modelos de IA en este taller, verifique su estado de autenticación institucional para garantizar límites estrictos de privacidad, cumplimiento de FERPA y cero retención de datos.
 
@@ -129,7 +126,6 @@ Antes de ejecutar instrucciones o interactuar con modelos de IA en este taller, 
   </div>
 </div>
 
-
 {{< prompt-card title="Módulo 0 Intercambio Comunitario: Presentación y Arranque del Grupo (Canvas 2.5)" subtitle="Preséntese y establezca comunidad con sus colegas en el foro de discusión del curso." badge="CONVIVENCIA Y TRABAJO EN EQUIPO" badgeClass="USO INSTITUCIONAL" >}}
 ### FORO DE DISCUSIÓN MÓDULO 0: CREACIÓN DE COMUNIDAD Y OBJETIVOS DE TRABAJO
 ¡Qué tal, bienvenido al taller! Para ir conociéndonos entre las distintas áreas y facultades, déjese caer con su presentación en el foro siguiendo estos 3 puntos sencillos:
@@ -192,7 +188,6 @@ Responda con una confirmación de 2 líneas:
 2. "DELIMITADORES PROCESADOS: AL CIEN Y LISTOS"
 ###
 {{< /prompt-card >}}
-
 
 ---
 
@@ -342,7 +337,6 @@ Protección estricta de los expedientes e información confidencial estudiantil 
 - **Estándares de Anonimización:** Desidentifique y redacte cualquier trabajo estudiantil o hilo de discusión antes de procesarlo.
 - **Imperativo de Supervisión Humana:** Las salidas de la IA sirven como borradores iniciales; las calificaciones definitivas, el diseño curricular y las autorizaciones administrativas siguen siendo responsabilidad humana exclusiva.
 
-
 ### Rúbrica de Evaluación Formativa para Participantes
 
 Para completar el taller con acreditación institucional o monitoreo docente, los participantes deben enviar un **Registro de Flujo de Trabajo Auditado** mediante el portal del curso o la herramienta de tareas del LMS. Los envíos se evaluarán según la siguiente rúbrica de 20 puntos:
@@ -409,11 +403,9 @@ Documente dos intervenciones específicas donde editó, corrigió o calibró el 
 ###
 {{< /prompt-card >}}
 
-
 ---
 
 ## Módulo 5: Síntesis, Recursos y Soporte Institucional
-
 
 ### Proyecto Sumativo Integrador: Matriz de Auditoría y Reflexión de Flujos de Trabajo
 
@@ -490,7 +482,7 @@ Firma / Fecha: [Nombre / AAAA-MM-DD]
       <p>
         <strong>Para Docentes y Evaluadores del Curso:</strong> Este taller autodirigido utiliza un protocolo de auditoría rápida de 90 segundos para calificar las entregas en Canvas SpeedGrader, D2L Brightspace o Blackboard.
       </p>
-      
+
       <div style="display: flex; gap: 12px; flex-wrap: wrap; margin: 12px 0;">
         <a href="/docs/reclaiming-our-time-evaluator-guide.pdf" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; background-color: #003366; color: #FFFFFF !important; padding: 8px 14px; border-radius: 4px; font-weight: 600; text-decoration: none; font-size: 0.82rem;">
           Descargar Protocolo de Evaluación Imprimible (PDF) &rarr;
@@ -518,9 +510,6 @@ Firma / Fecha: [Nombre / AAAA-MM-DD]
     </div>
   </details>
 </div>
-
-
-
 
 ### Herramientas Empresariales y Enrutamiento Institucional Oficial
 

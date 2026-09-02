@@ -44,7 +44,6 @@ The **Mission Loop (Pattern / Rule / Solve)** framework structures the interacti
 2. **Rule:** Apply authorized federal, institutional, or clinical standards.
 3. **Solve:** Generate a verified solution with zero data retention.
 
-
 ### Module 0: Technical Access Gate & Privacy Pre-Flight Audit
 
 Before running prompts or interacting with AI models in this workshop, verify your enterprise authentication status to ensure strict privacy boundaries, FERPA compliance, and zero data retention.
@@ -73,7 +72,6 @@ Before running prompts or interacting with AI models in this workshop, verify yo
     If you experience barriers accessing any interactive micro-lab, prompt block, document, or media asset—or if you require alternate formats, assistive technology support, or disability-related accommodations—please contact the course instructor or your institutional Accessibility Resource Center / Disability Services office. Accommodations are coordinated collaboratively, confidentially, and proactively.
   </p>
 </div>
-
 
 <div style="background-color: #FFFFFF; border: 1px solid #CBD5E1; border-left: 5px solid #003366; padding: 18px 20px; margin: 20px 0; border-radius: 4px;">
   <h4 style="margin-top: 0; color: #002147; font-size: 1.05rem; font-weight: 700;">Workshop Pacing & Time-on-Task Guide (Canvas 1.6 • 60-Minute Architecture)</h4>
@@ -138,7 +136,6 @@ Before running prompts or interacting with AI models in this workshop, verify yo
   </div>
 </div>
 
-
 {{< prompt-card title="Module 0 Community Exchange: Reclaiming Our Time Check-In (Canvas 2.5)" subtitle="Introduce yourself and establish rapport with your cohort in the course discussion board." badge="COMMUNITY & RAPPORT" badgeClass="INSTITUTIONAL READY" >}}
 ### MODULE 0 DISCUSSION PROMPT: COHORT RAPPORT & WORKFLOW GOALS
 Welcome to the workshop! To foster collaboration across disciplines and academic units, introduce yourself in the course discussion area using the 3-point check-in below:
@@ -201,7 +198,6 @@ Respond with a 2-line confirmation:
 2. "DELIMITER PARSING: ACTIVE AND READY"
 ###
 {{< /prompt-card >}}
-
 
 ---
 
@@ -355,7 +351,6 @@ Safeguarding student records and directory information in accordance with federa
 - **De-identification Standards:** Anonymize and redact all student case work or peer discussions prior to analysis.
 - **Human-in-the-Loop Imperative:** Automated outputs serve as initial drafts; final grading, curriculum design, and administrative sign-offs remain strictly human responsibilities.
 
-
 ### Participant Formative Audit Submission Rubric
 
 For instructor-monitored completion or institutional credit, participants must submit an **Audited Workflow Log** via the course portal or LMS assignment tool. Submissions are evaluated using the 20-point rubric below:
@@ -422,11 +417,9 @@ Document two specific interventions where you edited, corrected, or calibrated t
 ###
 {{< /prompt-card >}}
 
-
 ---
 
 ## Module 5: Synthesis, Resources & Institutional Support
-
 
 ### Summative Capstone: Sovereign Auditor Workflow & Reflection Matrix
 
@@ -503,7 +496,7 @@ Signature / Timestamp: [Insert Name / Date]
       <p>
         <strong>For Faculty Evaluators & Course Instructors:</strong> This self-directed workshop utilizes an objective 90-second rapid audit protocol to evaluate capstone submissions in Canvas SpeedGrader, D2L Brightspace, or Blackboard.
       </p>
-      
+
       <div style="display: flex; gap: 12px; flex-wrap: wrap; margin: 12px 0;">
         <a href="/docs/reclaiming-our-time-evaluator-guide.pdf" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; background-color: #003366; color: #FFFFFF !important; padding: 8px 14px; border-radius: 4px; font-weight: 600; text-decoration: none; font-size: 0.82rem;">
           Download Printable Evaluation Protocol (PDF) &rarr;
@@ -531,9 +524,6 @@ Signature / Timestamp: [Insert Name / Date]
     </div>
   </details>
 </div>
-
-
-
 
 ### Enterprise Tools & Official University Routing
 
