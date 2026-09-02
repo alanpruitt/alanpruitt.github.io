@@ -45,6 +45,58 @@ El marco del **Bucle de Misión (Patrón / Regla / Resolver)** estructura la int
 2. **Regla:** Aplicar los estándares federales, institucionales o clínicos autorizados.
 3. **Resolver:** Generar una solución verificada y libre de retención de datos.
 
+
+### Módulo 0: Puerta de Acceso Técnico y Autoauditoría de Privacidad
+
+Antes de ejecutar instrucciones o interactuar con modelos de IA en este taller, verifique su estado de autenticación institucional para garantizar límites estrictos de privacidad, cumplimiento de FERPA y cero retención de datos.
+
+<div style="background-color: #FFFFFF; border: 1px solid #CBD5E1; border-left: 5px solid #003366; padding: 18px 20px; margin: 20px 0; border-radius: 4px;">
+  <h4 style="margin-top: 0; color: #002147; font-size: 1.05rem; font-weight: 700;">Paso 1: Portal de Autenticación Institucional Empresarial</h4>
+  <p style="font-size: 0.9rem; line-height: 1.6; color: #0C2340; margin-bottom: 12px;">
+    Para garantizar que su sesión opere bajo la protección de privacidad institucional (donde los modelos corporativos tienen prohibido entrenarse con sus textos o archivos adjuntos), debe autenticarse a través de su portal institucional con NetID:
+  </p>
+  <p style="margin-bottom: 14px;">
+    <a href="https://google.arizona.edu" target="_blank" rel="noopener noreferrer" style="display: inline-block; background-color: #003366; color: #FFFFFF !important; font-weight: 600; font-size: 0.88rem; padding: 10px 18px; border-radius: 4px; text-decoration: none;">
+      Abrir Espacio Institucional: google.arizona.edu &rarr;
+    </a>
+  </p>
+  <ul style="font-size: 0.86rem; line-height: 1.6; color: #334155; margin-bottom: 0; padding-left: 20px;">
+    <li><strong>Confirmación de Cuenta:</strong> Verifique que su avatar de perfil muestre su correo electrónico institucional (p. ej., <code>@arizona.edu</code> o dominio institucional), no una cuenta personal de Gmail.</li>
+    <li><strong>Escudo de Retención de Datos:</strong> Las licencias empresariales institucionales de Google Gemini aplican una política estricta de Cero Retención de Datos en las entradas de texto.</li>
+  </ul>
+</div>
+
+<div style="background-color: #FFFFFF; border: 1px solid #CBD5E1; border-left: 5px solid #003366; padding: 18px 20px; margin: 20px 0; border-radius: 4px;">
+  <h4 style="margin-top: 0; color: #002147; font-size: 1.05rem; font-weight: 700;">Paso 2: Autoauditoría de Privacidad y Cumplimiento FERPA</h4>
+  <p style="font-size: 0.9rem; line-height: 1.6; color: #0C2340; margin-bottom: 10px;">
+    Incluso dentro de un entorno empresarial seguro, aplique el principio de menor privilegio. Verifique cada punto antes de procesar datos:
+  </p>
+  <ul style="font-size: 0.86rem; line-height: 1.6; color: #334155; margin-bottom: 0; padding-left: 20px;">
+    <li> [ ] <strong>Sin Identificadores Estudiantiles Directos:</strong> Elimine nombres de estudiantes, números de identificación, NetIDs y direcciones IP de todos los ejemplos.</li>
+    <li> [ ] <strong>Sin Registros Financieros o Médicos Protegidos:</strong> Excluya registros cubiertos por HIPAA, datos bancarios o historiales clínicos sin desidentificar.</li>
+    <li> [ ] <strong>Sintetizar o Anonimizar el Contexto:</strong> Reemplace los nombres de personas en disputas de comités por roles genéricos (p. ej., "Presidente del Comité Curricular", "Docente A").</li>
+  </ul>
+</div>
+
+{{< prompt-card title="Paso 3: Verificación de Portapapeles y Delimitadores (Prueba de Diagnóstico)" subtitle="Copie y ejecute esta prueba de diagnóstico en su ventana autenticada de IA para confirmar el formato de texto y markdown." badge="VERIFICACIÓN TÉCNICA" badgeClass="USO INSTITUCIONAL" >}}
+### INSTRUCCIÓN DEL SISTEMA
+Usted es un auditor de flujos de trabajo institucionales. Confirme que puede procesar parámetros delimitados por tres almohadillas (###) sin errores de formato.
+###
+
+### ENTRADA DE DIAGNÓSTICO
+Portal de Acceso: google.arizona.edu
+Modo de Autenticación: Inicio de Sesión Único Empresarial NetID
+Política de Retención de Datos: Cero Entrenamiento de Modelos con Instrucciones del Usuario
+###
+
+### FORMATO DE SALIDA REQUERIDO
+Responda con una confirmación de 2 líneas:
+1. "PORTAL DE AUTENTICACIÓN VERIFICADO: [Repita la URL del portal]"
+2. "PROCESAMIENTO DE DELIMITADORES: ACTIVO Y LISTO"
+###
+{{< /prompt-card >}}
+
+
 ---
 
 ## Módulo 1: Fundamento de Políticas y Autenticación Empresarial

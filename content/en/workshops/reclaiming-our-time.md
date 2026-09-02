@@ -44,6 +44,58 @@ The **Mission Loop (Pattern / Rule / Solve)** framework structures the interacti
 2. **Rule:** Apply authorized federal, institutional, or clinical standards.
 3. **Solve:** Generate a verified solution with zero data retention.
 
+
+### Module 0: Technical Access Gate & Privacy Pre-Flight Audit
+
+Before running prompts or interacting with AI models in this workshop, verify your enterprise authentication status to ensure strict privacy boundaries, FERPA compliance, and zero data retention.
+
+<div style="background-color: #FFFFFF; border: 1px solid #CBD5E1; border-left: 5px solid #003366; padding: 18px 20px; margin: 20px 0; border-radius: 4px;">
+  <h4 style="margin-top: 0; color: #002147; font-size: 1.05rem; font-weight: 700;">Step 1: Institutional Enterprise Authentication Gateway</h4>
+  <p style="font-size: 0.9rem; line-height: 1.6; color: #0C2340; margin-bottom: 12px;">
+    To guarantee your session operates under the institutional data privacy umbrella (where corporate models are prohibited from training on your text or file uploads), you must authenticate through your institutional NetID gateway:
+  </p>
+  <p style="margin-bottom: 14px;">
+    <a href="https://google.arizona.edu" target="_blank" rel="noopener noreferrer" style="display: inline-block; background-color: #003366; color: #FFFFFF !important; font-weight: 600; font-size: 0.88rem; padding: 10px 18px; border-radius: 4px; text-decoration: none;">
+      Launch Institutional Workspace: google.arizona.edu &rarr;
+    </a>
+  </p>
+  <ul style="font-size: 0.86rem; line-height: 1.6; color: #334155; margin-bottom: 0; padding-left: 20px;">
+    <li><strong>Account Confirmation:</strong> Verify your profile avatar displays your institutional email address (e.g., <code>@arizona.edu</code> or institutional domain), not a personal Gmail account.</li>
+    <li><strong>Data Retention Shield:</strong> Institutional Google Gemini enterprise licenses enforce Zero Data Retention on prompt inputs and custom context.</li>
+  </ul>
+</div>
+
+<div style="background-color: #FFFFFF; border: 1px solid #CBD5E1; border-left: 5px solid #003366; padding: 18px 20px; margin: 20px 0; border-radius: 4px;">
+  <h4 style="margin-top: 0; color: #002147; font-size: 1.05rem; font-weight: 700;">Step 2: FERPA & Sensitive Data Pre-Flight Audit</h4>
+  <p style="font-size: 0.9rem; line-height: 1.6; color: #0C2340; margin-bottom: 10px;">
+    Even within an enterprise environment, adhere to the principle of least privilege. Verify each checkpoint before submitting data:
+  </p>
+  <ul style="font-size: 0.86rem; line-height: 1.6; color: #334155; margin-bottom: 0; padding-left: 20px;">
+    <li> [ ] <strong>No Direct Student Identifiers:</strong> Remove student names, NetIDs, student ID numbers, and IP addresses from all case samples.</li>
+    <li> [ ] <strong>No Protected Health or Financial Records:</strong> Exclude HIPAA-covered records, banking details, and unredacted clinical histories.</li>
+    <li> [ ] <strong>Synthesize or Anonymize Context:</strong> Replace specific committee dispute names with generic roles (e.g., "Curriculum Chair", "Faculty Member A").</li>
+  </ul>
+</div>
+
+{{< prompt-card title="Step 3: Delimiter Clipboard Verification (Sandbox Check)" subtitle="Copy and run this diagnostic check in your authenticated AI window to verify whitespace and markdown rendering." badge="TECHNICAL CHECK" badgeClass="INSTITUTIONAL READY" >}}
+### SYSTEM INSTRUCTION
+You are an institutional workflow auditor. Confirm you can parse triple-hash delimited parameters without formatting errors.
+###
+
+### DIAGNOSTIC INPUT
+Workspace Gateway: google.arizona.edu
+Authentication Mode: Institutional NetID Enterprise SSO
+Data Retention Policy: Zero Model Training on User Prompts
+###
+
+### REQUIRED OUTPUT FORMAT
+Respond with a 2-line confirmation:
+1. "AUTHENTICATION GATEWAY VERIFIED: [Repeat Gateway URL]"
+2. "DELIMITER PARSING: ACTIVE AND READY"
+###
+{{< /prompt-card >}}
+
+
 ---
 
 ## Module 1: Policy Foundations & Enterprise Authentication
