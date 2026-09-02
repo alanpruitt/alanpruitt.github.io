@@ -4,9 +4,7 @@
   "MD002": {
     "level": 2
   },
-  "MD003": {
-    "style": "atx"
-  },
+  "MD003": false,
   "MD013": false,
   "MD025": false,
   "MD041": false,
