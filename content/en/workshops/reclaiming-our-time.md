@@ -43,35 +43,25 @@ The **Mission Loop (Pattern / Rule / Solve)** framework structures the interacti
 2. **Rule:** Apply authorized federal, institutional, or clinical standards.
 3. **Solve:** Generate a verified solution with zero data retention.
 
-### Module 1: Instant Syllabus Compliance Audit
+---
 
-Rapid alignment of course syllabi against departmental rubrics and academic integrity policies.
+## Module 1: Policy Foundations & Enterprise Authentication
 
-### Prompt Architecture: Delimiter Isolation Protocol
+- **Institutional Posture:** Adoption of legally sound, academically rigorous GenAI practices to achieve meaningful administrative relief.
+- **Enterprise Authentication Boundary:** Avoid consumer, unauthenticated AI interfaces where inputs may be ingested to train public models. Always log in through institutional SSO credentials:
+  - **Google Gemini Enterprise**
+  - **Microsoft Copilot Enterprise**
+- **Data Privacy Assurance:** Enterprise licensing guarantees that uploaded files, meeting minutes, and draft syllabi are isolated from public model training datasets.
 
-{{< prompt-card title="Delimited Prompt Architecture / Protocolo de Aislamiento" subtitle="Focus: Zero-retention data isolation and strict boundary enforcement using triple-hash (###) delimiters." badge="PROMPT TEMPLATE" badgeClass="DELIMITER PROTOCOL" >}}
-###
-[ROLE & CONTEXT]:
-Act as an Expert Sovereign Auditor and Curriculum Specialist. Your task is to evaluate and align institutional course content against authoritative Single Source of Truth (SSoT) standards without retaining user data.
+---
 
-[OPERATIONAL RULES]:
-1. Operate strictly within the provided delimited boundaries.
-2. Cross-reference the input text exclusively against the provided policy standards.
-3. Highlight compliance gaps, missing accessibility vectors, and alignment discrepancies.
-4. Output findings in a structured, actionable Markdown table.
+## Module 2: Live Administrative Relief Demonstrations
 
-[INPUT DATA / TEXT TO AUDIT]:
-###
-[INSERT UNSTRUCTURED SYLLABUS, RUBRIC, OR MEETING TRANSCRIPT HERE]
-###
+Practical, high-yield workflows demonstrated live to reduce administrative burden:
 
-[AUDIT DIRECTIVE]:
-Generate the audit matrix identifying:
-- Finding / Gap
-- Authoritative Rule Reference
-- Remediation Action Item
-###
-{{< /prompt-card >}}
+1. **Syllabus Compliance Auditing:** Ingesting draft syllabi alongside departmental rubrics, institutional policies, and ADA Title II accessibility requirements.
+2. **Committee Synthesis & Action Items:** Processing raw meeting transcripts into executive summaries and structured accountability matrices.
+3. **Rubric Scaling & Formative Feedback:** Streamlining evaluation rubrics and generating targeted feedback criteria while maintaining complete instructor oversight.
 
 ### Prompt Template: Meeting Action Matrix
 
@@ -99,11 +89,52 @@ Provide a Markdown table with columns:
 
 ---
 
+## Module 3: Hands-on Micro-Lab: Prompt Architecture & Boundary Enforcement
+
+Isolating task instructions from institutional data inputs is essential for deterministic, hallucination-free outputs.
+
+- **The Delimiter Protocol:** Wrapping all variable institutional data in explicit triple-hash (`###`) fences establishes a hard prompt boundary.
+- **Zero Data Retention Instructions:** Enforcing explicit negative constraints ensures the model operates strictly as an ephemeral parser rather than a knowledge repository.
+
+### Prompt Architecture: Delimiter Isolation Protocol
+
+{{< prompt-card title="Delimited Prompt Architecture / Protocolo de Aislamiento" subtitle="Focus: Zero-retention data isolation and strict boundary enforcement using triple-hash (###) delimiters." badge="PROMPT TEMPLATE" badgeClass="DELIMITER PROTOCOL" >}}
+###
+[ROLE & CONTEXT]:
+Act as an Expert Sovereign Auditor and Curriculum Specialist. Your task is to evaluate and align institutional course content against authoritative Single Source of Truth (SSoT) standards without retaining user data.
+
+[OPERATIONAL RULES]:
+1. Operate strictly within the provided delimited boundaries.
+2. Cross-reference the input text exclusively against the provided policy standards.
+3. Highlight compliance gaps, missing accessibility vectors, and alignment discrepancies.
+4. Output findings in a structured, actionable Markdown table.
+
+[INPUT DATA / TEXT TO AUDIT]:
+###
+[INSERT UNSTRUCTURED SYLLABUS, RUBRIC, OR MEETING TRANSCRIPT HERE]
+###
+
+[AUDIT DIRECTIVE]:
+Generate the audit matrix identifying:
+- Finding / Gap
+- Authoritative Rule Reference
+- Remediation Action Item
+###
+{{< /prompt-card >}}
+
+---
+
 ## Module 4: FERPA Compliance & Secure Routing
 
-Safeguarding student records in accordance with federal regulations and institutional IT guidelines.
+Safeguarding student records and directory information in accordance with federal law:
 
-### Workshop Summary & Resource Index
+- **Zero PII Transmission:** Never paste student names, ID numbers, grades, or sensitive demographic data into any AI prompt interface.
+- **De-identification Standards:** Anonymize and redact all student case work or peer discussions prior to analysis.
+- **Human-in-the-Loop Imperative:** Automated outputs serve as initial drafts; final grading, curriculum design, and administrative sign-offs remain strictly human responsibilities.
 
-- **Quick Start Guide:** Accessible OER audit templates and rubrics.
-- **Support Channel:** Strategic consulting for curriculum committees and instructional design.
+---
+
+## Module 5: Synthesis & Resource Index
+
+- **Quick Start Guide:** Downloadable OER audit templates and accessible syllabus rubrics.
+- **Curriculum Architecture Support:** Strategic consulting for academic departments, ADA Title II web compliance, and AI assessment alignment.
