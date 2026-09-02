@@ -387,6 +387,43 @@ Signature / Timestamp: [Insert Name / Date]
 ###
 {{< /prompt-card >}}
 
+<div style="margin: 28px 0;">
+  <details style="border: 1px solid #CBD5E1; border-left: 5px solid #002147; background-color: #FFFFFF; border-radius: 4px; padding: 12px 16px;">
+    <summary style="font-weight: 700; color: #002147; cursor: pointer; font-size: 0.95rem; user-select: none;">
+      &#128221; Facilitator Desk: Instructor Monitoring & SpeedGrader Quick Guide (Click to Expand)
+    </summary>
+    <div style="margin-top: 14px; border-top: 1px solid #E2D9C8; padding-top: 12px; font-size: 0.88rem; line-height: 1.55; color: #0C2340;">
+      <p>
+        <strong>For Faculty Evaluators & Course Instructors:</strong> This self-directed workshop utilizes an objective 90-second rapid audit protocol to evaluate capstone submissions in Canvas SpeedGrader, D2L Brightspace, or Blackboard.
+      </p>
+      
+      <div style="display: flex; gap: 12px; flex-wrap: wrap; margin: 12px 0;">
+        <a href="/docs/reclaiming-our-time-evaluator-guide.pdf" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; background-color: #003366; color: #FFFFFF !important; padding: 8px 14px; border-radius: 4px; font-weight: 600; text-decoration: none; font-size: 0.82rem;">
+          Download Printable Evaluation Protocol (PDF) &rarr;
+        </a>
+        <a href="/docs/reclaiming-our-time-evaluator-guide.html" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; border: 1px solid #003366; color: #003366 !important; padding: 8px 14px; border-radius: 4px; font-weight: 600; text-decoration: none; font-size: 0.82rem; background-color: #F8F6F0;">
+          View Standalone Guide (HTML) &rarr;
+        </a>
+      </div>
+
+      <h4 style="color: #002147; font-size: 0.92rem; margin: 14px 0 6px 0;">The 90-Second SpeedGrader Rapid Triaging Workflow:</h4>
+      <ol style="padding-left: 20px; margin-bottom: 12px;">
+        <li><strong>Phase 1: Compliance Scan (0–30s):</strong> Verify SSO via <code>google.arizona.edu</code> (Zero Data Retention), verify <code>###</code> delimiter fences, and confirm FERPA redaction.</li>
+        <li><strong>Phase 2: Curricular Audit (30–90s):</strong> Audit Single Source of Truth (SSoT) reference and verify at least 2 documented human-in-the-loop corrections before releasing points.</li>
+      </ol>
+
+      <p style="margin-bottom: 4px;"><strong>LMS Course Shell Setup:</strong></p>
+      <ul style="padding-left: 20px; margin-bottom: 0;">
+        <li>Submission Type: <code>Online</code> &gt; Check <code>Text Entry</code> &amp; <code>File Uploads</code>.</li>
+        <li>Rubric: Attach the 4-criterion, 20-point rubric with <em>"Use this rubric for assignment grading"</em> checked.</li>
+        <li>Attempts: Set to <code>Unlimited</code> (or 3 attempts) to support formative mastery and resubmission.</li>
+      </ul>
+    </div>
+  </details>
+</div>
+
+
+
 
 ### Enterprise Tools & Official University Routing
 

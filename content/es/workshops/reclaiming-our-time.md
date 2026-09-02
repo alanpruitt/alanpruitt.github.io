@@ -384,6 +384,43 @@ Firma / Fecha: [Nombre / AAAA-MM-DD]
 ###
 {{< /prompt-card >}}
 
+<div style="margin: 28px 0;">
+  <details style="border: 1px solid #CBD5E1; border-left: 5px solid #002147; background-color: #FFFFFF; border-radius: 4px; padding: 12px 16px;">
+    <summary style="font-weight: 700; color: #002147; cursor: pointer; font-size: 0.95rem; user-select: none;">
+      &#128221; Panel del Facilitador: Guía Rápida de Monitoreo y Evaluación en SpeedGrader (Clic para desplegar)
+    </summary>
+    <div style="margin-top: 14px; border-top: 1px solid #E2D9C8; padding-top: 12px; font-size: 0.88rem; line-height: 1.55; color: #0C2340;">
+      <p>
+        <strong>Para Docentes y Evaluadores del Curso:</strong> Este taller autodirigido utiliza un protocolo de auditoría rápida de 90 segundos para calificar las entregas en Canvas SpeedGrader, D2L Brightspace o Blackboard.
+      </p>
+      
+      <div style="display: flex; gap: 12px; flex-wrap: wrap; margin: 12px 0;">
+        <a href="/docs/reclaiming-our-time-evaluator-guide.pdf" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; background-color: #003366; color: #FFFFFF !important; padding: 8px 14px; border-radius: 4px; font-weight: 600; text-decoration: none; font-size: 0.82rem;">
+          Descargar Protocolo de Evaluación Imprimible (PDF) &rarr;
+        </a>
+        <a href="/docs/reclaiming-our-time-evaluator-guide.html" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; border: 1px solid #003366; color: #003366 !important; padding: 8px 14px; border-radius: 4px; font-weight: 600; text-decoration: none; font-size: 0.82rem; background-color: #F8F6F0;">
+          Ver Guía en Línea (HTML) &rarr;
+        </a>
+      </div>
+
+      <h4 style="color: #002147; font-size: 0.92rem; margin: 14px 0 6px 0;">Flujo de Calificación Rápida de 90 Segundos en SpeedGrader:</h4>
+      <ol style="padding-left: 20px; margin-bottom: 12px;">
+        <li><strong>Fase 1: Escaneo de Cumplimiento (0–30s):</strong> Confirmar SSO institucional vía <code>google.arizona.edu</code> (Cero Retención de Datos), verificar delimitadores <code>###</code> y certificar desidentificación FERPA.</li>
+        <li><strong>Fase 2: Auditoría Curricular (30–90s):</strong> Auditar la Fuente Única de la Verdad (SSoT) y constatar al menos 2 correcciones editoriales documentadas por el participante.</li>
+      </ol>
+
+      <p style="margin-bottom: 4px;"><strong>Configuración en el LMS:</strong></p>
+      <ul style="padding-left: 20px; margin-bottom: 0;">
+        <li>Tipo de Entrega: <code>En línea</code> &gt; Marcar <code>Entrada de texto</code> y <code>Cargas de archivos</code>.</li>
+        <li>Rúbrica: Vincular la rúbrica de 4 criterios (20 pts) marcando <em>"Usar esta rúbrica para calificar la tarea"</em>.</li>
+        <li>Intentos: Configurar como <code>Ilimitados</code> (o 3 intentos) para respaldar la retroalimentación formativa y corrección.</li>
+      </ul>
+    </div>
+  </details>
+</div>
+
+
+
 
 ### Herramientas Empresariales y Enrutamiento Institucional Oficial
 

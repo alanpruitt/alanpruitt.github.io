@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Instructor Monitoring & SpeedGrader Quick Guide</title>
+<style>
+  @page {
+    size: letter;
+    margin: 14mm 14mm 16mm 14mm;
+    background-color: #FDFBF7;
+    @bottom-right {
+      content: "Page " counter(page) " of " counter(pages);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 8pt;
+      color: #556980;
+    }
+    @bottom-left {
+      content: "AWC / UArizona Workshop Series • Instructor Assessment Protocol";
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 8pt;
+      color: #556980;
+    }
+  }
+
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    padding: 24px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #0C2340;
+    background-color: #FDFBF7;
+    font-size: 9pt;
+    line-height: 1.45;
+  }
+
+  .header-container {
+    border-bottom: 2.5px solid #002147;
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+  }
+
+  .header-tag {
+    font-size: 7.5pt;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #003366;
+    margin-bottom: 2px;
+  }
+
+  h1 {
+    color: #002147;
+    font-size: 15pt;
+    font-weight: 800;
+    margin: 0 0 4px 0;
+    line-height: 1.2;
+  }
+
+  .subtitle {
+    font-size: 9.5pt;
+    color: #334155;
+    margin: 0;
+    font-weight: 500;
+  }
+
+  .meta-bar {
+    margin-top: 8px;
+    padding: 6px 10px;
+    background-color: #F4EFE6;
+    border-left: 4px solid #003366;
+    font-size: 8pt;
+    color: #0C2340;
+  }
+
+  .meta-bar strong {
+    color: #002147;
+  }
+
+  h2 {
+    color: #002147;
+    font-size: 10.5pt;
+    font-weight: 700;
+    margin: 12px 0 6px 0;
+    border-bottom: 1px solid #CBD5E1;
+    padding-bottom: 3px;
+  }
+
+  p {
+    margin: 0 0 6px 0;
+  }
+
+  ul, ol {
+    margin: 0 0 6px 0;
+    padding-left: 18px;
+  }
+
+  li {
+    margin-bottom: 2px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 8pt;
+    margin: 6px 0 10px 0;
+  }
+
+  th {
+    background-color: #002147;
+    color: #FFFFFF;
+    text-align: left;
+    padding: 6px 8px;
+    font-weight: 600;
+    border: 1px solid #002147;
+  }
+
+  td {
+    padding: 6px 8px;
+    border: 1px solid #CBD5E1;
+    vertical-align: top;
+    background-color: #FFFFFF;
+  }
+
+  tr:nth-child(even) td {
+    background-color: #F8F6F0;
+  }
+
+  .callout-box {
+    background-color: #FFFFFF;
+    border: 1px solid #CBD5E1;
+    border-left: 4px solid #003366;
+    padding: 8px 10px;
+    margin: 8px 0;
+    border-radius: 2px;
+  }
+
+  .callout-title {
+    font-weight: 700;
+    color: #002147;
+    font-size: 8.5pt;
+    margin-bottom: 3px;
+  }
+
+  .code-block {
+    background-color: #F4EFE6;
+    border: 1px solid #D8CFC0;
+    padding: 6px 8px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 7.5pt;
+    color: #0C2340;
+    line-height: 1.35;
+    margin: 4px 0;
+    border-radius: 2px;
+  }
+
+  .badge-pass {
+    display: inline-block;
+    background-color: #065F46;
+    color: #FFFFFF;
+    padding: 1px 5px;
+    border-radius: 2px;
+    font-size: 7pt;
+    font-weight: 700;
+  }
+
+  .badge-fail {
+    display: inline-block;
+    background-color: #991B1B;
+    color: #FFFFFF;
+    padding: 1px 5px;
+    border-radius: 2px;
+    font-size: 7pt;
+    font-weight: 700;
+  }
+</style>
+</head>
+<body>
+
+<div class="header-container">
+  <div class="header-tag">Curriculum-as-Code &bull; Asynchronous Faculty & Staff Evaluation Guide</div>
+  <h1>Instructor Monitoring & SpeedGrader Quick Guide</h1>
+  <p class="subtitle">Operational Audit Protocol for Evaluating the 20-Point Sovereign Auditor Capstone Matrix</p>
+  <div class="meta-bar">
+    <strong>Course Architecture:</strong> Reclaiming Our Time: GenAI Workflows &bull; 
+    <strong>LMS Target:</strong> Canvas / Brightspace / Blackboard &bull; 
+    <strong>Target Audit Cadence:</strong> 90–120 Seconds Per Participant
+  </div>
+</div>
+
+<h2>1. Pedagogical Intent & Instructor Role</h2>
+<p>
+  In an <em>instructor-monitored, self-directed asynchronous workshop</em>, your role in SpeedGrader is not to re-run prompt chains, but to act as a <strong>Governance & Verification Auditor</strong>. You are verifying whether the participant operated behind an authenticated enterprise boundary, contained raw unstructured inputs using delimiters, bound the AI output to an institutional/disciplinary Single Source of Truth (SSoT), and executed substantive human-in-the-loop oversight.
+</p>
+
+<h2>2. The 90-Second SpeedGrader Rapid Triaging Workflow</h2>
+<div class="callout-box">
+  <div class="callout-title">Phase 1: Compliance Scan (0 to 30 Seconds)</div>
+  <ul>
+    <li><strong>Step 1: Check SSO Gateway Confirmation.</strong> Section 2 must show <code>google.arizona.edu</code> (or approved SSO). Reject immediately if personal accounts were used.</li>
+    <li><strong>Step 2: Inspect Delimiter Integrity.</strong> Section 3A/3B must wrap raw text inside explicit <code>###</code> fences. No loose paste.</li>
+    <li><strong>Step 3: Check FERPA De-identification.</strong> Confirm all student names, IDs, or confidential personnel identifiers have been redacted into generic titles.</li>
+  </ul>
+</div>
+
+<div class="callout-box">
+  <div class="callout-title">Phase 2: Pedagogical Audit (30 to 90 Seconds)</div>
+  <ul>
+    <li><strong>Step 4: Audit SSoT Reference.</strong> Verify Section 3B names an authoritative standard (e.g., PAGA 2018, Faculty Senate Handbook Sec 4.2, ADA Title II rule).</li>
+    <li><strong>Step 5: Audit Human-in-the-Loop Interventions.</strong> Section 3C must document at least <strong>two distinct editorial or policy calibrations</strong>. Rubber-stamped outputs fail.</li>
+    <li><strong>Step 6: Reconcile Self-Score.</strong> Compare participant self-score against rubric criteria and click submit.</li>
+  </ul>
+</div>
+
+<h2>3. Evaluative Rubric & SpeedGrader Point Distribution (20 Points Total)</h2>
+<table>
+  <thead>
+    <tr>
+      <th style="width: 20%;">Rubric Criterion</th>
+      <th style="width: 15%;">Full Marks (5 pts)</th>
+      <th style="width: 15%;">Proficient (4 pts)</th>
+      <th style="width: 15%;">Developing (2–3 pts)</th>
+      <th style="width: 15%;">Unacceptable (0–1 pts)</th>
+      <th style="width: 20%;">SpeedGrader Signal</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>1. Delimiter Isolation (###)</strong></td>
+      <td>Raw input cleanly isolated inside <code>###</code> blocks; zero prompt-leakage risk.</td>
+      <td>Delimiters used with minor formatting flaws; separation intact.</td>
+      <td>Partial fences; text bleeds into system commands.</td>
+      <td>No delimiters used. Raw text pasted directly into instructions.</td>
+      <td><span class="badge-pass">PASS:</span> <code>###</code> wraps raw inputs.<br><span class="badge-fail">FLAG:</span> Raw prompt injection risk.</td>
+    </tr>
+    <tr>
+      <td><strong>2. SSoT Fidelity & Grounding</strong></td>
+      <td>Explicitly binds model to verified standard (PAGA 2018, ADA Title II, Faculty Code).</td>
+      <td>Standard identified; model granted minor unverified latitude.</td>
+      <td>Vague reference cited (e.g., "college website", "general rules").</td>
+      <td>Zero standard cited; unconstrained hallucination risk.</td>
+      <td><span class="badge-pass">PASS:</span> Specific standard cited.<br><span class="badge-fail">FLAG:</span> "I asked ChatGPT to draft policy."</td>
+    </tr>
+    <tr>
+      <td><strong>3. Mission Loop Alignment</strong></td>
+      <td>Follows <strong>Pattern</strong> (diagnostic), <strong>Rule</strong> (governance), and <strong>Solve</strong> (artifact).</td>
+      <td>Follows sequence; weak link between governing rule and output.</td>
+      <td>Skips pattern or rule; jumps straight to generation.</td>
+      <td>Unstructured query lacking systematic problem framing.</td>
+      <td><span class="badge-pass">PASS:</span> Explicit headings.<br><span class="badge-fail">FLAG:</span> Conversational chat banter.</td>
+    </tr>
+    <tr>
+      <td><strong>4. Human Audit & Intervention</strong></td>
+      <td>Documents 2+ verified factual, editorial, or policy corrections made to output.</td>
+      <td>Documents 1 valid editorial or policy correction.</td>
+      <td>Vague claims ("looks good", "fixed wording") without proof.</td>
+      <td>Zero edits. Synthetic output accepted verbatim without audit.</td>
+      <td><span class="badge-pass">PASS:</span> Concrete diffs cited.<br><span class="badge-fail">FLAG:</span> "No corrections needed."</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>4. Drop-In SpeedGrader Feedback Snippets (Copy & Paste)</h2>
+
+<div class="callout-box">
+  <div class="callout-title">Full Credit / Exemplary (20/20) &bull; Verified Sovereign Auditor</div>
+  <div class="code-block">
+Submission Verified: Excellent execution of the Sovereign Auditor protocol. Your delimiter isolation successfully fenced the raw context, and the grounding against [Insert Standard Cited] ensured full compliance. Strong human-in-the-loop audit documented in Section 3C—specifically calibrating [Insert Mentioned Edit]. Approved for institutional workshop completion credit.
+  </div>
+</div>
+
+<div class="callout-box">
+  <div class="callout-title">Revision Required &bull; Missing Delimiter Boundary (-3 to -5 pts)</div>
+  <div class="code-block">
+Revision Requested: Your prompt in Section 3B does not utilize triple-hash (###) delimiter isolation around the raw input. Without delimiters, raw text can trigger unintended instruction leakage or prompt injection. Please reformat your prompt with ### fencing around the input data, re-run in your enterprise gateway, and re-submit to SpeedGrader for full score release.
+  </div>
+</div>
+
+<div class="callout-box">
+  <div class="callout-title">Revision Required &bull; Insufficient Human-in-the-Loop Audit (-4 to -6 pts)</div>
+  <div class="code-block">
+Revision Requested: Section 3C lacks documented evidence of human-in-the-loop auditing. Sovereign AI workflows require active editorial calibration (correcting hallucinations, tightening policy alignment, or tuning tone). Please document at least two specific corrections you made to the model's draft before adoption, and re-submit your updated log.
+  </div>
+</div>
+
+<div class="callout-box">
+  <div class="callout-title">Critical Security Hard-Stop (0/20) &bull; Enterprise Boundary or FERPA Breach</div>
+  <div class="code-block">
+URGENT - Action Required: Your submission has been flagged for a potential privacy/boundary breach. Your log does not confirm authentication via the enterprise SSO gateway (google.arizona.edu), or contains unredacted student/staff personal identifiers. Please redact all identifying data, ensure your workspace shows the institutional enterprise license, and resubmit immediately.
+  </div>
+</div>
+
+<h2>5. Canvas LMS Setup & SpeedGrader Configuration Checklist</h2>
+<ul>
+  <li><strong>Assignment Submission Type:</strong> Select <code>Online</code> &gt; Check <code>Text Entry</code> and <code>File Uploads</code> (accepts pasted text or Markdown/Word files).</li>
+  <li><strong>LMS Rubric Integration:</strong> Import the 4-criterion, 20-point rubric into the Canvas Course Shell. Check the box: <em>"Use this rubric for assignment grading"</em> to allow 1-click scoring in SpeedGrader.</li>
+  <li><strong>Attempts Setting:</strong> Set to <code>Allowed Attempts: Unlimited</code> (or 3 attempts) to accommodate formative revisions if a participant misses delimiter fences or audit entries on their first run.</li>
+  <li><strong>Grade Display:</strong> Set to <code>Points</code> (20 points) or <code>Complete / Incomplete</code> depending on institutional professional development badging rules.</li>
+</ul>
+
+</body>
+</html>
