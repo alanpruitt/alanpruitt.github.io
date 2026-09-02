@@ -80,7 +80,11 @@ Act as an Executive Administrative Assistant. Transform the unstructured committ
 
 [RAW MEETING NOTES]:
 ###
-[INSERT RAW MEETING NOTES, TRANSCRIPTS, OR COMMITTEE BULLETS HERE]
+Meeting Notes - Curriculum & Tech Committee (Rough Audio Transcript / Chat Extract):
+- Chair opened at 2:03 PM. We covered module updates for the upcoming term.
+- Curriculum Architect noted: "I need to get the draft Module 02 OER syllabus alignment matrix finished and submitted by this Friday at 5:00 PM MST." Reference needed is Faculty Senate Curricular Handbook Section 4.2.
+- Discussion on accessibility mandates. Instructional Designer flagged: "I will take care of performing the WCAG 2.1 AA table scope audit on all LMS course shell imports. I can have that wrapped up by next Tuesday around noon." Ground truth standard to follow is the DOJ Title II 2024 Rule checklist.
+- Committee adjourned 2:48 PM.
 ###
 
 [OUTPUT FORMAT]:
