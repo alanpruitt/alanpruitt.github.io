@@ -48,6 +48,20 @@ El marco del **Bucle de Misión (Patrón / Regla / Resolver)** estructura la int
 
 ### Módulo 0: Puerta de Acceso Técnico y Autoauditoría de Privacidad
 
+
+<div style="background-color: #FFFFFF; border: 1px solid #CBD5E1; border-left: 5px solid #003366; padding: 18px 20px; margin: 20px 0; border-radius: 4px;">
+  <h4 style="margin-top: 0; color: #002147; font-size: 1.05rem; font-weight: 700;">Información del Instructor y Facilitador (Canvas 1.5)</h4>
+  <p style="font-size: 0.9rem; line-height: 1.6; color: #0C2340; margin-bottom: 10px;">
+    <strong>Facilitador Principal:</strong> Alan Pruitt &bull; Arquitecto Curricular y Estratega de IA Generativa
+  </p>
+  <ul style="font-size: 0.86rem; line-height: 1.6; color: #334155; margin-bottom: 12px; padding-left: 20px;">
+    <li><strong>Afiliación Institucional:</strong> Arizona Western College y Universidad de Arizona Campus Yuma</li>
+    <li><strong>Red Profesional y Contacto:</strong> <a href="https://www.linkedin.com/in/alanpruitt/" target="_blank" rel="noopener noreferrer" style="color: #003366; font-weight: 600; text-decoration: underline;">Alan Pruitt en LinkedIn &rarr;</a></li>
+    <li><strong>Tiempo de Respuesta y Asesoría:</strong> Las consultas enviadas mediante la mensajería del LMS o correo institucional se responden en un plazo de 24 a 48 horas hábiles.</li>
+  </ul>
+</div>
+
+
 Antes de ejecutar instrucciones o interactuar con modelos de IA en este taller, verifique su estado de autenticación institucional para garantizar límites estrictos de privacidad, cumplimiento de FERPA y cero retención de datos.
 
 <div style="background-color: #FFFFFF; border: 1px solid #CBD5E1; border-left: 5px solid #003366; padding: 18px 20px; margin: 20px 0; border-radius: 4px;">

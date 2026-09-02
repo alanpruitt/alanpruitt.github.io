@@ -52,7 +52,20 @@ Before running prompts or interacting with AI models in this workshop, verify yo
 <div style="background-color: #FFFFFF; border: 1px solid #CBD5E1; border-left: 5px solid #003366; padding: 18px 20px; margin: 20px 0; border-radius: 4px;">
   
 <div style="background-color: #FFFFFF; border: 1px solid #CBD5E1; border-left: 5px solid #003366; padding: 18px 20px; margin: 20px 0; border-radius: 4px;">
-  <h4 style="margin-top: 0; color: #002147; font-size: 1.05rem; font-weight: 700;">Accessibility & Accommodation Statement (ADA Title II / Canvas 7.2)</h4>
+  
+<div style="background-color: #FFFFFF; border: 1px solid #CBD5E1; border-left: 5px solid #003366; padding: 18px 20px; margin: 20px 0; border-radius: 4px;">
+  <h4 style="margin-top: 0; color: #002147; font-size: 1.05rem; font-weight: 700;">Instructor & Facilitator Information (Canvas 1.5)</h4>
+  <p style="font-size: 0.9rem; line-height: 1.6; color: #0C2340; margin-bottom: 10px;">
+    <strong>Lead Facilitator:</strong> Alan Pruitt &bull; Curriculum Architect &amp; Generative AI Strategist
+  </p>
+  <ul style="font-size: 0.86rem; line-height: 1.6; color: #334155; margin-bottom: 12px; padding-left: 20px;">
+    <li><strong>Institutional Alignment:</strong> Arizona Western College &amp; University of Arizona Yuma Campus</li>
+    <li><strong>Professional Inquiries &amp; Network:</strong> <a href="https://www.linkedin.com/in/alanpruitt/" target="_blank" rel="noopener noreferrer" style="color: #003366; font-weight: 600; text-decoration: underline;">Alan Pruitt on LinkedIn &rarr;</a></li>
+    <li><strong>Response Time &amp; Office Hours:</strong> Inquiries submitted via LMS course messaging or institutional email are answered within 24–48 business hours.</li>
+  </ul>
+</div>
+
+<h4 style="margin-top: 0; color: #002147; font-size: 1.05rem; font-weight: 700;">Accessibility & Accommodation Statement (ADA Title II / Canvas 7.2)</h4>
   <p style="font-size: 0.9rem; line-height: 1.6; color: #0C2340; margin-bottom: 10px;">
     We are committed to creating an accessible, inclusive, and barrier-free learning experience for all faculty, staff, and community members. This course adheres strictly to <strong>WCAG 2.1 and 2.2 AA</strong> standards, featuring semantic structure, high-contrast typography (14.2:1 contrast ratio), screen-reader-optimized tables, and zero-cost OER materials.
   </p>
