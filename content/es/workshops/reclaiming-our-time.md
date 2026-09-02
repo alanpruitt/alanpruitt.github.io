@@ -496,7 +496,7 @@ Firma / Fecha: [Nombre / AAAA-MM-DD]
           Descargar Protocolo de Evaluación Imprimible (PDF) &rarr;
         </a>
                 <a href="/docs/canvas-v3-audit-report.html" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; border: 1px solid #002147; color: #002147 !important; padding: 8px 14px; border-radius: 4px; font-weight: 600; text-decoration: none; font-size: 0.82rem; background-color: #FFFFFF;">
-          Ver Reporte de Auditoría Ejemplar Canvas v3.0 &rarr;
+          Ver Reporte de Auditoría Ejemplar Canvas v3.0 y QM (7.ª Ed) &rarr;
         </a>
         <a href="/docs/reclaiming-our-time-evaluator-guide.html" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; border: 1px solid #003366; color: #003366 !important; padding: 8px 14px; border-radius: 4px; font-weight: 600; text-decoration: none; font-size: 0.82rem; background-color: #F8F6F0;">
           Ver Guía en Línea (HTML) &rarr;
