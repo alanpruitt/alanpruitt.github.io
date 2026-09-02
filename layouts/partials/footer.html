@@ -1,146 +1,51 @@
-<footer class="border-t border-zinc-200 bg-white py-8 dark:border-zinc-800 dark:bg-zinc-950" aria-label="Site Footer">
+<footer class="border-t border-zinc-200 bg-white py-8 dark:border-zinc-800 dark:bg-zinc-950" aria-label="{{ if eq .Lang "es" }}Pie de página del sitio{{ else }}Site Footer{{ end }}">
   <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-    <div class="flex flex-col items-center justify-between gap-4 sm:flex-row text-left">
+    <div class="flex flex-col gap-6 text-left sm:flex-row sm:items-center sm:justify-between">
       
-      <!-- Identity & Copyright -->
+      <!-- Identity, Architecture & Federal Compliance -->
       <div class="text-xs text-zinc-900 dark:text-zinc-100">
-        <p>&copy; {{ now.Format "2006" }} Alan Pruitt. {{ if eq .Lang "es" }}Todos los derechos reservados.{{ else }}All rights reserved.{{ end }}</p>
-        <p class="mt-1">
-          {{ if eq .Lang "es" }}Arquitectura Curriculum-as-Code &bull; Verificado WCAG 2.2 AA{{ else }}Curriculum-as-Code Architecture &bull; WCAG 2.2 AA Verified{{ end }}
+        <p class="font-semibold">&copy; {{ now.Year }} Alan Pruitt. {{ if eq .Lang "es" }}Todos los derechos reservados.{{ else }}All rights reserved.{{ end }}</p>
+        <p class="mt-1 text-zinc-700 dark:text-zinc-300">
+          {{ if eq .Lang "es" }}
+            Arquitectura Curriculum-as-Code &bull; Cumplimiento ADA Título II &bull; Conforme a WCAG 2.1/2.2 AA
+          {{ else }}
+            Curriculum-as-Code Architecture &bull; ADA Title II Compliant &bull; WCAG 2.1/2.2 AA Conforming
+          {{ end }}
         </p>
+        
+        <!-- ZTC & Creative Commons Notice -->
+        <div class="mt-3 flex flex-col gap-1 border-l-2 border-[#003366] pl-3 text-xs text-zinc-700 dark:border-zinc-400 dark:text-zinc-300">
+          <p>
+            <strong>{{ if eq .Lang "es" }}Cero Costo de Libros de Texto (ZTC):{{ else }}Zero Textbook Cost (ZTC):{{ end }}</strong>
+            {{ if eq .Lang "es" }}
+              Todos los materiales de este taller son Recursos Educativos Abiertos (OER) accesibles y sin barreras arancelarias.
+            {{ else }}
+              All workshop materials are accessible Open Educational Resources (OER) provided freely with zero paywall barriers.
+            {{ end }}
+          </p>
+          <p>
+            {{ if eq .Lang "es" }}
+              Este contenido está bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es" class="font-medium underline hover:text-[#003366] dark:hover:text-emerald-400 focus:ring-2 focus:ring-[#003366]" target="_blank" rel="license noopener noreferrer">CC BY-NC-SA 4.0 Internacional</a>.
+            {{ else }}
+              This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="font-medium underline hover:text-[#003366] dark:hover:text-emerald-400 focus:ring-2 focus:ring-[#003366]" target="_blank" rel="license noopener noreferrer">CC BY-NC-SA 4.0 International</a>.
+            {{ end }}
+          </p>
+        </div>
       </div>
 
-      <!-- Navigation & System Links (WCAG 2.2 AA Min 44x44px Touch Targets) -->
-      <nav class="flex flex-wrap items-center gap-2 text-xs font-bold uppercase tracking-wider" aria-label="Footer Navigation">
-        <a 
-          href="{{ relLangURL "essays/" }}" 
-          class="inline-flex items-center justify-center rounded-md px-2.5 py-1 text-zinc-900 transition-colors hover:text-zinc-950 dark:text-zinc-100 dark:hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white"
-          style="min-height: 44px; min-width: 44px; text-decoration: none; display: inline-flex;"
-        >
-          {{ if eq .Lang "es" }}Ensayos{{ else }}Essays{{ end }}
+      <!-- Navigation & Accessibility Touch Targets -->
+      <nav class="flex flex-wrap items-center gap-2 text-xs font-bold uppercase tracking-wider" aria-label="{{ if eq .Lang "es" }}Navegación del pie de página{{ else }}Footer Navigation{{ end }}">
+        <a href="/workshops/reclaiming-our-time/" class="inline-flex items-center justify-center rounded-md px-2.5 py-1 text-zinc-900 transition-colors hover:text-[#003366] dark:text-zinc-100 dark:hover:text-white" style="min-height: 44px; min-width: 44px; text-decoration: none;">
+          Workshop
         </a>
-
-        <span class="text-zinc-300 dark:text-zinc-700" aria-hidden="true">&bull;</span>
-
-        <a 
-          href="{{ relLangURL "changelog/" }}" 
-          class="inline-flex items-center justify-center rounded-md px-2.5 py-1 text-zinc-900 transition-colors hover:text-zinc-950 dark:text-zinc-100 dark:hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white"
-          style="min-height: 44px; min-width: 44px; text-decoration: none; display: inline-flex;"
-        >
-          {{ if eq .Lang "es" }}Registro{{ else }}Changelog{{ end }}
+        <a href="/es/talleres/recuperando-nuestro-tiempo/" class="inline-flex items-center justify-center rounded-md px-2.5 py-1 text-zinc-900 transition-colors hover:text-[#003366] dark:text-zinc-100 dark:hover:text-white" style="min-height: 44px; min-width: 44px; text-decoration: none;">
+          Taller (ES)
         </a>
-
-        <span class="text-zinc-300 dark:text-zinc-700" aria-hidden="true">&bull;</span>
-
-        <a 
-          href="{{ relLangURL "accessibility/" }}" 
-          class="inline-flex items-center justify-center rounded-md px-2.5 py-1 text-zinc-900 transition-colors hover:text-zinc-950 dark:text-zinc-100 dark:hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white"
-          style="min-height: 44px; min-width: 44px; text-decoration: none; display: inline-flex;"
-        >
-          {{ if eq .Lang "es" }}Accesibilidad{{ else }}Accessibility{{ end }}
-        </a>
-
-        <span class="text-zinc-300 dark:text-zinc-700" aria-hidden="true">&bull;</span>
-
-        <a 
-          href="{{ relLangURL "privacy/" }}" 
-          class="inline-flex items-center justify-center rounded-md px-2.5 py-1 text-zinc-900 transition-colors hover:text-zinc-950 dark:text-zinc-100 dark:hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white"
-          style="min-height: 44px; min-width: 44px; text-decoration: none; display: inline-flex;"
-        >
-          {{ if eq .Lang "es" }}Privacidad{{ else }}Privacy{{ end }}
-        </a>
-
-        <span class="text-zinc-300 dark:text-zinc-700" aria-hidden="true">&bull;</span>
-
-        <a 
-          href="{{ relLangURL "terms/" }}" 
-          class="inline-flex items-center justify-center rounded-md px-2.5 py-1 text-zinc-900 transition-colors hover:text-zinc-950 dark:text-zinc-100 dark:hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white"
-          style="min-height: 44px; min-width: 44px; text-decoration: none; display: inline-flex;"
-        >
-          {{ if eq .Lang "es" }}Términos{{ else }}Terms{{ end }}
-        </a>
-
-        <span class="text-zinc-300 dark:text-zinc-700" aria-hidden="true">&bull;</span>
-
-        <a 
-          href="https://webcognita.com" 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          class="inline-flex items-center justify-center rounded-md px-2.5 py-1 text-zinc-900 transition-colors hover:text-zinc-950 dark:text-zinc-100 dark:hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white"
-          style="min-height: 44px; min-width: 44px; text-decoration: none; display: inline-flex;"
-        >
-          Webcognita
+        <a href="/essays/" class="inline-flex items-center justify-center rounded-md px-2.5 py-1 text-zinc-900 transition-colors hover:text-[#003366] dark:text-zinc-100 dark:hover:text-white" style="min-height: 44px; min-width: 44px; text-decoration: none;">
+          Essays
         </a>
       </nav>
 
     </div>
   </div>
 </footer>
-
-<!-- Global Presentation & Copy Utilities -->
-<script>
-window.copyPromptDirect = function(preId, statusId) {
-  var pre = document.getElementById(preId);
-  var label = document.getElementById(statusId);
-  if (!pre) return;
-  
-  var text = pre.innerText.trim();
-  
-  if (navigator.clipboard && navigator.clipboard.writeText) {
-    navigator.clipboard.writeText(text).then(function() {
-      showCopiedFeedback(label);
-    }).catch(function() {
-      fallbackSelect(pre, label);
-    });
-  } else {
-    fallbackSelect(pre, label);
-  }
-};
-
-function fallbackSelect(el, label) {
-  var range = document.createRange();
-  range.selectNodeContents(el);
-  var sel = window.getSelection();
-  sel.removeAllRanges();
-  sel.addRange(range);
-  try {
-    document.execCommand('copy');
-    showCopiedFeedback(label);
-  } catch(e) {}
-}
-
-function showCopiedFeedback(label) {
-  if (!label) return;
-  var orig = label.innerText;
-  label.innerText = '✓ COPIED TO CLIPBOARD!';
-  label.style.color = '#4ade80';
-  setTimeout(function() {
-    label.innerText = orig;
-    label.style.color = '#ffffff';
-  }, 2500);
-}
-
-// Global Laser Pointer listener on window capture
-(function() {
-  var laserActive = false;
-  var dot = document.getElementById('deck-laser-dot');
-
-  window.addEventListener('keydown', function(e) {
-    if (e.key === 'l' || e.key === 'L') {
-      var tag = (document.activeElement && document.activeElement.tagName) || '';
-      if (['INPUT', 'TEXTAREA', 'SELECT'].indexOf(tag) !== -1) return;
-      
-      laserActive = !laserActive;
-      if (!dot) dot = document.getElementById('deck-laser-dot');
-      if (dot) dot.style.display = laserActive ? 'block' : 'none';
-      document.body.style.cursor = laserActive ? 'none' : 'default';
-    }
-  }, true);
-
-  window.addEventListener('mousemove', function(e) {
-    if (!laserActive || !dot) return;
-    dot.style.left = e.clientX + 'px';
-    dot.style.top = e.clientY + 'px';
-  }, true);
-})();
-</script>
