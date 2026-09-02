@@ -48,6 +48,7 @@ El marco del **Bucle de Misión (Patrón / Regla / Resolver)** estructura la int
 
 ## Módulo 1: Fundamento de Políticas y Autenticación Empresarial
 
+- **Mandatos Federales y Título II de la ADA:** Alineación de todos los activos digitales con la normativa del Título II de la ADA del Departamento de Justicia (exigiendo conformidad estricta con WCAG 2.1 Nivel AA en educación superior pública).
 - **Postura Institucional:** Adopción de prácticas de IA generativa legalmente sólidas y académicamente rigurosas para lograr un alivio administrativo y pedagógico sustancial.
 - **Límite de Autenticación Empresarial:** Evite interfaces de IA de consumo no autenticadas donde las entradas puedan ser recopiladas para entrenar modelos públicos. Inicie sesión siempre con sus credenciales institucionales (SSO):
   - **Google Gemini Enterprise**

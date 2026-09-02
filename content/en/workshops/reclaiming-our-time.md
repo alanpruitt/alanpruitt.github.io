@@ -48,6 +48,7 @@ The **Mission Loop (Pattern / Rule / Solve)** framework structures the interacti
 
 ## Module 1: Policy Foundations & Enterprise Authentication
 
+- **ADA Title II & Federal Mandates:** Aligning all digital course assets with the DOJ's Title II digital accessibility rule (enforcing strict WCAG 2.1 Level AA conformance across public higher education).
 - **Institutional Posture:** Adoption of legally sound, academically rigorous GenAI practices to achieve meaningful administrative relief.
 - **Enterprise Authentication Boundary:** Avoid consumer, unauthenticated AI interfaces where inputs may be ingested to train public models. Always log in through institutional SSO credentials:
   - **Google Gemini Enterprise**
