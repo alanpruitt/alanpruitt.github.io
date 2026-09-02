@@ -135,7 +135,10 @@ Safeguarding student records and directory information in accordance with federa
 
 ---
 
-## Module 5: Synthesis & Resource Index
+## Module 5: Synthesis, Resources & Institutional Support
 
-- **Quick Start Guide:** Downloadable OER audit templates and accessible syllabus rubrics.
-- **Curriculum Architecture Support:** Strategic consulting for academic departments, ADA Title II web compliance, and AI assessment alignment.
+### Enterprise Tools & Official University Routing
+
+- **Primary Responsible AI Portal:** Access authorized tools, request enterprise accounts, and review official guidelines via the [University of Arizona Responsible Artificial Intelligence Start Here Portal](https://responsibleai.arizona.edu/tools-support/start-here).
+- **Institutional GenAI Support & Intake:** Submit departmental inquiries, review privacy and security evaluations, and access sanctioned generative AI resources directly through the Responsible AI support desk.
+- **Data Governance & FERPA Inquiries:** Consult University Information Security and privacy policies through the Responsible AI portal before uploading or processing institutional materials.

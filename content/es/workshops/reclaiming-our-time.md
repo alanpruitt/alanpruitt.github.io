@@ -135,7 +135,10 @@ Protección estricta de los expedientes e información confidencial estudiantil 
 
 ---
 
-## Módulo 5: Síntesis e Índice de Recursos
+## Módulo 5: Síntesis, Recursos y Soporte Institucional
 
-- **Guía de Inicio Rápido:** Plantillas de auditoría OER descargables y rúbricas accesibles de programas de estudio.
-- **Soporte de Arquitectura Curricular:** Consultoría estratégica para departamentos académicos, cumplimiento web del Título II de la ADA y alineación de evaluaciones con IA.
+### Herramientas Empresariales y Enrutamiento Institucional Oficial
+
+- **Portal Principal de Inteligencia Artificial Responsable:** Acceda a herramientas autorizadas, solicite cuentas empresariales y consulte las directrices oficiales a través del [Portal de Inicio de IA Responsable de la Universidad de Arizona](https://responsibleai.arizona.edu/tools-support/start-here).
+- **Soporte y Mesa de Ayuda Institucional de GenAI:** Envíe consultas departamentales, revise evaluaciones de seguridad y privacidad, y acceda a recursos autorizados de IA directamente a través del equipo de IA Responsable.
+- **Gobernanza de Datos y Cumplimiento de FERPA:** Consulte las políticas de privacidad y seguridad de la información universitaria mediante el portal de IA Responsable antes de procesar materiales o registros institucionales.
