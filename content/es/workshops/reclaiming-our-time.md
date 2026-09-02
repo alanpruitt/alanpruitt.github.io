@@ -113,7 +113,7 @@ Proporcione una tabla Markdown con las columnas:
             <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Manual Curricular del Senado Docente Sec. 4.2</td>
           </tr>
           <tr style="background-color: #f1f5f9;">
-            <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Auditoría de encabezados y tablas en Canvas bajo WCAG 2.1 AA</td>
+            <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Auditoría de encabezados y tablas en LMS bajo WCAG 2.1 AA</td>
             <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Diseñador Instruccional</td>
             <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Próximo martes, 12:00 PM</td>
             <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Lista de Cumplimiento ADA Título II (Regla DOJ 2024)</td>

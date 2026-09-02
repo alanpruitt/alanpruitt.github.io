@@ -113,7 +113,7 @@ Provide a Markdown table with columns:
             <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Faculty Senate Curricular Handbook Sec. 4.2</td>
           </tr>
           <tr style="background-color: #f1f5f9;">
-            <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Perform WCAG 2.1 AA table scope audit on Canvas imports</td>
+            <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Perform WCAG 2.1 AA table scope audit on LMS course shell imports</td>
             <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Instructional Designer</td>
             <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Next Tuesday, 12:00 PM</td>
             <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">ADA Title II Compliance Checklist (DOJ 2024 Rule)</td>
