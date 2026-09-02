@@ -10,5 +10,5 @@
     <span>{{ $badge }} (CLICK TO SELECT ALL &bull; CTRL+C / CMD+C)</span>
     <span style="color: #d4af37; font-style: italic;">{{ $badgeClass }}</span>
   </div>
-  <pre style="margin: 0px; background-color: #fdfbf7; border-radius: 0px 0px 4px 4px; padding: 14px; font-family: 'Courier New', monospace; font-size: 0.88rem; color: #1e2a38; line-height: 1.45; user-select: all; -webkit-user-select: all; cursor: pointer; overflow-x: auto; white-space: pre-wrap; border: 1px solid #003366;" title="Click inside to copy prompt data">{{ .Inner }}</pre>
+  <pre style="margin: 0px; background-color: #fdfbf7; border-radius: 0px 0px 4px 4px; padding: 14px; font-family: 'Courier New', monospace; font-size: 0.88rem; color: #1e2a38; line-height: 1.45; user-select: all; -webkit-user-select: all; cursor: pointer; overflow-x: auto; white-space: pre-wrap; border: 1px solid #003366;" title="Click inside to copy prompt data">{{ .Inner | chomp }}</pre>
 </div>
