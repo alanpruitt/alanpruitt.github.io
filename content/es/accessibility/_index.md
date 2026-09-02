@@ -39,6 +39,6 @@ Los análisis, marcos y ensayos de este sitio corresponden a la práctica profes
 
 Si encuentra alguna dificultad o barrera de acceso en este sitio, por favor comuníquese indicando la dirección URL y una breve descripción:
 
-**Alan Pruitt**  
-Correo electrónico: `alan.pruitt@gmail.com`  
+**Alan Pruitt**
+Correo electrónico: `alan.pruitt@gmail.com`
 Asunto: `Retroalimentación de Accesibilidad - alanpruitt.com`

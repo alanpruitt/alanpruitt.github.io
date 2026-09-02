@@ -29,5 +29,5 @@ Este sitio incluye enlaces a plataformas complementarias (como `webcognita.com`)
 
 Para permisos, publicaciones o sesiones estratégicas:
 
-**Alan Pruitt**  
+**Alan Pruitt**
 Correo electrónico: `alan.pruitt@gmail.com`

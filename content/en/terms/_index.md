@@ -29,5 +29,5 @@ This platform contains links to companion entities (including `webcognita.com`) 
 
 For permissions, syndication inquiries, or institutional advisory briefings:
 
-**Alan Pruitt**  
+**Alan Pruitt**
 Email: `alan.pruitt@gmail.com`

@@ -29,5 +29,5 @@ Los enlaces a plataformas complementarias (como `webcognita.com`) o redes profes
 
 Para consultas sobre gobernanza de datos o arquitectura de la plataforma:
 
-**Alan Pruitt**  
+**Alan Pruitt**
 Correo electrónico: `alan.pruitt@gmail.com`

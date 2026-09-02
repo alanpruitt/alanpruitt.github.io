@@ -14,5 +14,5 @@ In **Essay 18: The Illusion of the Feed**, I explore how treating your curriculu
 
  **Read the full essay here:** [alanpruitt.com/articles/18-the-illusion-of-the-feed.html](https://alanpruitt.com/articles/18-the-illusion-of-the-feed.html)
 
-Best,  
+Best,
 Alan

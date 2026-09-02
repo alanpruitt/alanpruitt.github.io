@@ -39,13 +39,13 @@ The scaffold divides weekly laboratory modules into two distinct, sequential pha
 [PART A: AI-GUIDED SIMULATION]
 - Environment: Digital AI Tool Kit / Local Workspace
 - Objective: Mathematical verification, protocol auditing, and scenario testing.
-- Mechanics: Students run simulations, verify metabolic formulas (VO2, METs, HRr), 
+- Mechanics: Students run simulations, verify metabolic formulas (VO2, METs, HRr),
   and pass the Safety Auditor Protocol gate before entering the physical lab.
 
 [PART B: PRACTICAL APPLICATION]
 - Environment: Onsite Kinesiology Laboratory (e.g., Lode Corival / Cycle Ergometry)
 - Objective: Tactile execution, physiological measurement, and data collection.
-- Mechanics: Students execute research-grade testing protocols using hyperbolic braking 
+- Mechanics: Students execute research-grade testing protocols using hyperbolic braking
   and precision load management, applying audited Part A parameters to human subjects.
 ```
 

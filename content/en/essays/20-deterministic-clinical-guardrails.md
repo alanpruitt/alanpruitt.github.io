@@ -40,7 +40,7 @@ When early-stage kinesiology students evaluate complex clinical case studies, th
 │                                                                        │
 │  [ Raw Student Query ] ──► [ Unanchored Public LLM ]                   │
 │                                     │                                  │
-│         ┌───────────────────────────┴───────────────────────────┐      
+│         ┌───────────────────────────┴───────────────────────────┐
 │         ▼                                                       ▼      │
 │  [ Internet Fitness Fads ]                           [ Conflicting Studies ]
 │         │                                                       │      │

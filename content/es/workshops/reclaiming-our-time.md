@@ -62,7 +62,7 @@ El marco del **Bucle de Misión (Patrón / Regla / Resolver)** estructura la int
 Antes de ejecutar instrucciones o interactuar con modelos de IA en este taller, verifique su estado de autenticación institucional para garantizar límites estrictos de privacidad, cumplimiento de FERPA y cero retención de datos.
 
 <div style="background-color: #FFFFFF; border: 1px solid #CBD5E1; border-left: 5px solid #003366; padding: 18px 20px; margin: 20px 0; border-radius: 4px;">
-  
+
 <div style="background-color: #FFFFFF; border: 1px solid #CBD5E1; border-left: 5px solid #003366; padding: 18px 20px; margin: 20px 0; border-radius: 4px;">
   <h4 style="margin-top: 0; color: #002147; font-size: 1.05rem; font-weight: 700;">Guía de Ritmo y Tiempo de Dedicación (Canvas 1.6 • Arquitectura de 60 Minutos)</h4>
   <p style="font-size: 0.9rem; line-height: 1.6; color: #0C2340; margin-bottom: 12px;">

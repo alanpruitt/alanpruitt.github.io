@@ -39,6 +39,6 @@ The accessibility frameworks, audits, and essays on this site reflect independen
 
 We welcome feedback on the accessibility of this platform. If you encounter any digital barrier, please contact us with the URL and a brief description:
 
-**Alan Pruitt**  
-Email: `alan.pruitt@gmail.com`  
+**Alan Pruitt**
+Email: `alan.pruitt@gmail.com`
 Subject: `Accessibility Feedback - alanpruitt.com`

@@ -29,5 +29,5 @@ External links to companion sites (such as `webcognita.com`) or professional net
 
 For questions regarding data governance or platform architecture, contact:
 
-**Alan Pruitt**  
+**Alan Pruitt**
 Email: `alan.pruitt@gmail.com`

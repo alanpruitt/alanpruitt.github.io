@@ -49,9 +49,9 @@ The **Mission Loop (Pattern / Rule / Solve)** framework structures the interacti
 Before running prompts or interacting with AI models in this workshop, verify your enterprise authentication status to ensure strict privacy boundaries, FERPA compliance, and zero data retention.
 
 <div style="background-color: #FFFFFF; border: 1px solid #CBD5E1; border-left: 5px solid #003366; padding: 18px 20px; margin: 20px 0; border-radius: 4px;">
-  
+
 <div style="background-color: #FFFFFF; border: 1px solid #CBD5E1; border-left: 5px solid #003366; padding: 18px 20px; margin: 20px 0; border-radius: 4px;">
-  
+
 <div style="background-color: #FFFFFF; border: 1px solid #CBD5E1; border-left: 5px solid #003366; padding: 18px 20px; margin: 20px 0; border-radius: 4px;">
   <h4 style="margin-top: 0; color: #002147; font-size: 1.05rem; font-weight: 700;">Instructor & Facilitator Information (Canvas 1.5)</h4>
   <p style="font-size: 0.9rem; line-height: 1.6; color: #0C2340; margin-bottom: 10px;">
