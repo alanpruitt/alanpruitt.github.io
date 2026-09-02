@@ -49,3 +49,49 @@
     </div>
   </div>
 </footer>
+
+<!-- Zero-Dependency 1-Click Clipboard Engine for Prompt Cards -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const copyButtons = document.querySelectorAll('.copy-prompt-btn');
+
+  copyButtons.forEach(button => {
+    button.addEventListener('click', async () => {
+      const card = button.closest('.prompt-card-wrapper');
+      if (!card) return;
+
+      const target = card.querySelector('.prompt-content-target');
+      if (!target) return;
+
+      // Extract raw inner text, preserving newlines and delimiters exactly as typed
+      const promptText = target.innerText.trim();
+
+      try {
+        await navigator.clipboard.writeText(promptText);
+
+        const btnText = button.querySelector('.btn-text');
+        const originalText = btnText.innerText;
+        const isSpanish = document.documentElement.lang === 'es' || window.location.pathname.includes('/es/');
+
+        // Visual success state (High Contrast Green #065F46)
+        button.style.backgroundColor = '#065F46';
+        btnText.innerText = isSpanish ? '✓ ¡Copiado!' : '✓ Copied!';
+
+        setTimeout(() => {
+          button.style.backgroundColor = '#003366';
+          btnText.innerText = originalText;
+        }, 2200);
+
+      } catch (err) {
+        console.error('Clipboard copy failed:', err);
+        const btnText = button.querySelector('.btn-text');
+        btnText.innerText = 'Error!';
+        setTimeout(() => {
+          button.style.backgroundColor = '#003366';
+          btnText.innerText = 'Copy';
+        }, 2000);
+      }
+    });
+  });
+});
+</script>
