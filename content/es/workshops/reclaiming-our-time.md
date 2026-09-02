@@ -503,7 +503,10 @@ Signature / Timestamp: [Insert Name / Date]
 </p>
 
 <div style="display: flex; gap: 12px; flex-wrap: wrap; margin: 12px 0;">
-<a href="/docs/reclaiming-our-time-evaluator-guide.pdf" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; background-color: #003366; color: #FFFFFF !important; padding: 8px 14px; border-radius: 4px; font-weight: 600; text-decoration: none; font-size: 0.82rem;">
+<a href="/docs/reclaiming-our-time-canvas-bundle.zip" download style="display: inline-flex; align-items: center; background-color: #065F46; color: #FFFFFF !important; padding: 8px 14px; border-radius: 4px; font-weight: 600; text-decoration: none; font-size: 0.82rem;">
+        Descargar Paquete Canvas LMS (.imscc y Rúbrica) &rarr;
+      </a>
+      <a href="/docs/reclaiming-our-time-evaluator-guide.pdf" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; background-color: #003366; color: #FFFFFF !important; padding: 8px 14px; border-radius: 4px; font-weight: 600; text-decoration: none; font-size: 0.82rem;">
           Descargar Protocolo de Evaluación en PDF &rarr;
 </a>
 <a href="/docs/canvas-v3-audit-report.html" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; border: 1px solid #002147; color: #002147 !important; padding: 8px 14px; border-radius: 4px; font-weight: 600; text-decoration: none; font-size: 0.82rem; background-color: #FFFFFF;">
