@@ -173,8 +173,59 @@
         }
     </style>
     {{ partial "print-styles.html" . }}
+
+<style>
+  /* ==========================================================================
+     INSTITUTIONAL PALETTE: NAVY ON CREME (WCAG 2.2 AAA ACCESSIBILITY)
+     ========================================================================== */
+  :root, html, body {
+    background-color: #FDFBF7 !important; /* Warm Archival Creme */
+    color: #0C2340 !important;             /* Deep Academic Navy */
+  }
+
+  main, article, .content-container, .prose {
+    background-color: #FDFBF7 !important;
+    color: #0C2340 !important;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: #002147 !important;
+    font-weight: 700;
+  }
+
+  a {
+    color: #003366 !important;
+    text-decoration: underline !important;
+    text-underline-offset: 3px !important;
+  }
+  a:hover, a:focus {
+    color: #001F3F !important;
+    background-color: rgba(0, 51, 102, 0.08);
+  }
+
+  .prompt-box-container {
+    background-color: #FFFFFF !important;
+    border: 1px solid #CBD5E1 !important;
+    border-left: 5px solid #003366 !important;
+  }
+  .prompt-box-container pre {
+    background-color: #F8F6F0 !important;
+    color: #0C2340 !important;
+    border: 1px solid #003366 !important;
+  }
+
+  footer, #site-footer {
+    background-color: #F5F2EB !important;
+    border-top: 2px solid #E2D9C8 !important;
+    color: #0C2340 !important;
+  }
+  footer p, footer span, footer a {
+    color: #0C2340 !important;
+  }
+</style>
+
 </head>
-<body class="bg-creme-100 text-navy-900 font-sans antialiased min-h-full flex flex-col justify-between dark:bg-zinc-950 dark:text-zinc-100">
+<body class="bg-[#FDFBF7] text-[#0C2340] font-sans antialiased min-h-full flex flex-col justify-between">
 
     {{ partial "header.html" . }}
 
