@@ -125,6 +125,25 @@ Before running prompts or interacting with AI models in this workshop, verify yo
   </div>
 </div>
 
+
+{{< prompt-card title="Module 0 Community Exchange: Reclaiming Our Time Check-In (Canvas 2.5)" subtitle="Introduce yourself and establish rapport with your cohort in the course discussion board." badge="COMMUNITY & RAPPORT" badgeClass="INSTITUTIONAL READY" >}}
+### MODULE 0 DISCUSSION PROMPT: COHORT RAPPORT & WORKFLOW GOALS
+Welcome to the workshop! To foster collaboration across disciplines and academic units, introduce yourself in the course discussion area using the 3-point check-in below:
+
+1. Professional Role & Department:
+   - State your name, department/academic unit, and primary instructional or administrative responsibilities.
+
+2. Target Administrative Time-Drain:
+   - Identify one specific, recurring task that consumes excessive time (e.g., extracting action items from committee transcripts, drafting tiered syllabus statements, building formative rubric feedback, or standardizing course alignment).
+
+3. Sovereign Autonomy Goal:
+   - What is one area where you want to maintain strict human-in-the-loop control while leveraging enterprise-shielded AI for draft acceleration?
+
+Peer Engagement:
+Review the posts from your colleagues and reply to at least one peer from outside your immediate department. Share an insight or common challenge regarding administrative workloads in their discipline.
+###
+{{< /prompt-card >}}
+
 <h4 style="margin-top: 0; color: #002147; font-size: 1.05rem; font-weight: 700;">Step 1: Institutional Enterprise Authentication Gateway</h4>
   <p style="font-size: 0.9rem; line-height: 1.6; color: #0C2340; margin-bottom: 12px;">
     To guarantee your session operates under the institutional data privacy umbrella (where corporate models are prohibited from training on your text or file uploads), you must authenticate through your institutional NetID gateway:

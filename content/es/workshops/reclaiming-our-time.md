@@ -115,6 +115,25 @@ Antes de ejecutar instrucciones o interactuar con modelos de IA en este taller, 
   </div>
 </div>
 
+
+{{< prompt-card title="Módulo 0 Intercambio Comunitario: Registro y Presentación (Canvas 2.5)" subtitle="Preséntese y establezca comunidad con sus colegas en el foro de discusión del curso." badge="COMUNIDAD Y PARTICIPACIÓN" badgeClass="USO INSTITUCIONAL" >}}
+### FORO DE DISCUSIÓN MÓDULO 0: CREACIÓN DE COMUNIDAD Y OBJETIVOS DE TRABAJO
+¡Bienvenido/a al taller! Para fomentar la colaboración entre disciplinas y unidades académicas, preséntese en el área de discusión del curso respondiendo a los siguientes 3 puntos:
+
+1. Rol Profesional y Departamento:
+   - Indique su nombre, departamento o unidad académica, y sus principales responsabilidades docentes o administrativas.
+
+2. Carga Administrativa a Optimizar:
+   - Identifique una tarea específica y recurrente que consuma tiempo excesivo (p. ej., extracción de tareas de minutas de comité, redacción de políticas de sílabo, elaboración de retroalimentación formativa con rúbricas o alineación curricular).
+
+3. Meta de Autonomía Soberana:
+   - ¿En qué aspecto considera indispensable mantener el control y criterio humano activo mientras utiliza IA empresarial para acelerar borradores preliminares?
+
+Interacción con Colegas:
+Revise las publicaciones de sus colegas y responda al menos a un participante de un departamento o área distinta a la suya. Comparta una recomendación o un desafío común en torno a las cargas de trabajo administrativo.
+###
+{{< /prompt-card >}}
+
 <h4 style="margin-top: 0; color: #002147; font-size: 1.05rem; font-weight: 700;">Paso 1: Portal de Autenticación Institucional Empresarial</h4>
   <p style="font-size: 0.9rem; line-height: 1.6; color: #0C2340; margin-bottom: 12px;">
     Para garantizar que su sesión opere bajo la protección de privacidad institucional (donde los modelos corporativos tienen prohibido entrenarse con sus textos o archivos adjuntos), debe autenticarse a través de su portal institucional con NetID:
