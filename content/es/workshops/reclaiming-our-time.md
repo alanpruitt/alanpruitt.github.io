@@ -317,6 +317,74 @@ Documente dos intervenciones específicas donde editó, corrigió o calibró el 
 
 ## Módulo 5: Síntesis, Recursos y Soporte Institucional
 
+
+### Proyecto Sumativo Integrador: Matriz de Auditoría y Reflexión de Flujos de Trabajo
+
+Para concluir el taller y validar sus competencias bajo un modelo con monitoreo docente o acreditación institucional, complete esta matriz sumativa. Copie la siguiente plantilla estructurada, ingrese sus evidencias verificadas y envíela a través del portal de tareas del LMS o la plataforma del curso.
+
+<div style="background-color: #FFFFFF; border: 1px solid #CBD5E1; border-left: 5px solid #003366; padding: 18px 20px; margin: 20px 0; border-radius: 4px;">
+  <h4 style="margin-top: 0; color: #002147; font-size: 1.05rem; font-weight: 700;">Estándares de Evaluación Sumativa (Canvas / QM 3.1 y 3.3)</h4>
+  <p style="font-size: 0.9rem; line-height: 1.6; color: #0C2340; margin-bottom: 8px;">
+    Su entrega final debe demostrar supervisión crítica y control humano en cuatro dimensiones evaluativas:
+  </p>
+  <ul style="font-size: 0.86rem; line-height: 1.6; color: #334155; margin-bottom: 0; padding-left: 20px;">
+    <li><strong>Integridad del Entorno:</strong> Verificación de autenticación mediante <code>google.arizona.edu</code> con Cero Retención de Datos.</li>
+    <li><strong>Aislamiento Estructural:</strong> Uso estricto de delimitadores <code>###</code> para separar datos sin procesar de las instrucciones del sistema.</li>
+    <li><strong>Fidelidad a la SSoT:</strong> Vinculación directa con un estándar normativo oficial sin margen para la alucinación sintética.</li>
+    <li><strong>Calibración Iterativa:</strong> Al menos dos intervenciones documentadas donde corrigió y adaptó los resultados según criterios institucionales.</li>
+  </ul>
+</div>
+
+{{< prompt-card title="Entregable Sumativo: Matriz Integradora del Auditor Soberano" subtitle="Complete las cuatro secciones a continuación y envíelas mediante la herramienta de tareas de su LMS." badge="PROYECTO SUMATIVO" badgeClass="USO INSTITUCIONAL" >}}
+### ENTREGA DEL PROYECTO SUMATIVO INTEGRADOR
+
+### SECCIÓN 1: PERFIL DEL FLUJO DE TRABAJO Y LÍNEA BASE ADMINISTRATIVA
+- Nombre del Participante: [Nombre y Apellidos]
+- Unidad Académica / Departamento: [Departamento / Programa]
+- Tarea Administrativa Seleccionada: [p. ej., Matriz Curricular / Extracción de Actas / Política de Sílabo / Rúbrica Formativa]
+- Tiempo Manual Estimado Anteriormente: [p. ej., 90 minutos]
+- Tiempo Invertido con el Flujo de IA Auditado: [p. ej., 18 minutos]
+- Tiempo Neto Reclamado: [p. ej., 72 minutos]
+###
+
+### SECCIÓN 2: LÍMITES EMPRESARIALES Y PROTOCOLO FERPA
+- Portal de Autenticación Verificado: [Sí / Confirmado vía google.arizona.edu]
+- Protección de Retención de Datos: [Confirmada Cero Retención de Datos en Espacio Institucional]
+- Auditoría FERPA / Desidentificación: [Todos los nombres de estudiantes/personal reemplazados por roles funcionales]
+###
+
+### SECCIÓN 3: ARTEFACTO EJECUTADO BAJO MISSION LOOP
+
+### 3A. PATRÓN (CONTEXTO SIN PROCESAR / ENTRADA BRUTA)
+[Pegue aquí su contexto sin procesar, notas de reunión o borrador de entrega estudiantil entre delimitadores]
+###
+
+### 3B. REGLA (INSTRUCCIÓN DELIMITADA Y VINCULACIÓN A LA SSOT)
+[Pegue la instrucción completa ejecutada con delimitadores de tres almohadillas y vinculación explícita a la SSoT]
+- Fuente Única de la Verdad Citada: [p. ej., PAGA 2018 (2.ª Ed.) / Manual del Senado Sec. 4.2 / Regla ADA Título II]
+###
+
+### 3C. RESOLVER (RESULTADO AUDITADO Y CALIBRACIÓN HUMANA)
+[Pegue el resultado final generado tras sus revisiones editoriales]
+
+Documente dos correcciones específicas efectuadas durante su auditoría:
+1. Corrección 1 (Calibración Editorial / Fáctica): [Explique qué corrigió y por qué]
+2. Corrección 2 (Calibración Normativa / Institucional): [Explique qué corrigió y por qué]
+###
+
+### SECCIÓN 4: AUTOEVALUACIÓN Y DECLARACIÓN DE VERIFICACIÓN
+- Puntaje de Aislamiento por Delimitadores (0-5 pts): [ ]
+- Puntaje de Fidelidad a la SSoT (0-5 pts): [ ]
+- Puntaje de Alineación con Mission Loop (0-5 pts): [ ]
+- Puntaje de Auditoría Humana (0-5 pts): [ ]
+- Puntaje Total Autoevaluado (sobre 20 pts): [ ]
+
+"Certifico que este flujo de trabajo se ejecutó dentro de una sesión empresarial protegida, no contiene identificadores FERPA sin desidentificar y refleja una verificación rigurosa con intervención humana."
+Firma / Fecha: [Nombre / AAAA-MM-DD]
+###
+{{< /prompt-card >}}
+
+
 ### Herramientas Empresariales y Enrutamiento Institucional Oficial
 
 - **Portal Principal de Inteligencia Artificial Responsable:** Acceda a herramientas autorizadas, solicite cuentas empresariales y consulte las directrices oficiales a través del [Portal de Inicio de IA Responsable de la Universidad de Arizona](https://responsibleai.arizona.edu/tools-support/start-here).

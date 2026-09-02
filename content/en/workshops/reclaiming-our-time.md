@@ -320,6 +320,74 @@ Document two specific interventions where you edited, corrected, or calibrated t
 
 ## Module 5: Synthesis, Resources & Institutional Support
 
+
+### Summative Capstone: Sovereign Auditor Workflow & Reflection Matrix
+
+To conclude the workshop and demonstrate mastery under an instructor-monitored or credentialed model, complete this summative matrix. Copy the structured template below, fill in your verified artifacts, and submit it through your LMS assignment portal or course shell.
+
+<div style="background-color: #FFFFFF; border: 1px solid #CBD5E1; border-left: 5px solid #003366; padding: 18px 20px; margin: 20px 0; border-radius: 4px;">
+  <h4 style="margin-top: 0; color: #002147; font-size: 1.05rem; font-weight: 700;">Summative Evaluation Standards (Canvas / QM 3.1 & 3.3)</h4>
+  <p style="font-size: 0.9rem; line-height: 1.6; color: #0C2340; margin-bottom: 8px;">
+    Your capstone submission must demonstrate concrete human-in-the-loop oversight across four evaluative dimensions:
+  </p>
+  <ul style="font-size: 0.86rem; line-height: 1.6; color: #334155; margin-bottom: 0; padding-left: 20px;">
+    <li><strong>Boundary Integrity:</strong> Verification that authentication was conducted via <code>google.arizona.edu</code> with Zero Data Retention.</li>
+    <li><strong>Structural Isolation:</strong> Strict usage of <code>###</code> delimiters isolating raw text from instructions.</li>
+    <li><strong>SSoT Verification:</strong> Direct grounding in an authoritative governing standard without synthetic hallucination.</li>
+    <li><strong>Iterative Calibration:</strong> At least two documented interventions where you calibrated the output to meet institutional criteria.</li>
+  </ul>
+</div>
+
+{{< prompt-card title="Summative Deliverable: Sovereign Auditor Capstone Matrix" subtitle="Complete all four sections below and submit into your LMS assignment tool or course shell." badge="SUMMATIVE CAPSTONE" badgeClass="INSTITUTIONAL READY" >}}
+### SOVEREIGN AUDITOR CAPSTONE SUBMISSION
+
+### SECTION 1: WORKFLOW PROFILE & ADMINISTRATIVE BASELINE
+- Participant Name: [Insert Name]
+- Academic Unit / Department: [Insert Department / Program]
+- Target Administrative Task: [e.g., Curriculum Alignment Matrix / Committee Minutes Action Extraction / Syllabus Policy / Formative Rubric Scaffolding]
+- Estimated Manual Time Spent Previously: [e.g., 90 minutes]
+- Estimated Time Spent Under Audited AI Workflow: [e.g., 18 minutes]
+- Net Administrative Time Reclaimed: [e.g., 72 minutes]
+###
+
+### SECTION 2: ENTERPRISE BOUNDARY & FERPA PRE-FLIGHT
+- Authentication Gateway Verified: [Yes / Confirmed via google.arizona.edu]
+- Model Retention Protection: [Confirmed Zero Data Retention on Institutional Workspace]
+- FERPA / Anonymization Check: [All student/staff names replaced with functional roles]
+###
+
+### SECTION 3: THE MISSION LOOP EXECUTED ARTIFACT
+
+### 3A. PATTERN (RAW CONTEXT / UNSTRUCTURED INPUT)
+[Paste your unstructured raw context, meeting notes, or draft student submission here within delimiters]
+###
+
+### 3B. RULE (DELIMITED PROMPT & SSOT BINDING)
+[Paste the complete prompt you executed, demonstrating triple-hash delimiters and explicit SSoT binding]
+- Single Source of Truth Cited: [e.g., PAGA 2018 (2nd Ed) / Faculty Handbook Sec 4.2 / ADA Title II Checklist]
+###
+
+### 3C. SOLVE (AUDITED OUTPUT & HUMAN-IN-THE-LOOP CALIBRATION)
+[Paste the synthesized output after your human edits]
+
+Document two specific corrections made during your audit:
+1. Correction 1 (Editorial / Factual Calibration): [Explain what you corrected and why]
+2. Correction 2 (Policy / Institutional Standard Calibration): [Explain what you corrected and why]
+###
+
+### SECTION 4: EVALUATIVE SELF-SCORE & VERIFICATION
+- Delimiter Isolation Score (0-5 pts): [ ]
+- SSoT Fidelity Score (0-5 pts): [ ]
+- Mission Loop Alignment Score (0-5 pts): [ ]
+- Human-in-the-Loop Audit Score (0-5 pts): [ ]
+- Total Self-Assessed Score (out of 20 pts): [ ]
+
+"I certify that this workflow was executed inside an enterprise-shielded session, contains zero unprotected FERPA identifiers, and reflects rigorous human-in-the-loop verification."
+Signature / Timestamp: [Insert Name / Date]
+###
+{{< /prompt-card >}}
+
+
 ### Enterprise Tools & Official University Routing
 
 - **Primary Responsible AI Portal:** Access authorized tools, request enterprise accounts, and review official guidelines via the [University of Arizona Responsible Artificial Intelligence Start Here Portal](https://responsibleai.arizona.edu/tools-support/start-here).
