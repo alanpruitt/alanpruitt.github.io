@@ -89,6 +89,44 @@ Proporcione una tabla Markdown con las columnas:
 ###
 {{< /prompt-card >}}
 
+<details style="background-color: #f8fafc; border: 1px solid #cbd5e1; border-left: 4px solid #003366; border-radius: 4px; padding: 12px 16px; margin: 16px 0 24px 0;">
+  <summary style="font-weight: 700; color: #003366; cursor: pointer; font-size: 0.95rem; outline: none;">
+    Ver Ejemplo de Referencia Verificado (Matriz de Acciones de Reunión)
+  </summary>
+  <div style="margin-top: 12px; font-size: 0.88rem; color: #1e2a38; line-height: 1.5;">
+    <p style="margin-bottom: 8px;"><em>Respuesta de IA Auditada mediante el Protocolo Safety Auditor (Cero Retención / SSO Empresarial):</em></p>
+    <div style="overflow-x: auto;">
+      <table style="width: 100%; border-collapse: collapse; margin-bottom: 12px; font-size: 0.84rem;">
+        <thead>
+          <tr style="background-color: #003366; color: #ffffff; text-align: left;">
+            <th style="padding: 8px 12px; border: 1px solid #cbd5e1;">Elemento de Acción y Entregable</th>
+            <th style="padding: 8px 12px; border: 1px solid #cbd5e1;">Responsable</th>
+            <th style="padding: 8px 12px; border: 1px solid #cbd5e1;">Fecha Límite</th>
+            <th style="padding: 8px 12px; border: 1px solid #cbd5e1;">Fuente de Verificación / Estándar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background-color: #ffffff;">
+            <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Borrador de matriz de alineación OER del Módulo 02</td>
+            <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Arquitecto Curricular</td>
+            <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Viernes, 5:00 PM MST</td>
+            <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Manual Curricular del Senado Docente Sec. 4.2</td>
+          </tr>
+          <tr style="background-color: #f1f5f9;">
+            <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Auditoría de encabezados y tablas en Canvas bajo WCAG 2.1 AA</td>
+            <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Diseñador Instruccional</td>
+            <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Próximo martes, 12:00 PM</td>
+            <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Lista de Cumplimiento ADA Título II (Regla DOJ 2024)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="background-color: #ffffff; border-left: 3px solid #10b981; padding: 8px 12px; font-size: 0.82rem;">
+      <strong>Verificación Safety Auditor:</strong> Sin datos de identificación personal (PII); entregables limitados a declaraciones explícitas en la transcripción; no se alucinaron plazos no definidos.
+    </div>
+  </div>
+</details>
+
 ---
 
 ## Módulo 3: Micro-Laboratorio Práctico: Arquitectura de Prompts y Límites Estrictos
@@ -123,6 +161,26 @@ Genere la matriz de auditoría identificando:
 - Elemento de Acción para Corrección
 ###
 {{< /prompt-card >}}
+
+<details style="background-color: #f8fafc; border: 1px solid #cbd5e1; border-left: 4px solid #003366; border-radius: 4px; padding: 12px 16px; margin: 16px 0 24px 0;">
+  <summary style="font-weight: 700; color: #003366; cursor: pointer; font-size: 0.95rem; outline: none;">
+    Ver Ejemplo de Referencia Verificado (Retroalimentación Delimitada)
+  </summary>
+  <div style="margin-top: 12px; font-size: 0.88rem; color: #1e2a38; line-height: 1.5;">
+    <p style="margin-bottom: 8px;"><em>Evaluación Determinista Generada Estrictamente dentro de los Delimitadores ###:</em></p>
+    <div style="background-color: #ffffff; padding: 12px; border: 1px solid #cbd5e1; border-radius: 4px; margin-bottom: 12px;">
+      <h4 style="color: #003366; margin: 0 0 6px 0; font-size: 0.92rem;">Resumen de Evaluación Formativa (Puntaje de Rúbrica: Competente / 18 de 20 pts)</h4>
+      <ul style="margin: 0; padding-left: 20px;">
+        <li><strong>Criterio 1 (Alineación Mission Loop):</strong> La respuesta identifica con precisión el patrón de inactividad y aplica la regla de las pautas federales de actividad física.</li>
+        <li><strong>Criterio 2 (Fidelidad a la Fuente de la Verdad):</strong> La intervención se basa en PAGA 2018 sin inventar objetivos de terceros no verificados.</li>
+        <li><strong>Área de Mejora Constructiva:</strong> Se recomienda especificar el cálculo de MET-minutos en lugar de minutos genéricos para garantizar la exactitud clínica.</li>
+      </ul>
+    </div>
+    <div style="background-color: #ffffff; border-left: 3px solid #10b981; padding: 8px 12px; font-size: 0.82rem;">
+      <strong>Verificación Safety Auditor:</strong> El procesamiento se mantuvo estrictamente restringido dentro de los delimitadores. No se infirieron intenciones no declaradas. La calificación final permanece bajo la responsabilidad humana del docente titular.
+    </div>
+  </div>
+</details>
 
 ---
 
