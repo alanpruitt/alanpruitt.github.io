@@ -1,40 +1,40 @@
-<footer id="site-footer" class="border-t border-zinc-200 bg-[#F5F2EB] py-8 dark:border-zinc-800 dark:bg-zinc-950" aria-label="{{ if eq .Lang "es" }}Pie de página del sitio{{ else }}Site Footer{{ end }}">
+<footer id="site-footer" class="mt-16 sm:mt-24 border-t border-[#E2D9C8] bg-[#F5F2EB] py-12 sm:py-16 text-[#0C2340] dark:border-zinc-800 dark:bg-zinc-950" aria-label="{{ if eq .Lang "es" }}Pie de página del sitio{{ else }}Site Footer{{ end }}">
   <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-    <div class="flex flex-col items-center justify-center text-center gap-6">
+    <div class="flex flex-col items-center justify-center text-center gap-8">
       
       <!-- Identity, Architecture & Compliance -->
-      <div class="text-xs text-[#0C2340] dark:text-zinc-100 flex flex-col items-center">
-        <p class="font-semibold">&copy; {{ now.Year }} Alan Pruitt. {{ if eq .Lang "es" }}Todos los derechos reservados.{{ else }}All rights reserved.{{ end }}</p>
-        <p class="mt-1 text-zinc-700 dark:text-zinc-300">
+      <div class="text-xs text-[#0C2340] dark:text-zinc-100 flex flex-col items-center gap-2">
+        <p class="font-semibold text-sm tracking-wide">&copy; {{ now.Year }} Alan Pruitt. {{ if eq .Lang "es" }}Todos los derechos reservados.{{ else }}All rights reserved.{{ end }}</p>
+        <p class="text-zinc-700 dark:text-zinc-300">
           {{ if eq .Lang "es" }}
             Arquitectura Curriculum-as-Code &bull; Cumplimiento ADA Título II &bull; Conforme a WCAG 2.1/2.2 AA
           {{ else }}
             Curriculum-as-Code Architecture &bull; ADA Title II Compliant &bull; WCAG 2.1/2.2 AA Conforming
           {{ end }}
         </p>
-        
-        <!-- Centered ZTC & Creative Commons Notice -->
-        <div class="mt-4 max-w-2xl border-t border-zinc-300 pt-3 dark:border-zinc-800 text-xs text-zinc-700 dark:text-zinc-300 flex flex-col gap-1.5 items-center text-center">
-          <p>
-            <strong>{{ if eq .Lang "es" }}Cero Costo de Libros de Texto (ZTC):{{ else }}Zero Textbook Cost (ZTC):{{ end }}</strong>
-            {{ if eq .Lang "es" }}
-              Todos los materiales de este sitio son Recursos Educativos Abiertos (OER) accesibles y sin barreras arancelarias.
-            {{ else }}
-              All workshop materials are accessible Open Educational Resources (OER) provided freely with zero paywall barriers.
-            {{ end }}
-          </p>
-          <p>
-            {{ if eq .Lang "es" }}
-              Este contenido está bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es" class="font-medium underline hover:text-[#001F3F] dark:hover:text-emerald-400 focus:ring-2 focus:ring-[#003366]" target="_blank" rel="license noopener noreferrer">CC BY-NC-SA 4.0 Internacional</a>.
-            {{ else }}
-              This work is licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="font-medium underline hover:text-[#001F3F] dark:hover:text-emerald-400 focus:ring-2 focus:ring-[#003366]" target="_blank" rel="license noopener noreferrer">CC BY-NC-SA 4.0 International</a>.
-            {{ end }}
-          </p>
-        </div>
       </div>
 
-      <!-- Clean Top-Level Site Navigation -->
-      <nav class="flex flex-wrap items-center justify-center gap-2 text-xs font-bold uppercase tracking-wider" aria-label="{{ if eq .Lang "es" }}Navegación del pie de página{{ else }}Footer Navigation{{ end }}">
+      <!-- Centered ZTC & Creative Commons Notice Box -->
+      <div class="w-full max-w-2xl border-t border-b border-[#E2D9C8] py-5 px-4 dark:border-zinc-800 text-xs text-zinc-700 dark:text-zinc-300 flex flex-col gap-2.5 items-center text-center">
+        <p class="leading-relaxed">
+          <strong>{{ if eq .Lang "es" }}Cero Costo de Libros de Texto (ZTC):{{ else }}Zero Textbook Cost (ZTC):{{ end }}</strong>
+          {{ if eq .Lang "es" }}
+            Todos los materiales de este sitio son Recursos Educativos Abiertos (OER) accesibles y sin barreras arancelarias.
+          {{ else }}
+            All workshop materials are accessible Open Educational Resources (OER) provided freely with zero paywall barriers.
+          {{ end }}
+        </p>
+        <p class="leading-relaxed">
+          {{ if eq .Lang "es" }}
+            Este contenido está bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es" class="font-semibold underline hover:text-[#001F3F] dark:hover:text-emerald-400 focus:ring-2 focus:ring-[#003366]" target="_blank" rel="license noopener noreferrer">CC BY-NC-SA 4.0 Internacional</a>.
+          {{ else }}
+            This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="font-semibold underline hover:text-[#001F3F] dark:hover:text-emerald-400 focus:ring-2 focus:ring-[#003366]" target="_blank" rel="license noopener noreferrer">CC BY-NC-SA 4.0 International</a>.
+          {{ end }}
+        </p>
+      </div>
+
+      <!-- Clean Navigation Touch Targets -->
+      <nav class="flex flex-wrap items-center justify-center gap-4 text-xs font-bold uppercase tracking-wider pt-2" aria-label="{{ if eq .Lang "es" }}Navegación del pie de página{{ else }}Footer Navigation{{ end }}">
         <a href="{{ if eq .Lang "es" }}/es/{{ else }}/{{ end }}" class="inline-flex items-center justify-center rounded-md px-3 py-1.5 text-[#0C2340] transition-colors hover:text-[#003366] dark:text-zinc-100 dark:hover:text-white" style="min-height: 44px; min-width: 44px; text-decoration: none;">
           {{ if eq .Lang "es" }}Inicio{{ else }}Home{{ end }}
         </a>
