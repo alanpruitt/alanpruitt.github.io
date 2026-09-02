@@ -61,6 +61,70 @@ Before running prompts or interacting with AI models in this workshop, verify yo
   </p>
 </div>
 
+
+<div style="background-color: #FFFFFF; border: 1px solid #CBD5E1; border-left: 5px solid #003366; padding: 18px 20px; margin: 20px 0; border-radius: 4px;">
+  <h4 style="margin-top: 0; color: #002147; font-size: 1.05rem; font-weight: 700;">Workshop Pacing & Time-on-Task Guide (Canvas 1.6 • 60-Minute Architecture)</h4>
+  <p style="font-size: 0.9rem; line-height: 1.6; color: #0C2340; margin-bottom: 12px;">
+    This asynchronous workshop is engineered for focused completion in <strong>60 total minutes</strong>. The sequential pacing guide below outlines the curriculum flow, time allocation, and expected checkpoints:
+  </p>
+
+  <div style="overflow-x: auto; margin-bottom: 8px;">
+    <table style="width: 100%; border-collapse: collapse; font-size: 0.86rem; background-color: #ffffff; border: 1px solid #cbd5e1;">
+      <thead>
+        <tr style="background-color: #003366; color: #ffffff; text-align: left;">
+          <th scope="col" style="padding: 8px 12px; border: 1px solid #cbd5e1; width: 22%;">Module & Topic</th>
+          <th scope="col" style="padding: 8px 12px; border: 1px solid #cbd5e1; width: 44%;">Core Focus & Institutional Standard</th>
+          <th scope="col" style="padding: 8px 12px; border: 1px solid #cbd5e1; width: 14%; text-align: center;">Pacing</th>
+          <th scope="col" style="padding: 8px 12px; border: 1px solid #cbd5e1; width: 20%;">Deliverable Checkpoint</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1; font-weight: 700; color: #002147;">Module 0: Pre-Flight</td>
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Enterprise SSO authentication (NetID), FERPA audit & clipboard check.</td>
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1; text-align: center; font-weight: 600;">5 min</td>
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Clipboard Diagnostic</td>
+        </tr>
+        <tr style="background-color: #f8fafc;">
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1; font-weight: 700; color: #002147;">Module 1: Governance</td>
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Policy tiers (Prohibited, Bounded, Augmented) & Single Source of Truth (SSoT).</td>
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1; text-align: center; font-weight: 600;">10 min</td>
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Tiered Policy Statement</td>
+        </tr>
+        <tr>
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1; font-weight: 700; color: #002147;">Module 2: Admin Relief</td>
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Transform raw committee meeting transcripts into structured action matrices.</td>
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1; text-align: center; font-weight: 600;">10 min</td>
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Action Matrix Output</td>
+        </tr>
+        <tr style="background-color: #f8fafc;">
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1; font-weight: 700; color: #002147;">Module 3: Prompt Craft</td>
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Delimiter isolation protocol (<code>###</code>) & formative rubric calibration.</td>
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1; text-align: center; font-weight: 600;">15 min</td>
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Formative Rubric Prompt</td>
+        </tr>
+        <tr>
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1; font-weight: 700; color: #002147;">Module 4: Safety Audit</td>
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Human-in-the-loop verification, hallucination checks & benchmark evaluation.</td>
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1; text-align: center; font-weight: 600;">10 min</td>
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Safety Audit Review</td>
+        </tr>
+        <tr style="background-color: #f8fafc;">
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1; font-weight: 700; color: #002147;">Module 5: Capstone</td>
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Complete the Sovereign Auditor Matrix and submit for institutional credit.</td>
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1; text-align: center; font-weight: 600;">10 min</td>
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">20-pt Capstone Log</td>
+        </tr>
+        <tr style="font-weight: 700; background-color: #e2e8f0; color: #002147;">
+          <td colspan="2" style="padding: 8px 12px; border: 1px solid #cbd5e1; text-align: right;">Total Estimated Time-on-Task:</td>
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1; text-align: center;">60 min</td>
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Course Completion</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
 <h4 style="margin-top: 0; color: #002147; font-size: 1.05rem; font-weight: 700;">Step 1: Institutional Enterprise Authentication Gateway</h4>
   <p style="font-size: 0.9rem; line-height: 1.6; color: #0C2340; margin-bottom: 12px;">
     To guarantee your session operates under the institutional data privacy umbrella (where corporate models are prohibited from training on your text or file uploads), you must authenticate through your institutional NetID gateway:

@@ -51,7 +51,71 @@ El marco del **Bucle de Misión (Patrón / Regla / Resolver)** estructura la int
 Antes de ejecutar instrucciones o interactuar con modelos de IA en este taller, verifique su estado de autenticación institucional para garantizar límites estrictos de privacidad, cumplimiento de FERPA y cero retención de datos.
 
 <div style="background-color: #FFFFFF; border: 1px solid #CBD5E1; border-left: 5px solid #003366; padding: 18px 20px; margin: 20px 0; border-radius: 4px;">
-  <h4 style="margin-top: 0; color: #002147; font-size: 1.05rem; font-weight: 700;">Paso 1: Portal de Autenticación Institucional Empresarial</h4>
+  
+<div style="background-color: #FFFFFF; border: 1px solid #CBD5E1; border-left: 5px solid #003366; padding: 18px 20px; margin: 20px 0; border-radius: 4px;">
+  <h4 style="margin-top: 0; color: #002147; font-size: 1.05rem; font-weight: 700;">Guía de Ritmo y Tiempo de Dedicación (Canvas 1.6 • Arquitectura de 60 Minutos)</h4>
+  <p style="font-size: 0.9rem; line-height: 1.6; color: #0C2340; margin-bottom: 12px;">
+    Este taller autodirigido está diseñado para completarse de manera enfocada en <strong>60 minutos en total</strong>. La siguiente guía secuencial detalla el flujo curricular, la asignación de tiempo y los puntos de entrega esperados:
+  </p>
+
+  <div style="overflow-x: auto; margin-bottom: 8px;">
+    <table style="width: 100%; border-collapse: collapse; font-size: 0.86rem; background-color: #ffffff; border: 1px solid #cbd5e1;">
+      <thead>
+        <tr style="background-color: #003366; color: #ffffff; text-align: left;">
+          <th scope="col" style="padding: 8px 12px; border: 1px solid #cbd5e1; width: 22%;">Módulo y Tema</th>
+          <th scope="col" style="padding: 8px 12px; border: 1px solid #cbd5e1; width: 44%;">Enfoque Central y Estándar Institucional</th>
+          <th scope="col" style="padding: 8px 12px; border: 1px solid #cbd5e1; width: 14%; text-align: center;">Tiempo</th>
+          <th scope="col" style="padding: 8px 12px; border: 1px solid #cbd5e1; width: 20%;">Punto de Entrega</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1; font-weight: 700; color: #002147;">Módulo 0: Acceso</td>
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Autenticación empresarial SSO (NetID), auditoría FERPA y verificación de portapapeles.</td>
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1; text-align: center; font-weight: 600;">5 min</td>
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Prueba de Diagnóstico</td>
+        </tr>
+        <tr style="background-color: #f8fafc;">
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1; font-weight: 700; color: #002147;">Módulo 1: Gobernanza</td>
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Niveles de política de sílabo (Prohibido, Limitado, Aumentado) y Fuente Única de Verdad (SSoT).</td>
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1; text-align: center; font-weight: 600;">10 min</td>
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Declaración de Sílabo</td>
+        </tr>
+        <tr>
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1; font-weight: 700; color: #002147;">Módulo 2: Alivio Admin</td>
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Transformación de minutas de comité en matrices estructuradas de planes de acción.</td>
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1; text-align: center; font-weight: 600;">10 min</td>
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Matriz de Acción</td>
+        </tr>
+        <tr style="background-color: #f8fafc;">
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1; font-weight: 700; color: #002147;">Módulo 3: Arquitectura</td>
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Protocolo de aislamiento con delimitadores (<code>###</code>) y calibración formativa de rúbricas.</td>
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1; text-align: center; font-weight: 600;">15 min</td>
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Rúbrica Delimitada</td>
+        </tr>
+        <tr>
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1; font-weight: 700; color: #002147;">Módulo 4: Auditoría</td>
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Verificación humana activa, mitigación de alucinaciones y evaluación de ejemplares.</td>
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1; text-align: center; font-weight: 600;">10 min</td>
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Auditoría de Salida</td>
+        </tr>
+        <tr style="background-color: #f8fafc;">
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1; font-weight: 700; color: #002147;">Módulo 5: Capstone</td>
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Completar la Matriz del Auditor Soberano y enviarla para acreditación institucional.</td>
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1; text-align: center; font-weight: 600;">10 min</td>
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Registro de 20 pts</td>
+        </tr>
+        <tr style="font-weight: 700; background-color: #e2e8f0; color: #002147;">
+          <td colspan="2" style="padding: 8px 12px; border: 1px solid #cbd5e1; text-align: right;">Tiempo Total Estimado de Dedicación:</td>
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1; text-align: center;">60 min</td>
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Acreditación Final</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<h4 style="margin-top: 0; color: #002147; font-size: 1.05rem; font-weight: 700;">Paso 1: Portal de Autenticación Institucional Empresarial</h4>
   <p style="font-size: 0.9rem; line-height: 1.6; color: #0C2340; margin-bottom: 12px;">
     Para garantizar que su sesión opere bajo la protección de privacidad institucional (donde los modelos corporativos tienen prohibido entrenarse con sus textos o archivos adjuntos), debe autenticarse a través de su portal institucional con NetID:
   </p>
