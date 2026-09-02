@@ -1,214 +1,538 @@
 ---
 title: "Recuperando Nuestro Tiempo: Flujos Prácticos y Seguros de GenAI para Docentes y Personal"
-date: 2026-08-20
-description: "Taller práctico institucional diseñado para aligerar la carga de trabajo administrativo mediante inteligencia artificial generativa con blindaje de privacidad y rigor curricular."
-type: "workshops"
-layout: "single"
-lang: "es"
+description: "Interactive professional development workshop covering GenAI governance, FERPA compliance, administrative relief workflows, and SSoT syllabus auditing."
+date: 2026-08-15
+type: "workshop"
+translationKey: "reclaiming-our-time"
+deck_url: "/decks/reclaiming-our-time/"
+video_url: "/videos/reclaiming-our-time.mp4"
+institutional_alignment_url: "/governance/institutional-alignment/"
+contact: "Alan Pruitt"
+aliases:
+  - /workshops/reclaiming-our-time/
 ---
 
 ## Recuperando Nuestro Tiempo: Flujos Prácticos y Seguros de GenAI para Docentes y Personal
 
+This interactive workshop equips faculty and staff to harness generative artificial intelligence safely, with strict FERPA compliance and direct alignment to institutional Single Source of Truth (SSoT) standards.
+
+---
+
+## Workshop Video Overview
+
+{{< workshop-video src="/videos/reclaiming-our-time.mp4" vtt="/videos/reclaiming-our-time.vtt" >}}
+
+---
+
+## Executive Presentation Deck
+
+Use arrow keys or onscreen controls to navigate slides. Press **L** to toggle the institutional Navy Blue laser pointer.
+
+{{< workshop-carousel >}}
+
+---
+
+## Executive Visual Summary & Workflow Map
+
+The Sovereign Auditor model ensures that no generative AI output is accepted without verification against predefined institutional standards.
+
+### Core Operating Framework: The Mission Loop
+
+The **Mission Loop (Pattern / Rule / Solve)** framework structures the interaction:
+
+1. **Pattern:** Identify the structure and patterns of the case or administrative task.
+2. **Rule:** Apply authorized federal, institutional, or clinical standards.
+3. **Solve:** Generate a verified solution with zero data retention.
+
+### Módulo 0: Acceso y Privacidad & Privacy Pre-Flight Audit
+
+Before running prompts or interacting with AI models in this workshop, verify your enterprise authentication status to ensure strict privacy boundaries, FERPA compliance, and zero data retention.
+
 <div style="background-color: #FFFFFF; border: 1px solid #CBD5E1; border-left: 5px solid #003366; padding: 18px 20px; margin: 20px 0; border-radius: 4px;">
-  <h3 style="margin-top: 0; color: #002147; font-size: 1.05rem; font-weight: 700;">Información del Facilitador e Instructor (Canvas 1.5)</h3>
+
+<div style="background-color: #FFFFFF; border: 1px solid #CBD5E1; border-left: 5px solid #003366; padding: 18px 20px; margin: 20px 0; border-radius: 4px;">
+
+<div style="background-color: #FFFFFF; border: 1px solid #CBD5E1; border-left: 5px solid #003366; padding: 18px 20px; margin: 20px 0; border-radius: 4px;">
+  <h4 style="margin-top: 0; color: #002147; font-size: 1.05rem; font-weight: 700;">Información del Facilitador e Instructor (Canvas 1.5)</h4>
   <p style="font-size: 0.9rem; line-height: 1.6; color: #0C2340; margin-bottom: 10px;">
-    <strong>Facilitador Principal:</strong> Alan Pruitt &bull; Arquitecto Curricular y Estratega de IA Generativa
+    <strong>Facilitador Principal:</strong> Alan Pruitt &bull; Curriculum Architect &amp; Generative AI Strategist
   </p>
   <ul style="font-size: 0.86rem; line-height: 1.6; color: #334155; margin-bottom: 12px; padding-left: 20px;">
-    <li><strong>Afiliación Institucional:</strong> Arizona Western College y Universidad de Arizona Campus Yuma</li>
-    <li><strong>Contacto y Red Profesional:</strong> <a href="https://www.linkedin.com/in/alanpruitt/" target="_blank" rel="noopener noreferrer" style="color: #003366; font-weight: 600; text-decoration: underline;">Alan Pruitt en LinkedIn &rarr;</a></li>
-    <li><strong>Horarios de Atención y Respuesta:</strong> Dudas por mensajería de Canvas o correo institucional se responden en un lapso de 24 a 48 horas hábiles.</li>
+    <li><strong>Institutional Alignment:</strong> Arizona Western College &amp; University of Arizona Yuma Campus</li>
+    <li><strong>Professional Inquiries &amp; Network:</strong> <a href="https://www.linkedin.com/in/alanpruitt/" target="_blank" rel="noopener noreferrer" style="color: #003366; font-weight: 600; text-decoration: underline;">Alan Pruitt en LinkedIn &rarr;</a></li>
+    <li><strong>Response Time &amp; Office Hours:</strong> Inquiries submitted via LMS course messaging or institutional email are answered within 24–48 business hours.</li>
   </ul>
 </div>
 
-<div style="background-color: #FFFFFF; border: 1px solid #CBD5E1; border-left: 5px solid #065F46; padding: 18px 20px; margin: 20px 0; border-radius: 4px;">
-  <h3 style="margin-top: 0; color: #065F46; font-size: 1.05rem; font-weight: 700;">Declaración de Accesibilidad y Adaptaciones Razonables (Canvas 7.2)</h3>
-  <p style="font-size: 0.9rem; line-height: 1.6; color: #0C2340; margin-bottom: 0;">
-    Este taller cumple con los estándares WCAG 2.1 y 2.2 Nivel AA y las normas federales de accesibilidad ADA Título II. Si usted requiere alguna adaptación técnica o pedagógica para participar plenamente, comuníquese con la oficina de Servicios de Accesibilidad de su institución o directamente con el facilitador para coordinar apoyos inmediatos.
+<h4 style="margin-top: 0; color: #002147; font-size: 1.05rem; font-weight: 700;">Accessibility & Accommodation Statement (ADA Title II / Canvas 7.2)</h4>
+  <p style="font-size: 0.9rem; line-height: 1.6; color: #0C2340; margin-bottom: 10px;">
+    We are committed to creating an accessible, inclusive, and barrier-free learning experience for all faculty, staff, and community members. This course adheres strictly to <strong>WCAG 2.1 and 2.2 AA</strong> standards, featuring semantic structure, high-contrast typography (14.2:1 contrast ratio), screen-reader-optimized tables, and zero-cost OER materials.
+  </p>
+  <p style="font-size: 0.88rem; line-height: 1.6; color: #334155; margin-bottom: 0;">
+    If you experience barriers accessing any interactive micro-lab, prompt block, document, or media asset—or if you require alternate formats, assistive technology support, or disability-related accommodations—please contact the course instructor or your institutional Accessibility Resource Center / Disability Services office. Accommodations are coordinated collaboratively, confidentially, and proactively.
   </p>
 </div>
 
-### Módulo 0: Puerta de Acceso Institucional y Filtro de Privacidad
+<div style="background-color: #FFFFFF; border: 1px solid #CBD5E1; border-left: 5px solid #003366; padding: 18px 20px; margin: 20px 0; border-radius: 4px;">
+  <h4 style="margin-top: 0; color: #002147; font-size: 1.05rem; font-weight: 700;">Workshop Pacing & Time-on-Task Guide (Canvas 1.6 • 60-Minute Architecture)</h4>
+  <p style="font-size: 0.9rem; line-height: 1.6; color: #0C2340; margin-bottom: 12px;">
+    This asynchronous workshop is engineered for focused completion in <strong>60 total minutes</strong>. The sequential pacing guide below outlines the curriculum flow, time allocation, and expected checkpoints:
+  </p>
 
-Antes de arrancar con las prácticas, es forzoso asegurar el entorno de trabajo para no comprometer datos institucionales ni de estudiantes.
+  <div style="overflow-x: auto; margin-bottom: 8px;">
+    <table style="width: 100%; border-collapse: collapse; font-size: 0.86rem; background-color: #ffffff; border: 1px solid #cbd5e1;">
+      <thead>
+        <tr style="background-color: #003366; color: #ffffff; text-align: left;">
+          <th scope="col" style="padding: 8px 12px; border: 1px solid #cbd5e1; width: 22%;">Module & Topic</th>
+          <th scope="col" style="padding: 8px 12px; border: 1px solid #cbd5e1; width: 44%;">Core Focus & Institutional Standard</th>
+          <th scope="col" style="padding: 8px 12px; border: 1px solid #cbd5e1; width: 14%; text-align: center;">Pacing</th>
+          <th scope="col" style="padding: 8px 12px; border: 1px solid #cbd5e1; width: 20%;">Deliverable Checkpoint</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1; font-weight: 700; color: #002147;">Module 0: Pre-Flight</td>
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Enterprise SSO authentication (NetID), FERPA audit & clipboard check.</td>
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1; text-align: center; font-weight: 600;">5 min</td>
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Clipboard Diagnostic</td>
+        </tr>
+        <tr style="background-color: #f8fafc;">
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1; font-weight: 700; color: #002147;">Module 1: Governance</td>
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Policy tiers (Prohibited, Bounded, Augmented) & Single Source of Truth (SSoT).</td>
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1; text-align: center; font-weight: 600;">10 min</td>
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Tiered Policy Statement</td>
+        </tr>
+        <tr>
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1; font-weight: 700; color: #002147;">Module 2: Admin Relief</td>
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Transform raw committee meeting transcripts into structured action matrices.</td>
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1; text-align: center; font-weight: 600;">10 min</td>
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Action Matrix Output</td>
+        </tr>
+        <tr style="background-color: #f8fafc;">
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1; font-weight: 700; color: #002147;">Module 3: Prompt Craft</td>
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Delimiter isolation protocol (<code>###</code>) & formative rubric calibration.</td>
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1; text-align: center; font-weight: 600;">15 min</td>
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Formative Rubric Prompt</td>
+        </tr>
+        <tr>
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1; font-weight: 700; color: #002147;">Module 4: Safety Audit</td>
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Human-in-the-loop verification, hallucination checks & benchmark evaluation.</td>
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1; text-align: center; font-weight: 600;">10 min</td>
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Safety Audit Review</td>
+        </tr>
+        <tr style="background-color: #f8fafc;">
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1; font-weight: 700; color: #002147;">Module 5: Capstone</td>
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Complete the Sovereign Auditor Matrix and submit for institutional credit.</td>
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1; text-align: center; font-weight: 600;">10 min</td>
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">20-pt Capstone Log</td>
+        </tr>
+        <tr style="font-weight: 700; background-color: #e2e8f0; color: #002147;">
+          <td colspan="2" style="padding: 8px 12px; border: 1px solid #cbd5e1; text-align: right;">Total Estimated Time-on-Task:</td>
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1; text-align: center;">60 min</td>
+          <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Course Completion</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
 
-<div style="overflow-x: auto; margin: 16px 0;">
-  <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem; background-color: #FFFFFF;">
+{{< prompt-card title="Module 0 Community Exchange: Reclaiming Our Time Check-In (Canvas 2.5)" subtitle="Introduce yourself and establish rapport with your cohort in the course discussion board." badge="COMMUNITY & RAPPORT" badgeClass="USO INSTITUCIONAL" >}}
+### MODULE 0 DISCUSSION PROMPT: COHORT RAPPORT & WORKFLOW GOALS
+Welcome to the workshop! To foster collaboration across disciplines and academic units, introduce yourself in the course discussion area using the 3-point check-in below:
+
+1. Professional Role & Department:
+   - State your name, department/academic unit, and primary instructional or administrative responsibilities.
+
+2. Target Administrative Time-Drain:
+   - Identify one specific, recurring task that consumes excessive time (e.g., extracting action items from committee transcripts, drafting tiered syllabus statements, building formative rubric feedback, or standardizing course alignment).
+
+3. Sovereign Autonomy Goal:
+   - What is one area where you want to maintain strict human-in-the-loop control while leveraging enterprise-shielded AI for draft acceleration?
+
+Peer Engagement:
+Review the posts from your colleagues and reply to at least one peer from outside your immediate department. Share an insight or common challenge regarding administrative workloads in their discipline.
+###
+{{< /prompt-card >}}
+
+<h4 style="margin-top: 0; color: #002147; font-size: 1.05rem; font-weight: 700;">Step 1: Institutional Enterprise Authentication Gateway</h4>
+  <p style="font-size: 0.9rem; line-height: 1.6; color: #0C2340; margin-bottom: 12px;">
+    To guarantee your session operates under the institutional data privacy umbrella (where corporate models are prohibited from training on your text or file uploads), you must authenticate through your institutional NetID gateway:
+  </p>
+  <p style="margin-bottom: 14px;">
+    <a href="https://google.arizona.edu" target="_blank" rel="noopener noreferrer" style="display: inline-block; background-color: #003366; color: #FFFFFF !important; font-weight: 600; font-size: 0.88rem; padding: 10px 18px; border-radius: 4px; text-decoration: none;">
+      Launch Institutional Workspace: google.arizona.edu &rarr;
+    </a>
+  </p>
+  <ul style="font-size: 0.86rem; line-height: 1.6; color: #334155; margin-bottom: 0; padding-left: 20px;">
+    <li><strong>Account Confirmation:</strong> Verify your profile avatar displays your institutional email address (e.g., <code>@arizona.edu</code> or institutional domain), not a personal Gmail account.</li>
+    <li><strong>Data Retention Shield:</strong> Institutional Google Gemini enterprise licenses enforce Zero Data Retention on prompt inputs and custom context.</li>
+  </ul>
+</div>
+
+<div style="background-color: #FFFFFF; border: 1px solid #CBD5E1; border-left: 5px solid #003366; padding: 18px 20px; margin: 20px 0; border-radius: 4px;">
+  <h4 style="margin-top: 0; color: #002147; font-size: 1.05rem; font-weight: 700;">Step 2: FERPA & Sensitive Data Pre-Flight Audit</h4>
+  <p style="font-size: 0.9rem; line-height: 1.6; color: #0C2340; margin-bottom: 10px;">
+    Even within an enterprise environment, adhere to the principle of least privilege. Verify each checkpoint before submitting data:
+  </p>
+  <ul style="font-size: 0.86rem; line-height: 1.6; color: #334155; margin-bottom: 0; padding-left: 20px;">
+    <li> [ ] <strong>No Direct Student Identifiers:</strong> Remove student names, NetIDs, student ID numbers, and IP addresses from all case samples.</li>
+    <li> [ ] <strong>No Protected Health or Financial Records:</strong> Exclude HIPAA-covered records, banking details, and unredacted clinical histories.</li>
+    <li> [ ] <strong>Synthesize or Anonymize Context:</strong> Replace specific committee dispute names with generic roles (e.g., "Curriculum Chair", "Faculty Member A").</li>
+  </ul>
+</div>
+
+{{< prompt-card title="Step 3: Delimiter Clipboard Verification (Sandbox Check)" subtitle="Copy and run this diagnostic check in your authenticated AI window to verify whitespace and markdown rendering." badge="TECHNICAL CHECK" badgeClass="USO INSTITUCIONAL" >}}
+### SYSTEM INSTRUCTION
+You are an institutional workflow auditor. Confirm you can parse triple-hash delimited parameters without formatting errors.
+###
+
+### DIAGNOSTIC INPUT
+Workspace Gateway: google.arizona.edu
+Authentication Mode: Institutional NetID Enterprise SSO
+Data Retention Policy: Zero Model Training on User Prompts
+###
+
+### REQUIRED OUTPUT FORMAT
+Respond with a 2-line confirmation:
+1. "AUTHENTICATION GATEWAY VERIFIED: [Repeat Gateway URL]"
+2. "DELIMITER PARSING: ACTIVE AND READY"
+###
+{{< /prompt-card >}}
+
+---
+
+## Module 1: Policy Foundations & Enterprise Authentication
+
+- **ADA Title II & Federal Mandates:** Aligning all digital course assets with the DOJ's Title II digital accessibility rule (enforcing strict WCAG 2.1 Level AA conformance across public higher education).
+- **Institutional Posture:** Adoption of legally sound, academically rigorous GenAI practices to achieve meaningful administrative relief.
+- **Enterprise Authentication Boundary:** Avoid consumer, unauthenticated AI interfaces where inputs may be ingested to train public models. Always log in through institutional SSO credentials:
+  - **Google Gemini Enterprise**
+  - **Microsoft Copilot Enterprise**
+- **Data Privacy Assurance:** Enterprise licensing guarantees that uploaded files, meeting minutes, and draft syllabi are isolated from public model training datasets.
+
+---
+
+## Module 2: Live Administrative Relief Demonstrations
+
+Practical, high-yield workflows demonstrated live to reduce administrative burden:
+
+1. **Syllabus Compliance Auditing:** Ingesting draft syllabi alongside departmental rubrics, institutional policies, and ADA Title II accessibility requirements.
+2. **Committee Synthesis & Action Items:** Processing raw meeting transcripts into executive summaries and structured accountability matrices.
+3. **Rubric Scaling & Formative Feedback:** Streamlining evaluation rubrics and generating targeted feedback criteria while maintaining complete instructor oversight.
+
+### Prompt Template: Meeting Action Matrix
+
+{{< prompt-card title="Administrative Relief / Matriz de Acciones de Reunión" subtitle="Focus: Extracting deterministic action items, task owners, and deliverables from raw committee transcripts." badge="MEETING MATRIX PROMPT" badgeClass="ADMIN RELIEF" >}}
+###
+[ROLE & CONTEXT]:
+Act as an Executive Administrative Assistant. Transform the unstructured committee or faculty meeting notes into an actionable, prioritized execution matrix.
+
+[EXTRACTION RULES]:
+1. Isolate explicit deliverables, appointed task leads, and milestone deadlines.
+2. Group items by operational domain (Curriculum, Compliance, Operations, Technology).
+3. Identify unassigned decisions requiring leadership follow-up.
+4. Do not invent details; flag ambiguity explicitly.
+
+[RAW MEETING NOTES]:
+###
+Meeting Notes - Curriculum & Tech Committee (Rough Audio Transcript / Chat Extract):
+- Chair opened at 2:03 PM. We covered module updates for the upcoming term.
+- Curriculum Architect noted: "I need to get the draft Module 02 OER syllabus alignment matrix finished and submitted by this Friday at 5:00 PM MST." Reference needed is Faculty Senate Curricular Handbook Section 4.2.
+- Discussion on accessibility mandates. Instructional Designer flagged: "I will take care of performing the WCAG 2.1 AA table scope audit on all LMS course shell imports. I can have that wrapped up by next Tuesday around noon." Ground truth standard to follow is the DOJ Title II 2024 Rule checklist.
+- Committee adjourned 2:48 PM.
+###
+
+[OUTPUT FORMAT]:
+Provide a Markdown table with columns:
+| Item # | Action Item / Deliverable | Responsible Lead | Target Completion | Priority (High/Med/Low) |
+###
+{{< /prompt-card >}}
+
+<details open style="background-color: #f8fafc; border: 1px solid #cbd5e1; border-left: 4px solid #003366; border-radius: 4px; padding: 12px 16px; margin: 16px 0 24px 0;">
+  <summary style="font-weight: 700; color: #003366; cursor: pointer; font-size: 0.95rem; outline: none;">
+    View Verified Benchmark Exemplar (Meeting Action Matrix Output)
+  </summary>
+
+<div style="margin-top: 12px; font-size: 0.88rem; color: #1e2a38; line-height: 1.5;">
+<p style="margin-bottom: 8px;"><em>AI Response Audited via Safety Auditor Protocol (Zero Retention / SSO Enterprise):</em></p>
+<div style="overflow-x: auto;">
+<table style="width: 100%; border-collapse: collapse; margin-bottom: 12px; font-size: 0.84rem;">
+<thead>
+<tr style="background-color: #003366; color: #ffffff; text-align: left;">
+<th style="padding: 8px 12px; border: 1px solid #cbd5e1;">Action Item & Deliverable</th>
+<th style="padding: 8px 12px; border: 1px solid #cbd5e1;">Responsible Owner</th>
+<th style="padding: 8px 12px; border: 1px solid #cbd5e1;">Target Deadline</th>
+<th style="padding: 8px 12px; border: 1px solid #cbd5e1;">Verification Source / Ground Truth</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background-color: #ffffff;">
+<td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Draft Module 02 OER syllabus alignment matrix</td>
+<td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Curriculum Architect</td>
+<td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Friday, 5:00 PM MST</td>
+<td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Faculty Senate Curricular Handbook Sec. 4.2</td>
+</tr>
+<tr style="background-color: #f1f5f9;">
+<td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Perform WCAG 2.1 AA table scope audit on LMS course shell imports</td>
+<td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Instructional Designer</td>
+<td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Next Tuesday, 12:00 PM</td>
+<td style="padding: 8px 12px; border: 1px solid #cbd5e1;">ADA Title II Compliance Checklist (DOJ 2024 Rule)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div style="background-color: #ffffff; border-left: 3px solid #10b981; padding: 8px 12px; font-size: 0.82rem;">
+<strong>Safety Auditor Verification:</strong> No student PII processed; deliverables are scoped strictly to documented statements in the transcript; ambiguous timeline items were flagged rather than hallucinated.
+</div>
+</div>
+
+</details>
+
+---
+
+## Module 3: Hands-on Micro-Lab: Prompt Architecture & Boundary Enforcement
+
+Isolating task instructions from institutional data inputs is essential for deterministic, hallucination-free outputs.
+
+- **The Delimiter Protocol:** Wrapping all variable institutional data in explicit triple-hash (`###`) fences establishes a hard prompt boundary.
+- **Zero Data Retention Instructions:** Enforcing explicit negative constraints ensures the model operates strictly as an ephemeral parser rather than a knowledge repository.
+
+### Prompt Architecture: Delimiter Isolation Protocol
+
+{{< prompt-card title="Delimited Prompt Architecture / Protocolo de Aislamiento" subtitle="Focus: Zero-retention data isolation and strict boundary enforcement using triple-hash (###) delimiters." badge="PROMPT TEMPLATE" badgeClass="DELIMITER PROTOCOL" >}}
+###
+[ROLE & CONTEXT]:
+Act as an Expert Sovereign Auditor and Curriculum Specialist. Your task is to evaluate and align institutional course content against authoritative Single Source of Truth (SSoT) standards without retaining user data.
+
+[OPERATIONAL RULES]:
+1. Operate strictly within the provided delimited boundaries.
+2. Cross-reference the input text exclusively against the provided policy standards.
+3. Highlight compliance gaps, missing accessibility vectors, and alignment discrepancies.
+4. Output findings in a structured, actionable Markdown table.
+
+[INPUT DATA / TEXT TO AUDIT]:
+###
+[INSERT UNSTRUCTURED SYLLABUS, RUBRIC, OR MEETING TRANSCRIPT HERE]
+###
+
+[AUDIT DIRECTIVE]:
+Generate the audit matrix identifying:
+- Finding / Gap
+- Authoritative Rule Reference
+- Remediation Action Item
+###
+{{< /prompt-card >}}
+
+<details open style="background-color: #f8fafc; border: 1px solid #cbd5e1; border-left: 4px solid #003366; border-radius: 4px; padding: 12px 16px; margin: 16px 0 24px 0;">
+  <summary style="font-weight: 700; color: #003366; cursor: pointer; font-size: 0.95rem; outline: none;">
+    View Verified Benchmark Exemplar (Delimiter-Parsed Formative Feedback)
+  </summary>
+
+<div style="margin-top: 12px; font-size: 0.88rem; color: #1e2a38; line-height: 1.5;">
+<p style="margin-bottom: 8px;"><em>Deterministic Evaluation Generated Strictly Within the ### Delimiter Boundaries:</em></p>
+<div style="background-color: #ffffff; padding: 12px; border: 1px solid #cbd5e1; border-radius: 4px; margin-bottom: 12px;">
+<h4 style="color: #003366; margin: 0 0 6px 0; font-size: 0.92rem;">Formative Evaluation Summary (Rubric Score: Proficient / 18 of 20 pts)</h4>
+<ul style="margin: 0; padding-left: 20px;">
+<li><strong>Criterion 1 (Mission Loop Alignment):</strong> The response accurately identifies the inactivity pattern and applies the federal physical activity guidelines rule.</li>
+<li><strong>Criterion 2 (Source-of-Truth Fidelity):</strong> The intervention references PAGA 2018 standards directly without hallucinating unverified third-party targets.</li>
+<li><strong>Constructive Revision Area:</strong> Recommend expanding the intensity metrics from generic minutes to explicit MET-minute calculations to ensure complete clinical precision.</li>
+</ul>
+</div>
+<div style="background-color: #ffffff; border-left: 3px solid #10b981; padding: 8px 12px; font-size: 0.82rem;">
+<strong>Safety Auditor Verification:</strong> Input text remained strictly bounded within delimiters. Model refused to infer psychological intent or unstated personal traits. Final grade submission remains the sole responsibility of the instructor of record.
+</div>
+</div>
+
+</details>
+
+---
+
+## Module 4: FERPA Compliance & Secure Routing
+
+Safeguarding student records and directory information in accordance with federal law:
+
+- **Zero PII Transmission:** Never paste student names, ID numbers, grades, or sensitive demographic data into any AI prompt interface.
+- **De-identification Standards:** Anonymize and redact all student case work or peer discussions prior to analysis.
+- **Human-in-the-Loop Imperative:** Automated outputs serve as initial drafts; final grading, curriculum design, and administrative sign-offs remain strictly human responsibilities.
+
+### Participant Formative Audit Submission Rubric
+
+For instructor-monitored completion or institutional credit, participants must submit an **Audited Workflow Log** via the course portal or LMS assignment tool. Submissions are evaluated using the 20-point rubric below:
+
+<div style="overflow-x: auto; margin: 20px 0;">
+  <table style="width: 100%; border-collapse: collapse; font-size: 0.88rem; background-color: #ffffff; border: 1px solid #cbd5e1;">
     <thead>
-      <tr style="background-color: #002147; color: #FFFFFF;">
-        <th scope="col" style="padding: 8px 12px; text-align: left; border: 1px solid #002147;">Módulo / Etapa</th>
-        <th scope="col" style="padding: 8px 12px; text-align: left; border: 1px solid #002147;">Tiempo Estimado</th>
-        <th scope="col" style="padding: 8px 12px; text-align: left; border: 1px solid #002147;">Acción Clave / Entregable</th>
+      <tr style="background-color: #003366; color: #ffffff; text-align: left;">
+        <th scope="col" style="padding: 10px 14px; border: 1px solid #cbd5e1; width: 22%;">Evaluation Criterion</th>
+        <th scope="col" style="padding: 10px 14px; border: 1px solid #cbd5e1; width: 26%;">Exemplary (5 pts)</th>
+        <th scope="col" style="padding: 10px 14px; border: 1px solid #cbd5e1; width: 26%;">Competent (4 pts)</th>
+        <th scope="col" style="padding: 10px 14px; border: 1px solid #cbd5e1; width: 26%;">Developing / Incomplete (0–3 pts)</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td style="padding: 8px 12px; border: 1px solid #CBD5E1;"><strong>Módulo 0: Acceso y Privacidad</strong></td>
-        <td style="padding: 8px 12px; border: 1px solid #CBD5E1;">5 minutos</td>
-        <td style="padding: 8px 12px; border: 1px solid #CBD5E1;">Acceso con cuenta institucional y chequeo de portapapeles</td>
+        <td style="padding: 10px 14px; border: 1px solid #cbd5e1; font-weight: 700; color: #002147;">1. Delimiter Isolation (###)</td>
+        <td style="padding: 10px 14px; border: 1px solid #cbd5e1;">Raw inputs and context are strictly isolated within <code>###</code> fences; prompt injection risks fully neutralized.</td>
+        <td style="padding: 10px 14px; border: 1px solid #cbd5e1;">Delimiters present with minor structural flaws; system instructions remain separated.</td>
+        <td style="padding: 10px 14px; border: 1px solid #cbd5e1;">Delimiters omitted or raw text bleeds into system commands.</td>
       </tr>
-      <tr style="background-color: #F8F6F0;">
-        <td style="padding: 8px 12px; border: 1px solid #CBD5E1;"><strong>Módulo 1: Políticas de Asignatura</strong></td>
-        <td style="padding: 8px 12px; border: 1px solid #CBD5E1;">10 minutos</td>
-        <td style="padding: 8px 12px; border: 1px solid #CBD5E1;">Elección y redacción de política de IA (Niveles 1, 2 o 3)</td>
-      </tr>
-      <tr>
-        <td style="padding: 8px 12px; border: 1px solid #CBD5E1;"><strong>Módulo 2: Alivio de Chamba Administrativa</strong></td>
-        <td style="padding: 8px 12px; border: 1px solid #CBD5E1;">15 minutos</td>
-        <td style="padding: 8px 12px; border: 1px solid #CBD5E1;">Extracción de minutas de comité y tabla de acuerdos</td>
-      </tr>
-      <tr style="background-color: #F8F6F0;">
-        <td style="padding: 8px 12px; border: 1px solid #CBD5E1;"><strong>Módulo 3: Arquitectura con Delimitadores</strong></td>
-        <td style="padding: 8px 12px; border: 1px solid #CBD5E1;">15 minutos</td>
-        <td style="padding: 8px 12px; border: 1px solid #CBD5E1;">Transformación de notas dispersas en rúbrica con cercas <code>###</code></td>
+      <tr style="background-color: #f8fafc;">
+        <td style="padding: 10px 14px; border: 1px solid #cbd5e1; font-weight: 700; color: #002147;">2. SSoT Fidelity</td>
+        <td style="padding: 10px 14px; border: 1px solid #cbd5e1;">Explicitly binds model to verified standards (e.g., PAGA 2018, ADA Title II, departmental handbook) with zero hallucination latitude.</td>
+        <td style="padding: 10px 14px; border: 1px solid #cbd5e1;">Governing standard identified, but minor unverified assumptions permitted.</td>
+        <td style="padding: 10px 14px; border: 1px solid #cbd5e1;">No verifiable source of truth specified; reliance on generic model knowledge.</td>
       </tr>
       <tr>
-        <td style="padding: 8px 12px; border: 1px solid #CBD5E1;"><strong>Módulo 4: Auditoría de Seguridad y Alucinaciones</strong></td>
-        <td style="padding: 8px 12px; border: 1px solid #CBD5E1;">10 minutos</td>
-        <td style="padding: 8px 12px; border: 1px solid #CBD5E1;">Detección de errores y verificación de la Fuente Única de Verdad (SSoT)</td>
+        <td style="padding: 10px 14px; border: 1px solid #cbd5e1; font-weight: 700; color: #002147;">3. Mission Loop Alignment</td>
+        <td style="padding: 10px 14px; border: 1px solid #cbd5e1;">Executes clear Pattern recognition, applies governing Rules, and delivers an auditable Solve artifact.</td>
+        <td style="padding: 10px 14px; border: 1px solid #cbd5e1;">Follows sequence, but linkage between governing rule and final solution is vague.</td>
+        <td style="padding: 10px 14px; border: 1px solid #cbd5e1;">Omits structural problem framing; defaults to open-ended query.</td>
       </tr>
-      <tr style="background-color: #F8F6F0;">
-        <td style="padding: 8px 12px; border: 1px solid #CBD5E1;"><strong>Módulo 5: Entrega Integradora y Evaluación</strong></td>
-        <td style="padding: 8px 12px; border: 1px solid #CBD5E1;">5 minutos</td>
-        <td style="padding: 8px 12px; border: 1px solid #CBD5E1;">Envío de Matriz Soberana en Canvas y retroalimentación</td>
+      <tr style="background-color: #f8fafc;">
+        <td style="padding: 10px 14px; border: 1px solid #cbd5e1; font-weight: 700; color: #002147;">4. Human-in-the-Loop Audit</td>
+        <td style="padding: 10px 14px; border: 1px solid #cbd5e1;">Documents at least two concrete, verified editorial or clinical corrections made to synthetic output prior to adoption.</td>
+        <td style="padding: 10px 14px; border: 1px solid #cbd5e1;">Documents one specific correction or calibration made to synthetic output.</td>
+        <td style="padding: 10px 14px; border: 1px solid #cbd5e1;">Accepts synthetic output uncritically without documented human audit.</td>
       </tr>
     </tbody>
   </table>
 </div>
 
-<div style="background-color: #FFFFFF; border: 1px solid #CBD5E1; padding: 16px 18px; margin: 18px 0; border-radius: 4px;">
-  <h4 style="margin-top: 0; color: #002147; font-size: 0.98rem; font-weight: 700;">Convivencia y Trabajo en Equipo (Canvas 2.5)</h4>
-  <p style="font-size: 0.88rem; line-height: 1.6; color: #0C2340; margin-bottom: 8px;">
-    ¡Qué tal, bienvenido al taller! Para ir conociéndonos entre las distintas áreas y facultades, déjese caer con su presentación en el foro respondiendo a estos tres puntos sencillos:
+{{< prompt-card title="Formative Deliverable: Participant Workflow Audit Log" subtitle="Copy and complete this structured template for submission in your course shell or LMS assignment portal." badge="DELIVERABLE TEMPLATE" badgeClass="USO INSTITUCIONAL" >}}
+### PARTICIPANT FORMATIVE AUDIT SUBMISSION LOG
+Participant Name: [Insert Name / Department]
+Date of Execution: [YYYY-MM-DD]
+Target Workflow: [e.g., Committee Minutes Extraction / Rubric Calibration / Syllabus Policy]
+###
+
+### 1. DELIMITED INPUT PROMPT APPLIED
+[Paste the complete prompt you executed, demonstrating strict ### delimiter fencing]
+###
+
+### 2. SINGLE SOURCE OF TRUTH (SSOT) REFERENCE
+- Governing Standard Utilized: [e.g., Faculty Senate Handbook Sec 4.2 / PAGA 2018 / ADA Title II 2024 Rule]
+- Verification Checkpoint: [Describe how you confirmed the model adhered to this standard]
+###
+
+### 3. HUMAN-IN-THE-LOOP AUDIT & REVISIONS
+Document two specific interventions where you edited, corrected, or calibrated the AI output:
+1. Editorial / Factual Correction: [Detail specific error or omission caught and corrected]
+2. Pedagogical / Policy Calibration: [Detail adjustment made to ensure institutional alignment]
+###
+{{< /prompt-card >}}
+
+---
+
+## Module 5: Synthesis, Resources & Institutional Support
+
+### Summative Capstone: Sovereign Auditor Workflow & Reflection Matrix
+
+To conclude the workshop and demonstrate mastery under an instructor-monitored or credentialed model, complete this summative matrix. Copy the structured template below, fill in your verified artifacts, and submit it through your LMS assignment portal or course shell.
+
+<div style="background-color: #FFFFFF; border: 1px solid #CBD5E1; border-left: 5px solid #003366; padding: 18px 20px; margin: 20px 0; border-radius: 4px;">
+  <h4 style="margin-top: 0; color: #002147; font-size: 1.05rem; font-weight: 700;">Summative Evaluation Standards (Canvas / QM 3.1 & 3.3)</h4>
+  <p style="font-size: 0.9rem; line-height: 1.6; color: #0C2340; margin-bottom: 8px;">
+    Your capstone submission must demonstrate concrete human-in-the-loop oversight across four evaluative dimensions:
   </p>
-  <ol style="font-size: 0.86rem; line-height: 1.6; color: #334155; margin-bottom: 0; padding-left: 20px;">
-    <li><strong>La Chamba que más Tiempo le Quita:</strong> ¿Qué trámite, reporte o papeleo administrativo le roba más horas de su semana docente?</li>
-    <li><strong>Criterio Humano Irremplazable:</strong> ¿En qué tarea dice usted: "Aquí sí meto mano yo a fuerza", usando la IA nomás para sacar el borrador sin perder el criterio propio?</li>
-    <li><strong>Platíquelo con los Colegas:</strong> Revise las publicaciones de sus compañeros y comparta un consejo o platique qué batallas tienen en común en su área.</li>
-  </ol>
+  <ul style="font-size: 0.86rem; line-height: 1.6; color: #334155; margin-bottom: 0; padding-left: 20px;">
+    <li><strong>Boundary Integrity:</strong> Verification that authentication was conducted via <code>google.arizona.edu</code> with Zero Data Retention.</li>
+    <li><strong>Structural Isolation:</strong> Strict usage of <code>###</code> delimiters isolating raw text from instructions.</li>
+    <li><strong>SSoT Verification:</strong> Direct grounding in an authoritative governing standard without synthetic hallucination.</li>
+    <li><strong>Iterative Calibration:</strong> At least two documented interventions where you calibrated the output to meet institutional criteria.</li>
+  </ul>
 </div>
 
-### Módulo 1: Políticas de Inteligencia Artificial para el Programa de Curso
+{{< prompt-card title="Summative Deliverable: Sovereign Auditor Capstone Matrix" subtitle="Complete all four sections below and submit into your LMS assignment tool or course shell." badge="SUMMATIVE CAPSTONE" badgeClass="USO INSTITUCIONAL" >}}
+### SOVEREIGN AUDITOR CAPSTONE SUBMISSION
 
-Defina una postura institucional transparente para sus estudiantes seleccionando uno de los tres niveles de gobernanza ética:
+### SECTION 1: WORKFLOW PROFILE & ADMINISTRATIVE BASELINE
+- Participant Name: [Insert Name]
+- Academic Unit / Department: [Insert Department / Program]
+- Target Administrative Task: [e.g., Curriculum Alignment Matrix / Committee Minutes Action Extraction / Syllabus Policy / Formative Rubric Scaffolding]
+- Estimated Manual Time Spent Previously: [e.g., 90 minutes]
+- Estimated Time Spent Under Audited AI Workflow: [e.g., 18 minutes]
+- Net Administrative Time Reclaimed: [e.g., 72 minutes]
+###
 
-* **Nivel 1: Prohibición Estricta (Uso No Autorizado):** Todo trabajo debe ser generado íntegramente por el estudiante; no se permite asistencia de IA generativa.
-* **Nivel 2: Uso Acotado con Cita Obligatoria (Colaboración Dirigida):** Se permite la IA para lluvia de ideas, corrección de estilo o resumen, siempre y cuando se transparente su uso y se cite el modelo utilizado.
-* **Nivel 3: Integración Total y Auditoría Crítica:** La IA se emplea como herramienta central del ejercicio, evaluando la capacidad del alumno para verificar, contrastar y corregir los resultados del modelo.
+### SECTION 2: ENTERPRISE BOUNDARY & FERPA PRE-FLIGHT
+- Authentication Gateway Verified: [Yes / Confirmed via google.arizona.edu]
+- Model Retention Protection: [Confirmed Zero Data Retention on Institutional Workspace]
+- FERPA / Anonymization Check: [All student/staff names replaced with functional roles]
+###
 
-### Módulo 2: Alivio de Chamba Administrativa en Vivo
+### SECTION 3: THE MISSION LOOP EXECUTED ARTIFACT
 
-Demostración práctica de cómo sintetizar discusiones largas, correos departamentales y acuerdos de comité en tablas de compromisos inmediatas.
+### 3A. PATTERN (RAW CONTEXT / UNSTRUCTURED INPUT)
+[Paste your unstructured raw context, meeting notes, or draft student submission here within delimiters]
+###
 
-{{< prompt-card title="Módulo 2 Práctica en Vivo: Extracción de Acuerdos de Comité" subtitle="Extracción de compromisos, fechas límite y responsables a partir de transcripciones sin editar." badge="LABORATORIO ADMIN" badgeClass="USO INSTITUCIONAL" >}}
-Usted es un Asistente Ejecutivo y Coordinador Académico de nivel superior.
+### 3B. RULE (DELIMITED PROMPT & SSOT BINDING)
+[Paste the complete prompt you executed, demonstrating triple-hash delimiters and explicit SSoT binding]
+- Single Source of Truth Cited: [e.g., PAGA 2018 (2nd Ed) / Faculty Handbook Sec 4.2 / ADA Title II Checklist]
+###
 
-TAREA:
-Analice la transcripción de la junta que viene en el bloque MINUTAS_DEL_COMITE. Extraiga los acuerdos en una tabla con: Acción Concreta, Responsable y Fecha Límite.
+### 3C. SOLVE (AUDITED OUTPUT & HUMAN-IN-THE-LOOP CALIBRATION)
+[Paste the synthesized output after your human edits]
 
-REGLAS:
-1. No invente acuerdos ni personas; apóyese exclusivamente en el texto entre delimitadores.
-2. Si un compromiso no tiene fecha concreta, márquelo como "Pendiente de definir".
-3. Redacte en tono formal, conciso y orientado a la operación del departamento.
+Document two specific corrections made during your audit:
+1. Correction 1 (Editorial / Factual Calibration): [Explain what you corrected and why]
+2. Correction 2 (Policy / Institutional Standard Calibration): [Explain what you corrected and why]
+###
 
-### MINUTAS_DEL_COMITE
-Junta de Departamento de Ciencias del Ejercicio y Bienestar. Asistentes: Dra. Rivera, Profr. Alan Pruitt, Lic. Mendoza.
-Acuerdos: Revisar el reporte de acreditación antes del 15 de octubre (Rivera). Pruitt actualizará los protocolos de laboratorio con las guías PAGA 2018 para la siguiente sesión del 22 de septiembre. Mendoza gestionará las cotizaciones de equipo de fuerza y cicloergómetros para el presupuesto del próximo ciclo antes del viernes.
+### SECTION 4: EVALUATIVE SELF-SCORE & VERIFICATION
+- Delimiter Isolation Score (0-5 pts): [ ]
+- SSoT Fidelity Score (0-5 pts): [ ]
+- Mission Loop Alignment Score (0-5 pts): [ ]
+- Human-in-the-Loop Audit Score (0-5 pts): [ ]
+- Total Self-Assessed Score (out of 20 pts): [ ]
+
+"I certify that this workflow was executed inside an enterprise-shielded session, contains zero unprotected FERPA identifiers, and reflects rigorous human-in-the-loop verification."
+Signature / Timestamp: [Insert Name / Date]
 ###
 {{< /prompt-card >}}
 
-### Módulo 3: Arquitectura con Delimitadores
+<div style="margin: 28px 0;">
+  <details style="border: 1px solid #CBD5E1; border-left: 5px solid #002147; background-color: #FFFFFF; border-radius: 4px; padding: 12px 16px;">
+    <summary style="font-weight: 700; color: #002147; cursor: pointer; font-size: 0.95rem; user-select: none;">
+      &#128221; Facilitator Desk: Instructor Monitoring & SpeedGrader Quick Guide (Click to Expand)
+    </summary>
 
-Aislamiento de directrices usando cercas de triple almohadilla (`###`) para impedir inyecciones accidentales y garantizar que el modelo no alucine requisitos ajenos.
+<div style="margin-top: 14px; border-top: 1px solid #E2D9C8; padding-top: 12px; font-size: 0.88rem; line-height: 1.55; color: #0C2340;">
+<p>
+<strong>For Faculty Evaluators & Course Instructors:</strong> This self-directed workshop utilizes an objective 90-second rapid audit protocol to evaluate capstone submissions in Canvas SpeedGrader, D2L Brightspace, or Blackboard.
+</p>
 
-{{< prompt-card title="Módulo 3 Práctica en Vivo: Arquitectura con Delimitadores" subtitle="Transformación de notas dispersas en una rúbrica lista para Canvas SpeedGrader." badge="LABORATORIO DE SINTAXIS" badgeClass="USO INSTITUCIONAL" >}}
-Usted es un Diseñador Instruccional experto y Arquitecto Curricular de Canvas LMS, especializado en kinesiología y educación para la salud comunitaria.
+<div style="display: flex; gap: 12px; flex-wrap: wrap; margin: 12px 0;">
+<a href="/docs/reclaiming-our-time-evaluator-guide.pdf" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; background-color: #003366; color: #FFFFFF !important; padding: 8px 14px; border-radius: 4px; font-weight: 600; text-decoration: none; font-size: 0.82rem;">
+          Descargar Protocolo de Evaluación en PDF &rarr;
+</a>
+<a href="/docs/canvas-v3-audit-report.html" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; border: 1px solid #002147; color: #002147 !important; padding: 8px 14px; border-radius: 4px; font-weight: 600; text-decoration: none; font-size: 0.82rem; background-color: #FFFFFF;">
+          Ver Reporte de Auditoría Canvas v3.0 y QM (7.ª Ed) &rarr;
+</a>
+<a href="/docs/reclaiming-our-time-evaluator-guide.html" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; border: 1px solid #003366; color: #003366 !important; padding: 8px 14px; border-radius: 4px; font-weight: 600; text-decoration: none; font-size: 0.82rem; background-color: #F8F6F0;">
+          Ver Guía en HTML &rarr;
+</a>
+</div>
 
-TAREA:
-Transforme los apuntes sin formato del bloque CRITERIOS_SIN_FORMATO en una Rúbrica Formativa de 4 criterios y 20 puntos, lista para montarse directito en el SpeedGrader de Canvas.
+<h4 style="color: #002147; font-size: 0.92rem; margin: 14px 0 6px 0;">The 90-Second SpeedGrader Rapid Triaging Workflow:</h4>
+<ol style="padding-left: 20px; margin-bottom: 12px;">
+<li><strong>Phase 1: Compliance Scan (0–30s):</strong> Verify SSO via <code>google.arizona.edu</code> (Zero Data Retention), verify <code>###</code> delimiter fences, and confirm FERPA redaction.</li>
+<li><strong>Phase 2: Curricular Audit (30–90s):</strong> Audit Single Source of Truth (SSoT) reference and verify at least 2 documented human-in-the-loop corrections before releasing points.</li>
+</ol>
 
-REGLAS:
-1. Fundamente la evaluación estrictamente en las Guías de Actividad Física para los Estadounidenses 2018 (PAGA 2.ª Ed) como Fuente Única de Verdad (SSoT).
-2. Organice la tabla en 4 niveles de desempeño: Ejemplar (5 pts), Competente (4 pts), En Desarrollo (2-3 pts), No Aceptable (0-1 pts).
-3. No invente requisitos externos ni alucine datos; tome los criterios únicamente del contenido cercado con triple almohadilla.
-4. Redacte descriptores claros, precisos y orientados a la acción para cada celda.
+<p style="margin-bottom: 4px;"><strong>LMS Course Shell Setup:</strong></p>
+<ul style="padding-left: 20px; margin-bottom: 0;">
+<li>Submission Type: <code>Online</code> &gt; Check <code>Text Entry</code> &amp; <code>File Uploads</code>.</li>
+<li>Rubric: Attach the 4-criterion, 20-point rubric with <em>"Use this rubric for assignment grading"</em> checked.</li>
+<li>Attempts: Set to <code>Unlimited</code> (or 3 attempts) to support formative mastery and resubmission.</li>
+</ul>
+</div>
 
-### CRITERIOS_SIN_FORMATO
-Curso: EXW Introducción al Movimiento Humano e Intervenciones Comunitarias
-Proyecto: Reporte de Acción Contra la Inactividad Física (20 puntos totales)
-Ocupamos 4 criterios de 5 puntos cada uno (Ejemplar 5, Competente 4, En Desarrollo 2-3, Requiere Ajuste 0-1)
-
-1. Alineación con la SSoT: Los estudiantes deben basar sus recomendaciones a fuerza en las PAGA 2018 (2.ª Ed). Citar metas aeróbicas (150 a 300 min moderados o 75 a 150 vigorosos) y 2+ días de fuerza muscular. Cero puntos si sacan modas de redes sociales sin el sustento oficial de PAGA.
-2. Planteamiento del Problema y Detección de Patrones: Identificar patrones de inactividad comunitaria usando datos locales de salud pública (datos del condado o de la frontera). Identificar barreras reales (falta de banquetas y sombras, calor extremo del desierto, jornadas sedentarias). Puntaje alto si ubican grupos concretos; bajo si es puro rollo general.
-3. Receta de la Intervención / La Solución: Proponer soluciones sostenibles de movimiento a nivel comunitario. Deben ser prácticas y de costo cero o mínimo (grupos de caminata en las mañanas, pausas activas, parques locales). Puntaje alto si es accesible y viable; bajo si piden pagar gimnasios caros.
-4. Verificación Humana y Auditoría Soberana: Autoevaluación del propio estudiante sobre su propuesta. Debe verificar cálculos numéricos (MET-minutos u horas semanales), revisar la seguridad para personas desentrenadas o con condiciones de salud, y declarar que no hay datos sin comprobar.
-###
-{{< /prompt-card >}}
-
-<details style="background-color: #FFFFFF; border: 1px solid #CBD5E1; border-radius: 4px; padding: 12px 16px; margin: 16px 0;">
-  <summary style="cursor: pointer; font-weight: 700; color: #002147;">Ver Ejemplo de Rúbrica Verificada y Calibrada (20 Puntos)</summary>
-  <div style="overflow-x: auto; margin-top: 12px;">
-    <table style="width: 100%; border-collapse: collapse; font-size: 0.82rem;">
-      <thead>
-        <tr style="background-color: #002147; color: #FFFFFF;">
-          <th scope="col" style="padding: 6px 10px; text-align: left; border: 1px solid #002147;">Criterio</th>
-          <th scope="col" style="padding: 6px 10px; text-align: left; border: 1px solid #002147;">Ejemplar (5 pts)</th>
-          <th scope="col" style="padding: 6px 10px; text-align: left; border: 1px solid #002147;">Competente (4 pts)</th>
-          <th scope="col" style="padding: 6px 10px; text-align: left; border: 1px solid #002147;">En Desarrollo (2–3 pts)</th>
-          <th scope="col" style="padding: 6px 10px; text-align: left; border: 1px solid #002147;">No Aceptable (0–1 pts)</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td style="padding: 6px 10px; border: 1px solid #CBD5E1;"><strong>1. Alineación SSoT (PAGA 2018)</strong></td>
-          <td style="padding: 6px 10px; border: 1px solid #CBD5E1;">Cita textualmente las metas aeróbicas y de fuerza según PAGA 2018 sin omisiones.</td>
-          <td style="padding: 6px 10px; border: 1px solid #CBD5E1;">Menciona las metas federales pero omite la frecuencia del trabajo muscular.</td>
-          <td style="padding: 6px 10px; border: 1px solid #CBD5E1;">Cita de forma vaga sin números exactos de volumen semanal.</td>
-          <td style="padding: 6px 10px; border: 1px solid #CBD5E1;">No utiliza PAGA o propone modas comerciales sin evidencia.</td>
-        </tr>
-        <tr style="background-color: #F8F6F0;">
-          <td style="padding: 6px 10px; border: 1px solid #CBD5E1;"><strong>2. Detección de Patrones</strong></td>
-          <td style="padding: 6px 10px; border: 1px solid #CBD5E1;">Identifica con precisión las barreras locales (calor, infraestructura, horarios).</td>
-          <td style="padding: 6px 10px; border: 1px solid #CBD5E1;">Identifica el problema pero los datos locales son limitados.</td>
-          <td style="padding: 6px 10px; border: 1px solid #CBD5E1;">Planteamiento muy general sin aterrizar en la realidad comunitaria.</td>
-          <td style="padding: 6px 10px; border: 1px solid #CBD5E1;">No identifica barreras ni patrones de sedentarismo.</td>
-        </tr>
-        <tr>
-          <td style="padding: 6px 10px; border: 1px solid #CBD5E1;"><strong>3. Receta de Intervención</strong></td>
-          <td style="padding: 6px 10px; border: 1px solid #CBD5E1;">Propuesta sostenible, accesible, sin costo y aplicable de inmediato.</td>
-          <td style="padding: 6px 10px; border: 1px solid #CBD5E1;">Propuesta buena pero requiere pequeños trámites o costos indirectos.</td>
-          <td style="padding: 6px 10px; border: 1px solid #CBD5E1;">Intervención poco práctica o difícil de mantener por la comunidad.</td>
-          <td style="padding: 6px 10px; border: 1px solid #CBD5E1;">Propuesta inviable o dependiente de membresías privadas costosas.</td>
-        </tr>
-        <tr style="background-color: #F8F6F0;">
-          <td style="padding: 6px 10px; border: 1px solid #CBD5E1;"><strong>4. Auditoría Soberana</strong></td>
-          <td style="padding: 6px 10px; border: 1px solid #CBD5E1;">Documenta al menos 2 correcciones humanas con verificación matemática y clínica.</td>
-          <td style="padding: 6px 10px; border: 1px solid #CBD5E1;">Documenta 1 corrección humana sustentada en la fuente oficial.</td>
-          <td style="padding: 6px 10px; border: 1px solid #CBD5E1;">Revisión superficial sin contraste numérico contra la SSoT.</td>
-          <td style="padding: 6px 10px; border: 1px solid #CBD5E1;">Acepta el texto generado sin revisión ni auditoría humana.</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
 </details>
+</div>
 
-### Módulo 4: Auditoría de Seguridad y Alucinaciones
+### Enterprise Tools & Official University Routing
 
-Ningún borrador producido por IA se publica o implementa sin pasar por la revisión de un humano responsable. En este módulo, los participantes aprenden a detectar datos inventados o imprecisiones clínicas contrastando el texto contra la Fuente Única de Verdad (SSoT).
-
-### Módulo 5: Entrega Integradora y Evaluación
-
-Para acreditar el taller, complete y entregue la **Matriz del Auditor Soberano** en el buzón correspondiente de Canvas:
-
-```markdown
-### MATRIZ_DEL_AUDITOR_SOBERANO
-1. Flujo de Trabajo Seleccionado: [Minutas de Comité / Rúbrica / Política de IA]
-2. Estimación de Tiempo Ahorrado: [Ej. 45 minutos]
-3. Entrada Delimitada Utilizada:
-###
-[Pegue aquí su texto fuente delimitado con triple almohadilla]
-###
-4. Auditoría y Criterio Humano (Mínimo 2 correcciones comprobadas):
-   - Corrección 1: [Dato o formato corregido según la Fuente Única de Verdad]
-   - Corrección 2: [Ajuste de tono, precisión matemática o política institucional]
-5. Declaración de Responsabilidad: Confirmo que este producto fue auditado y validado con mi propio criterio profesional.
+- **Primary Responsible AI Portal:** Access authorized tools, request enterprise accounts, and review official guidelines via the [University of Arizona Responsible Artificial Intelligence Start Here Portal](https://responsibleai.arizona.edu/tools-support/start-here).
+- **Institutional GenAI Support & Intake:** Submit departmental inquiries, review privacy and security evaluations, and access sanctioned generative AI resources directly through the Responsible AI support desk.
+- **Data Governance & FERPA Inquiries:** Consult University Information Security and privacy policies through the Responsible AI portal before uploading or processing institutional materials.
