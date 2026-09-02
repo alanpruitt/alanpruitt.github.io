@@ -50,7 +50,18 @@ The **Mission Loop (Pattern / Rule / Solve)** framework structures the interacti
 Before running prompts or interacting with AI models in this workshop, verify your enterprise authentication status to ensure strict privacy boundaries, FERPA compliance, and zero data retention.
 
 <div style="background-color: #FFFFFF; border: 1px solid #CBD5E1; border-left: 5px solid #003366; padding: 18px 20px; margin: 20px 0; border-radius: 4px;">
-  <h4 style="margin-top: 0; color: #002147; font-size: 1.05rem; font-weight: 700;">Step 1: Institutional Enterprise Authentication Gateway</h4>
+  
+<div style="background-color: #FFFFFF; border: 1px solid #CBD5E1; border-left: 5px solid #003366; padding: 18px 20px; margin: 20px 0; border-radius: 4px;">
+  <h4 style="margin-top: 0; color: #002147; font-size: 1.05rem; font-weight: 700;">Accessibility & Accommodation Statement (ADA Title II / Canvas 7.2)</h4>
+  <p style="font-size: 0.9rem; line-height: 1.6; color: #0C2340; margin-bottom: 10px;">
+    We are committed to creating an accessible, inclusive, and barrier-free learning experience for all faculty, staff, and community members. This course adheres strictly to <strong>WCAG 2.1 and 2.2 AA</strong> standards, featuring semantic structure, high-contrast typography (14.2:1 contrast ratio), screen-reader-optimized tables, and zero-cost OER materials.
+  </p>
+  <p style="font-size: 0.88rem; line-height: 1.6; color: #334155; margin-bottom: 0;">
+    If you experience barriers accessing any interactive micro-lab, prompt block, document, or media asset—or if you require alternate formats, assistive technology support, or disability-related accommodations—please contact the course instructor or your institutional Accessibility Resource Center / Disability Services office. Accommodations are coordinated collaboratively, confidentially, and proactively.
+  </p>
+</div>
+
+<h4 style="margin-top: 0; color: #002147; font-size: 1.05rem; font-weight: 700;">Step 1: Institutional Enterprise Authentication Gateway</h4>
   <p style="font-size: 0.9rem; line-height: 1.6; color: #0C2340; margin-bottom: 12px;">
     To guarantee your session operates under the institutional data privacy umbrella (where corporate models are prohibited from training on your text or file uploads), you must authenticate through your institutional NetID gateway:
   </p>
