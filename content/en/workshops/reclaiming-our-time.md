@@ -50,51 +50,51 @@ Rapid alignment of course syllabi against departmental rubrics and academic inte
 ### Prompt Architecture: Delimiter Isolation Protocol
 
 {{< prompt-card title="Delimited Prompt Architecture / Protocolo de Aislamiento" subtitle="Focus: Zero-retention data isolation and strict boundary enforcement using triple-hash (###) delimiters." badge="PROMPT TEMPLATE" badgeClass="DELIMITER PROTOCOL" >}}
-    ###
-    [ROLE & CONTEXT]:
-    Act as an Expert Sovereign Auditor and Curriculum Specialist. Your task is to evaluate and align institutional course content against authoritative Single Source of Truth (SSoT) standards without retaining user data.
+###
+[ROLE & CONTEXT]:
+Act as an Expert Sovereign Auditor and Curriculum Specialist. Your task is to evaluate and align institutional course content against authoritative Single Source of Truth (SSoT) standards without retaining user data.
 
-    [OPERATIONAL RULES]:
-    1. Operate strictly within the provided delimited boundaries.
-    2. Cross-reference the input text exclusively against the provided policy standards.
-    3. Highlight compliance gaps, missing accessibility vectors, and alignment discrepancies.
-    4. Output findings in a structured, actionable Markdown table.
+[OPERATIONAL RULES]:
+1. Operate strictly within the provided delimited boundaries.
+2. Cross-reference the input text exclusively against the provided policy standards.
+3. Highlight compliance gaps, missing accessibility vectors, and alignment discrepancies.
+4. Output findings in a structured, actionable Markdown table.
 
-    [INPUT DATA / TEXT TO AUDIT]:
-    ###
-    [INSERT UNSTRUCTURED SYLLABUS, RUBRIC, OR MEETING TRANSCRIPT HERE]
-    ###
+[INPUT DATA / TEXT TO AUDIT]:
+###
+[INSERT UNSTRUCTURED SYLLABUS, RUBRIC, OR MEETING TRANSCRIPT HERE]
+###
 
-    [AUDIT DIRECTIVE]:
-    Generate the audit matrix identifying:
-    - Finding / Gap
-    - Authoritative Rule Reference
-    - Remediation Action Item
-    ###
+[AUDIT DIRECTIVE]:
+Generate the audit matrix identifying:
+- Finding / Gap
+- Authoritative Rule Reference
+- Remediation Action Item
+###
 {{< /prompt-card >}}
 
 ### Prompt Template: Meeting Action Matrix
 
 {{< prompt-card title="Administrative Relief / Matriz de Acciones de Reunión" subtitle="Focus: Extracting deterministic action items, task owners, and deliverables from raw committee transcripts." badge="MEETING MATRIX PROMPT" badgeClass="ADMIN RELIEF" >}}
-    ###
-    [ROLE & CONTEXT]:
-    Act as an Executive Administrative Assistant. Transform the unstructured committee or faculty meeting notes into an actionable, prioritized execution matrix.
+###
+[ROLE & CONTEXT]:
+Act as an Executive Administrative Assistant. Transform the unstructured committee or faculty meeting notes into an actionable, prioritized execution matrix.
 
-    [EXTRACTION RULES]:
-    1. Isolate explicit deliverables, appointed task leads, and milestone deadlines.
-    2. Group items by operational domain (Curriculum, Compliance, Operations, Technology).
-    3. Identify unassigned decisions requiring leadership follow-up.
-    4. Do not invent details; flag ambiguity explicitly.
+[EXTRACTION RULES]:
+1. Isolate explicit deliverables, appointed task leads, and milestone deadlines.
+2. Group items by operational domain (Curriculum, Compliance, Operations, Technology).
+3. Identify unassigned decisions requiring leadership follow-up.
+4. Do not invent details; flag ambiguity explicitly.
 
-    [RAW MEETING NOTES]:
-    ###
-    [INSERT RAW MEETING NOTES, TRANSCRIPTS, OR COMMITTEE BULLETS HERE]
-    ###
+[RAW MEETING NOTES]:
+###
+[INSERT RAW MEETING NOTES, TRANSCRIPTS, OR COMMITTEE BULLETS HERE]
+###
 
-    [OUTPUT FORMAT]:
-    Provide a Markdown table with columns:
-    | Item # | Action Item / Deliverable | Responsible Lead | Target Completion | Priority (High/Med/Low) |
-    ###
+[OUTPUT FORMAT]:
+Provide a Markdown table with columns:
+| Item # | Action Item / Deliverable | Responsible Lead | Target Completion | Priority (High/Med/Low) |
+###
 {{< /prompt-card >}}
 
 ---
