@@ -193,6 +193,74 @@ Protección estricta de los expedientes e información confidencial estudiantil 
 - **Estándares de Anonimización:** Desidentifique y redacte cualquier trabajo estudiantil o hilo de discusión antes de procesarlo.
 - **Imperativo de Supervisión Humana:** Las salidas de la IA sirven como borradores iniciales; las calificaciones definitivas, el diseño curricular y las autorizaciones administrativas siguen siendo responsabilidad humana exclusiva.
 
+
+### Rúbrica de Evaluación Formativa para Participantes
+
+Para completar el taller con acreditación institucional o monitoreo docente, los participantes deben enviar un **Registro de Flujo de Trabajo Auditado** mediante el portal del curso o la herramienta de tareas del LMS. Los envíos se evaluarán según la siguiente rúbrica de 20 puntos:
+
+<div style="overflow-x: auto; margin: 20px 0;">
+  <table style="width: 100%; border-collapse: collapse; font-size: 0.88rem; background-color: #ffffff; border: 1px solid #cbd5e1;">
+    <thead>
+      <tr style="background-color: #003366; color: #ffffff; text-align: left;">
+        <th scope="col" style="padding: 10px 14px; border: 1px solid #cbd5e1; width: 22%;">Criterio de Evaluación</th>
+        <th scope="col" style="padding: 10px 14px; border: 1px solid #cbd5e1; width: 26%;">Ejemplar (5 pts)</th>
+        <th scope="col" style="padding: 10px 14px; border: 1px solid #cbd5e1; width: 26%;">Competente (4 pts)</th>
+        <th scope="col" style="padding: 10px 14px; border: 1px solid #cbd5e1; width: 26%;">En Desarrollo / Incompleto (0–3 pts)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="padding: 10px 14px; border: 1px solid #cbd5e1; font-weight: 700; color: #002147;">1. Aislamiento por Delimitadores (###)</td>
+        <td style="padding: 10px 14px; border: 1px solid #cbd5e1;">Los datos de entrada sin procesar están estrictamente aislados entre bloques <code>###</code>; riesgo de inyección totalmente neutralizado.</td>
+        <td style="padding: 10px 14px; border: 1px solid #cbd5e1;">Delimitadores presentes con fallas menores; se mantiene la separación de las instrucciones del sistema.</td>
+        <td style="padding: 10px 14px; border: 1px solid #cbd5e1;">Sin delimitadores o el texto sin procesar se mezcla con las instrucciones del sistema.</td>
+      </tr>
+      <tr style="background-color: #f8fafc;">
+        <td style="padding: 10px 14px; border: 1px solid #cbd5e1; font-weight: 700; color: #002147;">2. Fidelidad a la SSoT</td>
+        <td style="padding: 10px 14px; border: 1px solid #cbd5e1;">Vincula explícitamente el modelo a estándares oficiales (p. ej., PAGA 2018, Título II ADA, manual departamental) sin margen de alucinación.</td>
+        <td style="padding: 10px 14px; border: 1px solid #cbd5e1;">Identifica el estándar normativo, pero permite inferencias menores no comprobadas.</td>
+        <td style="padding: 10px 14px; border: 1px solid #cbd5e1;">Sin estándar verificable; depende exclusivamente del conocimiento general del modelo.</td>
+      </tr>
+      <tr>
+        <td style="padding: 10px 14px; border: 1px solid #cbd5e1; font-weight: 700; color: #002147;">3. Alineación con Mission Loop</td>
+        <td style="padding: 10px 14px; border: 1px solid #cbd5e1;">Identifica con precisión el Patrón, aplica Reglas normativas y produce una solución estructurada y auditable.</td>
+        <td style="padding: 10px 14px; border: 1px solid #cbd5e1;">Sigue la secuencia, pero el vínculo entre la regla normativa y la solución final es impreciso.</td>
+        <td style="padding: 10px 14px; border: 1px solid #cbd5e1;">Omite el planteamiento estructurado; genera consultas abiertas sin metodología.</td>
+      </tr>
+      <tr style="background-color: #f8fafc;">
+        <td style="padding: 10px 14px; border: 1px solid #cbd5e1; font-weight: 700; color: #002147;">4. Auditoría con Intervención Humana</td>
+        <td style="padding: 10px 14px; border: 1px solid #cbd5e1;">Documenta al menos dos correcciones editoriales o técnicas concretas realizadas al texto sintético antes de su adopción.</td>
+        <td style="padding: 10px 14px; border: 1px solid #cbd5e1;">Documenta una corrección o calibración específica realizada al resultado sintético.</td>
+        <td style="padding: 10px 14px; border: 1px solid #cbd5e1;">Acepta el texto generado automáticamente sin auditoría ni verificación documentada.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+{{< prompt-card title="Entregable Formativo: Registro de Auditoría de Flujo de Trabajo" subtitle="Copie y complete esta plantilla estructurada para enviarla en la plataforma de su curso o sistema LMS." badge="PLANTILLA ENTREGABLE" badgeClass="USO INSTITUCIONAL" >}}
+### REGISTRO DE ENTREGA DE AUDITORÍA FORMATIVA
+Nombre del Participante: [Nombre y Departamento]
+Fecha de Ejecución: [AAAA-MM-DD]
+Flujo de Trabajo: [p. ej., Extracción de Actas / Calibración de Rúbrica / Política de Sílabo]
+###
+
+### 1. INSTRUCCIÓN DELIMITADA APLICADA
+[Pegue la instrucción completa ejecutada, demostrando el aislamiento estricto con ###]
+###
+
+### 2. REFERENCIA DE FUENTE ÚNICA DE LA VERDAD (SSOT)
+- Estándar Normativo Utilizado: [p. ej., Manual del Senado Sección 4.2 / PAGA 2018 / Regla ADA Título II]
+- Punto de Verificación: [Describa cómo confirmó que el modelo se apegó a este estándar]
+###
+
+### 3. AUDITORÍA HUMANA Y REVISIONES EFECTUADAS
+Documente dos intervenciones específicas donde editó, corrigió o calibró el resultado sintético:
+1. Corrección Editorial / Fáctica: [Detalle el error u omisión identificado y corregido]
+2. Calibración Pedagógica / Normativa: [Detalle el ajuste realizado para garantizar alineación institucional]
+###
+{{< /prompt-card >}}
+
+
 ---
 
 ## Módulo 5: Síntesis, Recursos y Soporte Institucional

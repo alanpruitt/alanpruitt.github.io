@@ -196,6 +196,74 @@ Safeguarding student records and directory information in accordance with federa
 - **De-identification Standards:** Anonymize and redact all student case work or peer discussions prior to analysis.
 - **Human-in-the-Loop Imperative:** Automated outputs serve as initial drafts; final grading, curriculum design, and administrative sign-offs remain strictly human responsibilities.
 
+
+### Participant Formative Audit Submission Rubric
+
+For instructor-monitored completion or institutional credit, participants must submit an **Audited Workflow Log** via the course portal or LMS assignment tool. Submissions are evaluated using the 20-point rubric below:
+
+<div style="overflow-x: auto; margin: 20px 0;">
+  <table style="width: 100%; border-collapse: collapse; font-size: 0.88rem; background-color: #ffffff; border: 1px solid #cbd5e1;">
+    <thead>
+      <tr style="background-color: #003366; color: #ffffff; text-align: left;">
+        <th scope="col" style="padding: 10px 14px; border: 1px solid #cbd5e1; width: 22%;">Evaluation Criterion</th>
+        <th scope="col" style="padding: 10px 14px; border: 1px solid #cbd5e1; width: 26%;">Exemplary (5 pts)</th>
+        <th scope="col" style="padding: 10px 14px; border: 1px solid #cbd5e1; width: 26%;">Competent (4 pts)</th>
+        <th scope="col" style="padding: 10px 14px; border: 1px solid #cbd5e1; width: 26%;">Developing / Incomplete (0–3 pts)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="padding: 10px 14px; border: 1px solid #cbd5e1; font-weight: 700; color: #002147;">1. Delimiter Isolation (###)</td>
+        <td style="padding: 10px 14px; border: 1px solid #cbd5e1;">Raw inputs and context are strictly isolated within <code>###</code> fences; prompt injection risks fully neutralized.</td>
+        <td style="padding: 10px 14px; border: 1px solid #cbd5e1;">Delimiters present with minor structural flaws; system instructions remain separated.</td>
+        <td style="padding: 10px 14px; border: 1px solid #cbd5e1;">Delimiters omitted or raw text bleeds into system commands.</td>
+      </tr>
+      <tr style="background-color: #f8fafc;">
+        <td style="padding: 10px 14px; border: 1px solid #cbd5e1; font-weight: 700; color: #002147;">2. SSoT Fidelity</td>
+        <td style="padding: 10px 14px; border: 1px solid #cbd5e1;">Explicitly binds model to verified standards (e.g., PAGA 2018, ADA Title II, departmental handbook) with zero hallucination latitude.</td>
+        <td style="padding: 10px 14px; border: 1px solid #cbd5e1;">Governing standard identified, but minor unverified assumptions permitted.</td>
+        <td style="padding: 10px 14px; border: 1px solid #cbd5e1;">No verifiable source of truth specified; reliance on generic model knowledge.</td>
+      </tr>
+      <tr>
+        <td style="padding: 10px 14px; border: 1px solid #cbd5e1; font-weight: 700; color: #002147;">3. Mission Loop Alignment</td>
+        <td style="padding: 10px 14px; border: 1px solid #cbd5e1;">Executes clear Pattern recognition, applies governing Rules, and delivers an auditable Solve artifact.</td>
+        <td style="padding: 10px 14px; border: 1px solid #cbd5e1;">Follows sequence, but linkage between governing rule and final solution is vague.</td>
+        <td style="padding: 10px 14px; border: 1px solid #cbd5e1;">Omits structural problem framing; defaults to open-ended query.</td>
+      </tr>
+      <tr style="background-color: #f8fafc;">
+        <td style="padding: 10px 14px; border: 1px solid #cbd5e1; font-weight: 700; color: #002147;">4. Human-in-the-Loop Audit</td>
+        <td style="padding: 10px 14px; border: 1px solid #cbd5e1;">Documents at least two concrete, verified editorial or clinical corrections made to synthetic output prior to adoption.</td>
+        <td style="padding: 10px 14px; border: 1px solid #cbd5e1;">Documents one specific correction or calibration made to synthetic output.</td>
+        <td style="padding: 10px 14px; border: 1px solid #cbd5e1;">Accepts synthetic output uncritically without documented human audit.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+{{< prompt-card title="Formative Deliverable: Participant Workflow Audit Log" subtitle="Copy and complete this structured template for submission in your course shell or LMS assignment portal." badge="DELIVERABLE TEMPLATE" badgeClass="INSTITUTIONAL READY" >}}
+### PARTICIPANT FORMATIVE AUDIT SUBMISSION LOG
+Participant Name: [Insert Name / Department]
+Date of Execution: [YYYY-MM-DD]
+Target Workflow: [e.g., Committee Minutes Extraction / Rubric Calibration / Syllabus Policy]
+###
+
+### 1. DELIMITED INPUT PROMPT APPLIED
+[Paste the complete prompt you executed, demonstrating strict ### delimiter fencing]
+###
+
+### 2. SINGLE SOURCE OF TRUTH (SSOT) REFERENCE
+- Governing Standard Utilized: [e.g., Faculty Senate Handbook Sec 4.2 / PAGA 2018 / ADA Title II 2024 Rule]
+- Verification Checkpoint: [Describe how you confirmed the model adhered to this standard]
+###
+
+### 3. HUMAN-IN-THE-LOOP AUDIT & REVISIONS
+Document two specific interventions where you edited, corrected, or calibrated the AI output:
+1. Editorial / Factual Correction: [Detail specific error or omission caught and corrected]
+2. Pedagogical / Policy Calibration: [Detail adjustment made to ensure institutional alignment]
+###
+{{< /prompt-card >}}
+
+
 ---
 
 ## Module 5: Synthesis, Resources & Institutional Support
