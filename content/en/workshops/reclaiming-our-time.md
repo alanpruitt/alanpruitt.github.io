@@ -89,7 +89,7 @@ Provide a Markdown table with columns:
 ###
 {{< /prompt-card >}}
 
-<details style="background-color: #f8fafc; border: 1px solid #cbd5e1; border-left: 4px solid #003366; border-radius: 4px; padding: 12px 16px; margin: 16px 0 24px 0;">
+<details open style="background-color: #f8fafc; border: 1px solid #cbd5e1; border-left: 4px solid #003366; border-radius: 4px; padding: 12px 16px; margin: 16px 0 24px 0;">
   <summary style="font-weight: 700; color: #003366; cursor: pointer; font-size: 0.95rem; outline: none;">
     View Verified Benchmark Exemplar (Meeting Action Matrix Output)
   </summary>
@@ -162,7 +162,7 @@ Generate the audit matrix identifying:
 ###
 {{< /prompt-card >}}
 
-<details style="background-color: #f8fafc; border: 1px solid #cbd5e1; border-left: 4px solid #003366; border-radius: 4px; padding: 12px 16px; margin: 16px 0 24px 0;">
+<details open style="background-color: #f8fafc; border: 1px solid #cbd5e1; border-left: 4px solid #003366; border-radius: 4px; padding: 12px 16px; margin: 16px 0 24px 0;">
   <summary style="font-weight: 700; color: #003366; cursor: pointer; font-size: 0.95rem; outline: none;">
     View Verified Benchmark Exemplar (Delimiter-Parsed Formative Feedback)
   </summary>

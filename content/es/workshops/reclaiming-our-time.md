@@ -89,7 +89,7 @@ Proporcione una tabla Markdown con las columnas:
 ###
 {{< /prompt-card >}}
 
-<details style="background-color: #f8fafc; border: 1px solid #cbd5e1; border-left: 4px solid #003366; border-radius: 4px; padding: 12px 16px; margin: 16px 0 24px 0;">
+<details open style="background-color: #f8fafc; border: 1px solid #cbd5e1; border-left: 4px solid #003366; border-radius: 4px; padding: 12px 16px; margin: 16px 0 24px 0;">
   <summary style="font-weight: 700; color: #003366; cursor: pointer; font-size: 0.95rem; outline: none;">
     Ver Ejemplo de Referencia Verificado (Matriz de Acciones de Reunión)
   </summary>
@@ -162,7 +162,7 @@ Genere la matriz de auditoría identificando:
 ###
 {{< /prompt-card >}}
 
-<details style="background-color: #f8fafc; border: 1px solid #cbd5e1; border-left: 4px solid #003366; border-radius: 4px; padding: 12px 16px; margin: 16px 0 24px 0;">
+<details open style="background-color: #f8fafc; border: 1px solid #cbd5e1; border-left: 4px solid #003366; border-radius: 4px; padding: 12px 16px; margin: 16px 0 24px 0;">
   <summary style="font-weight: 700; color: #003366; cursor: pointer; font-size: 0.95rem; outline: none;">
     Ver Ejemplo de Referencia Verificado (Retroalimentación Delimitada)
   </summary>
