@@ -17,7 +17,7 @@ tags:
 
 ## The Illusion of the Feed
 
-In contemporary web-based education, courses often incorporate dynamic components such as real-time social media widgets, live discussion feeds, and external resource embeds. These widgets create the "illusion of the feed"—the impression that course content is current, interactive, and continuously updated. 
+In contemporary web-based education, courses often incorporate dynamic components such as real-time social media widgets, live discussion feeds, and external resource embeds. These widgets create the "illusion of the feed"—the impression that course content is current, interactive, and continuously updated.
 
 However, this reliance on live-state web resources introduces a major system vulnerability: **Link Rot**. Research shows that a substantial percentage of external hyperlinks in web pages rot within a few years due to URL restructurings, server decommissions, and platform access updates. In an LMS environment, link rot degrades instructional quality, interrupts student learning flows, and compromises accessibility standards.
 
@@ -43,7 +43,7 @@ By separating content from configuration, instructional engineers can audit and 
 
 ## The Centaur Protocol & High-Friction Pedagogy
 
-In alignment with the **Centaur Protocol**, course designs should position the student as the **Pilot/Architect** (exhibiting critical clinical judgment) and the AI as the **Engine/Calculator** (processing computations and drafting templates). 
+In alignment with the **Centaur Protocol**, course designs should position the student as the **Pilot/Architect** (exhibiting critical clinical judgment) and the AI as the **Engine/Calculator** (processing computations and drafting templates).
 
 To prevent cognitive offloading, we implement **High-Friction Pedagogy**:
 * **High-Friction Assessments:** Rather than completing passive, one-and-done multiple-choice tests, residents must perform active clinical audits.

@@ -2,7 +2,7 @@
 > Personal portfolio, research hub, and sovereign Curriculum-as-Code (CaC) repository of Alan Pruitt (Coach Alan).
 
 ## Core Identity & Architecture
-- **Founder & Chief Curriculum Architect**: Webcognita LLC (https://www.webcognita.com).
+- **Founder & Chief Curriculum Architect**: Webcognita LLC (<<https://www.webcognita.com>>).
 - **Core Methodology**: Curriculum-as-Code (CaC) — treating instructional materials as deterministic software with Markdown Single Source of Truth (SSoT), Git version control, automated CI/CD pipelines, and zero-trust data safety auditing.
 - **Pedagogical Governance**: Compliance-as-Code enforcing ADA Title II, WCAG 2.2 AA, and clinical exercise science standards (ACSM 12th Ed., PAGA 2018 2nd Ed.).
 - **Rapid Prototyping**: Vibe Coding with strict upstream architectural boundaries.

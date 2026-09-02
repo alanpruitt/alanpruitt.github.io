@@ -1,13 +1,13 @@
 # Essay 18: The Illusion of the Feed: Upstream SSoT and Feed Link Rot Governance
 
-##  Learning Objectives
+## Learning Objectives
 * Analyze the impact of link rot on digital course content.
 * Establish upstream Single Source of Truth (SSoT) configuration control.
 * Design glare-resilient, high-contrast, offline-first course architectures.
 
 ---
 
-##  Instructional Content
+## Instructional Content
 
 > **Key Concept:** Relying on live external web links and dynamic social media widgets inside an LMS creates an illusion of real-time engagement while introducing a compounding vulnerability of link rot. Upstream Single Source of Truth (SSoT) governance mitigates this risk by externalizing external resources as config-controlled assets in centralized database manifests.
 
@@ -15,7 +15,7 @@
 
 ## The Illusion of the Feed
 
-In modern web-based education, courses often incorporate dynamic components such as real-time social media widgets, live discussion links, and third-party web embeds. These widgets create the "illusion of the feed"—the impression that course content is current, interactive, and continuously updated. 
+In modern web-based education, courses often incorporate dynamic components such as real-time social media widgets, live discussion links, and third-party web embeds. These widgets create the "illusion of the feed"—the impression that course content is current, interactive, and continuously updated.
 
 However, this reliance on live-state web resources introduces a major system vulnerability: **Link Rot**. Research shows that a substantial percentage of external hyperlinks in web pages rot within a few years due to URL restructurings, server decommissions, and platform access updates. In an LMS environment, link rot degrades instructional quality, interrupts student learning flows, and compromises accessibility standards.
 
@@ -26,6 +26,7 @@ However, this reliance on live-state web resources introduces a major system vul
 Curriculum-as-Code (C-a-C) resolves the issue of link rot by establishing an upstream Single Source of Truth (SSoT) for all external resources. Instead of allowing instructors to hardcode URLs directly into individual pages or assignments, URLs are stored in central configurations:
 
 ###
+
 ```json
 {
   "external_resources": {
@@ -35,6 +36,7 @@ Curriculum-as-Code (C-a-C) resolves the issue of link rot by establishing an ups
   }
 }
 ```
+
 ###
 
 By separating content from configuration, instructional engineers can audit and update link destinations globally. If a government website restructures its URL path, the fix is made once in the configuration file, and the CI/CD compilation pipeline automatically regenerates and deploys the updated references to the Canvas LMS.
@@ -43,7 +45,7 @@ By separating content from configuration, instructional engineers can audit and 
 
 ## The Centaur Protocol & High-Friction Pedagogy
 
-In alignment with the **Centaur Protocol**, course designs should position the student as the **Pilot/Architect** (exhibiting critical clinical judgment) and the AI as the **Engine/Calculator** (processing computations and drafting templates). 
+In alignment with the **Centaur Protocol**, course designs should position the student as the **Pilot/Architect** (exhibiting critical clinical judgment) and the AI as the **Engine/Calculator** (processing computations and drafting templates).
 
 To prevent cognitive offloading, we implement **High-Friction Pedagogy**:
 * **High-Friction Assessments:** Rather than completing passive, one-and-done multiple-choice tests, residents must perform active clinical audits.
