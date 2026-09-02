@@ -238,38 +238,40 @@ Proporcione una tabla Markdown con las columnas:
   <summary style="font-weight: 700; color: #003366; cursor: pointer; font-size: 0.95rem; outline: none;">
     Ver Ejemplo de Referencia Verificado (Matriz de Acciones de Reunión)
   </summary>
-  <div style="margin-top: 12px; font-size: 0.88rem; color: #1e2a38; line-height: 1.5;">
-    <p style="margin-bottom: 8px;"><em>Respuesta de IA Auditada mediante el Protocolo Safety Auditor (Cero Retención / SSO Empresarial):</em></p>
-    <div style="overflow-x: auto;">
-      <table style="width: 100%; border-collapse: collapse; margin-bottom: 12px; font-size: 0.84rem;">
-        <thead>
-          <tr style="background-color: #003366; color: #ffffff; text-align: left;">
-            <th style="padding: 8px 12px; border: 1px solid #cbd5e1;">Elemento de Acción y Entregable</th>
-            <th style="padding: 8px 12px; border: 1px solid #cbd5e1;">Responsable</th>
-            <th style="padding: 8px 12px; border: 1px solid #cbd5e1;">Fecha Límite</th>
-            <th style="padding: 8px 12px; border: 1px solid #cbd5e1;">Fuente de Verificación / Estándar</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr style="background-color: #ffffff;">
-            <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Borrador de matriz de alineación OER del Módulo 02</td>
-            <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Arquitecto Curricular</td>
-            <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Viernes, 5:00 PM MST</td>
-            <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Manual Curricular del Senado Docente Sec. 4.2</td>
-          </tr>
-          <tr style="background-color: #f1f5f9;">
-            <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Auditoría de encabezados y tablas en LMS bajo WCAG 2.1 AA</td>
-            <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Diseñador Instruccional</td>
-            <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Próximo martes, 12:00 PM</td>
-            <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Lista de Cumplimiento ADA Título II (Regla DOJ 2024)</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <div style="background-color: #ffffff; border-left: 3px solid #10b981; padding: 8px 12px; font-size: 0.82rem;">
-      <strong>Verificación Safety Auditor:</strong> Sin datos de identificación personal (PII); entregables limitados a declaraciones explícitas en la transcripción; no se alucinaron plazos no definidos.
-    </div>
-  </div>
+
+<div style="margin-top: 12px; font-size: 0.88rem; color: #1e2a38; line-height: 1.5;">
+<p style="margin-bottom: 8px;"><em>Respuesta de IA Auditada mediante el Protocolo Safety Auditor (Cero Retención / SSO Empresarial):</em></p>
+<div style="overflow-x: auto;">
+<table style="width: 100%; border-collapse: collapse; margin-bottom: 12px; font-size: 0.84rem;">
+<thead>
+<tr style="background-color: #003366; color: #ffffff; text-align: left;">
+<th style="padding: 8px 12px; border: 1px solid #cbd5e1;">Elemento de Acción y Entregable</th>
+<th style="padding: 8px 12px; border: 1px solid #cbd5e1;">Responsable</th>
+<th style="padding: 8px 12px; border: 1px solid #cbd5e1;">Fecha Límite</th>
+<th style="padding: 8px 12px; border: 1px solid #cbd5e1;">Fuente de Verificación / Estándar</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background-color: #ffffff;">
+<td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Borrador de matriz de alineación OER del Módulo 02</td>
+<td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Arquitecto Curricular</td>
+<td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Viernes, 5:00 PM MST</td>
+<td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Manual Curricular del Senado Docente Sec. 4.2</td>
+</tr>
+<tr style="background-color: #f1f5f9;">
+<td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Auditoría de encabezados y tablas en LMS bajo WCAG 2.1 AA</td>
+<td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Diseñador Instruccional</td>
+<td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Próximo martes, 12:00 PM</td>
+<td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Lista de Cumplimiento ADA Título II (Regla DOJ 2024)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div style="background-color: #ffffff; border-left: 3px solid #10b981; padding: 8px 12px; font-size: 0.82rem;">
+<strong>Verificación Safety Auditor:</strong> Sin datos de identificación personal (PII); entregables limitados a declaraciones explícitas en la transcripción; no se alucinaron plazos no definidos.
+</div>
+</div>
+
 </details>
 
 ---
@@ -311,20 +313,22 @@ Genere la matriz de auditoría identificando:
   <summary style="font-weight: 700; color: #003366; cursor: pointer; font-size: 0.95rem; outline: none;">
     Ver Ejemplo de Referencia Verificado (Retroalimentación Delimitada)
   </summary>
-  <div style="margin-top: 12px; font-size: 0.88rem; color: #1e2a38; line-height: 1.5;">
-    <p style="margin-bottom: 8px;"><em>Evaluación Determinista Generada Estrictamente dentro de los Delimitadores ###:</em></p>
-    <div style="background-color: #ffffff; padding: 12px; border: 1px solid #cbd5e1; border-radius: 4px; margin-bottom: 12px;">
-      <h4 style="color: #003366; margin: 0 0 6px 0; font-size: 0.92rem;">Resumen de Evaluación Formativa (Puntaje de Rúbrica: Competente / 18 de 20 pts)</h4>
-      <ul style="margin: 0; padding-left: 20px;">
-        <li><strong>Criterio 1 (Alineación Mission Loop):</strong> La respuesta identifica con precisión el patrón de inactividad y aplica la regla de las pautas federales de actividad física.</li>
-        <li><strong>Criterio 2 (Fidelidad a la Fuente de la Verdad):</strong> La intervención se basa en PAGA 2018 sin inventar objetivos de terceros no verificados.</li>
-        <li><strong>Área de Mejora Constructiva:</strong> Se recomienda especificar el cálculo de MET-minutos en lugar de minutos genéricos para garantizar la exactitud clínica.</li>
-      </ul>
-    </div>
-    <div style="background-color: #ffffff; border-left: 3px solid #10b981; padding: 8px 12px; font-size: 0.82rem;">
-      <strong>Verificación Safety Auditor:</strong> El procesamiento se mantuvo estrictamente restringido dentro de los delimitadores. No se infirieron intenciones no declaradas. La calificación final permanece bajo la responsabilidad humana del docente titular.
-    </div>
-  </div>
+
+<div style="margin-top: 12px; font-size: 0.88rem; color: #1e2a38; line-height: 1.5;">
+<p style="margin-bottom: 8px;"><em>Evaluación Determinista Generada Estrictamente dentro de los Delimitadores ###:</em></p>
+<div style="background-color: #ffffff; padding: 12px; border: 1px solid #cbd5e1; border-radius: 4px; margin-bottom: 12px;">
+<h4 style="color: #003366; margin: 0 0 6px 0; font-size: 0.92rem;">Resumen de Evaluación Formativa (Puntaje de Rúbrica: Competente / 18 de 20 pts)</h4>
+<ul style="margin: 0; padding-left: 20px;">
+<li><strong>Criterio 1 (Alineación Mission Loop):</strong> La respuesta identifica con precisión el patrón de inactividad y aplica la regla de las pautas federales de actividad física.</li>
+<li><strong>Criterio 2 (Fidelidad a la Fuente de la Verdad):</strong> La intervención se basa en PAGA 2018 sin inventar objetivos de terceros no verificados.</li>
+<li><strong>Área de Mejora Constructiva:</strong> Se recomienda especificar el cálculo de MET-minutos en lugar de minutos genéricos para garantizar la exactitud clínica.</li>
+</ul>
+</div>
+<div style="background-color: #ffffff; border-left: 3px solid #10b981; padding: 8px 12px; font-size: 0.82rem;">
+<strong>Verificación Safety Auditor:</strong> El procesamiento se mantuvo estrictamente restringido dentro de los delimitadores. No se infirieron intenciones no declaradas. La calificación final permanece bajo la responsabilidad humana del docente titular.
+</div>
+</div>
+
 </details>
 
 ---
@@ -478,37 +482,39 @@ Firma / Fecha: [Nombre / AAAA-MM-DD]
     <summary style="font-weight: 700; color: #002147; cursor: pointer; font-size: 0.95rem; user-select: none;">
       &#128221; Escritorio del Facilitador: Guía de Monitoreo Rápido y Evaluación en SpeedGrader (Clic para desplegar)
     </summary>
-    <div style="margin-top: 14px; border-top: 1px solid #E2D9C8; padding-top: 12px; font-size: 0.88rem; line-height: 1.55; color: #0C2340;">
-      <p>
-        <strong>Para Docentes y Evaluadores del Curso:</strong> Este taller autodirigido utiliza un protocolo de auditoría rápida de 90 segundos para calificar las entregas en Canvas SpeedGrader, D2L Brightspace o Blackboard.
-      </p>
 
-      <div style="display: flex; gap: 12px; flex-wrap: wrap; margin: 12px 0;">
-        <a href="/docs/reclaiming-our-time-evaluator-guide.pdf" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; background-color: #003366; color: #FFFFFF !important; padding: 8px 14px; border-radius: 4px; font-weight: 600; text-decoration: none; font-size: 0.82rem;">
+<div style="margin-top: 14px; border-top: 1px solid #E2D9C8; padding-top: 12px; font-size: 0.88rem; line-height: 1.55; color: #0C2340;">
+<p>
+<strong>Para Docentes y Evaluadores del Curso:</strong> Este taller autodirigido utiliza un protocolo de auditoría rápida de 90 segundos para calificar las entregas en Canvas SpeedGrader, D2L Brightspace o Blackboard.
+</p>
+
+<div style="display: flex; gap: 12px; flex-wrap: wrap; margin: 12px 0;">
+<a href="/docs/reclaiming-our-time-evaluator-guide.pdf" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; background-color: #003366; color: #FFFFFF !important; padding: 8px 14px; border-radius: 4px; font-weight: 600; text-decoration: none; font-size: 0.82rem;">
           Descargar Protocolo de Evaluación Imprimible (PDF) &rarr;
-        </a>
-                <a href="/docs/canvas-v3-audit-report.html" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; border: 1px solid #002147; color: #002147 !important; padding: 8px 14px; border-radius: 4px; font-weight: 600; text-decoration: none; font-size: 0.82rem; background-color: #FFFFFF;">
+</a>
+<a href="/docs/canvas-v3-audit-report.html" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; border: 1px solid #002147; color: #002147 !important; padding: 8px 14px; border-radius: 4px; font-weight: 600; text-decoration: none; font-size: 0.82rem; background-color: #FFFFFF;">
           Ver Reporte de Auditoría Ejemplar Canvas v3.0 y QM (7.ª Ed) &rarr;
-        </a>
-        <a href="/docs/reclaiming-our-time-evaluator-guide.html" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; border: 1px solid #003366; color: #003366 !important; padding: 8px 14px; border-radius: 4px; font-weight: 600; text-decoration: none; font-size: 0.82rem; background-color: #F8F6F0;">
+</a>
+<a href="/docs/reclaiming-our-time-evaluator-guide.html" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; border: 1px solid #003366; color: #003366 !important; padding: 8px 14px; border-radius: 4px; font-weight: 600; text-decoration: none; font-size: 0.82rem; background-color: #F8F6F0;">
           Ver Guía en Línea (HTML) &rarr;
-        </a>
-      </div>
+</a>
+</div>
 
-      <h4 style="color: #002147; font-size: 0.92rem; margin: 14px 0 6px 0;">Flujo de Calificación Rápida de 90 Segundos en SpeedGrader:</h4>
-      <ol style="padding-left: 20px; margin-bottom: 12px;">
-        <li><strong>Fase 1: Escaneo de Cumplimiento (0–30s):</strong> Confirmar SSO institucional vía <code>google.arizona.edu</code> (Cero Retención de Datos), verificar delimitadores <code>###</code> y certificar desidentificación FERPA.</li>
-        <li><strong>Fase 2: Auditoría Curricular (30–90s):</strong> Auditar la Fuente Única de la Verdad (SSoT) y constatar al menos 2 correcciones editoriales documentadas por el participante.</li>
-      </ol>
+<h4 style="color: #002147; font-size: 0.92rem; margin: 14px 0 6px 0;">Flujo de Calificación Rápida de 90 Segundos en SpeedGrader:</h4>
+<ol style="padding-left: 20px; margin-bottom: 12px;">
+<li><strong>Fase 1: Escaneo de Cumplimiento (0–30s):</strong> Confirmar SSO institucional vía <code>google.arizona.edu</code> (Cero Retención de Datos), verificar delimitadores <code>###</code> y certificar desidentificación FERPA.</li>
+<li><strong>Fase 2: Auditoría Curricular (30–90s):</strong> Auditar la Fuente Única de la Verdad (SSoT) y constatar al menos 2 correcciones editoriales documentadas por el participante.</li>
+</ol>
 
-      <p style="margin-bottom: 4px;"><strong>Configuración en el LMS:</strong></p>
-      <ul style="padding-left: 20px; margin-bottom: 0;">
-        <li>Tipo de Entrega: <code>En línea</code> &gt; Marcar <code>Entrada de texto</code> y <code>Cargas de archivos</code>.</li>
-        <li>Rúbrica: Vincular la rúbrica de 4 criterios (20 pts) marcando <em>"Usar esta rúbrica para calificar la tarea"</em>.</li>
-        <li>Intentos: Configurar como <code>Ilimitados</code> (o 3 intentos) para respaldar la retroalimentación formativa y corrección.</li>
-      </ul>
-    </div>
-  </details>
+<p style="margin-bottom: 4px;"><strong>Configuración en el LMS:</strong></p>
+<ul style="padding-left: 20px; margin-bottom: 0;">
+<li>Tipo de Entrega: <code>En línea</code> &gt; Marcar <code>Entrada de texto</code> y <code>Cargas de archivos</code>.</li>
+<li>Rúbrica: Vincular la rúbrica de 4 criterios (20 pts) marcando <em>"Usar esta rúbrica para calificar la tarea"</em>.</li>
+<li>Intentos: Configurar como <code>Ilimitados</code> (o 3 intentos) para respaldar la retroalimentación formativa y corrección.</li>
+</ul>
+</div>
+
+</details>
 </div>
 
 ### Herramientas Empresariales y Enrutamiento Institucional Oficial
