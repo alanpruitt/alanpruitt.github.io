@@ -9,6 +9,7 @@ video_url: "/videos/reclaiming-our-time.mp4"
 institutional_alignment_url: "/governance/institutional-alignment/"
 contact: "Alan Pruitt"
 aliases:
+  - /talleres/recuperando-nuestro-tiempo/
   - /es/talleres/recuperando-nuestro-tiempo/
 ---
 
