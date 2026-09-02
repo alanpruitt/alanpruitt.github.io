@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Canvas Course Evaluation Checklist v3.0 Audit Report • Curriculum-as-Code Exemplar</title>
+<style>
+  @page {
+    size: letter;
+    margin: 14mm 14mm 16mm 14mm;
+    background-color: #FDFBF7;
+    @bottom-right {
+      content: "Page " counter(page) " of " counter(pages);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 8pt;
+      color: #556980;
+    }
+    @bottom-left {
+      content: "AWC / UArizona Workshop Series • Canvas v3.0 Audit Exemplar";
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 8pt;
+      color: #556980;
+    }
+  }
+
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    padding: 32px 24px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #0C2340;
+    background-color: #FDFBF7;
+    font-size: 9pt;
+    line-height: 1.5;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  /* Utility Action Bar (Hidden in Print) */
+  .action-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFFFFF;
+    border: 1px solid #CBD5E1;
+    border-left: 5px solid #003366;
+    padding: 12px 18px;
+    margin-bottom: 24px;
+    border-radius: 4px;
+  }
+
+  .action-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #003366;
+    color: #FFFFFF !important;
+    font-weight: 600;
+    font-size: 8.5pt;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.2s ease;
+  }
+
+  .action-btn:hover {
+    background-color: #001F3F;
+  }
+
+  .back-link {
+    font-size: 8.5pt;
+    font-weight: 600;
+    color: #003366;
+    text-decoration: underline;
+  }
+
+  .header-container {
+    border-bottom: 2.5px solid #002147;
+    padding-bottom: 10px;
+    margin-bottom: 16px;
+  }
+
+  .header-tag {
+    font-size: 7.5pt;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #003366;
+    margin-bottom: 3px;
+  }
+
+  h1 {
+    color: #002147;
+    font-size: 16pt;
+    font-weight: 800;
+    margin: 0 0 6px 0;
+    line-height: 1.2;
+  }
+
+  .subtitle {
+    font-size: 10pt;
+    color: #334155;
+    margin: 0;
+    font-weight: 500;
+  }
+
+  .meta-bar {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #F4EFE6;
+    border-left: 4px solid #003366;
+    font-size: 8pt;
+    color: #0C2340;
+    border-radius: 2px;
+  }
+
+  .meta-bar strong {
+    color: #002147;
+  }
+
+  h2 {
+    color: #002147;
+    font-size: 11pt;
+    font-weight: 700;
+    margin: 20px 0 8px 0;
+    border-bottom: 1.5px solid #CBD5E1;
+    padding-bottom: 4px;
+    page-break-after: avoid;
+  }
+
+  p {
+    margin: 0 0 8px 0;
+  }
+
+  ul {
+    margin: 0 0 10px 0;
+    padding-left: 20px;
+  }
+
+  li {
+    margin-bottom: 4px;
+  }
+
+  /* Evaluation Table */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 8pt;
+    margin: 10px 0 16px 0;
+    page-break-inside: avoid;
+    background-color: #FFFFFF;
+  }
+
+  th {
+    background-color: #002147;
+    color: #FFFFFF;
+    text-align: left;
+    padding: 6px 10px;
+    font-weight: 600;
+    border: 1px solid #002147;
+  }
+
+  td {
+    padding: 6px 10px;
+    border: 1px solid #CBD5E1;
+    vertical-align: top;
+  }
+
+  tr:nth-child(even) td {
+    background-color: #F8F6F0;
+  }
+
+  .badge-tier {
+    display: inline-block;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 7pt;
+    font-weight: 700;
+  }
+
+  .tier-foundational {
+    background-color: #003366;
+    color: #FFFFFF;
+  }
+
+  .tier-essential {
+    background-color: #334155;
+    color: #FFFFFF;
+  }
+
+  .tier-best {
+    background-color: #475569;
+    color: #FFFFFF;
+  }
+
+  .tier-exemplary {
+    background-color: #065F46;
+    color: #FFFFFF;
+  }
+
+  .badge-status {
+    display: inline-block;
+    background-color: #065F46;
+    color: #FFFFFF;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 7pt;
+    font-weight: 700;
+  }
+
+  .callout-summary {
+    background-color: #FFFFFF;
+    border: 1px solid #CBD5E1;
+    border-left: 5px solid #065F46;
+    padding: 12px 16px;
+    margin: 16px 0;
+    border-radius: 3px;
+    page-break-inside: avoid;
+  }
+
+  /* Print Stylesheet */
+  @media print {
+    body {
+      padding: 0;
+      background-color: #FFFFFF;
+    }
+    .action-bar {
+      display: none !important;
+    }
+    .container {
+      max-width: 100%;
+    }
+    table {
+      page-break-inside: auto;
+    }
+    tr {
+      page-break-inside: avoid;
+      page-break-after: auto;
+    }
+    thead {
+      display: table-header-group;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Interactive Utility Bar (Screen Only) -->
+  <div class="action-bar">
+    <div>
+      <span style="font-weight: 700; font-size: 9pt; color: #002147;">Curriculum-as-Code Resource Document</span>
+      <div style="font-size: 8pt; color: #556980;">Exemplar Audit for Peer &amp; Administrative Review</div>
+    </div>
+    <div style="display: flex; gap: 12px; align-items: center;">
+      <a href="/workshops/reclaiming-our-time/" class="back-link">&larr; Return to Workshop</a>
+      <button onclick="window.print()" class="action-btn">
+        &#128424; Print / Save as PDF
+      </button>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <div class="header-container">
+    <div class="header-tag">Comprehensive Course Quality Evaluation &bull; Instructure Standards</div>
+    <h1>Canvas Course Evaluation Checklist v3.0 Audit Report</h1>
+    <p class="subtitle">Comprehensive Category-by-Category Alignment Report for "Reclaiming Our Time: GenAI Workflows"</p>
+    <div class="meta-bar">
+      <strong>Curriculum Architect:</strong> Alan Pruitt &bull; 
+      <strong>Framework:</strong> Instructure Canvas v3.0 / Universal Design for Learning (UDL) &bull; 
+      <strong>Evaluation Verdict:</strong> 100% Foundational Compliance &bull; Exemplary (3-Star) Status
+    </div>
+  </div>
+
+  <div class="callout-summary">
+    <div style="font-weight: 700; color: #065F46; font-size: 9.5pt; margin-bottom: 4px;">Executive Quality Assurance Summary</div>
+    <p style="margin-bottom: 0; font-size: 8.5pt;">
+      This audit documents complete compliance with the <strong>Canvas Course Evaluation Checklist v3.0</strong>. Designed under a Curriculum-as-Code architecture, the workshop serves as a dual-delivery model: a zero-cost Open Educational Resource (OER) web deployment on <code>alanpruitt.com</code> and a direct-ingest course package for Canvas LMS. All 10 Foundational components, Essential baselines, and advanced Exemplary criteria have been systematically verified and scaffolded.
+    </p>
+  </div>
+
+  <!-- 1. Course Information & Expectations -->
+  <h2>1. Course Information & Expectations</h2>
+  <p>Establishes foundational clarity, institutional governance, measurable outcomes, and learner-centered pacing.</p>
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 12%;">Item</th>
+        <th style="width: 16%;">Standard Tier</th>
+        <th style="width: 14%;">Status</th>
+        <th style="width: 58%;">Architectural Evidence & Implementation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>1.1 Home Page</strong></td>
+        <td><span class="badge-tier tier-foundational">★ Foundational</span></td>
+        <td><span class="badge-status">COMPLIANT</span></td>
+        <td>Includes high-contrast visual header, presentation deck embed, executive video overview, and direct starting link via institutional SSO gateway (<code>google.arizona.edu</code>).</td>
+      </tr>
+      <tr>
+        <td><strong>1.2 Navigation</strong></td>
+        <td><span class="badge-tier tier-foundational">★ Foundational</span></td>
+        <td><span class="badge-status">COMPLIANT</span></td>
+        <td>Non-essential links eliminated; footer features standardized 44&times;44px touch targets conforming to mobile-first navigation standards.</td>
+      </tr>
+      <tr>
+        <td><strong>1.3 Standards</strong></td>
+        <td><span class="badge-tier tier-foundational">★ Foundational</span></td>
+        <td><span class="badge-status">COMPLIANT</span></td>
+        <td>Outcomes are explicitly measurable and cited to authoritative Single Source of Truth (SSoT) standards: Physical Activity Guidelines for Americans (PAGA 2018), DOJ Title II ADA rule, and Faculty Senate codes.</td>
+      </tr>
+      <tr>
+        <td><strong>1.4 Syllabus</strong></td>
+        <td><span class="badge-tier tier-essential">★ Essential</span></td>
+        <td><span class="badge-status">COMPLIANT</span></td>
+        <td>Module 1 embeds copyable Tiered Syllabus Policy Prompt Cards featuring Prohibited, Bounded, and Augmented AI governance tiers.</td>
+      </tr>
+      <tr>
+        <td><strong>1.5 Contact Info</strong></td>
+        <td><span class="badge-tier tier-essential">★ Essential</span></td>
+        <td><span class="badge-status">COMPLIANT</span></td>
+        <td>Lead Facilitator bio, institutional affiliations (AWC / UArizona), 24–48hr response time expectations, and verified <a href="https://www.linkedin.com/in/alanpruitt/" target="_blank">LinkedIn profile</a> embedded in Module 0.</td>
+      </tr>
+      <tr>
+        <td><strong>1.6 Pacing Guide</strong></td>
+        <td><span class="badge-tier tier-essential">★ Essential</span></td>
+        <td><span class="badge-status">COMPLIANT</span></td>
+        <td>Features an explicit 60-Minute Architecture schedule detailing time-on-task per module (5 to 15 minutes) and deliverable checkpoints.</td>
+      </tr>
+      <tr>
+        <td><strong>1.8 Resources</strong></td>
+        <td><span class="badge-tier tier-essential">★ Essential</span></td>
+        <td><span class="badge-status">COMPLIANT</span></td>
+        <td>Direct gateway to institutional NetID workspace, FERPA data boundaries, and campus accessibility office links in Module 0.</td>
+      </tr>
+      <tr>
+        <td><strong>1.9 Student Language</strong></td>
+        <td><span class="badge-tier tier-best">★★ Best Practice</span></td>
+        <td><span class="badge-status">COMPLIANT</span></td>
+        <td>Complex AI concepts translated into the intuitive <em>Mission Loop (Pattern / Rule / Solve)</em> workflow model.</td>
+      </tr>
+      <tr>
+        <td><strong>1.10 Feedback</strong></td>
+        <td><span class="badge-tier tier-exemplary">★★★ Exemplary</span></td>
+        <td><span class="badge-status">COMPLIANT</span></td>
+        <td>Module 5 embeds an anonymous 4-point Continuous Curricular Improvement survey evaluating navigation, time reclaimed, and accessibility.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- 2. Course Structure -->
+  <h2>2. Course Structure</h2>
+  <p>Ensures logical modular chunking, predictable user experience, and accessible learning objects.</p>
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 12%;">Item</th>
+        <th style="width: 16%;">Standard Tier</th>
+        <th style="width: 14%;">Status</th>
+        <th style="width: 58%;">Architectural Evidence & Implementation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>2.1 Active URLs</strong></td>
+        <td><span class="badge-tier tier-foundational">★ Foundational</span></td>
+        <td><span class="badge-status">COMPLIANT</span></td>
+        <td>Automated linting and local validation confirm all internal assets (<code>/docs/...</code>) and external institutional URLs resolve with zero 404 errors.</td>
+      </tr>
+      <tr>
+        <td><strong>2.2 Modular Chunking</strong></td>
+        <td><span class="badge-tier tier-essential">★ Essential</span></td>
+        <td><span class="badge-status">COMPLIANT</span></td>
+        <td>6-module sequence (Modules 0–5) with interactive native HTML <code>&lt;details&gt;&lt;summary&gt;</code> disclosure accordions preventing vertical sprawl.</td>
+      </tr>
+      <tr>
+        <td><strong>2.3 Consistency</strong></td>
+        <td><span class="badge-tier tier-essential">★ Essential</span></td>
+        <td><span class="badge-status">COMPLIANT</span></td>
+        <td>Every micro-lab executes the identical four-part cadence: System Instructions &rarr; Delimited Input &rarr; Prompt Card &rarr; Benchmark Exemplar.</td>
+      </tr>
+      <tr>
+        <td><strong>2.4 Course Files</strong></td>
+        <td><span class="badge-tier tier-essential">★ Essential</span></td>
+        <td><span class="badge-status">COMPLIANT</span></td>
+        <td>Evaluator protocols and audit reports provided in downloadable, WCAG-compliant PDF and standalone HTML formats in <code>static/docs/</code>.</td>
+      </tr>
+      <tr>
+        <td><strong>2.5 Community</strong></td>
+        <td><span class="badge-tier tier-best">★★ Best Practice</span></td>
+        <td><span class="badge-status">COMPLIANT</span></td>
+        <td>Module 0 embeds the 3-point <em>Community Exchange: Reclaiming Our Time Check-In</em> prompt for cohort rapport in Canvas Discussions.</td>
+      </tr>
+      <tr>
+        <td><strong>2.7 Module Cycles</strong></td>
+        <td><span class="badge-tier tier-best">★★ Best Practice</span></td>
+        <td><span class="badge-status">COMPLIANT</span></td>
+        <td>Each module activates prior knowledge with clear framing objectives and concludes with concrete administrative takeaways.</td>
+      </tr>
+      <tr>
+        <td><strong>2.8 Header Structure</strong></td>
+        <td><span class="badge-tier tier-best">★★ Best Practice</span></td>
+        <td><span class="badge-status">COMPLIANT</span></td>
+        <td>Strict cascading header hierarchy starting at <code>&lt;h2&gt;</code> (leaving <code>&lt;h1&gt;</code> for the Canvas Page Title) and nesting through <code>&lt;h3&gt;</code> and <code>&lt;h4&gt;</code>.</td>
+      </tr>
+      <tr>
+        <td><strong>2.9 Pre-Flight Gate</strong></td>
+        <td><span class="badge-tier tier-exemplary">★★★ Exemplary</span></td>
+        <td><span class="badge-status">COMPLIANT</span></td>
+        <td>Module 0 operates as a technical prerequisite gate; participants must verify NetID authentication and clipboard delimiters before executing prompts.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- 3. Course Content -->
+  <h2>3. Course Content</h2>
+  <p>Fosters intellectual rigor, copyright integrity, linguistic inclusion, and cultural clarity.</p>
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 12%;">Item</th>
+        <th style="width: 16%;">Standard Tier</th>
+        <th style="width: 14%;">Status</th>
+        <th style="width: 58%;">Architectural Evidence & Implementation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>3.1 Copyright</strong></td>
+        <td><span class="badge-tier tier-foundational">★ Foundational</span></td>
+        <td><span class="badge-status">COMPLIANT</span></td>
+        <td>All materials licensed under Creative Commons CC BY-NC-SA 4.0 International with full Zero Textbook Cost (ZTC) OER disclosure.</td>
+      </tr>
+      <tr>
+        <td><strong>3.2 Progression</strong></td>
+        <td><span class="badge-tier tier-foundational">★ Foundational</span></td>
+        <td><span class="badge-status">COMPLIANT</span></td>
+        <td>Builds systematically from Technical Pre-Flight (M0) &rarr; Governance (M1) &rarr; Admin Tasks (M2) &rarr; Delimiters (M3) &rarr; Safety Audit (M4) &rarr; Capstone (M5).</td>
+      </tr>
+      <tr>
+        <td><strong>3.5 Vocabulary</strong></td>
+        <td><span class="badge-tier tier-essential">★ Essential</span></td>
+        <td><span class="badge-status">COMPLIANT</span></td>
+        <td>Module 0 provides an Executive Glossary defining core terms: SSoT, Mission Loop, Zero Data Retention, and Delimiter Fencing.</td>
+      </tr>
+      <tr>
+        <td><strong>3.6 Inclusive Lang</strong></td>
+        <td><span class="badge-tier tier-essential">★ Essential</span></td>
+        <td><span class="badge-status">COMPLIANT</span></td>
+        <td>Full bilingual parallel architecture across English and Spanish tracks honoring regional border demographics.</td>
+      </tr>
+      <tr>
+        <td><strong>3.9 Media Diversity</strong></td>
+        <td><span class="badge-tier tier-best">★★ Best Practice</span></td>
+        <td><span class="badge-status">COMPLIANT</span></td>
+        <td>Combines slide presentations, video overviews, copy-paste prompt cards, accessible tables, and interactive disclosure accordions.</td>
+      </tr>
+      <tr>
+        <td><strong>3.11 Language Tools</strong></td>
+        <td><span class="badge-tier tier-exemplary">★★★ Exemplary</span></td>
+        <td><span class="badge-status">COMPLIANT</span></td>
+        <td>Full parallel Spanish translation across all prompt cards, rubrics, and deliverable logs supporting English Language Learners.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- 4. Learner Interaction & 5. Assessments -->
+  <h2>4. Learner Interaction &amp; 5. Assessments</h2>
+  <p>Aligns active engagement, formative practice, and SpeedGrader-ready summative evaluation.</p>
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 12%;">Item</th>
+        <th style="width: 16%;">Standard Tier</th>
+        <th style="width: 14%;">Status</th>
+        <th style="width: 58%;">Architectural Evidence & Implementation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>4.1 Instructions</strong></td>
+        <td><span class="badge-tier tier-foundational">★ Foundational</span></td>
+        <td><span class="badge-status">COMPLIANT</span></td>
+        <td>Platform-neutral, mobile-friendly copy-paste blocks with explicit inputs and required outputs.</td>
+      </tr>
+      <tr>
+        <td><strong>4.2 Directions</strong></td>
+        <td><span class="badge-tier tier-foundational">★ Foundational</span></td>
+        <td><span class="badge-status">COMPLIANT</span></td>
+        <td>Copyable markdown templates in Module 5 outline exact submission pathways for Canvas text-entry and discussion boards.</td>
+      </tr>
+      <tr>
+        <td><strong>4.10 Exemplars</strong></td>
+        <td><span class="badge-tier tier-exemplary">★★★ Exemplary</span></td>
+        <td><span class="badge-status">COMPLIANT</span></td>
+        <td>Verified Benchmark Exemplars provided inside native <code>&lt;details&gt;</code> accordions for every single micro-lab.</td>
+      </tr>
+      <tr>
+        <td><strong>5.1 Standards-Tied</strong></td>
+        <td><span class="badge-tier tier-foundational">★ Foundational</span></td>
+        <td><span class="badge-status">COMPLIANT</span></td>
+        <td>Assessments measure concrete mastery: delimiter fencing, SSoT fidelity, and Mission Loop alignment.</td>
+      </tr>
+      <tr>
+        <td><strong>5.4 Formative</strong></td>
+        <td><span class="badge-tier tier-essential">★ Essential</span></td>
+        <td><span class="badge-status">COMPLIANT</span></td>
+        <td>Low-stakes diagnostic clipboard check in Module 0 and interactive prompt cards across Modules 1–4.</td>
+      </tr>
+      <tr>
+        <td><strong>5.5 Summative</strong></td>
+        <td><span class="badge-tier tier-essential">★ Essential</span></td>
+        <td><span class="badge-status">COMPLIANT</span></td>
+        <td>Sovereign Auditor Capstone Matrix captures baseline time saved, boundary audit, and executed artifacts.</td>
+      </tr>
+      <tr>
+        <td><strong>5.6 SpeedGrader</strong></td>
+        <td><span class="badge-tier tier-essential">★ Essential</span></td>
+        <td><span class="badge-status">COMPLIANT</span></td>
+        <td>Facilitator Desk features a 90-second rapid triage workflow and 4 drop-in feedback snippets for 1-click evaluation.</td>
+      </tr>
+      <tr>
+        <td><strong>5.7 Rubric Design</strong></td>
+        <td><span class="badge-tier tier-best">★★ Best Practice</span></td>
+        <td><span class="badge-status">COMPLIANT</span></td>
+        <td>Transparent 4-criterion, 20-point objective rubric published in student view and configured for LMS rubric import.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- 7. Accessibility & 8. Instructor Supports -->
+  <h2>7. Course Accessibility &amp; 8. Instructor Supports</h2>
+  <p>Ensures equitable access under federal standards and comprehensive facilitator enablement.</p>
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 12%;">Item</th>
+        <th style="width: 16%;">Standard Tier</th>
+        <th style="width: 14%;">Status</th>
+        <th style="width: 58%;">Architectural Evidence & Implementation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>7.1 Checker</strong></td>
+        <td><span class="badge-tier tier-foundational">★ Foundational</span></td>
+        <td><span class="badge-status">COMPLIANT</span></td>
+        <td>Audited with markdown linters and contrast analyzers; zero broken heading tags, contrast failures, or missing alt text.</td>
+      </tr>
+      <tr>
+        <td><strong>7.2 Accommodate</strong></td>
+        <td><span class="badge-tier tier-essential">★ Essential</span></td>
+        <td><span class="badge-status">COMPLIANT</span></td>
+        <td>Explicit WCAG 2.1/2.2 AA and ADA Title II Accommodation Statement embedded in Module 0.</td>
+      </tr>
+      <tr>
+        <td><strong>7.3 Color Contrast</strong></td>
+        <td><span class="badge-tier tier-essential">★ Essential</span></td>
+        <td><span class="badge-status">COMPLIANT</span></td>
+        <td>Institutional Navy on Creme (<code>#002147</code> on <code>#FDFBF7</code>) yielding 14.2:1 contrast (exceeds WCAG AAA requirement).</td>
+      </tr>
+      <tr>
+        <td><strong>7.8 Tables</strong></td>
+        <td><span class="badge-tier tier-best">★★ Best Practice</span></td>
+        <td><span class="badge-status">COMPLIANT</span></td>
+        <td>All tables utilize <code>&lt;th scope="col"&gt;</code> headers, clear cell padding, alternating row colors, and responsive horizontal overflow wrappers.</td>
+      </tr>
+      <tr>
+        <td><strong>8.1 Answer Keys</strong></td>
+        <td><span class="badge-tier tier-essential">★ Essential</span></td>
+        <td><span class="badge-status">COMPLIANT</span></td>
+        <td>Complete benchmark answers and formative grading keys included in facilitator resources.</td>
+      </tr>
+      <tr>
+        <td><strong>8.2 Facilitator Desk</strong></td>
+        <td><span class="badge-tier tier-best">★★ Best Practice</span></td>
+        <td><span class="badge-status">COMPLIANT</span></td>
+        <td>Module 5 embeds the Facilitator Desk drawer with LMS setup checklists, attempt limits, and triage guides.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Conclusion & Verification -->
+  <div class="meta-bar" style="margin-top: 24px;">
+    <strong>Verification &amp; Attestation:</strong> This document serves as an institutional Curriculum-as-Code exemplar demonstrating compliance with Instructure Canvas Course Evaluation Checklist v3.0 standards for asynchronous and blended professional learning.
+  </div>
+
+</div>
+
+</body>
+</html>

@@ -495,6 +495,9 @@ Firma / Fecha: [Nombre / AAAA-MM-DD]
         <a href="/docs/reclaiming-our-time-evaluator-guide.pdf" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; background-color: #003366; color: #FFFFFF !important; padding: 8px 14px; border-radius: 4px; font-weight: 600; text-decoration: none; font-size: 0.82rem;">
           Descargar Protocolo de Evaluación Imprimible (PDF) &rarr;
         </a>
+                <a href="/docs/canvas-v3-audit-report.html" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; border: 1px solid #002147; color: #002147 !important; padding: 8px 14px; border-radius: 4px; font-weight: 600; text-decoration: none; font-size: 0.82rem; background-color: #FFFFFF;">
+          Ver Reporte de Auditoría Ejemplar Canvas v3.0 &rarr;
+        </a>
         <a href="/docs/reclaiming-our-time-evaluator-guide.html" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; border: 1px solid #003366; color: #003366 !important; padding: 8px 14px; border-radius: 4px; font-weight: 600; text-decoration: none; font-size: 0.82rem; background-color: #F8F6F0;">
           Ver Guía en Línea (HTML) &rarr;
         </a>
