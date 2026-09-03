@@ -455,6 +455,89 @@ Document two specific interventions where you edited, corrected, or calibrated t
 
 ## Module 5: Synthesis, Resources & Institutional Support
 
+<div class="roi-calculator-widget" style="background-color: #FFFFFF; border: 1.5px solid #002147; border-left: 6px solid #065F46; border-radius: 6px; padding: 20px; margin: 24px 0; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+  <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; flex-wrap: wrap; margin-bottom: 14px; border-bottom: 1px solid #CBD5E1; padding-bottom: 10px;">
+    <div>
+      <span style="background-color: #065F46; color: #FFFFFF; font-size: 0.72rem; font-weight: 700; padding: 2px 8px; border-radius: 3px; letter-spacing: 0.05em; text-transform: uppercase;">Executive ROI Tally</span>
+      <h4 style="margin: 4px 0 2px 0; color: #002147; font-size: 1.1rem; font-weight: 700;">Faculty Time Reclaimed Estimator</h4>
+      <p style="margin: 0; font-size: 0.84rem; color: #475569;">Calculate institutional hours reclaimed per semester across routine administrative workflows.</p>
+    </div>
+    <div style="background-color: #F8F6F0; border: 1.5px solid #003366; border-radius: 6px; padding: 10px 16px; text-align: center; min-width: 170px;">
+      <span style="display: block; font-size: 0.75rem; font-weight: 700; color: #475569; text-transform: uppercase;">Hours Reclaimed</span>
+      <span id="roi-hours-total-en" aria-live="polite" style="font-size: 1.65rem; font-weight: 800; color: #002147; line-height: 1.2;">16.5</span>
+      <span style="display: block; font-size: 0.72rem; color: #065F46; font-weight: 700;">hrs / semester</span>
+    </div>
+  </div>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 16px;">
+    <!-- Slider 1 -->
+    <div>
+      <label for="slider-meetings-en" style="display: flex; justify-content: space-between; font-size: 0.82rem; font-weight: 700; color: #002147; margin-bottom: 6px;">
+        <span>Committee Transcripts (45m/ea)</span>
+        <span id="val-meetings-en" style="color: #065F46; font-weight: 700;">6</span>
+      </label>
+      <input type="range" id="slider-meetings-en" min="0" max="20" value="6" step="1" style="width: 100%; accent-color: #003366; cursor: pointer;">
+    </div>
+
+    <!-- Slider 2 -->
+    <div>
+      <label for="slider-rubrics-en" style="display: flex; justify-content: space-between; font-size: 0.82rem; font-weight: 700; color: #002147; margin-bottom: 6px;">
+        <span>Rubrics Calibrated (90m/ea)</span>
+        <span id="val-rubrics-en" style="color: #065F46; font-weight: 700;">4</span>
+      </label>
+      <input type="range" id="slider-rubrics-en" min="0" max="15" value="4" step="1" style="width: 100%; accent-color: #003366; cursor: pointer;">
+    </div>
+
+    <!-- Slider 3 -->
+    <div>
+      <label for="slider-syllabi-en" style="display: flex; justify-content: space-between; font-size: 0.82rem; font-weight: 700; color: #002147; margin-bottom: 6px;">
+        <span>Syllabus Audits (120m/ea)</span>
+        <span id="val-syllabi-en" style="color: #065F46; font-weight: 700;">3</span>
+      </label>
+      <input type="range" id="slider-syllabi-en" min="0" max="10" value="3" step="1" style="width: 100%; accent-color: #003366; cursor: pointer;">
+    </div>
+  </div>
+</div>
+
+<script>
+(function initRoiWidget() {
+  function attachListeners() {
+    const mSlider = document.getElementById('slider-meetings-en');
+    const rSlider = document.getElementById('slider-rubrics-en');
+    const sSlider = document.getElementById('slider-syllabi-en');
+
+    const mVal = document.getElementById('val-meetings-en');
+    const rVal = document.getElementById('val-rubrics-en');
+    const sVal = document.getElementById('val-syllabi-en');
+    const totalOut = document.getElementById('roi-hours-total-en');
+
+    if (!mSlider || !rSlider || !sSlider || !totalOut) return;
+
+    function calc() {
+      const m = parseInt(mSlider.value, 10);
+      const r = parseInt(rSlider.value, 10);
+      const s = parseInt(sSlider.value, 10);
+      mVal.textContent = m;
+      rVal.textContent = r;
+      sVal.textContent = s;
+      const total = (m * 0.75) + (r * 1.5) + (s * 2.0);
+      totalOut.textContent = total.toFixed(1);
+    }
+
+    mSlider.addEventListener('input', calc);
+    rSlider.addEventListener('input', calc);
+    sSlider.addEventListener('input', calc);
+    calc();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', attachListeners);
+  } else {
+    attachListeners();
+  }
+})();
+</script>
+
 ### Summative Capstone: Sovereign Auditor Workflow & Reflection Matrix
 
 To conclude the workshop and demonstrate mastery under an instructor-monitored or credentialed model, complete this summative matrix. Copy the structured template below, fill in your verified artifacts, and submit it through your LMS assignment portal or course shell.
