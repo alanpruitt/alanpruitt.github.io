@@ -385,50 +385,18 @@ Safeguarding student records and directory information in accordance with federa
 - **De-identification Standards:** Anonymize and redact all student case work or peer discussions prior to analysis.
 - **Human-in-the-Loop Imperative:** Automated outputs serve as initial drafts; final grading, curriculum design, and administrative sign-offs remain strictly human responsibilities.
 
-### Participant Formative Audit Submission Rubric
+### Participant Formative Audit Submission Rubric (Process Over Product)
 
-For instructor-monitored completion or institutional credit, participants must submit an **Audited Workflow Log** via the course portal or LMS assignment tool. Submissions are evaluated using the 20-point rubric below:
+The formative audit evaluates the participant's human interception, SSoT boundary defense, and verification loop. Following the **Mission Loop "Process Over Product"** model, evaluation uses three discrete tiers: **Exemplary (10 pts)**, **Competent (7 pts)** [Benchmark], and **Recalibrate (0 pts)** (Total: 30 Points Possible).
 
-<div style="overflow-x: auto; margin: 20px 0;">
-  <table style="width: 100%; border-collapse: collapse; font-size: 0.88rem; background-color: #ffffff; border: 1px solid #cbd5e1;">
-    <thead>
-      <tr style="background-color: #003366; color: #ffffff; text-align: left;">
-        <th scope="col" style="padding: 10px 14px; border: 1px solid #cbd5e1; width: 22%;">Evaluation Criterion</th>
-        <th scope="col" style="padding: 10px 14px; border: 1px solid #cbd5e1; width: 26%;">Exemplary (5 pts)</th>
-        <th scope="col" style="padding: 10px 14px; border: 1px solid #cbd5e1; width: 26%;">Competent (4 pts)</th>
-        <th scope="col" style="padding: 10px 14px; border: 1px solid #cbd5e1; width: 26%;">Developing / Incomplete (0–3 pts)</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td style="padding: 10px 14px; border: 1px solid #cbd5e1; font-weight: 700; color: #002147;">1. Delimiter Isolation (###)</td>
-        <td style="padding: 10px 14px; border: 1px solid #cbd5e1;">Raw inputs and context are strictly isolated within <code>###</code> fences; prompt injection risks fully neutralized.</td>
-        <td style="padding: 10px 14px; border: 1px solid #cbd5e1;">Delimiters present with minor structural flaws; system instructions remain separated.</td>
-        <td style="padding: 10px 14px; border: 1px solid #cbd5e1;">Delimiters omitted or raw text bleeds into system commands.</td>
-      </tr>
-      <tr style="background-color: #f8fafc;">
-        <td style="padding: 10px 14px; border: 1px solid #cbd5e1; font-weight: 700; color: #002147;">2. SSoT Fidelity</td>
-        <td style="padding: 10px 14px; border: 1px solid #cbd5e1;">Explicitly binds model to verified standards (e.g., PAGA 2018, ADA Title II, departmental handbook) with zero hallucination latitude.</td>
-        <td style="padding: 10px 14px; border: 1px solid #cbd5e1;">Governing standard identified, but minor unverified assumptions permitted.</td>
-        <td style="padding: 10px 14px; border: 1px solid #cbd5e1;">No verifiable source of truth specified; reliance on generic model knowledge.</td>
-      </tr>
-      <tr>
-        <td style="padding: 10px 14px; border: 1px solid #cbd5e1; font-weight: 700; color: #002147;">3. Mission Loop Alignment</td>
-        <td style="padding: 10px 14px; border: 1px solid #cbd5e1;">Executes clear Pattern recognition, applies governing Rules, and delivers an auditable Solve artifact.</td>
-        <td style="padding: 10px 14px; border: 1px solid #cbd5e1;">Follows sequence, but linkage between governing rule and final solution is vague.</td>
-        <td style="padding: 10px 14px; border: 1px solid #cbd5e1;">Omits structural problem framing; defaults to open-ended query.</td>
-      </tr>
-      <tr style="background-color: #f8fafc;">
-        <td style="padding: 10px 14px; border: 1px solid #cbd5e1; font-weight: 700; color: #002147;">4. Human-in-the-Loop Audit</td>
-        <td style="padding: 10px 14px; border: 1px solid #cbd5e1;">Documents at least two concrete, verified editorial or clinical corrections made to synthetic output prior to adoption.</td>
-        <td style="padding: 10px 14px; border: 1px solid #cbd5e1;">Documents one specific correction or calibration made to synthetic output.</td>
-        <td style="padding: 10px 14px; border: 1px solid #cbd5e1;">Accepts synthetic output uncritically without documented human audit.</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+| Evaluation Dimension | Exemplary (10 pts) | Competent (7 pts) [Benchmark] | Recalibrate (0 pts) |
+| :--- | :--- | :--- | :--- |
+| **1. Delimiter Fencing & Boundary Architecture** | Raw prompts and telemetry are strictly encapsulated within `###` fences. System role and SSoT constraints prevent synthetic context bleed. | Prompt structure isolates telemetry using delimiters with minor formatting variance; no data leakage into system context. | **Broken Loop:** Missing delimiter fences; prompt parameters unisolated; sensitive or client data mixed into open prompt text. |
+| **2. SSoT Alignment & Compliance Verification** | Explicit adherence to authoritative governance (e.g., PAGA 2018 2nd Ed, ADA Title II / WCAG 2.1 AA, FERPA). Accurately cites governing thresholds. | Grounded in governing standard; meets baseline compliance requirements with minor secondary omissions. | **Broken Loop:** Relies on hallucinated standards, commercial wellness trends, or unsupported assertions. Bypasses designated SSoT. |
+| **3. Human Interception & Verification Log** | Explicit audit log proving human interception; catches and corrects machine errors, arithmetic drift, or invalid assumptions. Attestation confirmed. | Confirmed verification log; participant audited machine drafting steps and validated core numerical/policy outputs. | **Broken Loop:** Submits unedited AI output; no verification log; mathematical or policy errors accepted without interception. |
 
-{{< prompt-card title="Formative Deliverable: Participant Workflow Audit Log" subtitle="Copy and complete this structured template for submission in your course shell or LMS assignment portal." badge="DELIVERABLE TEMPLATE" badgeClass="INSTITUTIONAL READY" >}}
+> **Formative Benchmark Target: 21 of 30 pts (Competent).** Submissions demonstrating complete verification across all three dimensions earn 30 of 30 pts (Exemplary). Any dimension scoring 0 pts breaks the verification loop, requiring the participant to recalibrate before final certification.
+
 ### PARTICIPANT FORMATIVE AUDIT SUBMISSION LOG
 Participant Name: [Insert Name / Department]
 Date of Execution: [YYYY-MM-DD]
