@@ -34,14 +34,14 @@
       </div>
 
       <!-- Clean Navigation Touch Targets -->
-      <nav class="flex flex-wrap items-center justify-center gap-4 text-xs font-bold uppercase tracking-wider pt-2" aria-label="{{ if eq .Lang "es" }}Navegación del pie de página{{ else }}Footer Navigation{{ end }}">
-        <a href="{{ if eq .Lang "es" }}/es/{{ else }}/{{ end }}" class="inline-flex items-center justify-center rounded-md px-3 py-1.5 text-[#0C2340] transition-colors hover:text-[#003366] dark:text-zinc-100 dark:hover:text-white" style="min-height: 44px; min-width: 44px; text-decoration: none;">
+      <nav style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 24px; padding-top: 12px; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;" aria-label="{{ if eq .Lang "es" }}Navegación del pie de página{{ else }}Footer Navigation{{ end }}">
+        <a href="{{ if eq .Lang "es" }}/es/{{ else }}/{{ end }}" style="display: inline-flex; align-items: center; justify-content: center; min-height: 44px; min-width: 44px; padding: 6px 14px; color: #0C2340; text-decoration: underline; text-underline-offset: 4px;">
           {{ if eq .Lang "es" }}Inicio{{ else }}Home{{ end }}
         </a>
-        <a href="{{ if eq .Lang "es" }}/es/workshops/{{ else }}/workshops/{{ end }}" class="inline-flex items-center justify-center rounded-md px-3 py-1.5 text-[#0C2340] transition-colors hover:text-[#003366] dark:text-zinc-100 dark:hover:text-white" style="min-height: 44px; min-width: 44px; text-decoration: none;">
+        <a href="{{ if eq .Lang "es" }}/es/workshops/{{ else }}/workshops/{{ end }}" style="display: inline-flex; align-items: center; justify-content: center; min-height: 44px; min-width: 44px; padding: 6px 14px; color: #0C2340; text-decoration: underline; text-underline-offset: 4px;">
           {{ if eq .Lang "es" }}Talleres{{ else }}Workshops{{ end }}
         </a>
-        <a href="{{ if eq .Lang "es" }}/es/essays/{{ else }}/essays/{{ end }}" class="inline-flex items-center justify-center rounded-md px-3 py-1.5 text-[#0C2340] transition-colors hover:text-[#003366] dark:text-zinc-100 dark:hover:text-white" style="min-height: 44px; min-width: 44px; text-decoration: none;">
+        <a href="{{ if eq .Lang "es" }}/es/essays/{{ else }}/essays/{{ end }}" style="display: inline-flex; align-items: center; justify-content: center; min-height: 44px; min-width: 44px; padding: 6px 14px; color: #0C2340; text-decoration: underline; text-underline-offset: 4px;">
           {{ if eq .Lang "es" }}Ensayos{{ else }}Essays{{ end }}
         </a>
       </nav>
