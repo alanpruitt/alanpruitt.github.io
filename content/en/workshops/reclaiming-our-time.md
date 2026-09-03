@@ -613,13 +613,13 @@ Signature / Timestamp: [Insert Name / Date]
 
 ### Enterprise Tools & Official University Routing
 
-- **Primary Responsible AI Portal:** Access authorized tools, request enterprise accounts, and review official guidelines via the [University of Arizona Responsible Artificial Intelligence Start Here Portal](https://responsibleai.arizona.edu/tools-support/start-here).
-- **Institutional GenAI Support & Intake:** Submit departmental inquiries, review privacy and security evaluations, and access sanctioned generative AI resources directly through the Responsible AI support desk.
-- **Data Governance & FERPA Inquiries:** Consult University Information Security and privacy policies through the Responsible AI portal before uploading or processing institutional materials.
+Primary Responsible AI Portal: Access authorized tools, request enterprise accounts, and review official guidelines via the University of Arizona Responsible Artificial Intelligence Start Here Portal (<https://responsibleai.arizona.edu/tools-support/start-here>).
 
-<div style="background-color: #FFFFFF; border: 1.5px solid #002147; border-left: 5px solid #1A73E8; border-radius: 6px; padding: 16px 18px; margin: 18px 0; box-shadow: 0 1px 4px rgba(0,0,0,0.05);">
-  <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
-    <span style="background-color: #1A73E8; color: #FFFFFF; font-size: 0.72rem; font-weight: 700; padding: 2px 7px; border-radius: 3px; text-transform: uppercase;">Continuing Faculty PD</span>
+Institutional GenAI Support & Intake: Submit departmental inquiries, review privacy and security evaluations, and access sanctioned generative AI resources directly through the Responsible AI support desk.
+
+Data Governance & FERPA Inquiries: Consult University Information Security and privacy policies through the Responsible AI portal before uploading or processing institutional materials.
+
+Continuing Faculty PD</span>
     <strong style="color: #002147; font-size: 0.95rem;">Google Workspace with Gemini for Education</strong>
   </div>
   <p style="margin: 0 0 10px 0; font-size: 0.86rem; color: #334155; line-height: 1.5;">
