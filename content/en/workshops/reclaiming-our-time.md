@@ -3,7 +3,7 @@ title: "Reclaiming Our Time: Secure and Practical GenAI Workflows for Faculty an
 description: "Interactive professional development workshop covering GenAI governance, FERPA compliance, administrative relief workflows, and SSoT syllabus auditing."
 date: 2026-08-15
 type: "workshop"
-translationKey: "reclaiming-our-time"
+# translationKey: "reclaiming-our-time" # Deprecated for single-track rollout
 deck_url: "/decks/reclaiming-our-time/"
 video_url: "/videos/reclaiming-our-time.mp4"
 institutional_alignment_url: "/governance/institutional-alignment/"
