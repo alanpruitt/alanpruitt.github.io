@@ -61,7 +61,7 @@ The model complies effortlessly because it is designed to predict probable token
 
 The solution is not to ban the technology. It is to architect the assignment so that the student must demonstrate the complete logic grid:
 
-```
+```text
 +-------------------------------------------------------------------+-
 |                         THE MISSION LOOP                           |
 |                                                                  |

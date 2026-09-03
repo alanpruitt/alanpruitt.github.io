@@ -3,14 +3,11 @@ draft: true
 title: "Recuperando Nuestro Tiempo: Flujos Prácticos y Seguros de GenAI para Docentes y Personal"
 description: "Interactive professional development workshop covering GenAI governance, FERPA compliance, administrative relief workflows, and SSoT syllabus auditing."
 date: 2026-08-15
-type: "workshop"
 translationKey: "reclaiming-our-time"
 deck_url: "/decks/reclaiming-our-time/"
 video_url: "/videos/reclaiming-our-time.mp4"
 institutional_alignment_url: "/governance/institutional-alignment/"
 contact: "Alan Pruitt"
-aliases:
-  - /workshops/reclaiming-our-time/
 ---
 
 ## Recuperando Nuestro Tiempo: Flujos Prácticos y Seguros de GenAI para Docentes y Personal

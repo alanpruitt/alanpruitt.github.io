@@ -2,14 +2,11 @@
 title: "Reclaiming Our Time: Secure and Practical GenAI Workflows for Faculty and Staff"
 description: "Interactive professional development workshop covering GenAI governance, FERPA compliance, administrative relief workflows, and SSoT syllabus auditing."
 date: 2026-08-15
-type: "workshop"
-# translationKey: "reclaiming-our-time" # Deprecated for single-track rollout
+translationKey: "reclaiming-our-time"
 deck_url: "/decks/reclaiming-our-time/"
 video_url: "/videos/reclaiming-our-time.mp4"
 institutional_alignment_url: "/governance/institutional-alignment/"
 contact: "Alan Pruitt"
-aliases:
-  - /workshops/reclaiming-our-time/
 ---
 
 ## Reclaiming Our Time: Secure and Practical GenAI Workflows for Faculty and Staff
@@ -174,6 +171,7 @@ Welcome to the workshop! To foster collaboration across disciplines and academic
 Peer Engagement:
 Review the posts from your colleagues and reply to at least one peer from outside your immediate department. Share an insight or common challenge regarding administrative workloads in their discipline.
 ###
+
 {{< /prompt-card >}}
 
 <h4 style="margin-top: 0; color: #002147; font-size: 1.05rem; font-weight: 700;">Step 1: Institutional Enterprise Authentication Gateway</h4>
@@ -219,6 +217,7 @@ Respond with a 2-line confirmation:
 1. "AUTHENTICATION GATEWAY VERIFIED: [Repeat Gateway URL]"
 2. "DELIMITER PARSING: ACTIVE AND READY"
 ###
+
 {{< /prompt-card >}}
 
 ---
@@ -268,7 +267,6 @@ Meeting Notes - Curriculum & Tech Committee (Rough Audio Transcript / Chat Extra
 Provide a Markdown table with columns:
 | Item # | Action Item / Deliverable | Responsible Lead | Target Completion | Priority (High/Med/Low) |
 ###
-{{< /prompt-card >}}
 
 <details open style="background-color: #f8fafc; border: 1px solid #cbd5e1; border-left: 4px solid #003366; border-radius: 4px; padding: 12px 16px; margin: 16px 0 24px 0;">
   <summary style="font-weight: 700; color: #003366; cursor: pointer; font-size: 0.95rem; outline: none;">
@@ -309,6 +307,8 @@ Provide a Markdown table with columns:
 </div>
 
 </details>
+
+{{< /prompt-card >}}
 
 ---
 
@@ -351,7 +351,6 @@ Generate the audit matrix identifying:
 - Authoritative Rule Reference
 - Remediation Action Item
 ###
-{{< /prompt-card >}}
 
 <details open style="background-color: #f8fafc; border: 1px solid #cbd5e1; border-left: 4px solid #003366; border-radius: 4px; padding: 12px 16px; margin: 16px 0 24px 0;">
   <summary style="font-weight: 700; color: #003366; cursor: pointer; font-size: 0.95rem; outline: none;">
@@ -374,6 +373,8 @@ Generate the audit matrix identifying:
 </div>
 
 </details>
+
+{{< /prompt-card >}}
 
 ---
 
@@ -417,7 +418,6 @@ Document two specific interventions where you edited, corrected, or calibrated t
 1. Editorial / Factual Correction: [Detail specific error or omission caught and corrected]
 2. Pedagogical / Policy Calibration: [Detail adjustment made to ensure institutional alignment]
 ###
-{{< /prompt-card >}}
 
 ---
 
@@ -438,7 +438,6 @@ Document two specific interventions where you edited, corrected, or calibrated t
   </div>
 
   <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 16px;">
-    <!-- Slider 1 -->
     <div>
       <label for="slider-meetings-en" style="display: flex; justify-content: space-between; font-size: 0.82rem; font-weight: 700; color: #002147; margin-bottom: 6px;">
         <span>Committee Transcripts (45m/ea)</span>
@@ -447,23 +446,21 @@ Document two specific interventions where you edited, corrected, or calibrated t
       <input type="range" id="slider-meetings-en" min="0" max="20" value="6" step="1" style="width: 100%; accent-color: #003366; cursor: pointer;">
     </div>
 
-    <!-- Slider 2 -->
     <div>
       <label for="slider-rubrics-en" style="display: flex; justify-content: space-between; font-size: 0.82rem; font-weight: 700; color: #002147; margin-bottom: 6px;">
         <span>Rubrics Calibrated (90m/ea)</span>
         <span id="val-rubrics-en" style="color: #065F46; font-weight: 700;">4</span>
       </label>
       <input type="range" id="slider-rubrics-en" min="0" max="15" value="4" step="1" style="width: 100%; accent-color: #003366; cursor: pointer;">
-    </div>
+</div>
 
-    <!-- Slider 3 -->
-    <div>
+<div>
       <label for="slider-syllabi-en" style="display: flex; justify-content: space-between; font-size: 0.82rem; font-weight: 700; color: #002147; margin-bottom: 6px;">
         <span>Syllabus Audits (120m/ea)</span>
         <span id="val-syllabi-en" style="color: #065F46; font-weight: 700;">3</span>
       </label>
       <input type="range" id="slider-syllabi-en" min="0" max="10" value="3" step="1" style="width: 100%; accent-color: #003366; cursor: pointer;">
-    </div>
+</div>
   </div>
 </div>
 
@@ -570,7 +567,6 @@ Document two specific corrections made during your audit:
 "I certify that this workflow was executed inside an enterprise-shielded session, contains zero unprotected FERPA identifiers, and reflects rigorous human-in-the-loop verification."
 Signature / Timestamp: [Insert Name / Date]
 ###
-{{< /prompt-card >}}
 
 <div style="margin: 28px 0;">
   <details style="border: 1px solid #CBD5E1; border-left: 5px solid #002147; background-color: #FFFFFF; border-radius: 4px; padding: 12px 16px;">
@@ -637,3 +633,5 @@ Signature / Timestamp: [Insert Name / Date]
     <span aria-hidden="true">&rarr;</span>
   </a>
 </div>
+
+{{< /prompt-card >}}
