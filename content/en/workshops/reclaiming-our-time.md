@@ -32,7 +32,7 @@ aliases:
     IMS CC 1.1 CARTRIDGE
   </span>
   <span role="listitem" style="display: inline-flex; align-items: center; gap: 6px; background-color: #F1F5F9; color: #334155; border: 1px solid #CBD5E1; font-size: 0.74rem; font-weight: 600; padding: 3px 8px; border-radius: 4px;">
-    BILINGUAL DUAL-TRACK (EN / ES)
+    PEER WORKSHOP TRACK
   </span>
 </div>
 

@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "Recuperando Nuestro Tiempo: Flujos Prácticos y Seguros de GenAI para Docentes y Personal"
 description: "Interactive professional development workshop covering GenAI governance, FERPA compliance, administrative relief workflows, and SSoT syllabus auditing."
 date: 2026-08-15
