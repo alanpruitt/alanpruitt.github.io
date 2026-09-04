@@ -3,8 +3,9 @@ title: "Essay 31: Beyond the Slide Deck — Architecture as Professional Develop
 date: 2026-09-03
 description: "Why institutional GenAI professional development must evolve from ephemeral slide decks into born-accessible, auditable, and platform-agnostic software architectures."
 categories:
-  - "Higher Education"
   - "Curriculum-as-Code"
+  - "ADA Title II"
+  - "Higher Education"
 tags:
   - "Instructional Design"
   - "ADA Title II"

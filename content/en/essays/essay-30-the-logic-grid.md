@@ -4,7 +4,7 @@ date: 2026-09-03T10:00:00-07:00
 draft: false
 description: "How a warm-up routine in an adult GED classroom exposed the core flaw of generative AI in higher education--and gave rise to the Mission Loop framework."
 tags: ["Curriculum-as-Code", "Mission Loop", "Instructional Design", "GenAI", "Higher Ed"]
-categories: ["Essays", "Pedagogy"]
+categories: ["Curriculum-as-Code", "AI Safety Protocols", "Pedagogy"]
 series: ["Curriculum Architecture"]
 essayNumber: 30
 ---
