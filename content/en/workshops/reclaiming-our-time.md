@@ -99,9 +99,9 @@ Before running prompts or interacting with AI models in this workshop, verify yo
   </p>
 
   <div style="overflow-x: auto; margin-bottom: 8px;">
-    <table style="width: 100%; border-collapse: collapse; font-size: 0.86rem; background-color: #ffffff; border: 1px solid #cbd5e1;">
+    <table style="width: 100%; border-collapse: collapse; font-size: 0.86rem; background-color: #002147; border: 1px solid #cbd5e1;">
       <thead>
-        <tr style="background-color: #003366; color: #ffffff; text-align: left;">
+        <tr style="background-color: #003366; color: #002147; text-align: left;">
           <th scope="col" style="padding: 8px 12px; border: 1px solid #cbd5e1; width: 22%;">Module & Topic</th>
           <th scope="col" style="padding: 8px 12px; border: 1px solid #cbd5e1; width: 44%;">Core Focus & Institutional Standard</th>
           <th scope="col" style="padding: 8px 12px; border: 1px solid #cbd5e1; width: 14%; text-align: center;">Pacing</th>
@@ -115,7 +115,7 @@ Before running prompts or interacting with AI models in this workshop, verify yo
           <td style="padding: 8px 12px; border: 1px solid #cbd5e1; text-align: center; font-weight: 600;">5 min</td>
           <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Clipboard Diagnostic</td>
         </tr>
-        <tr style="background-color: #f8fafc;">
+        <tr style="background-color: #002147;">
           <td style="padding: 8px 12px; border: 1px solid #cbd5e1; font-weight: 700; color: #002147;">Module 1: Governance</td>
           <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Policy tiers (Prohibited, Bounded, Augmented) & Single Source of Truth (SSoT).</td>
           <td style="padding: 8px 12px; border: 1px solid #cbd5e1; text-align: center; font-weight: 600;">10 min</td>
@@ -127,7 +127,7 @@ Before running prompts or interacting with AI models in this workshop, verify yo
           <td style="padding: 8px 12px; border: 1px solid #cbd5e1; text-align: center; font-weight: 600;">10 min</td>
           <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Action Matrix Output</td>
         </tr>
-        <tr style="background-color: #f8fafc;">
+        <tr style="background-color: #002147;">
           <td style="padding: 8px 12px; border: 1px solid #cbd5e1; font-weight: 700; color: #002147;">Module 3: Prompt Craft</td>
           <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Delimiter isolation protocol (<code>###</code>) & formative rubric calibration.</td>
           <td style="padding: 8px 12px; border: 1px solid #cbd5e1; text-align: center; font-weight: 600;">15 min</td>
@@ -139,7 +139,7 @@ Before running prompts or interacting with AI models in this workshop, verify yo
           <td style="padding: 8px 12px; border: 1px solid #cbd5e1; text-align: center; font-weight: 600;">10 min</td>
           <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Safety Audit Review</td>
         </tr>
-        <tr style="background-color: #f8fafc;">
+        <tr style="background-color: #002147;">
           <td style="padding: 8px 12px; border: 1px solid #cbd5e1; font-weight: 700; color: #002147;">Module 5: Capstone</td>
           <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Complete the Sovereign Auditor Matrix and submit for institutional credit.</td>
           <td style="padding: 8px 12px; border: 1px solid #cbd5e1; text-align: center; font-weight: 600;">10 min</td>
@@ -268,7 +268,7 @@ Provide a Markdown table with columns:
 | Item # | Action Item / Deliverable | Responsible Lead | Target Completion | Priority (High/Med/Low) |
 ###
 
-<details open style="background-color: #f8fafc; border: 1px solid #cbd5e1; border-left: 4px solid #003366; border-radius: 4px; padding: 12px 16px; margin: 16px 0 24px 0;">
+<details open style="background-color: #002147; border: 1px solid #cbd5e1; border-left: 4px solid #003366; border-radius: 4px; padding: 12px 16px; margin: 16px 0 24px 0;">
   <summary style="font-weight: 700; color: #003366; cursor: pointer; font-size: 0.95rem; outline: none;">
     View Verified Benchmark Exemplar (Meeting Action Matrix Output)
   </summary>
@@ -278,7 +278,7 @@ Provide a Markdown table with columns:
 <div style="overflow-x: auto;">
 <table style="width: 100%; border-collapse: collapse; margin-bottom: 12px; font-size: 0.84rem;">
 <thead>
-<tr style="background-color: #003366; color: #ffffff; text-align: left;">
+<tr style="background-color: #003366; color: #002147; text-align: left;">
 <th style="padding: 8px 12px; border: 1px solid #cbd5e1;">Action Item & Deliverable</th>
 <th style="padding: 8px 12px; border: 1px solid #cbd5e1;">Responsible Owner</th>
 <th style="padding: 8px 12px; border: 1px solid #cbd5e1;">Target Deadline</th>
@@ -286,13 +286,13 @@ Provide a Markdown table with columns:
 </tr>
 </thead>
 <tbody>
-<tr style="background-color: #ffffff;">
+<tr style="background-color: #002147;">
 <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Draft Module 02 OER syllabus alignment matrix</td>
 <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Curriculum Architect</td>
 <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Friday, 5:00 PM MST</td>
 <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Faculty Senate Curricular Handbook Sec. 4.2</td>
 </tr>
-<tr style="background-color: #f1f5f9;">
+<tr style="background-color: #002147;">
 <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Perform WCAG 2.1 AA table scope audit on LMS course shell imports</td>
 <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Instructional Designer</td>
 <td style="padding: 8px 12px; border: 1px solid #cbd5e1;">Next Tuesday, 12:00 PM</td>
@@ -301,7 +301,7 @@ Provide a Markdown table with columns:
 </tbody>
 </table>
 </div>
-<div style="background-color: #ffffff; border-left: 3px solid #10b981; padding: 8px 12px; font-size: 0.82rem;">
+<div style="background-color: #002147; border-left: 3px solid #10b981; padding: 8px 12px; font-size: 0.82rem;">
 <strong>Safety Auditor Verification:</strong> No student PII processed; deliverables are scoped strictly to documented statements in the transcript; ambiguous timeline items were flagged rather than hallucinated.
 </div>
 </div>
@@ -352,14 +352,14 @@ Generate the audit matrix identifying:
 - Remediation Action Item
 ###
 
-<details open style="background-color: #f8fafc; border: 1px solid #cbd5e1; border-left: 4px solid #003366; border-radius: 4px; padding: 12px 16px; margin: 16px 0 24px 0;">
+<details open style="background-color: #002147; border: 1px solid #cbd5e1; border-left: 4px solid #003366; border-radius: 4px; padding: 12px 16px; margin: 16px 0 24px 0;">
   <summary style="font-weight: 700; color: #003366; cursor: pointer; font-size: 0.95rem; outline: none;">
     View Verified Benchmark Exemplar (Delimiter-Parsed Formative Feedback)
   </summary>
 
 <div style="margin-top: 12px; font-size: 0.88rem; color: #1e2a38; line-height: 1.5;">
 <p style="margin-bottom: 8px;"><em>Deterministic Evaluation Generated Strictly Within the ### Delimiter Boundaries:</em></p>
-<div style="background-color: #ffffff; padding: 12px; border: 1px solid #cbd5e1; border-radius: 4px; margin-bottom: 12px;">
+<div style="background-color: #002147; padding: 12px; border: 1px solid #cbd5e1; border-radius: 4px; margin-bottom: 12px;">
 <h4 style="color: #003366; margin: 0 0 6px 0; font-size: 0.92rem;">Formative Evaluation Summary (Rubric Score: Proficient / 18 of 20 pts)</h4>
 <ul style="margin: 0; padding-left: 20px;">
 <li><strong>Criterion 1 (Mission Loop Alignment):</strong> The response accurately identifies the inactivity pattern and applies the federal physical activity guidelines rule.</li>
@@ -367,7 +367,7 @@ Generate the audit matrix identifying:
 <li><strong>Constructive Revision Area:</strong> Recommend expanding the intensity metrics from generic minutes to explicit MET-minute calculations to ensure complete clinical precision.</li>
 </ul>
 </div>
-<div style="background-color: #ffffff; border-left: 3px solid #10b981; padding: 8px 12px; font-size: 0.82rem;">
+<div style="background-color: #002147; border-left: 3px solid #10b981; padding: 8px 12px; font-size: 0.82rem;">
 <strong>Safety Auditor Verification:</strong> Input text remained strictly bounded within delimiters. Model refused to infer psychological intent or unstated personal traits. Final grade submission remains the sole responsibility of the instructor of record.
 </div>
 </div>
