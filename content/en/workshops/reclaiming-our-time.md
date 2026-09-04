@@ -613,13 +613,16 @@ Signature / Timestamp: [Insert Name / Date]
 
 ### Enterprise Tools & Official University Routing
 
-Primary Responsible AI Portal: Access authorized tools, request enterprise accounts, and review official guidelines via the University of Arizona Responsible Artificial Intelligence Start Here Portal (<https://responsibleai.arizona.edu/tools-support/start-here>).
+**Primary Responsible AI Portal:**  
+Access authorized enterprise tools, request departmental access, and review institutional guidelines via the [University of Arizona Responsible Artificial Intelligence Portal](https://responsibleai.arizona.edu/tools-support/start-here).
 
-Institutional GenAI Support & Intake: Submit departmental inquiries, review privacy and security evaluations, and access sanctioned generative AI resources directly through the Responsible AI support desk.
+**Institutional GenAI Support & Intake:**  
+Submit departmental inquiries, request privacy and security evaluations, and access sanctioned generative AI resources directly through the official Responsible AI support desk.
 
-Data Governance & FERPA Inquiries: Consult University Information Security and privacy policies through the Responsible AI portal before uploading or processing institutional materials.
+**Data Governance & FERPA Inquiries:**  
+Consult University Information Security and privacy policies through the Responsible AI portal prior to uploading, processing, or transmitting institutional and student records.
 
-Continuing Faculty PD</span>
+### Continuing Faculty Professional Development: Google Workspace with Gemini for Education
     <strong style="color: #002147; font-size: 0.95rem;">Google Workspace with Gemini for Education</strong>
   </div>
   <p style="margin: 0 0 10px 0; font-size: 0.86rem; color: #334155; line-height: 1.5;">
