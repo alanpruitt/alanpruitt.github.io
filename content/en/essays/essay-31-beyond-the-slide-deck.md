@@ -21,7 +21,7 @@ I have sat through enough institutional professional development sessions to kno
 
 Worse, most of these training decks and post-session web portals actively violate basic digital accessibility standards. At a time when the Department of Justice's final rule on ADA Title II digital accessibility demands strict, verifiable conformance, institutions routinely disseminate training materials that rely on uncaptioned visuals, illegible color contrast, and fragmented PDF exports.
 
-When I engineered the interactive workshop *Reclaiming Our Time: Secure and Practical GenAI Workflows for Faculty and Staff*, I refused to produce another presentation deck. 
+When I engineered the interactive workshop *Reclaiming Our Time: Secure and Practical GenAI Workflows for Faculty and Staff*, I refused to produce another presentation deck.
 
 I built an operational standard.
 
