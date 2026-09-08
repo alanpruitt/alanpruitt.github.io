@@ -325,9 +325,12 @@ function generateJsonFeed(essays) {
 function generateArchiveHtml(essays) {
   const essayListHtml = essays.map(essay => `
     <article style="margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid #E5E0D8;">
-      <h3 style="margin-bottom: 6px;">
+      <h3 style="margin-bottom: 6px; display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px;">
         <a href="${essay.canonicalUrl}" style="color: #0E3D73; text-decoration: underline; font-weight: 700;">
           ${escapeXml(essay.title)}
+        </a>
+        <a href="https://alanpruitt.substack.com" target="_blank" rel="noopener noreferrer" style="font-size: 0.75rem; font-weight: 600; color: #555555; text-decoration: none;">
+          Substack Edition ↗
         </a>
       </h3>
       <p style="margin: 0 0 8px 0; color: #555555; font-size: 0.85rem;">
