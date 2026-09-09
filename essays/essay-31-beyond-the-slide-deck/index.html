@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Essay 31: Beyond the Slide Deck — Architecture as Professional Development | Coach Alan</title>
+  <meta name="description" content="Essay 31: Beyond the Slide Deck — Architecture as Professional Development">
+  <link rel="canonical" href="https://alanpruitt.com/essays/essay-31-beyond-the-slide-deck">
+  
+  <!-- Feed Discovery -->
+  <link rel="alternate" type="application/rss+xml" title="Alan Pruitt - RSS Feed" href="https://alanpruitt.com/rss.xml">
+  <link rel="alternate" type="application/feed+json" title="Alan Pruitt - JSON Feed" href="https://alanpruitt.com/feed.json">
+  
+  <!-- OpenGraph Metadata -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Essay 31: Beyond the Slide Deck — Architecture as Professional Development">
+  <meta property="og:description" content="Essay 31: Beyond the Slide Deck — Architecture as Professional Development">
+  <meta property="og:url" content="https://alanpruitt.com/essays/essay-31-beyond-the-slide-deck">
+  <meta property="og:site_name" content="alanpruitt.com">
+
+  <!-- Premium Style Guard -->
+  <style>
+    :root {
+      --bg-creme-50: #FAFBF7;
+      --bg-creme-100: #F5F5F0;
+      --bg-creme-200: #E6E6DC;
+      --text-navy-800: #1E3E62;
+      --text-navy-900: #0B192C;
+      --text-navy-950: #060E1A;
+      --link-accent: #0E3D73;
+    }
+    *, ::before, ::after { box-sizing: border-box; }
+    html { line-height: 1.5; font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; height: 100%; }
+    body { margin: 0; min-height: 100%; display: flex; flex-direction: column; justify-content: space-between; background-color: var(--bg-creme-100); color: var(--text-navy-900); }
+    
+    header { width: 100%; background-color: #ffffff; border-bottom: 1px solid var(--bg-creme-200); padding: 24px; box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); }
+    main { width: 100%; max-width: 780px; margin: 40px auto; padding: 0 20px; flex-grow: 1; }
+    
+    .content h2 { font-size: 1.5rem; font-weight: 700; color: var(--text-navy-900); margin-top: 2rem; margin-bottom: 1rem; }
+    .content h3 { font-size: 1.25rem; font-weight: 700; color: var(--text-navy-900); margin-top: 1.5rem; margin-bottom: 0.75rem; }
+    .content p { font-size: 1rem; color: #1a1a1a; line-height: 1.75; margin-bottom: 1.25rem; }
+    .content ul, .content ol { margin-bottom: 1.25rem; padding-left: 1.5rem; }
+    .content li { margin-bottom: 0.5rem; line-height: 1.6; }
+    .content a { color: var(--link-accent); text-decoration: underline; font-weight: 600; }
+    .content pre { background-color: var(--bg-creme-50); border: 1px solid var(--bg-creme-200); padding: 1rem; border-radius: 0.5rem; overflow-x: auto; margin-bottom: 1.25rem; font-family: monospace; font-size: 0.875rem; }
+  </style>
+</head>
+<body class="bg-creme-100 text-navy-900 font-sans antialiased min-h-full flex flex-col justify-between">
+  <!-- Navigation Header -->
+  <header>
+    <div style="max-width: 780px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between;">
+      <a href="/" style="font-size: 1.125rem; font-weight: 700; color: var(--text-navy-900); text-decoration: none;">Alan Pruitt</a>
+      <nav style="display: flex; gap: 24px;">
+        <a href="/" style="font-size: 0.875rem; font-weight: 600; color: var(--text-navy-800); text-decoration: none;">Home</a>
+        <a href="/articles/" style="font-size: 0.875rem; font-weight: 600; color: var(--text-navy-900); text-decoration: underline;">Articles</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <article class="content">
+      <h1 style="font-size: 2rem; font-weight: 700; color: var(--text-navy-900); margin-top: 1rem; margin-bottom: 1.5rem;">Essay 31: Beyond the Slide Deck — Architecture as Professional Development</h1>
+      <p>I have sat through enough institutional professional development sessions to know the script by heart: sixty generic slides, high-altitude platitudes about the changing nature of work, a five-minute demonstration of a commercial chatbot, and a polite Q&A. The moment faculty step out of the seminar room and back to their department desks, that ephemeral deck evaporates in the face of a forty-hour grading backlog, committee notes, and syllabus revisions.</p>
+<p>Worse, most of these training decks and post-session web portals actively violate basic digital accessibility standards. At a time when the Department of Justice's final rule on ADA Title II digital accessibility demands strict, verifiable conformance, institutions routinely disseminate training materials that rely on uncaptioned visuals, illegible color contrast, and fragmented PDF exports.</p>
+<p>When I engineered the interactive workshop *Reclaiming Our Time: Secure and Practical GenAI Workflows for Faculty and Staff*, I refused to produce another presentation deck.</p>
+<p>I built an operational standard.</p>
+<h2>The Triad of Modern Faculty Development</h2>
+<p>To serve academic leadership and frontline educators simultaneously, institutional faculty development cannot remain an isolated event. It must be engineered as an infrastructure asset that addresses three interconnected pressures:</p>
+<p>1. **Systemic Faculty Burnout:** Administrative workload creep consumes the cognitive surplus required for teaching and mentorship.<br>2. **Federal Digital Governance:** Uncompromising enforcement of ADA Title II and WCAG 2.1/2.2 AA standards across all public postsecondary resources.<br>3. **Budgetary Vendor Lock-In:** Recurring per-seat enterprise software fees for closed-ecosystem platforms that fail to export clean, portable assets.</p>
+<p>When professional development is delivered as an auditable, open-source architectural artifact, it transitions from an institutional cost center into durable educational infrastructure.</p>
+<h2>Pillar 1: Born-Accessible Engineering</h2>
+<p>Retrofitting accessibility after publishing is an expensive, error-prone habit. Making a resource "born-accessible" requires embedding accessibility into the compilation layer from line zero:</p>
+<p>- **Strict Contrast Governance:** Every background, button state, input field, and text element exceeds WCAG 2.1/2.2 AA standards (maintaining a minimum 4.5:1 ratio for standard text and 3:1 for graphical UI elements).<br>- **Assistive Touch Targets:** All interactive elements, range sliders, and navigation anchors provide at least a 44x44 CSS pixel touch target, guaranteeing seamless navigation on mobile devices and assistive switches.<br>- **Screen Reader Parity:** The DOM contains unambiguous heading sequences (`h2`, `h3`), descriptive ARIA tags, and zero unannounced dynamic state changes.<br>- **Bilingual Structural Equity:** Equal architectural priority is given to English and regional Spanish translations, ensuring community college faculty and bilingual staff navigate equivalent tools without automated translation artifacts.</p>
+<p>When evaluated against automated axe-core linters, programmatic screen-reader emulators, and manual audits, the platform produces zero accessibility violations.</p>
+<h2>Pillar 2: The Curriculum-as-Code Pipeline</h2>
+<p>Higher education spends millions on proprietary platforms whose contents are locked within non-standard database rows. If an institution changes vendors or loses connectivity, those resources disappear.</p>
+<p>By treating instructional resources as software repositories, we achieve platform-agnostic durability:</p>
+<p>- **Plain-Text Authoring:** All content is maintained in semantic Markdown, completely separated from presentation logic.<br>- **Version Control:** Edits, revisions, and audits are tracked in Git, providing institutional transparency and an immutable commit history.<br>- **Static Site Compilation:** Built with Hugo, compiling hundreds of pages in under 300 milliseconds with zero server-side runtime, zero database vulnerabilities, and full offline portability.<br>- **Automated CI/CD Linting:** GitHub Actions workflows run strict markdown and formatting linters on every push, catching heading level skips or malformed links before code reaches production.</p>
+<p>Whether mounted within an institutional Canvas instance, served over an internal intranet, or packaged as an offline reference tool, the resource carries zero proprietary vendor lock-in.</p>
+<h2>Pillar 3: Quantifiable Workload ROI</h2>
+<p>Academic leaders do not need their faculty experimenting with parlor-trick chatbots. They need measurable, defensible time savings that protect instructional rigor:</p>
+<p>- **The Sovereign Auditor Model:** Rather than relying on inaccurate, adversarial AI detection tools, faculty learn to construct assignments where students audit probabilistic AI outputs against authoritative Single Sources of Truth (SSoT).<br>- **Interactive Workload Modeling:** Embedded calculators allow faculty to quantify time reclaimed—averaging 30 to 45 hours saved per semester on rubric calibration, syllabus auditing, and institutional reporting.<br>- **FERPA & Privacy Guardrails:** Concrete workflows demonstrate how to strip student identifiers, sanitize prompt inputs, and defend data privacy boundaries prior to querying enterprise AI systems.</p>
+<h2>Educational Architecture as Public Good</h2>
+<p>When institutions treat faculty training as Zero Textbook Cost (ZTC) and Open Educational Resources (OER) engineering, the result is robust, sustainable, and transparent. We do not need more slide decks; we need auditable systems that respect faculty time, comply with civil rights mandates, and elevate academic integrity across our institutions.</p>
+    </article>
+
+    <!-- INJECT SOCIAL SHARE BLOCK -->
+    
+    <!-- Zero-JS Semantic Social Share -->
+    <div style="margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--bg-creme-200, #E6E6DC); display: flex; flex-direction: column; gap: 16px;" aria-label="Social sharing options">
+      <span style="font-family: monospace; font-size: 0.75rem; font-weight: bold; color: var(--navy-dark); text-transform: uppercase; tracking-wider">
+        Share this Architecture:
+      </span>
+      <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center;">
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Falanpruitt.com%2Fessays%2Fessay-31-beyond-the-slide-deck" target="_blank" rel="noopener noreferrer" aria-label="Share on LinkedIn" style="font-family: monospace; font-size: 0.75rem; font-weight: 600; text-decoration: none; padding: 6px 12px; border-radius: 8px; border: 1px solid var(--bg-creme-200, #E6E6DC); color: var(--navy-dark); background-color: var(--bg-cream);">
+          LinkedIn
+        </a>
+        <a href="https://x.com/intent/post?text=Essay%2031%3A%20Beyond%20the%20Slide%20Deck%20%E2%80%94%20Architecture%20as%20Professional%20Development&url=https%3A%2F%2Falanpruitt.com%2Fessays%2Fessay-31-beyond-the-slide-deck&via=alanpruitt" target="_blank" rel="noopener noreferrer" aria-label="Share on X" style="font-family: monospace; font-size: 0.75rem; font-weight: 600; text-decoration: none; padding: 6px 12px; border-radius: 8px; border: 1px solid var(--bg-creme-200, #E6E6DC); color: var(--navy-dark); background-color: var(--bg-cream);">
+          X
+        </a>
+        <a href="https://reddit.com/submit?url=https%3A%2F%2Falanpruitt.com%2Fessays%2Fessay-31-beyond-the-slide-deck&title=Essay%2031%3A%20Beyond%20the%20Slide%20Deck%20%E2%80%94%20Architecture%20as%20Professional%20Development" target="_blank" rel="noopener noreferrer" aria-label="Share on Reddit" style="font-family: monospace; font-size: 0.75rem; font-weight: 600; text-decoration: none; padding: 6px 12px; border-radius: 8px; border: 1px solid var(--bg-creme-200, #E6E6DC); color: var(--navy-dark); background-color: var(--bg-cream);">
+          Reddit
+        </a>
+        <a href="mailto:?subject=Essay%2031%3A%20Beyond%20the%20Slide%20Deck%20%E2%80%94%20Architecture%20as%20Professional%20Development&body=Read%20this%20Curriculum-as-Code%20architecture:%20https%3A%2F%2Falanpruitt.com%2Fessays%2Fessay-31-beyond-the-slide-deck" aria-label="Share via Email" style="font-family: monospace; font-size: 0.75rem; font-weight: 600; text-decoration: none; padding: 6px 12px; border-radius: 8px; border: 1px solid var(--bg-creme-200, #E6E6DC); color: var(--navy-dark); background-color: var(--bg-cream);">
+          Email
+        </a>
+      </div>
+    </div>
+
+    <!-- Academic Citation & BibTeX Section -->
+    
+  </main>
+
+  <!-- Footer -->
+  <footer style="width: 100%; padding: 32px 24px; text-align: center; font-size: 0.75rem; border-top: 1px solid var(--text-navy-950); background-color: var(--text-navy-900); color: var(--bg-creme-100);">
+    <p style="margin-bottom: 8px;">© 2026 Alan Pruitt • All Rights Reserved.</p>
+    <p style="opacity: 0.75; margin: 0;">Instructional Design, AI Pedagogy & Curriculum Architecture</p>
+  </footer>
+</body>
+</html>

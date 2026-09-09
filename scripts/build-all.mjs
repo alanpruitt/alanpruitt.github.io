@@ -5,7 +5,7 @@ const SITE_ORIGIN = 'https://alanpruitt.com';
 const primaryContentDir = resolve('content/en/essays');
 const fallbackContentDir = resolve('content/essays');
 const CONTENT_DIR = existsSync(primaryContentDir) ? primaryContentDir : fallbackContentDir;
-const DIST_DIR = (process.env.GITHUB_ACTIONS === 'true') ? resolve('_site') : resolve('.');
+const DIST_DIR = resolve('.');
 
 function parseFrontmatter(rawContent) {
   const match = rawContent.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
@@ -398,7 +398,7 @@ function run() {
     return;
   }
 
-  const files = readdirSync(CONTENT_DIR).filter(file => file.endsWith('.md'));
+  const files = readdirSync(CONTENT_DIR).filter(file => file.endsWith('.md') && !file.startsWith('_'));
   console.log(`\n🚀 Initializing Dual-Route Generation across ${files.length} essay(s)...`);
 
   const essays = [];

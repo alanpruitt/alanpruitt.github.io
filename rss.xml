@@ -14,6 +14,48 @@
       <description></description>
     </item>
     <item>
+      <title>Essay: essay-15</title>
+      <link>https://alanpruitt.com/essays/essay-15</link>
+      <guid isPermaLink="true">https://alanpruitt.com/essays/essay-15</guid>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+      <description></description>
+    </item>
+    <item>
+      <title>The Logic Grid: Why Good Assessment Looks Like Sudoku (and How the Mission Loop Solves the AI Crisis)</title>
+      <link>https://alanpruitt.com/essays/essay-30-the-logic-grid</link>
+      <guid isPermaLink="true">https://alanpruitt.com/essays/essay-30-the-logic-grid</guid>
+      <pubDate>Thu, 03 Sep 2026 17:00:00 GMT</pubDate>
+      <description></description>
+    </item>
+    <item>
+      <title>Essay 31: Beyond the Slide Deck — Architecture as Professional Development</title>
+      <link>https://alanpruitt.com/essays/essay-31-beyond-the-slide-deck</link>
+      <guid isPermaLink="true">https://alanpruitt.com/essays/essay-31-beyond-the-slide-deck</guid>
+      <pubDate>Thu, 03 Sep 2026 00:00:00 GMT</pubDate>
+      <description></description>
+    </item>
+    <item>
+      <title>Essay 29: The Upstream Shift — Why Post-Production Accessibility Is a Failure of Architectural Design</title>
+      <link>https://alanpruitt.com/essays/essay-29</link>
+      <guid isPermaLink="true">https://alanpruitt.com/essays/essay-29</guid>
+      <pubDate>Sat, 29 Aug 2026 16:30:00 GMT</pubDate>
+      <description></description>
+    </item>
+    <item>
+      <title>Essay 28: Beyond Performative Compliance — ADA Title II, Living Conformance Statements, and Automated Institutional Governance</title>
+      <link>https://alanpruitt.com/essays/essay-28</link>
+      <guid isPermaLink="true">https://alanpruitt.com/essays/essay-28</guid>
+      <pubDate>Fri, 28 Aug 2026 15:00:00 GMT</pubDate>
+      <description></description>
+    </item>
+    <item>
+      <title>Essay 25: The Accessibility Checker Parity Illusion: Schema Divergence &amp; CaC</title>
+      <link>https://alanpruitt.com/essays/essay-25</link>
+      <guid isPermaLink="true">https://alanpruitt.com/essays/essay-25</guid>
+      <pubDate>Thu, 27 Aug 2026 15:00:00 GMT</pubDate>
+      <description></description>
+    </item>
+    <item>
       <title>Curriculum-as-Code, ADA Title II Compliance, and Fleet-Wide Accessibility Refactoring</title>
       <link>https://alanpruitt.com/essays/essay-27</link>
       <guid isPermaLink="true">https://alanpruitt.com/essays/essay-27</guid>
@@ -21,11 +63,32 @@
       <description></description>
     </item>
     <item>
-      <title>Essay 25</title>
-      <link>https://alanpruitt.com/essays/25-curriculum-as-code-sovereign-infrastructure</link>
-      <guid isPermaLink="true">https://alanpruitt.com/essays/25-curriculum-as-code-sovereign-infrastructure</guid>
-      <pubDate>Wed, 19 Aug 2026 00:00:00 GMT</pubDate>
-      <description>How treating course materials as software—using Markdown, version control, and static site generators—protects faculty authority, enforces accessibility, and eliminates publisher costs.</description>
+      <title>The Hybrid Ergometer Scaffold: Synchronizing AI Simulation with Lab Precision</title>
+      <link>https://alanpruitt.com/essays/19-hybrid-ergometer-scaffold</link>
+      <guid isPermaLink="true">https://alanpruitt.com/essays/19-hybrid-ergometer-scaffold</guid>
+      <pubDate>Fri, 21 Aug 2026 00:00:00 GMT</pubDate>
+      <description>How EXW245 decouples cognitive pre-flight mathematical verification from physical laboratory execution using a two-part scaffold pairing Gemini AI simulation sandboxes with Lode Corival research-grade cycle ergometers.</description>
+    </item>
+    <item>
+      <title>Deterministic Clinical Guardrails: Preventing Hallucination Drift in Special Population Prescriptions</title>
+      <link>https://alanpruitt.com/essays/20-deterministic-clinical-guardrails</link>
+      <guid isPermaLink="true">https://alanpruitt.com/essays/20-deterministic-clinical-guardrails</guid>
+      <pubDate>Fri, 21 Aug 2026 00:00:00 GMT</pubDate>
+      <description>How EXW265 deploys deterministic prompt guardrails, strict delimiter encapsulation, and the federal PAGA 2018 Single Source of Truth to eliminate dangerous AI hallucination drift in exercise prescriptions for chronic conditions.</description>
+    </item>
+    <item>
+      <title>Evidence-Based Nutrition vs. The Feed: Upstream SSoT Governance in Sports Nutrition</title>
+      <link>https://alanpruitt.com/essays/21-evidence-based-nutrition-vs-feed</link>
+      <guid isPermaLink="true">https://alanpruitt.com/essays/21-evidence-based-nutrition-vs-feed</guid>
+      <pubDate>Fri, 21 Aug 2026 00:00:00 GMT</pubDate>
+      <description>How EXW150 uses Curriculum-as-Code, the Mission Loop framework, and federal SSoT standards to insulate community college students from social media fad diets, predatory supplement claims, and unanchored AI nutrition advice.</description>
+    </item>
+    <item>
+      <title>Foundational Human Movement in the Algorithmic Age: PAGA 2018 SSoT &amp; Community Inactivity Interventions</title>
+      <link>https://alanpruitt.com/essays/22-foundational-human-movement-in-the-algorithmic-age</link>
+      <guid isPermaLink="true">https://alanpruitt.com/essays/22-foundational-human-movement-in-the-algorithmic-age</guid>
+      <pubDate>Fri, 21 Aug 2026 00:00:00 GMT</pubDate>
+      <description>How EXW101 deploys Curriculum-as-Code, the federal PAGA 2018 SSoT, and the Mission Loop framework to deconstruct systemic inactivity patterns and build community-level health interventions in rural borderland regions.</description>
     </item>
     <item>
       <title>Essay 26</title>
@@ -33,6 +96,118 @@
       <guid isPermaLink="true">https://alanpruitt.com/essays/26-curriculum-as-code-pour-audit-framework</guid>
       <pubDate>Wed, 19 Aug 2026 00:00:00 GMT</pubDate>
       <description>An analysis of the POUR-Audit framework within Curriculum-as-Code paradigms, highlighting automated verification checks for heading hierarchies, image alt-text, and legacy reference deprecation.</description>
+    </item>
+    <item>
+      <title>Essay 24</title>
+      <link>https://alanpruitt.com/essays/24-chatbots-canvas-lms-cautionary-tale</link>
+      <guid isPermaLink="true">https://alanpruitt.com/essays/24-chatbots-canvas-lms-cautionary-tale</guid>
+      <pubDate>Mon, 17 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Why integrating commercial AI chatbots inside Canvas LMS introduces severe institutional risks, compromises FERPA/ADA standards, and how high-friction Socratic assessments preserve human voice and presence.</description>
+    </item>
+    <item>
+      <title>Essay 17: Engineering Resilience: Resolving False-Positive Contrast Errors and Array Parsing Script Failures via Curriculum-as-Code</title>
+      <link>https://alanpruitt.com/essays/17-resolving-array-parsing-script-failures</link>
+      <guid isPermaLink="true">https://alanpruitt.com/essays/17-resolving-array-parsing-script-failures</guid>
+      <pubDate>Fri, 14 Aug 2026 00:00:00 GMT</pubDate>
+      <description></description>
+    </item>
+    <item>
+      <title>The AI Safety Auditor Pattern in Applied Kinesiology</title>
+      <link>https://alanpruitt.com/essays/10-ai-safety-auditor-pattern</link>
+      <guid isPermaLink="true">https://alanpruitt.com/essays/10-ai-safety-auditor-pattern</guid>
+      <pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
+      <description></description>
+    </item>
+    <item>
+      <title>The Two-Part Scaffold Framework: Bridging Simulation &amp; Research-Grade Application</title>
+      <link>https://alanpruitt.com/essays/11-two-part-scaffold-framework</link>
+      <guid isPermaLink="true">https://alanpruitt.com/essays/11-two-part-scaffold-framework</guid>
+      <pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
+      <description></description>
+    </item>
+    <item>
+      <title>The Mission Loop Architecture: Pattern, Rule, and Solve in Coded Instruction</title>
+      <link>https://alanpruitt.com/essays/12-mission-loop-architecture</link>
+      <guid isPermaLink="true">https://alanpruitt.com/essays/12-mission-loop-architecture</guid>
+      <pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
+      <description></description>
+    </item>
+    <item>
+      <title>The Vibe-Coding Paradigm: Speed, Intuition, and Full-Stack Execution in Instructional Engineering</title>
+      <link>https://alanpruitt.com/essays/13-vibe-coding-paradigm</link>
+      <guid isPermaLink="true">https://alanpruitt.com/essays/13-vibe-coding-paradigm</guid>
+      <pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
+      <description></description>
+    </item>
+    <item>
+      <title>The Guided Learning Trifecta: AI Simulation, Clinical Application, and Deterministic Auditing</title>
+      <link>https://alanpruitt.com/essays/14-guided-learning-trifecta</link>
+      <guid isPermaLink="true">https://alanpruitt.com/essays/14-guided-learning-trifecta</guid>
+      <pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
+      <description></description>
+    </item>
+    <item>
+      <title>Immutable Learning Analytics &amp; Privacy-First Telemetry</title>
+      <link>https://alanpruitt.com/essays/09-immutable-learning-analytics</link>
+      <guid isPermaLink="true">https://alanpruitt.com/essays/09-immutable-learning-analytics</guid>
+      <pubDate>Thu, 06 Aug 2026 00:00:00 GMT</pubDate>
+      <description></description>
+    </item>
+    <item>
+      <title>Practical AI in Canvas: Supporting Course Design, Content Creation, and Student Engagement</title>
+      <link>https://alanpruitt.com/essays/06-canvas-ai-course-design</link>
+      <guid isPermaLink="true">https://alanpruitt.com/essays/06-canvas-ai-course-design</guid>
+      <pubDate>Tue, 04 Aug 2026 00:00:00 GMT</pubDate>
+      <description></description>
+    </item>
+    <item>
+      <title>Continuous Integration for Pedagogy: Writing Automated Unit Tests for Learning Outcomes</title>
+      <link>https://alanpruitt.com/essays/07-continuous-integration-pedagogy</link>
+      <guid isPermaLink="true">https://alanpruitt.com/essays/07-continuous-integration-pedagogy</guid>
+      <pubDate>Tue, 04 Aug 2026 00:00:00 GMT</pubDate>
+      <description></description>
+    </item>
+    <item>
+      <title>Sovereign Localization: Automating Multi-Lingual &amp; Multi-Dialect Course Pipelines</title>
+      <link>https://alanpruitt.com/essays/08-bilingual-localization-pipelines</link>
+      <guid isPermaLink="true">https://alanpruitt.com/essays/08-bilingual-localization-pipelines</guid>
+      <pubDate>Tue, 04 Aug 2026 00:00:00 GMT</pubDate>
+      <description></description>
+    </item>
+    <item>
+      <title>Shifting from AI Fear to Strategic Assessment Design</title>
+      <link>https://alanpruitt.com/essays/01-ai-assessment-design</link>
+      <guid isPermaLink="true">https://alanpruitt.com/essays/01-ai-assessment-design</guid>
+      <pubDate>Thu, 30 Jul 2026 00:00:00 GMT</pubDate>
+      <description></description>
+    </item>
+    <item>
+      <title>Curriculum-as-Code: Treating Educational Content Like Software Development</title>
+      <link>https://alanpruitt.com/essays/02-curriculum-as-code</link>
+      <guid isPermaLink="true">https://alanpruitt.com/essays/02-curriculum-as-code</guid>
+      <pubDate>Thu, 30 Jul 2026 00:00:00 GMT</pubDate>
+      <description></description>
+    </item>
+    <item>
+      <title>Air-Gapped &amp; Sovereign AI: Local Intelligence in High-Compliance Environments</title>
+      <link>https://alanpruitt.com/essays/03-air-gapped-sovereign-ai</link>
+      <guid isPermaLink="true">https://alanpruitt.com/essays/03-air-gapped-sovereign-ai</guid>
+      <pubDate>Thu, 30 Jul 2026 00:00:00 GMT</pubDate>
+      <description></description>
+    </item>
+    <item>
+      <title>Architecting Born-Accessible Higher Ed: ADA Title II &amp; Curriculum-as-Code</title>
+      <link>https://alanpruitt.com/essays/04-ada-title-ii-accessibility</link>
+      <guid isPermaLink="true">https://alanpruitt.com/essays/04-ada-title-ii-accessibility</guid>
+      <pubDate>Thu, 30 Jul 2026 00:00:00 GMT</pubDate>
+      <description></description>
+    </item>
+    <item>
+      <title>Instructional Engineering: Transforming Curriculum into Version-Controlled Source Code</title>
+      <link>https://alanpruitt.com/essays/05-instructional-engineering</link>
+      <guid isPermaLink="true">https://alanpruitt.com/essays/05-instructional-engineering</guid>
+      <pubDate>Thu, 30 Jul 2026 00:00:00 GMT</pubDate>
+      <description></description>
     </item>
   </channel>
 </rss>
