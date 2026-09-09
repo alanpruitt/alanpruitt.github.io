@@ -2,7 +2,9 @@ import { readFileSync, writeFileSync, readdirSync, existsSync, mkdirSync } from 
 import { resolve, join, basename } from 'path';
 
 const SITE_ORIGIN = 'https://alanpruitt.com';
-const CONTENT_DIR = resolve('content/essays');
+const primaryContentDir = resolve('essays');
+const fallbackContentDir = resolve('content/essays');
+const CONTENT_DIR = existsSync(primaryContentDir) ? primaryContentDir : fallbackContentDir;
 const DIST_DIR = (process.env.GITHUB_ACTIONS === 'true') ? resolve('_site') : resolve('.');
 
 function parseFrontmatter(rawContent) {
