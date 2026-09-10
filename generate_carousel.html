@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+    @page { size: 1080px 1080px; margin: 0; background-color: #002147; }
+    *, *::before, *::after { box-sizing: border-box; }
+    body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #FFF9F0; background-color: #002147; }
+    .slide { width: 1080px; height: 1080px; position: relative; page-break-after: always; display: block; padding: 80px 90px; }
+    .slide:last-child { page-break-after: avoid; }
+    .slide-category { font-size: 20px; font-weight: 700; text-transform: uppercase; letter-spacing: 3px; color: #38bdf8; margin-bottom: 15px; }
+    h1 { font-size: 52px; line-height: 1.15; font-weight: 800; margin: 0 0 15px 0; color: #FFF9F0; }
+    h2 { font-size: 40px; line-height: 1.2; font-weight: 700; margin: 0 0 25px 0; color: #FFF9F0; }
+    .subtitle { font-size: 26px; color: #cbd5e1; margin-bottom: 30px; line-height: 1.4; }
+    .card-container { display: block; margin-top: 25px; }
+    .card { background-color: rgba(255, 255, 255, 0.05); border-left: 6px solid #38bdf8; padding: 22px 28px; margin-bottom: 18px; border-radius: 4px; }
+    .card-title { font-size: 24px; font-weight: 700; margin-bottom: 8px; color: #FFF9F0; }
+    .card-text { font-size: 20px; line-height: 1.45; color: #cbd5e1; margin: 0; }
+    ul.bullet-list { list-style-type: none; padding: 0; margin: 25px 0; }
+    ul.bullet-list li { font-size: 22px; line-height: 1.5; margin-bottom: 16px; position: relative; padding-left: 40px; color: #e2e8f0; }
+    ul.bullet-list li::before { content: "■"; position: absolute; left: 0; color: #38bdf8; font-size: 20px; top: 1px; }
+    .footer { position: absolute; bottom: 50px; left: 90px; right: 90px; display: block; border-top: 1px solid rgba(255, 255, 255, 0.15); padding-top: 20px; font-size: 18px; color: #94a3b8; }
+    .footer-left { float: left; }
+    .footer-right { float: right; }
+    .cta-box { background: rgba(56, 189, 248, 0.1); border: 2px solid #38bdf8; border-radius: 12px; padding: 30px; text-align: center; margin-top: 30px; }
+    .cta-url { font-size: 28px; font-weight: 700; color: #38bdf8; margin-top: 15px; }
+</style>
+</head>
+<body>
+<div class="slide">
+    <div class="slide-category">Curriculum-as-Code &bull; Essay 32</div>
+    <h1 style="margin-top: 60px;">From Retrofit to Architecture</h1>
+    <div class="subtitle">Operationalizing ADA Title II Compliance Before the Fall Deadline</div>
+    <div class="footer"><div class="footer-left">Alan Pruitt &bull; Curriculum Architect</div><div class="footer-right">Slide 1 of 5</div></div>
+</div>
+<div class="slide">
+    <div class="slide-category">The Problem</div>
+    <h2>The Fallacy of the End-of-Semester Retrofit</h2>
+    <div class="card-container">
+        <div class="card"><div class="card-title">Downstream Fragility</div><p class="card-text">Treating accessibility as a post-production checklist creates massive regression risks every single semester.</p></div>
+        <div class="card"><div class="card-title">WYSIWYG Traps</div><p class="card-text">Traditional rich text boxes routinely generate non-compliant color contrast pairings and broken heading hierarchies.</p></div>
+    </div>
+    <div class="footer"><div class="footer-left">Curriculum Sovereignty Series</div><div class="footer-right">Slide 2 of 5</div></div>
+</div>
+<div class="slide">
+    <div class="slide-category">The Solution</div>
+    <h2>Shifting Compliance Upstream with Markdown</h2>
+    <ul class="bullet-list">
+        <li><strong>Treat Content as Code:</strong> Manage master course files via version-controlled Git repositories.</li>
+        <li><strong>Token-Driven Design:</strong> Enforce high-contrast palettes and strict semantic heading trees from day one.</li>
+        <li><strong>Mandatory Delimiters:</strong> Isolate clinical case data and prompt variables using standardized triple-hash protocols.</li>
+    </ul>
+    <div class="footer"><div class="footer-left">Curriculum Sovereignty Series</div><div class="footer-right">Slide 3 of 5</div></div>
+</div>
+<div class="slide">
+    <div class="slide-category">The Automation</div>
+    <h2>Continuous Integration Linting</h2>
+    <div class="card-container">
+        <div class="card"><div class="card-title">Automated Build Scans</div><p class="card-text">CI scripts automatically scan syntax for missing alt tags, broken table scopes, and skipped heading levels before compilation.</p></div>
+        <div class="card"><div class="card-title">Zero-Regression Builds</div><p class="card-text">If a file fails WCAG standards, the build fails instantly—blocking non-compliant code from reaching the LMS.</p></div>
+    </div>
+    <div class="footer"><div class="footer-left">Curriculum Sovereignty Series</div><div class="footer-right">Slide 4 of 5</div></div>
+</div>
+<div class="slide">
+    <div class="slide-category">Read the Full Breakdown</div>
+    <h2>Secure Your Course Architecture</h2>
+    <div class="cta-box">
+        <p style="font-size: 22px; margin: 0; color: #FFF9F0;">Explore how the Curriculum-as-Code framework eliminates administrative debt and achieves true curriculum sovereignty.</p>
+        <div class="cta-url">Read Essay 32 on Substack (Link in Comments)</div>
+    </div>
+    <div class="footer"><div class="footer-left">alanpruitt.substack.com</div><div class="footer-right">Slide 5 of 5</div></div>
+</div>
+</body>
+</html>
