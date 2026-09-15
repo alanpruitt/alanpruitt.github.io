@@ -1,10 +1,17 @@
 ---
+
 title: "What Happens When You Stop Renting Your Curriculum"
+
 slug: "what-happens-when-you-stop-renting-your-curriculum"
+
 date: 2026-09-15
+
 draft: false
+
 category: "Curriculum-as-Code"
+
 summary: "A practical look at trading proprietary WYSIWYG editors for plain-text repositories, automated linters, and true instructional ownership."
+
 ---
 
 A practical look at trading proprietary WYSIWYG editors for plain-text repositories, automated linters, and true instructional ownership. September arrives, and higher education runs on a very familiar, exhausting script.
@@ -25,7 +32,8 @@ A practical look at trading proprietary WYSIWYG editors for plain-text repositor
 
 I wasn’t looking to burn down the LMS on day one. But I couldn’t ignore the math of what running a modern course portfolio actually cost me.
 
-During the Fall 2026 launch across my exercise science course portfolio—from EXW101 and EXW150 to EXW245 and EXW265—the friction 
+During the Fall 2026 launch across my exercise science course portfolio—from EXW101 and EXW150 to EXW245 and EXW265—the friction
+
 We have spent decades accepting this friction as the cost of doing business.
 
 Updating course shells. Chasing down ADA Title II compliance retroactively. Adjusting to a new round of institutional software updates and stae mobile responsiveness. Spending precious hours fighting software interfaces instead of focusing on expert instructional design and student engagement on the ground.
@@ -35,6 +43,7 @@ Those aren’t estimates. I have the git commit histories, accessibility audit l
 My original plan was the same conventional script everyone else follows.
 
 I would buy into another ecosystem add-on, accept the recurring subscription licensing fees, train on proprietary workarounds, and hope the platform up
+
 During the ?t scramble my semantic HTML before the semester started.
 
 Perfectly reasonable.
@@ -44,6 +53,7 @@ Then I looked more closely at what locking my curriculum into closed systems was
 That got my attention.
 
 Suddenly, I wasn’t thinking as much about
+
 Those aren’t estimates. I have the git commit histories, accessibility audit logs, and late-night debug sessions to prove them.
 
 My original plan was the same conventional script everyone else followation thought about digital accessibility and instructional scaling, we thought primarily about downstream enforcement.
@@ -63,6 +73,7 @@ That question changed everything.
 Moving away from proprietary lock-in wasn’t some magical solution where I migrated to plain-text repositories, compiled my static assets, and all my administrative hurdles disappeared overnight.
 
 It meant unlearning habits built over decades, managing my own version-control workflows, adopting Curriculum-as-Code pipelines, and wrestling with an impressive collection of technical acronyms that nob
+
 How do I audit the course after it’s built?
 
 Could I hire more instructional designers to fix broken shells?
@@ -78,6 +89,7 @@ But I no longer fight proprietary WYSIWYG editors or chase software patches to k
 Most days, I consider my course design workflow calm.
 
 Apparently, tha
+
 It meant unlearning habited code as a curriculum.
 
 This isn’t a story about Silicon Valley disruption.
@@ -91,6 +103,7 @@ I taught classes. I built content. I made some smart technical decisions.
 I made some pretty clumsy ones too. Those post-mortems are coming.
 
 Eventually, I accumulated enough reusable components, au
+
 I still advise,ility linters, and semantic templates that breaking away from closed platforms became a realistic option.
 
 Yet simplicity hasn’t stopped mattering.
@@ -101,7 +114,8 @@ The difference is that I now look at course infrastructure somewhat differently.
 
 The objective isn’t necessarily to accumulate as many fancy third-party ed-tech tools as possible.
 
-The objective is to have 
+The objective is to have
+
 Plenty of higher-ed is mine, and that is enough.
 
 Of course, figuring out what “enough” means in higher education is where things get interesting.
@@ -112,7 +126,8 @@ How many more semesters do I really need to spend fighting my own software?
 
 And there may be students and practitioners asking an even better question:
 
-How can I structure my learning 
+How can I structure my learning
+
 Yet simplicity hasn’t stopped mattering.
 
 I still have itive overhauls to experience truly accessible, equitable education?
@@ -132,3 +147,4 @@ I’m still here.
 More importantly, I’ve started to understand that the thing I really bought wasn’t just technical efficiency.
 
 It was instructional sovereignty.
+
