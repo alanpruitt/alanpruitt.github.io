@@ -23,7 +23,7 @@ categories: ["ai-safety-protocols"]
   ========================================================================= -->
 <div data-lang="en">
 
-# The AI Safety Auditor Pattern in Applied Kinesiology
+## The AI Safety Auditor Pattern in Applied Kinesiology
 
 The introduction of generative AI into kinesiology and health science education has exposed a fundamental design flaw: most academic AI implementations are designed as passive tutors or conversational "quiz masters." They answer questions, summarize lectures, and occasionally hallucinate clinical protocols. In high-stakes fields like exercise testing, biomechanics, and nutrition, passive AI conversational partners are not just ineffective—they are clinically dangerous.
 
@@ -75,7 +75,7 @@ Integrating the Safety Auditor Pattern into kinesiology lab modules transforms s
   ========================================================================= -->
 <div data-lang="es" class="hidden-lang">
 
-# El Patrón de Auditor de Seguridad de IA en Kinesiología Aplicada
+## El Patrón de Auditor de Seguridad de IA en Kinesiología Aplicada
 
 La introducción de la IA generativa en la educación sobre kinesiología y ciencias de la salud ha expuesto una falla de diseño fundamental: la mayoría de las implementaciones académicas de IA se diseñan como tutores pasivos o "maestros de cuestionarios" conversacionales. Responden preguntas, resumen conferencias y ocasionalmente alucinan protocolos clínicos. En campos de alto riesgo como las pruebas de esfuerzo, la biomecánica y la nutrición, los socios conversacionales pasivos de IA no solo son ineficaces, sino clínicamente peligrosos.
 

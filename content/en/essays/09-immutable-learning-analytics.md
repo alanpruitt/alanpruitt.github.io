@@ -23,7 +23,7 @@ categories: ["ada-title-ii"]
   ========================================================================= -->
 <div data-lang="en">
 
-# Immutable Learning Analytics & Privacy-First Telemetry
+## Immutable Learning Analytics & Privacy-First Telemetry
 
 Higher education’s current approach to learning analytics is fundamentally flawed. In the rush to monitor student engagement, institutions have built intrusive surveillance apparatuses—relying on heavy Learning Management System (LMS) trackers, proprietary cookies, and third-party data aggregators. These systems monetize or hoard behavioral data while offering educators remarkably little actionable pedagogical insight.
 
@@ -74,7 +74,7 @@ By hashing user identifiers locally before telemetry payloads exit the client br
   ========================================================================= -->
 <div data-lang="es" class="hidden-lang">
 
-# Analíticas de Aprendizaje Inmutables y Telemetría Orientada a la Privacidad
+## Analíticas de Aprendizaje Inmutables y Telemetría Orientada a la Privacidad
 
 El enfoque actual de la educación superior respecto a las analíticas de aprendizaje presenta fallas fundamentales. En la prisa por monitorear la participación estudiantil, las instituciones han construido aparatos de vigilancia intrusivos basados en rastreadores de LMS, cookies propietarias y agregadores de datos de terceros. Estos sistemas monetizan o acumulan datos conductuales mientras ofrecen a los educadores muy poca información pedagógica accionable.
 

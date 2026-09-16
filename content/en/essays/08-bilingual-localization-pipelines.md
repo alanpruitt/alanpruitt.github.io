@@ -23,7 +23,7 @@ categories: ["ada-title-ii"]
   ========================================================================= -->
 <div data-lang="en">
 
-# Sovereign Localization: Automating Multi-Lingual & Multi-Dialect Course Pipelines
+## Sovereign Localization: Automating Multi-Lingual & Multi-Dialect Course Pipelines
 
 In dual-language and regional higher education contexts, multi-lingual instruction is often treated as an afterthought—relegated to second-tier automated browser translation widgets or manual, out-of-sync PDF translations. This creates significant equity gaps, as non-native English speakers receive content that lacks technical precision, cultural nuance, and structural alignment.
 
@@ -65,7 +65,7 @@ By integrating localization into CI/CD build scripts, any edit made to the prima
   ========================================================================= -->
 <div data-lang="es" class="hidden-lang">
 
-# Localización Soberana: Automatización de Tuberías de Cursos Multilingües y Multidialectales
+## Localización Soberana: Automatización de Tuberías de Cursos Multilingües y Multidialectales
 
 En contextos de educación superior bilingüe y regional, la instrucción multilingüe a menudo se trata como una idea de último momento, relegada a widgets de traducción automática del navegador o traducciones manuales en PDF desincronizadas. Esto genera brechas de equidad significativas, ya que los estudiantes no nativos reciben contenidos sin precisión técnica, matiz cultural ni alineación estructural.
 

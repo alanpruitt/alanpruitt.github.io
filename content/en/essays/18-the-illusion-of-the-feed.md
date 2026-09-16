@@ -1,6 +1,6 @@
 <!-- markdownlint-disable MD024 MD003 -->
 
-# Essay 18: The Illusion of the Feed: Upstream SSoT and Feed Link Rot Governance
+## Essay 18: The Illusion of the Feed: Upstream SSoT and Feed Link Rot Governance
 
 ## Learning Objectives
 

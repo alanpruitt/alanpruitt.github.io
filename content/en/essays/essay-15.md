@@ -1,4 +1,4 @@
-# Essay 15: Algorithmic Pedagogy & Continuous Integration — Engineering Zero-Regression Learning Environments
+## Essay 15: Algorithmic Pedagogy & Continuous Integration — Engineering Zero-Regression Learning Environments
 
 When traditional course design meets institutional scaling, it almost always encounters a friction point: version decay. Syllabi drift out of alignment with lab rubrics, external links break, accreditation standards shift, and manual updates introduce silent regressions into LMS course shells.
 

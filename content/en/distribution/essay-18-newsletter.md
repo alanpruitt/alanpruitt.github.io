@@ -1,4 +1,4 @@
-# Newsletter Dispatch Asset: Essay 18
+## Newsletter Dispatch Asset: Essay 18
 
 **Subject:** Architectural Debt in the LMS: Why dynamic feeds break compliance
 

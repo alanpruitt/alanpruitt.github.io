@@ -14,7 +14,7 @@ lang_default: "en"
 canonical_url: "https://alanpruitt.com/articles/19-hybrid-ergometer-scaffold.html"
 categories: ["ai-safety-protocols"]
 ---
-# The Hybrid Ergometer Scaffold: Synchronizing AI Simulation with Lab Precision
+## The Hybrid Ergometer Scaffold: Synchronizing AI Simulation with Lab Precision
 
 In clinical kinesiology and exercise physiology curricula, laboratory courses face a persistent pedagogical bottleneck: **the high-stakes cognitive choke point**.
 

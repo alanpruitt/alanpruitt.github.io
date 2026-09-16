@@ -23,7 +23,7 @@ categories: ["ai-safety-protocols"]
   ========================================================================= -->
 <div data-lang="en">
 
-# The Guided Learning Trifecta: AI Simulation, Clinical Application, and Deterministic Auditing
+## The Guided Learning Trifecta: AI Simulation, Clinical Application, and Deterministic Auditing
 
 When higher education institutions scramble to integrate Generative AI into workforce programs, they usually make one of two mistakes: they treat AI as a passive text summarizer, or they fear it as an unstoppable cheating engine. Both approaches miss the true potential of intelligent instructional engineering.
 
@@ -77,7 +77,7 @@ Deploying the Guided Learning Trifecta transforms health science and clinical ki
   ========================================================================= -->
 <div data-lang="es" class="hidden-lang">
 
-# La Trifecta del Aprendizaje Guiado: Simulación con IA, Aplicación Clínica y Auditoría Determinista
+## La Trifecta del Aprendizaje Guiado: Simulación con IA, Aplicación Clínica y Auditoría Determinista
 
 Cuando las instituciones de educación superior se apresuran a integrar la IA generativa en sus programas académicos, suelen cometer uno de dos errores: tratan a la IA como un resumidor de texto pasivo, o le temen como a un motor de fraude imparable. Ambos enfoques pierden de vista el verdadero potencial de la ingeniería instruccional inteligente.
 

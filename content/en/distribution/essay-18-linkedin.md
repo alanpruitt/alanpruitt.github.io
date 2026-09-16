@@ -1,4 +1,4 @@
-# Distribution Asset: Essay 18 LinkedIn Announcement
+## Distribution Asset: Essay 18 LinkedIn Announcement
 
 **Target Canonical:** <https://alanpruitt.com/articles/18-the-illusion-of-the-feed.html>
 **Release Date:** 2026-08-14
@@ -27,4 +27,4 @@ Read the full breakdown in Essay 18 on alanpruitt.com:
 
 ---
 
-# CurriculumAsCode #EdTech #InstructionalDesign #GenerativeAI #Accessibility #HigherEducation #SystemArchitecture
+## CurriculumAsCode #EdTech #InstructionalDesign #GenerativeAI #Accessibility #HigherEducation #SystemArchitecture

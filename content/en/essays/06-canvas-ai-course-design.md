@@ -23,7 +23,7 @@ categories: ["curriculum-as-code"]
   ========================================================================= -->
 <div data-lang="en">
 
-# Practical AI in Canvas: Supporting Course Design, Content Creation, and Student Engagement
+## Practical AI in Canvas: Supporting Course Design, Content Creation, and Student Engagement
 
 Artificial intelligence is no longer a peripheral experiment in higher education—it is an embedded operational capability within modern Learning Management Systems. As Canvas continues to integrate native AI features, instructors face the practical challenge of moving past theoretical hype toward actionable, ethically grounded course implementation.
 
@@ -70,7 +70,7 @@ Effective implementation demands explicit boundaries and sovereign data controls
   ========================================================================= -->
 <div data-lang="es" class="hidden-lang">
 
-# IA Práctica en Canvas: Apoyo al Diseño de Cursos, Creación de Contenido y Compromiso Estudiantil
+## IA Práctica en Canvas: Apoyo al Diseño de Cursos, Creación de Contenido y Compromiso Estudiantil
 
 La inteligencia artificial ya no es un experimento periférico en la educación superior: es una capacidad operativa integrada dentro de los sistemas modernos de gestión del aprendizaje (LMS). A medida que Canvas continúa integrando funciones nativas de IA, los instructores se enfrentan al desafío práctico de ir más allá del entusiasmo teórico hacia una implementación accionable y éticamente fundamentada.
 

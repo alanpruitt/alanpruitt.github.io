@@ -23,7 +23,7 @@ categories: ["curriculum-as-code"]
   ========================================================================= -->
 <div data-lang="en">
 
-# The Two-Part Scaffold Framework: Bridging Simulation & Research-Grade Application
+## The Two-Part Scaffold Framework: Bridging Simulation & Research-Grade Application
 
 Laboratory education in applied kinesiology faces a persistent operational dilemma: virtual simulations often lack hands-on physiological tactile feedback, while purely physical labs risk wasting valuable equipment time on basic mathematical or procedural misunderstandings.
 
@@ -74,7 +74,7 @@ Deploying the Two-Part Scaffold across undergraduate exercise physiology modules
   ========================================================================= -->
 <div data-lang="es" class="hidden-lang">
 
-# El Marco de Andamiaje en Dos Partes: Uniendo la Simulación y la Aplicación de Nivel de Investigación
+## El Marco de Andamiaje en Dos Partes: Uniendo la Simulación y la Aplicación de Nivel de Investigación
 
 La educación de laboratorio en kinesiología aplicada enfrenta un dilema operativo persistente: las simulaciones virtuales a menudo carecen de retroalimentación táctil fisiológica, mientras que los laboratorios puramente físicos corren el riesgo de desperdiciar tiempo valioso de equipo en malentendidos matemáticos o de procedimiento.
 

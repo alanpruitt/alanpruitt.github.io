@@ -23,7 +23,7 @@ categories: ["curriculum-as-code"]
   ========================================================================= -->
 <div data-lang="en">
 
-# The Mission Loop Architecture: Pattern, Rule, and Solve in Coded Instruction
+## The Mission Loop Architecture: Pattern, Rule, and Solve in Coded Instruction
 
 In traditional health science education, assignment prompts often ask open-ended questions like "Describe how you would design an exercise program for a diabetic client." While well-intentioned, these unconstrained assignments invite vague responses, obscure student reasoning errors, and make objective assessment extraordinarily difficult.
 
@@ -74,7 +74,7 @@ Implementing Mission Loops across exercise physiology and nutrition coursework d
   ========================================================================= -->
 <div data-lang="es" class="hidden-lang">
 
-# La Arquitectura del Bucle de Misión: Patrón, Regla y Solución en la Instrucción Codificada
+## La Arquitectura del Bucle de Misión: Patrón, Regla y Solución en la Instrucción Codificada
 
 En la educación tradicional en ciencias de la salud, las consignas de tareas a menudo plantean preguntas abiertas como "Describa cómo diseñaría un programa de ejercicios para un cliente diabético". Aunque bien intencionadas, estas tareas sin restricciones invitan a respuestas vagas, oscurecen los errores de razonamiento de los estudiantes y dificultan enormemente la evaluación objetiva.
 

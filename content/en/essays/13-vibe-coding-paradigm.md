@@ -23,7 +23,7 @@ categories: ["curriculum-as-code"]
   ========================================================================= -->
 <div data-lang="en">
 
-# The Vibe-Coding Paradigm: Speed, Intuition, and Full-Stack Execution in Instructional Engineering
+## The Vibe-Coding Paradigm: Speed, Intuition, and Full-Stack Execution in Instructional Engineering
 
 For decades, building custom educational software or interactive lab tools required navigating a massive barrier to entry: armies of full-stack developers, months of sprint cycles, and rigid proprietary frameworks. If an educator wanted an interactive molecular flavor workbench or an agentic PWA for clinical exercise testing, they were forced to submit feature requests to software vendors and wait years for bloated, one-size-fits-all releases.
 
@@ -63,7 +63,7 @@ By collapsing the distance between imagination and deployment, vibe-coding allow
   ========================================================================= -->
 <div data-lang="es" class="hidden-lang">
 
-# El Paradigma del Vibe-Coding: Velocidad, Intuición y Ejecución Full-Stack en Ingeniería Instruccional
+## El Paradigma del Vibe-Coding: Velocidad, Intuición y Ejecución Full-Stack en Ingeniería Instruccional
 
 Durante décadas, la creación de software educativo personalizado o herramientas de laboratorio interactivas requirió superar una enorme barrera de entrada: ejércitos de desarrolladores full-stack, meses de ciclos de sprint y marcos propietarios rígidos. Si un educador quería un banco de trabajo de sabor molecular interactivo o una PWA agéntica para pruebas de ejercicio clínico, se veía obligado a enviar solicitudes de funciones a proveedores de software y esperar años por lanzamientos inflados e iguales para todos.
 

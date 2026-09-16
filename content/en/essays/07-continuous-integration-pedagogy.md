@@ -23,7 +23,7 @@ categories: ["curriculum-as-code"]
   ========================================================================= -->
 <div data-lang="en">
 
-# Continuous Integration for Pedagogy: Writing Automated Unit Tests for Learning Outcomes
+## Continuous Integration for Pedagogy: Writing Automated Unit Tests for Learning Outcomes
 
 In software engineering, continuous integration (CI) pipelines run automated test suites on every commit to ensure system contracts remain unbroken. In traditional instructional design, however, curriculum changes are committed without automated verification—resulting in broken prerequisites, unmapped learning outcomes, and silent accessibility regressions that go unnoticed until students encounter them.
 
@@ -58,7 +58,7 @@ By integrating pedagogical linters into local pre-commit hooks and remote GitHub
   ========================================================================= -->
 <div data-lang="es" class="hidden-lang">
 
-# Integración Continua para la Pedagogía: Escritura de Pruebas Unitarias Automatizadas para Resultados de Aprendizaje
+## Integración Continua para la Pedagogía: Escritura de Pruebas Unitarias Automatizadas para Resultados de Aprendizaje
 
 En la ingeniería de software, las tuberías de integración continua (CI) ejecutan suites de pruebas automatizadas en cada commit para garantizar que las funciones del sistema permanezcan intactas. En el diseño instruccional tradicional, sin embargo, los cambios curriculares se aplican sin verificación automatizada, lo que resulta en prerrequisitos rotos, resultados de aprendizaje desalineados y regresiones de accesibilidad no detectadas hasta que el estudiante las enfrenta.
 

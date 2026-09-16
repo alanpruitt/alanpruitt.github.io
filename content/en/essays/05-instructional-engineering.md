@@ -22,7 +22,7 @@ categories: ["curriculum-as-code"]
   ========================================================================= -->
 <div data-lang="en">
 
-# Instructional Engineering: Transforming Curriculum into Version-Controlled Source Code
+## Instructional Engineering: Transforming Curriculum into Version-Controlled Source Code
 
 For decades, instructional design has treated educational content as static documents trapped inside proprietary Learning Management Systems or binary PDFs. **Instructional Engineering** replaces this reactive model with software design principles: modularity, automated linting, plain-text portability, and continuous delivery.
 
@@ -55,7 +55,7 @@ Adopting Instructional Engineering does not require abandoning existing pedagogi
   ========================================================================= -->
 <div data-lang="es" class="hidden-lang">
 
-# Ingeniería Instruccional: Transformando el Currículum en Código Fuente Controlado por Versiones
+## Ingeniería Instruccional: Transformando el Currículum en Código Fuente Controlado por Versiones
 
 Durante décadas, el diseño instruccional ha tratado el contenido educativo como documentos estáticos atrapados en sistemas de gestión de aprendizaje propietarios o archivos PDF binarios. La **Ingeniería Instruccional** reemplaza este modelo reactivo con principios de diseño de software: modularidad, validación automatizada, portabilidad en texto plano y entrega continua.
 

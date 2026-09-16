@@ -6,6 +6,6 @@ author: "Alan Pruitt"
 canonical_url: "https://alanpruitt.com/articles/01-ai-assessment-design.html"
 categories: ["curriculum-as-code"]
 ---
-# Shifting from AI Fear to Strategic Assessment Design
+## Shifting from AI Fear to Strategic Assessment Design
 
 How Curriculum-as-Code paradigms transform educators from passive task checkers into problem architects by auditing the cognitive process rather than standard answers.

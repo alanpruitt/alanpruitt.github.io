@@ -23,7 +23,7 @@ categories: ["ada-title-ii"]
   ========================================================================= -->
 <div data-lang="en">
 
-# Essay 17: Engineering Resilience: Resolving False-Positive Contrast Errors and Array Parsing Script Failures via Curriculum-as-Code
+## Essay 17: Engineering Resilience: Resolving False-Positive Contrast Errors and Array Parsing Script Failures via Curriculum-as-Code
 
 > **TL;DR:** Automated accessibility checkers in Learning Management Systems often flag false-positive contrast errors due to array parsing script failures caused by deeply nested, visual-editor HTML bloat. Curriculum-as-Code (C-a-C) resolves this at the source by replacing GUI color adjustments with deterministic Markdown pipelines, native semantic hierarchies starting at `<h2>`, and zero inline color overrides.
 
@@ -84,7 +84,7 @@ By moving course design from a GUI-centric model to version-controlled source co
   ========================================================================= -->
 <div data-lang="es" class="hidden-lang">
 
-# Ensayo 17: Resiliencia de la Ingeniería: Resolviendo Errores de Contraste Falsos Positivos y Fallas en Scripts de Análisis de Arrays mediante Currículum como Código
+## Ensayo 17: Resiliencia de la Ingeniería: Resolviendo Errores de Contraste Falsos Positivos y Fallas en Scripts de Análisis de Arrays mediante Currículum como Código
 
 > **TL;DR:** Los evaluadores automáticos de accesibilidad en los LMS a menudo informan falsos positivos de contraste debido a fallas en los scripts de análisis de arrays causadas por el código HTML inflado de los editores visuales. Currículum como Código (C-a-C) resuelve esto desde el origen reemplazando los ajustes de color manuales con flujos Markdown deterministas, jerarquías semánticas que inician en `<h2>` y cero estilos de color en línea.
 

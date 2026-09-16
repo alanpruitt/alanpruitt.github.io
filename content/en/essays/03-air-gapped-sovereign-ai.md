@@ -6,6 +6,6 @@ author: "Alan Pruitt"
 canonical_url: "https://alanpruitt.com/articles/03-air-gapped-sovereign-ai.html"
 categories: ["ai-safety-protocols"]
 ---
-# Air-Gapped & Sovereign AI: Local Intelligence in High-Compliance Environments
+## Air-Gapped & Sovereign AI: Local Intelligence in High-Compliance Environments
 
 Why relying on third-party cloud APIs poses unacceptable regulatory risks for educational data, and how edge-native open weights ensure absolute privacy.

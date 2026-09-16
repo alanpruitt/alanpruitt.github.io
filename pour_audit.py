@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-POUR Accessibility Audit Script for EXW Course Fleet
+POUR Accessibility Audit Script for EXW Course Fleet / Site Assets
 Audits Markdown and HTML files against Perceivable, Operable, Understandable, and Robust standards.
 """
 
@@ -16,31 +16,40 @@ def audit_file(filepath):
         content = f.read()
         
     # 1. ROBUST AUDIT: Check heading hierarchy (must start at h2, no skipped levels)
-    headings = re.findall(r'(<h([2-6])>|^(#{1,6})\s+)', content, re.MULTILINE)
     last_level = 1 # Canvas page title is h1, content starts at h2
     
-    for h in headings:
-        if h[1]:
-            level = int(h[1])
-        elif h[2]:
-            level = len(h[2])
-        else:
+    for line in content.splitlines():
+        stripped = line.strip()
+        # Ignore structural Centaur/prompt delimiters, table rows, and protocol bounds
+        if stripped in ["###", "> ###"] or stripped.startswith("### STRUCTURAL_DELIMITER") or stripped.startswith("### |") or (stripped.startswith("###") and stripped.endswith("###")) or re.match(r'^[\s>]*###[\s>]*$', line):
             continue
-            
-        if last_level == 1 and level != 2:
-            errors.append(f"[Robust] Structure Violation: First content heading must be <h2>, found <h{level}>.")
-        elif level > last_level + 1:
-            errors.append(f"[Robust] Hierarchy Violation: Skipped heading level from <h{last_level}> to <h{level}>.")
-        last_level = level
 
-    # 2. PERCEIVABLE AUDIT: Check for missing or empty alt text in images
-    img_tags = re.findall(r'<img\s+[^>]*>', content, re.IGNORECASE)
+        h_html = re.search(r'<h([2-6])[^>]*>', line, re.IGNORECASE)
+        h_md = re.search(r'^(#{1,6})\s+\S+', line)
+
+        level = None
+        if h_html:
+            level = int(h_html.group(1))
+        elif h_md:
+            level = len(h_md.group(1))
+
+        if level is not None:
+            if last_level == 1 and level != 2:
+                errors.append(f"[Robust] Structure Violation: First content heading must be <h2>, found <h{level}>.")
+            elif level > last_level + 1:
+                errors.append(f"[Robust] Hierarchy Violation: Skipped heading level from <h{last_level}> to <h{level}>.")
+            last_level = level
+
+    # 2. PERCEIVABLE AUDIT: Check for missing or empty alt text in images (excluding inline code snippets)
+    clean_content_for_imgs = re.sub(r'`[^`]*<img[^`]*`', '', content)
+    img_tags = re.findall(r'<img\s+[^>]*>', clean_content_for_imgs, re.IGNORECASE)
     for img in img_tags:
         if 'alt=' not in img or 'alt=""' in img or "alt='''" in img:
             errors.append(f"[Perceivable] Image missing descriptive alt text -> {img}")
 
-    # 3. UNDERSTANDABLE AUDIT: Check for deprecated or non-standard structural tags/terms
-    if "8.#" in content:
+    # 3. UNDERSTANDABLE AUDIT: Check for deprecated or non-standard structural tags/terms (excluding inline code snippets)
+    clean_content_for_legacy = re.sub(r'`[^`]*8\.#[^`]*`', '', content)
+    if "8.#" in clean_content_for_legacy:
         errors.append("[Understandable] Legacy Reference: Found prohibited '8.#'-style reference.")
 
     return errors
@@ -51,7 +60,7 @@ def run_pour_audit(directory):
     
     for root, _, files in os.walk(directory):
         # Skip hidden directories like .git or node_modules
-        if '.git' in root or 'node_modules' in root:
+        if '.git' in root or 'node_modules' in root or 'public' in root or '_site' in root:
             continue
             
         for file in files:

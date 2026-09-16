@@ -14,7 +14,7 @@ lang_default: "en"
 canonical_url: "https://alanpruitt.com/articles/20-deterministic-clinical-guardrails.html"
 categories: ["ai-safety-protocols"]
 ---
-# Deterministic Clinical Guardrails: Preventing Hallucination Drift in Special Population Prescriptions
+## Deterministic Clinical Guardrails: Preventing Hallucination Drift in Special Population Prescriptions
 
 In exercise science, prescribing physical activity for healthy adults allows for broad programming latitude. For special populations—individuals navigating chronic metabolic conditions, cardiovascular disease, peripheral neuropathies, or severe neuromuscular limitations—the margin for error drops to zero. A single unvetted recommendation regarding exercise intensity, weight-bearing loading, or thermal stress can trigger acute clinical complications.
 
