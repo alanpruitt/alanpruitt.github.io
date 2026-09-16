@@ -143,3 +143,35 @@
     margin: 16px 0;
     font-family: monospace;
 }
+
+
+/* --- Emergency Mobile & Desktop Workshop Layout Fixes --- */
+.workshop-content div, .workshop-content table, article div, article table {
+    box-sizing: border-box !important;
+}
+
+/* Force tables to be horizontally scrollable on mobile instead of breaking layout */
+article table, .workshop-content table {
+    display: block;
+    width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Ensure inline-styled boxes never overflow mobile screens */
+article div[style*="width"], .workshop-content div[style*="width"] {
+    max-width: 100% !important;
+}
+
+/* Mobile Viewport Adjustments */
+@media (max-width: 768px) {
+    article {
+        padding: 12px !important;
+    }
+    article div[style*="padding"], .workshop-content div[style*="padding"] {
+        padding: 12px !important;
+    }
+    h1 { font-size: 1.6rem !important; }
+    h2 { font-size: 1.3rem !important; }
+    h3 { font-size: 1.1rem !important; }
+}
