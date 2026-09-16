@@ -72,7 +72,7 @@ Before running prompts or interacting with AI models in this workshop, verify yo
 <div style="background-color: #FFFFFF; border: 1px solid #CBD5E1; border-left: 5px solid #003366; padding: 18px 20px; margin: 20px 0; border-radius: 4px;">
 
 <div style="background-color: #FFFFFF; border: 1px solid #CBD5E1; border-left: 5px solid #003366; padding: 18px 20px; margin: 20px 0; border-radius: 4px;">
-  <h4 style="margin-top: 0; color: #002147; font-size: 1.05rem; font-weight: 700;">Instructor & Facilitator Information (Canvas 1.5)</h4>
+  <h3 style="margin-top: 0; color: #002147; font-size: 1.05rem; font-weight: 700;">Instructor & Facilitator Information (Canvas 1.5)</h3>
   <p style="font-size: 0.9rem; line-height: 1.6; color: #0C2340; margin-bottom: 10px;">
     <strong>Lead Facilitator:</strong> Alan Pruitt &bull; Curriculum Architect &amp; Generative AI Strategist
   </p>
@@ -83,7 +83,7 @@ Before running prompts or interacting with AI models in this workshop, verify yo
   </ul>
 </div>
 
-<h4 style="margin-top: 0; color: #002147; font-size: 1.05rem; font-weight: 700;">Accessibility & Accommodation Statement (ADA Title II / Canvas 7.2)</h4>
+<h3 style="margin-top: 0; color: #002147; font-size: 1.05rem; font-weight: 700;">Accessibility & Accommodation Statement (ADA Title II / Canvas 7.2)</h3>
   <p style="font-size: 0.9rem; line-height: 1.6; color: #0C2340; margin-bottom: 10px;">
     We are committed to creating an accessible, inclusive, and barrier-free learning experience for all faculty, staff, and community members. This course adheres strictly to <strong>WCAG 2.1 and 2.2 AA</strong> standards, featuring semantic structure, high-contrast typography (14.2:1 contrast ratio), screen-reader-optimized tables, and zero-cost OER materials.
   </p>
@@ -93,7 +93,7 @@ Before running prompts or interacting with AI models in this workshop, verify yo
 </div>
 
 <div style="background-color: #FFFFFF; border: 1px solid #CBD5E1; border-left: 5px solid #003366; padding: 18px 20px; margin: 20px 0; border-radius: 4px;">
-  <h4 style="margin-top: 0; color: #002147; font-size: 1.05rem; font-weight: 700;">Workshop Pacing & Time-on-Task Guide (Canvas 1.6 • 60-Minute Architecture)</h4>
+  <h3 style="margin-top: 0; color: #002147; font-size: 1.05rem; font-weight: 700;">Workshop Pacing & Time-on-Task Guide (Canvas 1.6 • 60-Minute Architecture)</h3>
   <p style="font-size: 0.9rem; line-height: 1.6; color: #0C2340; margin-bottom: 12px;">
     This asynchronous workshop is engineered for focused completion in <strong>60 total minutes</strong>. The sequential pacing guide below outlines the curriculum flow, time allocation, and expected checkpoints:
   </p>
@@ -174,7 +174,7 @@ Review the posts from your colleagues and reply to at least one peer from outsid
 
 {{< /prompt-card >}}
 
-<h4 style="margin-top: 0; color: #002147; font-size: 1.05rem; font-weight: 700;">Step 1: Institutional Enterprise Authentication Gateway</h4>
+<h3 style="margin-top: 0; color: #002147; font-size: 1.05rem; font-weight: 700;">Step 1: Institutional Enterprise Authentication Gateway</h3>
   <p style="font-size: 0.9rem; line-height: 1.6; color: #0C2340; margin-bottom: 12px;">
     To guarantee your session operates under the institutional data privacy umbrella (where corporate models are prohibited from training on your text or file uploads), you must authenticate through your institutional NetID gateway:
   </p>
@@ -190,7 +190,7 @@ Review the posts from your colleagues and reply to at least one peer from outsid
 </div>
 
 <div style="background-color: #FFFFFF; border: 1px solid #CBD5E1; border-left: 5px solid #003366; padding: 18px 20px; margin: 20px 0; border-radius: 4px;">
-  <h4 style="margin-top: 0; color: #002147; font-size: 1.05rem; font-weight: 700;">Step 2: FERPA & Sensitive Data Pre-Flight Audit</h4>
+  <h3 style="margin-top: 0; color: #002147; font-size: 1.05rem; font-weight: 700;">Step 2: FERPA & Sensitive Data Pre-Flight Audit</h3>
   <p style="font-size: 0.9rem; line-height: 1.6; color: #0C2340; margin-bottom: 10px;">
     Even within an enterprise environment, adhere to the principle of least privilege. Verify each checkpoint before submitting data:
   </p>
@@ -360,7 +360,7 @@ Generate the audit matrix identifying:
 <div style="margin-top: 12px; font-size: 0.88rem; color: #1e2a38; line-height: 1.5;">
 <p style="margin-bottom: 8px;"><em>Deterministic Evaluation Generated Strictly Within the ### Delimiter Boundaries:</em></p>
 <div style="background-color: #002147; padding: 12px; border: 1px solid #cbd5e1; border-radius: 4px; margin-bottom: 12px;">
-<h4 style="color: #003366; margin: 0 0 6px 0; font-size: 0.92rem;">Formative Evaluation Summary (Rubric Score: Proficient / 18 of 20 pts)</h4>
+<h3 style="color: #003366; margin: 0 0 6px 0; font-size: 0.92rem;">Formative Evaluation Summary (Rubric Score: Proficient / 18 of 20 pts)</h3>
 <ul style="margin: 0; padding-left: 20px;">
 <li><strong>Criterion 1 (Mission Loop Alignment):</strong> The response accurately identifies the inactivity pattern and applies the federal physical activity guidelines rule.</li>
 <li><strong>Criterion 2 (Source-of-Truth Fidelity):</strong> The intervention references PAGA 2018 standards directly without hallucinating unverified third-party targets.</li>
@@ -427,7 +427,7 @@ Document two specific interventions where you edited, corrected, or calibrated t
   <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; flex-wrap: wrap; margin-bottom: 14px; border-bottom: 1px solid #CBD5E1; padding-bottom: 10px;">
     <div>
       <span style="background-color: #065F46; color: #FFFFFF; font-size: 0.72rem; font-weight: 700; padding: 2px 8px; border-radius: 3px; letter-spacing: 0.05em; text-transform: uppercase;">Executive ROI Tally</span>
-<h4 style="margin: 4px 0 2px 0; color: #002147; font-size: 1.1rem; font-weight: 700;">Faculty Time Reclaimed Estimator</h4>
+<h3 style="margin: 4px 0 2px 0; color: #002147; font-size: 1.1rem; font-weight: 700;">Faculty Time Reclaimed Estimator</h3>
 <p style="margin: 0; font-size: 0.84rem; color: #475569;">Calculate institutional hours reclaimed per semester across routine administrative workflows.</p>
 </div>
 <div style="background-color: #F8F6F0; border: 1.5px solid #003366; border-radius: 6px; padding: 10px 16px; text-align: center; min-width: 170px;">
@@ -508,7 +508,7 @@ if (document.readyState === 'loading') {
 To conclude the workshop and demonstrate mastery under an instructor-monitored or credentialed model, complete this summative matrix. Copy the structured template below, fill in your verified artifacts, and submit it through your LMS assignment portal or course shell.
 
 <div style="background-color: #FFFFFF; border: 1px solid #CBD5E1; border-left: 5px solid #003366; padding: 18px 20px; margin: 20px 0; border-radius: 4px;">
-  <h4 style="margin-top: 0; color: #002147; font-size: 1.05rem; font-weight: 700;">Summative Evaluation Standards (Canvas / QM 3.1 & 3.3)</h4>
+  <h3 style="margin-top: 0; color: #002147; font-size: 1.05rem; font-weight: 700;">Summative Evaluation Standards (Canvas / QM 3.1 & 3.3)</h3>
   <p style="font-size: 0.9rem; line-height: 1.6; color: #0C2340; margin-bottom: 8px;">
     Your capstone submission must demonstrate concrete human-in-the-loop oversight across four evaluative dimensions:
   </p>
@@ -594,7 +594,7 @@ Signature / Timestamp: [Insert Name / Date]
 </a>
 </div>
 
-<h4 style="color: #002147; font-size: 0.92rem; margin: 14px 0 6px 0;">The 90-Second SpeedGrader Rapid Triaging Workflow:</h4>
+<h3 style="color: #002147; font-size: 0.92rem; margin: 14px 0 6px 0;">The 90-Second SpeedGrader Rapid Triaging Workflow:</h3>
 <ol style="padding-left: 20px; margin-bottom: 12px;">
 <li><strong>Phase 1: Compliance Scan (0–30s):</strong> Verify SSO via <code>google.arizona.edu</code> (Zero Data Retention), verify <code>###</code> delimiter fences, and confirm FERPA redaction.</li>
 <li><strong>Phase 2: Curricular Audit (30–90s):</strong> Audit Single Source of Truth (SSoT) reference and verify at least 2 documented human-in-the-loop corrections before releasing points.</li>
@@ -611,7 +611,7 @@ Signature / Timestamp: [Insert Name / Date]
 </details>
 </div>
 
-### Enterprise Tools & Official University Routing
+## Enterprise Tools & Official University Routing
 
 **Primary Responsible AI Portal:**  
 Access authorized enterprise tools, request departmental access, and review institutional guidelines via the [University of Arizona Responsible Artificial Intelligence Portal](https://responsibleai.arizona.edu/tools-support/start-here).
@@ -622,7 +622,7 @@ Submit departmental inquiries, request privacy and security evaluations, and acc
 **Data Governance & FERPA Inquiries:**  
 Consult University Information Security and privacy policies through the Responsible AI portal prior to uploading, processing, or transmitting institutional and student records.
 
-### Continuing Faculty Professional Development: Google Workspace with Gemini for Education
+## Continuing Faculty Professional Development: Google Workspace with Gemini for Education
     <strong style="color: #002147; font-size: 0.95rem;">Google Workspace with Gemini for Education</strong>
   </div>
   <p style="margin: 0 0 10px 0; font-size: 0.86rem; color: #334155; line-height: 1.5;">

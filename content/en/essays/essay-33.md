@@ -147,4 +147,3 @@ I’m still here.
 More importantly, I’ve started to understand that the thing I really bought wasn’t just technical efficiency.
 
 It was instructional sovereignty.
-
