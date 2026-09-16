@@ -50,11 +50,42 @@
   </div>
 </footer>
 
-<!-- Zero-Dependency 1-Click Clipboard Engine for Prompt Cards -->
+<!-- Zero-Dependency 1-Click Clipboard Engine for Code Blocks & Prompt Cards -->
 <script>
 document.addEventListener('DOMContentLoaded', () => {
-  const copyButtons = document.querySelectorAll('.copy-prompt-btn');
+  // 1. Auto-attach Copy Prompt buttons to all <pre><code> code blocks
+  document.querySelectorAll('pre code').forEach((block) => {
+    const container = block.parentElement;
+    if (!container || container.querySelector('.copy-prompt-btn')) return;
 
+    const copyBtn = document.createElement('button');
+    copyBtn.className = 'copy-prompt-btn';
+    copyBtn.type = 'button';
+    const isSpanish = document.documentElement.lang === 'es' || window.location.pathname.includes('/es/');
+    copyBtn.textContent = isSpanish ? 'Copiar Prompt' : 'Copy Prompt';
+
+    copyBtn.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(block.innerText);
+        const originalText = copyBtn.textContent;
+        copyBtn.textContent = isSpanish ? '✓ ¡Copiado!' : '✓ Copied!';
+        copyBtn.classList.add('copied');
+
+        setTimeout(() => {
+          copyBtn.textContent = originalText;
+          copyBtn.classList.remove('copied');
+        }, 2000);
+      } catch (err) {
+        console.error('Failed to copy text: ', err);
+      }
+    });
+
+    container.style.position = 'relative';
+    container.appendChild(copyBtn);
+  });
+
+  // 2. Handle static prompt card buttons
+  const copyButtons = document.querySelectorAll('.prompt-card-wrapper .copy-prompt-btn');
   copyButtons.forEach(button => {
     button.addEventListener('click', async () => {
       const card = button.closest('.prompt-card-wrapper');
@@ -63,17 +94,15 @@ document.addEventListener('DOMContentLoaded', () => {
       const target = card.querySelector('.prompt-content-target');
       if (!target) return;
 
-      // Extract raw inner text, preserving newlines and delimiters exactly as typed
       const promptText = target.innerText.trim();
 
       try {
         await navigator.clipboard.writeText(promptText);
 
-        const btnText = button.querySelector('.btn-text');
+        const btnText = button.querySelector('.btn-text') || button;
         const originalText = btnText.innerText;
         const isSpanish = document.documentElement.lang === 'es' || window.location.pathname.includes('/es/');
 
-        // Visual success state (High Contrast Green #065F46)
         button.style.backgroundColor = '#065F46';
         btnText.innerText = isSpanish ? '✓ ¡Copiado!' : '✓ Copied!';
 
@@ -84,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       } catch (err) {
         console.error('Clipboard copy failed:', err);
-        const btnText = button.querySelector('.btn-text');
+        const btnText = button.querySelector('.btn-text') || button;
         btnText.innerText = 'Error!';
         setTimeout(() => {
           button.style.backgroundColor = '#003366';
