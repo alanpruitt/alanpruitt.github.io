@@ -1,4 +1,4 @@
-bbaseURL = "https://alanpruitt.com/"
+baseURL = "https://alanpruitt.com/"
 enableMissingTranslationPlaceholders = false
 
 defaultContentLanguage = "en"
