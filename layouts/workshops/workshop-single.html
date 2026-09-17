@@ -171,7 +171,19 @@
             .prose pre { background-color: #18181b; border-color: #27272a; color: #e4e4e7; }
             .border-zinc-200 { border-color: #27272a; }
         }
-    </style>
+    
+/* High-Contrast Fix for Prompt Boxes, Code Blocks, and Capstone Matrices */
+pre, code, .prompt-box, .capstone-box, textarea {
+    background-color: #F8F6F0 !important;
+    color: #0C2340 !important;
+    border: 1px solid #003366 !important;
+}
+.prose pre code {
+    background-color: transparent !important;
+    color: #0C2340 !important;
+}
+
+</style>
     {{ partial "print-styles.html" . }}
 
 <style>
@@ -222,6 +234,18 @@
   footer p, footer span, footer a {
     color: #0C2340 !important;
   }
+
+/* High-Contrast Fix for Prompt Boxes, Code Blocks, and Capstone Matrices */
+pre, code, .prompt-box, .capstone-box, textarea {
+    background-color: #F8F6F0 !important;
+    color: #0C2340 !important;
+    border: 1px solid #003366 !important;
+}
+.prose pre code {
+    background-color: transparent !important;
+    color: #0C2340 !important;
+}
+
 </style>
 
 </head>
