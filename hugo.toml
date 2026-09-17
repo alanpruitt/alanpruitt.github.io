@@ -4,6 +4,9 @@ enableMissingTranslationPlaceholders = false
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
 
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
 [markup.goldmark.renderer]
   unsafe = true
 
