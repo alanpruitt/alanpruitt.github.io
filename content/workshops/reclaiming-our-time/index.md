@@ -11,26 +11,10 @@ contact: "Alan Pruitt"
 
 ## Reclaiming Our Time: Secure and Practical GenAI Workflows for Faculty and Staff
 
-<div role="list" aria-label="Workshop Quality and Governance Compliance Badges" style="display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 24px 0; align-items: center;">
-  <span role="listitem" style="display: inline-flex; align-items: center; gap: 6px; background-color: var(--canvas-navy-primary, #0A192F); color: var(--canvas-navy-primary, #0A192F); font-size: 0.74rem; font-weight: 700; padding: 4px 10px; border-radius: 4px; letter-spacing: 0.03em;">
-    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-    WCAG 2.2 AA CONFORMANT
-  </span>
-  <span role="listitem" style="display: inline-flex; align-items: center; gap: 6px; background-color: var(--canvas-navy-primary, #0A192F); color: var(--canvas-navy-primary, #0A192F); font-size: 0.74rem; font-weight: 700; padding: 4px 10px; border-radius: 4px; letter-spacing: 0.03em;">
-    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#A7F3D0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-    CANVAS v3.0 EXEMPLAR
-  </span>
-  <span role="listitem" style="display: inline-flex; align-items: center; gap: 6px; background-color: var(--canvas-navy-primary, #0A192F); color: var(--canvas-navy-primary, #0A192F); font-size: 0.74rem; font-weight: 700; padding: 4px 10px; border-radius: 4px; letter-spacing: 0.03em;">
-    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#FDE047" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
-    QM 7th ED ALIGNED
-  </span>
-  <span role="listitem" style="display: inline-flex; align-items: center; gap: 6px; background-color: var(--canvas-navy-primary, #0A192F); color: var(--canvas-navy-primary, #0A192F); border: 1.5px solid #003366; font-size: 0.74rem; font-weight: 700; padding: 3px 9px; border-radius: 4px;">
-    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#003366" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
-    IMS CC 1.1 CARTRIDGE
-  </span>
-  <span role="listitem" style="display: inline-flex; align-items: center; gap: 6px; background-color: var(--canvas-navy-primary, #0A192F); color: var(--canvas-navy-primary, #0A192F); border: 1px solid #CBD5E1; font-size: 0.74rem; font-weight: 600; padding: 3px 8px; border-radius: 4px;">
-    PEER WORKSHOP TRACK
-  </span>
+<div style="background-color: #002147 !important; color: #FFFFFF !important; padding: 0.75rem 1rem; border-radius: 0.375rem; font-weight: 700; display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+    <span style="background-color: #065F46; color: #FFFFFF; padding: 0.25rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem;">WCAG 2.2 AA CONFORMANT</span>
+    <span style="background-color: #065F46; color: #FFFFFF; padding: 0.25rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem;">CANVAS v3.0 EXEMPLAR</span>
+    <span style="background-color: #065F46; color: #FFFFFF; padding: 0.25rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem;">QM 7th ED ALIGNED</span>
 </div>
 
 This interactive workshop equips faculty and staff to harness generative artificial intelligence safely, with strict FERPA compliance and direct alignment to institutional Single Source of Truth (SSoT) standards.
