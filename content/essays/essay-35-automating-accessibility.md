@@ -19,7 +19,7 @@ Sustainable accessibility requires a fundamental paradigm shift: **Curriculum-as
 
 In software engineering, "Shift-Left" means catching defects early in the development lifecycle rather than in production. Applying this to course design transforms instructional assets into plain, version-controlled Markdown files audited by automated CI/CD pipelines before deployment.
 
-```
+```text
 +------------------+     +-------------------------------+     +-----------------------+
 | Plain Markdown   | --> | GitHub Actions CI Pipeline    | --> | Production Canvas LMS |
 | Course Shells    |     | (Heading & Alt-Text Linters)  |     | Deployment            |
