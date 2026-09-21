@@ -48,6 +48,7 @@ jobs:
           cp -r essays public/ 2>/dev/null || true
           cp -r articles public/ 2>/dev/null || true
           hugo --minify
+          python3 scripts/inject_canonicals.py
 
       - name: Run Markdown Linter Check
         run: npm run lint:md
