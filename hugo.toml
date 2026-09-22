@@ -36,3 +36,5 @@ defaultContentLanguageInSubdir = false
   name = "Calculadora ROI"
   url = "/roi-calculator/"
   weight = 4
+
+ignoreFiles = [ "^workshops/" ]
