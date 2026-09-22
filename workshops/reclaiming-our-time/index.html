@@ -3,41 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reclaiming Our Time: Secure and Practical GenAI Workflows</title>
+    <title>Reclaiming Our Time: Secure and Practical GenAI Workflows | UArizona</title>
     <style>
-        :root {
-            --primary-color: #0C2340;
-            --accent-color: #CC0033;
-            --bg-color: #ffffff;
-            --text-color: #1a1a1a;
-            --light-bg: #f8f9fa;
-            --border-color: #dcdcdc;
-        }
         body {
             font-family: system-ui, -apple-system, sans-serif;
             line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--bg-color);
+            color: #1a1a1a;
+            background-color: #ffffff;
             margin: 0;
-            padding: 0;
+            padding: 1.5rem;
         }
-        .workshop-wrapper {
-            max-width: 1000px;
+        .container {
+            max-width: 900px;
             margin: 0 auto;
-            padding: 2rem 1rem;
         }
         h2 {
-            font-size: 1.75rem;
+            font-size: 1.8rem;
             font-weight: 700;
-            color: var(--primary-color);
-            border-bottom: 2px solid var(--accent-color);
-            padding-bottom: 0.5rem;
+            color: #0C2340;
+            border-bottom: 2px solid #AB0520; /* UArizona Red */
+            padding-bottom: 0.4rem;
             margin-top: 2.5rem;
         }
         h3 {
             font-size: 1.4rem;
             font-weight: 600;
-            color: var(--primary-color);
+            color: #0C2340;
             margin-top: 2rem;
         }
         h4 {
@@ -48,87 +39,99 @@
         }
         p, ul, ol {
             margin-bottom: 1rem;
+            font-size: 1.05rem;
+        }
+        ul, ol {
+            padding-left: 1.5rem;
+        }
+        li {
+            margin-bottom: 0.5rem;
+        }
+        .box {
+            background-color: #f8f9fa;
+            border: 1px solid #dcdcdc;
+            border-left: 4px solid #0C2340;
+            padding: 1.25rem;
+            margin: 1.25rem 0;
+            border-radius: 0 4px 4px 0;
+        }
+        .box-accent {
+            border-left-color: #AB0520;
+        }
+        pre {
+            background-color: #f1f3f5;
+            border: 1px solid #dcdcdc;
+            border-left: 4px solid #AB0520;
+            padding: 1rem;
+            overflow-x: auto;
+            font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+            font-size: 0.95rem;
+            color: #111;
+            border-radius: 4px;
+        }
+        code {
+            background-color: #f1f3f5;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 0.95rem;
+        }
+        .link-list a {
+            display: block;
+            background-color: #f8f9fa;
+            border: 1px solid #dcdcdc;
+            border-left: 4px solid #0C2340;
+            padding: 1rem;
+            margin-bottom: 0.75rem;
+            border-radius: 4px;
+            text-decoration: none;
+            color: #0C2340;
+            font-weight: 600;
+        }
+        .link-list a:hover {
+            background-color: #e9ecef;
+        }
+        .table-wrapper {
+            overflow-x: auto;
+            margin: 1.5rem 0;
         }
         table {
             width: 100%;
             border-collapse: collapse;
             text-align: left;
-            font-size: 0.95rem;
-            margin: 1.5rem 0;
+            font-size: 1rem;
         }
         th, td {
             padding: 12px;
-            border: 1px solid var(--border-color);
+            border: 1px solid #dcdcdc;
         }
         th {
-            background-color: var(--primary-color);
+            background-color: #0C2340;
             color: #ffffff;
         }
         tr:nth-child(even) {
-            background-color: var(--light-bg);
-        }
-        pre {
-            background-color: #f4f4f4;
-            border: 1px solid #ccc;
-            border-left: 4px solid var(--accent-color);
-            padding: 1rem;
-            overflow-x: auto;
-            font-family: monospace;
-            font-size: 0.9rem;
-            color: #111;
-        }
-        .card {
-            background-color: var(--light-bg);
-            border: 1px solid var(--border-color);
-            border-left: 4px solid var(--primary-color);
-            padding: 1.5rem;
-            margin: 1.5rem 0;
-            border-radius: 0 4px 4px 0;
-        }
-        .grid-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 1rem;
-            margin: 1.5rem 0;
-        }
-        .grid-card-item {
-            background-color: var(--light-bg);
-            border: 1px solid var(--border-color);
-            border-left: 4px solid var(--primary-color);
-            padding: 1rem;
-            border-radius: 4px;
-            text-decoration: none;
-            color: var(--primary-color);
-            font-weight: 600;
-            display: block;
-        }
-        .grid-card-item:hover {
-            background-color: #f1f3f5;
+            background-color: #f8f9fa;
         }
     </style>
 </head>
 <body>
-    <main class="workshop-wrapper">
+    <main class="container">
         
-        <h2>Instructor &amp; Facilitator Information (Canvas 1.5)</h2>
+        <h2>Facilitator &amp; Institutional Context</h2>
         <p><strong>Lead Facilitator:</strong> Alan Pruitt &bull; Curriculum Architect &amp; Generative AI Strategist</p>
-        <p><strong>Institutional Alignment:</strong> Arizona Western College &amp; The University of Arizona Yuma Campus</p>
-        <p><strong>Professional Inquiries &amp; Network:</strong> <a href="https://www.linkedin.com" target="_blank" rel="noopener" style="color: #003366; text-decoration: underline;">Alan Pruitt on LinkedIn &rarr;</a></p>
-        <p><strong>Response Time &amp; Office Hours:</strong> Inquiries submitted via LMS course messaging or institutional email are answered within 24&ndash;48 business hours.</p>
+        <p><strong>Institutional Alignment:</strong> The University of Arizona (UArizona Staff &amp; Faculty)</p>
+        <p><strong>Governing Framework:</strong> <a href="https://responsibleai.arizona.edu/tools-support/u-gen-ai" target="_blank" rel="noopener" style="color: #003366; text-decoration: underline;">UArizona Responsible AI &amp; U Gen AI Guidelines &rarr;</a></p>
 
-        <h2>Accessibility &amp; Accommodation Statement (ADA Title II / Canvas 7.2)</h2>
-        <p>We are committed to creating an accessible, inclusive, and barrier-free learning experience for all faculty, staff, and community members. This course adheres strictly to WCAG 2.1 and 2.2 AA standards, featuring semantic structure, high-contrast typography, screen-reader-optimized tables, and zero-cost OER materials.</p>
-        <p>If you experience barriers accessing any interactive micro-lab, prompt block, document, or media asset&mdash;or if you require alternate formats, assistive technology support, or disability-related accommodations&mdash;please contact the course instructor or your institutional Accessibility Resource Center / Disability Services office.</p>
+        <h2>Responsible AI Policy Alignment (UArizona Guidelines)</h2>
+        <p>In strict compliance with <a href="https://responsibleai.arizona.edu/" target="_blank" rel="noopener">responsibleai.arizona.edu</a>, all demonstrations utilize institutional environments provisioned via NetID sign-on (<a href="https://google.arizona.edu" target="_blank" rel="noopener">google.arizona.edu</a> and the enterprise U of A GenAI platform). These tools protect institutional data up to <strong>Internal and Restricted Data</strong> tiers under the University of Arizona Information Classification Standard.</p>
 
-        <h2>Workshop Pacing &amp; Time-on-Task Guide (Canvas 1.6 &bull; 60-Minute Architecture)</h2>
-        <p>This asynchronous workshop is engineered for focused completion in 60 total minutes. The sequential pacing guide below outlines the curriculum flow, time allocation, and expected checkpoints:</p>
-        
-        <div style="overflow-x: auto;">
+        <h2>Workshop Pacing &amp; Time-on-Task Guide (60-Minute Architecture)</h2>
+        <div class="table-wrapper">
             <table>
                 <thead>
                     <tr>
                         <th>Module &amp; Topic</th>
-                        <th>Core Focus &amp; Institutional Standard</th>
+                        <th>Core Focus &amp; UArizona Standard</th>
                         <th>Pacing</th>
                         <th>Deliverable Checkpoint</th>
                     </tr>
@@ -136,37 +139,37 @@
                 <tbody>
                     <tr>
                         <td><strong>Module 0: Pre-Flight</strong></td>
-                        <td>Enterprise SSO authentication (NetID), FERPA audit &amp; clipboard check.</td>
+                        <td>NetID SSO authentication via <code>google.arizona.edu</code> &amp; FERPA data audit.</td>
                         <td>5 min</td>
                         <td>Clipboard Diagnostic</td>
                     </tr>
                     <tr>
                         <td><strong>Module 1: Governance</strong></td>
-                        <td>Policy tiers (Prohibited, Bounded, Augmented) &amp; Single Source of Truth (SSoT).</td>
+                        <td>U of A GenAI policy tiers (Prohibited vs. Bounded) &amp; Single Source of Truth.</td>
                         <td>10 min</td>
                         <td>Tiered Policy Statement</td>
                     </tr>
                     <tr>
                         <td><strong>Module 2: Admin Relief</strong></td>
-                        <td>Transform raw committee meeting transcripts into structured action matrices.</td>
+                        <td>Transform raw committee transcripts into structured action matrices.</td>
                         <td>10 min</td>
                         <td>Action Matrix Output</td>
                     </tr>
                     <tr>
                         <td><strong>Module 3: Prompt Craft</strong></td>
-                        <td>Delimiter isolation protocol (###) &amp; formative rubric calibration.</td>
+                        <td>Delimiter isolation protocol (<code>###</code>) &amp; formative rubric calibration.</td>
                         <td>15 min</td>
                         <td>Formative Rubric Prompt</td>
                     </tr>
                     <tr>
                         <td><strong>Module 4: Safety Audit</strong></td>
-                        <td>Human-in-the-loop verification, hallucination checks &amp; benchmark evaluation.</td>
+                        <td>Human-in-the-loop verification, hallucination checks &amp; Google AI Educator workflows.</td>
                         <td>10 min</td>
                         <td>Safety Audit Review</td>
                     </tr>
                     <tr>
                         <td><strong>Module 5: Capstone</strong></td>
-                        <td>Complete the Sovereign Auditor Matrix and submit for institutional credit.</td>
+                        <td>Complete the Sovereign Auditor Matrix for institutional workflow credit.</td>
                         <td>10 min</td>
                         <td>20-pt Capstone Log</td>
                     </tr>
@@ -174,146 +177,54 @@
             </table>
         </div>
 
-        <h3>COMMUNITY &amp; RAPPORT &bull; INSTITUTIONAL READY</h3>
-        <h4>Module 0 Community Exchange: Reclaiming Our Time Check-In (Canvas 2.5)</h4>
-        <p>Introduce yourself and establish rapport with your cohort in the course discussion board.</p>
+        <h3>PROMPT ENGINEERING &amp; DELIMITER ISOLATION PROTOCOL</h3>
+        <h4>Module 0 Community Exchange: Workflow Goals Check-In</h4>
+        <p>Establish baseline parameters using structured prompt architecture:</p>
 
         <pre>### MODULE 0 DISCUSSION PROMPT: COHORT RAPPORT &amp; WORKFLOW GOALS
-Welcome to the workshop! To foster collaboration across disciplines and academic units, introduce yourself in the course discussion area using the 3-point check-in below:
-1. Professional Role &amp; Department:
-- State your name, department/academic unit, and primary instructional or administrative responsibilities.
-2. Target Administrative Time-Drain:
-- Identify one specific, recurring task that consumes excessive time (e.g., extracting action items from committee transcripts, drafting tiered syllabus statements, building formative rubric feedback, or standardizing course alignment).
-3. Sovereign Autonomy Goal:
-- What is one area where you want to maintain strict human-in-leverage control while leveraging enterprise-shielded AI for draft acceleration?
-
-Peer Engagement:
-Review the posts from your colleagues and reply to at least one peer from outside your immediate department. Share an insight or common challenge regarding administrative workloads in their discipline.
+Welcome to the workshop! Introduce your department role and target administrative time-drain (e.g., extracting committee action items or drafting syllabus statements) while leveraging UArizona enterprise-shielded AI tools.
 ###</pre>
 
         <h2>Step 1: Institutional Enterprise Authentication Gateway</h2>
-        <p>To guarantee your session operates under the institutional data privacy umbrella, authenticate through your institutional NetID gateway:</p>
+        <p>To guarantee your session operates under the institutional data privacy umbrella, authenticate through your official UArizona gateway:</p>
         <ul>
-            <li><strong>Launch Institutional Workspace:</strong> <a href="https://google.arizona.edu" target="_blank" rel="noopener">google.arizona.edu &rarr;</a></li>
-            <li><strong>Account Confirmation:</strong> Verify your profile avatar displays your institutional email address (<code>@arizona.edu</code> or institutional domain).</li>
-            <li><strong>Data Retention Shield:</strong> Institutional Google Gemini enterprise licenses enforce Zero Data Retention on prompt inputs and custom context.</li>
+            <li><strong>Launch Workspace:</strong> <a href="https://google.arizona.edu" target="_blank" rel="noopener">google.arizona.edu</a> or <a href="https://responsibleai.arizona.edu/tools-support/u-gen-ai" target="_blank" rel="noopener">U of A GenAI Platform &rarr;</a></li>
+            <li><strong>NetID Verification:</strong> Confirm single sign-on (SSO) authentication via WebAuth / Duo Push.</li>
+            <li><strong>Data Protection:</strong> Approved for Internal and Restricted data classification tiers. FERPA compliance enforced.</li>
         </ul>
 
-        <h2>Step 2: FERPA &amp; Sensitive Data Pre-Flight Audit</h2>
-        <p>Verify each checkpoint before submitting data:</p>
+        <h2>Step 2: FERPA &amp; Data Classification Pre-Flight Audit</h2>
+        <p>Adhere strictly to UArizona Information Classification standards before submitting data:</p>
         <ul>
-            <li><code>[ ]</code> <strong>No Direct Student Identifiers:</strong> Remove student names, NetIDs, student ID numbers, and IP addresses.</li>
-            <li><code>[ ]</code> <strong>No Protected Health or Financial Records:</strong> Exclude HIPAA-covered records and unredacted clinical histories.</li>
-            <li><code>[ ]</code> <strong>Synthesize or Anonymize Context:</strong> Replace specific committee dispute names with generic roles (e.g., &ldquo;Curriculum Chair&rdquo;).</li>
+            <li><code>[ ]</code> <strong>No Direct Student Identifiers:</strong> Remove student names, NetIDs, and student IDs from case inputs.</li>
+            <li><code>[ ]</code> <strong>No Unredacted Protected Records:</strong> Exclude restricted medical or restricted financial records outside institutional policy scope.</li>
+            <li><code>[ ]</code> <strong>Role Anonymization:</strong> Replace specific personnel names with functional roles (e.g., "Curriculum Chair").</li>
         </ul>
 
-        <h2>View Verified Benchmark Exemplar (Meeting Action Matrix Output)</h2>
-        <p><strong>AI Response Audited via Safety Auditor Protocol (Zero Retention / SSO Enterprise):</strong></p>
+        <h2>Executive ROI Tally (UArizona Faculty &amp; Staff)</h2>
+        <div class="box" style="text-align: center; padding: 2rem;">
+            <div style="font-size: 3.5rem; font-weight: 700; color: #AB0520; line-height: 1;">16.5</div>
+            <div style="font-size: 1.2rem; font-weight: 600; color: #0C2340; margin-top: 0.5rem; margin-bottom: 2rem;">Hours Reclaimed / Semester per Faculty Member</div>
 
-        <div style="overflow-x: auto;">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Action Item &amp; Deliverable</th>
-                        <th>Responsible Owner</th>
-                        <th>Target Deadline</th>
-                        <th>Verification Source / Ground Truth</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Draft Module 02 OER syllabus alignment matrix</td>
-                        <td>Curriculum Architect</td>
-                        <td>Friday, 5:00 PM MST</td>
-                        <td>Faculty Senate Curricular Handbook Sec. 4.2</td>
-                    </tr>
-                    <tr>
-                        <td>Perform WCAG 2.1 AA table scope audit on LMS course shell imports</td>
-                        <td>Instructional Designer</td>
-                        <td>Next Tuesday, 12:00 PM</td>
-                        <td>ADA Title II Compliance Checklist (DOJ 2024 Rule)</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div class="card" style="border-left-color: var(--accent-color);">
-            <p style="margin: 0;"><strong>Safety Auditor Verification:</strong> No student PII processed; deliverables are scoped strictly to documented statements in the transcript; ambiguous timeline items were flagged rather than hallucinated.</p>
-        </div>
-
-        <h2>View Verified Benchmark Exemplar (Delimiter-Parsed Formative Feedback)</h2>
-        <div class="card">
-            <h4>Formative Evaluation Summary (Rubric Score: Proficient / 18 of 20 pts)</h4>
-            <ul>
-                <li><strong>Criterion 1 (Mission Loop Alignment):</strong> The response accurately identifies the inactivity pattern and applies the federal physical activity guidelines rule.</li>
-                <li><strong>Criterion 2 (Source-of-Truth Fidelity):</strong> The intervention references PAGA 2018 standards directly without hallucinating unverified third-party targets.</li>
-            </ul>
-            <p style="margin-bottom: 0;"><strong>Constructive Revision Area:</strong> Recommend expanding the intensity metrics from generic minutes to explicit MET-minute calculations to ensure complete clinical precision.</p>
-        </div>
-
-        <div class="card" style="border-left-color: var(--accent-color);">
-            <p style="margin: 0;"><strong>Safety Auditor Verification:</strong> Input text remained strictly bounded within delimiters. Model refused to infer psychological intent or unstated personal traits. Final grade submission remains the sole responsibility of the instructor of record.</p>
-        </div>
-
-        <h2>Executive ROI Tally</h2>
-        <h4>Faculty Time Reclaimed Estimator</h4>
-        <p>Calculate institutional hours reclaimed per semester across routine administrative workflows.</p>
-
-        <div style="background-color: var(--light-bg); border: 1px solid var(--border-color); border-radius: 6px; padding: 2rem; text-align: center; margin: 1.5rem 0;">
-            <div style="font-size: 3rem; font-weight: 700; color: var(--accent-color); line-height: 1;">16.5</div>
-            <div style="font-size: 1.1rem; font-weight: 600; color: var(--primary-color); margin-top: 0.5rem; margin-bottom: 2rem;">Hours Reclaimed / Semester</div>
-
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; text-align: left; border-top: 1px solid var(--border-color); padding-top: 1.5rem;">
-                <div style="background-color: #ffffff; padding: 1rem; border: 1px solid var(--border-color); border-radius: 4px;">
-                    <div style="font-size: 1.5rem; font-weight: 700; color: var(--primary-color);">6</div>
-                    <div style="font-size: 0.9rem; color: #555555; margin-top: 0.25rem;">Committee Transcripts (45m/ea)</div>
+            <div style="display: flex; flex-direction: column; gap: 1rem; text-align: left; border-top: 1px solid #dcdcdc; padding-top: 1.5rem;">
+                <div style="background-color: #ffffff; padding: 1rem; border: 1px solid #dcdcdc; border-radius: 4px;">
+                    <strong>6</strong> Committee Transcripts Processed (45m/ea) via U of A GenAI
                 </div>
-                <div style="background-color: #ffffff; padding: 1rem; border: 1px solid var(--border-color); border-radius: 4px;">
-                    <div style="font-size: 1.5rem; font-weight: 700; color: var(--primary-color);">4</div>
-                    <div style="font-size: 0.9rem; color: #555555; margin-top: 0.25rem;">Rubrics Calibrated (90m/ea)</div>
+                <div style="background-color: #ffffff; padding: 1rem; border: 1px solid #dcdcdc; border-radius: 4px;">
+                    <strong>4</strong> Rubrics Calibrated (90m/ea) via Google AI Educator Framework
                 </div>
-                <div style="background-color: #ffffff; padding: 1rem; border: 1px solid var(--border-color); border-radius: 4px;">
-                    <div style="font-size: 1.5rem; font-weight: 700; color: var(--primary-color);">3</div>
-                    <div style="font-size: 0.9rem; color: #555555; margin-top: 0.25rem;">Syllabus Audits (120m/ea)</div>
+                <div style="background-color: #ffffff; padding: 1rem; border: 1px solid #dcdcdc; border-radius: 4px;">
+                    <strong>3</strong> Syllabus &amp; OER Audits (120m/ea)
                 </div>
             </div>
         </div>
 
-        <h2>Summative Evaluation Standards (Canvas / QM 3.1 &amp; 3.3)</h2>
-        <p>Your capstone submission must demonstrate concrete human-in-the-loop oversight across four evaluative dimensions:</p>
-
-        <div class="card">
-            <ol style="margin: 0; padding-left: 1.25rem;">
-                <li style="margin-bottom: 0.75rem;"><strong>Boundary Integrity:</strong> Verification that authentication was conducted via <code>google.arizona.edu</code> with Zero Data Retention.</li>
-                <li style="margin-bottom: 0.75rem;"><strong>Structural Isolation:</strong> Strict usage of <code>###</code> delimiters isolating raw text from instructions.</li>
-                <li style="margin-bottom: 0.75rem;"><strong>SSoT Verification:</strong> Direct grounding in an authoritative governing standard without synthetic hallucination.</li>
-                <li style="margin: 0;"><strong>Iterative Calibration:</strong> At least two documented interventions where you calibrated the output to meet institutional criteria.</li>
-            </ol>
-        </div>
-
-        <h2>For Faculty Evaluators &amp; Course Instructors</h2>
-        <p>This self-directed workshop utilizes an objective 90-second rapid audit protocol to evaluate capstone submissions in Canvas SpeedGrader, D2L Brightspace, or Blackboard.</p>
-
-        <div class="grid-cards">
-            <a href="#" class="grid-card-item">Download Canvas Shell Package (.imscc &amp; Rubric) &rarr;</a>
-            <a href="#" class="grid-card-item" style="border-left-color: var(--accent-color);">Download Printable Evaluation Protocol (PDF) &rarr;</a>
-            <a href="#" class="grid-card-item">View Canvas v3.0 &amp; QM (7th Ed) Exemplar Audit Report &rarr;</a>
-            <a href="#" class="grid-card-item" style="border-left-color: var(--accent-color);">View Standalone Guide (HTML) &rarr;</a>
-        </div>
-
-        <h4>The 90-Second SpeedGrader Rapid Triaging Workflow</h4>
-        <ul>
-            <li><strong>Phase 1: Compliance Scan (0&ndash;30s):</strong> Verify SSO via <code>google.arizona.edu</code> (Zero Data Retention), verify <code>###</code> delimiter fences, and confirm FERPA redaction.</li>
-            <li><strong>Phase 2: Curricular Audit (30&ndash;90s):</strong> Audit Single Source of Truth (SSoT) reference and verify at least 2 documented human-in-the-loop corrections before releasing points.</li>
-        </ul>
-
-        <h4>LMS Course Shell Setup</h4>
-        <div class="card" style="border-left-color: var(--primary-color);">
-            <ul style="margin: 0; padding-left: 1.25rem;">
-                <li style="margin-bottom: 0.5rem;"><strong>Submission Type:</strong> Online &gt; Check Text Entry &amp; File Uploads.</li>
-                <li style="margin-bottom: 0.5rem;"><strong>Rubric:</strong> Attach the 4-criterion, 20-point rubric with &ldquo;Use this rubric for assignment grading&rdquo; checked.</li>
-                <li style="margin: 0;"><strong>Attempts:</strong> Set to Unlimited (or 3 attempts) to support formative mastery and resubmission.</li>
-            </ul>
+        <h2>Official UArizona Tools &amp; Resources</h2>
+        <div class="link-list">
+            <a href="https://responsibleai.arizona.edu/tools-support/u-gen-ai" target="_blank" rel="noopener">Access U of A GenAI Platform (AWS Bedrock / Secure LLMs) &rarr;</a>
+            <a href="https://google.arizona.edu" target="_blank" rel="noopener" style="border-left-color: #AB0520;">Launch Google Workspace for Education (NetID SSO) &rarr;</a>
+            <a href="https://responsibleai.arizona.edu/ai-tools-guide" target="_blank" rel="noopener">Review AI Tools &amp; Data Use Guide (Data Classification) &rarr;</a>
+            <a href="https://responsibleai.arizona.edu/" target="_blank" rel="noopener" style="border-left-color: #AB0520;">Visit UArizona Office of Responsible AI (ORAI) &rarr;</a>
         </div>
 
     </main>
