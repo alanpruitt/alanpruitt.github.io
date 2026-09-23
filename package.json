@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "audit": "npm run lint:md",
+    "audit:canonicals": "./scripts/check-canonicals.sh",
     "audit:lighthouse": "BASE_URL=http://localhost:1313 node scripts/audit-lighthouse.js",
     "audit:lighthouse:live": "BASE_URL=https://alanpruitt.com node scripts/audit-lighthouse.js",
     "audit:live": "node scripts/audit.js",
