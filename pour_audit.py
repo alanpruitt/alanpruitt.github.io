@@ -4,28 +4,36 @@ POUR Accessibility Audit Script for EXW Course Fleet / Site Assets
 Audits Markdown and HTML files against Perceivable, Operable, Understandable, and Robust standards.
 """
 
+import argparse
 import os
 import re
 import sys
 
+
 def audit_file(filepath):
     print(f"Auditing [POUR]: {filepath}")
     errors = []
-    
-    with open(filepath, 'r', encoding='utf-8') as f:
+
+    with open(filepath, "r", encoding="utf-8") as f:
         content = f.read()
-        
+
     # 1. ROBUST AUDIT: Check heading hierarchy (must start at h2, no skipped levels)
-    last_level = 1 # Canvas page title is h1, content starts at h2
-    
+    last_level = 1  # Canvas page title is h1, content starts at h2
+
     for line in content.splitlines():
         stripped = line.strip()
         # Ignore structural Centaur/prompt delimiters, table rows, and protocol bounds
-        if stripped in ["###", "> ###"] or stripped.startswith("### STRUCTURAL_DELIMITER") or stripped.startswith("### |") or (stripped.startswith("###") and stripped.endswith("###")) or re.match(r'^[\s>]*###[\s>]*$', line):
+        if (
+            stripped in ["###", "> ###"]
+            or stripped.startswith("### STRUCTURAL_DELIMITER")
+            or stripped.startswith("### |")
+            or (stripped.startswith("###") and stripped.endswith("###"))
+            or re.match(r"^[\s>]*###[\s>]*$", line)
+        ):
             continue
 
-        h_html = re.search(r'<h([2-6])[^>]*>', line, re.IGNORECASE)
-        h_md = re.search(r'^(#{1,6})\s+\S+', line)
+        h_html = re.search(r"<h([2-6])[^>]*>", line, re.IGNORECASE)
+        h_md = re.search(r"^(#{1,6})\s+\S+", line)
 
         level = None
         if h_html:
@@ -35,57 +43,93 @@ def audit_file(filepath):
 
         if level is not None:
             if last_level == 1 and level != 2:
-                errors.append(f"[Robust] Structure Violation: First content heading must be <h2>, found <h{level}>.")
+                errors.append(
+                    f"[Robust] Structure Violation: First content heading must be <h2>, found <h{level}>."
+                )
             elif level > last_level + 1:
-                errors.append(f"[Robust] Hierarchy Violation: Skipped heading level from <h{last_level}> to <h{level}>.")
+                errors.append(
+                    f"[Robust] Hierarchy Violation: Skipped heading level from <h{last_level}> to <h{level}>."
+                )
             last_level = level
 
     # 2. PERCEIVABLE AUDIT: Check for missing or empty alt text in images (excluding inline code snippets)
-    clean_content_for_imgs = re.sub(r'`[^`]*<img[^`]*`', '', content)
-    img_tags = re.findall(r'<img\s+[^>]*>', clean_content_for_imgs, re.IGNORECASE)
+    clean_content_for_imgs = re.sub(r"`[^`]*<img[^`]*`", "", content)
+    img_tags = re.findall(r"<img\s+[^>]*>", clean_content_for_imgs, re.IGNORECASE)
     for img in img_tags:
         if 'alt=' not in img or 'alt=""' in img or "alt='''" in img:
             errors.append(f"[Perceivable] Image missing descriptive alt text -> {img}")
 
     # 3. UNDERSTANDABLE AUDIT: Check for deprecated or non-standard structural tags/terms (excluding inline code snippets)
-    clean_content_for_legacy = re.sub(r'`[^`]*8\.#[^`]*`', '', content)
+    clean_content_for_legacy = re.sub(r"`[^`]*8\.#[^`]*`", "", content)
     if "8.#" in clean_content_for_legacy:
-        errors.append("[Understandable] Legacy Reference: Found prohibited '8.#'-style reference.")
+        errors.append(
+            "[Understandable] Legacy Reference: Found prohibited '8.#'-style reference."
+        )
 
     return errors
 
-def run_pour_audit(directory):
+
+def run_pour_audit(target):
     total_errors = 0
     scanned_files = 0
-    
-    for root, _, files in os.walk(directory):
-        # Skip hidden directories like .git or node_modules
-        if '.git' in root or 'node_modules' in root or 'public' in root or '_site' in root:
-            continue
-            
-        for file in files:
-            if file.endswith(('.md', '.html')):
-                filepath = os.path.join(root, file)
-                scanned_files += 1
-                errors = audit_file(filepath)
-                if errors:
-                    total_errors += len(errors)
-                    print(f"  [FAIL] {file}:")
-                    for err in errors:
-                        print(f"    - {err}")
-                else:
-                    print(f"  [PASS] {file}")
-                    
+
+    if os.path.isfile(target):
+        scanned_files = 1
+        errors = audit_file(target)
+        if errors:
+            total_errors += len(errors)
+            print(f"  [FAIL] {os.path.basename(target)}:")
+            for err in errors:
+                print(f"    - {err}")
+        else:
+            print(f"  [PASS] {os.path.basename(target)}")
+    elif os.path.isdir(target):
+        for root, _, files in os.walk(target):
+            # Skip hidden directories like .git or node_modules
+            if (
+                ".git" in root
+                or "node_modules" in root
+                or "public" in root
+                or "_site" in root
+            ):
+                continue
+
+            for file in files:
+                if file.endswith((".md", ".html")):
+                    filepath = os.path.join(root, file)
+                    scanned_files += 1
+                    errors = audit_file(filepath)
+                    if errors:
+                        total_errors += len(errors)
+                        print(f"  [FAIL] {file}:")
+                        for err in errors:
+                            print(f"    - {err}")
+                    else:
+                        print(f"  [PASS] {file}")
+    else:
+        print(f"Error: Target '{target}' does not exist.")
+        sys.exit(1)
+
     print(f"\n--- POUR Audit Summary ---")
     print(f"Files scanned: {scanned_files}")
     print(f"Total violations found: {total_errors}")
-    
+
     if total_errors > 0:
         sys.exit(1)
     else:
         print("All files passed the POUR-Audit successfully!")
         sys.exit(0)
 
+
 if __name__ == "__main__":
-    target_dir = sys.argv[1] if len(sys.argv) > 1 else "."
-    run_pour_audit(target_dir)
+    parser = argparse.ArgumentParser(description="POUR Accessibility Audit Script")
+    parser.add_argument(
+        "path", nargs="?", default=None, help="Target file or directory"
+    )
+    parser.add_argument(
+        "--target", default=None, help="Target file or directory"
+    )
+    args = parser.parse_args()
+
+    target_path = args.target or args.path or "."
+    run_pour_audit(target_path)
