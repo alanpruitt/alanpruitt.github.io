@@ -37,4 +37,3 @@ defaultContentLanguageInSubdir = false
   url = "/roi-calculator/"
   weight = 4
 
-ignoreFiles = [ "^workshops/" ]

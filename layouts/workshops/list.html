@@ -3,19 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ if eq .Lang "es" }}Talleres y Clases Magistrales{{ else }}Workshops & Masterclasses{{ end }} | Alan Pruitt</title>
-    <meta name="description" content="Explore interactive workshops on Curriculum-as-Code, Sovereign Auditor AI governance, and zero-retention administrative automation.">
+    <title>{{ if eq .Lang "es" }}Bienvenido a EXW-Demo (Curso ID: 42051) — Currículo-como-Código, OER $0 ZTC y Gobernanza de IA{{ else }}Welcome to EXW-Demo (Course ID: 42051) — Curriculum-as-Code, $0 ZTC OER &amp; AI Governance{{ end }} | Alan Pruitt</title>
+    <meta name="description" content="Live non-student-facing Canvas showcase shell (Course ID: 42051) demonstrating how the Arizona Western College Exercise and Wellness (EXW) fleet runs as a Git-version-controlled Curriculum-as-Code ecosystem powered by air-gapped Google Gemini Argon 4 local AI.">
     <link rel="canonical" href="{{ .Permalink }}">
 
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%230B192C'/></svg>">
 
     <style>
         :root {
-            --bg-creme-50: #fbfbfb;
-            --bg-creme-100: #FAF8F5;
-            --bg-creme-200: #EAE3D2;
-            --text-navy-800: #1B2A4A;
+            --bg-creme-50: #FAFBF7;
+            --bg-creme-100: #F5F5F0;
+            --bg-creme-200: #E6E6DC;
+            --text-navy-800: #1E3E62;
             --text-navy-900: #0B192C;
+            --text-navy-950: #060E1A;
+            --awc-crimson: #680014;
         }
 
         *, ::before, ::after { box-sizing: border-box; border-width: 0; }
@@ -29,109 +31,116 @@
         .flex { display: flex; }
         .flex-col { flex-direction: column; }
         .flex-grow { flex-grow: 1; }
+        .flex-wrap { flex-wrap: wrap; }
         .items-center { align-items: center; }
+        .items-start { align-items: flex-start; }
         .justify-between { justify-content: space-between; }
         .grid { display: grid; }
         .grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
 
-        @media (min-width: 640px) {
-            .sm\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        @media (min-width: 768px) {
+            .md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .md\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+            .md\:flex-row { flex-direction: row; }
         }
 
-        @media (min-width: 1024px) {
-            .lg\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-        }
-
-        .flex-wrap { flex-wrap: wrap; }
         .gap-2 { gap: 0.5rem; }
         .gap-3 { gap: 0.75rem; }
         .gap-4 { gap: 1rem; }
         .gap-6 { gap: 1.5rem; }
 
         .bg-white { background-color: #ffffff; }
-        .bg-zinc-50 { background-color: #f9f9fb; }
-        .bg-zinc-100 { background-color: #f4f4f5; }
-        .bg-zinc-950 { background-color: #09090b; }
-        .text-white { color: #ffffff; }
-        .text-zinc-500 { color: #71717a; }
-        .text-zinc-600 { color: #52525b; }
-        .text-zinc-700 { color: #3f3f46; }
-        .text-zinc-800 { color: #27272a; }
-        .text-zinc-900 { color: #18181b; }
-        .text-zinc-950 { color: #09090b; }
+        .bg-creme-50 { background-color: var(--bg-creme-50); }
+        .bg-creme-100 { background-color: var(--bg-creme-100); }
+        .bg-creme-200 { background-color: var(--bg-creme-200); }
+        .bg-navy-900 { background-color: var(--text-navy-900); }
 
-        .p-1 { padding: 0.25rem; }
+        .text-navy-800 { color: var(--text-navy-800); }
+        .text-navy-900 { color: var(--text-navy-900); }
+        .text-creme-50 { color: var(--bg-creme-50); }
+        .text-creme-100 { color: var(--bg-creme-100); }
+        .text-creme-200 { color: var(--bg-creme-200); }
+
+        .p-5 { padding: 1.25rem; }
         .p-6 { padding: 1.5rem; }
         .p-8 { padding: 2rem; }
-        .px-2 { padding-left: 0.5rem; padding-right: 0.5rem; }
+        .px-3 { padding-left: 0.75rem; padding-right: 0.75rem; }
         .px-4 { padding-left: 1rem; padding-right: 1rem; }
         .px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
-        .py-0.5 { padding-top: 0.125rem; padding-bottom: 0.125rem; }
-        .py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
-        .py-12 { padding-top: 3rem; padding-bottom: 3rem; }
-        .py-16 { padding-top: 4rem; padding-bottom: 4rem; }
-        .pt-4 { padding-top: 1rem; }
+        .py-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+        .py-3 { padding-top: 0.75rem; padding-bottom: 0.75rem; }
+        .py-8 { padding-top: 2rem; padding-bottom: 2rem; }
 
+        .mb-2 { margin-bottom: 0.5rem; }
+        .mb-3 { margin-bottom: 0.75rem; }
+        .mb-4 { margin-bottom: 1rem; }
+        .mb-6 { margin-bottom: 1.5rem; }
+        .mb-8 { margin-bottom: 2rem; }
         .mt-2 { margin-top: 0.5rem; }
-        .mt-3 { margin-top: 0.75rem; }
         .mt-4 { margin-top: 1rem; }
         .mt-6 { margin-top: 1.5rem; }
-        .mb-3 { margin-top: 0; margin-bottom: 0.75rem; }
-        .mb-4 { margin-bottom: 1rem; }
-        .mb-8 { margin-bottom: 2rem; }
-        .mb-10 { margin-bottom: 2.5rem; }
 
         .border { border-style: solid; border-width: 1px; }
+        .border-2 { border-style: solid; border-width: 2px; }
+        .border-l-4 { border-left-style: solid; border-left-width: 6px; }
         .border-t { border-top-style: solid; border-top-width: 1px; }
-        .border-b { border-bottom-style: solid; border-bottom-width: 1px; }
-        .border-zinc-100 { border-color: #f4f4f5; }
-        .border-zinc-200 { border-color: #e4e4e7; }
-        .border-zinc-300 { border-color: #d4d4d8; }
+        .border-creme-200 { border-color: var(--bg-creme-200); }
+        .border-navy-900 { border-color: var(--text-navy-900); }
 
         .rounded { border-radius: 0.25rem; }
         .rounded-lg { border-radius: 0.5rem; }
         .rounded-xl { border-radius: 0.75rem; }
+        .rounded-2xl { border-radius: 1rem; }
 
+        .font-mono { font-family: 'Fira Code', monospace; }
         .font-semibold { font-weight: 600; }
         .font-bold { font-weight: 700; }
         .font-extrabold { font-weight: 800; }
 
-        .text-xs { font-size: 0.75rem; line-height: 1rem; }
-        .text-sm { font-size: 0.875rem; line-height: 1.25rem; }
-        .text-base { font-size: 1rem; line-height: 1.5rem; }
+        .text-xs { font-size: 0.75rem; line-height: 1.15rem; }
+        .text-sm { font-size: 0.875rem; line-height: 1.4rem; }
+        .text-base { font-size: 1rem; line-height: 1.65rem; }
         .text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+        .text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+        .text-2xl { font-size: 1.5rem; line-height: 2rem; }
         .text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
-        .text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
-        
-        .tracking-tight { letter-spacing: -0.025em; }
-        .tracking-wider { letter-spacing: 0.05em; }
+
         .uppercase { text-transform: uppercase; }
-
+        .tracking-wider { letter-spacing: 0.05em; }
         .shadow-sm { box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); }
-        .transition { transition-property: all; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
         .hover\:underline:hover { text-decoration: underline; }
-        .hover\:shadow-md:hover { box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); }
-        .hover\:border-zinc-400:hover { border-color: #a1a1aa; }
 
-        .line-clamp-3 {
-            display: -webkit-box;
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;  
-            overflow: hidden;
+        .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 48px;
+            min-width: 48px;
+            padding: 0.75rem 1.25rem;
+            border-radius: 0.625rem;
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 150ms ease;
         }
-
-        .sticky { position: sticky; }
-        .top-0 { top: 0; }
-        .z-50 { z-index: 50; }
-        .backdrop-blur-md { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
-        .bg-white\/90 { background-color: rgba(255, 255, 255, 0.9); }
-        .h-16 { height: 4rem; }
-        .text-navy-900 { color: var(--text-navy-900); }
-        
-        .min-h-\[32px\] { min-height: 32px; }
-        .min-w-\[32px\] { min-width: 32px; }
-        
-        .focus-visible\:outline:focus-visible { outline: 2px solid var(--text-navy-900); outline-offset: 2px; }
+        .cta-btn-primary {
+            background-color: var(--text-navy-900);
+            color: #ffffff;
+            border: 2px solid var(--text-navy-900);
+        }
+        .cta-btn-primary:hover {
+            background-color: var(--text-navy-800);
+            text-decoration: underline;
+        }
+        .cta-btn-secondary {
+            background-color: #ffffff;
+            color: var(--text-navy-900);
+            border: 2px solid var(--text-navy-900);
+        }
+        .cta-btn-secondary:hover {
+            background-color: var(--bg-creme-50);
+            text-decoration: underline;
+        }
     </style>
     {{ partial "print-styles.html" . }}
 </head>
@@ -139,77 +148,214 @@
 
     {{ partial "header.html" . }}
 
-    <main class="w-full max-w-6xl mx-auto px-6 py-8 flex-grow">
-        <div class="py-12 sm:py-16">
-          <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-            
-            <!-- Section Header -->
-            <div class="mb-10 text-left">
-              <div class="inline-flex items-center gap-2 rounded border border-zinc-300 bg-zinc-100 px-2.5 py-0.5 text-xs font-bold uppercase tracking-wider text-zinc-800 mb-4">
-                {{ if eq .Lang "es" }}Desarrollo Profesional & Gobernanza{{ else }}Professional Development & Governance{{ end }}
-              </div>
-              <h1 class="text-3xl font-extrabold tracking-tight text-zinc-950 dark:text-white sm:text-4xl">
-                {{ if eq .Lang "es" }}Talleres y Clases Magistrales{{ else }}Workshops & Institutional Masterclasses{{ end }}
-              </h1>
-              <p class="mt-3 max-w-3xl text-base text-zinc-600 dark:text-zinc-400">
+    <main class="w-full max-w-5xl mx-auto px-6 py-8 flex-grow">
+
+        <!-- HERO & EXECUTIVE WELCOME CALLOUT -->
+        <section class="bg-white p-8 rounded-2xl border-2 border-navy-900 shadow-sm mb-8" aria-labelledby="exw-demo-heading">
+            <div class="flex flex-wrap items-center gap-2 mb-4">
+                <span class="font-mono text-xs font-bold uppercase tracking-wider px-3 py-1 rounded bg-navy-900 text-creme-50">
+                    {{ if eq .Lang "es" }}Entorno Demostrativo en Vivo • Curso ID: 42051{{ else }}Live Institutional Showcase • Course ID: 42051{{ end }}
+                </span>
+                <span class="font-mono text-xs font-bold uppercase tracking-wider px-3 py-1 rounded bg-creme-200 text-navy-900">
+                    {{ if eq .Lang "es" }}Acceso Público (Sin Inicio de Sesión en Canvas){{ else }}Public Read Access (No Canvas Login Required){{ end }}
+                </span>
+                <span class="font-mono text-xs font-bold uppercase tracking-wider px-3 py-1 rounded bg-creme-200 text-navy-900">
+                    100% WCAG 2.2 AA (9:1) &bull; ADA Title II &bull; $0 ZTC
+                </span>
+            </div>
+
+            <h2 id="exw-demo-heading" class="text-2xl font-extrabold text-navy-900 mb-4" style="font-size: 1.85rem; line-height: 1.25;">
                 {{ if eq .Lang "es" }}
-                  Clases magistrales prácticas sobre Currículo-como-Código, gobernanza de IA con Auditor Soberano y automatización de retención cero para líderes académicos.
+                    Bienvenido a EXW-Demo (Course ID: 42051) — Currículo-como-Código, OER $0 ZTC y Gobernanza de IA
                 {{ else }}
-                  High-impact institutional workshops on Curriculum-as-Code, Sovereign Auditor AI governance, and zero-retention administrative automation for higher education faculty and leadership.
+                    Welcome to EXW-Demo (Course ID: 42051) — Curriculum-as-Code, $0 ZTC OER &amp; AI Governance
                 {{ end }}
-              </p>
+            </h2>
+
+            {{ if eq .Lang "es" }}
+            <div class="text-base text-navy-900 mb-6" style="line-height: 1.75;">
+                <p class="mb-4">
+                    Construí este entorno demostrativo en Canvas (no visible para estudiantes inscritos) para mostrar cómo opero la flota de cursos de Ciencias del Ejercicio y Bienestar (<strong>EXW 101</strong>, <strong>EXW 150</strong>, <strong>EXW 210</strong>, <strong>EXW 245</strong> y <strong>EXW 265</strong>) en <strong>Arizona Western College (AWC)</strong> como un ecosistema unificado de <strong>Currículo-como-Código (Curriculum-as-Code)</strong> controlado por versiones en Git. Le invito a explorar el <strong>Portal Maestro (Home Hub)</strong>, la pestaña de <strong>Módulos</strong>—secuenciada de adentro hacia afuera utilizando el <strong>Círculo Dorado de Simon Sinek (<code>POR QUÉ &rarr; CÓMO &rarr; QUÉ</code>)</strong>—el <strong>Programa de Estudio (Syllabus)</strong> y el <strong>Kit de Herramientas Digitales en vivo (<a href="https://exwtoolkit.com" target="_blank" rel="noopener noreferrer" class="font-bold text-navy-900 hover:underline">exwtoolkit.com</a>)</strong>.
+                </p>
+                <p class="mb-4">
+                    En lugar de depender de interfaces tradicionales de chatbots de IA en la nube, impulso mis flujos de trabajo instruccionales utilizando un modelo local de pesos abiertos <strong>Google Gemini Argon 4 (Gemma)</strong> aislado de internet (<em>air-gapped</em>)—de código abierto, sin cuotas de suscripción SaaS, sin cobro por tokens y con seguridad de confianza cero (<em>zero-trust</em>)—ejecutándose localmente en mi hardware <strong>Apple Silicon M2 (MacBook Air)</strong>.
+                </p>
+            </div>
+            {{ else }}
+            <div class="text-base text-navy-900 mb-6" style="line-height: 1.75;">
+                <p class="mb-4">
+                    I built this non-student-facing Canvas showcase shell to show how I run the <strong>Arizona Western College Exercise and Wellness (EXW) fleet</strong> (<strong>EXW 101</strong>, <strong>EXW 150</strong>, <strong>EXW 210</strong>, <strong>EXW 245</strong>, and <strong>EXW 265</strong>) as a unified, Git-version-controlled <strong>Curriculum-as-Code</strong> ecosystem. I invite you to explore the <strong>Home Hub</strong>, the <strong>Modules</strong> tab—sequenced using <strong>Simon Sinek&rsquo;s Golden Circle (<code>WHY &rarr; HOW &rarr; WHAT</code>)</strong>—the <strong>Syllabus</strong> blueprint, and the live <strong>Toolkit (<a href="https://exwtoolkit.com" target="_blank" rel="noopener noreferrer" class="font-bold text-navy-900 hover:underline">exwtoolkit.com</a>)</strong>.
+                </p>
+                <p class="mb-4">
+                    Instead of relying on traditional, cloud-based AI chatbot interfaces, I power my instructional workflows using an <strong>air-gapped Google Gemini Argon 4 open-weight Gemma model</strong> (open-source with no SaaS/subscriber subscription fees, no tokens, and zero-trust security) running locally on my <strong>Apple Silicon M2 (MacBook Air)</strong> hardware.
+                </p>
+            </div>
+            {{ end }}
+
+            <!-- AIR-GAPPED DEFINITION CALLOUT BOX -->
+            <div class="bg-creme-50 border border-creme-200 border-l-4 p-6 rounded-xl mb-6" style="border-left-color: #680014;">
+                <h3 class="text-lg font-bold text-navy-900 mb-2">
+                    {{ if eq .Lang "es" }}¿Qué significa un sistema aislado (Air-Gapped)?{{ else }}What Does Air-Gapped Mean?{{ end }}
+                </h3>
+                {{ if eq .Lang "es" }}
+                <p class="text-sm text-navy-900 mb-3" style="line-height: 1.65;">
+                    Un sistema <strong>aislado (<em>air-gapped</em>)</strong> está física y digitalmente separado de la red pública de internet y de redes externas. Debido a que mi instancia local de <strong>Gemini Argon 4</strong> opera completamente fuera de línea en una estación de trabajo local segura, los datos de los estudiantes, los activos curriculares y las interacciones clínicas <strong>nunca tocan servidores en la nube externos</strong>, garantizando un cumplimiento absoluto de <strong>FERPA</strong> y una privacidad de datos blindada.
+                </p>
+                <p class="text-sm text-navy-900" style="line-height: 1.65; margin: 0;">
+                    A través de esta arquitectura, logré un <strong>100% de cumplimiento con WCAG 2.2 AA (contraste mínimo 9:1)</strong>, apego estricto a los estándares del <strong>Título II de la ADA</strong>, <strong>cero costo de libros de texto ($0 ZTC)</strong> para los estudiantes y operaciones de IA locales completamente privadas.
+                </p>
+                {{ else }}
+                <p class="text-sm text-navy-900 mb-3" style="line-height: 1.65;">
+                    An <strong>air-gapped system</strong> is physically and digitally isolated from the public internet and external networks. Because my local <strong>Gemini Argon 4</strong> instance operates entirely offline on a secure local machine, student data, curriculum assets, and clinical interactions <strong>never touch external cloud servers</strong>, guaranteeing absolute <strong>FERPA compliance</strong> and ironclad data privacy.
+                </p>
+                <p class="text-sm text-navy-900" style="line-height: 1.65; margin: 0;">
+                    Through this architecture, I achieved <strong>100% WCAG 2.2 AA compliance (9:1 contrast)</strong>, strict adherence to <strong>ADA Title II</strong> standards, <strong>zero textbook costs ($0 ZTC)</strong> for students, and completely private, local AI operations.
+                </p>
+                {{ end }}
             </div>
 
-            <!-- Workshop Cards Grid -->
-            <div id="workshops-grid" class="grid grid-cols-1 gap-6 sm:grid-cols-2">
-              {{ range .Pages.ByDate.Reverse }}
-                <article 
-                  class="flex flex-col justify-between rounded-xl border border-zinc-200 bg-white p-6 shadow-sm transition hover:border-zinc-400 hover:shadow-md dark:border-zinc-800 dark:bg-zinc-900/60 dark:hover:border-zinc-600"
-                >
-                  <div>
-                    <!-- Header Meta -->
-                    <div class="mb-3 flex items-center justify-between">
-                      <span class="inline-flex items-center rounded border border-zinc-300 bg-zinc-100 px-2 py-0.5 text-[11px] font-bold uppercase tracking-wider text-zinc-800">
-                        {{ if .Params.duration }}{{ .Params.duration }}{{ else }}Workshop Module{{ end }}
-                      </span>
-                      <time datetime="{{ .Date.Format "2006-01-02" }}" class="text-xs text-zinc-500">
-                        {{ .Date.Format "Jan 02, 2006" }}
-                      </time>
-                    </div>
-
-                    <!-- Workshop Title -->
-                    <h2 class="text-lg font-bold leading-snug text-zinc-950 dark:text-white">
-                      <a href="{{ .RelPermalink }}" class="hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950" style="text-decoration: none; color: inherit;">
-                        {{ .Title }}
-                      </a>
-                    </h2>
-
-                    <!-- Summary / Excerpt -->
-                    <p class="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400 line-clamp-3">
-                      {{ .Description | default .Summary }}
-                    </p>
-                  </div>
-
-                  <!-- Card Footer Meta -->
-                  <div class="mt-6 flex items-center justify-between border-t border-zinc-100 pt-4 text-xs font-semibold text-zinc-500 dark:border-zinc-800 dark:text-zinc-400">
-                    <span class="text-zinc-600">{{ if eq $.Lang "es" }}En Línea / Presencial{{ else }}Online / Onsite{{ end }}</span>
-                    <a 
-                      href="{{ .RelPermalink }}" 
-                      class="inline-flex min-h-[32px] items-center font-bold text-zinc-950 hover:underline dark:text-white"
-                      aria-label="Access {{ .Title }}"
-                      style="text-decoration: none; color: inherit;"
-                    >
-                      {{ if eq $.Lang "es" }}Acceder al Taller →{{ else }}Access Workshop →{{ end }}
+            <!-- PUBLIC LAUNCH CTA BAR -->
+            <div class="bg-navy-900 text-creme-50 p-6 rounded-xl">
+                <p class="text-sm font-mono uppercase tracking-wider text-creme-200 mb-2">
+                    {{ if eq .Lang "es" }}No necesita iniciar sesión en Canvas para ver el curso:{{ else }}You don't need to be logged into Canvas to view:{{ end }}
+                </p>
+                <p class="text-lg font-bold mb-4">
+                    <a href="https://azwestern.instructure.com/courses/42051" target="_blank" rel="noopener noreferrer" class="text-creme-50 hover:underline" style="word-break: break-all;">
+                        https://azwestern.instructure.com/courses/42051
                     </a>
-                  </div>
-                </article>
-              {{ end }}
+                </p>
+                <div class="flex flex-wrap items-center gap-3">
+                    <a href="https://azwestern.instructure.com/courses/42051" target="_blank" rel="noopener noreferrer" class="cta-btn" style="background-color: #FAFBF7; color: #0B192C; border: 2px solid #FAFBF7;">
+                        {{ if eq .Lang "es" }}Abrir EXW-Demo (Course ID: 42051) &rarr;{{ else }}Launch EXW-Demo (Course ID: 42051) &rarr;{{ end }}
+                    </a>
+                    <a href="https://azwestern.instructure.com/courses/42051/modules" target="_blank" rel="noopener noreferrer" class="cta-btn" style="background-color: transparent; color: #FAFBF7; border: 2px solid #FAFBF7;">
+                        {{ if eq .Lang "es" }}Explorar Módulos del Círculo Dorado &rarr;{{ else }}Explore Golden Circle Modules &rarr;{{ end }}
+                    </a>
+                    <a href="https://exwtoolkit.com" target="_blank" rel="noopener noreferrer" class="cta-btn" style="background-color: transparent; color: #FAFBF7; border: 2px solid #FAFBF7;">
+                        {{ if eq .Lang "es" }}Abrir exwtoolkit.com &rarr;{{ else }}Launch exwtoolkit.com &rarr;{{ end }}
+                    </a>
+                </div>
             </div>
+        </section>
 
-          </div>
-        </div>
+        <!-- 4-STOP INTERACTIVE TOUR OF COURSE 42051 -->
+        <section class="bg-white p-8 rounded-2xl border border-creme-200 shadow-sm mb-8" aria-labelledby="tour-heading">
+            <h3 id="tour-heading" class="text-xl font-bold text-navy-900 mb-2">
+                {{ if eq .Lang "es" }}Recorrido Directo en 4 Puntos por EXW-Demo (Sin Inicio de Sesión){{ else }}4-Stop Interactive Tour of EXW-Demo (No Canvas Login Required){{ end }}
+            </h3>
+            <p class="text-sm text-navy-800 mb-6">
+                {{ if eq .Lang "es" }}
+                    Haga clic en cualquiera de las cuatro secciones públicas a continuación para inspeccionar la arquitectura en vivo dentro de Canvas LMS y el Kit de Herramientas Digitales:
+                {{ else }}
+                    Click any of the four public entry points below to inspect the live Curriculum-as-Code architecture inside Canvas LMS and the external edge toolkit:
+                {{ end }}
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <!-- Stop 1: Home Hub -->
+                <div class="p-5 rounded-xl bg-creme-50 border border-creme-200 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="font-mono text-xs font-bold text-navy-800">STOP 01 &bull; HOME HUB</span>
+                            <span class="font-mono text-xs bg-creme-200 text-navy-900 px-2 py-0.5 rounded font-semibold">Canvas Wiki Page</span>
+                        </div>
+                        <h4 class="text-base font-bold text-navy-900 mb-2">
+                            <a href="https://azwestern.instructure.com/courses/42051/pages/exw-demo-coach-alan-wpe-fleet-architecture-and-curriculum-as-code-hub-slash-portal-maestro-de-simulacion-oer" target="_blank" rel="noopener noreferrer" class="hover:underline">
+                                WPE Fleet Architecture &amp; Curriculum-as-Code Master Hub
+                            </a>
+                        </h4>
+                        <p class="text-xs text-navy-800 mb-3">
+                            {{ if eq .Lang "es" }}
+                                Incluye el resumen ejecutivo en lenguaje claro (EN/ES), el flujo diario entre estaciones M1/M2, los enlaces en inglés y doblado al español de "Start With Why" de Simon Sinek y el directorio completo del Círculo Dorado.
+                            {{ else }}
+                                Features the bilingual In Plain English executive overview, the M1/M2 daily workflow playbook, the English and Spanish-dubbed Simon Sinek "Start With Why" TED Talk callout, and the complete Golden Circle directory.
+                            {{ end }}
+                        </p>
+                    </div>
+                    <a href="https://azwestern.instructure.com/courses/42051/pages/exw-demo-coach-alan-wpe-fleet-architecture-and-curriculum-as-code-hub-slash-portal-maestro-de-simulacion-oer" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-navy-900 hover:underline mt-2">
+                        {{ if eq .Lang "es" }}Inspeccionar el Home Hub &rarr;{{ else }}Inspect the Home Hub &rarr;{{ end }}
+                    </a>
+                </div>
+
+                <!-- Stop 2: Golden Circle Modules -->
+                <div class="p-5 rounded-xl bg-creme-50 border border-creme-200 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="font-mono text-xs font-bold text-navy-800">STOP 02 &bull; GOLDEN CIRCLE MODULES</span>
+                            <span class="font-mono text-xs bg-creme-200 text-navy-900 px-2 py-0.5 rounded font-semibold">WHY &rarr; HOW &rarr; WHAT</span>
+                        </div>
+                        <h4 class="text-base font-bold text-navy-900 mb-2">
+                            <a href="https://azwestern.instructure.com/courses/42051/modules" target="_blank" rel="noopener noreferrer" class="hover:underline">
+                                Inside-Out Golden Circle Module Sequence (56+ Pages)
+                            </a>
+                        </h4>
+                        <p class="text-xs text-navy-800 mb-3">
+                            {{ if eq .Lang "es" }}
+                                Secuenciado desde el interior hacia afuera: ANILLO 1: EL POR QUÉ (Gobernanza de IA, Derechos Civiles y Equidad HSI), ANILLO 2: EL CÓMO (Los 3 Vehículos de Auditoría y Arquitectura Local) y ANILLO 3: EL QUÉ (Simuladores en Vivo y Pruebas de Acreditación).
+                            {{ else }}
+                                Sequenced from the inside-out: RING 1: THE WHY (AI Governance, Civil Rights Accessibility &amp; HSI Equity), RING 2: THE HOW (The 3 Audit Vehicles &amp; Local Apple Silicon Stack), and RING 3: THE WHAT (Live Simulators, 3-Track Labs &amp; Accreditation Proof).
+                            {{ end }}
+                        </p>
+                    </div>
+                    <a href="https://azwestern.instructure.com/courses/42051/modules" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-navy-900 hover:underline mt-2">
+                        {{ if eq .Lang "es" }}Inspeccionar la Pestaña de Módulos &rarr;{{ else }}Inspect the Modules Tab &rarr;{{ end }}
+                    </a>
+                </div>
+
+                <!-- Stop 3: Master Syllabus Blueprint -->
+                <div class="p-5 rounded-xl bg-creme-50 border border-creme-200 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="font-mono text-xs font-bold text-navy-800">STOP 03 &bull; SYLLABUS BLUEPRINT</span>
+                            <span class="font-mono text-xs bg-creme-200 text-navy-900 px-2 py-0.5 rounded font-semibold">10-7-0 Mastery Scale</span>
+                        </div>
+                        <h4 class="text-base font-bold text-navy-900 mb-2">
+                            <a href="https://azwestern.instructure.com/courses/42051/assignments/syllabus" target="_blank" rel="noopener noreferrer" class="hover:underline">
+                                Zero-Drift Institutional Syllabus &amp; AI Policy Contract
+                            </a>
+                        </h4>
+                        <p class="text-xs text-navy-800 mb-3">
+                            {{ if eq .Lang "es" }}
+                                Demuestra el contrato institucional sin deriva, la escala de dominio 10-7-0, la política de semáforo de IA, el protocolo de delimitadores (###) y las fuentes académicas federales (PAGA 2018, DGA 2025–2030, ACSM 12.ª ed., NASM OPT).
+                            {{ else }}
+                                Demonstrates the zero-drift syllabus contract, the 10-7-0 Mastery Grading Scale, the Traffic Light &amp; Triple-Hash (###) Delimiter AI Policy, and the Federal Sources of Truth (PAGA 2018, DGA 2025–2030, ACSM 12th Ed., NASM OPT).
+                            {{ end }}
+                        </p>
+                    </div>
+                    <a href="https://azwestern.instructure.com/courses/42051/assignments/syllabus" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-navy-900 hover:underline mt-2">
+                        {{ if eq .Lang "es" }}Inspeccionar el Syllabus &rarr;{{ else }}Inspect the Syllabus Blueprint &rarr;{{ end }}
+                    </a>
+                </div>
+
+                <!-- Stop 4: Live EXW Digital Toolkit -->
+                <div class="p-5 rounded-xl bg-creme-50 border border-creme-200 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="font-mono text-xs font-bold text-navy-800">STOP 04 &bull; LIVE TOOLKIT</span>
+                            <span class="font-mono text-xs bg-creme-200 text-navy-900 px-2 py-0.5 rounded font-semibold">exwtoolkit.com</span>
+                        </div>
+                        <h4 class="text-base font-bold text-navy-900 mb-2">
+                            <a href="https://exwtoolkit.com" target="_blank" rel="noopener noreferrer" class="hover:underline">
+                                EXW Digital Toolkit (9-Box Bilingual Clinical Workbench)
+                            </a>
+                        </h4>
+                        <p class="text-xs text-navy-800 mb-3">
+                            {{ if eq .Lang "es" }}
+                                Aplicación web progresiva (PWA) bilingüe (EN/ES) que ejecuta simulaciones fisiológicas y nutricionales del desierto de Yuma / Valle Imperial y genera tokens criptográficos de verificación activa (EXW-[COURSE]-M[XX]-[HASH]).
+                            {{ else }}
+                                Bilingual (EN/ES) clinical calculator and Yuma / Imperial Valley heat-stress telemetry workbench that bypasses Canvas HTML sanitizers and generates cryptographic active verification tokens (EXW-[COURSE]-M[XX]-[HASH]).
+                            {{ end }}
+                        </p>
+                    </div>
+                    <a href="https://exwtoolkit.com" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-navy-900 hover:underline mt-2">
+                        {{ if eq .Lang "es" }}Abrir exwtoolkit.com &rarr;{{ else }}Launch exwtoolkit.com &rarr;{{ end }}
+                    </a>
+                </div>
+            </div>
+        </section>
+
     </main>
 
-{{ partial "footer.html" . }}
+    {{ partial "footer.html" . }}
 </body>
 </html>
