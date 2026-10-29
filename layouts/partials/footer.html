@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
       try {
         await navigator.clipboard.writeText(block.innerText);
         const originalText = copyBtn.textContent;
-        copyBtn.textContent = isSpanish ? '✓ ¡Copiado!' : '✓ Copied!';
+        copyBtn.textContent = isSpanish ? '¡Copiado!' : 'Copied!';
         copyBtn.classList.add('copied');
 
         setTimeout(() => {
@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const isSpanish = document.documentElement.lang === 'es' || window.location.pathname.includes('/es/');
 
         button.style.backgroundColor = '#065F46';
-        btnText.innerText = isSpanish ? '✓ ¡Copiado!' : '✓ Copied!';
+        btnText.innerText = isSpanish ? '¡Copiado!' : 'Copied!';
 
         setTimeout(() => {
           button.style.backgroundColor = '#003366';
