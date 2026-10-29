@@ -3,9 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ .Title }} | Alan Pruitt</title>
+    <title>{{ .Title }} | Alan Pruitt (Coach Alan) — Curriculum Architect &amp; AI Strategist</title>
     <meta name="description" content="{{ .Description | default .Summary }}">
+    <meta name="keywords" content="Alan Pruitt, Coach Alan, Curriculum-as-Code, S-A-R Standard, The Clinical Framing Protocol, ADA Title II Accessibility, WCAG 2.2 AA 9:1 Contrast, WCAG 3.0 Cognitive Accessibility, Air-Gapped Sovereign AI, Webcognita LLC, {{ .Title }}">
+    <meta name="author" content="Alan Pruitt">
     <link rel="canonical" href="{{ .Permalink }}">
+    <link rel="me" href="https://www.linkedin.com/in/alanpruitt/">
+
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Alan Pruitt | Curriculum-as-Code">
+    <meta property="og:title" content="{{ .Title }} | Alan Pruitt">
+    <meta property="og:description" content="{{ .Description | default .Summary }}">
+    <meta property="og:url" content="{{ .Permalink }}">
+    <meta property="og:image" content="https://alanpruitt.com/assets/og-preview.png">
+    <meta property="article:author" content="https://www.linkedin.com/in/alanpruitt/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ .Title }} | Alan Pruitt">
+    <meta name="twitter:description" content="{{ .Description | default .Summary }}">
+    <meta name="twitter:image" content="https://alanpruitt.com/assets/og-preview.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": {{ .Title | jsonify }},
+      "description": {{ (.Description | default .Summary) | jsonify }},
+      "url": {{ .Permalink | jsonify }},
+      "inLanguage": "{{ .Lang | default "en" }}",
+      "author": {
+        "@type": "Person",
+        "@id": "https://alanpruitt.com/#person",
+        "name": "Alan Pruitt",
+        "jobTitle": "Founder & Chief Curriculum Architect",
+        "url": "https://alanpruitt.com/",
+        "sameAs": [
+          "https://www.linkedin.com/in/alanpruitt/",
+          "https://www.webcognita.com/"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://www.webcognita.com/#organization",
+        "name": "Webcognita LLC",
+        "url": "https://www.webcognita.com/"
+      }
+    }
+    </script>
 
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%230B192C'/></svg>">
 

@@ -3,9 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ .Title }} | Alan Pruitt</title>
-    <meta name="description" content="{{ .Description }}">
+    <title>{{ .Title }} | Alan Pruitt (Coach Alan) — Curriculum Architect &amp; AI Strategist</title>
+    <meta name="description" content="{{ .Description | default "Alan Pruitt (Coach Alan) — Curriculum Architect, AI Strategist, USMC Veteran & Founder of Webcognita LLC." }}">
+    <meta name="author" content="Alan Pruitt">
     <link rel="canonical" href="{{ .Permalink }}">
+    <link rel="me" href="https://www.linkedin.com/in/alanpruitt/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Alan Pruitt | Curriculum-as-Code">
+    <meta property="og:title" content="{{ .Title }} | Alan Pruitt">
+    <meta property="og:description" content="{{ .Description | default "Alan Pruitt (Coach Alan) — Curriculum Architect, AI Strategist, USMC Veteran & Founder of Webcognita LLC." }}">
+    <meta property="og:url" content="{{ .Permalink }}">
+    <meta property="og:image" content="https://alanpruitt.com/assets/og-preview.png">
+    <meta name="twitter:card" content="summary_large_image">
 
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%230B192C'/></svg>">
 
