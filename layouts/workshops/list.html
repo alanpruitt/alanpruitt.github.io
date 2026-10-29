@@ -152,45 +152,65 @@
 
         <!-- HERO & EXECUTIVE WELCOME CALLOUT -->
         <section class="bg-white p-8 rounded-2xl border-2 border-navy-900 shadow-sm mb-8" aria-labelledby="exw-demo-heading">
-            <div class="flex flex-wrap items-center gap-2 mb-4">
-                <span class="font-mono text-xs font-bold uppercase tracking-wider px-3 py-1 rounded bg-navy-900 text-creme-50">
-                    {{ if eq .Lang "es" }}Entorno Demostrativo en Vivo • Curso ID: 42051{{ else }}Live Institutional Showcase • Course ID: 42051{{ end }}
-                </span>
-                <span class="font-mono text-xs font-bold uppercase tracking-wider px-3 py-1 rounded bg-creme-200 text-navy-900">
-                    {{ if eq .Lang "es" }}Acceso Público (Sin Inicio de Sesión en Canvas){{ else }}Public Read Access (No Canvas Login Required){{ end }}
-                </span>
-                <span class="font-mono text-xs font-bold uppercase tracking-wider px-3 py-1 rounded bg-creme-200 text-navy-900">
-                    100% WCAG 2.2 AA (9:1) &bull; ADA Title II &bull; $0 ZTC
-                </span>
-            </div>
+            <div style="display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between; gap: 1.75rem;" class="mb-6">
+                <div style="flex: 1 1 480px; min-width: 280px;">
+                    <div class="flex flex-wrap items-center gap-2 mb-4">
+                        <span class="font-mono text-xs font-bold uppercase tracking-wider px-3 py-1 rounded bg-navy-900 text-creme-50">
+                            {{ if eq .Lang "es" }}Entorno Demostrativo en Vivo • Curso ID: 42051{{ else }}Live Institutional Showcase • Course ID: 42051{{ end }}
+                        </span>
+                        <span class="font-mono text-xs font-bold uppercase tracking-wider px-3 py-1 rounded bg-creme-200 text-navy-900">
+                            {{ if eq .Lang "es" }}Acceso Público (Sin Inicio de Sesión en Canvas){{ else }}Public Read Access (No Canvas Login Required){{ end }}
+                        </span>
+                        <span class="font-mono text-xs font-bold uppercase tracking-wider px-3 py-1 rounded bg-creme-200 text-navy-900">
+                            100% WCAG 2.2 AA (9:1) &bull; ADA Title II &bull; $0 ZTC
+                        </span>
+                    </div>
 
-            <h2 id="exw-demo-heading" class="text-2xl font-extrabold text-navy-900 mb-4" style="font-size: 1.85rem; line-height: 1.25;">
-                {{ if eq .Lang "es" }}
-                    Bienvenido a EXW-Demo (Course ID: 42051) — Currículo-como-Código, OER $0 ZTC y Gobernanza de IA
-                {{ else }}
-                    Welcome to EXW-Demo (Course ID: 42051) — Curriculum-as-Code, $0 ZTC OER &amp; AI Governance
-                {{ end }}
-            </h2>
+                    <h2 id="exw-demo-heading" class="text-2xl font-extrabold text-navy-900 mb-4" style="font-size: 1.85rem; line-height: 1.25;">
+                        {{ if eq .Lang "es" }}
+                            Bienvenido a EXW-Demo (Course ID: 42051) — Currículo-como-Código, OER $0 ZTC y Gobernanza de IA
+                        {{ else }}
+                            Welcome to EXW-Demo (Course ID: 42051) — Curriculum-as-Code, $0 ZTC OER &amp; AI Governance
+                        {{ end }}
+                    </h2>
 
-            {{ if eq .Lang "es" }}
-            <div class="text-base text-navy-900 mb-6" style="line-height: 1.75;">
-                <p class="mb-4">
-                    Construí este entorno demostrativo en Canvas (no visible para estudiantes inscritos) para mostrar cómo opero la flota de cursos de Ciencias del Ejercicio y Bienestar (<strong>EXW 101</strong>, <strong>EXW 150</strong>, <strong>EXW 210</strong>, <strong>EXW 245</strong> y <strong>EXW 265</strong>) en <strong>Arizona Western College (AWC)</strong> como un ecosistema unificado de <strong>Currículo-como-Código (Curriculum-as-Code)</strong> controlado por versiones en Git. Le invito a explorar el <strong>Portal Maestro (Home Hub)</strong>, la pestaña de <strong>Módulos</strong>—secuenciada de adentro hacia afuera utilizando el <strong>Círculo Dorado de Simon Sinek (<code>POR QUÉ &rarr; CÓMO &rarr; QUÉ</code>)</strong>—el <strong>Programa de Estudio (Syllabus)</strong> y el <strong>Kit de Herramientas Digitales en vivo (<a href="https://exwtoolkit.com" target="_blank" rel="noopener noreferrer" class="font-bold text-navy-900 hover:underline">exwtoolkit.com</a>)</strong>.
-                </p>
-                <p class="mb-4">
-                    En lugar de depender de interfaces tradicionales de chatbots de IA en la nube, impulso mis flujos de trabajo instruccionales utilizando un modelo local de pesos abiertos <strong>Google Gemini Argon 4 (Gemma)</strong> aislado de internet (<em>air-gapped</em>)—de código abierto, sin cuotas de suscripción SaaS, sin cobro por tokens y con seguridad de confianza cero (<em>zero-trust</em>)—ejecutándose localmente en mi hardware <strong>Apple Silicon M2 (MacBook Air)</strong>.
-                </p>
+                    {{ if eq .Lang "es" }}
+                    <div class="text-base text-navy-900" style="line-height: 1.75;">
+                        <p class="mb-4">
+                            Construí este entorno demostrativo en Canvas (no visible para estudiantes inscritos) para mostrar cómo opero la flota de cursos de Ciencias del Ejercicio y Bienestar (<strong>EXW 101</strong>, <strong>EXW 150</strong>, <strong>EXW 210</strong>, <strong>EXW 245</strong> y <strong>EXW 265</strong>) en <strong>Arizona Western College (AWC)</strong> como un ecosistema unificado de <strong>Currículo-como-Código (Curriculum-as-Code)</strong> controlado por versiones en Git. Le invito a explorar el <strong>Portal Maestro (Home Hub)</strong>, la pestaña de <strong>Módulos</strong>—secuenciada de adentro hacia afuera utilizando el <strong>Círculo Dorado de Simon Sinek (<code>POR QUÉ &rarr; CÓMO &rarr; QUÉ</code>)</strong>—el <strong>Programa de Estudio (Syllabus)</strong> y el <strong>Kit de Herramientas Digitales en vivo (<a href="https://exwtoolkit.com" target="_blank" rel="noopener noreferrer" class="font-bold text-navy-900 hover:underline">exwtoolkit.com</a>)</strong>.
+                        </p>
+                        <p style="margin: 0;">
+                            En lugar de depender de interfaces tradicionales de chatbots de IA en la nube, impulso mis flujos de trabajo instruccionales utilizando un modelo local de pesos abiertos <strong>Google Gemini Argon 4 (Gemma)</strong> aislado de internet (<em>air-gapped</em>)—de código abierto, sin cuotas de suscripción SaaS, sin cobro por tokens y con seguridad de confianza cero (<em>zero-trust</em>)—ejecutándose localmente en mi hardware <strong>Apple Silicon M2 (MacBook Air)</strong>.
+                        </p>
+                    </div>
+                    {{ else }}
+                    <div class="text-base text-navy-900" style="line-height: 1.75;">
+                        <p class="mb-4">
+                            I built this non-student-facing Canvas showcase shell to show how I run the <strong>Arizona Western College Exercise and Wellness (EXW) fleet</strong> (<strong>EXW 101</strong>, <strong>EXW 150</strong>, <strong>EXW 210</strong>, <strong>EXW 245</strong>, and <strong>EXW 265</strong>) as a unified, Git-version-controlled <strong>Curriculum-as-Code</strong> ecosystem. I invite you to explore the <strong>Home Hub</strong>, the <strong>Modules</strong> tab—sequenced using <strong>Simon Sinek&rsquo;s Golden Circle (<code>WHY &rarr; HOW &rarr; WHAT</code>)</strong>—the <strong>Syllabus</strong> blueprint, and the live <strong>Toolkit (<a href="https://exwtoolkit.com" target="_blank" rel="noopener noreferrer" class="font-bold text-navy-900 hover:underline">exwtoolkit.com</a>)</strong>.
+                        </p>
+                        <p style="margin: 0;">
+                            Instead of relying on traditional, cloud-based AI chatbot interfaces, I power my instructional workflows using an <strong>air-gapped Google Gemini Argon 4 open-weight Gemma model</strong> (open-source with no SaaS/subscriber subscription fees, no tokens, and zero-trust security) running locally on my <strong>Apple Silicon M2 (MacBook Air)</strong> hardware.
+                        </p>
+                    </div>
+                    {{ end }}
+                </div>
+
+                <!-- SCANNABLE QR CODE CARD (ABOVE THE FOLD) -->
+                <aside aria-label="{{ if eq .Lang "es" }}Código QR para acceder a alanpruitt.com en dispositivos móviles{{ else }}Scannable QR code to access alanpruitt.com on mobile devices{{ end }}" style="flex: 0 0 215px; background-color: #FAFBF7; border: 2px solid #0B192C; border-radius: 0.875rem; padding: 1rem; text-align: center; margin-left: auto; margin-right: auto;">
+                    <div class="font-mono text-xs font-bold uppercase tracking-wider text-navy-900 mb-2">
+                        {{ if eq .Lang "es" }}Acceso Móvil en Vivo{{ else }}Mobile Workshop Access{{ end }}
+                    </div>
+                    <div style="background-color: #ffffff; border: 1px solid #E6E6DC; border-radius: 0.5rem; padding: 0.5rem; display: inline-block;">
+                        <img src="/assets/qr-alanpruitt.svg" alt="Scannable QR code linking directly to https://alanpruitt.com for mobile workshop participants" width="165" height="165" style="display: block; width: 165px; height: 165px;" />
+                    </div>
+                    <div class="font-mono text-xs font-bold text-navy-900 mt-2">
+                        https://alanpruitt.com
+                    </div>
+                    <p class="text-xs text-navy-800 mt-1" style="margin-bottom: 0; line-height: 1.35;">
+                        {{ if eq .Lang "es" }}Escanee con la cámara de su teléfono para seguir el taller en vivo.{{ else }}Scan with your phone camera to follow along on your mobile device.{{ end }}
+                    </p>
+                </aside>
             </div>
-            {{ else }}
-            <div class="text-base text-navy-900 mb-6" style="line-height: 1.75;">
-                <p class="mb-4">
-                    I built this non-student-facing Canvas showcase shell to show how I run the <strong>Arizona Western College Exercise and Wellness (EXW) fleet</strong> (<strong>EXW 101</strong>, <strong>EXW 150</strong>, <strong>EXW 210</strong>, <strong>EXW 245</strong>, and <strong>EXW 265</strong>) as a unified, Git-version-controlled <strong>Curriculum-as-Code</strong> ecosystem. I invite you to explore the <strong>Home Hub</strong>, the <strong>Modules</strong> tab—sequenced using <strong>Simon Sinek&rsquo;s Golden Circle (<code>WHY &rarr; HOW &rarr; WHAT</code>)</strong>—the <strong>Syllabus</strong> blueprint, and the live <strong>Toolkit (<a href="https://exwtoolkit.com" target="_blank" rel="noopener noreferrer" class="font-bold text-navy-900 hover:underline">exwtoolkit.com</a>)</strong>.
-                </p>
-                <p class="mb-4">
-                    Instead of relying on traditional, cloud-based AI chatbot interfaces, I power my instructional workflows using an <strong>air-gapped Google Gemini Argon 4 open-weight Gemma model</strong> (open-source with no SaaS/subscriber subscription fees, no tokens, and zero-trust security) running locally on my <strong>Apple Silicon M2 (MacBook Air)</strong> hardware.
-                </p>
-            </div>
-            {{ end }}
 
             <!-- AIR-GAPPED DEFINITION CALLOUT BOX -->
             <div class="bg-creme-50 border border-creme-200 border-l-4 p-6 rounded-xl mb-6" style="border-left-color: #680014;">
