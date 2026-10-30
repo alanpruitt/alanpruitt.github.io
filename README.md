@@ -1,5 +1,6 @@
 # Alan Pruitt — Curriculum Architect & AI Strategist
 > Personal portfolio, research hub, and sovereign Curriculum-as-Code (CaC) repository of Alan Pruitt (Coach Alan).
+> 
 
 ## Core Identity & Architecture
 - **Founder & Chief Curriculum Architect**: Webcognita LLC (<<https://www.webcognita.com>>).
