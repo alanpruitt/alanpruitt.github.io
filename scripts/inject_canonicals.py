@@ -29,8 +29,8 @@ def process_html_files(
     skipped_existing = 0
 
     for file_path in html_files:
-        # Exclude 404 and error pages from receiving canonical tags
-        if file_path.name in ("404.html", "50x.html"):
+        # Exclude 404, error pages, and Google Search Console verification files from modification
+        if file_path.name in ("404.html", "50x.html") or file_path.name.startswith("google"):
             continue
 
         content = file_path.read_text(encoding="utf-8", errors="ignore")
