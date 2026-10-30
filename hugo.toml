@@ -1,5 +1,6 @@
 baseURL = "https://alanpruitt.com/"
 enableMissingTranslationPlaceholders = false
+disableKinds = ["taxonomy", "term"]
 
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
