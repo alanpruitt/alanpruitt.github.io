@@ -37,16 +37,17 @@
 
 ---
 
-## 3. Production Applications (8-App Sovereign PWA Ecosystem)
+## 3. Production Applications (9-App Sovereign PWA Ecosystem)
 
 1. **[EXW Digital Tool Kit (`exwtoolkit.com`)](https://exwtoolkit.com):** 9-Box bilingual (`EN` / `ES`) Wellness & Physical Education clinical PWA aligned with PAGA 2018 (2nd Ed.), DGA 2025–2030, ACSM 12th Ed., and NASM OPT standards, featuring Yuma desert heat-stress telemetry and cryptographic student verification tokens (`EXW-[COURSE]-M[XX]-[HASH]`).
 2. **[EXW Physical Activity Tool Kit (`paga2018.dev`)](https://paga2018.dev):** $0 ZTC Student Open Educational Resource (OER) for Arizona Western College WPE/EXW courses built on the Physical Activity Guidelines for Americans (2018, 2nd Ed.) with `Pattern / Rule / Solve` clinical activity audits.
-3. **[Culinary Medicine Digital Tool Kit (`culinarycompass.dev`)](https://culinarycompass.dev):** Culinary Medicine Digital Tool Kit (DTK) for The University of Arizona Nutritional Sciences & Wellness (NSW) Foods Lab, operationalizing `Pattern / Rule / Solve` and `###` case-audit delimiter protocols.
-4. **[Flavor Architect (`flavorarchitect.dev`)](https://flavorarchitect.dev):** R&D engine for the UArizona Wellness Foods Lab bridging molecular flavor compound synergies with DGA-aligned clinical nutrition to generate Imperial and Metric laboratory prototypes.
-5. **[Arquitecto del Sabor (`arquitectodelsabor.dev`)](https://arquitectodelsabor.dev):** Spanish-language molecular culinary R&D engine (*Motor de I+D — Laboratorio de Alimentos de Bienestar de The University of Arizona*) uniting flavor science with DGA-aligned clinical nutrition across Metric and Imperial prototypes.
-6. **[Markdown to Documents (`mdtodocs.app`)](https://mdtodocs.app):** Curriculum-as-Code document compiler that transforms plain-text Markdown into born-accessible, WCAG-compliant PDF, Word (`.docx`), and semantic HTML documents.
-7. **[Prompt-per-Mile Offset Calculator (`prompt-mile-hero.lovable.app`)](https://prompt-mile-hero.lovable.app):** Sustainability and active-transit telemetry utility that converts human movement and green transit miles into CO2 savings and equivalent AI compute prompt offsets.
-8. **[AgFlow 5G — Smart Irrigation & Remote Operations Calculator (`agflow-roi-dash.lovable.app`)](https://agflow-roi-dash.lovable.app):** Desert AgTech pilot utility modeling the operational, financial, and water-conservation ROI of 5G-enabled remote irrigation management across the Yuma / Imperial Valley agricultural corridor.
+3. **[EXW-Demo — WPE Fleet Architecture & Curriculum-as-Code Hub (`exwdemo.dev`)](https://exwdemo.dev):** Zero-login Progressive Web App mirror of AWC Course ID `42051` showcasing the Golden Circle (`WHY → HOW → WHAT`) Curriculum-as-Code fleet, WCAG 2.2 AA (`9:1` Double-Contrast Guard) pages, and 256 `10/10` Exemplar Solves.
+4. **[Culinary Medicine Digital Tool Kit (`culinarycompass.dev`)](https://culinarycompass.dev):** Culinary Medicine Digital Tool Kit (DTK) for The University of Arizona Nutritional Sciences & Wellness (NSW) Foods Lab, operationalizing `Pattern / Rule / Solve` and `###` case-audit delimiter protocols.
+5. **[Flavor Architect (`flavorarchitect.dev`)](https://flavorarchitect.dev):** R&D engine for the UArizona Wellness Foods Lab bridging molecular flavor compound synergies with DGA-aligned clinical nutrition to generate Imperial and Metric laboratory prototypes.
+6. **[Arquitecto del Sabor (`arquitectodelsabor.dev`)](https://arquitectodelsabor.dev):** Spanish-language molecular culinary R&D engine (*Motor de I+D — Laboratorio de Alimentos de Bienestar de The University of Arizona*) uniting flavor science with DGA-aligned clinical nutrition across Metric and Imperial prototypes.
+7. **[Markdown to Documents (`mdtodocs.app`)](https://mdtodocs.app):** Curriculum-as-Code document compiler that transforms plain-text Markdown into born-accessible, WCAG-compliant PDF, Word (`.docx`), and semantic HTML documents.
+8. **[Prompt-per-Mile Offset Calculator (`prompt-mile-hero.lovable.app`)](https://prompt-mile-hero.lovable.app):** Sustainability and active-transit telemetry utility that converts human movement and green transit miles into CO2 savings and equivalent AI compute prompt offsets.
+9. **[AgFlow 5G — Smart Irrigation & Remote Operations Calculator (`agflow-roi-dash.lovable.app`)](https://agflow-roi-dash.lovable.app):** Desert AgTech pilot utility modeling the operational, financial, and water-conservation ROI of 5G-enabled remote irrigation management across the Yuma / Imperial Valley agricultural corridor.
 
 ---
 
