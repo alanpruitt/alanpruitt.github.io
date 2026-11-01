@@ -2,11 +2,11 @@
 
 - **Target Canonical:** `https://alanpruitt.com/essays/essay-38-dom-graphrag-and-prov-o-curriculum-as-code/`
 - **Release Date:** 2026-11-01
-- **Posting Strategy:** Zero Outbound Links in Main Post Body (`~2,450` chars, strictly under the `2,500`-char target budget) + Canonical Essay & Architecture Brief Links in First Comment.
+- **Posting Strategy:** Zero Outbound Links & Zero Trailing Hashtags in Main Post Body (`2,350` chars, strictly under the `2,500`-char target budget, relying 100% on natural-language LinkedIn Headline & About SEO keyword triangulation) + Canonical Essay & Architecture Brief Links in First Comment.
 
 ---
 
-## Part 1: Main LinkedIn Post Body (Copy-Paste — 2,448 Characters, Zero Links)
+## Part 1: Main LinkedIn Post Body (Copy-Paste — 2,350 Characters, Zero Links, Zero Hashtags)
 
 What if I didn't build the graph?
 
@@ -28,8 +28,6 @@ In Essay 38, I break down how we upgraded our Curriculum-as-Code (S-A-R v2.2) ar
 4. W3C SKOS / Schema.org Bilingual Clinical Ontology: Mapping colloquial Norteño-Spanish expressions to clinical SSoT rules—lifting bilingual RAG retrieval accuracy from 0.7743 to 0.8236 across borderland HSI communities.
 
 Full Essay 38 and our 6 downloadable S-A-R v2.2 & Project Horizon Architecture Briefs are linked in the first comment below.
-
-#CurriculumAsCode #SovereignAI #GraphRAG #HigherEd #WCAG3 #ADATitleII #OER #EdTech #InstructionalDesign
 
 ---
 
