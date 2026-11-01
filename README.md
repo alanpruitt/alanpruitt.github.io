@@ -36,6 +36,9 @@
   1. [Sovereign Clinical AI, DOM GraphRAG & W3C PROV-O Architecture Brief (`S-A-R v2.2`, PDF)](https://alanpruitt.com/docs/EXW_S_A_R_v2_2_DOM_GraphRAG_and_PROV_O_Architecture_Brief.pdf)
   2. [EXW Course Fleet Laboratory Manual (`v2.2`, PDF)](https://alanpruitt.com/docs/EXW_Course_Fleet_Laboratory_Manual_v2_2.pdf)
   3. [AWC WPE Novel 100-Level Curriculum Proposal Portfolio (`ACRES`, PDF)](https://alanpruitt.com/docs/AWC_WPE_Novel_100_Level_Curriculum_Proposal_Portfolio.pdf)
+  4. [Project Horizon: 2026 AWC Innovation Fund Executive Grant Brief & 100-Point Rubric Matrix (`$8,850` Request, PDF)](https://alanpruitt.com/docs/AWC_2026_Innovation_Fund_Project_Horizon_Executive_Memo.pdf)
+  5. [Project Horizon White Paper: Benchmarking W3C WCAG 3.0 APCA (`100,000+ Lux`) & Norteño-Spanish Screen-Reader Linting (PDF)](https://alanpruitt.com/docs/Project_Horizon_WCAG3_APCA_and_Norteno_ScreenReader_White_Paper.pdf)
+  6. [Project Horizon: Vendor-Agnostic Air-Gapped Edge Testbed & Optical Telemetry Specifications (PDF)](https://alanpruitt.com/docs/Project_Horizon_Vendor-agnostic_Technical_Specs.pdf)
 - **Spring 2027 Active & Warm-Standby Fleet Architecture:**
   - `EXW-150-002`: *Nutrition for Exercise & Sport* (16-Week Full Semester)
   - `EXW-265-001`: *Exercise for Special Populations* (16-Week Full Semester)
