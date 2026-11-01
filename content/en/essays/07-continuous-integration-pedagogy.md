@@ -87,3 +87,7 @@ Cuando los módulos de un curso se reordenan o actualizan entre semestres, las d
 Al integrar validadores pedagógicos en hooks locales de pre-commit y flujos de GitHub Actions, los arquitectos instruccionales logran una **entrega curricular libre de regresiones**. La garantía de calidad deja de ser una auditoría estresante días antes del semestre para convertirse en una suite de pruebas en ejecución continua.
 
 </div>
+
+---
+
+> **Disclaimer:** The Curriculum-as-Code architecture, S-A-R Standard, and open-source software tools described in this essay represent my independent faculty engineering and research through Webcognita LLC and do not represent official policy or endorsement by Arizona Western College or The University of Arizona.

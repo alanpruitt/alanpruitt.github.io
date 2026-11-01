@@ -80,3 +80,7 @@ El paso final automatiza la entrega del contenido auditado directamente a las au
 Resolver el mandato de ADA Título II con parches temporales es una batalla perdida que drena los recursos de la universidad año tras año. Tratar el contenido educativo como infraestructura a través de **Curriculum-as-Code** no solo blinda legalmente a la institución frente a los estándares de 2026, sino que devuelve a los docentes el control absoluto sobre sus materiales.
 
 Al final del día, una arquitectura limpia, rápida y nacida accesible (*born-accessible*) beneficia a todos: el estudiante con lector de pantalla navega sin obstáculos, el estudiante en su teléfono celular carga el contenido al instante sin gastar datos de más, y la institución opera con la certeza de que su infraestructura digital está construida sobre cimientos sólidos.
+
+---
+
+> **Disclaimer:** The Curriculum-as-Code architecture, S-A-R Standard, and open-source software tools described in this essay represent my independent faculty engineering and research through Webcognita LLC and do not represent official policy or endorsement by Arizona Western College or The University of Arizona.

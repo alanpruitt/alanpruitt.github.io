@@ -97,3 +97,7 @@ Una IA no puede inventar el rigor clínico, ni puede adivinar el cálculo precis
 Al reducir la distancia entre la imaginación y el despliegue, el vibe-coding permite a los educadores dejar de adaptarse a las restricciones de software rígidas y comenzar a construir la infraestructura digital exacta que sus estudiantes merecen.
 
 </div>
+
+---
+
+> **Disclaimer:** The Curriculum-as-Code architecture, S-A-R Standard, and open-source software tools described in this essay represent my independent faculty engineering and research through Webcognita LLC and do not represent official policy or endorsement by Arizona Western College or The University of Arizona.

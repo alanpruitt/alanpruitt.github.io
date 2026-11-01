@@ -139,3 +139,7 @@ Currículum como Código (C-a-C) resuelve los problemas del editor visual median
 Al migrar el diseño de cursos de un modelo basado en interfaces visuales a código fuente controlado por versiones, las instituciones garantizan una entrega de contenidos educativa estandarizada, escalable y nativamente accesible.
 
 </div>
+
+---
+
+> **Disclaimer:** The Curriculum-as-Code architecture, S-A-R Standard, and open-source software tools described in this essay represent my independent faculty engineering and research through Webcognita LLC and do not represent official policy or endorsement by Arizona Western College or The University of Arizona.

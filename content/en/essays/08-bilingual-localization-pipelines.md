@@ -101,3 +101,7 @@ Las instituciones de educación superior en regiones fronterizas atienden a dive
 Al integrar la localización en los scripts de integración continua (CI/CD), cualquier modificación en la fuente primaria en inglés activa alertas de validación para actualizar la versión en español. Ambas vistas se compilan en páginas HTML sin JS, accesibles por diseño y alojadas de forma segura en la infraestructura institucional.
 
 </div>
+
+---
+
+> **Disclaimer:** The Curriculum-as-Code architecture, S-A-R Standard, and open-source software tools described in this essay represent my independent faculty engineering and research through Webcognita LLC and do not represent official policy or endorsement by Arizona Western College or The University of Arizona.

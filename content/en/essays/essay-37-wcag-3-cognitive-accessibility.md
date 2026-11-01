@@ -33,3 +33,7 @@ Instead of manually rewriting modules one by one, I leaned into my Curriculum-as
 *What if I didn't* build these automated guardrails? My course fleet would slowly drift into clutter, making upcoming Spring 2027 deployments heavier and harder to maintain. By automating cognitive optimization today, I ensure that every student landing in my Canvas shells experiences zero-cost, frictionless, equitable access to foundational kinesiology principles.
 
 Accessibility isn't a static destination; it's an ongoing engineering practice. By anticipating WCAG 3.0 years ahead of its formal target, I am not just preparing for the future—I am building a better learning experience today.
+
+---
+
+> **Disclaimer:** The Curriculum-as-Code architecture, S-A-R Standard, and open-source software tools described in this essay represent my independent faculty engineering and research through Webcognita LLC and do not represent official policy or endorsement by Arizona Western College or The University of Arizona.

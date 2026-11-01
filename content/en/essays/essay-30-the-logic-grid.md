@@ -91,3 +91,7 @@ In an era of ubiquitous AI, an assignment that only asks for a final essay is an
 
 The adult learners working through those morning Sudoku grids taught us an enduring lesson: **True confidence does not come from having an answer; it comes from trusting your method.**
 When we design our courses as code--version-controlled, accessible, and grounded in the Mission Loop--we stop policing text and start teaching students how to think. We transform them from passive consumers of machine-generated text into sovereign auditors capable of navigating any grid the world puts in front of them.
+
+---
+
+> **Disclaimer:** The Curriculum-as-Code architecture, S-A-R Standard, and open-source software tools described in this essay represent my independent faculty engineering and research through Webcognita LLC and do not represent official policy or endorsement by Arizona Western College or The University of Arizona.

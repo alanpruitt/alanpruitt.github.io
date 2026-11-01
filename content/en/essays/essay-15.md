@@ -31,3 +31,7 @@ Instead of hoping individual instructors maintain 100% compliance across hundred
 - **Uncompromising Equity:** Automatically guarantees every student, regardless of course section, receives WCAG 2.2 AA accessible, zero-cost (ZTC) instructional materials.
 - **Rapid Institutional Adaptability:** Updates to federal guidelines or regional workforce mandates can be merged into a single Single Source of Truth (SSoT) repository and deployed across all active course shells in seconds.
 - **Faculty Empowerment:** Automates the administrative "sausage making" of course maintenance, freeing faculty to focus entirely on high-touch student mentoring and clinical instruction.
+
+---
+
+> **Disclaimer:** The Curriculum-as-Code architecture, S-A-R Standard, and open-source software tools described in this essay represent my independent faculty engineering and research through Webcognita LLC and do not represent official policy or endorsement by Arizona Western College or The University of Arizona.

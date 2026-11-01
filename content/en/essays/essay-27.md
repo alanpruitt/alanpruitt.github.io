@@ -29,3 +29,7 @@ By authoring instructional materials in standardized Markdown and validating the
 The definitive advantage of Curriculum-as-Code is agility during fleet-wide refactoring. When institutional standards, federal guidelines, or accessibility rules change, automated scripts audit and update entire course catalogs in seconds rather than requiring manual edits across hundreds of individual LMS pages.
 
 Treating course architecture as software infrastructure turns accessibility from an administrative bottleneck into a permanent, automated baseline.
+
+---
+
+> **Disclaimer:** The Curriculum-as-Code architecture, S-A-R Standard, and open-source software tools described in this essay represent my independent faculty engineering and research through Webcognita LLC and do not represent official policy or endorsement by Arizona Western College or The University of Arizona.

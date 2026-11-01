@@ -74,3 +74,7 @@ El script de sincronización final envía el HTML compilado directamente a la AP
 Al trasladar el cumplimiento aguas arriba, los decanos, directores de TI y rectores obtienen una poderosa herramienta de gobernanza: el **registro de Git (commit log)**.
 
 Cada cambio en el plan de estudios, cada ejecución de pruebas de accesibilidad y cada despliegue se capturan en un registro inmutable y con marca de tiempo. Cuando un oficial de cumplimiento federal o un equipo de acreditación solicita pruebas de gobernanza de accesibilidad, la institución no ofrece aspiraciones o descargos de responsabilidad estáticos en PDF. Presenta el historial de Git: un registro determinista de cumplimiento continuo.
+
+---
+
+> **Disclaimer:** The Curriculum-as-Code architecture, S-A-R Standard, and open-source software tools described in this essay represent my independent faculty engineering and research through Webcognita LLC and do not represent official policy or endorsement by Arizona Western College or The University of Arizona.

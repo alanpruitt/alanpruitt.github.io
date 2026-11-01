@@ -119,3 +119,7 @@ La implementación del Marco de Andamiaje en Dos Partes en módulos de fisiolog�
 * **Integración Fluida con LMS:** Los certificados de finalización de la Parte A se compilan directamente en las API del libro de calificaciones de Canvas LMS.
 
 </div>
+
+---
+
+> **Disclaimer:** The Curriculum-as-Code architecture, S-A-R Standard, and open-source software tools described in this essay represent my independent faculty engineering and research through Webcognita LLC and do not represent official policy or endorsement by Arizona Western College or The University of Arizona.

@@ -63,3 +63,7 @@ I shouldn't ban innovation, but I must subject it to the same rigor I apply to a
 * **Cognitive Load:** Does it enhance the learning path, or simply provide a shortcut around deep engagement?
 
 As I navigate this semester, let’s ensure that my tools support the curriculum, not substitute for it. The goal isn't a chatbot that speaks for me; it's a student who no longer needs the chatbot to understand the material.
+
+---
+
+> **Disclaimer:** The Curriculum-as-Code architecture, S-A-R Standard, and open-source software tools described in this essay represent my independent faculty engineering and research through Webcognita LLC and do not represent official policy or endorsement by Arizona Western College or The University of Arizona.

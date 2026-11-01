@@ -71,3 +71,7 @@ Academic leaders do not need their faculty experimenting with parlor-trick chatb
 ## Educational Architecture as Public Good
 
 When institutions treat faculty training as Zero Textbook Cost (ZTC) and Open Educational Resources (OER) engineering, the result is robust, sustainable, and transparent. We do not need more slide decks; we need auditable systems that respect faculty time, comply with civil rights mandates, and elevate academic integrity across our institutions.
+
+---
+
+> **Disclaimer:** The Curriculum-as-Code architecture, S-A-R Standard, and open-source software tools described in this essay represent my independent faculty engineering and research through Webcognita LLC and do not represent official policy or endorsement by Arizona Western College or The University of Arizona.

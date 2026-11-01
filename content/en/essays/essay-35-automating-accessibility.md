@@ -79,3 +79,7 @@ jobs:
 ## Summary: Immutable Accessibility Baselines
 
 Treating curriculum as code converts accessibility compliance from an administrative chore into a permanent, automated build baseline. When federal regulations or institutional standards update, automated scripts audit and refactor entire course fleets in seconds—guaranteeing universal access for every resident student.
+
+---
+
+> **Disclaimer:** The Curriculum-as-Code architecture, S-A-R Standard, and open-source software tools described in this essay represent my independent faculty engineering and research through Webcognita LLC and do not represent official policy or endorsement by Arizona Western College or The University of Arizona.

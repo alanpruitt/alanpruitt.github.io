@@ -39,3 +39,7 @@ True digital equity requires strict adherence to web accessibility standards. Ed
 * **Semantic Structure:** Always start page headings at the `##` (H2) level, reserving H1 exclusively for the Canvas Page Title.
 * **Contrast Compliance:** Enforce WCAG 2.1 AA standards (minimum 4.5:1 contrast ratio) for all normal text and background pairings.
 * **Screen Reader Compatibility:** Providing descriptive alternative text and clean structural tags for all informative graphics.
+
+---
+
+> **Disclaimer:** The Curriculum-as-Code architecture, S-A-R Standard, and open-source software tools described in this essay represent my independent faculty engineering and research through Webcognita LLC and do not represent official policy or endorsement by Arizona Western College or The University of Arizona.

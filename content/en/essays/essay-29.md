@@ -74,3 +74,7 @@ The final sync script pushes the compiled HTML directly to the Canvas REST API. 
 By moving compliance upstream, deans, CIOs, and provosts gain a powerful governance tool: the **Git commit log**.
 
 Every change to the curriculum, every accessibility test run, and every deployment is captured in an immutable, timestamped ledger. When a federal compliance officer or accreditation team requests proof of accessibility governance, the institution does not offer aspirations or static PDF disclaimers. It presents the Git history—a deterministic record of continuous compliance.
+
+---
+
+> **Disclaimer:** The Curriculum-as-Code architecture, S-A-R Standard, and open-source software tools described in this essay represent my independent faculty engineering and research through Webcognita LLC and do not represent official policy or endorsement by Arizona Western College or The University of Arizona.

@@ -119,3 +119,7 @@ La implementación de Bucles de Misión en cursos de fisiología del ejercicio y
 * **Competencia Clínica Escalable:** Los estudiantes desarrollan hábitos analíticos repetibles que se traducen directamente en la práctica clínica y exámenes de certificación.
 
 </div>
+
+---
+
+> **Disclaimer:** The Curriculum-as-Code architecture, S-A-R Standard, and open-source software tools described in this essay represent my independent faculty engineering and research through Webcognita LLC and do not represent official policy or endorsement by Arizona Western College or The University of Arizona.

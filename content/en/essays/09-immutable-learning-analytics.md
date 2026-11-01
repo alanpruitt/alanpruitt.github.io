@@ -119,3 +119,7 @@ La telemetría centrada en la privacidad invierte el modelo tradicional: la reco
 Al aplicar hash a los identificadores de usuario localmente antes de enviar los datos desde el navegador, la identidad del estudiante permanece desconectada de los datos de interacción. Los educadores reciben telemetría agregada que revela qué módulos presentan fricción o cuellos de botella conceptuales sin comprometer la privacidad individual.
 
 </div>
+
+---
+
+> **Disclaimer:** The Curriculum-as-Code architecture, S-A-R Standard, and open-source software tools described in this essay represent my independent faculty engineering and research through Webcognita LLC and do not represent official policy or endorsement by Arizona Western College or The University of Arizona.

@@ -121,3 +121,7 @@ La integración del Patrón de Auditor de Seguridad en los módulos de laborator
 * **Flujos de Registro Auditables:** Las interacciones crean un registro auditable del crecimiento en la toma de decisiones clínicas a lo largo del curso.
 
 </div>
+
+---
+
+> **Disclaimer:** The Curriculum-as-Code architecture, S-A-R Standard, and open-source software tools described in this essay represent my independent faculty engineering and research through Webcognita LLC and do not represent official policy or endorsement by Arizona Western College or The University of Arizona.

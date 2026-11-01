@@ -88,3 +88,7 @@ When curriculum is treated as code:
 Had I not standardized the loop, our courses would have succumbed to the illusion of learning—rewarding fluent generative output while genuine analytical competence eroded.
 
 Standardizing the Mission Loop guarantees that regardless of which AI models emerge tomorrow, our students retain the sovereign ability to observe the pattern, enforce the rule, and earn the solution.
+
+---
+
+> **Disclaimer:** The Curriculum-as-Code architecture, S-A-R Standard, and open-source software tools described in this essay represent my independent faculty engineering and research through Webcognita LLC and do not represent official policy or endorsement by Arizona Western College or The University of Arizona.

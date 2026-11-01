@@ -82,3 +82,7 @@ A continuación se presenta la arquitectura fundamental de un entorno de entrega
 Adoptar la Ingeniería Instruccional no requiere abandonar los modelos pedagógicos existentes. Proporciona la infraestructura soberana que garantiza que la intención pedagógica se entregue de manera confiable, segura y accesible a escala institucional.
 
 </div>
+
+---
+
+> **Disclaimer:** The Curriculum-as-Code architecture, S-A-R Standard, and open-source software tools described in this essay represent my independent faculty engineering and research through Webcognita LLC and do not represent official policy or endorsement by Arizona Western College or The University of Arizona.
