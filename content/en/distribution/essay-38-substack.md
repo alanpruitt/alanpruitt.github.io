@@ -51,7 +51,7 @@ Instead of settling for flat *Docs-as-Code*, I upgraded my **EXW Master Library 
 
 Without **DOM GraphRAG**, **W3C PROV-O**, **Born-Accessible 9:1 XAI**, and **W3C SKOS bilingual ontologies**, a course repository is just a static folder of text waiting to be summarized by commercial chatbots. By binding every paragraph, bilingual clinical term, and AI audit receipt into an auditable semantic graph, my **Curriculum-as-Code** architecture simultaneously defends academic rigor, guarantees **100% FERPA privacy**, and expands equitable access across my borderland classrooms.
 
-*(Disclaimer: The Curriculum-as-Code architecture, S-A-R Standard, and open-source software tools described in this article represent my independent faculty engineering and research through Webcognita LLC and do not represent official policy or endorsement by Arizona Western College or The University of Arizona.)*
+> **Disclaimer:** The Curriculum-as-Code architecture, S-A-R Standard, and open-source software tools described in this article represent my independent faculty engineering and research through Webcognita LLC and do not represent official policy or endorsement by Arizona Western College or The University of Arizona.
 
 - **Read the canonical essay on alanpruitt.com:** [Essay 38: What If I Didn't Build the Graph?](https://alanpruitt.com/essays/essay-38-dom-graphrag-and-prov-o-curriculum-as-code/)
 - **Download my 6-Publication Architecture Briefs & Project Horizon White Papers:** [alanpruitt.com/#architecture-briefs](https://alanpruitt.com/#architecture-briefs)

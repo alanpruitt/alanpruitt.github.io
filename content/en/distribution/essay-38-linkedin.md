@@ -1,6 +1,6 @@
 # LinkedIn Distribution Package: Essay 38 (1,391-Impression Blueprint)
 
-- **Target Canonical:** `https://alanpruitt.com/essays/essay-38-dom-graphrag-and-prov-o-curriculum-as-code/`
+- **Target Canonical:** <https://alanpruitt.com/essays/essay-38-dom-graphrag-and-prov-o-curriculum-as-code/>
 - **Release Date:** 2026-11-01
 - **Voice & Non-Endorsement Rule:** 100% First-Person Singular Active Voice (`I` / `my`, zero `we` / `our`) so institutional roles are stated factually without implying institutional endorsement of independent faculty Curriculum-as-Code engineering.
 - **Blueprint SSoT:** Modeled on [`urn:li:activity:7514067919664836608`](https://www.linkedin.com/feed/update/urn:li:activity:7514067919664836608/) (`1,391` impressions, `2,455` chars, `47` lines).
@@ -9,6 +9,7 @@
 
 ## Part 1: Main LinkedIn Post Body (Copy-Paste — 2,489 Characters, 43 Lines, Zero Hyperlinks, Zero "We/Our")
 
+```text
 What if I didn't build the graph?
 
 Today Essay 38 and six new Architecture Briefs went live on alanpruitt [.] com — documenting the semantic upgrade across my independent Open Educational Resource (OER) course fleet.
@@ -52,14 +53,17 @@ If you are building GraphRAG pipelines, sovereign edge AI, or bilingual OER, I w
 Check the first comment for links to Essay 38 and my six Architecture Briefs!
 
 #CurriculumAsCode #OER #EdTech #GraphRAG #SovereignAI #HigherEd #Accessibility #WCAG3 #Bilingual #InstructionalDesign
+```
 
 ---
 
 ## Part 2: First Comment (Copy-Paste Immediately Below Main Post)
 
+```text
 Read my full breakdown in Essay 38 ("What If I Didn't Build the Graph? – Why Curriculum-as-Code Transcends Flat Docs-as-Code with DOM GraphRAG & W3C PROV-O") and download all 6 of my S-A-R v2.2 & AWC 2026 Innovation Fund "Project Horizon" Architecture Briefs:
 
 • Canonical Essay 38 (alanpruitt.com): https://alanpruitt.com/essays/essay-38-dom-graphrag-and-prov-o-curriculum-as-code/
 • Substack Edition (with How I Made This provenance notes): [Paste Substack URL Here]
 • 6-Publication Architecture Briefs & Project Horizon White Papers Shelf (PDFs): https://alanpruitt.com/#architecture-briefs
 • Webcognita LLC (VOSB) Sovereign AI & ADA Title II Audits: https://www.webcognita.com
+```

@@ -3,7 +3,7 @@ title: "Essay 38: What If I Didn't Build the Graph? – Why Curriculum-as-Code T
 date: 2026-11-01T10:00:00-07:00
 draft: false
 tags: ["Curriculum-as-Code", "DOM GraphRAG", "W3C PROV-O", "W3C SKOS", "Sovereign AI", "WCAG 3.0", "ADA Title II", "Higher Ed"]
-categories: ["Essays"]
+categories: ["curriculum-as-code", "ai-safety-protocols", "ada-title-ii"]
 description: "A counterfactual examination of why flat vector RAG fails clinical higher education—and how I engineered DOM GraphRAG, W3C PROV-O provenance receipts, Born-Accessible 9:1 XAI scorecards, and W3C SKOS bilingual ontologies to protect academic sovereignty."
 translationKey: "essay-38"
 slug: "essay-38-dom-graphrag-and-prov-o-curriculum-as-code"
@@ -102,7 +102,7 @@ Without **DOM GraphRAG**, **W3C PROV-O**, **Born-Accessible 9:1 XAI**, and **W3C
 
 By binding every paragraph, bilingual clinical term, and AI audit receipt into an auditable semantic graph, my **Curriculum-as-Code** architecture defends academic rigor, guarantees **100% FERPA privacy**, and expands equitable access for every student in my borderland classrooms.
 
-*(Disclaimer: The Curriculum-as-Code architecture, S-A-R Standard, and open-source software tools described in this essay represent my independent faculty engineering and research through Webcognita LLC and do not represent official policy or endorsement by Arizona Western College or The University of Arizona.)*
+> **Disclaimer:** The Curriculum-as-Code architecture, S-A-R Standard, and open-source software tools described in this essay represent my independent faculty engineering and research through Webcognita LLC and do not represent official policy or endorsement by Arizona Western College or The University of Arizona.
 
 ---
 
