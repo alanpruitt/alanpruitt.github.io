@@ -25,9 +25,13 @@
 
 ---
 
-## 2. Live Institutional Proof & Project Horizon Showcase
+## 2. Live Institutional Proof, EXW Clinical Auditor RAG Stack & Project Horizon Showcase
 
 - **Public Canvas LMS Showcase Shell (`EXW-Demo — Course ID: 42051`):** [https://azwestern.instructure.com/courses/42051](https://azwestern.instructure.com/courses/42051) — Open, non-student-facing AWC Canvas shell demonstrating 56 born-accessible Curriculum-as-Code pages, bilingual `EN`/`ES` tabs, and embedded clinical simulators with `0` WCAG 2.2 AA violations.
+- **The EXW Clinical Auditor (Sovereign SSoT RAG & Active Verification Engine):**
+  - **Layer 1 (Delimiter Guard & 3,150-Vector SSoT Retrieval):** Validates `###CASE_DATA_START###` / `###CASE_DATA_END###` boundaries, normalizes clinical shorthand (`y/o`, `w/o`, `c/o`, `h/o`, `s/p`) before tokenization, and queries **3,150 indexed Academic SSoT vectors** (`PAGA 2018 2nd Ed.`, `DGA 2025–2030`, `ACSM 12th Ed. 2025`, `NASM OPT`) via cosine similarity with strict course/module isolation to prevent cross-course `SSOT_LEAK`.
+  - **Layer 2 (Sovereign Apple Silicon Ollama Inference):** Executes 100% locally on M1/M2 Unified Memory via custom Ollama Modelfiles (`exw-argon4-cac:latest`). Evaluates `Pattern / Rule / Solve` reasoning and the mandatory **150-word Active Verification ("Why" Check)** on the **10-7-0 Mastery Scale**, locking output strictly to English or authentic Norteño-Spanish in Coach Alan's voice (`0%` cloud token egress, `100%` FERPA compliance).
+  - **Layer 3 (Production Gunicorn/Flask WSGI, Edge Ingress & CI/CD):** Served by a multi-worker `Gunicorn + Flask WSGI` service (`127.0.0.1:5050`, `/api/v1/audit`, `/audit/submission`), supervised by macOS `launchd` (`KeepAlive`), fronted by `Nginx` TLS (`client_max_body_size 20M`) + Cloudflare HTTPS Tunnel (`auditor.exwtoolkit.com`), and continuously verified on every commit via `make test-pipeline` (`scripts/test_rag_pipeline.sh`) in GitHub Actions (`exw_pipeline.yml`).
 - **Spring 2027 Active & Warm-Standby Fleet Architecture:**
   - `EXW-150-002`: *Nutrition for Exercise & Sport* (16-Week Full Semester)
   - `EXW-265-001`: *Exercise for Special Populations* (16-Week Full Semester)
