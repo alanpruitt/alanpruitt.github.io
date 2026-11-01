@@ -368,16 +368,16 @@
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
-                    <!-- Layer 1: Delimiter Protocol & Vector Search -->
+                    <!-- Layer 1: DOM GraphRAG & Vector Search -->
                     <div class="p-5 rounded-xl bg-creme-50 border border-creme-200 flex flex-col justify-between">
                         <div>
                             <div class="flex items-center justify-between mb-2">
-                                <span class="text-xs font-mono text-navy-800 font-bold">01 / INGESTION &amp; VECTOR RAG</span>
-                                <span class="text-xs font-mono bg-creme-200 text-navy-900 px-2 py-0.5 rounded font-semibold">3,150 Vectors</span>
+                                <span class="text-xs font-mono text-navy-800 font-bold">01 / DOM GRAPHRAG &amp; VECTOR RAG</span>
+                                <span class="text-xs font-mono bg-creme-200 text-navy-900 px-2 py-0.5 rounded font-semibold">3,151 Vectors</span>
                             </div>
-                            <h4 class="text-base font-bold text-navy-900 mb-2">Delimiter Guard &amp; Cosine Similarity</h4>
+                            <h4 class="text-base font-bold text-navy-900 mb-2">DOM Hierarchy, KG Triples &amp; Delimiter Guard</h4>
                             <p class="text-xs text-navy-800 leading-relaxed mb-0">
-                                Enforces strict <code>###CASE_DATA_START###</code> boundary encapsulation and normalizes clinical shorthand (<code>y/o</code>, <code>w/o</code>, <code>c/o</code>, <code>s/p</code>) prior to tokenization. Queries <strong>3,150 indexed SSoT curriculum vectors</strong> via cosine similarity with course-scoped filters (<em>PAGA 2018 2nd Ed.</em>, <em>DGA 2025–2030</em>, <em>ACSM 12th Ed. 2025</em>, <em>NASM OPT</em>) to prevent cross-course <code>SSOT_LEAK</code>.
+                                Enforces strict <code>###CASE_DATA_START###</code> boundary encapsulation and queries <strong>3,151 DOM GraphRAG curriculum chunks</strong> enriched with hierarchical <code>dom_path</code> (<code>h2 &gt; h3</code>), <code>clinical_framing_role</code>, <code>clo_alignment</code>, and RDF-style knowledge-graph triples across <em>PAGA 2018</em>, <em>DGA 2025&ndash;2030</em>, <em>ACSM 12th Ed.</em>, and <em>NASM OPT</em>.
                             </p>
                         </div>
                     </div>
@@ -396,16 +396,16 @@
                         </div>
                     </div>
 
-                    <!-- Layer 3: Production WSGI, Edge Ingress & CI/CD -->
+                    <!-- Layer 3: W3C PROV-O Provenance, WSGI & CI/CD -->
                     <div class="p-5 rounded-xl bg-creme-50 border border-creme-200 flex flex-col justify-between">
                         <div>
                             <div class="flex items-center justify-between mb-2">
-                                <span class="text-xs font-mono text-navy-800 font-bold">03 / PRODUCTION WSGI &amp; CI/CD</span>
-                                <span class="text-xs font-mono bg-creme-200 text-navy-900 px-2 py-0.5 rounded font-semibold">Canvas GraphQL</span>
+                                <span class="text-xs font-mono text-navy-800 font-bold">03 / W3C PROV-O &amp; PRODUCTION WSGI</span>
+                                <span class="text-xs font-mono bg-creme-200 text-navy-900 px-2 py-0.5 rounded font-semibold">W3C PROV-O</span>
                             </div>
-                            <h4 class="text-base font-bold text-navy-900 mb-2">Gunicorn/Flask, Nginx &amp; GitHub Actions</h4>
+                            <h4 class="text-base font-bold text-navy-900 mb-2">Cryptographic Provenance, Gunicorn &amp; CI/CD</h4>
                             <p class="text-xs text-navy-800 leading-relaxed mb-0">
-                                Served by a multi-worker <strong>Gunicorn + Flask WSGI</strong> engine (<code>127.0.0.1:5050</code>, <code>/api/v1/audit</code>, <code>/audit/submission</code>), supervised by macOS <code>launchd</code> (<code>KeepAlive</code>), fronted by <strong>Nginx TLS</strong> (<code>20M</code> payload guard) + Cloudflare HTTPS Tunnel, and continuously verified on every commit via <code>make test-pipeline</code> in GitHub Actions.
+                                Emits machine-verifiable <strong>W3C PROV-O provenance receipts</strong> (<code>wasGeneratedBy</code>, <code>wasAttributedTo</code>, <code>wasDerivedFrom</code>) over a multi-worker <strong>Gunicorn + Flask WSGI</strong> engine (<code>127.0.0.1:5050</code>), fronted by <strong>Nginx TLS</strong> + Cloudflare HTTPS Tunnel and verified via <code>make test-pipeline</code>.
                             </p>
                         </div>
                     </div>
@@ -415,7 +415,7 @@
                 <div class="p-5 rounded-xl bg-creme-50 border border-creme-200 flex flex-col md:flex-row items-center justify-between gap-4">
                     <div class="text-xs text-navy-800 leading-relaxed">
                         <strong class="font-mono uppercase text-navy-900">Technical Stack:</strong>
-                        <span class="font-mono">Apple Silicon M1/M2 • Ollama (exw-argon4-cac / Gemma 4) • Python 3.10 • Gunicorn / Flask WSGI • 3,150-Chunk SSoT Vector Index • Nginx + Cloudflare Edge Tunnel • Canvas GraphQL (/api/graphql) • HTML5 ARIA-Live 4-Stage Telemetry • WCAG 2.2 AA (9:1 Contrast) • GitHub Actions CI/CD</span>
+                        <span class="font-mono">Apple Silicon M1/M2 &bull; Ollama (exw-argon4-cac / Gemma 4) &bull; Python 3.10 &bull; Gunicorn / Flask WSGI &bull; 3,151-Node DOM GraphRAG Vector Index &bull; W3C PROV-O Provenance &bull; Nginx + Cloudflare Edge Tunnel &bull; Canvas GraphQL (/api/graphql) &bull; WCAG 2.2 AA (9:1 Contrast) &bull; GitHub Actions CI/CD</span>
                     </div>
                     <div class="flex items-center gap-4 flex-shrink-0">
                         <a href="https://exwdemo.dev" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-navy-900 hover:underline inline-flex items-center gap-1">
@@ -423,6 +423,81 @@
                         </a>
                         <a href="/articles/10-ai-safety-auditor-pattern.html" class="text-xs font-bold text-navy-900 hover:underline inline-flex items-center gap-1">
                             Read Essay 10 &rarr;
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DOWNLOADABLE ARCHITECTURE BRIEFS & WHITE PAPERS (PDF SHELF) -->
+            <div id="architecture-briefs" class="bg-white p-8 rounded-2xl border border-creme-200 shadow-sm md:col-span-3">
+                <div class="flex items-center justify-between mb-6 pb-4 border-b border-creme-100">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-creme-100 rounded-xl flex items-center justify-center text-navy-900 border border-creme-200 font-mono text-xs font-bold flex-shrink-0" aria-hidden="true">
+                            [PDF]
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-navy-900">Downloadable Architecture Briefs &amp; White Papers</h3>
+                            <p class="text-xs text-navy-800 mt-0.5">Executive &amp; technical reference publications on Sovereign Clinical AI, DOM GraphRAG, W3C PROV-O Provenance, and AWC Curriculum-as-Code.</p>
+                        </div>
+                    </div>
+                    <span class="text-xs font-mono bg-creme-100 text-navy-900 px-3 py-1 rounded-md border border-creme-200 font-semibold flex-shrink-0">3 Publications</span>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <!-- Brief 1: Sovereign Clinical AI, DOM GraphRAG & W3C PROV-O -->
+                    <div class="p-5 rounded-xl bg-creme-50 border border-creme-200 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-xs font-mono text-navy-800 font-bold">BRIEF 01 / S-A-R v2.2</span>
+                                <span class="text-xs font-mono bg-creme-200 text-navy-900 px-2 py-0.5 rounded font-semibold">PDF &bull; 369 KB</span>
+                            </div>
+                            <h4 class="text-base font-bold text-navy-900 mb-2">
+                                <a href="/docs/EXW_S_A_R_v2_2_DOM_GraphRAG_and_PROV_O_Architecture_Brief.pdf" target="_blank" rel="noopener noreferrer" class="hover:underline">Sovereign Clinical AI, DOM GraphRAG &amp; W3C PROV-O</a>
+                            </h4>
+                            <p class="text-xs text-navy-800 leading-relaxed mb-3">
+                                Technical white paper detailing the 3,151-chunk DOM Knowledge Graph, local Apple Silicon Ollama inference (<code>exw-argon4-cac</code>), W3C PROV-O cryptographic provenance receipts, and WCAG 2.2 AA (9:1) accessibility architecture.
+                            </p>
+                        </div>
+                        <a href="/docs/EXW_S_A_R_v2_2_DOM_GraphRAG_and_PROV_O_Architecture_Brief.pdf" download class="text-xs font-bold text-navy-900 hover:underline inline-flex items-center gap-1 mt-2">
+                            Download Brief 01 (PDF) &rarr;
+                        </a>
+                    </div>
+
+                    <!-- Brief 2: EXW Course Fleet Laboratory Manual v2.2 -->
+                    <div class="p-5 rounded-xl bg-creme-50 border border-creme-200 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-xs font-mono text-navy-800 font-bold">MANUAL 02 / FLEET OER</span>
+                                <span class="text-xs font-mono bg-creme-200 text-navy-900 px-2 py-0.5 rounded font-semibold">PDF &bull; 364 KB</span>
+                            </div>
+                            <h4 class="text-base font-bold text-navy-900 mb-2">
+                                <a href="/docs/EXW_Course_Fleet_Laboratory_Manual_v2_2.pdf" target="_blank" rel="noopener noreferrer" class="hover:underline">EXW Course Fleet Laboratory Manual (v2.2)</a>
+                            </h4>
+                            <p class="text-xs text-navy-800 leading-relaxed mb-3">
+                                Applied field methods manual covering the 9-Box <code>exwtoolkit.com</code> Clinical Biometrics &amp; Desert Heat-Stress Workbench, <em>Pattern / Rule / Solve</em> framing, and the Four-Part Submission Standard across EXW 101&ndash;265.
+                            </p>
+                        </div>
+                        <a href="/docs/EXW_Course_Fleet_Laboratory_Manual_v2_2.pdf" download class="text-xs font-bold text-navy-900 hover:underline inline-flex items-center gap-1 mt-2">
+                            Download Manual 02 (PDF) &rarr;
+                        </a>
+                    </div>
+
+                    <!-- Brief 3: AWC WPE Novel 100-Level Curriculum Proposal Portfolio -->
+                    <div class="p-5 rounded-xl bg-creme-50 border border-creme-200 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-xs font-mono text-navy-800 font-bold">PORTFOLIO 03 / ACRES</span>
+                                <span class="text-xs font-mono bg-creme-200 text-navy-900 px-2 py-0.5 rounded font-semibold">PDF &bull; 474 KB</span>
+                            </div>
+                            <h4 class="text-base font-bold text-navy-900 mb-2">
+                                <a href="/docs/AWC_WPE_Novel_100_Level_Curriculum_Proposal_Portfolio.pdf" target="_blank" rel="noopener noreferrer" class="hover:underline">AWC WPE Novel 100-Level Curriculum Portfolio</a>
+                            </h4>
+                            <p class="text-xs text-navy-800 leading-relaxed mb-3">
+                                Complete ACRES &amp; 16-Module Curriculum-as-Code proposals for 5 zero-prerequisite, $0 ZTC OER transfer courses (<code>EXW 110</code>, <code>EXW 120</code>, <code>EXW 130</code>, <code>EXW 140</code>, <code>EXW 160</code>) articulated to ASU, NAU-Yuma, and UA.
+                            </p>
+                        </div>
+                        <a href="/docs/AWC_WPE_Novel_100_Level_Curriculum_Proposal_Portfolio.pdf" download class="text-xs font-bold text-navy-900 hover:underline inline-flex items-center gap-1 mt-2">
+                            Download Portfolio 03 (PDF) &rarr;
                         </a>
                     </div>
                 </div>
