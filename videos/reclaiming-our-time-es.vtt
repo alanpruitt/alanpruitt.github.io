@@ -1,0 +1,80 @@
+WEBVTT - Recuperando Nuestro Tiempo (Resumen del Taller)
+Language: es
+
+00:00.000 --> 00:08.500
+¿Qué onda profes y equipo administrativo? Bienvenidos a esta presentación explicativa, bien al grano y con pura información de la buena.
+
+00:08.500 --> 00:16.500
+Hoy vamos a desmenuzar un poquito el taller de desarrollo profesional "Recuperando Nuestro Tiempo" que armó Alan Pruitt del DCC allá en Yuma.
+
+00:16.500 --> 00:26.000
+Vamos a entrarle de lleno porque su tiempo vale oro y la tirada de hoy es aprender a usar la inteligencia artificial para que les rinda más el día...
+
+00:26.000 --> 00:31.500
+pero ojo: sin meterse en broncas legales ni comprometer la seguridad de la universidad. ¡Fierro, vámonos!
+
+00:32.000 --> 00:44.000
+A ver, díganme la verdad: ¿quién de aquí no se ha sentido con el agua hasta el cuello por tanto papeleo, calificaciones y juntas interminables?
+
+00:44.000 --> 00:52.500
+La neta la carga de trabajo a veces se siente pesadísima y nos quita horas que podríamos dedicarle a lo que realmente importa: los estudiantes o la investigación.
+
+00:52.500 --> 00:58.000
+¿Qué me dirían si les cuento que hay una forma de quitarse toda esa talacha de encima de una manera bien inteligente?
+
+00:58.000 --> 01:24.000
+Miren, este va a ser nuestro plan de ataque: ver cómo la universidad nos respalda, ecosistemas seguros, 3 atajos para la chamba, el secreto de los prompts y las reglas del juego.
+
+01:25.000 --> 01:32.500
+Arrancamos con el primer punto: el alivio administrativo usando las herramientas oficiales de la U of A.
+
+01:33.000 --> 01:49.000
+Lo que más me gusta es que la Universidad de Arizona nos apoya oficialmente. Quieren que ahorremos tiempo sin caer en trampas. No es lo mismo usar cualquier IA abierta que herramientas oficiales.
+
+01:49.000 --> 02:00.000
+La IA pública es zona de peligro total: se chupan los datos para entrenar modelos públicos. ¡Mucho cuidado!
+
+02:00.000 --> 02:11.500
+La IA empresarial de la U of A es nuestro cajón de arena seguro: sus datos se quedan privados, nadie los toca y entramos seguros con nuestra cuenta.
+
+02:12.000 --> 02:32.000
+Ecosistemas seguros aprobados: Google Gemini Enterprise, U of A GenAI y Copilot Enterprise. Las tres tienen licencia empresarial.
+
+02:32.000 --> 02:44.500
+La regla de oro: SIEMPRE iniciar sesión con el NetID de U of A. Si entran sin NetID, andan allá afuera en el monte desprotegidos.
+
+02:45.000 --> 02:52.500
+¡Ahora sí agárrense! Entramos a los tres atajos para la chamba que les van a dar alivio inmediato.
+
+02:53.000 --> 03:22.000
+Atajo 1: Auto-auditoría de sílabo. Suben el borrador a la IA autorizada, pegan la lista de requisitos institucionales y la máquina detecta políticas faltantes en segundos.
+
+03:23.000 --> 03:47.500
+Atajo 2: Juntas de departamento. Suben la transcripción cruda y piden un resumen ejecutivo y matriz de compromisos: quién hace qué y para cuándo.
+
+03:48.000 --> 04:17.000
+Atajo 3: Borradores de retroalimentación. Meten rúbrica, instrucciones y el trabajo del alumno anonimizado (sin nombre ni matrícula). La IA saca un primer borrador estructurado.
+
+04:18.000 --> 04:49.500
+Arquitectura de Prompts con Delimitadores: Usamos los tres numerales o gatitos (###) como un cerco de púas que encierra la información para evitar alucinaciones.
+
+04:50.000 --> 05:16.500
+Andamiaje en 3 partes: 1. Rol y objetivo. 2. Contexto sanitizado. 3. Tareas y restricciones. Con las cercas de tres numerales no falla.
+
+05:17.000 --> 05:39.500
+Fronteras de Cumplimiento y FERPA: Chamba universitaria estándar va por Gemini o U of A GenAI.
+
+05:39.500 --> 05:46.500
+Datos clínicos o de pacientes HIPAA van estrictamente por Soteria.
+
+05:46.500 --> 05:57.000
+Seguro Social, datos bancarios o información controlada (IRB/ITAR) están estrictamente prohibidos en cualquier IA.
+
+05:58.000 --> 06:27.500
+Higiene de Sesión y FERPA: Borrar datos personales antes de ingresarlos. Al terminar, borrar el chat para que sea efímero y evitar contingencias legales.
+
+06:28.000 --> 06:49.500
+Reglas operativas: 1. NetID. 2. Anonimizar. 3. Cercas ###. 4. Soteria para clínica. 5. La autoridad humana siempre la tienen ustedes.
+
+06:50.000 --> 07:22.000
+Reflexión final: La IA propone y quita la talacha, pero la firma, la responsabilidad y el prestigio son siempre de ustedes. ¡Fierro y a recuperar su tiempo!

@@ -20,7 +20,8 @@
 - [Prompt-per-Mile Offset Calculator (`prompt-mile-hero.lovable.app`)](https://prompt-mile-hero.lovable.app): Sustainability and active-transit telemetry utility that converts human movement and green transit miles into CO2 savings and equivalent AI compute prompt offsets.
 - [AgFlow 5G — Smart Irrigation & Remote Operations Calculator (`agflow-roi-dash.lovable.app`)](https://agflow-roi-dash.lovable.app): Desert AgTech pilot utility modeling the operational, financial, and water-conservation ROI of 5G-enabled remote irrigation management.
 
-## Curriculum-as-Code Essay Series (Essays 1–37)
+## Curriculum-as-Code Essay Series (Essays 1–38)
+- [Essay 38: What If I Didn't Build the Graph? – Why Curriculum-as-Code Transcends Flat Docs-as-Code with DOM GraphRAG & W3C PROV-O](https://alanpruitt.com/essays/essay-38-dom-graphrag-and-prov-o-curriculum-as-code/): Enriching 3,151 curriculum vectors with DOM GraphRAG, W3C PROV-O provenance receipts, Born-Accessible 9:1 XAI radar scorecards, and W3C SKOS Norteño-Spanish clinical ontologies.
 - [Essay 37: WCAG 3.0 Cognitive Accessibility in Curriculum-as-Code](https://alanpruitt.com/essays/essay-37-wcag-3-cognitive-accessibility): Reducing student cognitive load through deterministic In Plain English and Norteño-Spanish scaffolding.
 - [Essay 36: What If I Didn't Standardize the Loop?](https://alanpruitt.com/essays/essay-36): Why standardizing the clinical problem-framing protocol across an entire course fleet eliminates instructional entropy and student onboarding friction.
 - [Essay 35: Automating Accessibility: Curriculum-as-Code & Continuous Integration](https://alanpruitt.com/essays/essay-35-automating-accessibility.md): Embedding deterministic WCAG 2.2 AA and 9:1 contrast gates directly into Git pre-commit and pre-push pipelines.

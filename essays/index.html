@@ -1,584 +1,2642 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-full scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>All Essays & Articles | Coach Alan</title>
-  <meta name="description" content="Complete archive of essays, curriculum architecture frameworks, and algorithmic pedagogy writings.">
-  <link rel="canonical" href="https://alanpruitt.com/essays/">
-  
-  <style>
-    :root {
-      --bg-cream: #FDFBF7;
-      --navy-dark: #1B2A4A;
-      --text-main: #222222;
-      --link-accent: #0E3D73;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="CzTdgB5WJ_UjWFg7HpV9VOOACNmsgHQP1mFMI2b_tls" />
+    <title>Curriculum-as-Code &amp; Sovereign AI Strategy Essays (01–37) | Alan Pruitt</title>
+    <meta name="description" content="Explore the 37-essay Curriculum-as-Code, ADA Title II / WCAG 2.2 AA (9:1) &amp; WCAG 3.0 compliance, and Air-Gapped Apple Silicon Edge AI research corpus by Alan Pruitt (Coach Alan), Founder of Webcognita LLC.">
+    <meta name="keywords" content="Alan Pruitt, Coach Alan, Curriculum-as-Code Essays, S-A-R Standard, ADA Title II, WCAG 2.2 AA 9:1 Contrast, WCAG 3.0 Cognitive Accessibility, Air-Gapped Edge AI, Google Gemini Argon 4, Webcognita LLC">
+    <meta name="author" content="Alan Pruitt">
+    <link rel="canonical" href="https://alanpruitt.com/essays/">
+    <link rel="me" href="https://www.linkedin.com/in/alanpruitt/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Alan Pruitt | Curriculum-as-Code">
+    <meta property="og:title" content="Curriculum-as-Code &amp; Sovereign AI Strategy Essays (01–37) | Alan Pruitt">
+    <meta property="og:description" content="Explore the 37-essay Curriculum-as-Code, ADA Title II / WCAG 2.2 AA (9:1) &amp; WCAG 3.0 compliance, and Air-Gapped Apple Silicon Edge AI research corpus by Alan Pruitt.">
+    <meta property="og:url" content="https://alanpruitt.com/essays/">
+    <meta property="og:image" content="https://alanpruitt.com/assets/og-preview.png">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%230B192C'/></svg>">
+
+    <style>
+        :root {
+            --bg-creme-50: #fbfbfb;
+            --bg-creme-100: #FAF8F5;
+            --bg-creme-200: #EAE3D2;
+            --text-navy-800: #1B2A4A;
+            --text-navy-900: #0B192C;
+        }
+
+        *, ::before, ::after { box-sizing: border-box; border-width: 0; }
+        html { line-height: 1.5; -webkit-text-size-adjust: 100%; tab-size: 4; font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+        body { margin: 0; background-color: var(--bg-creme-100); color: var(--text-navy-900); }
+
+        .w-full { width: 100%; }
+        .max-w-5xl { max-width: 64rem; }
+        .max-w-6xl { max-width: 72rem; }
+        .mx-auto { margin-left: auto; margin-right: auto; }
+        .flex { display: flex; }
+        .flex-col { flex-direction: column; }
+        .flex-grow { flex-grow: 1; }
+        .items-center { align-items: center; }
+        .justify-between { justify-content: space-between; }
+        .grid { display: grid; }
+        .grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+
+        @media (min-width: 640px) {
+            .sm\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        }
+
+        @media (min-width: 1024px) {
+            .lg\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+        }
+
+        .flex-wrap { flex-wrap: wrap; }
+        .gap-2 { gap: 0.5rem; }
+        .gap-3 { gap: 0.75rem; }
+        .gap-4 { gap: 1rem; }
+        .gap-6 { gap: 1.5rem; }
+
+        .bg-white { background-color: #ffffff; }
+        .bg-zinc-50 { background-color: #f9f9fb; }
+        .bg-zinc-100 { background-color: #f4f4f5; }
+        .bg-zinc-950 { background-color: #09090b; }
+        .text-white { color: #ffffff; }
+        .text-zinc-500 { color: #71717a; }
+        .text-zinc-600 { color: #52525b; }
+        .text-zinc-750 { color: #27272a; }
+        .text-zinc-800 { color: #27272a; }
+        .text-zinc-900 { color: #18181b; }
+        .text-zinc-950 { color: #09090b; }
+        .text-emerald-700 { color: #047857; }
+
+        .p-1 { padding: 0.25rem; }
+        .p-6 { padding: 1.5rem; }
+        .p-8 { padding: 2rem; }
+        .px-2 { padding-left: 0.5rem; padding-right: 0.5rem; }
+        .px-4 { padding-left: 1rem; padding-right: 1rem; }
+        .px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+        .py-0.5 { padding-top: 0.125rem; padding-bottom: 0.125rem; }
+        .py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+        .py-12 { padding-top: 3rem; padding-bottom: 3rem; }
+        .py-16 { padding-top: 4rem; padding-bottom: 4rem; }
+        .pt-4 { padding-top: 1rem; }
+
+        .mt-3 { margin-top: 0.75rem; }
+        .mt-6 { margin-top: 1.5rem; }
+        .mb-3 { margin-top: 0; margin-bottom: 0.75rem; }
+        .mb-8 { margin-bottom: 2rem; }
+        .mb-10 { margin-bottom: 2.5rem; }
+
+        .border { border-style: solid; border-width: 1px; }
+        .border-t { border-top-style: solid; border-top-width: 1px; }
+        .border-b { border-bottom-style: solid; border-bottom-width: 1px; }
+        .border-zinc-200 { border-color: #e4e4e7; }
+        .border-zinc-300 { border-color: #d4d4d8; }
+        .border-zinc-950 { border-color: #09090b; }
+
+        .rounded { border-radius: 0.25rem; }
+        .rounded-lg { border-radius: 0.5rem; }
+        .rounded-xl { border-radius: 0.75rem; }
+
+        .font-semibold { font-weight: 600; }
+        .font-bold { font-weight: 700; }
+        .font-extrabold { font-weight: 800; }
+
+        .text-xs { font-size: 0.75rem; line-height: 1rem; }
+        .text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+        .text-base { font-size: 1rem; line-height: 1.5rem; }
+        .text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+        .text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+        .text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+        
+        .tracking-tight { letter-spacing: -0.025em; }
+        .tracking-wider { letter-spacing: 0.05em; }
+        .uppercase { text-transform: uppercase; }
+
+        .shadow-sm { box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); }
+        .transition { transition-property: all; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
+        .hover\:bg-zinc-100:hover { background-color: #f4f4f5; }
+        .hover\:bg-zinc-800:hover { background-color: #27272a; }
+        .hover\:underline:hover { text-decoration: underline; }
+        .hover\:shadow-md:hover { box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); }
+        .hover\:border-zinc-400:hover { border-color: #a1a1aa; }
+
+         
+        .line-clamp-3 {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;  
+            overflow: hidden;
+        }
+
+         
+        .sticky { position: sticky; }
+        .top-0 { top: 0; }
+        .z-50 { z-index: 50; }
+        .backdrop-blur-md { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+        .bg-white\/90 { background-color: rgba(255, 255, 255, 0.9); }
+        .h-16 { height: 4rem; }
+        .text-navy-900 { color: var(--text-navy-900); }
+        
+         
+        .min-h-\[32px\] { min-height: 32px; }
+        .min-w-\[32px\] { min-width: 32px; }
+        .min-h-\[44px\] { min-height: 44px; }
+        
+        .focus-visible\:outline:focus-visible { outline: 2px solid var(--text-navy-900); outline-offset: 2px; }
+    </style>
+    <style>
+  @media print {
+     
+    @page {
+      margin: 20mm 15mm 20mm 15mm;
+      size: auto;
     }
+
+     
+    *,
+    *::before,
+    *::after {
+      background: transparent !important;
+      color: #000 !important;
+      box-shadow: none !important;
+      text-shadow: none !important;
+    }
+
     body {
-      background-color: var(--bg-cream);
-      color: var(--text-main);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      line-height: 1.6;
-      max-width: 780px;
-      margin: 40px auto;
-      padding: 0 20px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+      font-size: 11pt !important;
+      line-height: 1.5 !important;
+      color: #111 !important;
     }
-    h2, h3 { color: var(--navy-dark); }
-    a { color: var(--link-accent); }
-    nav a { margin-right: 15px; font-weight: 600; }
-  </style>
+
+     
+    header,
+    nav,
+    footer,
+    .no-print,
+    #site-header,
+    #site-footer,
+    #language-switcher,
+    .language-switcher,
+    button,
+    .interactive-widget,
+    dialog {
+      display: none !important;
+    }
+
+     
+    main,
+    article,
+    .max-w-4xl,
+    .max-w-5xl,
+    .container {
+      max-width: 100% !important;
+      width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      border: none !important;
+    }
+
+     
+    h1 {
+      font-size: 20pt !important;
+      line-height: 1.2 !important;
+      margin-top: 0 !important;
+      margin-bottom: 12pt !important;
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+
+    h2 {
+      font-size: 15pt !important;
+      margin-top: 18pt !important;
+      margin-bottom: 8pt !important;
+      border-bottom: 1px solid #ddd !important;
+      padding-bottom: 4pt !important;
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+
+    h3 {
+      font-size: 12pt !important;
+      margin-top: 14pt !important;
+      margin-bottom: 6pt !important;
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+
+    p, li {
+      orphans: 3;
+      widows: 3;
+    }
+
+     
+    blockquote {
+      border-left: 3pt solid #333 !important;
+      padding-left: 10pt !important;
+      margin: 12pt 0 !important;
+      font-style: italic !important;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+     
+    pre, code {
+      font-family: "Courier New", Courier, monospace !important;
+      font-size: 9.5pt !important;
+      border: 1px solid #ccc !important;
+      background-color: #f9f9f9 !important;
+      page-break-inside: avoid;
+      break-inside: avoid;
+      white-space: pre-wrap !important;
+      word-break: break-word !important;
+    }
+
+     
+    table {
+      width: 100% !important;
+      border-collapse: collapse !important;
+      page-break-inside: avoid;
+      break-inside: avoid;
+      margin: 12pt 0 !important;
+    }
+
+    th, td {
+      border: 1px solid #bbb !important;
+      padding: 6pt 8pt !important;
+      font-size: 9pt !important;
+      text-align: left !important;
+    }
+
+    th {
+      background-color: #eee !important;
+      font-weight: bold !important;
+    }
+
+     
+    article a[href^="http://"]::after,
+    article a[href^="https://"]::after {
+      content: " (" attr(href) ")";
+      font-size: 8.5pt;
+      font-weight: normal;
+      color: #444 !important;
+    }
+
+     
+    article a[href^="#"]::after,
+    article a[href^="/"]::after {
+      content: "";
+    }
+
+     
+    .print-header-badge {
+      display: block !important;
+      border-bottom: 2pt solid #000;
+      padding-bottom: 8pt;
+      margin-bottom: 16pt;
+    }
+  }
+
+   
+  .print-header-badge {
+    display: none;
+  }
+</style>
+
 </head>
-<body>
-  <header style="margin-bottom: 30px;">
-    <nav style="margin-bottom: 20px;">
-      <a href="/">← Home</a>
-    </nav>
-    <h2>All Essays &amp; Articles</h2>
-    <p style="color: #555555; font-size: 1rem;">
-      Curriculum Architecture, Algorithmic Pedagogy &amp; Generative AI Strategy.
-    </p>
-  </header>
-  <main>
+<body class="bg-creme-100 text-navy-900 font-sans antialiased min-h-full flex flex-col justify-between">
+
     
-    <article style="margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid #E5E0D8;">
-      <h3 style="margin-bottom: 6px; display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px;">
-        <a href="https://alanpruitt.com/essays/18-the-illusion-of-the-feed" style="color: #0E3D73; text-decoration: underline; font-weight: 700;">
-          Essay: 18-the-illusion-of-the-feed
-        </a>
-        <a href="https://alanpruitt.substack.com" target="_blank" rel="noopener noreferrer" style="font-size: 0.75rem; font-weight: 600; color: #555555; text-decoration: none;">
-          Substack Edition ↗
-        </a>
-      </h3>
-      <p style="margin: 0 0 8px 0; color: #555555; font-size: 0.85rem;">
-        Published: 2026-09-15
-      </p>
-      <p style="margin: 0; color: #222222; font-size: 0.95rem; line-height: 1.5;">
+<header style="position: sticky; top: 0; z-index: 50; width: 100%; border-bottom: 1px solid #e4e4e7; background-color: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px);">
+  <div style="max-width: 64rem; margin: 0 auto; height: 4rem; display: flex; align-items: center; justify-content: space-between; padding: 0 1.25rem;">
+    
+    
+    <a href="/" style="display: flex; align-items: center; gap: 0.5rem; text-decoration: none; color: #002147;" aria-label="Home">
+      <span style="font-size: 1.125rem; font-weight: 800; white-space: nowrap;">Alan Pruitt</span>
+      <span id="ap-brand-dot" style="color: #a1a1aa; font-weight: bold; display: none;">•</span>
+      <span id="ap-brand-badge" style="padding: 0.15rem 0.5rem; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; border-radius: 0.375rem; border: 1px solid #d4d4d8; background-color: #f4f4f5; color: #27272a; display: none;">CaC Architect</span>
+    </a>
+
+    
+    <nav id="ap-desktop-nav" style="display: none; align-items: center; gap: 1.5rem;">
+      <a href="/workshops/" style="text-decoration: none; color: #3f3f46; font-size: 0.9rem; font-weight: 600;">Workshops</a>
+      <a href="/roi-calculator/" style="text-decoration: none; color: #3f3f46; font-size: 0.9rem; font-weight: 600;">ROI Calculator</a>
+      <a href="/essays/" style="text-decoration: none; color: #3f3f46; font-size: 0.9rem; font-weight: 600;">Essays</a>
+
+      
+      
+      
         
-      </p>
-    </article>
-  
-
-    <article style="margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid #E5E0D8;">
-      <h3 style="margin-bottom: 6px; display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px;">
-        <a href="https://alanpruitt.com/essays/essay-15" style="color: #0E3D73; text-decoration: underline; font-weight: 700;">
-          Essay: essay-15
-        </a>
-        <a href="https://alanpruitt.substack.com" target="_blank" rel="noopener noreferrer" style="font-size: 0.75rem; font-weight: 600; color: #555555; text-decoration: none;">
-          Substack Edition ↗
-        </a>
-      </h3>
-      <p style="margin: 0 0 8px 0; color: #555555; font-size: 0.85rem;">
-        Published: 2026-09-15
-      </p>
-      <p style="margin: 0; color: #222222; font-size: 0.95rem; line-height: 1.5;">
         
-      </p>
-    </article>
-  
-
-    <article style="margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid #E5E0D8;">
-      <h3 style="margin-bottom: 6px; display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px;">
-        <a href="https://alanpruitt.com/essays/what-happens-when-you-stop-renting-your-curriculum" style="color: #0E3D73; text-decoration: underline; font-weight: 700;">
-          What Happens When You Stop Renting Your Curriculum
-        </a>
-        <a href="https://alanpruitt.substack.com" target="_blank" rel="noopener noreferrer" style="font-size: 0.75rem; font-weight: 600; color: #555555; text-decoration: none;">
-          Substack Edition ↗
-        </a>
-      </h3>
-      <p style="margin: 0 0 8px 0; color: #555555; font-size: 0.85rem;">
-        Published: 2026-09-15
-      </p>
-      <p style="margin: 0; color: #222222; font-size: 0.95rem; line-height: 1.5;">
-        A practical look at trading proprietary WYSIWYG editors for plain-text repositories, automated linters, and true instructional ownership.
-      </p>
-    </article>
-  
-
-    <article style="margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid #E5E0D8;">
-      <h3 style="margin-bottom: 6px; display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px;">
-        <a href="https://alanpruitt.com/essays/essay-30-the-logic-grid" style="color: #0E3D73; text-decoration: underline; font-weight: 700;">
-          The Logic Grid: Why Good Assessment Looks Like Sudoku (and How the Mission Loop Solves the AI Crisis)
-        </a>
-        <a href="https://alanpruitt.substack.com" target="_blank" rel="noopener noreferrer" style="font-size: 0.75rem; font-weight: 600; color: #555555; text-decoration: none;">
-          Substack Edition ↗
-        </a>
-      </h3>
-      <p style="margin: 0 0 8px 0; color: #555555; font-size: 0.85rem;">
-        Published: 2026-09-03T10:00:00-07:00
-      </p>
-      <p style="margin: 0; color: #222222; font-size: 0.95rem; line-height: 1.5;">
+      
         
-      </p>
-    </article>
-  
-
-    <article style="margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid #E5E0D8;">
-      <h3 style="margin-bottom: 6px; display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px;">
-        <a href="https://alanpruitt.com/essays/essay-31-beyond-the-slide-deck" style="color: #0E3D73; text-decoration: underline; font-weight: 700;">
-          Essay 31: Beyond the Slide Deck — Architecture as Professional Development
-        </a>
-        <a href="https://alanpruitt.substack.com" target="_blank" rel="noopener noreferrer" style="font-size: 0.75rem; font-weight: 600; color: #555555; text-decoration: none;">
-          Substack Edition ↗
-        </a>
-      </h3>
-      <p style="margin: 0 0 8px 0; color: #555555; font-size: 0.85rem;">
-        Published: 2026-09-03
-      </p>
-      <p style="margin: 0; color: #222222; font-size: 0.95rem; line-height: 1.5;">
         
-      </p>
-    </article>
-  
+      
+      <div style="display: flex; align-items: center; border: 1px solid #d4d4d8; border-radius: 0.375rem; background-color: #f4f4f5; padding: 0.125rem; gap: 0.125rem;">
+        <a href="/essays/" style="padding: 0.25rem 0.5rem; font-size: 0.75rem; font-weight: 700; text-decoration: none; border-radius: 0.25rem; background-color: #002147; color: #fff;">EN</a>
+        <a href="/es/essays/" style="padding: 0.25rem 0.5rem; font-size: 0.75rem; font-weight: 700; text-decoration: none; border-radius: 0.25rem; color: #52525b;">ES</a>
+      </div>
+    </nav>
 
-    <article style="margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid #E5E0D8;">
-      <h3 style="margin-bottom: 6px; display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px;">
-        <a href="https://alanpruitt.com/essays/essay-29" style="color: #0E3D73; text-decoration: underline; font-weight: 700;">
-          Essay 29: The Upstream Shift — Why Post-Production Accessibility Is a Failure of Architectural Design
-        </a>
-        <a href="https://alanpruitt.substack.com" target="_blank" rel="noopener noreferrer" style="font-size: 0.75rem; font-weight: 600; color: #555555; text-decoration: none;">
-          Substack Edition ↗
-        </a>
-      </h3>
-      <p style="margin: 0 0 8px 0; color: #555555; font-size: 0.85rem;">
-        Published: 2026-08-29T09:30:00-07:00
-      </p>
-      <p style="margin: 0; color: #222222; font-size: 0.95rem; line-height: 1.5;">
-        
-      </p>
-    </article>
-  
+    
+    <div id="ap-mobile-nav" style="display: none; align-items: center; gap: 1rem;">
+      <div style="display: flex; align-items: center; border: 1px solid #d4d4d8; border-radius: 0.375rem; background-color: #f4f4f5; padding: 0.125rem; gap: 0.125rem;">
+        <a href="/essays/" style="padding: 0.25rem 0.5rem; font-size: 0.75rem; font-weight: 700; text-decoration: none; border-radius: 0.25rem; background-color: #002147; color: #fff;">EN</a>
+        <a href="/es/essays/" style="padding: 0.25rem 0.5rem; font-size: 0.75rem; font-weight: 700; text-decoration: none; border-radius: 0.25rem; color: #52525b;">ES</a>
+      </div>
 
-    <article style="margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid #E5E0D8;">
-      <h3 style="margin-bottom: 6px; display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px;">
-        <a href="https://alanpruitt.com/essays/essay-28" style="color: #0E3D73; text-decoration: underline; font-weight: 700;">
-          Essay 28: Beyond Performative Compliance — ADA Title II, Living Conformance Statements, and Automated Institutional Governance
-        </a>
-        <a href="https://alanpruitt.substack.com" target="_blank" rel="noopener noreferrer" style="font-size: 0.75rem; font-weight: 600; color: #555555; text-decoration: none;">
-          Substack Edition ↗
-        </a>
-      </h3>
-      <p style="margin: 0 0 8px 0; color: #555555; font-size: 0.85rem;">
-        Published: 2026-08-28T08:00:00-07:00
-      </p>
-      <p style="margin: 0; color: #222222; font-size: 0.95rem; line-height: 1.5;">
-        
-      </p>
-    </article>
-  
+      <details style="position: relative; margin: 0;">
+        <summary style="list-style: none; cursor: pointer; display: flex; align-items: center; gap: 0.35rem; padding: 0.35rem 0.75rem; border-radius: 0.375rem; border: 1.5px solid #002147; background-color: #FFF9F0; color: #002147; font-size: 0.75rem; font-weight: 800; text-transform: uppercase;">
+          <span>Menu</span>
+          <svg style="width: 1rem; height: 1rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
+        </summary>
+        <div style="position: absolute; right: 0; top: calc(100% + 0.5rem); width: 14rem; background-color: #FFF9F0; border: 2px solid #002147; border-radius: 0.5rem; padding: 0.5rem; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); z-index: 60; display: flex; flex-direction: column; gap: 0.25rem;">
+          <a href="/workshops/" style="display: flex; justify-content: space-between; padding: 0.5rem 0.75rem; text-decoration: none; color: #002147; font-size: 0.875rem; font-weight: 700;"><span>Workshops</span><span style="color: #71717a;">&rarr;</span></a>
+          <a href="/roi-calculator/" style="display: flex; justify-content: space-between; padding: 0.5rem 0.75rem; text-decoration: none; color: #002147; font-size: 0.875rem; font-weight: 700;"><span>ROI Calculator</span><span style="color: #71717a;">&rarr;</span></a>
+          <a href="/essays/" style="display: flex; justify-content: space-between; padding: 0.5rem 0.75rem; text-decoration: none; color: #002147; font-size: 0.875rem; font-weight: 700;"><span>Essays</span><span style="color: #71717a;">&rarr;</span></a>
+        </div>
+      </details>
+    </div>
 
-    <article style="margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid #E5E0D8;">
-      <h3 style="margin-bottom: 6px; display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px;">
-        <a href="https://alanpruitt.com/essays/essay-25" style="color: #0E3D73; text-decoration: underline; font-weight: 700;">
-          Essay 25: The Accessibility Checker Parity Illusion: Schema Divergence &amp; CaC
-        </a>
-        <a href="https://alanpruitt.substack.com" target="_blank" rel="noopener noreferrer" style="font-size: 0.75rem; font-weight: 600; color: #555555; text-decoration: none;">
-          Substack Edition ↗
-        </a>
-      </h3>
-      <p style="margin: 0 0 8px 0; color: #555555; font-size: 0.85rem;">
-        Published: 2026-08-27T08:00:00-07:00
-      </p>
-      <p style="margin: 0; color: #222222; font-size: 0.95rem; line-height: 1.5;">
-        
-      </p>
-    </article>
-  
+  </div>
+</header>
 
-    <article style="margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid #E5E0D8;">
-      <h3 style="margin-bottom: 6px; display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px;">
-        <a href="https://alanpruitt.com/essays/essay-27" style="color: #0E3D73; text-decoration: underline; font-weight: 700;">
-          Curriculum-as-Code, ADA Title II Compliance, and Fleet-Wide Accessibility Refactoring
-        </a>
-        <a href="https://alanpruitt.substack.com" target="_blank" rel="noopener noreferrer" style="font-size: 0.75rem; font-weight: 600; color: #555555; text-decoration: none;">
-          Substack Edition ↗
-        </a>
-      </h3>
-      <p style="margin: 0 0 8px 0; color: #555555; font-size: 0.85rem;">
-        Published: 2026-08-25T16:53:00-07:00
-      </p>
-      <p style="margin: 0; color: #222222; font-size: 0.95rem; line-height: 1.5;">
-        
-      </p>
-    </article>
-  
+<script>
+  function enforceHeaderLayout() {
+    var width = window.innerWidth;
+    if (width >= 768) {
+      document.getElementById("ap-desktop-nav").style.display = "flex";
+      document.getElementById("ap-mobile-nav").style.display = "none";
+      document.getElementById("ap-brand-dot").style.display = "inline-block";
+      document.getElementById("ap-brand-badge").style.display = "inline-flex";
+    } else {
+      document.getElementById("ap-desktop-nav").style.display = "none";
+      document.getElementById("ap-mobile-nav").style.display = "flex";
+      document.getElementById("ap-brand-dot").style.display = "none";
+      document.getElementById("ap-brand-badge").style.display = "none";
+    }
+  }
+  window.addEventListener("resize", enforceHeaderLayout);
+  document.addEventListener("DOMContentLoaded", enforceHeaderLayout);
+  enforceHeaderLayout();
+</script>
 
-    <article style="margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid #E5E0D8;">
-      <h3 style="margin-bottom: 6px; display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px;">
-        <a href="https://alanpruitt.com/essays/19-hybrid-ergometer-scaffold" style="color: #0E3D73; text-decoration: underline; font-weight: 700;">
-          The Hybrid Ergometer Scaffold: Synchronizing AI Simulation with Lab Precision
-        </a>
-        <a href="https://alanpruitt.substack.com" target="_blank" rel="noopener noreferrer" style="font-size: 0.75rem; font-weight: 600; color: #555555; text-decoration: none;">
-          Substack Edition ↗
-        </a>
-      </h3>
-      <p style="margin: 0 0 8px 0; color: #555555; font-size: 0.85rem;">
-        Published: 2026-08-21
-      </p>
-      <p style="margin: 0; color: #222222; font-size: 0.95rem; line-height: 1.5;">
-        How EXW245 decouples cognitive pre-flight mathematical verification from physical laboratory execution using a two-part scaffold pairing Gemini AI simulation sandboxes with Lode Corival research-grade cycle ergometers.
-      </p>
-    </article>
-  
 
-    <article style="margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid #E5E0D8;">
-      <h3 style="margin-bottom: 6px; display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px;">
-        <a href="https://alanpruitt.com/essays/20-deterministic-clinical-guardrails" style="color: #0E3D73; text-decoration: underline; font-weight: 700;">
-          Deterministic Clinical Guardrails: Preventing Hallucination Drift in Special Population Prescriptions
-        </a>
-        <a href="https://alanpruitt.substack.com" target="_blank" rel="noopener noreferrer" style="font-size: 0.75rem; font-weight: 600; color: #555555; text-decoration: none;">
-          Substack Edition ↗
-        </a>
-      </h3>
-      <p style="margin: 0 0 8px 0; color: #555555; font-size: 0.85rem;">
-        Published: 2026-08-21
-      </p>
-      <p style="margin: 0; color: #222222; font-size: 0.95rem; line-height: 1.5;">
-        How EXW265 deploys deterministic prompt guardrails, strict delimiter encapsulation, and the federal PAGA 2018 Single Source of Truth to eliminate dangerous AI hallucination drift in exercise prescriptions for chronic conditions.
-      </p>
-    </article>
-  
+    <main class="w-full max-w-6xl mx-auto px-6 py-8 flex-grow">
+        <div class="py-12 sm:py-16">
+          <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+            
+            
+            <div class="mb-10 text-left">
+              <h1 class="text-3xl font-extrabold tracking-tight text-zinc-950 dark:text-white sm:text-4xl">
+                Curriculum-as-Code & Institutional Strategy Essays
+              </h1>
+              <p class="mt-3 max-w-3xl text-base text-zinc-600 dark:text-zinc-400">
+                
+                  Explore the complete collection of essays documenting digital sovereignty, ADA Title II accessibility refactoring, and deterministic AI safety protocols.
+                
+              </p>
+            </div>
 
-    <article style="margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid #E5E0D8;">
-      <h3 style="margin-bottom: 6px; display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px;">
-        <a href="https://alanpruitt.com/essays/21-evidence-based-nutrition-vs-feed" style="color: #0E3D73; text-decoration: underline; font-weight: 700;">
-          Evidence-Based Nutrition vs. The Feed: Upstream SSoT Governance in Sports Nutrition
-        </a>
-        <a href="https://alanpruitt.substack.com" target="_blank" rel="noopener noreferrer" style="font-size: 0.75rem; font-weight: 600; color: #555555; text-decoration: none;">
-          Substack Edition ↗
-        </a>
-      </h3>
-      <p style="margin: 0 0 8px 0; color: #555555; font-size: 0.85rem;">
-        Published: 2026-08-21
-      </p>
-      <p style="margin: 0; color: #222222; font-size: 0.95rem; line-height: 1.5;">
-        How EXW150 uses Curriculum-as-Code, the Mission Loop framework, and federal SSoT standards to insulate community college students from social media fad diets, predatory supplement claims, and unanchored AI nutrition advice.
-      </p>
-    </article>
-  
+            
+            <div class="mb-10" aria-label="Filter Essays by Topic">
+  <div id="filter-pill-group" class="flex flex-wrap items-center gap-2.5 sm:gap-3" role="group" aria-label="Topic Filter Options">
+    <button 
+      type="button" 
+      onclick="filterEssays(this, 'all')"
+      class="essay-filter-btn inline-flex min-h-[44px] items-center justify-center rounded-lg border border-zinc-950 bg-zinc-950 px-4 py-2 text-xs font-bold uppercase tracking-wider text-white shadow-sm transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:border-white dark:bg-white dark:text-zinc-950 dark:focus-visible:outline-white"
+      aria-pressed="true"
+    >
+      All Essays (01–31)
+    </button>
+    <button 
+      type="button" 
+      onclick="filterEssays(this, 'curriculum-as-code')"
+      class="essay-filter-btn inline-flex min-h-[44px] items-center justify-center rounded-lg border border-zinc-300 bg-white px-4 py-2 text-xs font-bold uppercase tracking-wider text-zinc-800 shadow-sm transition-colors hover:bg-zinc-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-200 dark:hover:bg-zinc-800 dark:focus-visible:outline-white"
+      aria-pressed="false"
+    >
+      Curriculum-as-Code
+    </button>
+    <button 
+      type="button" 
+      onclick="filterEssays(this, 'ai-safety-protocols')"
+      class="essay-filter-btn inline-flex min-h-[44px] items-center justify-center rounded-lg border border-zinc-300 bg-white px-4 py-2 text-xs font-bold uppercase tracking-wider text-zinc-800 shadow-sm transition-colors hover:bg-zinc-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-200 dark:hover:bg-zinc-800 dark:focus-visible:outline-white"
+      aria-pressed="false"
+    >
+      AI Safety Protocols
+    </button>
+    <button 
+      type="button" 
+      onclick="filterEssays(this, 'ada-title-ii')"
+      class="essay-filter-btn inline-flex min-h-[44px] items-center justify-center rounded-lg border border-zinc-300 bg-white px-4 py-2 text-xs font-bold uppercase tracking-wider text-zinc-800 shadow-sm transition-colors hover:bg-zinc-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-200 dark:hover:bg-zinc-800 dark:focus-visible:outline-white"
+      aria-pressed="false"
+    >
+      ADA Title II & Accessibility
+    </button>
+  </div>
+</div>
 
-    <article style="margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid #E5E0D8;">
-      <h3 style="margin-bottom: 6px; display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px;">
-        <a href="https://alanpruitt.com/essays/22-foundational-human-movement-in-the-algorithmic-age" style="color: #0E3D73; text-decoration: underline; font-weight: 700;">
-          Foundational Human Movement in the Algorithmic Age: PAGA 2018 SSoT &amp; Community Inactivity Interventions
-        </a>
-        <a href="https://alanpruitt.substack.com" target="_blank" rel="noopener noreferrer" style="font-size: 0.75rem; font-weight: 600; color: #555555; text-decoration: none;">
-          Substack Edition ↗
-        </a>
-      </h3>
-      <p style="margin: 0 0 8px 0; color: #555555; font-size: 0.85rem;">
-        Published: 2026-08-21
-      </p>
-      <p style="margin: 0; color: #222222; font-size: 0.95rem; line-height: 1.5;">
-        How EXW101 deploys Curriculum-as-Code, the federal PAGA 2018 SSoT, and the Mission Loop framework to deconstruct systemic inactivity patterns and build community-level health interventions in rural borderland regions.
-      </p>
-    </article>
-  
+<script>
+  window.filterEssays = function (activeBtn, targetFilter) {
+    const group = document.getElementById('filter-pill-group');
+    const buttons = group ? group.querySelectorAll('.essay-filter-btn') : document.querySelectorAll('.essay-filter-btn');
+    const cards = document.querySelectorAll('.essay-card-item');
 
-    <article style="margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid #E5E0D8;">
-      <h3 style="margin-bottom: 6px; display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px;">
-        <a href="https://alanpruitt.com/essays/26-curriculum-as-code-pour-audit-framework" style="color: #0E3D73; text-decoration: underline; font-weight: 700;">
-          Essay 26
-        </a>
-        <a href="https://alanpruitt.substack.com" target="_blank" rel="noopener noreferrer" style="font-size: 0.75rem; font-weight: 600; color: #555555; text-decoration: none;">
-          Substack Edition ↗
-        </a>
-      </h3>
-      <p style="margin: 0 0 8px 0; color: #555555; font-size: 0.85rem;">
-        Published: 2026-08-19
-      </p>
-      <p style="margin: 0; color: #222222; font-size: 0.95rem; line-height: 1.5;">
-        An analysis of the POUR-Audit framework within Curriculum-as-Code paradigms, highlighting automated verification checks for heading hierarchies, image alt-text, and legacy reference deprecation.
-      </p>
-    </article>
-  
+    const activeClasses = ['border-zinc-950', 'bg-zinc-950', 'text-white', 'dark:border-white', 'dark:bg-white', 'dark:text-zinc-950'];
+    const inactiveClasses = ['border-zinc-300', 'bg-white', 'text-zinc-800', 'dark:border-zinc-700', 'dark:bg-zinc-900', 'dark:text-zinc-200'];
 
-    <article style="margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid #E5E0D8;">
-      <h3 style="margin-bottom: 6px; display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px;">
-        <a href="https://alanpruitt.com/essays/24-chatbots-canvas-lms-cautionary-tale" style="color: #0E3D73; text-decoration: underline; font-weight: 700;">
-          Essay 24
-        </a>
-        <a href="https://alanpruitt.substack.com" target="_blank" rel="noopener noreferrer" style="font-size: 0.75rem; font-weight: 600; color: #555555; text-decoration: none;">
-          Substack Edition ↗
-        </a>
-      </h3>
-      <p style="margin: 0 0 8px 0; color: #555555; font-size: 0.85rem;">
-        Published: 2026-08-17
-      </p>
-      <p style="margin: 0; color: #222222; font-size: 0.95rem; line-height: 1.5;">
-        Why integrating commercial AI chatbots inside Canvas LMS introduces severe institutional risks, compromises FERPA/ADA standards, and how high-friction Socratic assessments preserve human voice and presence.
-      </p>
-    </article>
-  
+    buttons.forEach(function (btn) {
+      btn.setAttribute('aria-pressed', 'false');
+      btn.classList.remove(...activeClasses);
+      btn.classList.add(...inactiveClasses);
+    });
 
-    <article style="margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid #E5E0D8;">
-      <h3 style="margin-bottom: 6px; display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px;">
-        <a href="https://alanpruitt.com/essays/17-resolving-array-parsing-script-failures" style="color: #0E3D73; text-decoration: underline; font-weight: 700;">
-          Essay 17: Engineering Resilience: Resolving False-Positive Contrast Errors and Array Parsing Script Failures via Curriculum-as-Code
-        </a>
-        <a href="https://alanpruitt.substack.com" target="_blank" rel="noopener noreferrer" style="font-size: 0.75rem; font-weight: 600; color: #555555; text-decoration: none;">
-          Substack Edition ↗
-        </a>
-      </h3>
-      <p style="margin: 0 0 8px 0; color: #555555; font-size: 0.85rem;">
-        Published: 2026-08-14
-      </p>
-      <p style="margin: 0; color: #222222; font-size: 0.95rem; line-height: 1.5;">
-        
-      </p>
-    </article>
-  
+    if (activeBtn) {
+      activeBtn.setAttribute('aria-pressed', 'true');
+      activeBtn.classList.remove(...inactiveClasses);
+      activeBtn.classList.add(...activeClasses);
+    }
 
-    <article style="margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid #E5E0D8;">
-      <h3 style="margin-bottom: 6px; display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px;">
-        <a href="https://alanpruitt.com/essays/10-ai-safety-auditor-pattern" style="color: #0E3D73; text-decoration: underline; font-weight: 700;">
-          The AI Safety Auditor Pattern in Applied Kinesiology
-        </a>
-        <a href="https://alanpruitt.substack.com" target="_blank" rel="noopener noreferrer" style="font-size: 0.75rem; font-weight: 600; color: #555555; text-decoration: none;">
-          Substack Edition ↗
-        </a>
-      </h3>
-      <p style="margin: 0 0 8px 0; color: #555555; font-size: 0.85rem;">
-        Published: 2026-08-11
-      </p>
-      <p style="margin: 0; color: #222222; font-size: 0.95rem; line-height: 1.5;">
-        
-      </p>
-    </article>
-  
+    cards.forEach(function (card) {
+      const rawCats = (card.getAttribute('data-categories') || '').toLowerCase();
+      if (targetFilter === 'all' || rawCats.indexOf(targetFilter) !== -1) {
+        card.style.removeProperty('display');
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  };
+</script>
 
-    <article style="margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid #E5E0D8;">
-      <h3 style="margin-bottom: 6px; display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px;">
-        <a href="https://alanpruitt.com/essays/11-two-part-scaffold-framework" style="color: #0E3D73; text-decoration: underline; font-weight: 700;">
-          The Two-Part Scaffold Framework: Bridging Simulation &amp; Research-Grade Application
-        </a>
-        <a href="https://alanpruitt.substack.com" target="_blank" rel="noopener noreferrer" style="font-size: 0.75rem; font-weight: 600; color: #555555; text-decoration: none;">
-          Substack Edition ↗
-        </a>
-      </h3>
-      <p style="margin: 0 0 8px 0; color: #555555; font-size: 0.85rem;">
-        Published: 2026-08-11
-      </p>
-      <p style="margin: 0; color: #222222; font-size: 0.95rem; line-height: 1.5;">
-        
-      </p>
-    </article>
-  
 
-    <article style="margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid #E5E0D8;">
-      <h3 style="margin-bottom: 6px; display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px;">
-        <a href="https://alanpruitt.com/essays/12-mission-loop-architecture" style="color: #0E3D73; text-decoration: underline; font-weight: 700;">
-          The Mission Loop Architecture: Pattern, Rule, and Solve in Coded Instruction
-        </a>
-        <a href="https://alanpruitt.substack.com" target="_blank" rel="noopener noreferrer" style="font-size: 0.75rem; font-weight: 600; color: #555555; text-decoration: none;">
-          Substack Edition ↗
-        </a>
-      </h3>
-      <p style="margin: 0 0 8px 0; color: #555555; font-size: 0.85rem;">
-        Published: 2026-08-11
-      </p>
-      <p style="margin: 0; color: #222222; font-size: 0.95rem; line-height: 1.5;">
-        
-      </p>
-    </article>
-  
+            
+            <div id="essays-grid" class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              
+                
+                
+                  
+                
 
-    <article style="margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid #E5E0D8;">
-      <h3 style="margin-bottom: 6px; display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px;">
-        <a href="https://alanpruitt.com/essays/13-vibe-coding-paradigm" style="color: #0E3D73; text-decoration: underline; font-weight: 700;">
-          The Vibe-Coding Paradigm: Speed, Intuition, and Full-Stack Execution in Instructional Engineering
-        </a>
-        <a href="https://alanpruitt.substack.com" target="_blank" rel="noopener noreferrer" style="font-size: 0.75rem; font-weight: 600; color: #555555; text-decoration: none;">
-          Substack Edition ↗
-        </a>
-      </h3>
-      <p style="margin: 0 0 8px 0; color: #555555; font-size: 0.85rem;">
-        Published: 2026-08-11
-      </p>
-      <p style="margin: 0; color: #222222; font-size: 0.95rem; line-height: 1.5;">
-        
-      </p>
-    </article>
-  
+                
+                
 
-    <article style="margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid #E5E0D8;">
-      <h3 style="margin-bottom: 6px; display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px;">
-        <a href="https://alanpruitt.com/essays/14-guided-learning-trifecta" style="color: #0E3D73; text-decoration: underline; font-weight: 700;">
-          The Guided Learning Trifecta: AI Simulation, Clinical Application, and Deterministic Auditing
-        </a>
-        <a href="https://alanpruitt.substack.com" target="_blank" rel="noopener noreferrer" style="font-size: 0.75rem; font-weight: 600; color: #555555; text-decoration: none;">
-          Substack Edition ↗
-        </a>
-      </h3>
-      <p style="margin: 0 0 8px 0; color: #555555; font-size: 0.85rem;">
-        Published: 2026-08-11
-      </p>
-      <p style="margin: 0; color: #222222; font-size: 0.95rem; line-height: 1.5;">
-        
-      </p>
-    </article>
-  
+                <article 
+                  class="essay-card-item flex flex-col justify-between rounded-xl border border-zinc-200 bg-white p-6 shadow-sm transition hover:border-zinc-400 hover:shadow-md dark:border-zinc-800 dark:bg-zinc-900/60 dark:hover:border-zinc-600"
+                  data-categories="Essays"
+                >
+                  <div>
+                    
+                    <div class="mb-3 flex items-center justify-between">
+                      
+                        <span class="inline-flex items-center rounded border border-zinc-300 bg-zinc-100 px-2 py-0.5 text-[11px] font-bold uppercase tracking-wider text-zinc-800 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-200">
+                          Essay 38
+                        </span>
+                      
+                      
+                      <div class="flex flex-wrap gap-1">
+                        
+                          <span class="rounded bg-zinc-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400">
+                            Essays
+                          </span>
+                        
+                      </div>
+                    </div>
 
-    <article style="margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid #E5E0D8;">
-      <h3 style="margin-bottom: 6px; display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px;">
-        <a href="https://alanpruitt.com/essays/09-immutable-learning-analytics" style="color: #0E3D73; text-decoration: underline; font-weight: 700;">
-          Immutable Learning Analytics &amp; Privacy-First Telemetry
-        </a>
-        <a href="https://alanpruitt.substack.com" target="_blank" rel="noopener noreferrer" style="font-size: 0.75rem; font-weight: 600; color: #555555; text-decoration: none;">
-          Substack Edition ↗
-        </a>
-      </h3>
-      <p style="margin: 0 0 8px 0; color: #555555; font-size: 0.85rem;">
-        Published: 2026-08-06
-      </p>
-      <p style="margin: 0; color: #222222; font-size: 0.95rem; line-height: 1.5;">
-        
-      </p>
-    </article>
-  
+                    
+                    <h2 class="text-lg font-bold leading-snug text-zinc-950 dark:text-white">
+                      <a href="/essays/essay-38-dom-graphrag-and-prov-o-curriculum-as-code/" class="hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white" style="text-decoration: none; color: inherit;">
+                        Essay 38: What If I Didn&#39;t Build the Graph? – Why Curriculum-as-Code Transcends Flat Docs-as-Code with DOM GraphRAG &amp; W3C PROV-O
+                      </a>
+                    </h2>
 
-    <article style="margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid #E5E0D8;">
-      <h3 style="margin-bottom: 6px; display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px;">
-        <a href="https://alanpruitt.com/essays/06-canvas-ai-course-design" style="color: #0E3D73; text-decoration: underline; font-weight: 700;">
-          Practical AI in Canvas: Supporting Course Design, Content Creation, and Student Engagement
-        </a>
-        <a href="https://alanpruitt.substack.com" target="_blank" rel="noopener noreferrer" style="font-size: 0.75rem; font-weight: 600; color: #555555; text-decoration: none;">
-          Substack Edition ↗
-        </a>
-      </h3>
-      <p style="margin: 0 0 8px 0; color: #555555; font-size: 0.85rem;">
-        Published: 2026-08-04
-      </p>
-      <p style="margin: 0; color: #222222; font-size: 0.95rem; line-height: 1.5;">
-        
-      </p>
-    </article>
-  
+                    
+                    <p class="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400 line-clamp-3">
+                      A counterfactual examination of why flat vector RAG fails clinical higher education—and how DOM GraphRAG, W3C PROV-O provenance receipts, Born-Accessible 9:1 XAI scorecards, and W3C SKOS bilingual ontologies protect academic sovereignty.
+                    </p>
+                  </div>
 
-    <article style="margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid #E5E0D8;">
-      <h3 style="margin-bottom: 6px; display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px;">
-        <a href="https://alanpruitt.com/essays/07-continuous-integration-pedagogy" style="color: #0E3D73; text-decoration: underline; font-weight: 700;">
-          Continuous Integration for Pedagogy: Writing Automated Unit Tests for Learning Outcomes
-        </a>
-        <a href="https://alanpruitt.substack.com" target="_blank" rel="noopener noreferrer" style="font-size: 0.75rem; font-weight: 600; color: #555555; text-decoration: none;">
-          Substack Edition ↗
-        </a>
-      </h3>
-      <p style="margin: 0 0 8px 0; color: #555555; font-size: 0.85rem;">
-        Published: 2026-08-04
-      </p>
-      <p style="margin: 0; color: #222222; font-size: 0.95rem; line-height: 1.5;">
-        
-      </p>
-    </article>
-  
+                  
+                  <div class="mt-6 flex items-center justify-between border-t border-zinc-100 pt-4 text-xs font-semibold text-zinc-500 dark:border-zinc-800 dark:text-zinc-400">
+                    <time datetime="2026-11-01">Nov 01, 2026</time>
+                    <a 
+                      href="/essays/essay-38-dom-graphrag-and-prov-o-curriculum-as-code/" 
+                      class="inline-flex min-h-[32px] items-center text-zinc-950 hover:underline dark:text-white"
+                      aria-label="Read Essay 38: What If I Didn&#39;t Build the Graph? – Why Curriculum-as-Code Transcends Flat Docs-as-Code with DOM GraphRAG &amp; W3C PROV-O"
+                      style="text-decoration: none; color: inherit;"
+                    >
+                      Read Essay →
+                    </a>
+                  </div>
+                </article>
+              
+                
+                
 
-    <article style="margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid #E5E0D8;">
-      <h3 style="margin-bottom: 6px; display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px;">
-        <a href="https://alanpruitt.com/essays/08-bilingual-localization-pipelines" style="color: #0E3D73; text-decoration: underline; font-weight: 700;">
-          Sovereign Localization: Automating Multi-Lingual &amp; Multi-Dialect Course Pipelines
-        </a>
-        <a href="https://alanpruitt.substack.com" target="_blank" rel="noopener noreferrer" style="font-size: 0.75rem; font-weight: 600; color: #555555; text-decoration: none;">
-          Substack Edition ↗
-        </a>
-      </h3>
-      <p style="margin: 0 0 8px 0; color: #555555; font-size: 0.85rem;">
-        Published: 2026-08-04
-      </p>
-      <p style="margin: 0; color: #222222; font-size: 0.95rem; line-height: 1.5;">
-        
-      </p>
-    </article>
-  
+                
+                
 
-    <article style="margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid #E5E0D8;">
-      <h3 style="margin-bottom: 6px; display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px;">
-        <a href="https://alanpruitt.com/essays/01-ai-assessment-design" style="color: #0E3D73; text-decoration: underline; font-weight: 700;">
-          Shifting from AI Fear to Strategic Assessment Design
-        </a>
-        <a href="https://alanpruitt.substack.com" target="_blank" rel="noopener noreferrer" style="font-size: 0.75rem; font-weight: 600; color: #555555; text-decoration: none;">
-          Substack Edition ↗
-        </a>
-      </h3>
-      <p style="margin: 0 0 8px 0; color: #555555; font-size: 0.85rem;">
-        Published: 2026-07-30
-      </p>
-      <p style="margin: 0; color: #222222; font-size: 0.95rem; line-height: 1.5;">
-        
-      </p>
-    </article>
-  
+                <article 
+                  class="essay-card-item flex flex-col justify-between rounded-xl border border-zinc-200 bg-white p-6 shadow-sm transition hover:border-zinc-400 hover:shadow-md dark:border-zinc-800 dark:bg-zinc-900/60 dark:hover:border-zinc-600"
+                  data-categories=""
+                >
+                  <div>
+                    
+                    <div class="mb-3 flex items-center justify-between">
+                      
+                        <span class="inline-flex items-center rounded border border-zinc-300 bg-zinc-100 px-2 py-0.5 text-[11px] font-bold uppercase tracking-wider text-zinc-800 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-200">
+                          Essay 37
+                        </span>
+                      
+                      
+                      <div class="flex flex-wrap gap-1">
+                        
+                      </div>
+                    </div>
 
-    <article style="margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid #E5E0D8;">
-      <h3 style="margin-bottom: 6px; display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px;">
-        <a href="https://alanpruitt.com/essays/02-curriculum-as-code" style="color: #0E3D73; text-decoration: underline; font-weight: 700;">
-          Curriculum-as-Code: Treating Educational Content Like Software Development
-        </a>
-        <a href="https://alanpruitt.substack.com" target="_blank" rel="noopener noreferrer" style="font-size: 0.75rem; font-weight: 600; color: #555555; text-decoration: none;">
-          Substack Edition ↗
-        </a>
-      </h3>
-      <p style="margin: 0 0 8px 0; color: #555555; font-size: 0.85rem;">
-        Published: 2026-07-30
-      </p>
-      <p style="margin: 0; color: #222222; font-size: 0.95rem; line-height: 1.5;">
-        
-      </p>
-    </article>
-  
+                    
+                    <h2 class="text-lg font-bold leading-snug text-zinc-950 dark:text-white">
+                      <a href="/essays/essay-37-wcag-3-cognitive-accessibility/" class="hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white" style="text-decoration: none; color: inherit;">
+                        Essay 37: What If I Didn&#39;t? – Future-Proofing My Course Fleet with WCAG 3.0 Cognitive Accessibility
+                      </a>
+                    </h2>
 
-    <article style="margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid #E5E0D8;">
-      <h3 style="margin-bottom: 6px; display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px;">
-        <a href="https://alanpruitt.com/essays/03-air-gapped-sovereign-ai" style="color: #0E3D73; text-decoration: underline; font-weight: 700;">
-          Air-Gapped &amp; Sovereign AI: Local Intelligence in High-Compliance Environments
-        </a>
-        <a href="https://alanpruitt.substack.com" target="_blank" rel="noopener noreferrer" style="font-size: 0.75rem; font-weight: 600; color: #555555; text-decoration: none;">
-          Substack Edition ↗
-        </a>
-      </h3>
-      <p style="margin: 0 0 8px 0; color: #555555; font-size: 0.85rem;">
-        Published: 2026-07-30
-      </p>
-      <p style="margin: 0; color: #222222; font-size: 0.95rem; line-height: 1.5;">
-        
-      </p>
-    </article>
-  
+                    
+                    <p class="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400 line-clamp-3">
+                      Reducing student cognitive load across a multi-course kinesiology and clinical nutrition fleet through deterministic WCAG 3.0 cognitive accessibility, In Plain English callouts, and Norteño-Spanish scaffolding.
+                    </p>
+                  </div>
 
-    <article style="margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid #E5E0D8;">
-      <h3 style="margin-bottom: 6px; display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px;">
-        <a href="https://alanpruitt.com/essays/04-ada-title-ii-accessibility" style="color: #0E3D73; text-decoration: underline; font-weight: 700;">
-          Architecting Born-Accessible Higher Ed: ADA Title II &amp; Curriculum-as-Code
-        </a>
-        <a href="https://alanpruitt.substack.com" target="_blank" rel="noopener noreferrer" style="font-size: 0.75rem; font-weight: 600; color: #555555; text-decoration: none;">
-          Substack Edition ↗
-        </a>
-      </h3>
-      <p style="margin: 0 0 8px 0; color: #555555; font-size: 0.85rem;">
-        Published: 2026-07-30
-      </p>
-      <p style="margin: 0; color: #222222; font-size: 0.95rem; line-height: 1.5;">
-        
-      </p>
-    </article>
-  
+                  
+                  <div class="mt-6 flex items-center justify-between border-t border-zinc-100 pt-4 text-xs font-semibold text-zinc-500 dark:border-zinc-800 dark:text-zinc-400">
+                    <time datetime="2026-09-24">Sep 24, 2026</time>
+                    <a 
+                      href="/essays/essay-37-wcag-3-cognitive-accessibility/" 
+                      class="inline-flex min-h-[32px] items-center text-zinc-950 hover:underline dark:text-white"
+                      aria-label="Read Essay 37: What If I Didn&#39;t? – Future-Proofing My Course Fleet with WCAG 3.0 Cognitive Accessibility"
+                      style="text-decoration: none; color: inherit;"
+                    >
+                      Read Essay →
+                    </a>
+                  </div>
+                </article>
+              
+                
+                
+                  
+                
 
-    <article style="margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid #E5E0D8;">
-      <h3 style="margin-bottom: 6px; display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px;">
-        <a href="https://alanpruitt.com/essays/05-instructional-engineering" style="color: #0E3D73; text-decoration: underline; font-weight: 700;">
-          Instructional Engineering: Transforming Curriculum into Version-Controlled Source Code
+                
+                
+
+                <article 
+                  class="essay-card-item flex flex-col justify-between rounded-xl border border-zinc-200 bg-white p-6 shadow-sm transition hover:border-zinc-400 hover:shadow-md dark:border-zinc-800 dark:bg-zinc-900/60 dark:hover:border-zinc-600"
+                  data-categories="Essays"
+                >
+                  <div>
+                    
+                    <div class="mb-3 flex items-center justify-between">
+                      
+                        <span class="inline-flex items-center rounded border border-zinc-300 bg-zinc-100 px-2 py-0.5 text-[11px] font-bold uppercase tracking-wider text-zinc-800 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-200">
+                          Essay 36
+                        </span>
+                      
+                      
+                      <div class="flex flex-wrap gap-1">
+                        
+                          <span class="rounded bg-zinc-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400">
+                            Essays
+                          </span>
+                        
+                      </div>
+                    </div>
+
+                    
+                    <h2 class="text-lg font-bold leading-snug text-zinc-950 dark:text-white">
+                      <a href="/essays/essay-36/" class="hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white" style="text-decoration: none; color: inherit;">
+                        Essay 36: What If I Didn&#39;t Standardize the Loop?
+                      </a>
+                    </h2>
+
+                    
+                    <p class="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400 line-clamp-3">
+                      A counterfactual exploration of instructional engineering: why failing to standardize the Mission Loop surrenders academic rigor, inflates grading fatigue, and compromises institutional compliance.
+                    </p>
+                  </div>
+
+                  
+                  <div class="mt-6 flex items-center justify-between border-t border-zinc-100 pt-4 text-xs font-semibold text-zinc-500 dark:border-zinc-800 dark:text-zinc-400">
+                    <time datetime="2026-09-23">Sep 23, 2026</time>
+                    <a 
+                      href="/essays/essay-36/" 
+                      class="inline-flex min-h-[32px] items-center text-zinc-950 hover:underline dark:text-white"
+                      aria-label="Read Essay 36: What If I Didn&#39;t Standardize the Loop?"
+                      style="text-decoration: none; color: inherit;"
+                    >
+                      Read Essay →
+                    </a>
+                  </div>
+                </article>
+              
+                
+                
+
+                
+                
+
+                <article 
+                  class="essay-card-item flex flex-col justify-between rounded-xl border border-zinc-200 bg-white p-6 shadow-sm transition hover:border-zinc-400 hover:shadow-md dark:border-zinc-800 dark:bg-zinc-900/60 dark:hover:border-zinc-600"
+                  data-categories=""
+                >
+                  <div>
+                    
+                    <div class="mb-3 flex items-center justify-between">
+                      
+                        <span class="inline-flex items-center rounded border border-zinc-300 bg-zinc-100 px-2 py-0.5 text-[11px] font-bold uppercase tracking-wider text-zinc-800 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-200">
+                          Essay 35
+                        </span>
+                      
+                      
+                      <div class="flex flex-wrap gap-1">
+                        
+                      </div>
+                    </div>
+
+                    
+                    <h2 class="text-lg font-bold leading-snug text-zinc-950 dark:text-white">
+                      <a href="/essays/essay-35/" class="hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white" style="text-decoration: none; color: inherit;">
+                        Essay 35: Automating Accessibility - Curriculum-as-Code &amp; Continuous Integration
+                      </a>
+                    </h2>
+
+                    
+                    <p class="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400 line-clamp-3">
+                      How automated GitHub Actions linters and Curriculum-as-Code turn ADA Title II and WCAG 2.2 AA (9:1 Double-Contrast Guard) accessibility compliance into a continuous integration baseline.
+                    </p>
+                  </div>
+
+                  
+                  <div class="mt-6 flex items-center justify-between border-t border-zinc-100 pt-4 text-xs font-semibold text-zinc-500 dark:border-zinc-800 dark:text-zinc-400">
+                    <time datetime="2026-09-18">Sep 18, 2026</time>
+                    <a 
+                      href="/essays/essay-35/" 
+                      class="inline-flex min-h-[32px] items-center text-zinc-950 hover:underline dark:text-white"
+                      aria-label="Read Essay 35: Automating Accessibility - Curriculum-as-Code &amp; Continuous Integration"
+                      style="text-decoration: none; color: inherit;"
+                    >
+                      Read Essay →
+                    </a>
+                  </div>
+                </article>
+              
+                
+                
+
+                
+                
+
+                <article 
+                  class="essay-card-item flex flex-col justify-between rounded-xl border border-zinc-200 bg-white p-6 shadow-sm transition hover:border-zinc-400 hover:shadow-md dark:border-zinc-800 dark:bg-zinc-900/60 dark:hover:border-zinc-600"
+                  data-categories=""
+                >
+                  <div>
+                    
+                    <div class="mb-3 flex items-center justify-between">
+                      
+                        <span class="inline-flex items-center rounded border border-zinc-300 bg-zinc-100 px-2 py-0.5 text-[11px] font-bold uppercase tracking-wider text-zinc-800 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-200">
+                          Essay 34
+                        </span>
+                      
+                      
+                      <div class="flex flex-wrap gap-1">
+                        
+                      </div>
+                    </div>
+
+                    
+                    <h2 class="text-lg font-bold leading-snug text-zinc-950 dark:text-white">
+                      <a href="/essays/essay-34-prompt-per-mile/" class="hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white" style="text-decoration: none; color: inherit;">
+                        Essay 34: From GSU Demo Day to Vibe-Coding
+                      </a>
+                    </h2>
+
+                    
+                    <p class="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400 line-clamp-3">
+                      From GSU Demo Day to Vibe-Coding: Prompt-Per-Mile metrics, sovereign AI orchestration, and the shift from task-checking to problem-architecting.
+                    </p>
+                  </div>
+
+                  
+                  <div class="mt-6 flex items-center justify-between border-t border-zinc-100 pt-4 text-xs font-semibold text-zinc-500 dark:border-zinc-800 dark:text-zinc-400">
+                    <time datetime="2026-09-17">Sep 17, 2026</time>
+                    <a 
+                      href="/essays/essay-34-prompt-per-mile/" 
+                      class="inline-flex min-h-[32px] items-center text-zinc-950 hover:underline dark:text-white"
+                      aria-label="Read Essay 34: From GSU Demo Day to Vibe-Coding"
+                      style="text-decoration: none; color: inherit;"
+                    >
+                      Read Essay →
+                    </a>
+                  </div>
+                </article>
+              
+                
+                
+
+                
+                
+
+                <article 
+                  class="essay-card-item flex flex-col justify-between rounded-xl border border-zinc-200 bg-white p-6 shadow-sm transition hover:border-zinc-400 hover:shadow-md dark:border-zinc-800 dark:bg-zinc-900/60 dark:hover:border-zinc-600"
+                  data-categories=""
+                >
+                  <div>
+                    
+                    <div class="mb-3 flex items-center justify-between">
+                      
+                        <span class="inline-flex items-center rounded border border-zinc-300 bg-zinc-100 px-2 py-0.5 text-[11px] font-bold uppercase tracking-wider text-zinc-800 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-200">
+                          Essay 33
+                        </span>
+                      
+                      
+                      <div class="flex flex-wrap gap-1">
+                        
+                      </div>
+                    </div>
+
+                    
+                    <h2 class="text-lg font-bold leading-snug text-zinc-950 dark:text-white">
+                      <a href="/essays/what-happens-when-you-stop-renting-your-curriculum/" class="hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white" style="text-decoration: none; color: inherit;">
+                        What Happens When You Stop Renting Your Curriculum
+                      </a>
+                    </h2>
+
+                    
+                    <p class="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400 line-clamp-3">
+                      A practical look at trading proprietary WYSIWYG editors for plain-text repositories, automated linters, and true instructional ownership.
+                    </p>
+                  </div>
+
+                  
+                  <div class="mt-6 flex items-center justify-between border-t border-zinc-100 pt-4 text-xs font-semibold text-zinc-500 dark:border-zinc-800 dark:text-zinc-400">
+                    <time datetime="2026-09-15">Sep 15, 2026</time>
+                    <a 
+                      href="/essays/what-happens-when-you-stop-renting-your-curriculum/" 
+                      class="inline-flex min-h-[32px] items-center text-zinc-950 hover:underline dark:text-white"
+                      aria-label="Read What Happens When You Stop Renting Your Curriculum"
+                      style="text-decoration: none; color: inherit;"
+                    >
+                      Read Essay →
+                    </a>
+                  </div>
+                </article>
+              
+                
+                
+                  
+                
+
+                
+                
+
+                <article 
+                  class="essay-card-item flex flex-col justify-between rounded-xl border border-zinc-200 bg-white p-6 shadow-sm transition hover:border-zinc-400 hover:shadow-md dark:border-zinc-800 dark:bg-zinc-900/60 dark:hover:border-zinc-600"
+                  data-categories="Curriculum-as-Code AI Safety Protocols Pedagogy"
+                >
+                  <div>
+                    
+                    <div class="mb-3 flex items-center justify-between">
+                      
+                        <span class="inline-flex items-center rounded border border-zinc-300 bg-zinc-100 px-2 py-0.5 text-[11px] font-bold uppercase tracking-wider text-zinc-800 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-200">
+                          Essay 30
+                        </span>
+                      
+                      
+                      <div class="flex flex-wrap gap-1">
+                        
+                          <span class="rounded bg-zinc-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400">
+                            Curriculum-as-Code
+                          </span>
+                        
+                          <span class="rounded bg-zinc-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400">
+                            AI Safety Protocols
+                          </span>
+                        
+                          <span class="rounded bg-zinc-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400">
+                            Pedagogy
+                          </span>
+                        
+                      </div>
+                    </div>
+
+                    
+                    <h2 class="text-lg font-bold leading-snug text-zinc-950 dark:text-white">
+                      <a href="/essays/essay-30-the-logic-grid/" class="hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white" style="text-decoration: none; color: inherit;">
+                        The Logic Grid: Why Good Assessment Looks Like Sudoku (and How the Mission Loop Solves the AI Crisis)
+                      </a>
+                    </h2>
+
+                    
+                    <p class="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400 line-clamp-3">
+                      How a warm-up routine in an adult GED classroom exposed the core flaw of generative AI in higher education--and gave rise to the Mission Loop framework.
+                    </p>
+                  </div>
+
+                  
+                  <div class="mt-6 flex items-center justify-between border-t border-zinc-100 pt-4 text-xs font-semibold text-zinc-500 dark:border-zinc-800 dark:text-zinc-400">
+                    <time datetime="2026-09-03">Sep 03, 2026</time>
+                    <a 
+                      href="/essays/essay-30-the-logic-grid/" 
+                      class="inline-flex min-h-[32px] items-center text-zinc-950 hover:underline dark:text-white"
+                      aria-label="Read The Logic Grid: Why Good Assessment Looks Like Sudoku (and How the Mission Loop Solves the AI Crisis)"
+                      style="text-decoration: none; color: inherit;"
+                    >
+                      Read Essay →
+                    </a>
+                  </div>
+                </article>
+              
+                
+                
+                  
+                
+
+                
+                
+
+                <article 
+                  class="essay-card-item flex flex-col justify-between rounded-xl border border-zinc-200 bg-white p-6 shadow-sm transition hover:border-zinc-400 hover:shadow-md dark:border-zinc-800 dark:bg-zinc-900/60 dark:hover:border-zinc-600"
+                  data-categories="Curriculum-as-Code ADA Title II Higher Education"
+                >
+                  <div>
+                    
+                    <div class="mb-3 flex items-center justify-between">
+                      
+                        <span class="inline-flex items-center rounded border border-zinc-300 bg-zinc-100 px-2 py-0.5 text-[11px] font-bold uppercase tracking-wider text-zinc-800 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-200">
+                          Essay 31
+                        </span>
+                      
+                      
+                      <div class="flex flex-wrap gap-1">
+                        
+                          <span class="rounded bg-zinc-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400">
+                            Curriculum-as-Code
+                          </span>
+                        
+                          <span class="rounded bg-zinc-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400">
+                            ADA Title II
+                          </span>
+                        
+                          <span class="rounded bg-zinc-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400">
+                            Higher Education
+                          </span>
+                        
+                      </div>
+                    </div>
+
+                    
+                    <h2 class="text-lg font-bold leading-snug text-zinc-950 dark:text-white">
+                      <a href="/essays/essay-31-beyond-the-slide-deck/" class="hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white" style="text-decoration: none; color: inherit;">
+                        Essay 31: Beyond the Slide Deck — Architecture as Professional Development
+                      </a>
+                    </h2>
+
+                    
+                    <p class="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400 line-clamp-3">
+                      Why institutional GenAI professional development must evolve from ephemeral slide decks into born-accessible, auditable, and platform-agnostic software architectures.
+                    </p>
+                  </div>
+
+                  
+                  <div class="mt-6 flex items-center justify-between border-t border-zinc-100 pt-4 text-xs font-semibold text-zinc-500 dark:border-zinc-800 dark:text-zinc-400">
+                    <time datetime="2026-09-03">Sep 03, 2026</time>
+                    <a 
+                      href="/essays/essay-31-beyond-the-slide-deck/" 
+                      class="inline-flex min-h-[32px] items-center text-zinc-950 hover:underline dark:text-white"
+                      aria-label="Read Essay 31: Beyond the Slide Deck — Architecture as Professional Development"
+                      style="text-decoration: none; color: inherit;"
+                    >
+                      Read Essay →
+                    </a>
+                  </div>
+                </article>
+              
+                
+                
+                  
+                
+
+                
+                
+
+                <article 
+                  class="essay-card-item flex flex-col justify-between rounded-xl border border-zinc-200 bg-white p-6 shadow-sm transition hover:border-zinc-400 hover:shadow-md dark:border-zinc-800 dark:bg-zinc-900/60 dark:hover:border-zinc-600"
+                  data-categories="Curriculum-as-Code Accessibility Higher Education Governance ADA Title II"
+                >
+                  <div>
+                    
+                    <div class="mb-3 flex items-center justify-between">
+                      
+                        <span class="inline-flex items-center rounded border border-zinc-300 bg-zinc-100 px-2 py-0.5 text-[11px] font-bold uppercase tracking-wider text-zinc-800 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-200">
+                          Essay 29
+                        </span>
+                      
+                      
+                      <div class="flex flex-wrap gap-1">
+                        
+                          <span class="rounded bg-zinc-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400">
+                            Curriculum-as-Code
+                          </span>
+                        
+                          <span class="rounded bg-zinc-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400">
+                            Accessibility
+                          </span>
+                        
+                          <span class="rounded bg-zinc-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400">
+                            Higher Education Governance
+                          </span>
+                        
+                          <span class="rounded bg-zinc-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400">
+                            ADA Title II
+                          </span>
+                        
+                      </div>
+                    </div>
+
+                    
+                    <h2 class="text-lg font-bold leading-snug text-zinc-950 dark:text-white">
+                      <a href="/essays/essay-29/" class="hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white" style="text-decoration: none; color: inherit;">
+                        Essay 29: The Upstream Shift — Why Post-Production Accessibility Is a Failure of Architectural Design
+                      </a>
+                    </h2>
+
+                    
+                    <p class="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400 line-clamp-3">
+                      Why higher education&#39;s reliance on post-semester remediation and retrofit overlays fails ADA Title II, and how shifting accessibility upstream solves the crisis.
+                    </p>
+                  </div>
+
+                  
+                  <div class="mt-6 flex items-center justify-between border-t border-zinc-100 pt-4 text-xs font-semibold text-zinc-500 dark:border-zinc-800 dark:text-zinc-400">
+                    <time datetime="2026-08-29">Aug 29, 2026</time>
+                    <a 
+                      href="/essays/essay-29/" 
+                      class="inline-flex min-h-[32px] items-center text-zinc-950 hover:underline dark:text-white"
+                      aria-label="Read Essay 29: The Upstream Shift — Why Post-Production Accessibility Is a Failure of Architectural Design"
+                      style="text-decoration: none; color: inherit;"
+                    >
+                      Read Essay →
+                    </a>
+                  </div>
+                </article>
+              
+                
+                
+                  
+                
+
+                
+                
+
+                <article 
+                  class="essay-card-item flex flex-col justify-between rounded-xl border border-zinc-200 bg-white p-6 shadow-sm transition hover:border-zinc-400 hover:shadow-md dark:border-zinc-800 dark:bg-zinc-900/60 dark:hover:border-zinc-600"
+                  data-categories="Curriculum-as-Code Accessibility Higher Education Governance ADA Title II"
+                >
+                  <div>
+                    
+                    <div class="mb-3 flex items-center justify-between">
+                      
+                        <span class="inline-flex items-center rounded border border-zinc-300 bg-zinc-100 px-2 py-0.5 text-[11px] font-bold uppercase tracking-wider text-zinc-800 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-200">
+                          Essay 28
+                        </span>
+                      
+                      
+                      <div class="flex flex-wrap gap-1">
+                        
+                          <span class="rounded bg-zinc-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400">
+                            Curriculum-as-Code
+                          </span>
+                        
+                          <span class="rounded bg-zinc-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400">
+                            Accessibility
+                          </span>
+                        
+                          <span class="rounded bg-zinc-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400">
+                            Higher Education Governance
+                          </span>
+                        
+                          <span class="rounded bg-zinc-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400">
+                            ADA Title II
+                          </span>
+                        
+                      </div>
+                    </div>
+
+                    
+                    <h2 class="text-lg font-bold leading-snug text-zinc-950 dark:text-white">
+                      <a href="/essays/essay-28/" class="hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white" style="text-decoration: none; color: inherit;">
+                        Essay 28: Beyond Performative Compliance — ADA Title II, Living Conformance Statements, and Automated Institutional Governance
+                      </a>
+                    </h2>
+
+                    
+                    <p class="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400 line-clamp-3">
+                      Why static accessibility disclaimers fail the ADA Title II mandate, and how higher-ed leadership can deploy living, CI/CD-backed conformance statements.
+                    </p>
+                  </div>
+
+                  
+                  <div class="mt-6 flex items-center justify-between border-t border-zinc-100 pt-4 text-xs font-semibold text-zinc-500 dark:border-zinc-800 dark:text-zinc-400">
+                    <time datetime="2026-08-28">Aug 28, 2026</time>
+                    <a 
+                      href="/essays/essay-28/" 
+                      class="inline-flex min-h-[32px] items-center text-zinc-950 hover:underline dark:text-white"
+                      aria-label="Read Essay 28: Beyond Performative Compliance — ADA Title II, Living Conformance Statements, and Automated Institutional Governance"
+                      style="text-decoration: none; color: inherit;"
+                    >
+                      Read Essay →
+                    </a>
+                  </div>
+                </article>
+              
+                
+                
+                  
+                
+
+                
+                
+
+                <article 
+                  class="essay-card-item flex flex-col justify-between rounded-xl border border-zinc-200 bg-white p-6 shadow-sm transition hover:border-zinc-400 hover:shadow-md dark:border-zinc-800 dark:bg-zinc-900/60 dark:hover:border-zinc-600"
+                  data-categories="Curriculum-as-Code Accessibility Higher Education Governance ADA Title II"
+                >
+                  <div>
+                    
+                    <div class="mb-3 flex items-center justify-between">
+                      
+                        <span class="inline-flex items-center rounded border border-zinc-300 bg-zinc-100 px-2 py-0.5 text-[11px] font-bold uppercase tracking-wider text-zinc-800 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-200">
+                          Essay 25
+                        </span>
+                      
+                      
+                      <div class="flex flex-wrap gap-1">
+                        
+                          <span class="rounded bg-zinc-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400">
+                            Curriculum-as-Code
+                          </span>
+                        
+                          <span class="rounded bg-zinc-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400">
+                            Accessibility
+                          </span>
+                        
+                          <span class="rounded bg-zinc-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400">
+                            Higher Education Governance
+                          </span>
+                        
+                          <span class="rounded bg-zinc-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400">
+                            ADA Title II
+                          </span>
+                        
+                      </div>
+                    </div>
+
+                    
+                    <h2 class="text-lg font-bold leading-snug text-zinc-950 dark:text-white">
+                      <a href="/essays/essay-25/" class="hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white" style="text-decoration: none; color: inherit;">
+                        Essay 25: The Accessibility Checker Parity Illusion: Schema Divergence &amp; CaC
+                      </a>
+                    </h2>
+
+                    
+                    <p class="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400 line-clamp-3">
+                      Why proprietary LMS accessibility checkers create false confidence, how schema divergence masks non-compliance, and how Curriculum-as-Code restores audit parity.
+                    </p>
+                  </div>
+
+                  
+                  <div class="mt-6 flex items-center justify-between border-t border-zinc-100 pt-4 text-xs font-semibold text-zinc-500 dark:border-zinc-800 dark:text-zinc-400">
+                    <time datetime="2026-08-27">Aug 27, 2026</time>
+                    <a 
+                      href="/essays/essay-25/" 
+                      class="inline-flex min-h-[32px] items-center text-zinc-950 hover:underline dark:text-white"
+                      aria-label="Read Essay 25: The Accessibility Checker Parity Illusion: Schema Divergence &amp; CaC"
+                      style="text-decoration: none; color: inherit;"
+                    >
+                      Read Essay →
+                    </a>
+                  </div>
+                </article>
+              
+                
+                
+                  
+                
+
+                
+                
+
+                <article 
+                  class="essay-card-item flex flex-col justify-between rounded-xl border border-zinc-200 bg-white p-6 shadow-sm transition hover:border-zinc-400 hover:shadow-md dark:border-zinc-800 dark:bg-zinc-900/60 dark:hover:border-zinc-600"
+                  data-categories="ada-title-ii"
+                >
+                  <div>
+                    
+                    <div class="mb-3 flex items-center justify-between">
+                      
+                        <span class="inline-flex items-center rounded border border-zinc-300 bg-zinc-100 px-2 py-0.5 text-[11px] font-bold uppercase tracking-wider text-zinc-800 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-200">
+                          Essay 27
+                        </span>
+                      
+                      
+                      <div class="flex flex-wrap gap-1">
+                        
+                          <span class="rounded bg-zinc-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400">
+                            ada-title-ii
+                          </span>
+                        
+                      </div>
+                    </div>
+
+                    
+                    <h2 class="text-lg font-bold leading-snug text-zinc-950 dark:text-white">
+                      <a href="/essays/essay-27/" class="hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white" style="text-decoration: none; color: inherit;">
+                        Curriculum-as-Code, ADA Title II Compliance, and Fleet-Wide Accessibility Refactoring
+                      </a>
+                    </h2>
+
+                    
+                    <p class="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400 line-clamp-3">
+                      How engineering course architectures in plain Markdown with automated CI/CD linters solves ADA Title II compliance and enables fleet-wide accessibility refactoring.
+                    </p>
+                  </div>
+
+                  
+                  <div class="mt-6 flex items-center justify-between border-t border-zinc-100 pt-4 text-xs font-semibold text-zinc-500 dark:border-zinc-800 dark:text-zinc-400">
+                    <time datetime="2026-08-25">Aug 25, 2026</time>
+                    <a 
+                      href="/essays/essay-27/" 
+                      class="inline-flex min-h-[32px] items-center text-zinc-950 hover:underline dark:text-white"
+                      aria-label="Read Curriculum-as-Code, ADA Title II Compliance, and Fleet-Wide Accessibility Refactoring"
+                      style="text-decoration: none; color: inherit;"
+                    >
+                      Read Essay →
+                    </a>
+                  </div>
+                </article>
+              
+                
+                
+                  
+                
+
+                
+                
+
+                <article 
+                  class="essay-card-item flex flex-col justify-between rounded-xl border border-zinc-200 bg-white p-6 shadow-sm transition hover:border-zinc-400 hover:shadow-md dark:border-zinc-800 dark:bg-zinc-900/60 dark:hover:border-zinc-600"
+                  data-categories="ai-safety-protocols"
+                >
+                  <div>
+                    
+                    <div class="mb-3 flex items-center justify-between">
+                      
+                        <span class="inline-flex items-center rounded border border-zinc-300 bg-zinc-100 px-2 py-0.5 text-[11px] font-bold uppercase tracking-wider text-zinc-800 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-200">
+                          Essay 19
+                        </span>
+                      
+                      
+                      <div class="flex flex-wrap gap-1">
+                        
+                          <span class="rounded bg-zinc-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400">
+                            ai-safety-protocols
+                          </span>
+                        
+                      </div>
+                    </div>
+
+                    
+                    <h2 class="text-lg font-bold leading-snug text-zinc-950 dark:text-white">
+                      <a href="/essays/19-hybrid-ergometer-scaffold/" class="hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white" style="text-decoration: none; color: inherit;">
+                        The Hybrid Ergometer Scaffold: Synchronizing AI Simulation with Lab Precision
+                      </a>
+                    </h2>
+
+                    
+                    <p class="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400 line-clamp-3">
+                      How EXW245 decouples cognitive pre-flight mathematical verification from physical laboratory execution using a two-part scaffold pairing Gemini AI simulation sandboxes with Lode Corival research-grade cycle ergometers.
+                    </p>
+                  </div>
+
+                  
+                  <div class="mt-6 flex items-center justify-between border-t border-zinc-100 pt-4 text-xs font-semibold text-zinc-500 dark:border-zinc-800 dark:text-zinc-400">
+                    <time datetime="2026-08-21">Aug 21, 2026</time>
+                    <a 
+                      href="/essays/19-hybrid-ergometer-scaffold/" 
+                      class="inline-flex min-h-[32px] items-center text-zinc-950 hover:underline dark:text-white"
+                      aria-label="Read The Hybrid Ergometer Scaffold: Synchronizing AI Simulation with Lab Precision"
+                      style="text-decoration: none; color: inherit;"
+                    >
+                      Read Essay →
+                    </a>
+                  </div>
+                </article>
+              
+                
+                
+                  
+                
+
+                
+                
+
+                <article 
+                  class="essay-card-item flex flex-col justify-between rounded-xl border border-zinc-200 bg-white p-6 shadow-sm transition hover:border-zinc-400 hover:shadow-md dark:border-zinc-800 dark:bg-zinc-900/60 dark:hover:border-zinc-600"
+                  data-categories="curriculum-as-code"
+                >
+                  <div>
+                    
+                    <div class="mb-3 flex items-center justify-between">
+                      
+                        <span class="inline-flex items-center rounded border border-zinc-300 bg-zinc-100 px-2 py-0.5 text-[11px] font-bold uppercase tracking-wider text-zinc-800 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-200">
+                          Essay 22
+                        </span>
+                      
+                      
+                      <div class="flex flex-wrap gap-1">
+                        
+                          <span class="rounded bg-zinc-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400">
+                            curriculum-as-code
+                          </span>
+                        
+                      </div>
+                    </div>
+
+                    
+                    <h2 class="text-lg font-bold leading-snug text-zinc-950 dark:text-white">
+                      <a href="/essays/22-foundational-human-movement-in-the-algorithmic-age/" class="hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white" style="text-decoration: none; color: inherit;">
+                        Foundational Human Movement in the Algorithmic Age: PAGA 2018 SSoT &amp; Community Inactivity Interventions
+                      </a>
+                    </h2>
+
+                    
+                    <p class="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400 line-clamp-3">
+                      How EXW101 deploys Curriculum-as-Code, the federal PAGA 2018 SSoT, and the Mission Loop framework to deconstruct systemic inactivity patterns and build community-level health interventions in rural borderland regions.
+                    </p>
+                  </div>
+
+                  
+                  <div class="mt-6 flex items-center justify-between border-t border-zinc-100 pt-4 text-xs font-semibold text-zinc-500 dark:border-zinc-800 dark:text-zinc-400">
+                    <time datetime="2026-08-21">Aug 21, 2026</time>
+                    <a 
+                      href="/essays/22-foundational-human-movement-in-the-algorithmic-age/" 
+                      class="inline-flex min-h-[32px] items-center text-zinc-950 hover:underline dark:text-white"
+                      aria-label="Read Foundational Human Movement in the Algorithmic Age: PAGA 2018 SSoT &amp; Community Inactivity Interventions"
+                      style="text-decoration: none; color: inherit;"
+                    >
+                      Read Essay →
+                    </a>
+                  </div>
+                </article>
+              
+                
+                
+                  
+                
+
+                
+                
+
+                <article 
+                  class="essay-card-item flex flex-col justify-between rounded-xl border border-zinc-200 bg-white p-6 shadow-sm transition hover:border-zinc-400 hover:shadow-md dark:border-zinc-800 dark:bg-zinc-900/60 dark:hover:border-zinc-600"
+                  data-categories="curriculum-as-code"
+                >
+                  <div>
+                    
+                    <div class="mb-3 flex items-center justify-between">
+                      
+                        <span class="inline-flex items-center rounded border border-zinc-300 bg-zinc-100 px-2 py-0.5 text-[11px] font-bold uppercase tracking-wider text-zinc-800 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-200">
+                          Essay 21
+                        </span>
+                      
+                      
+                      <div class="flex flex-wrap gap-1">
+                        
+                          <span class="rounded bg-zinc-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400">
+                            curriculum-as-code
+                          </span>
+                        
+                      </div>
+                    </div>
+
+                    
+                    <h2 class="text-lg font-bold leading-snug text-zinc-950 dark:text-white">
+                      <a href="/essays/21-evidence-based-nutrition-vs-feed/" class="hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white" style="text-decoration: none; color: inherit;">
+                        Evidence-Based Nutrition vs. The Feed: Upstream SSoT Governance in Sports Nutrition
+                      </a>
+                    </h2>
+
+                    
+                    <p class="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400 line-clamp-3">
+                      How EXW150 uses Curriculum-as-Code, the Mission Loop framework, and federal SSoT standards to insulate community college students from social media fad diets, predatory supplement claims, and unanchored AI nutrition advice.
+                    </p>
+                  </div>
+
+                  
+                  <div class="mt-6 flex items-center justify-between border-t border-zinc-100 pt-4 text-xs font-semibold text-zinc-500 dark:border-zinc-800 dark:text-zinc-400">
+                    <time datetime="2026-08-21">Aug 21, 2026</time>
+                    <a 
+                      href="/essays/21-evidence-based-nutrition-vs-feed/" 
+                      class="inline-flex min-h-[32px] items-center text-zinc-950 hover:underline dark:text-white"
+                      aria-label="Read Evidence-Based Nutrition vs. The Feed: Upstream SSoT Governance in Sports Nutrition"
+                      style="text-decoration: none; color: inherit;"
+                    >
+                      Read Essay →
+                    </a>
+                  </div>
+                </article>
+              
+                
+                
+                  
+                
+
+                
+                
+
+                <article 
+                  class="essay-card-item flex flex-col justify-between rounded-xl border border-zinc-200 bg-white p-6 shadow-sm transition hover:border-zinc-400 hover:shadow-md dark:border-zinc-800 dark:bg-zinc-900/60 dark:hover:border-zinc-600"
+                  data-categories="ai-safety-protocols"
+                >
+                  <div>
+                    
+                    <div class="mb-3 flex items-center justify-between">
+                      
+                        <span class="inline-flex items-center rounded border border-zinc-300 bg-zinc-100 px-2 py-0.5 text-[11px] font-bold uppercase tracking-wider text-zinc-800 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-200">
+                          Essay 20
+                        </span>
+                      
+                      
+                      <div class="flex flex-wrap gap-1">
+                        
+                          <span class="rounded bg-zinc-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400">
+                            ai-safety-protocols
+                          </span>
+                        
+                      </div>
+                    </div>
+
+                    
+                    <h2 class="text-lg font-bold leading-snug text-zinc-950 dark:text-white">
+                      <a href="/essays/20-deterministic-clinical-guardrails/" class="hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white" style="text-decoration: none; color: inherit;">
+                        Deterministic Clinical Guardrails: Preventing Hallucination Drift in Special Population Prescriptions
+                      </a>
+                    </h2>
+
+                    
+                    <p class="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400 line-clamp-3">
+                      How EXW265 deploys deterministic prompt guardrails, strict delimiter encapsulation, and the federal PAGA 2018 Single Source of Truth to eliminate dangerous AI hallucination drift in exercise prescriptions for chronic conditions.
+                    </p>
+                  </div>
+
+                  
+                  <div class="mt-6 flex items-center justify-between border-t border-zinc-100 pt-4 text-xs font-semibold text-zinc-500 dark:border-zinc-800 dark:text-zinc-400">
+                    <time datetime="2026-08-21">Aug 21, 2026</time>
+                    <a 
+                      href="/essays/20-deterministic-clinical-guardrails/" 
+                      class="inline-flex min-h-[32px] items-center text-zinc-950 hover:underline dark:text-white"
+                      aria-label="Read Deterministic Clinical Guardrails: Preventing Hallucination Drift in Special Population Prescriptions"
+                      style="text-decoration: none; color: inherit;"
+                    >
+                      Read Essay →
+                    </a>
+                  </div>
+                </article>
+              
+                
+                
+                  
+                
+
+                
+                
+
+                <article 
+                  class="essay-card-item flex flex-col justify-between rounded-xl border border-zinc-200 bg-white p-6 shadow-sm transition hover:border-zinc-400 hover:shadow-md dark:border-zinc-800 dark:bg-zinc-900/60 dark:hover:border-zinc-600"
+                  data-categories="ada-title-ii"
+                >
+                  <div>
+                    
+                    <div class="mb-3 flex items-center justify-between">
+                      
+                        <span class="inline-flex items-center rounded border border-zinc-300 bg-zinc-100 px-2 py-0.5 text-[11px] font-bold uppercase tracking-wider text-zinc-800 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-200">
+                          Essay 26
+                        </span>
+                      
+                      
+                      <div class="flex flex-wrap gap-1">
+                        
+                          <span class="rounded bg-zinc-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400">
+                            ada-title-ii
+                          </span>
+                        
+                      </div>
+                    </div>
+
+                    
+                    <h2 class="text-lg font-bold leading-snug text-zinc-950 dark:text-white">
+                      <a href="/essays/26-curriculum-as-code-pour-audit-framework/" class="hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white" style="text-decoration: none; color: inherit;">
+                        Essay 26
+                      </a>
+                    </h2>
+
+                    
+                    <p class="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400 line-clamp-3">
+                      An analysis of the POUR-Audit framework within Curriculum-as-Code paradigms, highlighting automated verification checks for heading hierarchies, image alt-text, and legacy reference deprecation.
+                    </p>
+                  </div>
+
+                  
+                  <div class="mt-6 flex items-center justify-between border-t border-zinc-100 pt-4 text-xs font-semibold text-zinc-500 dark:border-zinc-800 dark:text-zinc-400">
+                    <time datetime="2026-08-19">Aug 19, 2026</time>
+                    <a 
+                      href="/essays/26-curriculum-as-code-pour-audit-framework/" 
+                      class="inline-flex min-h-[32px] items-center text-zinc-950 hover:underline dark:text-white"
+                      aria-label="Read Essay 26"
+                      style="text-decoration: none; color: inherit;"
+                    >
+                      Read Essay →
+                    </a>
+                  </div>
+                </article>
+              
+                
+                
+                  
+                
+
+                
+                
+
+                <article 
+                  class="essay-card-item flex flex-col justify-between rounded-xl border border-zinc-200 bg-white p-6 shadow-sm transition hover:border-zinc-400 hover:shadow-md dark:border-zinc-800 dark:bg-zinc-900/60 dark:hover:border-zinc-600"
+                  data-categories="curriculum-as-code"
+                >
+                  <div>
+                    
+                    <div class="mb-3 flex items-center justify-between">
+                      
+                        <span class="inline-flex items-center rounded border border-zinc-300 bg-zinc-100 px-2 py-0.5 text-[11px] font-bold uppercase tracking-wider text-zinc-800 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-200">
+                          Essay 24
+                        </span>
+                      
+                      
+                      <div class="flex flex-wrap gap-1">
+                        
+                          <span class="rounded bg-zinc-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400">
+                            curriculum-as-code
+                          </span>
+                        
+                      </div>
+                    </div>
+
+                    
+                    <h2 class="text-lg font-bold leading-snug text-zinc-950 dark:text-white">
+                      <a href="/essays/24-chatbots-canvas-lms-cautionary-tale/" class="hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white" style="text-decoration: none; color: inherit;">
+                        Essay 24
+                      </a>
+                    </h2>
+
+                    
+                    <p class="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400 line-clamp-3">
+                      Why integrating commercial AI chatbots inside Canvas LMS introduces severe institutional risks, compromises FERPA/ADA standards, and how high-friction Socratic assessments preserve human voice and presence.
+                    </p>
+                  </div>
+
+                  
+                  <div class="mt-6 flex items-center justify-between border-t border-zinc-100 pt-4 text-xs font-semibold text-zinc-500 dark:border-zinc-800 dark:text-zinc-400">
+                    <time datetime="2026-08-17">Aug 17, 2026</time>
+                    <a 
+                      href="/essays/24-chatbots-canvas-lms-cautionary-tale/" 
+                      class="inline-flex min-h-[32px] items-center text-zinc-950 hover:underline dark:text-white"
+                      aria-label="Read Essay 24"
+                      style="text-decoration: none; color: inherit;"
+                    >
+                      Read Essay →
+                    </a>
+                  </div>
+                </article>
+              
+                
+                
+                  
+                
+
+                
+                
+
+                <article 
+                  class="essay-card-item flex flex-col justify-between rounded-xl border border-zinc-200 bg-white p-6 shadow-sm transition hover:border-zinc-400 hover:shadow-md dark:border-zinc-800 dark:bg-zinc-900/60 dark:hover:border-zinc-600"
+                  data-categories="ada-title-ii"
+                >
+                  <div>
+                    
+                    <div class="mb-3 flex items-center justify-between">
+                      
+                        <span class="inline-flex items-center rounded border border-zinc-300 bg-zinc-100 px-2 py-0.5 text-[11px] font-bold uppercase tracking-wider text-zinc-800 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-200">
+                          Essay 17
+                        </span>
+                      
+                      
+                      <div class="flex flex-wrap gap-1">
+                        
+                          <span class="rounded bg-zinc-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400">
+                            ada-title-ii
+                          </span>
+                        
+                      </div>
+                    </div>
+
+                    
+                    <h2 class="text-lg font-bold leading-snug text-zinc-950 dark:text-white">
+                      <a href="/essays/17-resolving-array-parsing-script-failures/" class="hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white" style="text-decoration: none; color: inherit;">
+                        Essay 17: Engineering Resilience: Resolving False-Positive Contrast Errors and Array Parsing Script Failures via Curriculum-as-Code
+                      </a>
+                    </h2>
+
+                    
+                    <p class="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400 line-clamp-3">
+                      How automated accessibility checkers fail under WYSIWYG visual-editor DOM pollution and how Curriculum-as-Code resolves array parsing failures at the source.
+                    </p>
+                  </div>
+
+                  
+                  <div class="mt-6 flex items-center justify-between border-t border-zinc-100 pt-4 text-xs font-semibold text-zinc-500 dark:border-zinc-800 dark:text-zinc-400">
+                    <time datetime="2026-08-14">Aug 14, 2026</time>
+                    <a 
+                      href="/essays/17-resolving-array-parsing-script-failures/" 
+                      class="inline-flex min-h-[32px] items-center text-zinc-950 hover:underline dark:text-white"
+                      aria-label="Read Essay 17: Engineering Resilience: Resolving False-Positive Contrast Errors and Array Parsing Script Failures via Curriculum-as-Code"
+                      style="text-decoration: none; color: inherit;"
+                    >
+                      Read Essay →
+                    </a>
+                  </div>
+                </article>
+              
+                
+                
+                  
+                
+
+                
+                
+
+                <article 
+                  class="essay-card-item flex flex-col justify-between rounded-xl border border-zinc-200 bg-white p-6 shadow-sm transition hover:border-zinc-400 hover:shadow-md dark:border-zinc-800 dark:bg-zinc-900/60 dark:hover:border-zinc-600"
+                  data-categories="curriculum-as-code"
+                >
+                  <div>
+                    
+                    <div class="mb-3 flex items-center justify-between">
+                      
+                        <span class="inline-flex items-center rounded border border-zinc-300 bg-zinc-100 px-2 py-0.5 text-[11px] font-bold uppercase tracking-wider text-zinc-800 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-200">
+                          Essay 13
+                        </span>
+                      
+                      
+                      <div class="flex flex-wrap gap-1">
+                        
+                          <span class="rounded bg-zinc-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400">
+                            curriculum-as-code
+                          </span>
+                        
+                      </div>
+                    </div>
+
+                    
+                    <h2 class="text-lg font-bold leading-snug text-zinc-950 dark:text-white">
+                      <a href="/essays/13-vibe-coding-paradigm/" class="hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white" style="text-decoration: none; color: inherit;">
+                        The Vibe-Coding Paradigm: Speed, Intuition, and Full-Stack Execution in Instructional Engineering
+                      </a>
+                    </h2>
+
+                    
+                    <p class="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400 line-clamp-3">
+                      How domain expertise and AI-driven full-stack execution collapse the distance between pedagogical vision and live production applications.
+                    </p>
+                  </div>
+
+                  
+                  <div class="mt-6 flex items-center justify-between border-t border-zinc-100 pt-4 text-xs font-semibold text-zinc-500 dark:border-zinc-800 dark:text-zinc-400">
+                    <time datetime="2026-08-11">Aug 11, 2026</time>
+                    <a 
+                      href="/essays/13-vibe-coding-paradigm/" 
+                      class="inline-flex min-h-[32px] items-center text-zinc-950 hover:underline dark:text-white"
+                      aria-label="Read The Vibe-Coding Paradigm: Speed, Intuition, and Full-Stack Execution in Instructional Engineering"
+                      style="text-decoration: none; color: inherit;"
+                    >
+                      Read Essay →
+                    </a>
+                  </div>
+                </article>
+              
+                
+                
+                  
+                
+
+                
+                
+
+                <article 
+                  class="essay-card-item flex flex-col justify-between rounded-xl border border-zinc-200 bg-white p-6 shadow-sm transition hover:border-zinc-400 hover:shadow-md dark:border-zinc-800 dark:bg-zinc-900/60 dark:hover:border-zinc-600"
+                  data-categories="curriculum-as-code"
+                >
+                  <div>
+                    
+                    <div class="mb-3 flex items-center justify-between">
+                      
+                        <span class="inline-flex items-center rounded border border-zinc-300 bg-zinc-100 px-2 py-0.5 text-[11px] font-bold uppercase tracking-wider text-zinc-800 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-200">
+                          Essay 11
+                        </span>
+                      
+                      
+                      <div class="flex flex-wrap gap-1">
+                        
+                          <span class="rounded bg-zinc-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400">
+                            curriculum-as-code
+                          </span>
+                        
+                      </div>
+                    </div>
+
+                    
+                    <h2 class="text-lg font-bold leading-snug text-zinc-950 dark:text-white">
+                      <a href="/essays/11-two-part-scaffold-framework/" class="hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white" style="text-decoration: none; color: inherit;">
+                        The Two-Part Scaffold Framework: Bridging Simulation &amp; Research-Grade Application
+                      </a>
+                    </h2>
+
+                    
+                    <p class="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400 line-clamp-3">
+                      Designing hybrid kinesiology laboratory modules that combine digital AI simulation gating with onsite research-grade cycle ergometry and tactile physiological testing.
+                    </p>
+                  </div>
+
+                  
+                  <div class="mt-6 flex items-center justify-between border-t border-zinc-100 pt-4 text-xs font-semibold text-zinc-500 dark:border-zinc-800 dark:text-zinc-400">
+                    <time datetime="2026-08-11">Aug 11, 2026</time>
+                    <a 
+                      href="/essays/11-two-part-scaffold-framework/" 
+                      class="inline-flex min-h-[32px] items-center text-zinc-950 hover:underline dark:text-white"
+                      aria-label="Read The Two-Part Scaffold Framework: Bridging Simulation &amp; Research-Grade Application"
+                      style="text-decoration: none; color: inherit;"
+                    >
+                      Read Essay →
+                    </a>
+                  </div>
+                </article>
+              
+                
+                
+                  
+                
+
+                
+                
+
+                <article 
+                  class="essay-card-item flex flex-col justify-between rounded-xl border border-zinc-200 bg-white p-6 shadow-sm transition hover:border-zinc-400 hover:shadow-md dark:border-zinc-800 dark:bg-zinc-900/60 dark:hover:border-zinc-600"
+                  data-categories="curriculum-as-code"
+                >
+                  <div>
+                    
+                    <div class="mb-3 flex items-center justify-between">
+                      
+                        <span class="inline-flex items-center rounded border border-zinc-300 bg-zinc-100 px-2 py-0.5 text-[11px] font-bold uppercase tracking-wider text-zinc-800 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-200">
+                          Essay 12
+                        </span>
+                      
+                      
+                      <div class="flex flex-wrap gap-1">
+                        
+                          <span class="rounded bg-zinc-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400">
+                            curriculum-as-code
+                          </span>
+                        
+                      </div>
+                    </div>
+
+                    
+                    <h2 class="text-lg font-bold leading-snug text-zinc-950 dark:text-white">
+                      <a href="/essays/12-mission-loop-architecture/" class="hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white" style="text-decoration: none; color: inherit;">
+                        The Mission Loop Architecture: Pattern, Rule, and Solve in Coded Instruction
+                      </a>
+                    </h2>
+
+                    
+                    <p class="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400 line-clamp-3">
+                      Structuring deterministic health science problem-solving pipelines that enforce pattern identification, rule citation, and audited intervention.
+                    </p>
+                  </div>
+
+                  
+                  <div class="mt-6 flex items-center justify-between border-t border-zinc-100 pt-4 text-xs font-semibold text-zinc-500 dark:border-zinc-800 dark:text-zinc-400">
+                    <time datetime="2026-08-11">Aug 11, 2026</time>
+                    <a 
+                      href="/essays/12-mission-loop-architecture/" 
+                      class="inline-flex min-h-[32px] items-center text-zinc-950 hover:underline dark:text-white"
+                      aria-label="Read The Mission Loop Architecture: Pattern, Rule, and Solve in Coded Instruction"
+                      style="text-decoration: none; color: inherit;"
+                    >
+                      Read Essay →
+                    </a>
+                  </div>
+                </article>
+              
+                
+                
+                  
+                
+
+                
+                
+
+                <article 
+                  class="essay-card-item flex flex-col justify-between rounded-xl border border-zinc-200 bg-white p-6 shadow-sm transition hover:border-zinc-400 hover:shadow-md dark:border-zinc-800 dark:bg-zinc-900/60 dark:hover:border-zinc-600"
+                  data-categories="ai-safety-protocols"
+                >
+                  <div>
+                    
+                    <div class="mb-3 flex items-center justify-between">
+                      
+                        <span class="inline-flex items-center rounded border border-zinc-300 bg-zinc-100 px-2 py-0.5 text-[11px] font-bold uppercase tracking-wider text-zinc-800 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-200">
+                          Essay 14
+                        </span>
+                      
+                      
+                      <div class="flex flex-wrap gap-1">
+                        
+                          <span class="rounded bg-zinc-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400">
+                            ai-safety-protocols
+                          </span>
+                        
+                      </div>
+                    </div>
+
+                    
+                    <h2 class="text-lg font-bold leading-snug text-zinc-950 dark:text-white">
+                      <a href="/essays/14-guided-learning-trifecta/" class="hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white" style="text-decoration: none; color: inherit;">
+                        The Guided Learning Trifecta: AI Simulation, Clinical Application, and Deterministic Auditing
+                      </a>
+                    </h2>
+
+                    
+                    <p class="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400 line-clamp-3">
+                      Combining Google&#39;s Guided Learning principles with Curriculum-as-Code to create a three-tier execution pipeline for high-stakes health science education.
+                    </p>
+                  </div>
+
+                  
+                  <div class="mt-6 flex items-center justify-between border-t border-zinc-100 pt-4 text-xs font-semibold text-zinc-500 dark:border-zinc-800 dark:text-zinc-400">
+                    <time datetime="2026-08-11">Aug 11, 2026</time>
+                    <a 
+                      href="/essays/14-guided-learning-trifecta/" 
+                      class="inline-flex min-h-[32px] items-center text-zinc-950 hover:underline dark:text-white"
+                      aria-label="Read The Guided Learning Trifecta: AI Simulation, Clinical Application, and Deterministic Auditing"
+                      style="text-decoration: none; color: inherit;"
+                    >
+                      Read Essay →
+                    </a>
+                  </div>
+                </article>
+              
+                
+                
+                  
+                
+
+                
+                
+
+                <article 
+                  class="essay-card-item flex flex-col justify-between rounded-xl border border-zinc-200 bg-white p-6 shadow-sm transition hover:border-zinc-400 hover:shadow-md dark:border-zinc-800 dark:bg-zinc-900/60 dark:hover:border-zinc-600"
+                  data-categories="ai-safety-protocols"
+                >
+                  <div>
+                    
+                    <div class="mb-3 flex items-center justify-between">
+                      
+                        <span class="inline-flex items-center rounded border border-zinc-300 bg-zinc-100 px-2 py-0.5 text-[11px] font-bold uppercase tracking-wider text-zinc-800 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-200">
+                          Essay 10
+                        </span>
+                      
+                      
+                      <div class="flex flex-wrap gap-1">
+                        
+                          <span class="rounded bg-zinc-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400">
+                            ai-safety-protocols
+                          </span>
+                        
+                      </div>
+                    </div>
+
+                    
+                    <h2 class="text-lg font-bold leading-snug text-zinc-950 dark:text-white">
+                      <a href="/essays/10-ai-safety-auditor-pattern/" class="hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white" style="text-decoration: none; color: inherit;">
+                        The AI Safety Auditor Pattern in Applied Kinesiology
+                      </a>
+                    </h2>
+
+                    
+                    <p class="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400 line-clamp-3">
+                      Moving beyond passive AI quiz masters to deterministic clinical safety auditors in health science education using structured delimiter protocols.
+                    </p>
+                  </div>
+
+                  
+                  <div class="mt-6 flex items-center justify-between border-t border-zinc-100 pt-4 text-xs font-semibold text-zinc-500 dark:border-zinc-800 dark:text-zinc-400">
+                    <time datetime="2026-08-11">Aug 11, 2026</time>
+                    <a 
+                      href="/essays/10-ai-safety-auditor-pattern/" 
+                      class="inline-flex min-h-[32px] items-center text-zinc-950 hover:underline dark:text-white"
+                      aria-label="Read The AI Safety Auditor Pattern in Applied Kinesiology"
+                      style="text-decoration: none; color: inherit;"
+                    >
+                      Read Essay →
+                    </a>
+                  </div>
+                </article>
+              
+                
+                
+                  
+                
+
+                
+                
+
+                <article 
+                  class="essay-card-item flex flex-col justify-between rounded-xl border border-zinc-200 bg-white p-6 shadow-sm transition hover:border-zinc-400 hover:shadow-md dark:border-zinc-800 dark:bg-zinc-900/60 dark:hover:border-zinc-600"
+                  data-categories="ada-title-ii"
+                >
+                  <div>
+                    
+                    <div class="mb-3 flex items-center justify-between">
+                      
+                        <span class="inline-flex items-center rounded border border-zinc-300 bg-zinc-100 px-2 py-0.5 text-[11px] font-bold uppercase tracking-wider text-zinc-800 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-200">
+                          Essay 09
+                        </span>
+                      
+                      
+                      <div class="flex flex-wrap gap-1">
+                        
+                          <span class="rounded bg-zinc-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400">
+                            ada-title-ii
+                          </span>
+                        
+                      </div>
+                    </div>
+
+                    
+                    <h2 class="text-lg font-bold leading-snug text-zinc-950 dark:text-white">
+                      <a href="/essays/09-immutable-learning-analytics/" class="hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white" style="text-decoration: none; color: inherit;">
+                        Immutable Learning Analytics &amp; Privacy-First Telemetry
+                      </a>
+                    </h2>
+
+                    
+                    <p class="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400 line-clamp-3">
+                      Evolving learning analytics from passive LMS surveillance to sovereign, privacy-first event telemetry and client-side anonymous performance data.
+                    </p>
+                  </div>
+
+                  
+                  <div class="mt-6 flex items-center justify-between border-t border-zinc-100 pt-4 text-xs font-semibold text-zinc-500 dark:border-zinc-800 dark:text-zinc-400">
+                    <time datetime="2026-08-06">Aug 06, 2026</time>
+                    <a 
+                      href="/essays/09-immutable-learning-analytics/" 
+                      class="inline-flex min-h-[32px] items-center text-zinc-950 hover:underline dark:text-white"
+                      aria-label="Read Immutable Learning Analytics &amp; Privacy-First Telemetry"
+                      style="text-decoration: none; color: inherit;"
+                    >
+                      Read Essay →
+                    </a>
+                  </div>
+                </article>
+              
+                
+                
+                  
+                
+
+                
+                
+
+                <article 
+                  class="essay-card-item flex flex-col justify-between rounded-xl border border-zinc-200 bg-white p-6 shadow-sm transition hover:border-zinc-400 hover:shadow-md dark:border-zinc-800 dark:bg-zinc-900/60 dark:hover:border-zinc-600"
+                  data-categories="ada-title-ii"
+                >
+                  <div>
+                    
+                    <div class="mb-3 flex items-center justify-between">
+                      
+                        <span class="inline-flex items-center rounded border border-zinc-300 bg-zinc-100 px-2 py-0.5 text-[11px] font-bold uppercase tracking-wider text-zinc-800 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-200">
+                          Essay 08
+                        </span>
+                      
+                      
+                      <div class="flex flex-wrap gap-1">
+                        
+                          <span class="rounded bg-zinc-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400">
+                            ada-title-ii
+                          </span>
+                        
+                      </div>
+                    </div>
+
+                    
+                    <h2 class="text-lg font-bold leading-snug text-zinc-950 dark:text-white">
+                      <a href="/essays/08-bilingual-localization-pipelines/" class="hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white" style="text-decoration: none; color: inherit;">
+                        Sovereign Localization: Automating Multi-Lingual &amp; Multi-Dialect Course Pipelines
+                      </a>
+                    </h2>
+
+                    
+                    <p class="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400 line-clamp-3">
+                      Architecting Git-driven i18n/l10n pipelines for higher education that maintain strict 1:1 pedagogical parity across English and Spanish course shells without third-party data egress.
+                    </p>
+                  </div>
+
+                  
+                  <div class="mt-6 flex items-center justify-between border-t border-zinc-100 pt-4 text-xs font-semibold text-zinc-500 dark:border-zinc-800 dark:text-zinc-400">
+                    <time datetime="2026-08-04">Aug 04, 2026</time>
+                    <a 
+                      href="/essays/08-bilingual-localization-pipelines/" 
+                      class="inline-flex min-h-[32px] items-center text-zinc-950 hover:underline dark:text-white"
+                      aria-label="Read Sovereign Localization: Automating Multi-Lingual &amp; Multi-Dialect Course Pipelines"
+                      style="text-decoration: none; color: inherit;"
+                    >
+                      Read Essay →
+                    </a>
+                  </div>
+                </article>
+              
+                
+                
+                  
+                
+
+                
+                
+
+                <article 
+                  class="essay-card-item flex flex-col justify-between rounded-xl border border-zinc-200 bg-white p-6 shadow-sm transition hover:border-zinc-400 hover:shadow-md dark:border-zinc-800 dark:bg-zinc-900/60 dark:hover:border-zinc-600"
+                  data-categories="curriculum-as-code"
+                >
+                  <div>
+                    
+                    <div class="mb-3 flex items-center justify-between">
+                      
+                        <span class="inline-flex items-center rounded border border-zinc-300 bg-zinc-100 px-2 py-0.5 text-[11px] font-bold uppercase tracking-wider text-zinc-800 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-200">
+                          Essay 06
+                        </span>
+                      
+                      
+                      <div class="flex flex-wrap gap-1">
+                        
+                          <span class="rounded bg-zinc-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400">
+                            curriculum-as-code
+                          </span>
+                        
+                      </div>
+                    </div>
+
+                    
+                    <h2 class="text-lg font-bold leading-snug text-zinc-950 dark:text-white">
+                      <a href="/essays/06-canvas-ai-course-design/" class="hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white" style="text-decoration: none; color: inherit;">
+                        Practical AI in Canvas: Supporting Course Design, Content Creation, and Student Engagement
+                      </a>
+                    </h2>
+
+                    
+                    <p class="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400 line-clamp-3">
+                      Practical strategies, native feature workflows, and responsible implementation models for leveraging AI inside the Canvas LMS ecosystem.
+                    </p>
+                  </div>
+
+                  
+                  <div class="mt-6 flex items-center justify-between border-t border-zinc-100 pt-4 text-xs font-semibold text-zinc-500 dark:border-zinc-800 dark:text-zinc-400">
+                    <time datetime="2026-08-04">Aug 04, 2026</time>
+                    <a 
+                      href="/essays/06-canvas-ai-course-design/" 
+                      class="inline-flex min-h-[32px] items-center text-zinc-950 hover:underline dark:text-white"
+                      aria-label="Read Practical AI in Canvas: Supporting Course Design, Content Creation, and Student Engagement"
+                      style="text-decoration: none; color: inherit;"
+                    >
+                      Read Essay →
+                    </a>
+                  </div>
+                </article>
+              
+                
+                
+                  
+                
+
+                
+                
+
+                <article 
+                  class="essay-card-item flex flex-col justify-between rounded-xl border border-zinc-200 bg-white p-6 shadow-sm transition hover:border-zinc-400 hover:shadow-md dark:border-zinc-800 dark:bg-zinc-900/60 dark:hover:border-zinc-600"
+                  data-categories="curriculum-as-code"
+                >
+                  <div>
+                    
+                    <div class="mb-3 flex items-center justify-between">
+                      
+                        <span class="inline-flex items-center rounded border border-zinc-300 bg-zinc-100 px-2 py-0.5 text-[11px] font-bold uppercase tracking-wider text-zinc-800 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-200">
+                          Essay 07
+                        </span>
+                      
+                      
+                      <div class="flex flex-wrap gap-1">
+                        
+                          <span class="rounded bg-zinc-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400">
+                            curriculum-as-code
+                          </span>
+                        
+                      </div>
+                    </div>
+
+                    
+                    <h2 class="text-lg font-bold leading-snug text-zinc-950 dark:text-white">
+                      <a href="/essays/07-continuous-integration-pedagogy/" class="hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white" style="text-decoration: none; color: inherit;">
+                        Continuous Integration for Pedagogy: Writing Automated Unit Tests for Learning Outcomes
+                      </a>
+                    </h2>
+
+                    
+                    <p class="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400 line-clamp-3">
+                      How applying CI pipeline linting, AST mapping, and automated prerequisite graph validation guarantees instructional integrity before code hits production.
+                    </p>
+                  </div>
+
+                  
+                  <div class="mt-6 flex items-center justify-between border-t border-zinc-100 pt-4 text-xs font-semibold text-zinc-500 dark:border-zinc-800 dark:text-zinc-400">
+                    <time datetime="2026-08-04">Aug 04, 2026</time>
+                    <a 
+                      href="/essays/07-continuous-integration-pedagogy/" 
+                      class="inline-flex min-h-[32px] items-center text-zinc-950 hover:underline dark:text-white"
+                      aria-label="Read Continuous Integration for Pedagogy: Writing Automated Unit Tests for Learning Outcomes"
+                      style="text-decoration: none; color: inherit;"
+                    >
+                      Read Essay →
+                    </a>
+                  </div>
+                </article>
+              
+                
+                
+                  
+                
+
+                
+                
+
+                <article 
+                  class="essay-card-item flex flex-col justify-between rounded-xl border border-zinc-200 bg-white p-6 shadow-sm transition hover:border-zinc-400 hover:shadow-md dark:border-zinc-800 dark:bg-zinc-900/60 dark:hover:border-zinc-600"
+                  data-categories="curriculum-as-code"
+                >
+                  <div>
+                    
+                    <div class="mb-3 flex items-center justify-between">
+                      
+                        <span class="inline-flex items-center rounded border border-zinc-300 bg-zinc-100 px-2 py-0.5 text-[11px] font-bold uppercase tracking-wider text-zinc-800 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-200">
+                          Essay 01
+                        </span>
+                      
+                      
+                      <div class="flex flex-wrap gap-1">
+                        
+                          <span class="rounded bg-zinc-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400">
+                            curriculum-as-code
+                          </span>
+                        
+                      </div>
+                    </div>
+
+                    
+                    <h2 class="text-lg font-bold leading-snug text-zinc-950 dark:text-white">
+                      <a href="/essays/01-ai-assessment-design/" class="hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white" style="text-decoration: none; color: inherit;">
+                        Shifting from AI Fear to Strategic Assessment Design
+                      </a>
+                    </h2>
+
+                    
+                    <p class="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400 line-clamp-3">
+                      <h2 id="shifting-from-ai-fear-to-strategic-assessment-design">Shifting from AI Fear to Strategic Assessment Design</h2>
+<p>How Curriculum-as-Code paradigms transform educators from passive task checkers into problem architects by auditing the cognitive process rather than standard answers.</p>
+                    </p>
+                  </div>
+
+                  
+                  <div class="mt-6 flex items-center justify-between border-t border-zinc-100 pt-4 text-xs font-semibold text-zinc-500 dark:border-zinc-800 dark:text-zinc-400">
+                    <time datetime="2026-07-30">Jul 30, 2026</time>
+                    <a 
+                      href="/essays/01-ai-assessment-design/" 
+                      class="inline-flex min-h-[32px] items-center text-zinc-950 hover:underline dark:text-white"
+                      aria-label="Read Shifting from AI Fear to Strategic Assessment Design"
+                      style="text-decoration: none; color: inherit;"
+                    >
+                      Read Essay →
+                    </a>
+                  </div>
+                </article>
+              
+                
+                
+                  
+                
+
+                
+                
+
+                <article 
+                  class="essay-card-item flex flex-col justify-between rounded-xl border border-zinc-200 bg-white p-6 shadow-sm transition hover:border-zinc-400 hover:shadow-md dark:border-zinc-800 dark:bg-zinc-900/60 dark:hover:border-zinc-600"
+                  data-categories="curriculum-as-code"
+                >
+                  <div>
+                    
+                    <div class="mb-3 flex items-center justify-between">
+                      
+                        <span class="inline-flex items-center rounded border border-zinc-300 bg-zinc-100 px-2 py-0.5 text-[11px] font-bold uppercase tracking-wider text-zinc-800 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-200">
+                          Essay 05
+                        </span>
+                      
+                      
+                      <div class="flex flex-wrap gap-1">
+                        
+                          <span class="rounded bg-zinc-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400">
+                            curriculum-as-code
+                          </span>
+                        
+                      </div>
+                    </div>
+
+                    
+                    <h2 class="text-lg font-bold leading-snug text-zinc-950 dark:text-white">
+                      <a href="/essays/05-instructional-engineering/" class="hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white" style="text-decoration: none; color: inherit;">
+                        Instructional Engineering: Transforming Curriculum into Version-Controlled Source Code
+                      </a>
+                    </h2>
+
+                    
+                    <p class="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400 line-clamp-3">
+                      How applying continuous integration, modular component design, and plain-text single sources of truth redefines modern instructional architecture.
+                    </p>
+                  </div>
+
+                  
+                  <div class="mt-6 flex items-center justify-between border-t border-zinc-100 pt-4 text-xs font-semibold text-zinc-500 dark:border-zinc-800 dark:text-zinc-400">
+                    <time datetime="2026-07-30">Jul 30, 2026</time>
+                    <a 
+                      href="/essays/05-instructional-engineering/" 
+                      class="inline-flex min-h-[32px] items-center text-zinc-950 hover:underline dark:text-white"
+                      aria-label="Read Instructional Engineering: Transforming Curriculum into Version-Controlled Source Code"
+                      style="text-decoration: none; color: inherit;"
+                    >
+                      Read Essay →
+                    </a>
+                  </div>
+                </article>
+              
+                
+                
+                  
+                
+
+                
+                
+
+                <article 
+                  class="essay-card-item flex flex-col justify-between rounded-xl border border-zinc-200 bg-white p-6 shadow-sm transition hover:border-zinc-400 hover:shadow-md dark:border-zinc-800 dark:bg-zinc-900/60 dark:hover:border-zinc-600"
+                  data-categories="curriculum-as-code"
+                >
+                  <div>
+                    
+                    <div class="mb-3 flex items-center justify-between">
+                      
+                        <span class="inline-flex items-center rounded border border-zinc-300 bg-zinc-100 px-2 py-0.5 text-[11px] font-bold uppercase tracking-wider text-zinc-800 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-200">
+                          Essay 02
+                        </span>
+                      
+                      
+                      <div class="flex flex-wrap gap-1">
+                        
+                          <span class="rounded bg-zinc-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400">
+                            curriculum-as-code
+                          </span>
+                        
+                      </div>
+                    </div>
+
+                    
+                    <h2 class="text-lg font-bold leading-snug text-zinc-950 dark:text-white">
+                      <a href="/essays/02-curriculum-as-code/" class="hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white" style="text-decoration: none; color: inherit;">
+                        Curriculum-as-Code: Treating Educational Content Like Software Development
+                      </a>
+                    </h2>
+
+                    
+                    <p class="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400 line-clamp-3">
+                      <h2 id="curriculum-as-code-treating-educational-content-like-software-development">Curriculum-as-Code: Treating Educational Content Like Software Development</h2>
+<p>Why proprietary LMS platforms fail modern compliance and how Git version control, Markdown SSoT, and CI/CD validation redefine instructional engineering.</p>
+                    </p>
+                  </div>
+
+                  
+                  <div class="mt-6 flex items-center justify-between border-t border-zinc-100 pt-4 text-xs font-semibold text-zinc-500 dark:border-zinc-800 dark:text-zinc-400">
+                    <time datetime="2026-07-30">Jul 30, 2026</time>
+                    <a 
+                      href="/essays/02-curriculum-as-code/" 
+                      class="inline-flex min-h-[32px] items-center text-zinc-950 hover:underline dark:text-white"
+                      aria-label="Read Curriculum-as-Code: Treating Educational Content Like Software Development"
+                      style="text-decoration: none; color: inherit;"
+                    >
+                      Read Essay →
+                    </a>
+                  </div>
+                </article>
+              
+                
+                
+                  
+                
+
+                
+                
+
+                <article 
+                  class="essay-card-item flex flex-col justify-between rounded-xl border border-zinc-200 bg-white p-6 shadow-sm transition hover:border-zinc-400 hover:shadow-md dark:border-zinc-800 dark:bg-zinc-900/60 dark:hover:border-zinc-600"
+                  data-categories="ada-title-ii"
+                >
+                  <div>
+                    
+                    <div class="mb-3 flex items-center justify-between">
+                      
+                        <span class="inline-flex items-center rounded border border-zinc-300 bg-zinc-100 px-2 py-0.5 text-[11px] font-bold uppercase tracking-wider text-zinc-800 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-200">
+                          Essay 04
+                        </span>
+                      
+                      
+                      <div class="flex flex-wrap gap-1">
+                        
+                          <span class="rounded bg-zinc-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400">
+                            ada-title-ii
+                          </span>
+                        
+                      </div>
+                    </div>
+
+                    
+                    <h2 class="text-lg font-bold leading-snug text-zinc-950 dark:text-white">
+                      <a href="/essays/04-ada-title-ii-accessibility/" class="hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white" style="text-decoration: none; color: inherit;">
+                        Architecting Born-Accessible Higher Ed: ADA Title II &amp; Curriculum-as-Code
+                      </a>
+                    </h2>
+
+                    
+                    <p class="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400 line-clamp-3">
+                      <h2 id="architecting-born-accessible-higher-ed-ada-title-ii--curriculum-as-code">Architecting Born-Accessible Higher Ed: ADA Title II &amp; Curriculum-as-Code</h2>
+<p>Under Title II of the ADA and Section 508, digital accessibility is a legal mandate. Examine how Curriculum-as-Code paradigms replace reactive remediation with automated compliance.</p>
+                    </p>
+                  </div>
+
+                  
+                  <div class="mt-6 flex items-center justify-between border-t border-zinc-100 pt-4 text-xs font-semibold text-zinc-500 dark:border-zinc-800 dark:text-zinc-400">
+                    <time datetime="2026-07-30">Jul 30, 2026</time>
+                    <a 
+                      href="/essays/04-ada-title-ii-accessibility/" 
+                      class="inline-flex min-h-[32px] items-center text-zinc-950 hover:underline dark:text-white"
+                      aria-label="Read Architecting Born-Accessible Higher Ed: ADA Title II &amp; Curriculum-as-Code"
+                      style="text-decoration: none; color: inherit;"
+                    >
+                      Read Essay →
+                    </a>
+                  </div>
+                </article>
+              
+                
+                
+                  
+                
+
+                
+                
+
+                <article 
+                  class="essay-card-item flex flex-col justify-between rounded-xl border border-zinc-200 bg-white p-6 shadow-sm transition hover:border-zinc-400 hover:shadow-md dark:border-zinc-800 dark:bg-zinc-900/60 dark:hover:border-zinc-600"
+                  data-categories="ai-safety-protocols"
+                >
+                  <div>
+                    
+                    <div class="mb-3 flex items-center justify-between">
+                      
+                        <span class="inline-flex items-center rounded border border-zinc-300 bg-zinc-100 px-2 py-0.5 text-[11px] font-bold uppercase tracking-wider text-zinc-800 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-200">
+                          Essay 03
+                        </span>
+                      
+                      
+                      <div class="flex flex-wrap gap-1">
+                        
+                          <span class="rounded bg-zinc-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400">
+                            ai-safety-protocols
+                          </span>
+                        
+                      </div>
+                    </div>
+
+                    
+                    <h2 class="text-lg font-bold leading-snug text-zinc-950 dark:text-white">
+                      <a href="/essays/03-air-gapped-sovereign-ai/" class="hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white" style="text-decoration: none; color: inherit;">
+                        Air-Gapped &amp; Sovereign AI: Local Intelligence in High-Compliance Environments
+                      </a>
+                    </h2>
+
+                    
+                    <p class="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400 line-clamp-3">
+                      <h2 id="air-gapped--sovereign-ai-local-intelligence-in-high-compliance-environments">Air-Gapped &amp; Sovereign AI: Local Intelligence in High-Compliance Environments</h2>
+<p>Why relying on third-party cloud APIs poses unacceptable regulatory risks for educational data, and how edge-native open weights ensure absolute privacy.</p>
+                    </p>
+                  </div>
+
+                  
+                  <div class="mt-6 flex items-center justify-between border-t border-zinc-100 pt-4 text-xs font-semibold text-zinc-500 dark:border-zinc-800 dark:text-zinc-400">
+                    <time datetime="2026-07-30">Jul 30, 2026</time>
+                    <a 
+                      href="/essays/03-air-gapped-sovereign-ai/" 
+                      class="inline-flex min-h-[32px] items-center text-zinc-950 hover:underline dark:text-white"
+                      aria-label="Read Air-Gapped &amp; Sovereign AI: Local Intelligence in High-Compliance Environments"
+                      style="text-decoration: none; color: inherit;"
+                    >
+                      Read Essay →
+                    </a>
+                  </div>
+                </article>
+              
+                
+                
+
+                
+                
+
+                <article 
+                  class="essay-card-item flex flex-col justify-between rounded-xl border border-zinc-200 bg-white p-6 shadow-sm transition hover:border-zinc-400 hover:shadow-md dark:border-zinc-800 dark:bg-zinc-900/60 dark:hover:border-zinc-600"
+                  data-categories=""
+                >
+                  <div>
+                    
+                    <div class="mb-3 flex items-center justify-between">
+                      
+                        <span class="inline-flex items-center rounded border border-zinc-300 bg-zinc-100 px-2 py-0.5 text-[11px] font-bold uppercase tracking-wider text-zinc-800 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-200">
+                          Essay 15
+                        </span>
+                      
+                      
+                      <div class="flex flex-wrap gap-1">
+                        
+                      </div>
+                    </div>
+
+                    
+                    <h2 class="text-lg font-bold leading-snug text-zinc-950 dark:text-white">
+                      <a href="/essays/essay-15/" class="hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white" style="text-decoration: none; color: inherit;">
+                        
+                      </a>
+                    </h2>
+
+                    
+                    <p class="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400 line-clamp-3">
+                      <h2 id="essay-15-algorithmic-pedagogy--continuous-integration--engineering-zero-regression-learning-environments">Essay 15: Algorithmic Pedagogy &amp; Continuous Integration — Engineering Zero-Regression Learning Environments</h2>
+<p>When traditional course design meets institutional scaling, it almost always encounters a friction point: version decay. Syllabi drift out of alignment with lab rubrics, external links break, accreditation standards shift, and manual updates introduce silent regressions into LMS course shells.</p>
+<p>In software development, this problem was solved decades ago through <strong>Continuous Integration (CI)</strong> and automated testing. In higher education, the solution is <strong>Algorithmic Pedagogy</strong>—the practice of treating learning outcomes, prerequisite graphs, and compliance rules as executable source code.</p>
+                    </p>
+                  </div>
+
+                  
+                  <div class="mt-6 flex items-center justify-between border-t border-zinc-100 pt-4 text-xs font-semibold text-zinc-500 dark:border-zinc-800 dark:text-zinc-400">
+                    <time datetime="0001-01-01">Jan 01, 0001</time>
+                    <a 
+                      href="/essays/essay-15/" 
+                      class="inline-flex min-h-[32px] items-center text-zinc-950 hover:underline dark:text-white"
+                      aria-label="Read "
+                      style="text-decoration: none; color: inherit;"
+                    >
+                      Read Essay →
+                    </a>
+                  </div>
+                </article>
+              
+                
+                
+
+                
+                
+
+                <article 
+                  class="essay-card-item flex flex-col justify-between rounded-xl border border-zinc-200 bg-white p-6 shadow-sm transition hover:border-zinc-400 hover:shadow-md dark:border-zinc-800 dark:bg-zinc-900/60 dark:hover:border-zinc-600"
+                  data-categories=""
+                >
+                  <div>
+                    
+                    <div class="mb-3 flex items-center justify-between">
+                      
+                        <span class="inline-flex items-center rounded border border-zinc-300 bg-zinc-100 px-2 py-0.5 text-[11px] font-bold uppercase tracking-wider text-zinc-800 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-200">
+                          Essay 18
+                        </span>
+                      
+                      
+                      <div class="flex flex-wrap gap-1">
+                        
+                      </div>
+                    </div>
+
+                    
+                    <h2 class="text-lg font-bold leading-snug text-zinc-950 dark:text-white">
+                      <a href="/essays/18-the-illusion-of-the-feed/" class="hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white" style="text-decoration: none; color: inherit;">
+                        
+                      </a>
+                    </h2>
+
+                    
+                    <p class="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400 line-clamp-3">
+                      <!-- markdownlint-disable MD024 MD003 -->
+<h2 id="essay-18-the-illusion-of-the-feed-upstream-ssot-and-feed-link-rot-governance">Essay 18: The Illusion of the Feed: Upstream SSoT and Feed Link Rot Governance</h2>
+<h2 id="learning-objectives">Learning Objectives</h2>
+<ul>
+<li>Analyze the impact of link rot on digital course content.</li>
+<li>Establish upstream Single Source of Truth (SSoT) configuration control.</li>
+<li>Design glare-resilient, high-contrast, offline-first course architectures.</li>
+</ul>
+<hr>
+<h2 id="instructional-content">Instructional Content</h2>
+<blockquote>
+<p><strong>Key Concept:</strong> Relying on live external web links and dynamic social media widgets inside an LMS creates an illusion of real-time engagement while introducing a compounding vulnerability of link rot. Upstream Single Source of Truth (SSoT) governance mitigates this risk by externalizing external resources as config-controlled assets in centralized database manifests.</p>
+                    </p>
+                  </div>
+
+                  
+                  <div class="mt-6 flex items-center justify-between border-t border-zinc-100 pt-4 text-xs font-semibold text-zinc-500 dark:border-zinc-800 dark:text-zinc-400">
+                    <time datetime="0001-01-01">Jan 01, 0001</time>
+                    <a 
+                      href="/essays/18-the-illusion-of-the-feed/" 
+                      class="inline-flex min-h-[32px] items-center text-zinc-950 hover:underline dark:text-white"
+                      aria-label="Read "
+                      style="text-decoration: none; color: inherit;"
+                    >
+                      Read Essay →
+                    </a>
+                  </div>
+                </article>
+              
+            </div>
+
+          </div>
+        </div>
+    </main>
+
+<footer id="site-footer" class="mt-16 sm:mt-24 border-t border-[#E2D9C8] bg-[#F5F2EB] py-12 sm:py-16 text-[#0C2340] dark:border-zinc-800 dark:bg-zinc-950" aria-label="Site Footer">
+  <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col items-center justify-center text-center gap-8">
+      
+      
+      <div class="text-xs text-[#0C2340] dark:text-zinc-100 flex flex-col items-center gap-2">
+        <p class="font-semibold text-sm tracking-wide">&copy; 2026 Alan Pruitt. All rights reserved.</p>
+        <p class="text-zinc-700 dark:text-zinc-300">
+          
+            Curriculum-as-Code Architecture &bull; ADA Title II Compliant &bull; WCAG 2.1/2.2 AA Conforming
+          
+        </p>
+      </div>
+
+      
+      <div class="w-full max-w-2xl border-t border-b border-[#E2D9C8] py-5 px-4 dark:border-zinc-800 text-xs text-zinc-700 dark:text-zinc-300 flex flex-col gap-2.5 items-center text-center">
+        <p class="leading-relaxed">
+          <strong>Zero Textbook Cost (ZTC):</strong>
+          
+            All workshop materials are accessible Open Educational Resources (OER) provided freely with zero paywall barriers.
+          
+        </p>
+        <p class="leading-relaxed">
+          
+            This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="font-semibold underline hover:text-[#001F3F] dark:hover:text-emerald-400 focus:ring-2 focus:ring-[#003366]" target="_blank" rel="license noopener noreferrer">CC BY-NC-SA 4.0 International</a>.
+          
+        </p>
+      </div>
+
+      
+      <nav style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 24px; padding-top: 12px; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;" aria-label="Footer Navigation">
+        <a href="/" style="display: inline-flex; align-items: center; justify-content: center; min-height: 44px; min-width: 44px; padding: 6px 14px; color: #0C2340; text-decoration: underline; text-underline-offset: 4px;">
+          Home
         </a>
-        <a href="https://alanpruitt.substack.com" target="_blank" rel="noopener noreferrer" style="font-size: 0.75rem; font-weight: 600; color: #555555; text-decoration: none;">
-          Substack Edition ↗
+        <a href="/workshops/" style="display: inline-flex; align-items: center; justify-content: center; min-height: 44px; min-width: 44px; padding: 6px 14px; color: #0C2340; text-decoration: underline; text-underline-offset: 4px;">
+          Workshops
         </a>
-      </h3>
-      <p style="margin: 0 0 8px 0; color: #555555; font-size: 0.85rem;">
-        Published: 2026-07-30
-      </p>
-      <p style="margin: 0; color: #222222; font-size: 0.95rem; line-height: 1.5;">
-        
-      </p>
-    </article>
+        <a href="/essays/" style="display: inline-flex; align-items: center; justify-content: center; min-height: 44px; min-width: 44px; padding: 6px 14px; color: #0C2340; text-decoration: underline; text-underline-offset: 4px;">
+          Essays
+        </a>
+        <a href="https://www.webcognita.com/" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; justify-content: center; min-height: 44px; min-width: 44px; padding: 6px 14px; color: #0C2340; text-decoration: underline; text-underline-offset: 4px;">
+          Webcognita LLC
+        </a>
+        <a href="https://www.linkedin.com/in/alanpruitt/" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; justify-content: center; min-height: 44px; min-width: 44px; padding: 6px 14px; color: #0C2340; text-decoration: underline; text-underline-offset: 4px;">
+          LinkedIn
+        </a>
+      </nav>
+
+    </div>
+  </div>
+</footer>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
   
-  </main>
+  document.querySelectorAll('pre code').forEach((block) => {
+    const container = block.parentElement;
+    if (!container || container.querySelector('.copy-prompt-btn')) return;
+
+    const copyBtn = document.createElement('button');
+    copyBtn.className = 'copy-prompt-btn';
+    copyBtn.type = 'button';
+    const isSpanish = document.documentElement.lang === 'es' || window.location.pathname.includes('/es/');
+    copyBtn.textContent = isSpanish ? 'Copiar Prompt' : 'Copy Prompt';
+
+    copyBtn.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(block.innerText);
+        const originalText = copyBtn.textContent;
+        copyBtn.textContent = isSpanish ? '¡Copiado!' : 'Copied!';
+        copyBtn.classList.add('copied');
+
+        setTimeout(() => {
+          copyBtn.textContent = originalText;
+          copyBtn.classList.remove('copied');
+        }, 2000);
+      } catch (err) {
+        console.error('Failed to copy text: ', err);
+      }
+    });
+
+    container.style.position = 'relative';
+    container.appendChild(copyBtn);
+  });
+
+  
+  const copyButtons = document.querySelectorAll('.prompt-card-wrapper .copy-prompt-btn');
+  copyButtons.forEach(button => {
+    button.addEventListener('click', async () => {
+      const card = button.closest('.prompt-card-wrapper');
+      if (!card) return;
+
+      const target = card.querySelector('.prompt-content-target');
+      if (!target) return;
+
+      const promptText = target.innerText.trim();
+
+      try {
+        await navigator.clipboard.writeText(promptText);
+
+        const btnText = button.querySelector('.btn-text') || button;
+        const originalText = btnText.innerText;
+        const isSpanish = document.documentElement.lang === 'es' || window.location.pathname.includes('/es/');
+
+        button.style.backgroundColor = '#065F46';
+        btnText.innerText = isSpanish ? '¡Copiado!' : 'Copied!';
+
+        setTimeout(() => {
+          button.style.backgroundColor = '#003366';
+          btnText.innerText = originalText;
+        }, 2200);
+
+      } catch (err) {
+        console.error('Clipboard copy failed:', err);
+        const btnText = button.querySelector('.btn-text') || button;
+        btnText.innerText = 'Error!';
+        setTimeout(() => {
+          button.style.backgroundColor = '#003366';
+          btnText.innerText = 'Copy';
+        }, 2000);
+      }
+    });
+  });
+});
+</script>
+
 </body>
 </html>

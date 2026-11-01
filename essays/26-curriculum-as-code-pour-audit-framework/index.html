@@ -1,116 +1,636 @@
 <!DOCTYPE html>
 <html lang="en" class="h-full scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Essay 26 | Coach Alan</title>
-  <meta name="description" content="An analysis of the POUR-Audit framework within Curriculum-as-Code paradigms, highlighting automated verification checks for heading hierarchies, image alt-text, and legacy reference deprecation.">
-  <link rel="canonical" href="https://alanpruitt.com/essays/26-curriculum-as-code-pour-audit-framework">
-  
-  <!-- Feed Discovery -->
-  <link rel="alternate" type="application/rss+xml" title="Alan Pruitt - RSS Feed" href="https://alanpruitt.com/rss.xml">
-  <link rel="alternate" type="application/feed+json" title="Alan Pruitt - JSON Feed" href="https://alanpruitt.com/feed.json">
-  
-  <!-- OpenGraph Metadata -->
-  <meta property="og:type" content="article">
-  <meta property="og:title" content="Essay 26">
-  <meta property="og:description" content="An analysis of the POUR-Audit framework within Curriculum-as-Code paradigms, highlighting automated verification checks for heading hierarchies, image alt-text, and legacy reference deprecation.">
-  <meta property="og:url" content="https://alanpruitt.com/essays/26-curriculum-as-code-pour-audit-framework">
-  <meta property="og:site_name" content="alanpruitt.com">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="CzTdgB5WJ_UjWFg7HpV9VOOACNmsgHQP1mFMI2b_tls" />
+    <title>Essay 26 | Alan Pruitt (Coach Alan) — Curriculum Architect &amp; AI Strategist</title>
+    <meta name="description" content="An analysis of the POUR-Audit framework within Curriculum-as-Code paradigms, highlighting automated verification checks for heading hierarchies, image alt-text, and legacy reference deprecation.">
+    <meta name="keywords" content="Alan Pruitt, Coach Alan, Curriculum-as-Code, S-A-R Standard, The Clinical Framing Protocol, ADA Title II Accessibility, WCAG 2.2 AA 9:1 Contrast, WCAG 3.0 Cognitive Accessibility, Air-Gapped Sovereign AI, Webcognita LLC, Essay 26">
+    <meta name="author" content="Alan Pruitt">
+    <link rel="canonical" href="https://alanpruitt.com/essays/26-curriculum-as-code-pour-audit-framework/">
+    <link rel="me" href="https://www.linkedin.com/in/alanpruitt/">
 
-  <!-- Premium Style Guard -->
-  <style>
-    :root {
-      --bg-creme-50: #FAFBF7;
-      --bg-creme-100: #F5F5F0;
-      --bg-creme-200: #E6E6DC;
-      --text-navy-800: #1E3E62;
-      --text-navy-900: #0B192C;
-      --text-navy-950: #060E1A;
-      --link-accent: #0E3D73;
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Alan Pruitt | Curriculum-as-Code">
+    <meta property="og:title" content="Essay 26 | Alan Pruitt">
+    <meta property="og:description" content="An analysis of the POUR-Audit framework within Curriculum-as-Code paradigms, highlighting automated verification checks for heading hierarchies, image alt-text, and legacy reference deprecation.">
+    <meta property="og:url" content="https://alanpruitt.com/essays/26-curriculum-as-code-pour-audit-framework/">
+    <meta property="og:image" content="https://alanpruitt.com/assets/og-preview.png">
+    <meta property="article:author" content="https://www.linkedin.com/in/alanpruitt/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Essay 26 | Alan Pruitt">
+    <meta name="twitter:description" content="An analysis of the POUR-Audit framework within Curriculum-as-Code paradigms, highlighting automated verification checks for heading hierarchies, image alt-text, and legacy reference deprecation.">
+    <meta name="twitter:image" content="https://alanpruitt.com/assets/og-preview.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "\"Essay 26\"",
+      "description": "\"An analysis of the POUR-Audit framework within Curriculum-as-Code paradigms, highlighting automated verification checks for heading hierarchies, image alt-text, and legacy reference deprecation.\"",
+      "url": "\"https://alanpruitt.com/essays/26-curriculum-as-code-pour-audit-framework/\"",
+      "inLanguage": "en",
+      "author": {
+        "@type": "Person",
+        "@id": "https://alanpruitt.com/#person",
+        "name": "Alan Pruitt",
+        "jobTitle": "Founder & Chief Curriculum Architect",
+        "url": "https://alanpruitt.com/",
+        "sameAs": [
+          "https://www.linkedin.com/in/alanpruitt/",
+          "https://www.webcognita.com/"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://www.webcognita.com/#organization",
+        "name": "Webcognita LLC",
+        "url": "https://www.webcognita.com/"
+      }
     }
-    *, ::before, ::after { box-sizing: border-box; }
-    html { line-height: 1.5; font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; height: 100%; }
-    body { margin: 0; min-height: 100%; display: flex; flex-direction: column; justify-content: space-between; background-color: var(--bg-creme-100); color: var(--text-navy-900); }
-    
-    header { width: 100%; background-color: #ffffff; border-bottom: 1px solid var(--bg-creme-200); padding: 24px; box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); }
-    main { width: 100%; max-width: 780px; margin: 40px auto; padding: 0 20px; flex-grow: 1; }
-    
-    .content h2 { font-size: 1.5rem; font-weight: 700; color: var(--text-navy-900); margin-top: 2rem; margin-bottom: 1rem; }
-    .content h3 { font-size: 1.25rem; font-weight: 700; color: var(--text-navy-900); margin-top: 1.5rem; margin-bottom: 0.75rem; }
-    .content p { font-size: 1rem; color: #1a1a1a; line-height: 1.75; margin-bottom: 1.25rem; }
-    .content ul, .content ol { margin-bottom: 1.25rem; padding-left: 1.5rem; }
-    .content li { margin-bottom: 0.5rem; line-height: 1.6; }
-    .content a { color: var(--link-accent); text-decoration: underline; font-weight: 600; }
-    .content pre { background-color: var(--bg-creme-50); border: 1px solid var(--bg-creme-200); padding: 1rem; border-radius: 0.5rem; overflow-x: auto; margin-bottom: 1.25rem; font-family: monospace; font-size: 0.875rem; }
-  </style>
+    </script>
+
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%230B192C'/></svg>">
+
+    <style>
+        :root {
+            --bg-creme-50: #fbfbfb;
+            --bg-creme-100: #FAF8F5;
+            --bg-creme-200: #EAE3D2;
+            --text-navy-800: #1B2A4A;
+            --text-navy-900: #0B192C;
+        }
+
+        *, ::before, ::after { box-sizing: border-box; border-width: 0; }
+        html { line-height: 1.5; -webkit-text-size-adjust: 100%; tab-size: 4; font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+        body { margin: 0; background-color: var(--bg-creme-100); color: var(--text-navy-900); }
+
+        .w-full { width: 100%; }
+        .max-w-3xl { max-width: 48rem; }
+        .max-w-6xl { max-width: 72rem; }
+        .mx-auto { margin-left: auto; margin-right: auto; }
+        .flex { display: flex; }
+        .flex-col { flex-direction: column; }
+        .flex-grow { flex-grow: 1; }
+        .items-center { align-items: center; }
+        .justify-between { justify-content: space-between; }
+        .flex-wrap { flex-wrap: wrap; }
+        .gap-3 { gap: 0.75rem; }
+        .gap-4 { gap: 1rem; }
+
+        .p-6 { padding: 1.5rem; }
+        .p-8 { padding: 2rem; }
+        .px-4 { padding-left: 1rem; padding-right: 1rem; }
+        .px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+        .py-10 { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+        .py-16 { padding-top: 4rem; padding-bottom: 4rem; }
+        .pb-24 { padding-bottom: 6rem; }
+
+        .mt-3 { margin-top: 0.75rem; }
+        .mt-6 { margin-top: 1.5rem; }
+        .mb-6 { margin-bottom: 1.5rem; }
+        .mb-8 { margin-bottom: 2rem; }
+        .mb-10 { margin-bottom: 2.5rem; }
+
+        .border-b { border-bottom-style: solid; border-bottom-width: 1px; }
+        .border-t { border-top-style: solid; border-top-width: 1px; }
+        .border-zinc-200 { border-color: #e4e4e7; }
+        .border-zinc-800 { border-color: #27272a; }
+
+        .font-semibold { font-weight: 600; }
+        .font-bold { font-weight: 700; }
+        .font-extrabold { font-weight: 800; }
+
+        .text-xs { font-size: 0.75rem; line-height: 1rem; }
+        .text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+        .text-base { font-size: 1rem; line-height: 1.5rem; }
+        .text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+        .text-2xl { font-size: 1.5rem; line-height: 2rem; }
+        .text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+        .uppercase { text-transform: uppercase; }
+        .tracking-wider { letter-spacing: 0.05em; }
+
+        .focus-visible\:outline:focus-visible { outline: 2px solid var(--text-navy-900); outline-offset: 2px; }
+
+         
+        .prose h2 { font-size: 1.5rem; font-weight: 800; color: #09090b; margin-top: 2rem; margin-bottom: 1rem; text-align: left; }
+        .prose h3 { font-size: 1.25rem; font-weight: 700; color: #09090b; margin-top: 1.5rem; margin-bottom: 0.75rem; text-align: left; }
+        .prose p { margin-top: 0.5rem; margin-bottom: 1rem; font-size: 1rem; line-height: 1.6; color: #18181b; text-align: left; }
+        .prose ul { margin-top: 0.5rem; margin-bottom: 1rem; padding-left: 1.5rem; list-style-type: disc; color: #18181b; text-align: left; }
+        .prose li { margin-bottom: 0.5rem; }
+        .prose hr { margin-top: 2rem; margin-bottom: 2rem; border-top: 3px solid #a1a1aa; }
+        .prose a { color: #09090b; text-decoration: underline; font-weight: 600; }
+
+         
+        .fixed { position: fixed; }
+        .bottom-0 { bottom: 0; }
+        .left-0 { left: 0; }
+        .right-0 { right: 0; }
+        .z-40 { z-index: 40; }
+        .shadow-lg { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
+        .backdrop-blur { backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+        .bg-white\/95 { background-color: rgba(255, 255, 255, 0.95); }
+        .max-w-md { max-width: 28rem; }
+        .inline-flex { display: inline-flex; }
+        .min-h-\[44px\] { min-height: 44px; }
+        .rounded-lg { border-radius: 0.5rem; }
+        .bg-zinc-950 { background-color: #09090b; }
+        .text-white { color: #ffffff; }
+        .text-zinc-500 { color: #71717a; }
+
+        @media (min-width: 640px) {
+            .sm\:hidden { display: none; }
+            .sm\:pb-16 { padding-bottom: 4rem; }
+        }
+
+         
+        @media (prefers-color-scheme: dark) {
+            body { background-color: #09090b; color: #f4f4f5; }
+            .prose h2 { color: #ffffff; }
+            .prose h3 { color: #ffffff; }
+            .prose p { color: #f4f4f5; }
+            .prose ul { color: #f4f4f5; }
+            .prose hr { border-top: 3px solid #52525b; }
+            .border-zinc-200 { border-color: #27272a; }
+            .bg-white\/95 { background-color: rgba(9, 9, 11, 0.95); }
+        }
+    </style>
+    <style>
+  @media print {
+     
+    @page {
+      margin: 20mm 15mm 20mm 15mm;
+      size: auto;
+    }
+
+     
+    *,
+    *::before,
+    *::after {
+      background: transparent !important;
+      color: #000 !important;
+      box-shadow: none !important;
+      text-shadow: none !important;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+      font-size: 11pt !important;
+      line-height: 1.5 !important;
+      color: #111 !important;
+    }
+
+     
+    header,
+    nav,
+    footer,
+    .no-print,
+    #site-header,
+    #site-footer,
+    #language-switcher,
+    .language-switcher,
+    button,
+    .interactive-widget,
+    dialog {
+      display: none !important;
+    }
+
+     
+    main,
+    article,
+    .max-w-4xl,
+    .max-w-5xl,
+    .container {
+      max-width: 100% !important;
+      width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      border: none !important;
+    }
+
+     
+    h1 {
+      font-size: 20pt !important;
+      line-height: 1.2 !important;
+      margin-top: 0 !important;
+      margin-bottom: 12pt !important;
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+
+    h2 {
+      font-size: 15pt !important;
+      margin-top: 18pt !important;
+      margin-bottom: 8pt !important;
+      border-bottom: 1px solid #ddd !important;
+      padding-bottom: 4pt !important;
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+
+    h3 {
+      font-size: 12pt !important;
+      margin-top: 14pt !important;
+      margin-bottom: 6pt !important;
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+
+    p, li {
+      orphans: 3;
+      widows: 3;
+    }
+
+     
+    blockquote {
+      border-left: 3pt solid #333 !important;
+      padding-left: 10pt !important;
+      margin: 12pt 0 !important;
+      font-style: italic !important;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+     
+    pre, code {
+      font-family: "Courier New", Courier, monospace !important;
+      font-size: 9.5pt !important;
+      border: 1px solid #ccc !important;
+      background-color: #f9f9f9 !important;
+      page-break-inside: avoid;
+      break-inside: avoid;
+      white-space: pre-wrap !important;
+      word-break: break-word !important;
+    }
+
+     
+    table {
+      width: 100% !important;
+      border-collapse: collapse !important;
+      page-break-inside: avoid;
+      break-inside: avoid;
+      margin: 12pt 0 !important;
+    }
+
+    th, td {
+      border: 1px solid #bbb !important;
+      padding: 6pt 8pt !important;
+      font-size: 9pt !important;
+      text-align: left !important;
+    }
+
+    th {
+      background-color: #eee !important;
+      font-weight: bold !important;
+    }
+
+     
+    article a[href^="http://"]::after,
+    article a[href^="https://"]::after {
+      content: " (" attr(href) ")";
+      font-size: 8.5pt;
+      font-weight: normal;
+      color: #444 !important;
+    }
+
+     
+    article a[href^="#"]::after,
+    article a[href^="/"]::after {
+      content: "";
+    }
+
+     
+    .print-header-badge {
+      display: block !important;
+      border-bottom: 2pt solid #000;
+      padding-bottom: 8pt;
+      margin-bottom: 16pt;
+    }
+  }
+
+   
+  .print-header-badge {
+    display: none;
+  }
+</style>
+
 </head>
-<body class="bg-creme-100 text-navy-900 font-sans antialiased min-h-full flex flex-col justify-between">
-  <!-- Navigation Header -->
-  <header>
-    <div style="max-width: 780px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between;">
-      <a href="/" style="font-size: 1.125rem; font-weight: 700; color: var(--text-navy-900); text-decoration: none;">Alan Pruitt</a>
-      <nav style="display: flex; gap: 24px;">
-        <a href="/" style="font-size: 0.875rem; font-weight: 600; color: var(--text-navy-800); text-decoration: none;">Home</a>
-        <a href="/articles/" style="font-size: 0.875rem; font-weight: 600; color: var(--text-navy-900); text-decoration: underline;">Articles</a>
-      </nav>
-    </div>
-  </header>
+<body class="bg-creme-100 text-navy-900 font-sans antialiased min-h-full flex flex-col justify-between dark:bg-zinc-950 dark:text-zinc-100">
 
-  <main>
-    <article class="content">
-      <h1 style="font-size: 2rem; font-weight: 700; color: var(--text-navy-900); margin-top: 1rem; margin-bottom: 1.5rem;">Essay 26</h1>
-      <h2>The POUR-Audit Framework in Curriculum-as-Code</h2>
-<p>Treating educational content as software—known as *Curriculum-as-Code* (CaC)—enables the integration of automated verification pipelines to enforce instructional quality, semantic hierarchy, and digital accessibility. The **POUR-Audit framework** operationalizes Web Content Accessibility Guidelines (WCAG) into testable, programmatically audited standards directly inside git workflows.</p>
-<h3>1. Perceivable: Asset Alt-Text Enforcement</h3>
-<p>Digital equity requires that all instructional media is perceivable. Programmatic scans analyze `<img ...>` tags in the course fleet:</p>
-<li>**Descriptive Text:** Every image tag must contain a descriptive `alt` attribute.</li>
-<li>**Prohibited Placeholders:** Empty placeholders (`alt=""` or `alt=''`) are flagged as failures to prevent decorative bypass of active educational charts.</li>
-<h3>2. Operable: Navigation and Focus Flow Parity</h3>
-<p>Operable interfaces ensure that all students can navigate course layouts using keyboard controls and adaptive gear:</p>
-<li>**Focus Indicators:** Audits verify that interactive elements within custom Canvas containers retain highly visible focus rings.</li>
-<li>**Focus Traps:** Programmatic checks scan script bindings to ensure custom modal layers do not create keyboard focus traps.</li>
-<h3>3. Understandable: Legacy Term Deprecation</h3>
-<p>To maintain clear and accurate instructional pathways, the audit monitors prohibited legacy terms and references:</p>
-<li>**Legacy Patterns:** References containing deprecated structural patterns (such as `"8.#"`-style module references) are checked and flagged.</li>
-<li>**Unified Terminology:** Ensures course fleet documentation aligns with current academic sources of truth (SSoT).</li>
-<h3>4. Robust: Semantic Structure and Hierarchy</h3>
-<p>A robust curriculum is built on standard HTML5 landmarks that assistive technologies can parse reliably. The audit checks heading structures to confirm strict semantic progression:</p>
-<li>**Entry Constraints:** The content body must start with a `##` (H2) heading level. H1 is reserved exclusively for the Canvas LMS Page Title.</li>
-<li>**Structural Parity:** Audits scan header trees programmatically, ensuring no skipped heading levels (e.g. from H2 to H4) exist, which disorients screen readers.</li>
-    </article>
-
-    <!-- INJECT SOCIAL SHARE BLOCK -->
     
-    <!-- Zero-JS Semantic Social Share -->
-    <div style="margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--bg-creme-200, #E6E6DC); display: flex; flex-direction: column; gap: 16px;" aria-label="Social sharing options">
-      <span style="font-family: monospace; font-size: 0.75rem; font-weight: bold; color: var(--navy-dark); text-transform: uppercase; tracking-wider">
-        Share this Architecture:
-      </span>
-      <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center;">
-        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Falanpruitt.com%2Fessays%2F26-curriculum-as-code-pour-audit-framework" target="_blank" rel="noopener noreferrer" aria-label="Share on LinkedIn" style="font-family: monospace; font-size: 0.75rem; font-weight: 600; text-decoration: none; padding: 6px 12px; border-radius: 8px; border: 1px solid var(--bg-creme-200, #E6E6DC); color: var(--navy-dark); background-color: var(--bg-cream);">
+<header style="position: sticky; top: 0; z-index: 50; width: 100%; border-bottom: 1px solid #e4e4e7; background-color: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px);">
+  <div style="max-width: 64rem; margin: 0 auto; height: 4rem; display: flex; align-items: center; justify-content: space-between; padding: 0 1.25rem;">
+    
+    
+    <a href="/" style="display: flex; align-items: center; gap: 0.5rem; text-decoration: none; color: #002147;" aria-label="Home">
+      <span style="font-size: 1.125rem; font-weight: 800; white-space: nowrap;">Alan Pruitt</span>
+      <span id="ap-brand-dot" style="color: #a1a1aa; font-weight: bold; display: none;">•</span>
+      <span id="ap-brand-badge" style="padding: 0.15rem 0.5rem; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; border-radius: 0.375rem; border: 1px solid #d4d4d8; background-color: #f4f4f5; color: #27272a; display: none;">CaC Architect</span>
+    </a>
+
+    
+    <nav id="ap-desktop-nav" style="display: none; align-items: center; gap: 1.5rem;">
+      <a href="/workshops/" style="text-decoration: none; color: #3f3f46; font-size: 0.9rem; font-weight: 600;">Workshops</a>
+      <a href="/roi-calculator/" style="text-decoration: none; color: #3f3f46; font-size: 0.9rem; font-weight: 600;">ROI Calculator</a>
+      <a href="/essays/" style="text-decoration: none; color: #3f3f46; font-size: 0.9rem; font-weight: 600;">Essays</a>
+
+      
+      
+      
+        
+        
+      
+      <div style="display: flex; align-items: center; border: 1px solid #d4d4d8; border-radius: 0.375rem; background-color: #f4f4f5; padding: 0.125rem; gap: 0.125rem;">
+        <a href="/essays/26-curriculum-as-code-pour-audit-framework/" style="padding: 0.25rem 0.5rem; font-size: 0.75rem; font-weight: 700; text-decoration: none; border-radius: 0.25rem; background-color: #002147; color: #fff;">EN</a>
+        <a href="/es/" style="padding: 0.25rem 0.5rem; font-size: 0.75rem; font-weight: 700; text-decoration: none; border-radius: 0.25rem; color: #52525b;">ES</a>
+      </div>
+    </nav>
+
+    
+    <div id="ap-mobile-nav" style="display: none; align-items: center; gap: 1rem;">
+      <div style="display: flex; align-items: center; border: 1px solid #d4d4d8; border-radius: 0.375rem; background-color: #f4f4f5; padding: 0.125rem; gap: 0.125rem;">
+        <a href="/essays/26-curriculum-as-code-pour-audit-framework/" style="padding: 0.25rem 0.5rem; font-size: 0.75rem; font-weight: 700; text-decoration: none; border-radius: 0.25rem; background-color: #002147; color: #fff;">EN</a>
+        <a href="/es/" style="padding: 0.25rem 0.5rem; font-size: 0.75rem; font-weight: 700; text-decoration: none; border-radius: 0.25rem; color: #52525b;">ES</a>
+      </div>
+
+      <details style="position: relative; margin: 0;">
+        <summary style="list-style: none; cursor: pointer; display: flex; align-items: center; gap: 0.35rem; padding: 0.35rem 0.75rem; border-radius: 0.375rem; border: 1.5px solid #002147; background-color: #FFF9F0; color: #002147; font-size: 0.75rem; font-weight: 800; text-transform: uppercase;">
+          <span>Menu</span>
+          <svg style="width: 1rem; height: 1rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
+        </summary>
+        <div style="position: absolute; right: 0; top: calc(100% + 0.5rem); width: 14rem; background-color: #FFF9F0; border: 2px solid #002147; border-radius: 0.5rem; padding: 0.5rem; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); z-index: 60; display: flex; flex-direction: column; gap: 0.25rem;">
+          <a href="/workshops/" style="display: flex; justify-content: space-between; padding: 0.5rem 0.75rem; text-decoration: none; color: #002147; font-size: 0.875rem; font-weight: 700;"><span>Workshops</span><span style="color: #71717a;">&rarr;</span></a>
+          <a href="/roi-calculator/" style="display: flex; justify-content: space-between; padding: 0.5rem 0.75rem; text-decoration: none; color: #002147; font-size: 0.875rem; font-weight: 700;"><span>ROI Calculator</span><span style="color: #71717a;">&rarr;</span></a>
+          <a href="/essays/" style="display: flex; justify-content: space-between; padding: 0.5rem 0.75rem; text-decoration: none; color: #002147; font-size: 0.875rem; font-weight: 700;"><span>Essays</span><span style="color: #71717a;">&rarr;</span></a>
+        </div>
+      </details>
+    </div>
+
+  </div>
+</header>
+
+<script>
+  function enforceHeaderLayout() {
+    var width = window.innerWidth;
+    if (width >= 768) {
+      document.getElementById("ap-desktop-nav").style.display = "flex";
+      document.getElementById("ap-mobile-nav").style.display = "none";
+      document.getElementById("ap-brand-dot").style.display = "inline-block";
+      document.getElementById("ap-brand-badge").style.display = "inline-flex";
+    } else {
+      document.getElementById("ap-desktop-nav").style.display = "none";
+      document.getElementById("ap-mobile-nav").style.display = "flex";
+      document.getElementById("ap-brand-dot").style.display = "none";
+      document.getElementById("ap-brand-badge").style.display = "none";
+    }
+  }
+  window.addEventListener("resize", enforceHeaderLayout);
+  document.addEventListener("DOMContentLoaded", enforceHeaderLayout);
+  enforceHeaderLayout();
+</script>
+
+
+    <main class="w-full max-w-6xl mx-auto px-6 py-8 flex-grow">
+        <article class="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-16 lg:px-8 pb-24 sm:pb-16">
+            
+            
+            <nav class="mb-6" aria-label="Breadcrumb">
+                <a 
+                  href="/essays/" 
+                  class="inline-flex min-h-[44px] items-center text-xs font-bold uppercase tracking-wider text-zinc-900 hover:text-zinc-950 dark:text-zinc-100 dark:hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white"
+                  style="text-decoration: none; color: inherit;"
+                >
+                  &larr; Back to Essays
+                </a>
+            </nav>
+
+            
+            <header>
+                <h1 class="text-2xl font-extrabold tracking-tight text-zinc-950 dark:text-white sm:text-4xl text-left">
+                  Essay 26
+                </h1>
+                
+<div class="print-header-badge" aria-hidden="true">
+  <div style="display: flex; justify-content: space-between; align-items: baseline;">
+    <span style="font-size: 13pt; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em;">Alan Pruitt &bull; Executive Brief</span>
+    <span style="font-size: 9pt; color: #555;">alanpruitt.com</span>
+  </div>
+</div>
+
+
+<div class="mb-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between border-b border-zinc-200 pb-6 dark:border-zinc-800 text-left">
+  <div>
+    <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
+      <time datetime="2026-08-19">August 19, 2026</time>
+      <span>&bull;</span>
+      <span>2 min read</span>
+    </div>
+  </div>
+
+  
+  <div class="no-print">
+    <button 
+      type="button" 
+      onclick="window.print()" 
+      class="inline-flex min-h-[44px] items-center gap-2 rounded-lg border border-zinc-300 bg-white px-3.5 py-2 text-xs font-bold uppercase tracking-wider text-zinc-800 shadow-sm transition hover:bg-zinc-50 hover:text-zinc-950 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-200 dark:hover:bg-zinc-800 dark:hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white"
+      aria-label="Print or save this essay as a PDF"
+    >
+      <svg class="h-4 w-4 shrink-0 text-zinc-600 dark:text-zinc-300" style="width: 16px !important; height: 16px !important;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
+      </svg>
+      <span>Print / Save PDF</span>
+    </button>
+  </div>
+</div>
+
+            </header>
+
+            
+            <div class="prose max-w-none">
+                <h2 id="the-pour-audit-framework-in-curriculum-as-code">The POUR-Audit Framework in Curriculum-as-Code</h2>
+<p>Treating educational content as software—known as <em>Curriculum-as-Code</em> (CaC)—enables the integration of automated verification pipelines to enforce instructional quality, semantic hierarchy, and digital accessibility. The <strong>POUR-Audit framework</strong> operationalizes Web Content Accessibility Guidelines (WCAG) into testable, programmatically audited standards directly inside git workflows.</p>
+<h3 id="1-perceivable-asset-alt-text-enforcement">1. Perceivable: Asset Alt-Text Enforcement</h3>
+<p>Digital equity requires that all instructional media is perceivable. Programmatic scans analyze <code>&lt;img ...&gt;</code> tags in the course fleet:</p>
+<ul>
+<li><strong>Descriptive Text:</strong> Every image tag must contain a descriptive <code>alt</code> attribute.</li>
+<li><strong>Prohibited Placeholders:</strong> Empty placeholders (<code>alt=&quot;&quot;</code> or <code>alt=''</code>) are flagged as failures to prevent decorative bypass of active educational charts.</li>
+</ul>
+<h3 id="2-operable-navigation-and-focus-flow-parity">2. Operable: Navigation and Focus Flow Parity</h3>
+<p>Operable interfaces ensure that all students can navigate course layouts using keyboard controls and adaptive gear:</p>
+<ul>
+<li><strong>Focus Indicators:</strong> Audits verify that interactive elements within custom Canvas containers retain highly visible focus rings.</li>
+<li><strong>Focus Traps:</strong> Programmatic checks scan script bindings to ensure custom modal layers do not create keyboard focus traps.</li>
+</ul>
+<h3 id="3-understandable-legacy-term-deprecation">3. Understandable: Legacy Term Deprecation</h3>
+<p>To maintain clear and accurate instructional pathways, the audit monitors prohibited legacy terms and references:</p>
+<ul>
+<li><strong>Legacy Patterns:</strong> References containing deprecated structural patterns (such as <code>&quot;8.#&quot;</code>-style module references) are checked and flagged.</li>
+<li><strong>Unified Terminology:</strong> Ensures course fleet documentation aligns with current academic sources of truth (SSoT).</li>
+</ul>
+<h3 id="4-robust-semantic-structure-and-hierarchy">4. Robust: Semantic Structure and Hierarchy</h3>
+<p>A robust curriculum is built on standard HTML5 landmarks that assistive technologies can parse reliably. The audit checks heading structures to confirm strict semantic progression:</p>
+<ul>
+<li><strong>Entry Constraints:</strong> The content body must start with a <code>##</code> (H2) heading level. H1 is reserved exclusively for the Canvas LMS Page Title.</li>
+<li><strong>Structural Parity:</strong> Audits scan header trees programmatically, ensuring no skipped heading levels (e.g. from H2 to H4) exist, which disorients screen readers.</li>
+</ul>
+
+            </div>
+
+            
+            <aside 
+              class="fixed bottom-0 left-0 right-0 z-40 border-t border-zinc-200 bg-white/95 px-4 py-3 shadow-lg backdrop-blur dark:border-zinc-800 dark:bg-zinc-950/95 sm:hidden" 
+              aria-label="Institutional Advisory Consultation"
+            >
+              <div class="mx-auto flex max-w-md items-center justify-between gap-3">
+                <div>
+                  <p class="text-xs font-bold text-zinc-950 dark:text-white">
+                    ADA Title II Fleet Audit
+                  </p>
+                  <p class="text-[11px] text-zinc-900 dark:text-zinc-100">
+                    Schedule executive briefing
+                  </p>
+                </div>
+                <a 
+                  href="mailto:alan.pruitt@gmail.com?subject=Institutional%20Strategy%20Briefing%20Inquiry" 
+                  class="inline-flex min-h-[44px] items-center justify-center rounded-lg bg-zinc-950 px-4 py-2 text-xs font-bold uppercase tracking-wider text-white shadow-sm transition-colors hover:bg-zinc-800 dark:bg-white dark:text-zinc-950 dark:hover:bg-zinc-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white"
+                  style="text-decoration: none;"
+                >
+                  Contact
+                </a>
+              </div>
+            </aside>
+
+        </article>
+    </main>
+
+    <footer id="site-footer" class="mt-16 sm:mt-24 border-t border-[#E2D9C8] bg-[#F5F2EB] py-12 sm:py-16 text-[#0C2340] dark:border-zinc-800 dark:bg-zinc-950" aria-label="Site Footer">
+  <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col items-center justify-center text-center gap-8">
+      
+      
+      <div class="text-xs text-[#0C2340] dark:text-zinc-100 flex flex-col items-center gap-2">
+        <p class="font-semibold text-sm tracking-wide">&copy; 2026 Alan Pruitt. All rights reserved.</p>
+        <p class="text-zinc-700 dark:text-zinc-300">
+          
+            Curriculum-as-Code Architecture &bull; ADA Title II Compliant &bull; WCAG 2.1/2.2 AA Conforming
+          
+        </p>
+      </div>
+
+      
+      <div class="w-full max-w-2xl border-t border-b border-[#E2D9C8] py-5 px-4 dark:border-zinc-800 text-xs text-zinc-700 dark:text-zinc-300 flex flex-col gap-2.5 items-center text-center">
+        <p class="leading-relaxed">
+          <strong>Zero Textbook Cost (ZTC):</strong>
+          
+            All workshop materials are accessible Open Educational Resources (OER) provided freely with zero paywall barriers.
+          
+        </p>
+        <p class="leading-relaxed">
+          
+            This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="font-semibold underline hover:text-[#001F3F] dark:hover:text-emerald-400 focus:ring-2 focus:ring-[#003366]" target="_blank" rel="license noopener noreferrer">CC BY-NC-SA 4.0 International</a>.
+          
+        </p>
+      </div>
+
+      
+      <nav style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 24px; padding-top: 12px; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;" aria-label="Footer Navigation">
+        <a href="/" style="display: inline-flex; align-items: center; justify-content: center; min-height: 44px; min-width: 44px; padding: 6px 14px; color: #0C2340; text-decoration: underline; text-underline-offset: 4px;">
+          Home
+        </a>
+        <a href="/workshops/" style="display: inline-flex; align-items: center; justify-content: center; min-height: 44px; min-width: 44px; padding: 6px 14px; color: #0C2340; text-decoration: underline; text-underline-offset: 4px;">
+          Workshops
+        </a>
+        <a href="/essays/" style="display: inline-flex; align-items: center; justify-content: center; min-height: 44px; min-width: 44px; padding: 6px 14px; color: #0C2340; text-decoration: underline; text-underline-offset: 4px;">
+          Essays
+        </a>
+        <a href="https://www.webcognita.com/" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; justify-content: center; min-height: 44px; min-width: 44px; padding: 6px 14px; color: #0C2340; text-decoration: underline; text-underline-offset: 4px;">
+          Webcognita LLC
+        </a>
+        <a href="https://www.linkedin.com/in/alanpruitt/" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; justify-content: center; min-height: 44px; min-width: 44px; padding: 6px 14px; color: #0C2340; text-decoration: underline; text-underline-offset: 4px;">
           LinkedIn
         </a>
-        <a href="https://x.com/intent/post?text=Essay%2026&url=https%3A%2F%2Falanpruitt.com%2Fessays%2F26-curriculum-as-code-pour-audit-framework&via=alanpruitt" target="_blank" rel="noopener noreferrer" aria-label="Share on X" style="font-family: monospace; font-size: 0.75rem; font-weight: 600; text-decoration: none; padding: 6px 12px; border-radius: 8px; border: 1px solid var(--bg-creme-200, #E6E6DC); color: var(--navy-dark); background-color: var(--bg-cream);">
-          X
-        </a>
-        <a href="https://reddit.com/submit?url=https%3A%2F%2Falanpruitt.com%2Fessays%2F26-curriculum-as-code-pour-audit-framework&title=Essay%2026" target="_blank" rel="noopener noreferrer" aria-label="Share on Reddit" style="font-family: monospace; font-size: 0.75rem; font-weight: 600; text-decoration: none; padding: 6px 12px; border-radius: 8px; border: 1px solid var(--bg-creme-200, #E6E6DC); color: var(--navy-dark); background-color: var(--bg-cream);">
-          Reddit
-        </a>
-        <a href="mailto:?subject=Essay%2026&body=Read%20this%20Curriculum-as-Code%20architecture:%20https%3A%2F%2Falanpruitt.com%2Fessays%2F26-curriculum-as-code-pour-audit-framework" aria-label="Share via Email" style="font-family: monospace; font-size: 0.75rem; font-weight: 600; text-decoration: none; padding: 6px 12px; border-radius: 8px; border: 1px solid var(--bg-creme-200, #E6E6DC); color: var(--navy-dark); background-color: var(--bg-cream);">
-          Email
-        </a>
-      </div>
+      </nav>
+
     </div>
+  </div>
+</footer>
 
-    <!-- Academic Citation & BibTeX Section -->
-    
-  </main>
 
-  <!-- Footer -->
-  <footer style="width: 100%; padding: 32px 24px; text-align: center; font-size: 0.75rem; border-top: 1px solid var(--text-navy-950); background-color: var(--text-navy-900); color: var(--bg-creme-100);">
-    <p style="margin-bottom: 8px;">© 2026 Alan Pruitt • All Rights Reserved.</p>
-    <p style="opacity: 0.75; margin: 0;">Instructional Design, AI Pedagogy & Curriculum Architecture</p>
-  </footer>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  
+  document.querySelectorAll('pre code').forEach((block) => {
+    const container = block.parentElement;
+    if (!container || container.querySelector('.copy-prompt-btn')) return;
+
+    const copyBtn = document.createElement('button');
+    copyBtn.className = 'copy-prompt-btn';
+    copyBtn.type = 'button';
+    const isSpanish = document.documentElement.lang === 'es' || window.location.pathname.includes('/es/');
+    copyBtn.textContent = isSpanish ? 'Copiar Prompt' : 'Copy Prompt';
+
+    copyBtn.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(block.innerText);
+        const originalText = copyBtn.textContent;
+        copyBtn.textContent = isSpanish ? '¡Copiado!' : 'Copied!';
+        copyBtn.classList.add('copied');
+
+        setTimeout(() => {
+          copyBtn.textContent = originalText;
+          copyBtn.classList.remove('copied');
+        }, 2000);
+      } catch (err) {
+        console.error('Failed to copy text: ', err);
+      }
+    });
+
+    container.style.position = 'relative';
+    container.appendChild(copyBtn);
+  });
+
+  
+  const copyButtons = document.querySelectorAll('.prompt-card-wrapper .copy-prompt-btn');
+  copyButtons.forEach(button => {
+    button.addEventListener('click', async () => {
+      const card = button.closest('.prompt-card-wrapper');
+      if (!card) return;
+
+      const target = card.querySelector('.prompt-content-target');
+      if (!target) return;
+
+      const promptText = target.innerText.trim();
+
+      try {
+        await navigator.clipboard.writeText(promptText);
+
+        const btnText = button.querySelector('.btn-text') || button;
+        const originalText = btnText.innerText;
+        const isSpanish = document.documentElement.lang === 'es' || window.location.pathname.includes('/es/');
+
+        button.style.backgroundColor = '#065F46';
+        btnText.innerText = isSpanish ? '¡Copiado!' : 'Copied!';
+
+        setTimeout(() => {
+          button.style.backgroundColor = '#003366';
+          btnText.innerText = originalText;
+        }, 2200);
+
+      } catch (err) {
+        console.error('Clipboard copy failed:', err);
+        const btnText = button.querySelector('.btn-text') || button;
+        btnText.innerText = 'Error!';
+        setTimeout(() => {
+          button.style.backgroundColor = '#003366';
+          btnText.innerText = 'Copy';
+        }, 2000);
+      }
+    });
+  });
+});
+</script>
+
+
 </body>
 </html>

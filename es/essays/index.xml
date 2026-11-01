@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Essays on Coach Alan</title>
+		<link>https://alanpruitt.com/es/essays/</link>
+		<description>Recent content in Essays on Coach Alan</description>
+		<generator>Hugo</generator>
+		<language>es-MX</language>
+		
+		
+		
+		
+			<lastBuildDate>Sat, 29 Aug 2026 09:30:00 -0700</lastBuildDate>
+		
+			<atom:link href="https://alanpruitt.com/es/essays/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Ensayo 29: El Cambio Aguas Arriba — Por Qué la Accesibilidad Post-Producción Es un Fallo de Diseño Arquitectónico</title>
+				<link>https://alanpruitt.com/es/essays/essay-29/</link>
+				<pubDate>Sat, 29 Aug 2026 09:30:00 -0700</pubDate>
+				<guid>https://alanpruitt.com/es/essays/essay-29/</guid>
+				<description>&lt;h2 id=&#34;la-trampa-aguas-abajo-de-la-ti-en-la-educación-superior&#34;&gt;La Trampa Aguas Abajo de la TI en la Educación Superior&lt;/h2&gt;&#xA;&lt;p&gt;Durante décadas, el modelo operativo de la educación superior para la accesibilidad digital ha imitado una línea de ensamblaje defectuosa: cree el curso como desee, láncelo al Sistema de Gestión de Aprendizaje (LMS) al inicio del semestre, espere una solicitud de adaptación o una auditoría de cumplimiento, y luego apresúrese a corregir los defectos aguas abajo.&lt;/p&gt;&#xA;&lt;p&gt;A medida que las instituciones públicas enfrentan el riguroso cronograma de aplicación de la &lt;strong&gt;Regla Final del Título II de la ADA de la Fiscalía Federal (28 CFR Parte 35)&lt;/strong&gt;, esta mentalidad aguas abajo se ha convertido en una responsabilidad institucional.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Ensayo 28: Más Allá del Cumplimiento Performativo — Título II de la ADA, Declaraciones Vivas de Conformidad y Gobernanza Institucional Automatizada</title>
+				<link>https://alanpruitt.com/es/essays/essay-28/</link>
+				<pubDate>Fri, 28 Aug 2026 08:00:00 -0700</pubDate>
+				<guid>https://alanpruitt.com/es/essays/essay-28/</guid>
+				<description>&lt;h2 id=&#34;la-ficción-legal-del-descargo-estático&#34;&gt;La Ficción Legal del Descargo Estático&lt;/h2&gt;&#xA;&lt;p&gt;Durante dos décadas, la educación superior trató la accesibilidad digital como una nota administrativa a pie de página. Las instituciones copiaban declaraciones genéricas en el pie de página, creaban formularios estándar de solicitud de adaptaciones y asumían que la buena fe las protegía de responsabilidades regulatorias.&lt;/p&gt;&#xA;&lt;p&gt;La regla final del &lt;strong&gt;Título II de la ADA (28 CFR Parte 35)&lt;/strong&gt; del Departamento de Justicia puso fin a esa era.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Plan de Estudios como Código, Cumplimiento de ADA Título II y Refactorización de Accesibilidad a Gran Escala</title>
+				<link>https://alanpruitt.com/es/essays/essay-27/</link>
+				<pubDate>Thu, 27 Aug 2026 08:00:00 -0700</pubDate>
+				<guid>https://alanpruitt.com/es/essays/essay-27/</guid>
+				<description>&lt;h2 id=&#34;el-mandato-federal-el-fin-de-las-soluciones-parche&#34;&gt;El Mandato Federal: El Fin de las Soluciones Parche&lt;/h2&gt;&#xA;&lt;p&gt;Para las instituciones de educación superior públicas, el reloj del mandato de accesibilidad de &lt;strong&gt;ADA Título II&lt;/strong&gt; ya está corriendo. La exigencia federal no deja margen de maniobra: para 2026, cada curso, documento digital, tabla y recurso montado en el LMS debe cumplir a rajatabla con el estándar &lt;strong&gt;WCAG 2.2 AA&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Durante más de una década, la respuesta tradicional de las universidades ha sido un ciclo interminable y costoso:&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

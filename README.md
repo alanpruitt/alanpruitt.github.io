@@ -1,6 +1,6 @@
 # Alan Pruitt (Coach Alan) — Curriculum Architect & Sovereign AI Strategist
 
-> Personal portfolio, 37-essay research corpus, and sovereign **Curriculum-as-Code (CaC)** repository of **Alan Pruitt (Coach Alan)** — Founder & Chief Curriculum Architect of **Webcognita LLC**, Exercise Science Adjunct Faculty at **Arizona Western College (AWC)**, Generative AI Strategist at **The University of Arizona**, **Google Gemini Certified Faculty**, and **USMC Veteran**.
+> Personal portfolio, 38-essay research corpus, and sovereign **Curriculum-as-Code (CaC)** repository of **Alan Pruitt (Coach Alan)** — Founder & Chief Curriculum Architect of **Webcognita LLC**, Exercise Science Adjunct Faculty at **Arizona Western College (AWC)**, Generative AI Strategist at **The University of Arizona**, **Google Gemini Certified Faculty**, and **USMC Veteran**.
 
 - **Live Portfolio:** [https://alanpruitt.com](https://alanpruitt.com) ([Español / Norteño-Spanish](https://alanpruitt.com/es/))
 - **Workshops & Public Canvas Proof Hub (`EXW-Demo 42051`):** [https://alanpruitt.com/workshops/](https://alanpruitt.com/workshops/)
@@ -62,8 +62,9 @@
 
 ---
 
-## 4. Curriculum-as-Code Essay Series (Essays 01–37)
+## 4. Curriculum-as-Code Essay Series (Essays 01–38)
 
+- **[Essay 38: What If I Didn't Build the Graph? – Why Curriculum-as-Code Transcends Flat Docs-as-Code with DOM GraphRAG & W3C PROV-O](https://alanpruitt.com/essays/essay-38-dom-graphrag-and-prov-o-curriculum-as-code/):** Enriching 3,151 curriculum vectors with DOM GraphRAG, W3C PROV-O provenance receipts, Born-Accessible 9:1 XAI radar scorecards, and W3C SKOS Norteño-Spanish clinical ontologies.
 - **[Essay 37: WCAG 3.0 Cognitive Accessibility in Curriculum-as-Code](https://alanpruitt.com/essays/essay-37-wcag-3-cognitive-accessibility):** Reducing student cognitive load through deterministic *In Plain English* and *Norteño-Spanish* scaffolding.
 - **[Essay 36: What If I Didn't Standardize the Loop?](https://alanpruitt.com/essays/essay-36):** Why standardizing the clinical problem-framing protocol across an entire course fleet eliminates instructional entropy and student onboarding friction.
 - **[Essay 35: Automating Accessibility: Curriculum-as-Code & Continuous Integration](https://alanpruitt.com/essays/essay-35-automating-accessibility.md):** Embedding deterministic WCAG 2.2 AA and 9:1 contrast gates directly into Git pre-commit and pre-push pipelines.

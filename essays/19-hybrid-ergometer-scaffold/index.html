@@ -1,177 +1,715 @@
 <!DOCTYPE html>
 <html lang="en" class="h-full scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Hybrid Ergometer Scaffold: Synchronizing AI Simulation with Lab Precision | Coach Alan</title>
-  <meta name="description" content="How EXW245 decouples cognitive pre-flight mathematical verification from physical laboratory execution using a two-part scaffold pairing Gemini AI simulation sandboxes with Lode Corival research-grade cycle ergometers.">
-  <link rel="canonical" href="https://alanpruitt.com/essays/19-hybrid-ergometer-scaffold">
-  
-  <!-- Feed Discovery -->
-  <link rel="alternate" type="application/rss+xml" title="Alan Pruitt - RSS Feed" href="https://alanpruitt.com/rss.xml">
-  <link rel="alternate" type="application/feed+json" title="Alan Pruitt - JSON Feed" href="https://alanpruitt.com/feed.json">
-  
-  <!-- OpenGraph Metadata -->
-  <meta property="og:type" content="article">
-  <meta property="og:title" content="The Hybrid Ergometer Scaffold: Synchronizing AI Simulation with Lab Precision">
-  <meta property="og:description" content="How EXW245 decouples cognitive pre-flight mathematical verification from physical laboratory execution using a two-part scaffold pairing Gemini AI simulation sandboxes with Lode Corival research-grade cycle ergometers.">
-  <meta property="og:url" content="https://alanpruitt.com/essays/19-hybrid-ergometer-scaffold">
-  <meta property="og:site_name" content="alanpruitt.com">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="CzTdgB5WJ_UjWFg7HpV9VOOACNmsgHQP1mFMI2b_tls" />
+    <title>The Hybrid Ergometer Scaffold: Synchronizing AI Simulation with Lab Precision | Alan Pruitt (Coach Alan) — Curriculum Architect &amp; AI Strategist</title>
+    <meta name="description" content="How EXW245 decouples cognitive pre-flight mathematical verification from physical laboratory execution using a two-part scaffold pairing Gemini AI simulation sandboxes with Lode Corival research-grade cycle ergometers.">
+    <meta name="keywords" content="Alan Pruitt, Coach Alan, Curriculum-as-Code, S-A-R Standard, The Clinical Framing Protocol, ADA Title II Accessibility, WCAG 2.2 AA 9:1 Contrast, WCAG 3.0 Cognitive Accessibility, Air-Gapped Sovereign AI, Webcognita LLC, The Hybrid Ergometer Scaffold: Synchronizing AI Simulation with Lab Precision">
+    <meta name="author" content="Alan Pruitt">
+    <link rel="canonical" href="https://alanpruitt.com/essays/19-hybrid-ergometer-scaffold/">
+    <link rel="me" href="https://www.linkedin.com/in/alanpruitt/">
 
-  <!-- Premium Style Guard -->
-  <style>
-    :root {
-      --bg-creme-50: #FAFBF7;
-      --bg-creme-100: #F5F5F0;
-      --bg-creme-200: #E6E6DC;
-      --text-navy-800: #1E3E62;
-      --text-navy-900: #0B192C;
-      --text-navy-950: #060E1A;
-      --link-accent: #0E3D73;
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Alan Pruitt | Curriculum-as-Code">
+    <meta property="og:title" content="The Hybrid Ergometer Scaffold: Synchronizing AI Simulation with Lab Precision | Alan Pruitt">
+    <meta property="og:description" content="How EXW245 decouples cognitive pre-flight mathematical verification from physical laboratory execution using a two-part scaffold pairing Gemini AI simulation sandboxes with Lode Corival research-grade cycle ergometers.">
+    <meta property="og:url" content="https://alanpruitt.com/essays/19-hybrid-ergometer-scaffold/">
+    <meta property="og:image" content="https://alanpruitt.com/assets/og-preview.png">
+    <meta property="article:author" content="https://www.linkedin.com/in/alanpruitt/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The Hybrid Ergometer Scaffold: Synchronizing AI Simulation with Lab Precision | Alan Pruitt">
+    <meta name="twitter:description" content="How EXW245 decouples cognitive pre-flight mathematical verification from physical laboratory execution using a two-part scaffold pairing Gemini AI simulation sandboxes with Lode Corival research-grade cycle ergometers.">
+    <meta name="twitter:image" content="https://alanpruitt.com/assets/og-preview.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "\"The Hybrid Ergometer Scaffold: Synchronizing AI Simulation with Lab Precision\"",
+      "description": "\"How EXW245 decouples cognitive pre-flight mathematical verification from physical laboratory execution using a two-part scaffold pairing Gemini AI simulation sandboxes with Lode Corival research-grade cycle ergometers.\"",
+      "url": "\"https://alanpruitt.com/essays/19-hybrid-ergometer-scaffold/\"",
+      "inLanguage": "en",
+      "author": {
+        "@type": "Person",
+        "@id": "https://alanpruitt.com/#person",
+        "name": "Alan Pruitt",
+        "jobTitle": "Founder & Chief Curriculum Architect",
+        "url": "https://alanpruitt.com/",
+        "sameAs": [
+          "https://www.linkedin.com/in/alanpruitt/",
+          "https://www.webcognita.com/"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://www.webcognita.com/#organization",
+        "name": "Webcognita LLC",
+        "url": "https://www.webcognita.com/"
+      }
     }
-    *, ::before, ::after { box-sizing: border-box; }
-    html { line-height: 1.5; font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; height: 100%; }
-    body { margin: 0; min-height: 100%; display: flex; flex-direction: column; justify-content: space-between; background-color: var(--bg-creme-100); color: var(--text-navy-900); }
-    
-    header { width: 100%; background-color: #ffffff; border-bottom: 1px solid var(--bg-creme-200); padding: 24px; box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); }
-    main { width: 100%; max-width: 780px; margin: 40px auto; padding: 0 20px; flex-grow: 1; }
-    
-    .content h2 { font-size: 1.5rem; font-weight: 700; color: var(--text-navy-900); margin-top: 2rem; margin-bottom: 1rem; }
-    .content h3 { font-size: 1.25rem; font-weight: 700; color: var(--text-navy-900); margin-top: 1.5rem; margin-bottom: 0.75rem; }
-    .content p { font-size: 1rem; color: #1a1a1a; line-height: 1.75; margin-bottom: 1.25rem; }
-    .content ul, .content ol { margin-bottom: 1.25rem; padding-left: 1.5rem; }
-    .content li { margin-bottom: 0.5rem; line-height: 1.6; }
-    .content a { color: var(--link-accent); text-decoration: underline; font-weight: 600; }
-    .content pre { background-color: var(--bg-creme-50); border: 1px solid var(--bg-creme-200); padding: 1rem; border-radius: 0.5rem; overflow-x: auto; margin-bottom: 1.25rem; font-family: monospace; font-size: 0.875rem; }
-  </style>
-</head>
-<body class="bg-creme-100 text-navy-900 font-sans antialiased min-h-full flex flex-col justify-between">
-  <!-- Navigation Header -->
-  <header>
-    <div style="max-width: 780px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between;">
-      <a href="/" style="font-size: 1.125rem; font-weight: 700; color: var(--text-navy-900); text-decoration: none;">Alan Pruitt</a>
-      <nav style="display: flex; gap: 24px;">
-        <a href="/" style="font-size: 0.875rem; font-weight: 600; color: var(--text-navy-800); text-decoration: none;">Home</a>
-        <a href="/articles/" style="font-size: 0.875rem; font-weight: 600; color: var(--text-navy-900); text-decoration: underline;">Articles</a>
-      </nav>
-    </div>
-  </header>
+    </script>
 
-  <main>
-    <article class="content">
-      <h1 style="font-size: 2rem; font-weight: 700; color: var(--text-navy-900); margin-top: 1rem; margin-bottom: 1.5rem;">The Hybrid Ergometer Scaffold: Synchronizing AI Simulation with Lab Precision</h1>
-      <h1>The Hybrid Ergometer Scaffold: Synchronizing AI Simulation with Lab Precision</h1>
-<p>In clinical kinesiology and exercise physiology curricula, laboratory courses face a persistent pedagogical bottleneck: **the high-stakes cognitive choke point**.</p>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%230B192C'/></svg>">
+
+    <style>
+        :root {
+            --bg-creme-50: #fbfbfb;
+            --bg-creme-100: #FAF8F5;
+            --bg-creme-200: #EAE3D2;
+            --text-navy-800: #1B2A4A;
+            --text-navy-900: #0B192C;
+        }
+
+        *, ::before, ::after { box-sizing: border-box; border-width: 0; }
+        html { line-height: 1.5; -webkit-text-size-adjust: 100%; tab-size: 4; font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+        body { margin: 0; background-color: var(--bg-creme-100); color: var(--text-navy-900); }
+
+        .w-full { width: 100%; }
+        .max-w-3xl { max-width: 48rem; }
+        .max-w-6xl { max-width: 72rem; }
+        .mx-auto { margin-left: auto; margin-right: auto; }
+        .flex { display: flex; }
+        .flex-col { flex-direction: column; }
+        .flex-grow { flex-grow: 1; }
+        .items-center { align-items: center; }
+        .justify-between { justify-content: space-between; }
+        .flex-wrap { flex-wrap: wrap; }
+        .gap-3 { gap: 0.75rem; }
+        .gap-4 { gap: 1rem; }
+
+        .p-6 { padding: 1.5rem; }
+        .p-8 { padding: 2rem; }
+        .px-4 { padding-left: 1rem; padding-right: 1rem; }
+        .px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+        .py-10 { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+        .py-16 { padding-top: 4rem; padding-bottom: 4rem; }
+        .pb-24 { padding-bottom: 6rem; }
+
+        .mt-3 { margin-top: 0.75rem; }
+        .mt-6 { margin-top: 1.5rem; }
+        .mb-6 { margin-bottom: 1.5rem; }
+        .mb-8 { margin-bottom: 2rem; }
+        .mb-10 { margin-bottom: 2.5rem; }
+
+        .border-b { border-bottom-style: solid; border-bottom-width: 1px; }
+        .border-t { border-top-style: solid; border-top-width: 1px; }
+        .border-zinc-200 { border-color: #e4e4e7; }
+        .border-zinc-800 { border-color: #27272a; }
+
+        .font-semibold { font-weight: 600; }
+        .font-bold { font-weight: 700; }
+        .font-extrabold { font-weight: 800; }
+
+        .text-xs { font-size: 0.75rem; line-height: 1rem; }
+        .text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+        .text-base { font-size: 1rem; line-height: 1.5rem; }
+        .text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+        .text-2xl { font-size: 1.5rem; line-height: 2rem; }
+        .text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+        .uppercase { text-transform: uppercase; }
+        .tracking-wider { letter-spacing: 0.05em; }
+
+        .focus-visible\:outline:focus-visible { outline: 2px solid var(--text-navy-900); outline-offset: 2px; }
+
+         
+        .prose h2 { font-size: 1.5rem; font-weight: 800; color: #09090b; margin-top: 2rem; margin-bottom: 1rem; text-align: left; }
+        .prose h3 { font-size: 1.25rem; font-weight: 700; color: #09090b; margin-top: 1.5rem; margin-bottom: 0.75rem; text-align: left; }
+        .prose p { margin-top: 0.5rem; margin-bottom: 1rem; font-size: 1rem; line-height: 1.6; color: #18181b; text-align: left; }
+        .prose ul { margin-top: 0.5rem; margin-bottom: 1rem; padding-left: 1.5rem; list-style-type: disc; color: #18181b; text-align: left; }
+        .prose li { margin-bottom: 0.5rem; }
+        .prose hr { margin-top: 2rem; margin-bottom: 2rem; border-top: 3px solid #a1a1aa; }
+        .prose a { color: #09090b; text-decoration: underline; font-weight: 600; }
+
+         
+        .fixed { position: fixed; }
+        .bottom-0 { bottom: 0; }
+        .left-0 { left: 0; }
+        .right-0 { right: 0; }
+        .z-40 { z-index: 40; }
+        .shadow-lg { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
+        .backdrop-blur { backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+        .bg-white\/95 { background-color: rgba(255, 255, 255, 0.95); }
+        .max-w-md { max-width: 28rem; }
+        .inline-flex { display: inline-flex; }
+        .min-h-\[44px\] { min-height: 44px; }
+        .rounded-lg { border-radius: 0.5rem; }
+        .bg-zinc-950 { background-color: #09090b; }
+        .text-white { color: #ffffff; }
+        .text-zinc-500 { color: #71717a; }
+
+        @media (min-width: 640px) {
+            .sm\:hidden { display: none; }
+            .sm\:pb-16 { padding-bottom: 4rem; }
+        }
+
+         
+        @media (prefers-color-scheme: dark) {
+            body { background-color: #09090b; color: #f4f4f5; }
+            .prose h2 { color: #ffffff; }
+            .prose h3 { color: #ffffff; }
+            .prose p { color: #f4f4f5; }
+            .prose ul { color: #f4f4f5; }
+            .prose hr { border-top: 3px solid #52525b; }
+            .border-zinc-200 { border-color: #27272a; }
+            .bg-white\/95 { background-color: rgba(9, 9, 11, 0.95); }
+        }
+    </style>
+    <style>
+  @media print {
+     
+    @page {
+      margin: 20mm 15mm 20mm 15mm;
+      size: auto;
+    }
+
+     
+    *,
+    *::before,
+    *::after {
+      background: transparent !important;
+      color: #000 !important;
+      box-shadow: none !important;
+      text-shadow: none !important;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+      font-size: 11pt !important;
+      line-height: 1.5 !important;
+      color: #111 !important;
+    }
+
+     
+    header,
+    nav,
+    footer,
+    .no-print,
+    #site-header,
+    #site-footer,
+    #language-switcher,
+    .language-switcher,
+    button,
+    .interactive-widget,
+    dialog {
+      display: none !important;
+    }
+
+     
+    main,
+    article,
+    .max-w-4xl,
+    .max-w-5xl,
+    .container {
+      max-width: 100% !important;
+      width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      border: none !important;
+    }
+
+     
+    h1 {
+      font-size: 20pt !important;
+      line-height: 1.2 !important;
+      margin-top: 0 !important;
+      margin-bottom: 12pt !important;
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+
+    h2 {
+      font-size: 15pt !important;
+      margin-top: 18pt !important;
+      margin-bottom: 8pt !important;
+      border-bottom: 1px solid #ddd !important;
+      padding-bottom: 4pt !important;
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+
+    h3 {
+      font-size: 12pt !important;
+      margin-top: 14pt !important;
+      margin-bottom: 6pt !important;
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+
+    p, li {
+      orphans: 3;
+      widows: 3;
+    }
+
+     
+    blockquote {
+      border-left: 3pt solid #333 !important;
+      padding-left: 10pt !important;
+      margin: 12pt 0 !important;
+      font-style: italic !important;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+     
+    pre, code {
+      font-family: "Courier New", Courier, monospace !important;
+      font-size: 9.5pt !important;
+      border: 1px solid #ccc !important;
+      background-color: #f9f9f9 !important;
+      page-break-inside: avoid;
+      break-inside: avoid;
+      white-space: pre-wrap !important;
+      word-break: break-word !important;
+    }
+
+     
+    table {
+      width: 100% !important;
+      border-collapse: collapse !important;
+      page-break-inside: avoid;
+      break-inside: avoid;
+      margin: 12pt 0 !important;
+    }
+
+    th, td {
+      border: 1px solid #bbb !important;
+      padding: 6pt 8pt !important;
+      font-size: 9pt !important;
+      text-align: left !important;
+    }
+
+    th {
+      background-color: #eee !important;
+      font-weight: bold !important;
+    }
+
+     
+    article a[href^="http://"]::after,
+    article a[href^="https://"]::after {
+      content: " (" attr(href) ")";
+      font-size: 8.5pt;
+      font-weight: normal;
+      color: #444 !important;
+    }
+
+     
+    article a[href^="#"]::after,
+    article a[href^="/"]::after {
+      content: "";
+    }
+
+     
+    .print-header-badge {
+      display: block !important;
+      border-bottom: 2pt solid #000;
+      padding-bottom: 8pt;
+      margin-bottom: 16pt;
+    }
+  }
+
+   
+  .print-header-badge {
+    display: none;
+  }
+</style>
+
+</head>
+<body class="bg-creme-100 text-navy-900 font-sans antialiased min-h-full flex flex-col justify-between dark:bg-zinc-950 dark:text-zinc-100">
+
+    
+<header style="position: sticky; top: 0; z-index: 50; width: 100%; border-bottom: 1px solid #e4e4e7; background-color: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px);">
+  <div style="max-width: 64rem; margin: 0 auto; height: 4rem; display: flex; align-items: center; justify-content: space-between; padding: 0 1.25rem;">
+    
+    
+    <a href="/" style="display: flex; align-items: center; gap: 0.5rem; text-decoration: none; color: #002147;" aria-label="Home">
+      <span style="font-size: 1.125rem; font-weight: 800; white-space: nowrap;">Alan Pruitt</span>
+      <span id="ap-brand-dot" style="color: #a1a1aa; font-weight: bold; display: none;">•</span>
+      <span id="ap-brand-badge" style="padding: 0.15rem 0.5rem; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; border-radius: 0.375rem; border: 1px solid #d4d4d8; background-color: #f4f4f5; color: #27272a; display: none;">CaC Architect</span>
+    </a>
+
+    
+    <nav id="ap-desktop-nav" style="display: none; align-items: center; gap: 1.5rem;">
+      <a href="/workshops/" style="text-decoration: none; color: #3f3f46; font-size: 0.9rem; font-weight: 600;">Workshops</a>
+      <a href="/roi-calculator/" style="text-decoration: none; color: #3f3f46; font-size: 0.9rem; font-weight: 600;">ROI Calculator</a>
+      <a href="/essays/" style="text-decoration: none; color: #3f3f46; font-size: 0.9rem; font-weight: 600;">Essays</a>
+
+      
+      
+      
+        
+        
+      
+      <div style="display: flex; align-items: center; border: 1px solid #d4d4d8; border-radius: 0.375rem; background-color: #f4f4f5; padding: 0.125rem; gap: 0.125rem;">
+        <a href="/essays/19-hybrid-ergometer-scaffold/" style="padding: 0.25rem 0.5rem; font-size: 0.75rem; font-weight: 700; text-decoration: none; border-radius: 0.25rem; background-color: #002147; color: #fff;">EN</a>
+        <a href="/es/" style="padding: 0.25rem 0.5rem; font-size: 0.75rem; font-weight: 700; text-decoration: none; border-radius: 0.25rem; color: #52525b;">ES</a>
+      </div>
+    </nav>
+
+    
+    <div id="ap-mobile-nav" style="display: none; align-items: center; gap: 1rem;">
+      <div style="display: flex; align-items: center; border: 1px solid #d4d4d8; border-radius: 0.375rem; background-color: #f4f4f5; padding: 0.125rem; gap: 0.125rem;">
+        <a href="/essays/19-hybrid-ergometer-scaffold/" style="padding: 0.25rem 0.5rem; font-size: 0.75rem; font-weight: 700; text-decoration: none; border-radius: 0.25rem; background-color: #002147; color: #fff;">EN</a>
+        <a href="/es/" style="padding: 0.25rem 0.5rem; font-size: 0.75rem; font-weight: 700; text-decoration: none; border-radius: 0.25rem; color: #52525b;">ES</a>
+      </div>
+
+      <details style="position: relative; margin: 0;">
+        <summary style="list-style: none; cursor: pointer; display: flex; align-items: center; gap: 0.35rem; padding: 0.35rem 0.75rem; border-radius: 0.375rem; border: 1.5px solid #002147; background-color: #FFF9F0; color: #002147; font-size: 0.75rem; font-weight: 800; text-transform: uppercase;">
+          <span>Menu</span>
+          <svg style="width: 1rem; height: 1rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
+        </summary>
+        <div style="position: absolute; right: 0; top: calc(100% + 0.5rem); width: 14rem; background-color: #FFF9F0; border: 2px solid #002147; border-radius: 0.5rem; padding: 0.5rem; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); z-index: 60; display: flex; flex-direction: column; gap: 0.25rem;">
+          <a href="/workshops/" style="display: flex; justify-content: space-between; padding: 0.5rem 0.75rem; text-decoration: none; color: #002147; font-size: 0.875rem; font-weight: 700;"><span>Workshops</span><span style="color: #71717a;">&rarr;</span></a>
+          <a href="/roi-calculator/" style="display: flex; justify-content: space-between; padding: 0.5rem 0.75rem; text-decoration: none; color: #002147; font-size: 0.875rem; font-weight: 700;"><span>ROI Calculator</span><span style="color: #71717a;">&rarr;</span></a>
+          <a href="/essays/" style="display: flex; justify-content: space-between; padding: 0.5rem 0.75rem; text-decoration: none; color: #002147; font-size: 0.875rem; font-weight: 700;"><span>Essays</span><span style="color: #71717a;">&rarr;</span></a>
+        </div>
+      </details>
+    </div>
+
+  </div>
+</header>
+
+<script>
+  function enforceHeaderLayout() {
+    var width = window.innerWidth;
+    if (width >= 768) {
+      document.getElementById("ap-desktop-nav").style.display = "flex";
+      document.getElementById("ap-mobile-nav").style.display = "none";
+      document.getElementById("ap-brand-dot").style.display = "inline-block";
+      document.getElementById("ap-brand-badge").style.display = "inline-flex";
+    } else {
+      document.getElementById("ap-desktop-nav").style.display = "none";
+      document.getElementById("ap-mobile-nav").style.display = "flex";
+      document.getElementById("ap-brand-dot").style.display = "none";
+      document.getElementById("ap-brand-badge").style.display = "none";
+    }
+  }
+  window.addEventListener("resize", enforceHeaderLayout);
+  document.addEventListener("DOMContentLoaded", enforceHeaderLayout);
+  enforceHeaderLayout();
+</script>
+
+
+    <main class="w-full max-w-6xl mx-auto px-6 py-8 flex-grow">
+        <article class="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-16 lg:px-8 pb-24 sm:pb-16">
+            
+            
+            <nav class="mb-6" aria-label="Breadcrumb">
+                <a 
+                  href="/essays/" 
+                  class="inline-flex min-h-[44px] items-center text-xs font-bold uppercase tracking-wider text-zinc-900 hover:text-zinc-950 dark:text-zinc-100 dark:hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white"
+                  style="text-decoration: none; color: inherit;"
+                >
+                  &larr; Back to Essays
+                </a>
+            </nav>
+
+            
+            <header>
+                <h1 class="text-2xl font-extrabold tracking-tight text-zinc-950 dark:text-white sm:text-4xl text-left">
+                  The Hybrid Ergometer Scaffold: Synchronizing AI Simulation with Lab Precision
+                </h1>
+                
+<div class="print-header-badge" aria-hidden="true">
+  <div style="display: flex; justify-content: space-between; align-items: baseline;">
+    <span style="font-size: 13pt; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em;">Alan Pruitt &bull; Executive Brief</span>
+    <span style="font-size: 9pt; color: #555;">alanpruitt.com</span>
+  </div>
+</div>
+
+
+<div class="mb-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between border-b border-zinc-200 pb-6 dark:border-zinc-800 text-left">
+  <div>
+    <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
+      <time datetime="2026-08-21">August 21, 2026</time>
+      <span>&bull;</span>
+      <span>5 min read</span>
+    </div>
+  </div>
+
+  
+  <div class="no-print">
+    <button 
+      type="button" 
+      onclick="window.print()" 
+      class="inline-flex min-h-[44px] items-center gap-2 rounded-lg border border-zinc-300 bg-white px-3.5 py-2 text-xs font-bold uppercase tracking-wider text-zinc-800 shadow-sm transition hover:bg-zinc-50 hover:text-zinc-950 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-200 dark:hover:bg-zinc-800 dark:hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white"
+      aria-label="Print or save this essay as a PDF"
+    >
+      <svg class="h-4 w-4 shrink-0 text-zinc-600 dark:text-zinc-300" style="width: 16px !important; height: 16px !important;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
+      </svg>
+      <span>Print / Save PDF</span>
+    </button>
+  </div>
+</div>
+
+            </header>
+
+            
+            <div class="prose max-w-none">
+                <h2 id="the-hybrid-ergometer-scaffold-synchronizing-ai-simulation-with-lab-precision">The Hybrid Ergometer Scaffold: Synchronizing AI Simulation with Lab Precision</h2>
+<p>In clinical kinesiology and exercise physiology curricula, laboratory courses face a persistent pedagogical bottleneck: <strong>the high-stakes cognitive choke point</strong>.</p>
 <p>When community college students step up to research-grade physiological testing equipment—such as electronically braked cycle ergometers, metabolic carts, or electrocardiographs—they are frequently expected to execute complex physiological mathematics, monitor subject safety, and operate unfamiliar mechanical interfaces simultaneously.</p>
 <p>When arithmetic anxiety collides with live clinical data collection, learning degrades. Students focus entirely on surviving the mechanical protocol rather than understanding the underlying physiological adaptations.</p>
-<p>In **EXW245 (Guidelines for Exercise Testing and Prescription)** for Fall 2026, we solved this structural failure by treating the laboratory experience as a version-controlled, two-part pipeline: **The Hybrid Ergometer Scaffold**.</p>
-<p>---</p>
-<h2>1. Architectural Blueprint: The Two-Part Decoupled Scaffold</h2>
+<p>In <strong>EXW245 (Guidelines for Exercise Testing and Prescription)</strong> for Fall 2026, we solved this structural failure by treating the laboratory experience as a version-controlled, two-part pipeline: <strong>The Hybrid Ergometer Scaffold</strong>.</p>
+<hr>
+<h2 id="1-architectural-blueprint-the-two-part-decoupled-scaffold">1. Architectural Blueprint: The Two-Part Decoupled Scaffold</h2>
 <p>Rather than forcing students to perform mental arithmetic during a live submaximal test, the curriculum enforces an upstream/downstream separation of concerns:</p>
-<pre><code>┌───────────────────────────────────────────────────────────────────────┐
-│                   PART A: Guided AI Learning Sandbox                   │
-│        (Canvas LMS / Online Asynchronous Pre-Flight Verification)      │
-│                                                                        │
-│  • Clinical Case Profile Ingestion (Wrapped in ### Delimiters)         │
-│  • Astrand-Rhyming / YMCA Multi-Stage Predictive Modeling              │
-│  • Hyperbolic Braking vs. Linear Resistance Simulation                 │
-│  • Mathematical Verification & AI Auditor Error Trapping               │
-└───────────────────────────────────┬────────────────────────────────────┘
-                                    │ [SSoT Math Verified]
-                                    ▼
-┌───────────────────────────────────────────────────────────────────────┐
-│              PART B: Lode Corival Practical Application                │
-│             (Onsite Laboratory: AWC Yuma Campus GY 116)                │
-│                                                                        │
-│  • Research-Grade Mechanical Calibration (Independent of Cadence)      │
-│  • Steady-State Heart Rate & Blood Pressure Data Acquisition           │
-│  • Physical vs. Simulated Variance Analysis                            │
-│  • Deterministic 3-Level Evaluation (Exemplary / Competent / Recal)    │
-└────────────────────────────────────────────────────────────────────────┘</code></pre>
-<p>---</p>
-<h2>4. Regional Heat Safety & Environmental Auditing in Yuma County</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>┌───────────────────────────────────────────────────────────────────────┐
+</span></span><span style="display:flex;"><span>│                   PART A: Guided AI Learning Sandbox                   │
+</span></span><span style="display:flex;"><span>│        (Canvas LMS / Online Asynchronous Pre-Flight Verification)      │
+</span></span><span style="display:flex;"><span>│                                                                        │
+</span></span><span style="display:flex;"><span>│  • Clinical Case Profile Ingestion (Wrapped in ### Delimiters)         │
+</span></span><span style="display:flex;"><span>│  • Astrand-Rhyming / YMCA Multi-Stage Predictive Modeling              │
+</span></span><span style="display:flex;"><span>│  • Hyperbolic Braking vs. Linear Resistance Simulation                 │
+</span></span><span style="display:flex;"><span>│  • Mathematical Verification &amp; AI Auditor Error Trapping               │
+</span></span><span style="display:flex;"><span>└───────────────────────────────────┬────────────────────────────────────┘
+</span></span><span style="display:flex;"><span>                                    │ [SSoT Math Verified]
+</span></span><span style="display:flex;"><span>                                    ▼
+</span></span><span style="display:flex;"><span>┌───────────────────────────────────────────────────────────────────────┐
+</span></span><span style="display:flex;"><span>│              PART B: Lode Corival Practical Application                │
+</span></span><span style="display:flex;"><span>│             (Onsite Laboratory: AWC Yuma Campus GY 116)                │
+</span></span><span style="display:flex;"><span>│                                                                        │
+</span></span><span style="display:flex;"><span>│  • Research-Grade Mechanical Calibration (Independent of Cadence)      │
+</span></span><span style="display:flex;"><span>│  • Steady-State Heart Rate &amp; Blood Pressure Data Acquisition           │
+</span></span><span style="display:flex;"><span>│  • Physical vs. Simulated Variance Analysis                            │
+</span></span><span style="display:flex;"><span>│  • Deterministic 3-Level Evaluation (Exemplary / Competent / Recal)    │
+</span></span><span style="display:flex;"><span>└────────────────────────────────────────────────────────────────────────┘
+</span></span></code></pre></div><hr>
+<h2 id="4-regional-heat-safety--environmental-auditing-in-yuma-county">4. Regional Heat Safety &amp; Environmental Auditing in Yuma County</h2>
 <p>In desert southwest academic environments like Yuma County, Arizona, baseline physiological metrics cannot be evaluated in an environmental vacuum. High ambient heat, elevated indoor thermal indexes, and regional dehydration risks alter baseline cardiac output before a participant ever mounts the ergometer.</p>
 <p>Under our Curriculum-as-Code framework, environmental stress indexing is treated as an immutable pre-flight safety condition.</p>
-<h3>The Environmental Audit Gate</h3>
+<h3 id="the-environmental-audit-gate">The Environmental Audit Gate</h3>
 <p>Before clearing any participant for maximal or submaximal testing on the Lode Corival, the student technician must run an environmental pre-flight check in the WPE Digital Toolkit:</p>
-<li>**Wet Bulb Globe Temperature (WBGT) & Heat Index:** Assessed against National Weather Service (NWS) and ACSM environmental stratification guidelines.</li>
-<li>**Cardiac Drift Correction:** Accounting for ambient temperatures exceeding 85°F (29.4°C), where peripheral vasodilation and sweat-rate demands increase resting heart rates by 5 to 15 bpm, skewing submaximal VO2 predictions upward if uncorrected.</li>
-<li>**Pre-Hydration Protocol:** Verifying adherence to ACSM fluid intake recommendations prior to testing.</li>
-<pre><code><h3>ENVIRONMENTAL SAFETY PROTOCOL ###</h3>
-Location: AWC Yuma Campus — GY 116
-Ambient Lab Temperature: 74°F (23.3°C)
-Relative Humidity: 22%
-Heat Stress Risk Level: Controlled Indoor Baseline
-Auditor Clearance: PROCEED WITH ASTRAND-RHYMING PROTOCOL
-###</code></pre>
-<p>---</p>
-<h2>5. The SEAL Standard in Kinesiology Curricula</h2>
-<p>To guarantee institutional quality and legal compliance across public community college ecosystems, all EXW245 laboratory modules adhere to the **SEAL Standard**:</p>
-<pre><code>  [ S ] ──► Sovereign Data Architecture (Zero student PII leakage to third-party LLMs)
-  [ E ] ──► Environmental Context (Regional climate auditing & physiological adjustments)
-  [ A ] ──► Accessibility Upstream (Born-accessible WCAG 2.2 AA / ADA Title II compliance)
-  [ L ] ──► Laboratory Precision (Hyperbolic electronically braked instrumentation)</code></pre>
-<p>---</p>
-<h2>6. The Mission Loop Assessment in Production</h2>
-<p>Assessment across all EXW245 laboratory modules follows the **Mission Loop (Pattern / Rule / Solve)** architecture:</p>
-<li>**Pattern:** Identify baseline cardiovascular indicators, resting blood pressure responses, and potential contraindications to exercise testing.</li>
-<li>**Rule:** Apply the federal Physical Activity Guidelines for Americans (PAGA 2018, 2nd Ed.) and ACSM 12th Edition testing criteria strictly—halting protocols immediately upon reaching 85% of age-predicted maximum heart rate or observing adverse symptomology.</li>
-<li>**Solve:** Derive an accurate estimate of maximal oxygen consumption (VO2max in mL/kg/min) and translate the laboratory findings into a personalized, progressive exercise prescription.</li>
-<h3>The 3-Level Evaluation Standard</h3>
+<ul>
+<li><strong>Wet Bulb Globe Temperature (WBGT) &amp; Heat Index:</strong> Assessed against National Weather Service (NWS) and ACSM environmental stratification guidelines.</li>
+<li><strong>Cardiac Drift Correction:</strong> Accounting for ambient temperatures exceeding 85°F (29.4°C), where peripheral vasodilation and sweat-rate demands increase resting heart rates by 5 to 15 bpm, skewing submaximal VO2 predictions upward if uncorrected.</li>
+<li><strong>Pre-Hydration Protocol:</strong> Verifying adherence to ACSM fluid intake recommendations prior to testing.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>### ENVIRONMENTAL SAFETY PROTOCOL ###
+</span></span><span style="display:flex;"><span>Location: AWC Yuma Campus — GY 116
+</span></span><span style="display:flex;"><span>Ambient Lab Temperature: 74°F (23.3°C)
+</span></span><span style="display:flex;"><span>Relative Humidity: 22%
+</span></span><span style="display:flex;"><span>Heat Stress Risk Level: Controlled Indoor Baseline
+</span></span><span style="display:flex;"><span>Auditor Clearance: PROCEED WITH ASTRAND-RHYMING PROTOCOL
+</span></span><span style="display:flex;"><span>###
+</span></span></code></pre></div><hr>
+<h2 id="5-the-seal-standard-in-kinesiology-curricula">5. The SEAL Standard in Kinesiology Curricula</h2>
+<p>To guarantee institutional quality and legal compliance across public community college ecosystems, all EXW245 laboratory modules adhere to the <strong>SEAL Standard</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>  [ S ] ──► Sovereign Data Architecture (Zero student PII leakage to third-party LLMs)
+</span></span><span style="display:flex;"><span>  [ E ] ──► Environmental Context (Regional climate auditing &amp; physiological adjustments)
+</span></span><span style="display:flex;"><span>  [ A ] ──► Accessibility Upstream (Born-accessible WCAG 2.2 AA / ADA Title II compliance)
+</span></span><span style="display:flex;"><span>  [ L ] ──► Laboratory Precision (Hyperbolic electronically braked instrumentation)
+</span></span></code></pre></div><hr>
+<h2 id="6-the-mission-loop-assessment-in-production">6. The Mission Loop Assessment in Production</h2>
+<p>Assessment across all EXW245 laboratory modules follows the <strong>Mission Loop (Pattern / Rule / Solve)</strong> architecture:</p>
+<ul>
+<li><strong>Pattern:</strong> Identify baseline cardiovascular indicators, resting blood pressure responses, and potential contraindications to exercise testing.</li>
+<li><strong>Rule:</strong> Apply the federal Physical Activity Guidelines for Americans (PAGA 2018, 2nd Ed.) and ACSM 12th Edition testing criteria strictly—halting protocols immediately upon reaching 85% of age-predicted maximum heart rate or observing adverse symptomology.</li>
+<li><strong>Solve:</strong> Derive an accurate estimate of maximal oxygen consumption (VO2max in mL/kg/min) and translate the laboratory findings into a personalized, progressive exercise prescription.</li>
+</ul>
+<h3 id="the-3-level-evaluation-standard">The 3-Level Evaluation Standard</h3>
 <p>All lab reports are evaluated using a deterministic, three-tier grading rubric:</p>
-<p>| Level | Clinical & Engineering Standard |<br>| :--- | :--- |<br>| **Exemplary** | Zero mathematical variance between Part A AI simulation and Part B lab data; flawless execution of ACSM 12th Ed. blood pressure and steady-state heart rate monitoring (within plus or minus 5 bpm); seamless translation into an individualized exercise prescription. |<br>| **Competent** | Valid test protocol completion; minor calculation rounding differences; correct identification of steady-state criteria with minimal instructor recalibration. |<br>| **Recalibrate** | Failure to establish steady-state criteria over minutes 5 and 6; deviation from SSoT safety parameters; requires re-simulation in Part A sandbox before re-testing. |</p>
-<p>---</p>
-<h2>7. Conclusion: Engineering the Modern Hybrid Laboratory</h2>
-<p>The modern kinesiology laboratory does not need to choose between digital simulation and hands-on clinical apparatus. When integrated through **Curriculum-as-Code**, they form a unified learning continuum:</p>
-<li>**The AI sandbox (Part A)** dismantles arithmetic anxiety, traps conceptual errors early, and allows students to experiment with physiological models in a low-stakes environment.</li>
-<li>**The research-grade ergometer (Part B)** gives students the confidence to execute real-world physiological protocols with clinical precision.</li>
+<table>
+	<thead>
+			<tr>
+					<th style="text-align: left">Level</th>
+					<th style="text-align: left">Clinical &amp; Engineering Standard</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left"><strong>Exemplary</strong></td>
+					<td style="text-align: left">Zero mathematical variance between Part A AI simulation and Part B lab data; flawless execution of ACSM 12th Ed. blood pressure and steady-state heart rate monitoring (within plus or minus 5 bpm); seamless translation into an individualized exercise prescription.</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>Competent</strong></td>
+					<td style="text-align: left">Valid test protocol completion; minor calculation rounding differences; correct identification of steady-state criteria with minimal instructor recalibration.</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>Recalibrate</strong></td>
+					<td style="text-align: left">Failure to establish steady-state criteria over minutes 5 and 6; deviation from SSoT safety parameters; requires re-simulation in Part A sandbox before re-testing.</td>
+			</tr>
+	</tbody>
+</table>
+<hr>
+<h2 id="7-conclusion-engineering-the-modern-hybrid-laboratory">7. Conclusion: Engineering the Modern Hybrid Laboratory</h2>
+<p>The modern kinesiology laboratory does not need to choose between digital simulation and hands-on clinical apparatus. When integrated through <strong>Curriculum-as-Code</strong>, they form a unified learning continuum:</p>
+<ul>
+<li><strong>The AI sandbox (Part A)</strong> dismantles arithmetic anxiety, traps conceptual errors early, and allows students to experiment with physiological models in a low-stakes environment.</li>
+<li><strong>The research-grade ergometer (Part B)</strong> gives students the confidence to execute real-world physiological protocols with clinical precision.</li>
+</ul>
 <p>By governing the entire instructional pipeline through version-controlled Markdown, deterministic prompt engineering, and sovereign compliance standards, we ensure that every student receives an equitable, rigorous, and future-proof education in exercise science.</p>
-<p>---</p>
+<hr>
+<h2 id="academic-citation--attribution">Academic Citation &amp; Attribution</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bibtex" data-lang="bibtex"><span style="display:flex;"><span><span style="color:#a6e22e">@article</span>{pruitt2026hybridergometerscaffold,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">author</span>    = <span style="color:#e6db74">{Alan Pruitt}</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">title</span>     = <span style="color:#e6db74">{The Hybrid Ergometer Scaffold: Synchronizing AI Simulation with Lab Precision}</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">journal</span>   = <span style="color:#e6db74">{Curriculum-as-Code Publication Series}</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">year</span>      = <span style="color:#e6db74">{2026}</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">month</span>     = <span style="color:#e6db74">{aug}</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">number</span>    = <span style="color:#e6db74">{19}</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">url</span>       = <span style="color:#e6db74">{https://alanpruitt.com/articles/19-hybrid-ergometer-scaffold.html}</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">publisher</span> = <span style="color:#e6db74">{Webcognita LLC}</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div>
+            </div>
 
-    </article>
+            
+            <aside 
+              class="fixed bottom-0 left-0 right-0 z-40 border-t border-zinc-200 bg-white/95 px-4 py-3 shadow-lg backdrop-blur dark:border-zinc-800 dark:bg-zinc-950/95 sm:hidden" 
+              aria-label="Institutional Advisory Consultation"
+            >
+              <div class="mx-auto flex max-w-md items-center justify-between gap-3">
+                <div>
+                  <p class="text-xs font-bold text-zinc-950 dark:text-white">
+                    ADA Title II Fleet Audit
+                  </p>
+                  <p class="text-[11px] text-zinc-900 dark:text-zinc-100">
+                    Schedule executive briefing
+                  </p>
+                </div>
+                <a 
+                  href="mailto:alan.pruitt@gmail.com?subject=Institutional%20Strategy%20Briefing%20Inquiry" 
+                  class="inline-flex min-h-[44px] items-center justify-center rounded-lg bg-zinc-950 px-4 py-2 text-xs font-bold uppercase tracking-wider text-white shadow-sm transition-colors hover:bg-zinc-800 dark:bg-white dark:text-zinc-950 dark:hover:bg-zinc-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white"
+                  style="text-decoration: none;"
+                >
+                  Contact
+                </a>
+              </div>
+            </aside>
 
-    <!-- INJECT SOCIAL SHARE BLOCK -->
-    
-    <!-- Zero-JS Semantic Social Share -->
-    <div style="margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--bg-creme-200, #E6E6DC); display: flex; flex-direction: column; gap: 16px;" aria-label="Social sharing options">
-      <span style="font-family: monospace; font-size: 0.75rem; font-weight: bold; color: var(--navy-dark); text-transform: uppercase; tracking-wider">
-        Share this Architecture:
-      </span>
-      <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center;">
-        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Falanpruitt.com%2Fessays%2F19-hybrid-ergometer-scaffold" target="_blank" rel="noopener noreferrer" aria-label="Share on LinkedIn" style="font-family: monospace; font-size: 0.75rem; font-weight: 600; text-decoration: none; padding: 6px 12px; border-radius: 8px; border: 1px solid var(--bg-creme-200, #E6E6DC); color: var(--navy-dark); background-color: var(--bg-cream);">
+        </article>
+    </main>
+
+    <footer id="site-footer" class="mt-16 sm:mt-24 border-t border-[#E2D9C8] bg-[#F5F2EB] py-12 sm:py-16 text-[#0C2340] dark:border-zinc-800 dark:bg-zinc-950" aria-label="Site Footer">
+  <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col items-center justify-center text-center gap-8">
+      
+      
+      <div class="text-xs text-[#0C2340] dark:text-zinc-100 flex flex-col items-center gap-2">
+        <p class="font-semibold text-sm tracking-wide">&copy; 2026 Alan Pruitt. All rights reserved.</p>
+        <p class="text-zinc-700 dark:text-zinc-300">
+          
+            Curriculum-as-Code Architecture &bull; ADA Title II Compliant &bull; WCAG 2.1/2.2 AA Conforming
+          
+        </p>
+      </div>
+
+      
+      <div class="w-full max-w-2xl border-t border-b border-[#E2D9C8] py-5 px-4 dark:border-zinc-800 text-xs text-zinc-700 dark:text-zinc-300 flex flex-col gap-2.5 items-center text-center">
+        <p class="leading-relaxed">
+          <strong>Zero Textbook Cost (ZTC):</strong>
+          
+            All workshop materials are accessible Open Educational Resources (OER) provided freely with zero paywall barriers.
+          
+        </p>
+        <p class="leading-relaxed">
+          
+            This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="font-semibold underline hover:text-[#001F3F] dark:hover:text-emerald-400 focus:ring-2 focus:ring-[#003366]" target="_blank" rel="license noopener noreferrer">CC BY-NC-SA 4.0 International</a>.
+          
+        </p>
+      </div>
+
+      
+      <nav style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 24px; padding-top: 12px; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;" aria-label="Footer Navigation">
+        <a href="/" style="display: inline-flex; align-items: center; justify-content: center; min-height: 44px; min-width: 44px; padding: 6px 14px; color: #0C2340; text-decoration: underline; text-underline-offset: 4px;">
+          Home
+        </a>
+        <a href="/workshops/" style="display: inline-flex; align-items: center; justify-content: center; min-height: 44px; min-width: 44px; padding: 6px 14px; color: #0C2340; text-decoration: underline; text-underline-offset: 4px;">
+          Workshops
+        </a>
+        <a href="/essays/" style="display: inline-flex; align-items: center; justify-content: center; min-height: 44px; min-width: 44px; padding: 6px 14px; color: #0C2340; text-decoration: underline; text-underline-offset: 4px;">
+          Essays
+        </a>
+        <a href="https://www.webcognita.com/" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; justify-content: center; min-height: 44px; min-width: 44px; padding: 6px 14px; color: #0C2340; text-decoration: underline; text-underline-offset: 4px;">
+          Webcognita LLC
+        </a>
+        <a href="https://www.linkedin.com/in/alanpruitt/" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; justify-content: center; min-height: 44px; min-width: 44px; padding: 6px 14px; color: #0C2340; text-decoration: underline; text-underline-offset: 4px;">
           LinkedIn
         </a>
-        <a href="https://x.com/intent/post?text=The%20Hybrid%20Ergometer%20Scaffold%3A%20Synchronizing%20AI%20Simulation%20with%20Lab%20Precision&url=https%3A%2F%2Falanpruitt.com%2Fessays%2F19-hybrid-ergometer-scaffold&via=alanpruitt" target="_blank" rel="noopener noreferrer" aria-label="Share on X" style="font-family: monospace; font-size: 0.75rem; font-weight: 600; text-decoration: none; padding: 6px 12px; border-radius: 8px; border: 1px solid var(--bg-creme-200, #E6E6DC); color: var(--navy-dark); background-color: var(--bg-cream);">
-          X
-        </a>
-        <a href="https://reddit.com/submit?url=https%3A%2F%2Falanpruitt.com%2Fessays%2F19-hybrid-ergometer-scaffold&title=The%20Hybrid%20Ergometer%20Scaffold%3A%20Synchronizing%20AI%20Simulation%20with%20Lab%20Precision" target="_blank" rel="noopener noreferrer" aria-label="Share on Reddit" style="font-family: monospace; font-size: 0.75rem; font-weight: 600; text-decoration: none; padding: 6px 12px; border-radius: 8px; border: 1px solid var(--bg-creme-200, #E6E6DC); color: var(--navy-dark); background-color: var(--bg-cream);">
-          Reddit
-        </a>
-        <a href="mailto:?subject=The%20Hybrid%20Ergometer%20Scaffold%3A%20Synchronizing%20AI%20Simulation%20with%20Lab%20Precision&body=Read%20this%20Curriculum-as-Code%20architecture:%20https%3A%2F%2Falanpruitt.com%2Fessays%2F19-hybrid-ergometer-scaffold" aria-label="Share via Email" style="font-family: monospace; font-size: 0.75rem; font-weight: 600; text-decoration: none; padding: 6px 12px; border-radius: 8px; border: 1px solid var(--bg-creme-200, #E6E6DC); color: var(--navy-dark); background-color: var(--bg-cream);">
-          Email
-        </a>
-      </div>
+      </nav>
+
     </div>
+  </div>
+</footer>
 
-    <!-- Academic Citation & BibTeX Section -->
-    <section style="margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--bg-creme-200, #E6E6DC);"><h2>Academic Citation & Attribution</h2>
- & Attribution
-<pre><code>@article{pruitt2026hybridergometerscaffold,
-  author    = {Alan Pruitt},
-  title     = {The Hybrid Ergometer Scaffold: Synchronizing AI Simulation with Lab Precision},
-  journal   = {Curriculum-as-Code Publication Series},
-  year      = {2026},
-  month     = {aug},
-  number    = {19},
-  url       = {https://alanpruitt.com/articles/19-hybrid-ergometer-scaffold.html},
-  publisher = {Webcognita LLC}
-}</code></pre></section>
-  </main>
 
-  <!-- Footer -->
-  <footer style="width: 100%; padding: 32px 24px; text-align: center; font-size: 0.75rem; border-top: 1px solid var(--text-navy-950); background-color: var(--text-navy-900); color: var(--bg-creme-100);">
-    <p style="margin-bottom: 8px;">© 2026 Alan Pruitt • All Rights Reserved.</p>
-    <p style="opacity: 0.75; margin: 0;">Instructional Design, AI Pedagogy & Curriculum Architecture</p>
-  </footer>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  
+  document.querySelectorAll('pre code').forEach((block) => {
+    const container = block.parentElement;
+    if (!container || container.querySelector('.copy-prompt-btn')) return;
+
+    const copyBtn = document.createElement('button');
+    copyBtn.className = 'copy-prompt-btn';
+    copyBtn.type = 'button';
+    const isSpanish = document.documentElement.lang === 'es' || window.location.pathname.includes('/es/');
+    copyBtn.textContent = isSpanish ? 'Copiar Prompt' : 'Copy Prompt';
+
+    copyBtn.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(block.innerText);
+        const originalText = copyBtn.textContent;
+        copyBtn.textContent = isSpanish ? '¡Copiado!' : 'Copied!';
+        copyBtn.classList.add('copied');
+
+        setTimeout(() => {
+          copyBtn.textContent = originalText;
+          copyBtn.classList.remove('copied');
+        }, 2000);
+      } catch (err) {
+        console.error('Failed to copy text: ', err);
+      }
+    });
+
+    container.style.position = 'relative';
+    container.appendChild(copyBtn);
+  });
+
+  
+  const copyButtons = document.querySelectorAll('.prompt-card-wrapper .copy-prompt-btn');
+  copyButtons.forEach(button => {
+    button.addEventListener('click', async () => {
+      const card = button.closest('.prompt-card-wrapper');
+      if (!card) return;
+
+      const target = card.querySelector('.prompt-content-target');
+      if (!target) return;
+
+      const promptText = target.innerText.trim();
+
+      try {
+        await navigator.clipboard.writeText(promptText);
+
+        const btnText = button.querySelector('.btn-text') || button;
+        const originalText = btnText.innerText;
+        const isSpanish = document.documentElement.lang === 'es' || window.location.pathname.includes('/es/');
+
+        button.style.backgroundColor = '#065F46';
+        btnText.innerText = isSpanish ? '¡Copiado!' : 'Copied!';
+
+        setTimeout(() => {
+          button.style.backgroundColor = '#003366';
+          btnText.innerText = originalText;
+        }, 2200);
+
+      } catch (err) {
+        console.error('Clipboard copy failed:', err);
+        const btnText = button.querySelector('.btn-text') || button;
+        btnText.innerText = 'Error!';
+        setTimeout(() => {
+          button.style.backgroundColor = '#003366';
+          btnText.innerText = 'Copy';
+        }, 2000);
+      }
+    });
+  });
+});
+</script>
+
+
 </body>
 </html>

@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="CzTdgB5WJ_UjWFg7HpV9VOOACNmsgHQP1mFMI2b_tls" />
+    <title>Essay 38: What If I Didn&#39;t Build the Graph? – Why Curriculum-as-Code Transcends Flat Docs-as-Code with DOM GraphRAG &amp; W3C PROV-O | Alan Pruitt (Coach Alan) — Curriculum Architect &amp; AI Strategist</title>
+    <meta name="description" content="A counterfactual examination of why flat vector RAG fails clinical higher education—and how DOM GraphRAG, W3C PROV-O provenance receipts, Born-Accessible 9:1 XAI scorecards, and W3C SKOS bilingual ontologies protect academic sovereignty.">
+    <meta name="keywords" content="Alan Pruitt, Coach Alan, Curriculum-as-Code, S-A-R Standard, The Clinical Framing Protocol, ADA Title II Accessibility, WCAG 2.2 AA 9:1 Contrast, WCAG 3.0 Cognitive Accessibility, Air-Gapped Sovereign AI, Webcognita LLC, Essay 38: What If I Didn&#39;t Build the Graph? – Why Curriculum-as-Code Transcends Flat Docs-as-Code with DOM GraphRAG &amp; W3C PROV-O">
+    <meta name="author" content="Alan Pruitt">
+    <link rel="canonical" href="https://alanpruitt.com/essays/essay-38-dom-graphrag-and-prov-o-curriculum-as-code/">
+    <link rel="me" href="https://www.linkedin.com/in/alanpruitt/">
+
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Alan Pruitt | Curriculum-as-Code">
+    <meta property="og:title" content="Essay 38: What If I Didn&#39;t Build the Graph? – Why Curriculum-as-Code Transcends Flat Docs-as-Code with DOM GraphRAG &amp; W3C PROV-O | Alan Pruitt">
+    <meta property="og:description" content="A counterfactual examination of why flat vector RAG fails clinical higher education—and how DOM GraphRAG, W3C PROV-O provenance receipts, Born-Accessible 9:1 XAI scorecards, and W3C SKOS bilingual ontologies protect academic sovereignty.">
+    <meta property="og:url" content="https://alanpruitt.com/essays/essay-38-dom-graphrag-and-prov-o-curriculum-as-code/">
+    <meta property="og:image" content="https://alanpruitt.com/assets/og-preview.png">
+    <meta property="article:author" content="https://www.linkedin.com/in/alanpruitt/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Essay 38: What If I Didn&#39;t Build the Graph? – Why Curriculum-as-Code Transcends Flat Docs-as-Code with DOM GraphRAG &amp; W3C PROV-O | Alan Pruitt">
+    <meta name="twitter:description" content="A counterfactual examination of why flat vector RAG fails clinical higher education—and how DOM GraphRAG, W3C PROV-O provenance receipts, Born-Accessible 9:1 XAI scorecards, and W3C SKOS bilingual ontologies protect academic sovereignty.">
+    <meta name="twitter:image" content="https://alanpruitt.com/assets/og-preview.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "\"Essay 38: What If I Didn't Build the Graph? – Why Curriculum-as-Code Transcends Flat Docs-as-Code with DOM GraphRAG \\u0026 W3C PROV-O\"",
+      "description": "\"A counterfactual examination of why flat vector RAG fails clinical higher education—and how DOM GraphRAG, W3C PROV-O provenance receipts, Born-Accessible 9:1 XAI scorecards, and W3C SKOS bilingual ontologies protect academic sovereignty.\"",
+      "url": "\"https://alanpruitt.com/essays/essay-38-dom-graphrag-and-prov-o-curriculum-as-code/\"",
+      "inLanguage": "en",
+      "author": {
+        "@type": "Person",
+        "@id": "https://alanpruitt.com/#person",
+        "name": "Alan Pruitt",
+        "jobTitle": "Founder & Chief Curriculum Architect",
+        "url": "https://alanpruitt.com/",
+        "sameAs": [
+          "https://www.linkedin.com/in/alanpruitt/",
+          "https://www.webcognita.com/"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://www.webcognita.com/#organization",
+        "name": "Webcognita LLC",
+        "url": "https://www.webcognita.com/"
+      }
+    }
+    </script>
+
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%230B192C'/></svg>">
+
+    <style>
+        :root {
+            --bg-creme-50: #fbfbfb;
+            --bg-creme-100: #FAF8F5;
+            --bg-creme-200: #EAE3D2;
+            --text-navy-800: #1B2A4A;
+            --text-navy-900: #0B192C;
+        }
+
+        *, ::before, ::after { box-sizing: border-box; border-width: 0; }
+        html { line-height: 1.5; -webkit-text-size-adjust: 100%; tab-size: 4; font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+        body { margin: 0; background-color: var(--bg-creme-100); color: var(--text-navy-900); }
+
+        .w-full { width: 100%; }
+        .max-w-3xl { max-width: 48rem; }
+        .max-w-6xl { max-width: 72rem; }
+        .mx-auto { margin-left: auto; margin-right: auto; }
+        .flex { display: flex; }
+        .flex-col { flex-direction: column; }
+        .flex-grow { flex-grow: 1; }
+        .items-center { align-items: center; }
+        .justify-between { justify-content: space-between; }
+        .flex-wrap { flex-wrap: wrap; }
+        .gap-3 { gap: 0.75rem; }
+        .gap-4 { gap: 1rem; }
+
+        .p-6 { padding: 1.5rem; }
+        .p-8 { padding: 2rem; }
+        .px-4 { padding-left: 1rem; padding-right: 1rem; }
+        .px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+        .py-10 { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+        .py-16 { padding-top: 4rem; padding-bottom: 4rem; }
+        .pb-24 { padding-bottom: 6rem; }
+
+        .mt-3 { margin-top: 0.75rem; }
+        .mt-6 { margin-top: 1.5rem; }
+        .mb-6 { margin-bottom: 1.5rem; }
+        .mb-8 { margin-bottom: 2rem; }
+        .mb-10 { margin-bottom: 2.5rem; }
+
+        .border-b { border-bottom-style: solid; border-bottom-width: 1px; }
+        .border-t { border-top-style: solid; border-top-width: 1px; }
+        .border-zinc-200 { border-color: #e4e4e7; }
+        .border-zinc-800 { border-color: #27272a; }
+
+        .font-semibold { font-weight: 600; }
+        .font-bold { font-weight: 700; }
+        .font-extrabold { font-weight: 800; }
+
+        .text-xs { font-size: 0.75rem; line-height: 1rem; }
+        .text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+        .text-base { font-size: 1rem; line-height: 1.5rem; }
+        .text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+        .text-2xl { font-size: 1.5rem; line-height: 2rem; }
+        .text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+        .uppercase { text-transform: uppercase; }
+        .tracking-wider { letter-spacing: 0.05em; }
+
+        .focus-visible\:outline:focus-visible { outline: 2px solid var(--text-navy-900); outline-offset: 2px; }
+
+         
+        .prose h2 { font-size: 1.5rem; font-weight: 800; color: #09090b; margin-top: 2rem; margin-bottom: 1rem; text-align: left; }
+        .prose h3 { font-size: 1.25rem; font-weight: 700; color: #09090b; margin-top: 1.5rem; margin-bottom: 0.75rem; text-align: left; }
+        .prose p { margin-top: 0.5rem; margin-bottom: 1rem; font-size: 1rem; line-height: 1.6; color: #18181b; text-align: left; }
+        .prose ul { margin-top: 0.5rem; margin-bottom: 1rem; padding-left: 1.5rem; list-style-type: disc; color: #18181b; text-align: left; }
+        .prose li { margin-bottom: 0.5rem; }
+        .prose hr { margin-top: 2rem; margin-bottom: 2rem; border-top: 3px solid #a1a1aa; }
+        .prose a { color: #09090b; text-decoration: underline; font-weight: 600; }
+
+         
+        .fixed { position: fixed; }
+        .bottom-0 { bottom: 0; }
+        .left-0 { left: 0; }
+        .right-0 { right: 0; }
+        .z-40 { z-index: 40; }
+        .shadow-lg { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
+        .backdrop-blur { backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+        .bg-white\/95 { background-color: rgba(255, 255, 255, 0.95); }
+        .max-w-md { max-width: 28rem; }
+        .inline-flex { display: inline-flex; }
+        .min-h-\[44px\] { min-height: 44px; }
+        .rounded-lg { border-radius: 0.5rem; }
+        .bg-zinc-950 { background-color: #09090b; }
+        .text-white { color: #ffffff; }
+        .text-zinc-500 { color: #71717a; }
+
+        @media (min-width: 640px) {
+            .sm\:hidden { display: none; }
+            .sm\:pb-16 { padding-bottom: 4rem; }
+        }
+
+         
+        @media (prefers-color-scheme: dark) {
+            body { background-color: #09090b; color: #f4f4f5; }
+            .prose h2 { color: #ffffff; }
+            .prose h3 { color: #ffffff; }
+            .prose p { color: #f4f4f5; }
+            .prose ul { color: #f4f4f5; }
+            .prose hr { border-top: 3px solid #52525b; }
+            .border-zinc-200 { border-color: #27272a; }
+            .bg-white\/95 { background-color: rgba(9, 9, 11, 0.95); }
+        }
+    </style>
+    <style>
+  @media print {
+     
+    @page {
+      margin: 20mm 15mm 20mm 15mm;
+      size: auto;
+    }
+
+     
+    *,
+    *::before,
+    *::after {
+      background: transparent !important;
+      color: #000 !important;
+      box-shadow: none !important;
+      text-shadow: none !important;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+      font-size: 11pt !important;
+      line-height: 1.5 !important;
+      color: #111 !important;
+    }
+
+     
+    header,
+    nav,
+    footer,
+    .no-print,
+    #site-header,
+    #site-footer,
+    #language-switcher,
+    .language-switcher,
+    button,
+    .interactive-widget,
+    dialog {
+      display: none !important;
+    }
+
+     
+    main,
+    article,
+    .max-w-4xl,
+    .max-w-5xl,
+    .container {
+      max-width: 100% !important;
+      width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      border: none !important;
+    }
+
+     
+    h1 {
+      font-size: 20pt !important;
+      line-height: 1.2 !important;
+      margin-top: 0 !important;
+      margin-bottom: 12pt !important;
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+
+    h2 {
+      font-size: 15pt !important;
+      margin-top: 18pt !important;
+      margin-bottom: 8pt !important;
+      border-bottom: 1px solid #ddd !important;
+      padding-bottom: 4pt !important;
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+
+    h3 {
+      font-size: 12pt !important;
+      margin-top: 14pt !important;
+      margin-bottom: 6pt !important;
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+
+    p, li {
+      orphans: 3;
+      widows: 3;
+    }
+
+     
+    blockquote {
+      border-left: 3pt solid #333 !important;
+      padding-left: 10pt !important;
+      margin: 12pt 0 !important;
+      font-style: italic !important;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+     
+    pre, code {
+      font-family: "Courier New", Courier, monospace !important;
+      font-size: 9.5pt !important;
+      border: 1px solid #ccc !important;
+      background-color: #f9f9f9 !important;
+      page-break-inside: avoid;
+      break-inside: avoid;
+      white-space: pre-wrap !important;
+      word-break: break-word !important;
+    }
+
+     
+    table {
+      width: 100% !important;
+      border-collapse: collapse !important;
+      page-break-inside: avoid;
+      break-inside: avoid;
+      margin: 12pt 0 !important;
+    }
+
+    th, td {
+      border: 1px solid #bbb !important;
+      padding: 6pt 8pt !important;
+      font-size: 9pt !important;
+      text-align: left !important;
+    }
+
+    th {
+      background-color: #eee !important;
+      font-weight: bold !important;
+    }
+
+     
+    article a[href^="http://"]::after,
+    article a[href^="https://"]::after {
+      content: " (" attr(href) ")";
+      font-size: 8.5pt;
+      font-weight: normal;
+      color: #444 !important;
+    }
+
+     
+    article a[href^="#"]::after,
+    article a[href^="/"]::after {
+      content: "";
+    }
+
+     
+    .print-header-badge {
+      display: block !important;
+      border-bottom: 2pt solid #000;
+      padding-bottom: 8pt;
+      margin-bottom: 16pt;
+    }
+  }
+
+   
+  .print-header-badge {
+    display: none;
+  }
+</style>
+
+</head>
+<body class="bg-creme-100 text-navy-900 font-sans antialiased min-h-full flex flex-col justify-between dark:bg-zinc-950 dark:text-zinc-100">
+
+    
+<header style="position: sticky; top: 0; z-index: 50; width: 100%; border-bottom: 1px solid #e4e4e7; background-color: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px);">
+  <div style="max-width: 64rem; margin: 0 auto; height: 4rem; display: flex; align-items: center; justify-content: space-between; padding: 0 1.25rem;">
+    
+    
+    <a href="/" style="display: flex; align-items: center; gap: 0.5rem; text-decoration: none; color: #002147;" aria-label="Home">
+      <span style="font-size: 1.125rem; font-weight: 800; white-space: nowrap;">Alan Pruitt</span>
+      <span id="ap-brand-dot" style="color: #a1a1aa; font-weight: bold; display: none;">•</span>
+      <span id="ap-brand-badge" style="padding: 0.15rem 0.5rem; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; border-radius: 0.375rem; border: 1px solid #d4d4d8; background-color: #f4f4f5; color: #27272a; display: none;">CaC Architect</span>
+    </a>
+
+    
+    <nav id="ap-desktop-nav" style="display: none; align-items: center; gap: 1.5rem;">
+      <a href="/workshops/" style="text-decoration: none; color: #3f3f46; font-size: 0.9rem; font-weight: 600;">Workshops</a>
+      <a href="/roi-calculator/" style="text-decoration: none; color: #3f3f46; font-size: 0.9rem; font-weight: 600;">ROI Calculator</a>
+      <a href="/essays/" style="text-decoration: none; color: #3f3f46; font-size: 0.9rem; font-weight: 600;">Essays</a>
+
+      
+      
+      
+        
+        
+      
+      <div style="display: flex; align-items: center; border: 1px solid #d4d4d8; border-radius: 0.375rem; background-color: #f4f4f5; padding: 0.125rem; gap: 0.125rem;">
+        <a href="/essays/essay-38-dom-graphrag-and-prov-o-curriculum-as-code/" style="padding: 0.25rem 0.5rem; font-size: 0.75rem; font-weight: 700; text-decoration: none; border-radius: 0.25rem; background-color: #002147; color: #fff;">EN</a>
+        <a href="/es/" style="padding: 0.25rem 0.5rem; font-size: 0.75rem; font-weight: 700; text-decoration: none; border-radius: 0.25rem; color: #52525b;">ES</a>
+      </div>
+    </nav>
+
+    
+    <div id="ap-mobile-nav" style="display: none; align-items: center; gap: 1rem;">
+      <div style="display: flex; align-items: center; border: 1px solid #d4d4d8; border-radius: 0.375rem; background-color: #f4f4f5; padding: 0.125rem; gap: 0.125rem;">
+        <a href="/essays/essay-38-dom-graphrag-and-prov-o-curriculum-as-code/" style="padding: 0.25rem 0.5rem; font-size: 0.75rem; font-weight: 700; text-decoration: none; border-radius: 0.25rem; background-color: #002147; color: #fff;">EN</a>
+        <a href="/es/" style="padding: 0.25rem 0.5rem; font-size: 0.75rem; font-weight: 700; text-decoration: none; border-radius: 0.25rem; color: #52525b;">ES</a>
+      </div>
+
+      <details style="position: relative; margin: 0;">
+        <summary style="list-style: none; cursor: pointer; display: flex; align-items: center; gap: 0.35rem; padding: 0.35rem 0.75rem; border-radius: 0.375rem; border: 1.5px solid #002147; background-color: #FFF9F0; color: #002147; font-size: 0.75rem; font-weight: 800; text-transform: uppercase;">
+          <span>Menu</span>
+          <svg style="width: 1rem; height: 1rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
+        </summary>
+        <div style="position: absolute; right: 0; top: calc(100% + 0.5rem); width: 14rem; background-color: #FFF9F0; border: 2px solid #002147; border-radius: 0.5rem; padding: 0.5rem; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); z-index: 60; display: flex; flex-direction: column; gap: 0.25rem;">
+          <a href="/workshops/" style="display: flex; justify-content: space-between; padding: 0.5rem 0.75rem; text-decoration: none; color: #002147; font-size: 0.875rem; font-weight: 700;"><span>Workshops</span><span style="color: #71717a;">&rarr;</span></a>
+          <a href="/roi-calculator/" style="display: flex; justify-content: space-between; padding: 0.5rem 0.75rem; text-decoration: none; color: #002147; font-size: 0.875rem; font-weight: 700;"><span>ROI Calculator</span><span style="color: #71717a;">&rarr;</span></a>
+          <a href="/essays/" style="display: flex; justify-content: space-between; padding: 0.5rem 0.75rem; text-decoration: none; color: #002147; font-size: 0.875rem; font-weight: 700;"><span>Essays</span><span style="color: #71717a;">&rarr;</span></a>
+        </div>
+      </details>
+    </div>
+
+  </div>
+</header>
+
+<script>
+  function enforceHeaderLayout() {
+    var width = window.innerWidth;
+    if (width >= 768) {
+      document.getElementById("ap-desktop-nav").style.display = "flex";
+      document.getElementById("ap-mobile-nav").style.display = "none";
+      document.getElementById("ap-brand-dot").style.display = "inline-block";
+      document.getElementById("ap-brand-badge").style.display = "inline-flex";
+    } else {
+      document.getElementById("ap-desktop-nav").style.display = "none";
+      document.getElementById("ap-mobile-nav").style.display = "flex";
+      document.getElementById("ap-brand-dot").style.display = "none";
+      document.getElementById("ap-brand-badge").style.display = "none";
+    }
+  }
+  window.addEventListener("resize", enforceHeaderLayout);
+  document.addEventListener("DOMContentLoaded", enforceHeaderLayout);
+  enforceHeaderLayout();
+</script>
+
+
+    <main class="w-full max-w-6xl mx-auto px-6 py-8 flex-grow">
+        <article class="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-16 lg:px-8 pb-24 sm:pb-16">
+            
+            
+            <nav class="mb-6" aria-label="Breadcrumb">
+                <a 
+                  href="/essays/" 
+                  class="inline-flex min-h-[44px] items-center text-xs font-bold uppercase tracking-wider text-zinc-900 hover:text-zinc-950 dark:text-zinc-100 dark:hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white"
+                  style="text-decoration: none; color: inherit;"
+                >
+                  &larr; Back to Essays
+                </a>
+            </nav>
+
+            
+            <header>
+                <h1 class="text-2xl font-extrabold tracking-tight text-zinc-950 dark:text-white sm:text-4xl text-left">
+                  Essay 38: What If I Didn&#39;t Build the Graph? – Why Curriculum-as-Code Transcends Flat Docs-as-Code with DOM GraphRAG &amp; W3C PROV-O
+                </h1>
+                
+<div class="print-header-badge" aria-hidden="true">
+  <div style="display: flex; justify-content: space-between; align-items: baseline;">
+    <span style="font-size: 13pt; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em;">Alan Pruitt &bull; Executive Brief</span>
+    <span style="font-size: 9pt; color: #555;">alanpruitt.com</span>
+  </div>
+</div>
+
+
+<div class="mb-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between border-b border-zinc-200 pb-6 dark:border-zinc-800 text-left">
+  <div>
+    <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
+      <time datetime="2026-11-01">November 1, 2026</time>
+      <span>&bull;</span>
+      <span>6 min read</span>
+    </div>
+  </div>
+
+  
+  <div class="no-print">
+    <button 
+      type="button" 
+      onclick="window.print()" 
+      class="inline-flex min-h-[44px] items-center gap-2 rounded-lg border border-zinc-300 bg-white px-3.5 py-2 text-xs font-bold uppercase tracking-wider text-zinc-800 shadow-sm transition hover:bg-zinc-50 hover:text-zinc-950 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-200 dark:hover:bg-zinc-800 dark:hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white"
+      aria-label="Print or save this essay as a PDF"
+    >
+      <svg class="h-4 w-4 shrink-0 text-zinc-600 dark:text-zinc-300" style="width: 16px !important; height: 16px !important;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
+      </svg>
+      <span>Print / Save PDF</span>
+    </button>
+  </div>
+</div>
+
+            </header>
+
+            
+            <div class="prose max-w-none">
+                <p>When I first engineered a <strong>Git-versioned Markdown repository</strong> with <strong>automated CI/CD workflows</strong> to manage a multi-course exercise science and clinical nutrition fleet (<code>EXW 101</code>, <code>EXW 150</code>, <code>EXW 210</code>, <code>EXW 245</code>, and <code>EXW 265</code>), I could have stopped at standard <em>Docs-as-Code</em>.</p>
+<p>I already had clean Markdown source files, automated <strong>Canvas GraphQL</strong> synchronization, and a local vector index over <strong>3,151 curriculum chunks</strong>. By conventional software documentation standards, the pipeline was finished.</p>
+<p>Every time a system reaches baseline maturity, however, I pressure-test it against the same guiding counterfactual:</p>
+<p><strong>What if I didn&rsquo;t build the graph?</strong></p>
+<p>What if I treated a clinical kinesiology and nutrition curriculum like a flat software manual—slicing pages into isolated 500-token chunks, retrieving them by raw cosine similarity, returning opaque AI confidence numbers to students, and assuming English-only terminology would magically serve a bilingual <strong>Hispanic-Serving Institution (HSI)</strong> along the <strong>Yuma, AZ / Imperial Valley, CA</strong> borderland?</p>
+<p>The answer is clear: flat <em>Docs-as-Code</em> without structural pedagogy and cryptographic provenance eventually collapses back into probabilistic guesswork.</p>
+<hr>
+<h2 id="anatomy-of-the-flat-vector-trap">Anatomy of the Flat-Vector Trap</h2>
+<p>In enterprise software documentation, <em>Docs-as-Code</em> treats pages as independent reference articles. If a developer searches for an API parameter, any matching paragraph will suffice.</p>
+<p>Higher education—especially clinical exercise physiology and nutrition governed by non-negotiable <strong>Federal Single Sources of Truth</strong> (<strong>PAGA 2nd Ed. 2018</strong>, <strong>2025–2030 Dietary Guidelines for Americans</strong>, <strong>ACSM 12th Ed.</strong>, and the <strong>NASM OPT Model</strong>)—operates under far stricter constraints. Leaving a Retrieval-Augmented Generation (RAG) pipeline flat creates four structural fault lines:</p>
+<ol>
+<li><strong>Context-Blind Retrieval (Orphaned Clinical Rules):</strong>
+When a Markdown module is sliced into flat chunks, a contraindication table or safety gate loses its relationship to the Module&rsquo;s <strong>Course Learning Outcomes (CLOs)</strong>, its Required Reading foundation, and its parent phase inside <strong>The Clinical Framing Protocol (<code>Pattern / Rule / Solve</code>)</strong>.</li>
+<li><strong>Unverifiable AI Synthesis (Zero Lineage):</strong>
+If an AI tutor or clinical auditor synthesizes feedback without a machine-readable provenance graph, neither the student nor an accreditation committee can prove <em>which</em> exact Federal SSoT revision, Git commit, or local model produced the recommendation.</li>
+<li><strong>The Black-Box Score Fallacy:</strong>
+Handing a student a single opaque similarity percentage (<code>84% Match</code>) tells them nothing about <em>why</em> their clinical reasoning succeeded or where their safety gate failed.</li>
+<li><strong>The Bilingual Vocabulary Gap:</strong>
+When a first-generation resident in Yuma or San Luis describes heat exhaustion in authentic <strong>Norteño-Spanish</strong> (<em>&ldquo;se le bajó la presión y anda bien mareado en el calorón de Yuma&rdquo;</em>), a flat English vector index misses the exact clinical mapping to <strong>exertional heat illness</strong>, <strong>orthostatic hypotension</strong>, and <strong>WBGT &gt; 82°F fluid replacement gates</strong>.</li>
+</ol>
+<hr>
+<h2 id="engineering-the-upgrade-four-pillars-of-s-a-r-v22">Engineering the Upgrade: Four Pillars of S-A-R v2.2</h2>
+<p>As an <strong>Adjunct Faculty of Exercise Science &amp; Wellness at Arizona Western College</strong>, <strong>Generative AI Strategist at The University of Arizona</strong>, and <strong>Principal of Webcognita LLC (VOSB)</strong>, I designed the <strong>S-A-R Standard (Scalable / Auditable / Repeatable)</strong> so that every architectural gap is closed deterministically across the entire <strong>scalable $0 ZTC Open Educational Resource (OER) course fleet</strong>.</p>
+<p>Instead of settling for flat <em>Docs-as-Code</em>, we upgraded the <strong>EXW Master Library (<code>v2.2</code>)</strong> with four open-standard semantic layers running on <strong>air-gapped Google Gemini Argon 4 models locally on Apple Silicon (M1/M2) for 100% FERPA privacy</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>+-----------------------------------------------------------------------------+
+</span></span><span style="display:flex;"><span>|            CURRICULUM-AS-CODE (S-A-R v2.2) SEMANTIC GRAPH ENGINE            |
+</span></span><span style="display:flex;"><span>|                                                                             |
+</span></span><span style="display:flex;"><span>|  [1. W3C SKOS Ontology]  -&gt;  Bilingual Norteño-Spanish &lt;-&gt; Clinical SSoT    |
+</span></span><span style="display:flex;"><span>|  [2. DOM GraphRAG]       -&gt;  3,151 Nodes Linked by CLOs &amp; Pattern/Rule/Solve|
+</span></span><span style="display:flex;"><span>|  [3. Born-Accessible XAI]-&gt;  9:1 Contrast 4D Radar (Pattern/Rule/Solve/Ver.)|
+</span></span><span style="display:flex;"><span>|  [4. W3C PROV-O Receipt] -&gt;  Cryptographic SHA-256 Lineage (SSoT -&gt; Argon4) |
+</span></span><span style="display:flex;"><span>+-----------------------------------------------------------------------------+
+</span></span></code></pre></div><h3 id="1-dom-graphrag-structural-pedagogical-graph">1. DOM GraphRAG (Structural Pedagogical Graph)</h3>
+<p>Rather than indexing isolated text fragments, our indexer (<code>scripts/index_corpus.py</code>) parses the semantic Document Object Model (DOM) of every curriculum file. Every one of our <strong>3,151 curriculum vectors</strong> is enriched with a <code>dom_graph_node</code> payload containing:</p>
+<ul>
+<li>Its exact <code>dom_path</code> (<code>h2 &gt; h3</code> semantic hierarchy),</li>
+<li>Its governing role inside <strong>The Clinical Framing Protocol (<code>Pattern / Rule / Solve</code>)</strong>,</li>
+<li>Its explicit <strong>Course Learning Outcome (<code>CLO</code>)</strong> alignment, and</li>
+<li>Directed <code>graph_edges</code> (<code>parent_module</code>, <code>requires_reading</code>, <code>grounds_lab</code>, <code>grounds_discussion</code>, and <code>governed_by_ssot</code>).</li>
+</ul>
+<p>When a student audits a lab inside Canvas, the engine retrieves not just a matching paragraph, but the complete pedagogical subgraph linking the reading, the lab rubric, and the federal guideline.</p>
+<h3 id="2-w3c-prov-o-cryptographic-provenance-receipts">2. W3C PROV-O Cryptographic Provenance Receipts</h3>
+<p>Every live <strong>Sovereign AI Auditing</strong> response returned by our local API (<code>scripts/canvas_rag_api.py</code>) now emits a formal <strong>W3C PROV-O (<code>http://www.w3.org/ns/prov#</code>)</strong> JSON-LD provenance graph (<code>prov_o_receipt</code>) alongside a deterministic SHA-256 <code>receipt_id</code>:</p>
+<ul>
+<li><strong><code>prov:Entity</code> (<code>exw:SSoTCorpus</code>):</strong> The exact federal guideline (<code>PAGA 2018</code>, <code>DGA 2025-2030</code>, <code>ACSM 12th Ed.</code>, or <code>NASM OPT</code>) and the Git-versioned curriculum chunks retrieved.</li>
+<li><strong><code>prov:Activity</code> (<code>exw:ClinicalAuditSynthesis</code>):</strong> The timestamped execution of the local RAG + Clinical Framing audit.</li>
+<li><strong><code>prov:Agent</code> (<code>exw:SovereignArgon4Auditor</code>):</strong> Our air-gapped local <strong>Google Gemini Argon 4</strong> engine running on Apple Silicon (<code>M1/M2</code>) with zero external cloud telemetry.</li>
+</ul>
+<h3 id="3-born-accessible-91-contrast-4-dimensional-xai-radar-scorecard">3. Born-Accessible (<code>9:1</code> Contrast) 4-Dimensional XAI Radar Scorecard</h3>
+<p>Under our <strong>ADA Title II &amp; Atomic WCAG 2.2 AA / 3.0 Higher Ed Architecture</strong>, explainability must be born accessible. Inside the live Canvas Clinical Auditor Modal, we replaced single-number confidence scores with a <strong>4-Dimensional Explainable AI (XAI) Radar Scorecard</strong> engineered to our strict <strong>9:1 Double-Contrast Guard</strong> (<code>#FFFFFF</code> on <code>#090D16</code> = <code>19.3:1</code>; <code>#38BDF8</code> sky cyan = <code>9.82:1</code>; <code>#34D399</code> mint = <code>10.45:1</code>; <code>#FBBF24</code> amber = <code>11.85:1</code>):</p>
+<ul>
+<li><strong>Pattern (<code>Context &amp; Telemetry</code> — 25%):</strong> Client vitals, biometrics, and regional <strong>Yuma / Imperial Valley</strong> heat stressors.</li>
+<li><strong>Rule (<code>Federal SSoT Citation</code> — 25%):</strong> Explicit quantitative anchors from PAGA, DGA, ACSM, or NASM.</li>
+<li><strong>Solve (<code>Clinical Intervention</code> — 25%):</strong> Concrete FITT-VP or &ldquo;Real Food&rdquo; prescription with safety gates.</li>
+<li><strong>Active Verification (<code>150-Word Defense</code> — 25%):</strong> Authentic human justification in the student&rsquo;s own voice.</li>
+</ul>
+<h3 id="4-w3c-skos--schemaorg-bilingual-clinical-controlled-vocabulary">4. W3C SKOS / Schema.org Bilingual Clinical Controlled Vocabulary</h3>
+<p>To honor our mission of delivering <strong>bilingual &ldquo;In Plain English&rdquo; OER across borderland HSI communities</strong>, we authored a formal <strong>W3C SKOS (<code>Simple Knowledge Organization System</code>)</strong> and <strong>Schema.org (<code>MedicalEntity</code>)</strong> controlled vocabulary (<code>01_INFRASTRUCTURE/skos_bilingual_clinical_taxonomy.json</code>).</p>
+<p>Colloquial <strong>Norteño-Spanish</strong> clinical expressions (<code>skos:altLabel @es-MX-Norteno</code>) map deterministically to English and Spanish clinical terms (<code>skos:prefLabel</code>) and federal SSoT rules (<code>skos:definition</code>). When a resident queries our RAG pipeline in Norteño-Spanish, the SKOS layer automatically expands the vector query across languages—lifting top clinical retrieval similarity from <code>0.7743</code> to <strong><code>0.8236</code></strong> without requiring the student to abandon their community&rsquo;s authentic voice.</p>
+<hr>
+<h2 id="slow-is-smooth-smooth-is-fast">Slow is Smooth, Smooth is Fast</h2>
+<p><em>What if I didn&rsquo;t build the graph?</em></p>
+<p>Without <strong>DOM GraphRAG</strong>, <strong>W3C PROV-O</strong>, <strong>Born-Accessible 9:1 XAI</strong>, and <strong>W3C SKOS bilingual ontologies</strong>, a course repository is just a static folder of text waiting to be summarized by commercial chatbots.</p>
+<p>By binding every paragraph, bilingual clinical term, and AI audit receipt into an auditable semantic graph, we prove that <strong>Curriculum-as-Code</strong> can simultaneously defend academic rigor, guarantee <strong>100% FERPA privacy</strong>, and expand equitable access for every student in our borderland classrooms.</p>
+<hr>
+<h3 id="explore-the-architecture-briefs--white-papers">Explore the Architecture Briefs &amp; White Papers</h3>
+<p>All six formal architecture briefs and technical white papers—including the <strong>EXW S-A-R v2.2 DOM GraphRAG &amp; W3C PROV-O Architecture Brief</strong> and the <strong>AWC 2026 Innovation Fund &ldquo;Project Horizon&rdquo; White Papers</strong>—are available for direct download in the <a href="/#architecture-briefs"><strong>Architecture Briefs &amp; Grant White Papers shelf on alanpruitt.com</strong></a>.</p>
+
+            </div>
+
+            
+            <aside 
+              class="fixed bottom-0 left-0 right-0 z-40 border-t border-zinc-200 bg-white/95 px-4 py-3 shadow-lg backdrop-blur dark:border-zinc-800 dark:bg-zinc-950/95 sm:hidden" 
+              aria-label="Institutional Advisory Consultation"
+            >
+              <div class="mx-auto flex max-w-md items-center justify-between gap-3">
+                <div>
+                  <p class="text-xs font-bold text-zinc-950 dark:text-white">
+                    ADA Title II Fleet Audit
+                  </p>
+                  <p class="text-[11px] text-zinc-900 dark:text-zinc-100">
+                    Schedule executive briefing
+                  </p>
+                </div>
+                <a 
+                  href="mailto:alan.pruitt@gmail.com?subject=Institutional%20Strategy%20Briefing%20Inquiry" 
+                  class="inline-flex min-h-[44px] items-center justify-center rounded-lg bg-zinc-950 px-4 py-2 text-xs font-bold uppercase tracking-wider text-white shadow-sm transition-colors hover:bg-zinc-800 dark:bg-white dark:text-zinc-950 dark:hover:bg-zinc-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white"
+                  style="text-decoration: none;"
+                >
+                  Contact
+                </a>
+              </div>
+            </aside>
+
+        </article>
+    </main>
+
+    <footer id="site-footer" class="mt-16 sm:mt-24 border-t border-[#E2D9C8] bg-[#F5F2EB] py-12 sm:py-16 text-[#0C2340] dark:border-zinc-800 dark:bg-zinc-950" aria-label="Site Footer">
+  <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col items-center justify-center text-center gap-8">
+      
+      
+      <div class="text-xs text-[#0C2340] dark:text-zinc-100 flex flex-col items-center gap-2">
+        <p class="font-semibold text-sm tracking-wide">&copy; 2026 Alan Pruitt. All rights reserved.</p>
+        <p class="text-zinc-700 dark:text-zinc-300">
+          
+            Curriculum-as-Code Architecture &bull; ADA Title II Compliant &bull; WCAG 2.1/2.2 AA Conforming
+          
+        </p>
+      </div>
+
+      
+      <div class="w-full max-w-2xl border-t border-b border-[#E2D9C8] py-5 px-4 dark:border-zinc-800 text-xs text-zinc-700 dark:text-zinc-300 flex flex-col gap-2.5 items-center text-center">
+        <p class="leading-relaxed">
+          <strong>Zero Textbook Cost (ZTC):</strong>
+          
+            All workshop materials are accessible Open Educational Resources (OER) provided freely with zero paywall barriers.
+          
+        </p>
+        <p class="leading-relaxed">
+          
+            This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="font-semibold underline hover:text-[#001F3F] dark:hover:text-emerald-400 focus:ring-2 focus:ring-[#003366]" target="_blank" rel="license noopener noreferrer">CC BY-NC-SA 4.0 International</a>.
+          
+        </p>
+      </div>
+
+      
+      <nav style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 24px; padding-top: 12px; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;" aria-label="Footer Navigation">
+        <a href="/" style="display: inline-flex; align-items: center; justify-content: center; min-height: 44px; min-width: 44px; padding: 6px 14px; color: #0C2340; text-decoration: underline; text-underline-offset: 4px;">
+          Home
+        </a>
+        <a href="/workshops/" style="display: inline-flex; align-items: center; justify-content: center; min-height: 44px; min-width: 44px; padding: 6px 14px; color: #0C2340; text-decoration: underline; text-underline-offset: 4px;">
+          Workshops
+        </a>
+        <a href="/essays/" style="display: inline-flex; align-items: center; justify-content: center; min-height: 44px; min-width: 44px; padding: 6px 14px; color: #0C2340; text-decoration: underline; text-underline-offset: 4px;">
+          Essays
+        </a>
+        <a href="https://www.webcognita.com/" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; justify-content: center; min-height: 44px; min-width: 44px; padding: 6px 14px; color: #0C2340; text-decoration: underline; text-underline-offset: 4px;">
+          Webcognita LLC
+        </a>
+        <a href="https://www.linkedin.com/in/alanpruitt/" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; justify-content: center; min-height: 44px; min-width: 44px; padding: 6px 14px; color: #0C2340; text-decoration: underline; text-underline-offset: 4px;">
+          LinkedIn
+        </a>
+      </nav>
+
+    </div>
+  </div>
+</footer>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  
+  document.querySelectorAll('pre code').forEach((block) => {
+    const container = block.parentElement;
+    if (!container || container.querySelector('.copy-prompt-btn')) return;
+
+    const copyBtn = document.createElement('button');
+    copyBtn.className = 'copy-prompt-btn';
+    copyBtn.type = 'button';
+    const isSpanish = document.documentElement.lang === 'es' || window.location.pathname.includes('/es/');
+    copyBtn.textContent = isSpanish ? 'Copiar Prompt' : 'Copy Prompt';
+
+    copyBtn.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(block.innerText);
+        const originalText = copyBtn.textContent;
+        copyBtn.textContent = isSpanish ? '¡Copiado!' : 'Copied!';
+        copyBtn.classList.add('copied');
+
+        setTimeout(() => {
+          copyBtn.textContent = originalText;
+          copyBtn.classList.remove('copied');
+        }, 2000);
+      } catch (err) {
+        console.error('Failed to copy text: ', err);
+      }
+    });
+
+    container.style.position = 'relative';
+    container.appendChild(copyBtn);
+  });
+
+  
+  const copyButtons = document.querySelectorAll('.prompt-card-wrapper .copy-prompt-btn');
+  copyButtons.forEach(button => {
+    button.addEventListener('click', async () => {
+      const card = button.closest('.prompt-card-wrapper');
+      if (!card) return;
+
+      const target = card.querySelector('.prompt-content-target');
+      if (!target) return;
+
+      const promptText = target.innerText.trim();
+
+      try {
+        await navigator.clipboard.writeText(promptText);
+
+        const btnText = button.querySelector('.btn-text') || button;
+        const originalText = btnText.innerText;
+        const isSpanish = document.documentElement.lang === 'es' || window.location.pathname.includes('/es/');
+
+        button.style.backgroundColor = '#065F46';
+        btnText.innerText = isSpanish ? '¡Copiado!' : 'Copied!';
+
+        setTimeout(() => {
+          button.style.backgroundColor = '#003366';
+          btnText.innerText = originalText;
+        }, 2200);
+
+      } catch (err) {
+        console.error('Clipboard copy failed:', err);
+        const btnText = button.querySelector('.btn-text') || button;
+        btnText.innerText = 'Error!';
+        setTimeout(() => {
+          button.style.backgroundColor = '#003366';
+          btnText.innerText = 'Copy';
+        }, 2000);
+      }
+    });
+  });
+});
+</script>
+
+
+</body>
+</html>
