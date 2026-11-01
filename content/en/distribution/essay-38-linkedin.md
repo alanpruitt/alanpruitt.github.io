@@ -1,33 +1,62 @@
-# LinkedIn Distribution Package: Essay 38
+# LinkedIn Distribution Package: Essay 38 (1,391-Impression Blueprint)
 
 - **Target Canonical:** `https://alanpruitt.com/essays/essay-38-dom-graphrag-and-prov-o-curriculum-as-code/`
 - **Release Date:** 2026-11-01
-- **Posting Strategy:** Zero Outbound Links & Zero Trailing Hashtags in Main Post Body (`2,350` chars, strictly under the `2,500`-char target budget, relying 100% on natural-language LinkedIn Headline & About SEO keyword triangulation) + Canonical Essay & Architecture Brief Links in First Comment.
+- **Blueprint SSoT:** Modeled on [`urn:li:activity:7514067919664836608`](https://www.linkedin.com/feed/update/urn:li:activity:7514067919664836608/) (`1,391` impressions, `2,455` chars, `47` lines):
+  1. Short 1-line hook (`What if I didn't build the graph?`) before the mobile fold.
+  2. De-fanged domain (`alanpruitt [.] com`) in line 2 (`0` clickable outbound links in post body).
+  3. High-whitespace single-breath cadence (`43` lines, `378` words, **`2,488` characters**).
+  4. Anti-shortcut contrast + hyper-local borderland specificity (`San Luis Río Colorado`, `Yuma, AZ`, `Norteño Spanish`).
+  5. 4-part em-dash technical guardrail callouts (`Born-accessible —`, `Research-first —`, `Privacy-aware —`, `Transparent —`).
+  6. Active practitioner critique CTA + pointer to First Comment + 10-hashtag `og:title` URL-slug generator.
 
 ---
 
-## Part 1: Main LinkedIn Post Body (Copy-Paste — 2,350 Characters, Zero Links, Zero Hashtags)
+## Part 1: Main LinkedIn Post Body (Copy-Paste — 2,488 Characters, 43 Lines, Zero Hyperlinks)
 
 What if I didn't build the graph?
 
-When I first engineered a Git-versioned Markdown repository with automated CI/CD workflows and Canvas GraphQL synchronization across our exercise science and clinical nutrition fleet (EXW 101, 150, 210, 245, and 265), I could have stopped at standard Docs-as-Code.
+Today Essay 38 and six new Architecture Briefs went live on alanpruitt [.] com — documenting the semantic upgrade across our Open Educational Resource (OER) fleet at Arizona Western College and our R&D work at The University of Arizona.
 
-We already had 3,151 indexed curriculum chunks and automated WCAG linters. By software documentation standards, the pipeline was finished.
+This wasn't a cosmetic RAG update.
 
-But what if I treated a clinical kinesiology curriculum like a flat software manual—slicing pages into isolated chunks, returning opaque AI similarity scores, and assuming English-only terminology would serve a bilingual Hispanic-Serving Institution (HSI) along the Yuma, AZ and Imperial Valley, CA borderland?
+It was a structural rebuild of how Curriculum-as-Code handles clinical truth and bilingual voice.
 
-Flat Docs-as-Code without structural pedagogy and cryptographic provenance eventually collapses into probabilistic guesswork.
+In software documentation, flat Docs-as-Code works fine.
 
-As an Adjunct Faculty of Exercise Science & Wellness at Arizona Western College, Generative AI Strategist at The University of Arizona, and Principal of Webcognita LLC (VOSB), I built the S-A-R Standard (Scalable / Auditable / Repeatable) so our $0 ZTC Open Educational Resource (OER) course fleet never relies on black-box cloud guesswork.
+You slice pages into chunks, run cosine similarity, and return a paragraph.
 
-In Essay 38, I break down how we upgraded our Curriculum-as-Code (S-A-R v2.2) architecture with four open-standard semantic layers running on air-gapped Google Gemini Argon 4 models locally on Apple Silicon (M1/M2) for 100% FERPA privacy:
+In clinical kinesiology and nutrition along the Yuma, AZ and Imperial Valley, CA borderland, flat vectors fail.
 
-1. DOM GraphRAG: Enriching all 3,151 curriculum vectors with explicit Course Learning Outcome (CLO) alignment, DOM hierarchy, and directed edges across The Clinical Framing Protocol (Pattern / Rule / Solve).
-2. W3C PROV-O Cryptographic Receipts: Emitting a deterministic SHA-256 JSON-LD provenance graph linking Federal Single Sources of Truth (PAGA 2018, 2025-2030 DGA, ACSM 12th Ed., NASM OPT) to our Sovereign AI Auditing engine.
-3. Born-Accessible (9:1 Contrast) 4D XAI Radar Scorecard: Replacing single-number AI confidence scores inside Canvas with a 4-dimensional Explainable AI scorecard engineered to our ADA Title II & Atomic WCAG 2.2 AA / 3.0 Higher Ed Architecture (9:1 contrast guard).
-4. W3C SKOS / Schema.org Bilingual Clinical Ontology: Mapping colloquial Norteño-Spanish expressions to clinical SSoT rules—lifting bilingual RAG retrieval accuracy from 0.7743 to 0.8236 across borderland HSI communities.
+When a resident in San Luis Río Colorado or Yuma describes heat stress in Norteño Spanish — "se le bajó la presión en el calorón de Yuma" — a generic English index misses the clinical safety gate.
 
-Full Essay 38 and our 6 downloadable S-A-R v2.2 & Project Horizon Architecture Briefs are linked in the first comment below.
+Relying on flat chunks and cloud chatbots would have been an easy shortcut, but it would have stripped away pedagogical lineage.
+
+Instead, as Principal of Webcognita LLC (VOSB), I architected our S-A-R Standard (Scalable / Auditable / Repeatable) v2.2 upgrade around four semantic layers:
+
+3,151 curriculum vectors linked into a DOM GraphRAG hierarchy across The Clinical Framing Protocol (Pattern / Rule / Solve)
+
+W3C SKOS bilingual ontologies mapping Norteño Spanish to Federal Single Sources of Truth (PAGA 2018, 2025–2030 DGA, ACSM 12th Ed., NASM OPT) — lifting retrieval from 0.7743 to 0.8236
+
+W3C PROV-O cryptographic receipts proving SHA-256 lineage from federal guidelines to local output
+
+By running air-gapped Google Gemini Argon 4 models locally on Apple Silicon (M1/M2), our Canvas GraphQL and Sovereign AI Auditing pipeline runs with zero cloud egress.
+
+The technical guardrails transferred seamlessly with the graph:
+
+Born-accessible — 4D XAI Radar Scorecard engineered to ADA Title II & Atomic WCAG 2.2 AA / 3.0 Higher Ed Architecture (9:1 contrast guard)
+
+Research-first — Grounded strictly in federal clinical guidelines rather than probabilistic guessing
+
+Privacy-aware — 100% FERPA privacy on local Apple Silicon hardware
+
+Transparent — Scalable $0 ZTC bilingual "In Plain English" OER for borderland HSI communities
+
+If you are building GraphRAG pipelines, sovereign edge AI, or bilingual OER, I want your critique.
+
+Check the first comment for links to Essay 38 and all six Architecture Briefs!
+
+#CurriculumAsCode #OER #EdTech #GraphRAG #SovereignAI #HigherEd #Accessibility #WCAG3 #Bilingual #InstructionalDesign
 
 ---
 
