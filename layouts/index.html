@@ -280,8 +280,7 @@
         }
 
         /* Complete Partial Utility Coverage (Hero, Executive Tracks, Infographic, Services, Contact, Footer) */
-        .inline-flex { display: inline-flex; }
-        main a.inline-flex { min-height: 28px; min-width: 28px; }
+        .min-h-\[44px\], .min-h-\[48px\], span.inline-flex, div.inline-flex { display: inline-flex; }
         .block { display: block; }
         .inline-block { display: inline-block; }
         .relative { position: relative; }
@@ -395,12 +394,6 @@
         }
         @media (min-width: 1024px) {
             .lg\:px-8 { padding-left: 2rem; padding-right: 2rem; }
-        }
-
-        /* Modern Web Guidance CWV: Defer below-the-fold heavy sections */
-        #architecture-briefs, #essays, #executive-tracks, #services, #contact {
-            content-visibility: auto;
-            contain-intrinsic-size: auto none auto 520px;
         }
     </style>
     {{ partial "print-styles.html" . }}
