@@ -493,7 +493,7 @@
             </div>
 
             <!-- FEDERAL WORKFORCE AI LITERACY ARCHITECTURE: U.S. DOL ETA ADVISORY TEN NO. 07-25 -->
-            <div id="dol-ten-07-25-framework" class="bg-white p-8 rounded-2xl border border-creme-200 shadow-sm md:col-span-3">
+            <div id="dol-ten-07-25-framework" data-exw-dol-ten="07-25" class="bg-white p-8 rounded-2xl border border-creme-200 shadow-sm md:col-span-3">
                 <div class="flex flex-wrap items-center justify-between gap-3 mb-6 pb-4 border-b border-creme-100">
                     <div class="flex items-center gap-3">
                         <div class="w-10 h-10 bg-creme-100 rounded-xl flex items-center justify-center text-navy-900 border border-creme-200 font-mono text-xs font-bold flex-shrink-0" aria-hidden="true">
@@ -600,7 +600,7 @@
                             {{ if eq .Lang "es" }}Portal de Talleres y Recorrido en 4 Puntos &rarr;{{ else }}Workshops Portal &amp; 4-Stop Tour &rarr;{{ end }}
                         </a>
                     </div>
-                    <span class="text-xs font-mono text-navy-800">data-exw-dol-ten=&quot;07-25&quot; &bull; 10/10 Fleet Courses Verified</span>
+                    <span class="text-xs font-mono text-navy-800">{{ if eq .Lang "es" }}U.S. DOL TEN No. 07-25 &bull; 10/10 Cursos EXW Alineados{{ else }}U.S. DOL TEN No. 07-25 &bull; 10/10 EXW Courses Aligned{{ end }}</span>
                 </div>
             </div>
 
