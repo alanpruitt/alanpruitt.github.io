@@ -117,7 +117,7 @@ async function runAudits() {
     }
     console.log('  ✓ PASS: Core interactive navigation and CTA tap targets compliant.');
 
-    console.log('\n[5/6] Testing Legacy Alias Redirection (/alanpruitt/essays/ -> /essays/)...');
+    console.log('\n[5/7] Testing Legacy Alias Redirection (/alanpruitt/essays/ -> /essays/)...');
     const legacyUrl = `${BASE_URL}/alanpruitt/essays/`;
     const response = await page.goto(legacyUrl, { waitUntil: 'networkidle' });
 
@@ -138,7 +138,7 @@ async function runAudits() {
       console.log(`  ✓ PASS: Successfully redirected to canonical archive route (${finalResolvedUrl}).`);
     }
 
-    console.log('\n[6/6] Testing Interactive Essay Category Filtering on /essays/...');
+    console.log('\n[6/7] Testing Interactive Essay Category Filtering on /essays/...');
     await page.goto(`${BASE_URL}/essays/`, { waitUntil: 'networkidle' });
 
     const allCardsLocator = page.locator('.essay-card-item');
@@ -213,6 +213,48 @@ async function runAudits() {
       }
     }
 
+    console.log('\n[7/7] Validating llms.txt & llms-full.txt Production Link Integrity (SEMPITE Standard)...');
+    for (const manifestPath of ['/llms.txt', '/llms-full.txt']) {
+      const manifestResp = await page.request.get(`${BASE_URL}${manifestPath}`);
+      const status = manifestResp.status();
+      const ct = (manifestResp.headers()['content-type'] || '').toLowerCase();
+      const body = await manifestResp.text();
+
+      if (status !== 200 || !ct.includes('text/plain') || body.trim().startsWith('<!doctype html') || body.length < 500) {
+        console.error(`  ❌ FAIL: ${manifestPath} invalid response (status=${status}, content-type=${ct}, bytes=${body.length})`);
+        totalErrors++;
+        continue;
+      }
+
+      const rawUrls = body.match(/https:\/\/alanpruitt\.com[^\s\)\]>\"`]+/g) || [];
+      const uniqueFirstPartyUrls = [...new Set(rawUrls.map(u => u.replace(/[.,;:]+$/, '')))];
+      let manifestErrors = 0;
+
+      for (const fullUrl of uniqueFirstPartyUrls) {
+        const parsed = new URL(fullUrl);
+        const routePath = parsed.pathname;
+
+        // Enforce trailing slash on directory routes (prevent 301 redirects for AI crawlers)
+        if (!routePath.endsWith('/') && !/\.(html|pdf|txt|xml|json|png|jpg|svg|md)$/i.test(routePath)) {
+          console.error(`  ❌ FAIL: ${manifestPath} contains non-canonical directory URL missing trailing slash (causes 301): ${fullUrl}`);
+          totalErrors++;
+          manifestErrors++;
+          continue;
+        }
+
+        const checkResp = await page.request.get(`${BASE_URL}${routePath}`);
+        if (checkResp.status() >= 400) {
+          console.error(`  ❌ FAIL: ${manifestPath} broken first-party link (${checkResp.status()}): ${fullUrl}`);
+          totalErrors++;
+          manifestErrors++;
+        }
+      }
+
+      if (manifestErrors === 0) {
+        console.log(`  ✓ PASS: ${manifestPath} (${ct.split(';')[0]}, ${uniqueFirstPartyUrls.length} first-party links verified with 0 dead ends & 0 missing-slash 301s).`);
+      }
+    }
+
   } catch (err) {
     console.error(`\n🔥 Execution Exception: ${err.message}`);
     totalErrors++;
@@ -222,7 +264,7 @@ async function runAudits() {
 
   console.log('\n-------------------------------------------------------------');
   if (totalErrors === 0) {
-    console.log('✅ ALL 6 AUDITS PASSED: SSoT Parity, Contrast, Aliases & Filter Compliant.');
+    console.log('✅ ALL 7 AUDITS PASSED: SSoT Parity, Contrast, Aliases, Filter & llms.txt Production Gate Compliant.');
     process.exit(0);
   } else {
     console.error(`❌ AUDIT FAILED: ${totalErrors} issue(s) require remediation.`);
