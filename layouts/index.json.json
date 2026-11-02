@@ -1,0 +1,26 @@
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": "Alan Pruitt (Coach Alan) — Curriculum-as-Code & Compliance-as-Code",
+  "home_page_url": "https://alanpruitt.com/",
+  "feed_url": "https://alanpruitt.com/feed.json",
+  "description": "Curriculum-as-Code (CaC), Curriculum-as-a-Service (CaaS), Compliance-as-Code, and Sovereign AI Architecture Essays.",
+  "authors": [
+    {
+      "name": "Alan Pruitt",
+      "url": "https://alanpruitt.com/"
+    }
+  ],
+  "items": [
+    {{- $pages := where .Site.RegularPages "Section" "essays" -}}
+    {{- range $index, $page := $pages -}}
+    {{- if $index }},{{ end }}
+    {
+      "id": {{ $page.Permalink | jsonify }},
+      "url": {{ $page.Permalink | jsonify }},
+      "title": {{ $page.Title | jsonify }},
+      "summary": {{ ($page.Summary | plainify) | jsonify }},
+      "date_published": {{ ($page.Date.Format "2006-01-02T15:04:05Z07:00") | jsonify }}
+    }
+    {{- end }}
+  ]
+}
