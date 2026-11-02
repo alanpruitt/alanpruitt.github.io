@@ -1,119 +1,220 @@
-<section class="py-10 sm:py-14 border-b border-zinc-200 bg-zinc-50 dark:border-zinc-800 dark:bg-zinc-900/40" aria-labelledby="cac-infographic-heading">
-  <div class="w-full max-w-4xl px-4 sm:px-6 lg:px-8 text-left mr-auto ml-0">
+<section class="py-10 sm:py-14 border-b border-zinc-200 bg-zinc-50" aria-labelledby="cac-infographic-heading">
+  <div class="w-full max-w-6xl px-4 sm:px-6 lg:px-8 text-left mx-auto">
     
-    <!-- Section Heading -->
-    <div class="mb-6 text-left sm:mb-8 mr-auto ml-0">
-      <h2 id="cac-infographic-heading" class="text-2xl font-extrabold tracking-tight text-zinc-950 dark:text-white sm:text-3xl text-left">
-        Academic Sovereignty via Curriculum-as-Code
-      </h2>
-      <p class="mt-2 text-sm text-zinc-900 dark:text-zinc-100 sm:text-base text-left">
-        Executive blueprint: Navigating the ADA Title II compliance cliff with Git-backed SSoT pipelines and automated headless Canvas LMS deployment.
-      </p>
-    </div>
+    <!-- Section Heading & On-Demand Poster Modal Trigger -->
+    <div class="mb-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 text-left">
+      <div>
+        <h2 id="cac-infographic-heading" class="text-2xl font-extrabold tracking-tight text-zinc-950 sm:text-3xl text-left">
+          {{ if eq .Lang "es" }}Soberanía Académica mediante Currículo como Código (CaC){{ else }}Academic Sovereignty via Curriculum-as-Code{{ end }}
+        </h2>
+        <p class="mt-1 text-sm text-zinc-900 sm:text-base text-left">
+          {{ if eq .Lang "es" }}Plano ejecutivo: Superando el abismo de cumplimiento ADA Título II con tuberías SSoT respaldadas por Git y despliegue automatizado en Canvas LMS.{{ else }}Executive blueprint: Navigating the ADA Title II compliance cliff with Git-backed SSoT pipelines, Compliance-as-Code CI/CD, and headless Canvas LMS deployment.{{ end }}
+        </p>
+      </div>
 
-    <!-- Infographic Figure Container -->
-    <figure class="relative w-full overflow-hidden rounded-2xl border border-zinc-300 bg-white p-1.5 shadow-sm dark:border-zinc-700 dark:bg-zinc-950 sm:p-4 text-left mr-auto ml-0 block">
-      
-      <!-- Trigger Button for Native Modal -->
       <button 
         type="button"
         onclick="document.getElementById('cac-infographic-modal').showModal()"
-        class="group relative block w-full cursor-zoom-in overflow-hidden rounded-xl text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white"
-        aria-label="Open full resolution infographic in modal dialog"
+        class="inline-flex min-h-[44px] flex-shrink-0 items-center justify-center gap-2 rounded-lg border border-zinc-300 bg-white px-4 py-2 text-xs font-bold uppercase tracking-wider text-zinc-950 shadow-sm hover:bg-zinc-100 focus-visible:outline cursor-pointer"
+        aria-label="{{ if eq .Lang "es" }}Abrir póster infográfico visual en ventana modal (1080x1920){{ else }}Open full-resolution visual infographic poster in modal dialog (1080x1920){{ end }}"
       >
-        <picture class="block w-full text-left mr-auto ml-0">
-          <source srcset="/images/academic-sovereignty-cac-infographic.webp" type="image/webp">
-          <img 
-            src="/images/academic-sovereignty-cac-infographic.png" 
-            alt="Academic Sovereignty via Curriculum-as-Code Infographic: Details the Risk Matrix (ADA Title II Compliance Cliff), 3-Step Pipeline (Markdown SSoT, Automated Axe-core Testing, Headless Canvas GraphQL/REST API Deployment), Quantified ROI ($63,900 net budget recaptured, 18.8x ROI multiplier, 1,420 hours reclaimed), and The Clinical Framing Protocol (Pattern / Rule / Solve)." 
-            class="block w-full h-auto max-w-full rounded-lg object-contain text-left mr-auto ml-0 transition-transform duration-300 ease-out group-hover:scale-[1.005]"
-            loading="lazy"
-            decoding="async"
-            width="1080"
-            height="1920"
-            style="aspect-ratio: 1080 / 1920; height: auto; margin-left: 0; margin-right: auto;"
-          />
-        </picture>
-
-        <!-- Hard-Pinned Micro-Pill Overlay -->
-        <div 
-          class="absolute bottom-3 right-3 flex items-center gap-1.5 rounded-full border border-zinc-700/60 bg-zinc-950/85 px-3 py-1 text-zinc-100 shadow-md backdrop-blur-md dark:border-zinc-600 dark:bg-zinc-900/90 pointer-events-none"
-          style="max-width: fit-content; max-height: 28px; line-height: 1;"
-        >
-          <svg 
-            width="13" 
-            height="13" 
-            viewBox="0 0 24 24" 
-            fill="none" 
-            stroke="currentColor" 
-            stroke-width="2.5" 
-            stroke-linecap="round" 
-            stroke-linejoin="round"
-            style="width: 13px !important; height: 13px !important; min-width: 13px !important; min-height: 13px !important; display: inline-block; vertical-align: middle;"
-            aria-hidden="true"
-          >
-            <circle cx="11" cy="11" r="8"></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-            <line x1="11" y1="8" x2="11" y2="14"></line>
-            <line x1="8" y1="11" x2="14" y2="11"></line>
-          </svg>
-          <span style="font-size: 11px; font-weight: 600; letter-spacing: 0.025em;">Expand</span>
-        </div>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+          <circle cx="8.5" cy="8.5" r="1.5"></circle>
+          <polyline points="21 15 16 10 5 21"></polyline>
+        </svg>
+        <span>{{ if eq .Lang "es" }}Ver Póster Visual (1080×1920){{ else }}View Visual Poster (1080×1920){{ end }}</span>
       </button>
+    </div>
 
-      <figcaption class="mt-3 text-left text-xs text-zinc-900 dark:text-zinc-100 mr-auto ml-0">
-        Figure 1.0: End-to-End Curriculum-as-Code (CaC) Continuous Integration &amp; The Clinical Framing Protocol (Pattern / Rule / Solve).
+    <!-- Compact Born-Accessible Semantic HTML/CSS Architecture Blueprint (Figure 1.0) -->
+    <figure class="w-full rounded-2xl border border-zinc-300 bg-white p-4 shadow-sm sm:p-6 text-left m-0" aria-labelledby="fig-1-caption">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        
+        <!-- Zone 1: Regulatory Risk Matrix -->
+        <div class="rounded-xl border border-zinc-200 bg-creme-50 p-4 flex flex-col justify-between">
+          <div>
+            <div class="mb-2 flex items-center justify-between gap-2">
+              <span class="font-mono text-xs font-bold uppercase tracking-wider text-zinc-950">
+                {{ if eq .Lang "es" }}ZONA 01 • MATRIZ DE RIESGO ADA TÍTULO II{{ else }}ZONE 01 • ADA TITLE II RISK MATRIX{{ end }}
+              </span>
+              <span class="rounded bg-white px-2 py-0.5 font-mono text-xs font-semibold text-zinc-900 border border-zinc-300">WCAG 2.2 AA (9:1)</span>
+            </div>
+            <h3 class="text-base font-bold text-zinc-950 mb-2">
+              {{ if eq .Lang "es" }}Remediación Manual vs. Currículo como Código{{ else }}Manual Remediation vs. Curriculum-as-Code{{ end }}
+            </h3>
+          </div>
+
+          <div class="overflow-x-auto rounded-lg border border-zinc-300 bg-white" tabindex="0" role="region" aria-label="ADA Title II Regulatory Risk Comparison Matrix">
+            <table class="w-full border-collapse text-left text-xs">
+              <thead>
+                <tr class="border-b border-zinc-300 bg-zinc-100 text-zinc-950">
+                  <th scope="col" class="p-2 font-bold">{{ if eq .Lang "es" }}Métrica{{ else }}Metric{{ end }}</th>
+                  <th scope="col" class="p-2 font-bold">{{ if eq .Lang "es" }}LMS Manual{{ else }}Manual LMS{{ end }}</th>
+                  <th scope="col" class="p-2 font-bold">{{ if eq .Lang "es" }}Tubería CaC (S-A-R){{ else }}CaC Pipeline (S-A-R){{ end }}</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y">
+                <tr>
+                  <th scope="row" class="p-2 font-semibold text-zinc-950">1. {{ if eq .Lang "es" }}Linaje{{ else }}Lineage{{ end }}</th>
+                  <td class="p-2 text-zinc-800">{{ if eq .Lang "es" }}Deriva sin versión{{ else }}Unversioned drift{{ end }}</td>
+                  <td class="p-2 font-bold text-zinc-950">Git SSoT + W3C PROV-O</td>
+                </tr>
+                <tr>
+                  <th scope="row" class="p-2 font-semibold text-zinc-950">2. {{ if eq .Lang "es" }}Escala{{ else }}Scale{{ end }}</th>
+                  <td class="p-2 text-zinc-800">{{ if eq .Lang "es" }}Trabajo lineal manual{{ else }}Linear manual rework{{ end }}</td>
+                  <td class="p-2 font-bold text-zinc-950">Canvas GraphQL API</td>
+                </tr>
+                <tr>
+                  <th scope="row" class="p-2 font-semibold text-zinc-950">3. {{ if eq .Lang "es" }}Estado{{ else }}Compliance{{ end }}</th>
+                  <td class="p-2 text-zinc-800">{{ if eq .Lang "es" }}Alto riesgo de error{{ else }}Post-publish risk{{ end }}</td>
+                  <td class="p-2 font-bold text-zinc-950">{{ if eq .Lang "es" }}Pre-commit determinista{{ else }}Pre-commit CI/CD Gate{{ end }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Zone 2: The 3-Step Automated CaC Pipeline -->
+        <div class="rounded-xl border border-zinc-200 bg-creme-50 p-4">
+          <div class="mb-2 flex items-center justify-between gap-2">
+            <span class="font-mono text-xs font-bold uppercase tracking-wider text-zinc-950">
+              {{ if eq .Lang "es" }}ZONA 02 • ARQUITECTURA DE INTEGRACIÓN CONTINUA{{ else }}ZONE 02 • CONTINUOUS INTEGRATION PIPELINE{{ end }}
+            </span>
+            <span class="rounded bg-white px-2 py-0.5 font-mono text-xs font-semibold text-zinc-900 border border-zinc-300">S-A-R v2.2</span>
+          </div>
+          <h3 class="text-base font-bold text-zinc-950 mb-2">
+            {{ if eq .Lang "es" }}Tubería Automatizada de 3 Pasos{{ else }}The 3-Step Automated CaC &amp; Compliance Pipeline{{ end }}
+          </h3>
+          <ol class="space-y-2 text-xs text-zinc-900 m-0 pl-4">
+            <li>
+              <strong class="text-zinc-950">1. Markdown SSoT &amp; DOM GraphRAG:</strong>
+              {{ if eq .Lang "es" }}Módulos en texto plano bajo control de versiones Git (3,265 nodos) desacoplados del LMS.{{ else }}Plain-text modules versioned in Git (3,265 pedagogical graph nodes) decoupled from proprietary LMS lock-in.{{ end }}
+            </li>
+            <li>
+              <strong class="text-zinc-950">2. Compliance-as-Code CI/CD Gate:</strong>
+              {{ if eq .Lang "es" }}Playwright, Axe-core y Argon 4 verifican 0 errores WCAG 2.2 AA (contraste 9:1) y FERPA antes del despliegue.{{ else }}Playwright, Axe-core, and Argon 4 enforce 0 WCAG 2.2 AA (9:1 contrast), heading hierarchy, and FERPA errors pre-merge.{{ end }}
+            </li>
+            <li>
+              <strong class="text-zinc-950">3. Headless Canvas GraphQL &amp; REST Sync:</strong>
+              {{ if eq .Lang "es" }}HTML accesible desplegado programáticamente en toda la flota de cursos sin errores de copiado manual.{{ else }}Born-accessible HTML deployed programmatically to Canvas LMS shells with zero manual copy-paste drift.{{ end }}
+            </li>
+          </ol>
+        </div>
+
+        <!-- Zone 3: Quantified Executive ROI (200-Course Fleet Benchmark) -->
+        <div class="rounded-xl border border-zinc-200 bg-creme-50 p-4 flex flex-col justify-between">
+          <div>
+            <div class="mb-2 flex items-center justify-between gap-2">
+              <span class="font-mono text-xs font-bold uppercase tracking-wider text-zinc-950">
+                {{ if eq .Lang "es" }}ZONA 03 • RETORNO DE INVERSIÓN (FLOTA DE 200 CURSOS){{ else }}ZONE 03 • QUANTIFIED EXECUTIVE ROI (200-COURSE FLEET){{ end }}
+              </span>
+              <span class="rounded bg-white px-2 py-0.5 font-mono text-xs font-semibold text-zinc-900 border border-zinc-300">$0 ZTC / OER</span>
+            </div>
+            <h3 class="text-base font-bold text-zinc-950 mb-3">
+              {{ if eq .Lang "es" }}Impacto Presupuestario y Operativo Institucional{{ else }}Institutional Budget &amp; Operational Impact{{ end }}
+            </h3>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-2.5">
+            <div class="rounded-lg border border-zinc-300 bg-white p-3 text-center">
+              <p class="text-xl font-extrabold text-zinc-950 m-0">$63,900</p>
+              <p class="mt-0.5 text-xs font-bold uppercase text-zinc-900 m-0">{{ if eq .Lang "es" }}Presupuesto Recuperado{{ else }}Net Budget Recaptured{{ end }}</p>
+              <p class="mt-0.5 text-xs text-zinc-800 m-0">$67.5k manual vs. $3.6k CaC</p>
+            </div>
+            <div class="rounded-lg border border-zinc-300 bg-white p-3 text-center">
+              <p class="text-xl font-extrabold text-zinc-950 m-0">18.8x</p>
+              <p class="mt-0.5 text-xs font-bold uppercase text-zinc-900 m-0">{{ if eq .Lang "es" }}Multiplicador de Eficiencia{{ else }}Efficiency Multiplier{{ end }}</p>
+              <p class="mt-0.5 text-xs text-zinc-800 m-0">200 {{ if eq .Lang "es" }}cursos / 6,000 unidades{{ else }}shells / 6,000 units{{ end }}</p>
+            </div>
+            <div class="rounded-lg border border-zinc-300 bg-white p-3 text-center">
+              <p class="text-xl font-extrabold text-zinc-950 m-0">1,420</p>
+              <p class="mt-0.5 text-xs font-bold uppercase text-zinc-900 m-0">{{ if eq .Lang "es" }}Horas Docentes Recuperadas{{ else }}Faculty Hours Reclaimed{{ end }}</p>
+              <p class="mt-0.5 text-xs text-zinc-800 m-0">1,500h manual → 80h CI/CD</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Zone 4: The Clinical Framing Protocol (Pattern / Rule / Solve) -->
+        <div class="rounded-xl border border-zinc-200 bg-creme-50 p-4">
+          <div class="mb-2 flex items-center justify-between gap-2">
+            <span class="font-mono text-xs font-bold uppercase tracking-wider text-zinc-950">
+              {{ if eq .Lang "es" }}ZONA 04 • PROTOCOLO DE ENCUADRE CLÍNICO{{ else }}ZONE 04 • THE CLINICAL FRAMING PROTOCOL{{ end }}
+            </span>
+            <span class="rounded bg-white px-2 py-0.5 font-mono text-xs font-semibold text-zinc-900 border border-zinc-300">10-7-0 Scale</span>
+          </div>
+          <h3 class="text-base font-bold text-zinc-950 mb-2">
+            {{ if eq .Lang "es" }}Patrón / Regla / Solución (El Protocolo Centauro){{ else }}Pattern / Rule / Solve (The Centaur Protocol){{ end }}
+          </h3>
+          <ul class="space-y-2 text-xs text-zinc-900 m-0 pl-4">
+            <li>
+              <strong class="text-zinc-950">Pattern ({{ if eq .Lang "es" }}Patrón — Contexto{{ else }}Context{{ end }}):</strong>
+              {{ if eq .Lang "es" }}Diagnosticar el caso clínico, estrés ambiental (Yuma / Valle Imperial) y presentación del movimiento.{{ else }}Diagnose the institutional bottleneck, client biometrics, and regional environmental stressors at baseline.{{ end }}
+            </li>
+            <li>
+              <strong class="text-zinc-950">Rule ({{ if eq .Lang "es" }}Regla — Restricción{{ else }}Constraint{{ end }}):</strong>
+              {{ if eq .Lang "es" }}Aplicar las Fuentes de Verdad (PAGA 2018 2.ª ed., DGA 2025–2030, ACSM 12.ª ed., NASM OPT y WCAG 2.2 AA).{{ else }}Enforce authoritative Sources of Truth (PAGA 2018 2nd Ed., DGA 2025–2030, ACSM 12th Ed., NASM OPT &amp; WCAG 2.2 AA).{{ end }}
+            </li>
+            <li>
+              <strong class="text-zinc-950">Solve ({{ if eq .Lang "es" }}Solución — Intervención{{ else }}Intervention{{ end }}):</strong>
+              {{ if eq .Lang "es" }}Ejecutar la prescripción auditada y la defensa activa humana verificada en voz propia.{{ else }}Execute the audited clinical prescription and mandatory human Active Verification defense.{{ end }}
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <figcaption id="fig-1-caption" class="mt-4 pt-3 border-t border-zinc-200 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 text-left text-xs text-zinc-900">
+        <span>
+          <strong>Figure 1.0:</strong> End-to-End Curriculum-as-Code (CaC) Continuous Integration, Compliance-as-Code CI/CD &amp; The Clinical Framing Protocol (Pattern / Rule / Solve).
+        </span>
+        <span class="font-mono text-xs font-semibold text-zinc-900">
+          WCAG 2.2 AA (9:1 Contrast) • Native HTML Reflow
+        </span>
       </figcaption>
     </figure>
 
-    <!-- Accessible Native HTML5 Modal Lightbox -->
+    <!-- Accessible Native HTML5 Modal Lightbox for Optional Full-Resolution Visual Poster -->
     <dialog 
       id="cac-infographic-modal" 
-      class="backdrop:bg-zinc-950/80 backdrop:backdrop-blur-sm m-auto max-h-[92vh] max-w-[94vw] rounded-2xl border border-zinc-300 bg-white p-2 shadow-2xl dark:border-zinc-700 dark:bg-zinc-950 sm:p-4 text-left"
+      closedby="any"
+      class="m-auto max-h-[92vh] max-w-[94vw] rounded-2xl border border-zinc-300 bg-white p-3 shadow-2xl sm:p-4 text-left"
       onclick="if (event.target === this) this.close()"
       aria-labelledby="modal-title"
     >
-      <div class="flex items-center justify-between border-b border-zinc-200 pb-3 mb-3 dark:border-zinc-800">
-        <h3 id="modal-title" class="text-sm font-bold text-zinc-950 dark:text-white">
-          Academic Sovereignty via Curriculum-as-Code
+      <div class="flex items-center justify-between border-b border-zinc-200 pb-3 mb-3 gap-4">
+        <h3 id="modal-title" class="text-sm font-bold text-zinc-950 m-0">
+          {{ if eq .Lang "es" }}Póster Visual: Soberanía Académica mediante Currículo como Código (1080×1920){{ else }}Visual Infographic Poster: Academic Sovereignty via Curriculum-as-Code (1080×1920){{ end }}
         </h3>
         <button 
           type="button" 
+          autofocus
           onclick="document.getElementById('cac-infographic-modal').close()" 
-          class="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-lg text-zinc-900 hover:bg-zinc-100 hover:text-zinc-950 dark:text-zinc-100 dark:hover:bg-zinc-900 dark:hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white"
-          aria-label="Close dialog"
+          class="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-lg border border-zinc-300 bg-zinc-50 text-zinc-950 hover:bg-zinc-100 focus-visible:outline cursor-pointer"
+          aria-label="{{ if eq .Lang "es" }}Cerrar ventana modal{{ else }}Close dialog{{ end }}"
         >
-          <svg 
-            width="18" 
-            height="18" 
-            viewBox="0 0 24 24" 
-            fill="none" 
-            stroke="currentColor" 
-            stroke-width="2"
-            style="width: 18px !important; height: 18px !important;"
-          >
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
       </div>
 
-      <div class="overflow-y-auto max-h-[78vh] rounded-lg">
+      <div class="overflow-y-auto max-h-[78vh] rounded-lg" tabindex="0" role="region" aria-label="Full resolution infographic image container">
         <picture>
           <source srcset="/images/academic-sovereignty-cac-infographic.webp" type="image/webp">
           <img 
             src="/images/academic-sovereignty-cac-infographic.png" 
-            alt="Full resolution high-detail view of the Academic Sovereignty via Curriculum-as-Code Infographic." 
-            class="w-full h-auto rounded-md"
+            alt="Full resolution visual poster of the Academic Sovereignty via Curriculum-as-Code Infographic (ADA Title II Risk Matrix, 3-Step CI/CD Pipeline, $63,900 ROI, and Pattern / Rule / Solve)." 
+            class="w-full h-auto max-w-2xl mx-auto block rounded-md"
             loading="lazy"
+            decoding="async"
+            width="1080"
+            height="1920"
           />
         </picture>
       </div>
     </dialog>
-
-    <!-- Accessible Text Alternative Accordion -->
-    <div class="w-full text-left mr-auto ml-0">
-      {{ partial "infographic-transcript.html" . }}
-    </div>
 
   </div>
 </section>
