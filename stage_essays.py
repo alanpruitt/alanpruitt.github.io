@@ -5,7 +5,7 @@ from substack import Api
 api = Api(
     email=os.getenv("EMAIL"),
     password=os.getenv("PASSWORD"),
-    publication_url="https://alanpruitt.substack.com"
+    publication_url="https://substack.com/@alanpruitt/"
 )
 
 # Example loop to read local Markdown files and push them strictly as drafts

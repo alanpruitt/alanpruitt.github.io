@@ -331,7 +331,7 @@ function generateArchiveHtml(essays) {
         <a href="${essay.canonicalUrl}" style="color: #0E3D73; text-decoration: underline; font-weight: 700;">
           ${escapeXml(essay.title)}
         </a>
-        <a href="https://alanpruitt.substack.com" target="_blank" rel="noopener noreferrer" style="font-size: 0.75rem; font-weight: 600; color: #555555; text-decoration: none;">
+        <a href="https://substack.com/@alanpruitt/" target="_blank" rel="noopener noreferrer" style="font-size: 0.75rem; font-weight: 600; color: #555555; text-decoration: none;">
           Substack Edition ↗
         </a>
       </h3>
