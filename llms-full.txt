@@ -100,6 +100,21 @@ This log serves as the continuous running repository and Single Source of Truth 
 
 ## **SECTION 2: THE DISCOVERY LOG (BY DATE — REVERSE-CHRONOLOGICAL SSoT)**
 
+### **November 1, 2026 (Part III) — Answer Engine Optimization (AEO) vs. Agentic Discovery: Empirical Audit of `llms.txt`, `sitemap.xml`, `robots.txt`, and `Schema.org` JSON-LD**
+
+On this date, I evaluated Simon Theakston's *Digital Drift* empirical synthesis (*"Does llms.txt work? What the evidence says"*, October 21, 2026; [https://www.digitaldrifthq.com/articles/does-llms-txt-work/](https://www.digitaldrifthq.com/articles/does-llms-txt-work/)) across Google Search Central guidance, Ahrefs' 137,210-domain server-log telemetry, and SE Ranking's 300,000-domain citation correlation study, and upgraded the machine-discovery pipeline across `alanpruitt.com` and `EXW-MASTER-LIBRARY`.
+
+* **1. Empirical Dichotomy: AI Answer Engines vs. Coding Agents**
+  * **Classification:** Curriculum as Code / Answer Engine Optimization (AEO) & Agentic Knowledge Discovery
+  * **Key Mechanism:** Empirical log analysis (Ahrefs, 137,210 domains, May 2026) demonstrates that **97% of standalone `llms.txt` files receive zero requests**, and Google Search Central explicitly confirms that Google Search, AI Overviews, and AI Mode ignore `llms.txt` (`"neither harms nor helps"`). Live AI retrieval bots (`OAI-SearchBot`, `PerplexityBot`) accounted for only **1.1%** of `llms.txt` requests, while **coding agents (`Claude Code`, IDE agents, and Chrome Lighthouse Agentic Browsing audits) accounted for 10.5%**.
+  * **The Discovery Constraint:** Ahrefs found that **zero AI bots proactively probe `/llms.txt` on a domain unless an HTML `<a href>` link, `<link rel="alternate">`, or `robots.txt` directive explicitly advertises its existence**.
+
+* **2. Dual-Track Discovery Architecture (`Schema.org` + `sitemap.xml` + `robots.txt` + Linked `llms.txt`)**
+  * **Classification:** Compliance as Code / Deterministic Web Observatory Indexing
+  * **Core Architecture:**
+    1. *For AI Answer Engines (`OAI-SearchBot`, `ChatGPT-User`, `PerplexityBot`, `Claude-SearchBot`, `Google-Extended`):* Engineered automated `sitemap.xml` injection (`scripts/publish_master_research_log_web.py`) covering `/research-log/`, all 7 Architecture Brief PDFs (`/docs/*.pdf`), and all canonical essays alongside explicit per-bot `Allow: /` rules in `robots.txt` and inline `Schema.org` JSON-LD (`@type: Dataset`, `@type: DefinedTermSet`, `@type: ScholarlyArticle`, `@type: Person`).
+    2. *For Coding Agents (`Claude Code`, `Google Antigravity`, `Lighthouse Agentic Browsing`):* Linked `/llms.txt` and `/research-log/` via persistent global footer `<a href>` anchor tags (`layouts/partials/footer.html`), `<head>` `<link rel="alternate" type="text/plain">` tags, and `LLMs-Txt:` directives in `robots.txt`, ensuring coding agents deterministically discover and ingest the full Curriculum-as-Code corpus.
+
 ### **November 1, 2026 (Part II) — Sovereign S-A-R v2.2 Architecture: DOM GraphRAG (3,154 Nodes), W3C PROV-O Cryptographic Provenance, Born-Accessible 9:1 4D XAI Radar Scorecards, and W3C SKOS Norteño-Spanish Clinical Ontology**
 
 On this date, I completed the engineering and deployment of four sovereign Curriculum-as-Code (CaC) verification engines in `EXW-MASTER-LIBRARY` (`v2.2`) and published Essay 38 (*"What If I Didn't Build the Graph? – Why Curriculum-as-Code Transcends Flat Docs-as-Code with DOM GraphRAG & W3C PROV-O"*). These milestones advance CaC from flat Markdown file storage into a formally typed, cryptographically verifiable, and born-accessible neuro-symbolic knowledge graph across the EXW Course Fleet (`EXW 101`, `150`, `210`, `245`, `265`).
@@ -4206,6 +4221,8 @@ On this date, a comprehensive web harvest and workspace alignment identified mas
 
 ---
 
+---
+
 ## **SECTION 3: SYSTEM ARCHITECTURE MATRICES**
 
 ### **CaC vs. CaaS Technical Comparison**
@@ -4217,6 +4234,9 @@ On this date, a comprehensive web harvest and workspace alignment identified mas
 | **Core Method** | Filesystem as Memory (Context Stack, Clinical Framing Protocol: Pattern / Rule / Solve). | Programmatic APIS, turnkey integrations, cloud syncing. |
 | **Accessibility** | Built-in at the source code level (strict 9:1 contrast, h2-h4). | Rendered on responsive mobile and web portals natively. |
 | **Sovereignty** | High: Air-gapped, zero-cloud leak, local inference. | Moderate: Secure cloud-tenant environment, tenant-controlled. |
+
+
+
 
 
 
@@ -4600,7 +4620,11 @@ This architecture maps how an administrator suspend action instantly triggers re
 
 ---
 
+
+---
+
 ## **SECTION 4: THE INSTRUCTIONAL DESIGN ROLE EVOLUTION**
+
 
 
 The convergence of CaC and CaaS is fundamentally reshaping the traditional instructional design (ID) role.

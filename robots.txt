@@ -1,5 +1,40 @@
+# Answer Engine Optimization (AEO) & Agentic Discovery Policy — alanpruitt.com
 User-agent: *
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: GoogleOther
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: CCBot
 Allow: /
 
 Sitemap: https://alanpruitt.com/sitemap.xml
 LLMs-Txt: https://alanpruitt.com/llms.txt
+LLMs-Full-Txt: https://alanpruitt.com/llms-full.txt
