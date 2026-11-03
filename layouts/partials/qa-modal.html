@@ -64,6 +64,17 @@
     color: #FAFBF7;
     border-color: #0B192C;
   }
+  .ap-sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
 </style>
 
 <dialog id="ap-qa-dialog" closedby="any" aria-labelledby="ap-qa-title" data-lang="{{ if eq .Lang "es" }}es{{ else }}en{{ end }}">
@@ -93,7 +104,7 @@
   <!-- Search Input & Category Filters -->
   <div style="padding: 1rem 1.5rem; border-bottom: 1px solid #E6E6DC; background-color: #FAFBF7;">
     <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.75rem;">
-      <label for="ap-qa-input" class="sr-only">
+      <label for="ap-qa-input" class="ap-sr-only">
         {{ if eq .Lang "es" }}Buscar en Informes Técnicos, Bitácora Maestra, Ensayos y DOM GraphRAG{{ else }}Search Architecture Briefs, White Papers, Master Research Log, Essays, and DOM GraphRAG{{ end }}
       </label>
       <input
