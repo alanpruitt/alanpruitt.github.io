@@ -682,7 +682,7 @@
 
             <!-- DOWNLOADABLE ARCHITECTURE BRIEFS & WHITE PAPERS (PDF SHELF) -->
             <div id="architecture-briefs" class="bg-white p-8 rounded-2xl border border-creme-200 shadow-sm md:col-span-3">
-                <div class="flex items-center justify-between mb-6 pb-4 border-b border-creme-100">
+                <div class="flex flex-wrap items-center justify-between gap-3 mb-6 pb-4 border-b border-creme-100">
                     <div class="flex items-center gap-3">
                         <div class="w-10 h-10 bg-creme-100 rounded-xl flex items-center justify-center text-navy-900 border border-creme-200 font-mono text-xs font-bold flex-shrink-0" aria-hidden="true">
                             [PDF]
@@ -692,7 +692,12 @@
                             <p class="text-xs text-navy-800 mt-0.5">Executive &amp; technical publications on Sovereign Clinical AI, DOM GraphRAG, W3C PROV-O, Compliance as Code, and the 2026 Longitudinal CaC &amp; CaaS Master Research Log.</p>
                         </div>
                     </div>
-                    <span class="text-xs font-mono bg-creme-100 text-navy-900 px-3 py-1 rounded-md border border-creme-200 font-semibold flex-shrink-0">7 Publications</span>
+                    <div class="flex flex-wrap items-center gap-2">
+                        <button type="button" data-open-qa-modal data-qa-category="briefs" class="text-xs font-mono bg-navy-900 text-creme-100 px-3 py-1.5 rounded-md font-bold cursor-pointer hover:underline">
+                            {{ if eq .Lang "es" }}[Q&amp;A] Consultar Informes y GraphRAG &rarr;{{ else }}[Q&amp;A] Query Briefs &amp; GraphRAG &rarr;{{ end }}
+                        </button>
+                        <span class="text-xs font-mono bg-creme-100 text-navy-900 px-3 py-1 rounded-md border border-creme-200 font-semibold flex-shrink-0">7 Publications</span>
+                    </div>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
