@@ -1,6 +1,14 @@
 # Answer Engine Optimization (AEO) & Agentic Discovery Policy — alanpruitt.com
+# Canonical LLMs.txt Index: https://alanpruitt.com/llms.txt
+# Full Longitudinal Corpus: https://alanpruitt.com/llms-full.txt
 User-agent: *
 Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+Allow: /research-log/
+Allow: /qa-embed/
+Allow: /data/sovereign-qa-index.json
+Allow: /data/exw-ssot-rag-index.json
 
 User-agent: OAI-SearchBot
 Allow: /
@@ -36,5 +44,5 @@ User-agent: CCBot
 Allow: /
 
 Sitemap: https://alanpruitt.com/sitemap.xml
-LLMs-Txt: https://alanpruitt.com/llms.txt
-LLMs-Full-Txt: https://alanpruitt.com/llms-full.txt
+Sitemap: https://alanpruitt.com/en/sitemap.xml
+Sitemap: https://alanpruitt.com/es/sitemap.xml
