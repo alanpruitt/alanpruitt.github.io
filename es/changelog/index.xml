@@ -1,17 +1,1 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>Registro de Cambios y Arquitectura on Coach Alan</title>
-		<link>https://alanpruitt.com/es/changelog/</link>
-		<description>Recent content in Registro de Cambios y Arquitectura on Coach Alan</description>
-		<generator>Hugo</generator>
-		<language>es-MX</language>
-		
-		
-		
-		
-			<lastBuildDate></lastBuildDate>
-		
-			<atom:link href="https://alanpruitt.com/es/changelog/index.xml" rel="self" type="application/rss+xml" />
-	</channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Registro de Cambios y Arquitectura on Coach Alan</title><link>https://alanpruitt.com/es/changelog/</link><description>Recent content in Registro de Cambios y Arquitectura on Coach Alan</description><generator>Hugo</generator><language>es-MX</language><lastBuildDate/><atom:link href="https://alanpruitt.com/es/changelog/index.xml" rel="self" type="application/rss+xml"/></channel></rss>
