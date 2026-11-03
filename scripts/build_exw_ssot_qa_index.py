@@ -36,7 +36,7 @@ COURSE_LINKS = {
         "label": "Inspect EXW 150 Exemplar & DGA 2025–2030 Hub (Course 42051)",
         "url": "https://azwestern.instructure.com/courses/42051/pages/ex-exw150-exemplar-solves-catalog",
         "toolkit_label": "Open EXW150 Sweat-Rate & Hydration Simulator",
-        "toolkit_url": "https://azwestern.instructure.com/courses/42051/pages/exw-demo-coach-alan-exw150-desert-sweat-rate-and-fluid-deficit-simulator-embed-code-plus-rubric",
+        "toolkit_url": "https://azwestern.instructure.com/courses/42051/pages/exw-demo-coach-alan-exw150-desert-sweat-rate-and-fluid-deficit-simulator-embed-code-+-rubric",
     },
     "EXW210": {
         "label": "Inspect EXW 210 Personal Fitness Training Syllabus & Modules (Course 42051)",
@@ -54,7 +54,7 @@ COURSE_LINKS = {
         "label": "Inspect EXW 265 Special Populations Exemplar Hub (Course 42051)",
         "url": "https://azwestern.instructure.com/courses/42051/pages/ex-exw265-exemplar-solves-catalog",
         "toolkit_label": "Open EXW265 Older Adult Fall-Risk Auditor",
-        "toolkit_url": "https://azwestern.instructure.com/courses/42051/pages/exw-demo-coach-alan-exw265-older-adult-fall-risk-and-multicomponent-auditor-embed-code-plus-rubric",
+        "toolkit_url": "https://azwestern.instructure.com/courses/42051/pages/exw-demo-coach-alan-exw265-older-adult-fall-risk-and-multicomponent-auditor-embed-code-+-rubric",
     },
     "STANDARDS": {
         "label": "Inspect Vehicle 1 & 2: Clinical Framing Protocol & Federal SSoT Hierarchy",
