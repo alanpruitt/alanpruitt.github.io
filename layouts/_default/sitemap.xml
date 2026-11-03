@@ -70,5 +70,11 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
+  <url>
+    <loc>https://alanpruitt.com/docs/Argon4_SchemaOrg_Dataset_Impact_on_CaC_and_EXW_Fleet_Report_2026-11-03.pdf</loc>
+    <lastmod>{{ now.Format "2006-01-02T15:04:05-07:00" }}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
   {{- end }}
 </urlset>
