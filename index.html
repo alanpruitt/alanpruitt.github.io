@@ -740,6 +740,42 @@
     white-space: nowrap;
     border-width: 0;
   }
+  .ap-cite-pill {
+    display: inline-flex;
+    align-items: center;
+    min-height: 30px;
+    padding: 0.2rem 0.6rem;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 0.7rem;
+    font-weight: 800;
+    border-radius: 999px;
+    border: 1.5px solid #0B192C;
+    background-color: #FFFFFF;
+    color: #0B192C;
+    cursor: pointer;
+    transition: background-color 0.15s ease, color 0.15s ease;
+  }
+  .ap-cite-pill:hover,
+  .ap-cite-pill:focus-visible {
+    background-color: #0B192C;
+    color: #FFFFFF;
+  }
+  .ap-cite-pill[data-copied="true"] {
+    background-color: #14532d;
+    border-color: #14532d;
+    color: #FFFFFF;
+  }
+  .ap-cite-drawer {
+    margin-top: 0.55rem;
+    padding: 0.6rem 0.75rem;
+    background-color: #FAFBF7;
+    border: 1.5px solid #0B192C;
+    border-left: 4px solid #680014;
+    border-radius: 0.45rem;
+    font-size: 0.75rem;
+    color: #0B192C;
+    line-height: 1.45;
+  }
 </style>
 
 <dialog id="ap-qa-dialog" closedby="any" aria-labelledby="ap-qa-title" data-lang="en">
@@ -935,9 +971,12 @@
       var it = topItems[j].item;
       var title = isEs ? it.title_es : it.title_en;
       var answer = isEs ? it.answer_es : it.answer_en;
-      var linksHtml = '';
+      var apa = buildArchApa7Citation(it, title);
+      var citeBtnLabel = isEs ? 'Citar APA 7' : 'Cite APA 7';
+      var citeCopiedLabel = isEs ? '¡Cita APA 7 copiada!' : 'Copied APA 7!';
+      var drawerId = 'ap-arch-cite-drawer-' + j;
+      var linksHtml = '<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.65rem; margin-top: 0.75rem; padding-top: 0.65rem; border-top: 1px solid #E6E6DC;">';
       if (it.links && it.links.length) {
-        linksHtml = '<div style="display: flex; flex-wrap: wrap; gap: 0.65rem; margin-top: 0.75rem; padding-top: 0.65rem; border-top: 1px solid #E6E6DC;">';
         for (var k = 0; k < it.links.length; k++) {
           var lnk = it.links[k];
           var lbl = isEs ? lnk.label_es : lnk.label_en;
@@ -949,8 +988,13 @@
             ' style="font-family: monospace; font-size: 0.75rem; font-weight: 800; color: #0B192C; text-decoration: underline;">' +
             escapeHtml(lbl) + ' &rarr;</a>';
         }
-        linksHtml += '</div>';
       }
+      linksHtml += '<button type="button" class="ap-cite-pill" data-cite-btn="' + j + '" data-label-default="' + escapeHtml(citeBtnLabel) + '" data-label-copied="' + escapeHtml(citeCopiedLabel) + '" data-cite-copy="' + escapeHtml(apa.combined) + '" aria-expanded="false" aria-controls="' + drawerId + '">' + escapeHtml(citeBtnLabel) + '</button>';
+      linksHtml += '</div>';
+      linksHtml += '<div id="' + drawerId + '" class="ap-cite-drawer" hidden>' +
+        '<div style="margin-bottom: 0.28rem;"><strong>' + (isEs ? 'Cita en el texto (APA 7):' : 'In-Text Citation (APA 7):') + '</strong> <code style="background-color: #FFFFFF; padding: 0.1rem 0.35rem; border: 1px solid #D5D5C8; border-radius: 0.25rem; font-weight: 700;">' + escapeHtml(apa.inText) + '</code></div>' +
+        '<div><strong>' + (isEs ? 'Referencia completa (APA 7):' : 'Full APA 7 Reference:') + '</strong> ' + escapeHtml(apa.reference) + '</div>' +
+      '</div>';
 
       html += '<article style="padding: 1.1rem 1.25rem; background-color: #FFFFFF; border: 1.5px solid #D5D5C8; border-radius: 0.75rem;">' +
         '<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.4rem; margin-bottom: 0.4rem;">' +
@@ -964,6 +1008,86 @@
     }
     resultsContainer.innerHTML = html;
   }
+
+  function buildArchApa7Citation(it, title) {
+    var cat = String(it.category || '');
+    var badge = String(it.badge || '');
+    var domPath = String(it.dom_path || '');
+    var cleanTitle = String(title || it.title_en || 'Sovereign Clinical AI Architecture');
+    var firstUrl = 'https://alanpruitt.com/';
+    if (it.links && it.links.length && it.links[0].url) {
+      var u = String(it.links[0].url);
+      firstUrl = u.indexOf('http') === 0 ? u : ('https://alanpruitt.com' + (u.indexOf('/') === 0 ? u : ('/' + u)));
+    }
+    var inText = '(Pruitt, 2026)';
+    var reference = '';
+
+    if (cat === 'dol-ten-07-25') {
+      inText = '(U.S. Department of Labor, Employment and Training Administration [DOL ETA], 2026; Pruitt, 2026)';
+      reference = 'U.S. Department of Labor, Employment and Training Administration. (2026, February 13). Training and Employment Notice No. 07-25: Artificial Intelligence (AI) Literacy Framework. https://www.dol.gov/agencies/eta/advisories/ten-07-25 [Operationalized in Pruitt, A. (2026). ' + cleanTitle + '. Arizona Western College. ' + firstUrl + ']';
+    } else if (cat === 'briefs') {
+      reference = 'Pruitt, A. (2026). ' + cleanTitle + ' [White paper]. Matador Wellness Center Clinical AI Residency, Arizona Western College. ' + firstUrl;
+    } else if (cat === 'essays') {
+      reference = 'Pruitt, A. (2026). ' + cleanTitle + '. In Curriculum-as-Code & Sovereign Clinical AI Essays. ' + firstUrl;
+    } else if (cat === 'research-log') {
+      var dateMatch = cleanTitle.match(/^\[([^\]]+)\]\s*(.*)$/);
+      var dateStr = dateMatch ? dateMatch[1] : '2026';
+      var logTitle = dateMatch ? dateMatch[2] : cleanTitle;
+      reference = 'Pruitt, A. (' + dateStr + '). ' + logTitle + ' (' + badge + '). In CaC & CaaS Master Research Log Observatory. https://alanpruitt.com/research-log/';
+    } else {
+      reference = 'Pruitt, A. (2026). ' + cleanTitle + ' (' + domPath + '). Curriculum-as-Code & Clinical AI Architecture Observatory, Arizona Western College. ' + firstUrl;
+    }
+
+    return {
+      inText: inText,
+      reference: reference,
+      combined: 'In-Text Citation (APA 7): ' + inText + '\nAPA 7 Reference: ' + reference
+    };
+  }
+
+  function copyTextWithFallback(text) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).catch(function() {
+        fallbackCopyTextarea(text);
+      });
+    } else {
+      fallbackCopyTextarea(text);
+    }
+  }
+
+  function fallbackCopyTextarea(text) {
+    try {
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      ta.setAttribute('readonly', '');
+      ta.style.position = 'fixed';
+      ta.style.top = '-9999px';
+      ta.style.left = '-9999px';
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+    } catch (e) {}
+  }
+
+  resultsContainer.addEventListener('click', function(e) {
+    var btn = e.target.closest('[data-cite-btn]');
+    if (!btn) return;
+    var copyPayload = btn.getAttribute('data-cite-copy') || '';
+    var drawerId = btn.getAttribute('aria-controls');
+    var drawer = drawerId ? document.getElementById(drawerId) : null;
+    copyTextWithFallback(copyPayload);
+    if (drawer) {
+      drawer.hidden = false;
+      btn.setAttribute('aria-expanded', 'true');
+    }
+    btn.setAttribute('data-copied', 'true');
+    btn.textContent = btn.getAttribute('data-label-copied') || 'Copied APA 7!';
+    setTimeout(function() {
+      btn.setAttribute('data-copied', 'false');
+      btn.textContent = btn.getAttribute('data-label-default') || 'Cite APA 7';
+    }, 2800);
+  });
 
   function renderSuggestions() {
     if (!qaData || !qaData.suggested_queries) return;

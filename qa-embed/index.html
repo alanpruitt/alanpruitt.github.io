@@ -109,6 +109,42 @@
       background-color: #0B192C;
       color: #FAFBF7;
     }
+    .ap-cite-pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      padding: 0.2rem 0.6rem;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.7rem;
+      font-weight: 800;
+      border-radius: 999px;
+      border: 1.5px solid #0B192C;
+      background-color: #FFFFFF;
+      color: #0B192C;
+      cursor: pointer;
+      transition: background-color 0.15s ease, color 0.15s ease;
+    }
+    .ap-cite-pill:hover,
+    .ap-cite-pill:focus-visible {
+      background-color: #0B192C;
+      color: #FFFFFF;
+    }
+    .ap-cite-pill[data-copied="true"] {
+      background-color: #14532d;
+      border-color: #14532d;
+      color: #FFFFFF;
+    }
+    .ap-cite-drawer {
+      margin-top: 0.55rem;
+      padding: 0.6rem 0.75rem;
+      background-color: #FAFBF7;
+      border: 1.5px solid #0B192C;
+      border-left: 4px solid #680014;
+      border-radius: 0.45rem;
+      font-size: 0.75rem;
+      color: #0B192C;
+      line-height: 1.45;
+    }
   </style>
 </head>
 <body>
@@ -392,12 +428,21 @@
       for (var j = 0; j < topItems.length; j++) {
         var it = topItems[j].item;
         var lnk = it.links || {};
+        var apa = buildExwApa7Citation(it);
+        var citeBtnLabel = isEs ? 'Citar APA 7' : 'Cite APA 7';
+        var citeCopiedLabel = isEs ? '¡Cita APA 7 copiada!' : 'Copied APA 7!';
+        var drawerId = 'ap-cite-drawer-' + j;
         var linksHtml = '<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 0.5rem; margin-top: 0.65rem; padding-top: 0.55rem; border-top: 1px solid #E6E6DC;">' +
-          '<div style="display: flex; flex-wrap: wrap; gap: 0.75rem;">' +
+          '<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.65rem;">' +
             (lnk.url ? '<a href="' + escapeHtml(lnk.url) + '" target="_blank" rel="noopener noreferrer" style="font-family: monospace; font-size: 0.73rem; font-weight: 800; color: #680014; text-decoration: underline;">' + escapeHtml(lnk.label || 'Open in Course 42051') + ' &rarr;</a>' : '') +
             (lnk.toolkit_url ? '<a href="' + escapeHtml(lnk.toolkit_url) + '" target="_blank" rel="noopener noreferrer" style="font-family: monospace; font-size: 0.73rem; font-weight: 800; color: #0B192C; text-decoration: underline;">' + escapeHtml(lnk.toolkit_label || 'Open Toolkit') + ' &rarr;</a>' : '') +
+            '<button type="button" class="ap-cite-pill" data-cite-btn="' + j + '" data-label-default="' + escapeHtml(citeBtnLabel) + '" data-label-copied="' + escapeHtml(citeCopiedLabel) + '" data-cite-copy="' + escapeHtml(apa.combined) + '" aria-expanded="false" aria-controls="' + drawerId + '">' + escapeHtml(citeBtnLabel) + '</button>' +
           '</div>' +
           '<span style="font-family: monospace; font-size: 0.66rem; color: #1B2A4A;">SSoT: ' + escapeHtml(it.ssot || '') + ' &bull; sha256:' + escapeHtml(it.sha || '') + '</span>' +
+        '</div>' +
+        '<div id="' + drawerId + '" class="ap-cite-drawer" hidden>' +
+          '<div style="margin-bottom: 0.28rem;"><strong>' + (isEs ? 'Cita en el texto (APA 7):' : 'In-Text Citation (APA 7):') + '</strong> <code style="background-color: #FFFFFF; padding: 0.1rem 0.35rem; border: 1px solid #D5D5C8; border-radius: 0.25rem; font-weight: 700;">' + escapeHtml(apa.inText) + '</code></div>' +
+          '<div><strong>' + (isEs ? 'Referencia completa (APA 7):' : 'Full APA 7 Reference:') + '</strong> ' + escapeHtml(apa.reference) + '</div>' +
         '</div>';
 
         html += '<article style="padding: 1rem 1.15rem; background-color: #FFFFFF; border: 1.5px solid #D5D5C8; border-left: 5px solid #0B192C; border-radius: 0.65rem;">' +
@@ -415,6 +460,84 @@
       }
       resultsContainer.innerHTML = html;
     }
+
+    function buildExwApa7Citation(it) {
+      var ssot = String(it.ssot || '');
+      var course = String(it.course || 'EXW');
+      var mod = String(it.module || '');
+      var section = String(it.section || it.dom_path || 'Clinical SSoT Benchmark');
+      var inText = '(Pruitt, 2026)';
+      var baseRef = '';
+
+      if (ssot.indexOf('2025-2030 Dietary Guidelines') !== -1 || course === 'EXW150') {
+        inText = '(U.S. Department of Agriculture [USDA] & U.S. Department of Health and Human Services [HHS], 2025; Pruitt, 2026)';
+        baseRef = 'U.S. Department of Agriculture & U.S. Department of Health and Human Services. (2025). Dietary Guidelines for Americans, 2025-2030 (10th ed.). https://www.dietaryguidelines.gov/';
+      } else if (ssot.indexOf('NASM') !== -1 || course === 'EXW210') {
+        inText = '(National Academy of Sports Medicine [NASM], 2022; American College of Sports Medicine [ACSM], 2025; U.S. Department of Health and Human Services [HHS], 2018)';
+        baseRef = 'National Academy of Sports Medicine. (2022). NASM essentials of personal fitness training (7th ed.). Jones & Bartlett Learning; American College of Sports Medicine. (2025). ACSM\'s guidelines for exercise testing and prescription (12th ed.). Wolters Kluwer.';
+      } else if (ssot.indexOf('ACSM') !== -1 && ssot.indexOf('PAGA') === -1) {
+        inText = '(American College of Sports Medicine [ACSM], 2025; Pruitt, 2026)';
+        baseRef = 'American College of Sports Medicine. (2025). ACSM\'s guidelines for exercise testing and prescription (12th ed.). Wolters Kluwer.';
+      } else if (ssot.indexOf('TEN No. 07-25') !== -1 || course === 'STANDARDS') {
+        inText = '(U.S. Department of Labor, Employment and Training Administration [DOL ETA], 2026; Pruitt, 2026)';
+        baseRef = 'U.S. Department of Labor, Employment and Training Administration. (2026, February 13). Training and Employment Notice No. 07-25: Artificial Intelligence (AI) Literacy Framework. https://www.dol.gov/agencies/eta/advisories/ten-07-25';
+      } else {
+        inText = '(U.S. Department of Health and Human Services [HHS], 2018; Pruitt, 2026)';
+        baseRef = 'U.S. Department of Health and Human Services. (2018). Physical Activity Guidelines for Americans (2nd ed.). https://health.gov/paguidelines/second-edition/';
+      }
+
+      var courseUrl = 'https://alanpruitt.com/qa-embed/' + (course && course !== 'STANDARDS' ? ('?course=' + encodeURIComponent(course)) : '');
+      var reference = baseRef + ' [Course SSoT Node: Pruitt, A. (2026). ' + section + ' (' + course + ', ' + mod + '). Arizona Western College Wellness & Physical Education Open Educational Resources. ' + courseUrl + ']';
+      return {
+        inText: inText,
+        reference: reference,
+        combined: 'In-Text Citation (APA 7): ' + inText + '\nAPA 7 Reference: ' + reference
+      };
+    }
+
+    function copyTextWithFallback(text) {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).catch(function() {
+          fallbackCopyTextarea(text);
+        });
+      } else {
+        fallbackCopyTextarea(text);
+      }
+    }
+
+    function fallbackCopyTextarea(text) {
+      try {
+        var ta = document.createElement('textarea');
+        ta.value = text;
+        ta.setAttribute('readonly', '');
+        ta.style.position = 'fixed';
+        ta.style.top = '-9999px';
+        ta.style.left = '-9999px';
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+      } catch (e) {}
+    }
+
+    resultsContainer.addEventListener('click', function(e) {
+      var btn = e.target.closest('[data-cite-btn]');
+      if (!btn) return;
+      var copyPayload = btn.getAttribute('data-cite-copy') || '';
+      var drawerId = btn.getAttribute('aria-controls');
+      var drawer = drawerId ? document.getElementById(drawerId) : null;
+      copyTextWithFallback(copyPayload);
+      if (drawer) {
+        drawer.hidden = false;
+        btn.setAttribute('aria-expanded', 'true');
+      }
+      btn.setAttribute('data-copied', 'true');
+      btn.textContent = btn.getAttribute('data-label-copied') || 'Copied APA 7!';
+      setTimeout(function() {
+        btn.setAttribute('data-copied', 'false');
+        btn.textContent = btn.getAttribute('data-label-default') || 'Cite APA 7';
+      }, 2800);
+    });
 
     function renderSuggestions() {
       if (!qaData || !qaData.suggested_queries) return;
