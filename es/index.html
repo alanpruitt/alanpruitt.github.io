@@ -973,9 +973,11 @@
       var answer = isEs ? it.answer_es : it.answer_en;
       var apa = buildArchApa7Citation(it, title);
       var citeBtnLabel = isEs ? 'Citar APA 7' : 'Cite APA 7';
-      var citeCopiedLabel = isEs ? '¡Cita APA 7 copiada!' : 'Copied APA 7!';
+      var citeHideLabel = isEs ? 'Ocultar APA 7' : 'Hide APA 7';
+      var copyBtnLabel = isEs ? 'Copiar APA 7' : 'Copy APA 7';
+      var citeCopiedLabel = isEs ? '¡APA 7 copiado!' : 'Copied APA 7!';
       var drawerId = 'ap-arch-cite-drawer-' + j;
-      var linksHtml = '<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.65rem; margin-top: 0.75rem; padding-top: 0.65rem; border-top: 1px solid #E6E6DC;">';
+      var linksHtml = '<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.45rem; margin-top: 0.75rem; padding-top: 0.65rem; border-top: 1px solid #E6E6DC;">';
       if (it.links && it.links.length) {
         for (var k = 0; k < it.links.length; k++) {
           var lnk = it.links[k];
@@ -985,11 +987,12 @@
           linksHtml += '<a href="' + escapeHtml(lnk.url) + '"' +
             (isExt ? ' target="_blank" rel="noopener noreferrer"' : '') +
             (isPdf ? ' download' : '') +
-            ' style="font-family: monospace; font-size: 0.75rem; font-weight: 800; color: #0B192C; text-decoration: underline;">' +
+            ' style="font-family: monospace; font-size: 0.75rem; font-weight: 800; color: #0B192C; text-decoration: underline; margin-right: 0.25rem;">' +
             escapeHtml(lbl) + ' &rarr;</a>';
         }
       }
-      linksHtml += '<button type="button" class="ap-cite-pill" data-cite-btn="' + j + '" data-label-default="' + escapeHtml(citeBtnLabel) + '" data-label-copied="' + escapeHtml(citeCopiedLabel) + '" data-cite-copy="' + escapeHtml(apa.combined) + '" aria-expanded="false" aria-controls="' + drawerId + '">' + escapeHtml(citeBtnLabel) + '</button>';
+      linksHtml += '<button type="button" class="ap-cite-pill" data-cite-toggle="' + j + '" data-label-open="' + escapeHtml(citeBtnLabel) + '" data-label-close="' + escapeHtml(citeHideLabel) + '" aria-expanded="false" aria-controls="' + drawerId + '">' + escapeHtml(citeBtnLabel) + '</button>';
+      linksHtml += '<button type="button" class="ap-cite-pill" data-cite-copy-btn="' + j + '" data-label-default="' + escapeHtml(copyBtnLabel) + '" data-label-copied="' + escapeHtml(citeCopiedLabel) + '" data-cite-copy="' + escapeHtml(apa.combined) + '" aria-controls="' + drawerId + '">' + escapeHtml(copyBtnLabel) + '</button>';
       linksHtml += '</div>';
       linksHtml += '<div id="' + drawerId + '" class="ap-cite-drawer" hidden>' +
         '<div style="margin-bottom: 0.28rem;"><strong>' + (isEs ? 'Cita en el texto (APA 7):' : 'In-Text Citation (APA 7):') + '</strong> <code style="background-color: #FFFFFF; padding: 0.1rem 0.35rem; border: 1px solid #D5D5C8; border-radius: 0.25rem; font-weight: 700;">' + escapeHtml(apa.inText) + '</code></div>' +
@@ -1071,22 +1074,42 @@
   }
 
   resultsContainer.addEventListener('click', function(e) {
-    var btn = e.target.closest('[data-cite-btn]');
-    if (!btn) return;
-    var copyPayload = btn.getAttribute('data-cite-copy') || '';
-    var drawerId = btn.getAttribute('aria-controls');
-    var drawer = drawerId ? document.getElementById(drawerId) : null;
-    copyTextWithFallback(copyPayload);
-    if (drawer) {
-      drawer.hidden = false;
-      btn.setAttribute('aria-expanded', 'true');
+    var toggleBtn = e.target.closest('[data-cite-toggle]');
+    if (toggleBtn) {
+      var dId = toggleBtn.getAttribute('aria-controls');
+      var dEl = dId ? document.getElementById(dId) : null;
+      if (dEl) {
+        var nextHidden = !dEl.hidden;
+        dEl.hidden = nextHidden;
+        toggleBtn.setAttribute('aria-expanded', nextHidden ? 'false' : 'true');
+        toggleBtn.textContent = nextHidden
+          ? (toggleBtn.getAttribute('data-label-open') || 'Cite APA 7')
+          : (toggleBtn.getAttribute('data-label-close') || 'Hide APA 7');
+      }
+      return;
     }
-    btn.setAttribute('data-copied', 'true');
-    btn.textContent = btn.getAttribute('data-label-copied') || 'Copied APA 7!';
-    setTimeout(function() {
-      btn.setAttribute('data-copied', 'false');
-      btn.textContent = btn.getAttribute('data-label-default') || 'Cite APA 7';
-    }, 2800);
+    var copyBtn = e.target.closest('[data-cite-copy-btn]');
+    if (copyBtn) {
+      var copyPayload = copyBtn.getAttribute('data-cite-copy') || '';
+      var drawerId = copyBtn.getAttribute('aria-controls');
+      var drawer = drawerId ? document.getElementById(drawerId) : null;
+      copyTextWithFallback(copyPayload);
+      if (drawer && drawer.hidden) {
+        drawer.hidden = false;
+        var idx = copyBtn.getAttribute('data-cite-copy-btn');
+        var tBtn = resultsContainer.querySelector('[data-cite-toggle="' + idx + '"]');
+        if (tBtn) {
+          tBtn.setAttribute('aria-expanded', 'true');
+          tBtn.textContent = tBtn.getAttribute('data-label-close') || 'Hide APA 7';
+        }
+      }
+      copyBtn.setAttribute('data-copied', 'true');
+      copyBtn.textContent = copyBtn.getAttribute('data-label-copied') || 'Copied APA 7!';
+      setTimeout(function() {
+        copyBtn.setAttribute('data-copied', 'false');
+        copyBtn.textContent = copyBtn.getAttribute('data-label-default') || 'Copy APA 7';
+      }, 2800);
+    }
   });
 
   function renderSuggestions() {

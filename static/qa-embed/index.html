@@ -430,13 +430,16 @@
         var lnk = it.links || {};
         var apa = buildExwApa7Citation(it);
         var citeBtnLabel = isEs ? 'Citar APA 7' : 'Cite APA 7';
-        var citeCopiedLabel = isEs ? '¡Cita APA 7 copiada!' : 'Copied APA 7!';
+        var citeHideLabel = isEs ? 'Ocultar APA 7' : 'Hide APA 7';
+        var copyBtnLabel = isEs ? 'Copiar APA 7' : 'Copy APA 7';
+        var citeCopiedLabel = isEs ? '¡APA 7 copiado!' : 'Copied APA 7!';
         var drawerId = 'ap-cite-drawer-' + j;
         var linksHtml = '<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 0.5rem; margin-top: 0.65rem; padding-top: 0.55rem; border-top: 1px solid #E6E6DC;">' +
-          '<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.65rem;">' +
-            (lnk.url ? '<a href="' + escapeHtml(lnk.url) + '" target="_blank" rel="noopener noreferrer" style="font-family: monospace; font-size: 0.73rem; font-weight: 800; color: #680014; text-decoration: underline;">' + escapeHtml(lnk.label || 'Open in Course 42051') + ' &rarr;</a>' : '') +
-            (lnk.toolkit_url ? '<a href="' + escapeHtml(lnk.toolkit_url) + '" target="_blank" rel="noopener noreferrer" style="font-family: monospace; font-size: 0.73rem; font-weight: 800; color: #0B192C; text-decoration: underline;">' + escapeHtml(lnk.toolkit_label || 'Open Toolkit') + ' &rarr;</a>' : '') +
-            '<button type="button" class="ap-cite-pill" data-cite-btn="' + j + '" data-label-default="' + escapeHtml(citeBtnLabel) + '" data-label-copied="' + escapeHtml(citeCopiedLabel) + '" data-cite-copy="' + escapeHtml(apa.combined) + '" aria-expanded="false" aria-controls="' + drawerId + '">' + escapeHtml(citeBtnLabel) + '</button>' +
+          '<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.45rem;">' +
+            (lnk.url ? '<a href="' + escapeHtml(lnk.url) + '" target="_blank" rel="noopener noreferrer" style="font-family: monospace; font-size: 0.73rem; font-weight: 800; color: #680014; text-decoration: underline; margin-right: 0.25rem;">' + escapeHtml(lnk.label || 'Open in Course 42051') + ' &rarr;</a>' : '') +
+            (lnk.toolkit_url ? '<a href="' + escapeHtml(lnk.toolkit_url) + '" target="_blank" rel="noopener noreferrer" style="font-family: monospace; font-size: 0.73rem; font-weight: 800; color: #0B192C; text-decoration: underline; margin-right: 0.25rem;">' + escapeHtml(lnk.toolkit_label || 'Open Toolkit') + ' &rarr;</a>' : '') +
+            '<button type="button" class="ap-cite-pill" data-cite-toggle="' + j + '" data-label-open="' + escapeHtml(citeBtnLabel) + '" data-label-close="' + escapeHtml(citeHideLabel) + '" aria-expanded="false" aria-controls="' + drawerId + '">' + escapeHtml(citeBtnLabel) + '</button>' +
+            '<button type="button" class="ap-cite-pill" data-cite-copy-btn="' + j + '" data-label-default="' + escapeHtml(copyBtnLabel) + '" data-label-copied="' + escapeHtml(citeCopiedLabel) + '" data-cite-copy="' + escapeHtml(apa.combined) + '" aria-controls="' + drawerId + '">' + escapeHtml(copyBtnLabel) + '</button>' +
           '</div>' +
           '<span style="font-family: monospace; font-size: 0.66rem; color: #1B2A4A;">SSoT: ' + escapeHtml(it.ssot || '') + ' &bull; sha256:' + escapeHtml(it.sha || '') + '</span>' +
         '</div>' +
@@ -521,22 +524,42 @@
     }
 
     resultsContainer.addEventListener('click', function(e) {
-      var btn = e.target.closest('[data-cite-btn]');
-      if (!btn) return;
-      var copyPayload = btn.getAttribute('data-cite-copy') || '';
-      var drawerId = btn.getAttribute('aria-controls');
-      var drawer = drawerId ? document.getElementById(drawerId) : null;
-      copyTextWithFallback(copyPayload);
-      if (drawer) {
-        drawer.hidden = false;
-        btn.setAttribute('aria-expanded', 'true');
+      var toggleBtn = e.target.closest('[data-cite-toggle]');
+      if (toggleBtn) {
+        var dId = toggleBtn.getAttribute('aria-controls');
+        var dEl = dId ? document.getElementById(dId) : null;
+        if (dEl) {
+          var nextHidden = !dEl.hidden;
+          dEl.hidden = nextHidden;
+          toggleBtn.setAttribute('aria-expanded', nextHidden ? 'false' : 'true');
+          toggleBtn.textContent = nextHidden
+            ? (toggleBtn.getAttribute('data-label-open') || 'Cite APA 7')
+            : (toggleBtn.getAttribute('data-label-close') || 'Hide APA 7');
+        }
+        return;
       }
-      btn.setAttribute('data-copied', 'true');
-      btn.textContent = btn.getAttribute('data-label-copied') || 'Copied APA 7!';
-      setTimeout(function() {
-        btn.setAttribute('data-copied', 'false');
-        btn.textContent = btn.getAttribute('data-label-default') || 'Cite APA 7';
-      }, 2800);
+      var copyBtn = e.target.closest('[data-cite-copy-btn]');
+      if (copyBtn) {
+        var copyPayload = copyBtn.getAttribute('data-cite-copy') || '';
+        var drawerId = copyBtn.getAttribute('aria-controls');
+        var drawer = drawerId ? document.getElementById(drawerId) : null;
+        copyTextWithFallback(copyPayload);
+        if (drawer && drawer.hidden) {
+          drawer.hidden = false;
+          var idx = copyBtn.getAttribute('data-cite-copy-btn');
+          var tBtn = resultsContainer.querySelector('[data-cite-toggle="' + idx + '"]');
+          if (tBtn) {
+            tBtn.setAttribute('aria-expanded', 'true');
+            tBtn.textContent = tBtn.getAttribute('data-label-close') || 'Hide APA 7';
+          }
+        }
+        copyBtn.setAttribute('data-copied', 'true');
+        copyBtn.textContent = copyBtn.getAttribute('data-label-copied') || 'Copied APA 7!';
+        setTimeout(function() {
+          copyBtn.setAttribute('data-copied', 'false');
+          copyBtn.textContent = copyBtn.getAttribute('data-label-default') || 'Copy APA 7';
+        }, 2800);
+      }
     });
 
     function renderSuggestions() {
