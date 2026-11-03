@@ -234,13 +234,87 @@
       }
     }
 
+    var COURSE_META = {
+      all: {
+        title_en: 'EXW Clinical SSoT Q&A Workbench: Search Courses, Modules, Rules & 10/10 Exemplars',
+        title_es: 'Buscador Q&A del SSoT Clínico EXW: Cursos, Módulos, Reglas y Ejemplares 10/10',
+        badge: 'PAGA 2018 (2nd Ed.) • DGA 2025–2030 • ACSM 12th Ed. • NASM OPT • US DOL TEN 07-25',
+        chips: null
+      },
+      EXW101: {
+        title_en: 'EXW 101 Student SSoT Q&A Workbench: PAGA 2018 (2nd Ed.), Kinesiology & Movement Audits',
+        title_es: 'Buscador Estudiantil SSoT EXW 101: PAGA 2018 (2.ª Ed.), Kinesiología y Movimiento',
+        badge: 'EXW 101 SSoT • Physical Activity Guidelines for Americans (PAGA), 2nd Ed. (2018)',
+        chips: [
+          { label_en: 'PAGA 2018 (150–300 min/wk & 2-for-1 Rule)', label_es: 'PAGA 2018 (150–300 min/sem y Regla 2 por 1)', query: 'PAGA 2018 150 300 minutes vigorous' },
+          { label_en: 'METs (Moderate 3.0–5.9 vs Vigorous >=6.0)', label_es: 'METs (Moderado 3.0–5.9 vs Vigoroso >=6.0)', query: 'METs moderate vigorous intensity gait' },
+          { label_en: 'Muscle-Strengthening (>=2 Days/Week)', label_es: 'Fortalecimiento Muscular (>=2 Días/Sem)', query: 'muscle-strengthening 2 days major muscle groups' },
+          { label_en: 'Youth (60 min/day) & Older Adults (Balance)', label_es: 'Jóvenes (60 min/día) y Adultos Mayores', query: 'youth 60 minutes older adults multicomponent balance' },
+          { label_en: 'Yuma Heat Stress (>110°F) & Environmental Safety', label_es: 'Calor en Yuma (>110°F) y Seguridad Ambiental', query: 'Yuma heat thermal hydration safety' },
+          { label_en: 'Pattern / Rule / Solve & Four-Part Submission', label_es: 'Patrón / Regla / Solución y Envío de 4 Partes', query: 'Pattern Rule Solve P-T-C-F Active Verification' }
+        ]
+      },
+      EXW150: {
+        title_en: 'EXW 150 Student SSoT Q&A Workbench: 2025–2030 Dietary Guidelines ("Real Food") & Sports Nutrition',
+        title_es: 'Buscador Estudiantil SSoT EXW 150: Guías Alimentarias 2025–2030 ("Comida Real") y Nutrición Deportiva',
+        badge: 'EXW 150 SSoT • 2025–2030 Dietary Guidelines for Americans ("Real Food" Focus)',
+        chips: [
+          { label_en: 'DGA 2025–2030 ("Real Food" & <10% Added Sugar)', label_es: 'DGA 2025–2030 ("Comida Real" y Azúcares <10%)', query: 'Real Food added sugars saturated fat sodium' },
+          { label_en: 'Macronutrient AMDRs (Carb, Protein, Fat g/kg)', label_es: 'Rangos AMDR de Macronutrientes (g/kg)', query: 'carbohydrate protein fat g/kg AMDR kcal' },
+          { label_en: 'Yuma Sweat Rate & 125–150% Fluid Replacement', label_es: 'Tasa de Sudoración en Yuma y Reemplazo 125–150%', query: 'sweat rate fluid deficit hydration electrolytes Yuma' },
+          { label_en: 'Glycogen Loading & Peri-Workout Fueling', label_es: 'Carga de Glucógeno y Nutrición Peri-Entrenamiento', query: 'glycogen pre-exercise recovery carbohydrate' },
+          { label_en: 'RED-S, Energy Availability & Micronutrients', label_es: 'RED-S, Disponibilidad Energética y Micronutrientes', query: 'energy availability iron calcium vitamin D' },
+          { label_en: 'Pattern / Rule / Solve & 10/10 Exemplars', label_es: 'Patrón / Regla / Solución y Ejemplares 10/10', query: 'Exemplar Pattern Rule Solve Active Verification' }
+        ]
+      },
+      EXW210: {
+        title_en: 'EXW 210 Student SSoT Q&A Workbench: NASM OPT Model, ACSM 12th Ed. & PAGA 2018',
+        title_es: 'Buscador Estudiantil SSoT EXW 210: Modelo NASM OPT, ACSM 12.ª Ed. y PAGA 2018',
+        badge: 'EXW 210 Tri-SSoT • NASM OPT Model + ACSM 12th Ed. (2025) + PAGA 2018',
+        chips: [
+          { label_en: 'NASM OPT Phases 1–5 (Stabilization, Strength, Power)', label_es: 'Fases 1–5 NASM OPT (Estabilización, Fuerza, Potencia)', query: 'OPT Phase 1 Stabilization Strength Power tempo' },
+          { label_en: 'Overhead Squat Assessment (OHSA) Compensations', label_es: 'Evaluación de Sentadilla de Arranque (OHSA)', query: 'OHSA overactive underactive knee valgus' },
+          { label_en: 'ACSM Preparticipation Screening & Risk Gates', label_es: 'Tamizaje Preparticipación ACSM y Seguridad', query: 'ACSM screening blood pressure signs symptoms' },
+          { label_en: 'Karvonen HRR, 1RM & FITT-VP Progression', label_es: 'Karvonen FC Reserva, 1RM y FITT-VP', query: 'HRR Karvonen 1RM FITT-VP intensity' },
+          { label_en: 'Core, Balance & Plyometric/SAQ Programming', label_es: 'Core, Equilibrio y Pliometría / SAQ', query: 'core balance SAQ plyometric proprioceptive' },
+          { label_en: 'Pattern / Rule / Solve & exwtoolkit.com', label_es: 'Patrón / Regla / Solución y exwtoolkit.com', query: 'Pattern Rule Solve exwtoolkit token' }
+        ]
+      },
+      EXW245: {
+        title_en: 'EXW 245 Student SSoT Q&A Workbench: ACSM 12th Ed. (2025) Exercise Testing & Prescription',
+        title_es: 'Buscador Estudiantil SSoT EXW 245: ACSM 12.ª Ed. (2025) Pruebas de Ejercicio y Prescripción',
+        badge: 'EXW 245 SSoT • ACSM Guidelines for Exercise Testing and Prescription, 12th Ed. (2025)',
+        chips: [
+          { label_en: 'ACSM 12th Ed. Preparticipation Screening', label_es: 'Tamizaje Preparticipación ACSM 12.ª Ed.', query: 'ACSM preparticipation screening cardiovascular metabolic renal' },
+          { label_en: 'VO2max, MET Equations & Cycle Ergometry', label_es: 'VO2max, Ecuaciones MET y Cicloergometría', query: 'VO2 MET cycle ergometer Lode Corival' },
+          { label_en: 'GXT Test Termination Criteria (Absolute/Relative)', label_es: 'Criterios de Terminación de Prueba (GXT)', query: 'termination SBP DBP angina ataxia' },
+          { label_en: 'Karvonen HRR, VO2R & FITT-VP Prescription', label_es: 'Karvonen FC Reserva, VO2R y Prescripción FITT-VP', query: 'HRR VO2R FITT-VP intensity prescription' },
+          { label_en: 'ECG, Blood Pressure & Hemodynamic Responses', label_es: 'ECG, Presión Arterial y Respuestas Hemodinámicas', query: 'blood pressure hemodynamic cardiac output' },
+          { label_en: 'Thermoregulation & Yuma Desert Drift', label_es: 'Termorregulación y Deriva Cardiovascular en Yuma', query: 'cardiovascular drift heat Yuma dehydration' }
+        ]
+      },
+      EXW265: {
+        title_en: 'EXW 265 Student SSoT Q&A Workbench: PAGA 2018 Special Populations & Clinical Safety Gates',
+        title_es: 'Buscador Estudiantil SSoT EXW 265: PAGA 2018 Poblaciones Especiales y Puertas de Seguridad',
+        badge: 'EXW 265 SSoT • PAGA 2018 (Chapters 5 & 6) & Special Populations Safety Gates',
+        chips: [
+          { label_en: 'Older Adults (>=65 yr): Multicomponent & Fall Risk', label_es: 'Adultos Mayores (>=65 años): Multicomponente y Caídas', query: 'older adults multicomponent balance fall risk' },
+          { label_en: 'Type 2 Diabetes (T2DM) & Hypoglycemia Gates', label_es: 'Diabetes Tipo 2 (DM2) y Puertas de Hipoglucemia', query: 'diabetes glucose hypoglycemia insulin' },
+          { label_en: 'Hypertension (HTN), Valsalva & BP Safety Limits', label_es: 'Hipertensión (HTA), Valsalva y Límites de PA', query: 'hypertension blood pressure Valsalva SBP' },
+          { label_en: 'Pregnancy & Postpartum PAGA 2018 Guidelines', label_es: 'Embarazo y Posparto según PAGA 2018', query: 'pregnancy postpartum supine moderate aerobic' },
+          { label_en: 'Osteoarthritis, Obesity & Joint-Sparing Load', label_es: 'Osteoartritis, Obesidad y Protección Articular', query: 'arthritis joint obesity aquatic low-impact' },
+          { label_en: 'Pattern / Rule / Solve & 10/10 Exemplars', label_es: 'Patrón / Regla / Solución y Ejemplares 10/10', query: 'Exemplar Pattern Rule Solve safety gate' }
+        ]
+      }
+    };
+
     function updateLangUi() {
       document.documentElement.lang = isEs ? 'es' : 'en';
       btnEn.setAttribute('aria-pressed', isEs ? 'false' : 'true');
       btnEs.setAttribute('aria-pressed', isEs ? 'true' : 'false');
-      document.getElementById('embed-title').textContent = isEs
-        ? 'Buscador Q&A del SSoT Clínico EXW: Cursos, Módulos, Reglas y Ejemplares 10/10'
-        : 'EXW Clinical SSoT Q&A Workbench: Search Courses, Modules, Rules & 10/10 Exemplars';
+      var meta = COURSE_META[activeCourse] || COURSE_META.all;
+      document.getElementById('embed-title').textContent = isEs ? meta.title_es : meta.title_en;
+      document.getElementById('embed-sub-badge').textContent = meta.badge;
       input.placeholder = isEs
         ? 'Buscar en PAGA 2018 METs, DGA 2025-2030 Comida Real, ACSM 12.ª Ed. VO2/FC, NASM OPT, calor en Yuma, Módulo 01-16...'
         : 'Search PAGA 2018 METs, DGA 2025-2030 Real Food, ACSM 12th Ed. HRR/VO2, NASM OPT, Yuma heat, Module 01-16...';
@@ -344,9 +418,11 @@
 
     function renderSuggestions() {
       if (!qaData || !qaData.suggested_queries) return;
+      var meta = COURSE_META[activeCourse] || COURSE_META.all;
+      var list = (meta && meta.chips) ? meta.chips : qaData.suggested_queries;
       var html = '';
-      for (var i = 0; i < qaData.suggested_queries.length; i++) {
-        var sq = qaData.suggested_queries[i];
+      for (var i = 0; i < list.length; i++) {
+        var sq = list[i];
         var lbl = isEs ? sq.label_es : sq.label_en;
         html += '<button type="button" class="ap-qa-chip" data-query="' + escapeHtml(sq.query) + '">' + escapeHtml(lbl) + '</button>';
       }
@@ -355,7 +431,6 @@
       for (var c = 0; c < chips.length; c++) {
         chips[c].addEventListener('click', function() {
           input.value = this.getAttribute('data-query') || '';
-          activeCourse = 'all';
           activeRole = 'all';
           syncTabStates();
           renderResults();
@@ -368,7 +443,6 @@
     input.addEventListener('input', renderResults);
     clearBtn.addEventListener('click', function() {
       input.value = '';
-      activeCourse = 'all';
       activeRole = 'all';
       syncTabStates();
       renderResults();
@@ -378,8 +452,7 @@
     for (var i = 0; i < courseButtons.length; i++) {
       courseButtons[i].addEventListener('click', function() {
         activeCourse = this.getAttribute('data-course') || 'all';
-        syncTabStates();
-        renderResults();
+        updateLangUi();
       });
     }
 
