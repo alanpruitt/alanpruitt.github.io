@@ -79,7 +79,7 @@ Compendium PDF: https://alanpruitt.com/docs/CaC_and_CaaS_Master_Research_Log_202
 
 # **MASTER RESEARCH LOG: CURRICULUM AS CODE (CaC), CURRICULUM AS A SERVICE (CaaS) & COMPLIANCE AS CODE**
 
-*Last Updated: November 1, 2026 (S-A-R v2.2 Sovereign GraphRAG, PROV-O & Compliance-as-Code Release)*
+*Last Updated: November 2, 2026 (S-A-R v2.2 US DOL TEN 07-25 AI Literacy Framework & Golden Circle OER Release)*
 
 > **Disclaimer:** The Curriculum-as-Code architecture, Compliance-as-Code linters, S-A-R Standard, and open-source software tools described in this research log represent my independent faculty engineering and research through Webcognita LLC and do not represent official policy or endorsement by Arizona Western College or The University of Arizona.
 
@@ -99,6 +99,26 @@ This log serves as the continuous running repository and Single Source of Truth 
 ---
 
 ## **SECTION 2: THE DISCOVERY LOG (BY DATE — REVERSE-CHRONOLOGICAL SSoT)**
+
+### **November 2, 2026 — U.S. DOL ETA Advisory TEN No. 07-25 AI Literacy Framework (5 Foundational Content Areas & 7 Community College Delivery Principles) & Simon Sinek's Golden Circle (`WHY -> HOW -> WHAT`) OER Integration**
+
+On this date, I evaluated the **U.S. Department of Labor (DOL) Employment and Training Administration (ETA) Training and Employment Notice (TEN) No. 07-25** (*Artificial Intelligence (AI) Literacy Framework*, issued February 13, 2026, building on WIOA guidance in *TEGL 03-25*) and codified its **5 Foundational Content Areas** and **7 Community College Delivery Design Principles** alongside **Simon Sinek's Golden Circle (`Ring 1 [THE WHY]` -> `Ring 2 [THE HOW]` -> `Ring 3 [THE WHAT]`)** across all 10 Canvas shells (`EXW 101`, `150`, `210`, `245`, `265`, and `EXW-Demo 42051`) and the automated pre-commit compliance linter (`scripts/argon4_fleet_evaluator.py`).
+
+* **1. Federal Workforce AI Literacy SSoT (`US DOL ETA Advisory TEN No. 07-25`, Feb 13, 2026):**
+  * **Classification:** Compliance as Code / Federal Workforce AI Literacy & Community College OER Alignment
+  * **Key Mechanism:** `TEN No. 07-25` defines AI literacy as a foundational workforce readiness competency across all community college and CTE occupational domains, organized into **Part A: Five Foundational Content Areas** (*What Students Learn*) and **Part B: Seven Delivery Design Principles** (*How Community Colleges Teach It*):
+    1. *Content Area 1 (Understand AI Principles) -> The Centaur Protocol:* Students act as the *Clinical Architect / Pilot* (Problem Framing & Judgment) while treating AI strictly as a *Probabilistic Engine* whose outputs require verification.
+    2. *Content Area 2 (Explore AI Uses) -> Stage 1 Coaching Sprints & Stage 2 Applied Clinical Labs:* Authentic occupational simulations using zero-cost, zero-login edge calculators (`exwtoolkit.com` and `paga2018.dev`).
+    3. *Content Area 3 (Direct AI Effectively) -> Part 1 (`P-T-C-F` Prompt Engineering):* Structured Persona-Task-Context-Format prompting wrapped in `###` delimiters and archived in the student's cloud portfolio (`EXW_Professional_AI_Repository`).
+    4. *Content Area 4 (Evaluate Outputs) -> Part 2 (150-Word Clinical SSoT Audit):* Auditing AI outputs against public-domain federal `.gov` Single Sources of Truth (*PAGA 2018*, *DGA 2025–2030*, *ACSM 12th Ed.*, *NASM OPT*).
+    5. *Content Area 5 (Use AI Responsibly) -> Part 3 (150-Word Active Verification Defense) & Traffic Light AI Policy:* Human-voice clinical defense, Red/Yellow/Green integrity boundaries, and automated FERPA/PII sanitization (`scripts/pii_security_linter.py`).
+    6. *Delivery Principles 1–7 (Community College Execution):* Enforces experiential slider calibration (Principle 1), Yuma / Imperial Valley borderland contextualization (Principle 2), durable human skills via `Pattern / Rule / Solve` and Sinek's Golden Circle (Principle 3), `$0 ZTC` `CC BY-NC-SA 4.0` OER + `9:1` Double-Contrast Guard + Norteño-Spanish HSI parity (Principle 4), stackable `EXW_Professional_AI_Repository` pathways (Principle 5), turnkey faculty showcase in `Course 42051` (Principle 6), and Git-tracked Curriculum-as-Code agility (Principle 7).
+
+* **2. Fleet-Wide Golden Circle Module Architecture (`WHY -> HOW -> WHAT`) & Automated `TEN 07-25` Linter Gate:**
+  * **Classification:** Curriculum as Code / Cognitive Navigation & Pre-Commit Enforcement
+  * **Core Architecture:**
+    1. *Golden Circle Module Schema (`scripts/apply_mod00_golden_circle_architecture.py` & `scripts/apply_sandbox_golden_circle_fleet.py`):* Refactored `Module 00` across all 10 Canvas shells (`30` Ring SubHeaders + `55` numbered items) and `Modules 01–16` across all 6 Development/Sandbox courses (`254` Ring SubHeaders + `530` numbered items across `86` modules) into explicit `Ring 1 [THE WHY]`, `Ring 2 [THE HOW]`, and `Ring 3 [THE WHAT]` cognitive tiers while preserving `Module 00: Welcome: Start Here / Bienvenida: Comienza Aquí` and all Final Student Course Evaluation `must_submit` prerequisites.
+    2. *Automated `TEN 07-25` Pre-Commit Gate (`scripts/argon4_fleet_evaluator.py`):* Added Gate 5 to verify `TEN 07-25` Content Areas 3–5 (`P-T-C-F`, `Clinical SSoT Audit`, and `Active Verification`) across active curriculum Lab and Sprint files and stamped `data-exw-dol-ten="07-25"` across fleet Syllabi and `Module 00` Pillar 2 pages.
 
 ### **November 1, 2026 (Part IV) — Empirical Audit of 1,563 `llms.txt` Files (SEMPITE Research) & CI/CD `llms.txt` Link-Integrity Gate**
 
