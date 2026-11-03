@@ -1054,7 +1054,7 @@
                     </a>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div id="home-essays-grid" class="grid grid-cols-1 md:grid-cols-3 gap-4">
 
                     <!-- ESSAY 38 CARD (LATEST RELEASE) -->
                     <div class="p-5 rounded-xl bg-creme-50 border border-creme-200 flex flex-col justify-between md:col-span-2">
@@ -1196,6 +1196,118 @@
                     </div>
 
                 </div>
+                <script>
+                  (function() {
+                    var grid = document.getElementById('home-essays-grid');
+                    if (!grid) return;
+                    var isEs = document.documentElement.lang === 'es';
+                    var citeLabel = isEs ? 'Citar APA 7' : 'Cite APA 7';
+                    var hideLabel = isEs ? 'Ocultar APA 7' : 'Hide APA 7';
+                    var copyLabel = isEs ? 'Copiar APA 7' : 'Copy APA 7';
+                    var copiedLabel = isEs ? '¡APA 7 copiado!' : 'Copied APA 7!';
+                    var cards = grid.children;
+                    for (var i = 0; i < cards.length; i++) {
+                      var card = cards[i];
+                      var hLink = card.querySelector('h4 a[href^="/essays/"]');
+                      var footerRow = card.querySelector('div.border-t');
+                      if (!hLink || !footerRow) continue;
+                      var titleText = (hLink.textContent || '').trim();
+                      var badgeEl = card.querySelector('.font-mono.text-navy-800.font-bold');
+                      var badgeText = badgeEl ? (badgeEl.textContent || '').trim() : '';
+                      if (badgeText && titleText.toLowerCase().indexOf('essay ') !== 0) {
+                        titleText = badgeText.charAt(0) + badgeText.slice(1).toLowerCase() + ': ' + titleText;
+                      }
+                      var url = 'https://alanpruitt.com' + hLink.getAttribute('href');
+                      var inText = '(Pruitt, 2026)';
+                      var fullRef = 'Pruitt, A. (2026). ' + titleText + '. In Curriculum-as-Code & Sovereign AI Strategy Essays. ' + url;
+                      var combined = 'In-Text Citation (APA 7): ' + inText + '\nAPA 7 Reference: ' + fullRef;
+                      var drawerId = 'home-essay-cite-' + i;
+
+                      footerRow.style.flexWrap = 'wrap';
+                      var pillWrap = document.createElement('span');
+                      pillWrap.style.display = 'inline-flex';
+                      pillWrap.style.gap = '0.35rem';
+                      pillWrap.style.alignItems = 'center';
+                      pillWrap.style.marginLeft = 'auto';
+                      pillWrap.innerHTML =
+                        '<button type="button" class="ap-cite-pill" data-cite-toggle="' + i + '" data-label-open="' + citeLabel + '" data-label-close="' + hideLabel + '" aria-expanded="false" aria-controls="' + drawerId + '">' + citeLabel + '</button>' +
+                        '<button type="button" class="ap-cite-pill" data-cite-copy-btn="' + i + '" data-label-default="' + copyLabel + '" data-label-copied="' + copiedLabel + '" aria-controls="' + drawerId + '">' + copyLabel + '</button>';
+                      var cBtn = pillWrap.querySelector('[data-cite-copy-btn]');
+                      if (cBtn) cBtn.setAttribute('data-cite-copy', combined);
+                      footerRow.appendChild(pillWrap);
+
+                      var drawer = document.createElement('div');
+                      drawer.id = drawerId;
+                      drawer.className = 'ap-cite-drawer';
+                      drawer.hidden = true;
+                      drawer.innerHTML =
+                        '<div style="margin-bottom: 0.25rem;"><strong>' + (isEs ? 'Cita en el texto (APA 7):' : 'In-Text Citation (APA 7):') + '</strong> <code style="background-color: #FFFFFF; padding: 0.1rem 0.35rem; border: 1px solid #0B192C; border-radius: 0.25rem; font-weight: 700;">' + inText + '</code></div>' +
+                        '<div><strong>' + (isEs ? 'Referencia completa (APA 7):' : 'Full APA 7 Reference:') + '</strong> ' + fullRef + '</div>';
+                      card.appendChild(drawer);
+                    }
+
+                    function copyTextWithFallback(text) {
+                      if (navigator.clipboard && navigator.clipboard.writeText) {
+                        navigator.clipboard.writeText(text).catch(function() { fallbackCopyTextarea(text); });
+                      } else {
+                        fallbackCopyTextarea(text);
+                      }
+                    }
+                    function fallbackCopyTextarea(text) {
+                      try {
+                        var ta = document.createElement('textarea');
+                        ta.value = text;
+                        ta.setAttribute('readonly', '');
+                        ta.style.position = 'fixed';
+                        ta.style.top = '-9999px';
+                        ta.style.left = '-9999px';
+                        document.body.appendChild(ta);
+                        ta.select();
+                        document.execCommand('copy');
+                        document.body.removeChild(ta);
+                      } catch (e) {}
+                    }
+
+                    grid.addEventListener('click', function(e) {
+                      var toggleBtn = e.target.closest('[data-cite-toggle]');
+                      if (toggleBtn) {
+                        var dId = toggleBtn.getAttribute('aria-controls');
+                        var dEl = dId ? document.getElementById(dId) : null;
+                        if (dEl) {
+                          var nextHidden = !dEl.hidden;
+                          dEl.hidden = nextHidden;
+                          toggleBtn.setAttribute('aria-expanded', nextHidden ? 'false' : 'true');
+                          toggleBtn.textContent = nextHidden
+                            ? (toggleBtn.getAttribute('data-label-open') || 'Cite APA 7')
+                            : (toggleBtn.getAttribute('data-label-close') || 'Hide APA 7');
+                        }
+                        return;
+                      }
+                      var copyBtn = e.target.closest('[data-cite-copy-btn]');
+                      if (copyBtn) {
+                        var copyPayload = copyBtn.getAttribute('data-cite-copy') || '';
+                        var drawerId = copyBtn.getAttribute('aria-controls');
+                        var drawer = drawerId ? document.getElementById(drawerId) : null;
+                        copyTextWithFallback(copyPayload);
+                        if (drawer && drawer.hidden) {
+                          drawer.hidden = false;
+                          var idx = copyBtn.getAttribute('data-cite-copy-btn');
+                          var tBtn = grid.querySelector('[data-cite-toggle="' + idx + '"]');
+                          if (tBtn) {
+                            tBtn.setAttribute('aria-expanded', 'true');
+                            tBtn.textContent = tBtn.getAttribute('data-label-close') || 'Hide APA 7';
+                          }
+                        }
+                        copyBtn.setAttribute('data-copied', 'true');
+                        copyBtn.textContent = copyBtn.getAttribute('data-label-copied') || 'Copied APA 7!';
+                        setTimeout(function() {
+                          copyBtn.setAttribute('data-copied', 'false');
+                          copyBtn.textContent = copyBtn.getAttribute('data-label-default') || 'Copy APA 7';
+                        }, 2800);
+                      }
+                    });
+                  })();
+                </script>
             </div>
 
     </main>

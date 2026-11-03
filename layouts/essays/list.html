@@ -148,6 +148,51 @@
         .min-h-\[44px\] { min-height: 44px; }
         
         .focus-visible\:outline:focus-visible { outline: 2px solid var(--text-navy-900); outline-offset: 2px; }
+
+        .ap-cite-pill {
+            display: inline-flex;
+            align-items: center;
+            min-height: 28px;
+            padding: 0.18rem 0.55rem;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            font-size: 0.68rem;
+            font-weight: 800;
+            border-radius: 999px;
+            border: 1.5px solid #0B192C;
+            background-color: #FFFFFF;
+            color: #0B192C;
+            cursor: pointer;
+            transition: background-color 0.15s ease, color 0.15s ease;
+        }
+        .ap-cite-pill:hover,
+        .ap-cite-pill:focus-visible {
+            background-color: #0B192C;
+            color: #FFFFFF;
+        }
+        .ap-cite-pill[data-copied="true"] {
+            background-color: #14532d;
+            border-color: #14532d;
+            color: #FFFFFF;
+        }
+        .ap-cite-drawer {
+            margin-top: 0.65rem;
+            padding: 0.6rem 0.75rem;
+            background-color: #FAF8F5;
+            border: 1.5px solid #0B192C;
+            border-left: 4px solid #680014;
+            border-radius: 0.5rem;
+            font-size: 0.73rem;
+            color: #0B192C;
+            line-height: 1.45;
+            text-align: left;
+        }
+        .ap-cite-drawer code {
+            background-color: #FFFFFF;
+            padding: 0.1rem 0.35rem;
+            border: 1px solid #d4d4d8;
+            border-radius: 0.25rem;
+            font-weight: 700;
+        }
     </style>
     {{ partial "print-styles.html" . }}
 </head>
@@ -178,14 +223,24 @@
 
             <!-- Essay Cards Grid -->
             <div id="essays-grid" class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {{ range .Pages.ByDate.Reverse }}
+              {{ range $idx, $p := .Pages.ByDate.Reverse }}
                 {{ $catList := "" }}
-                {{ with .Params.categories }}
+                {{ with $p.Params.categories }}
                   {{ $catList = delimit . " " }}
                 {{ end }}
 
-                {{ $numMatch := findRE "[0-9]+" .File.BaseFileName 1 }}
+                {{ $numMatch := findRE "[0-9]+" $p.File.BaseFileName 1 }}
                 {{ $essayNum := index $numMatch 0 | default "" }}
+                {{ $yearStr := $p.Date.Format "2006" }}
+                {{ $apaDate := $p.Date.Format "2006, January 2" }}
+                {{ $inText := printf "(Pruitt, %s)" $yearStr }}
+                {{ $fullRef := printf "Pruitt, A. (%s). %s. In Curriculum-as-Code & Sovereign AI Strategy Essays. %s" $apaDate $p.Title $p.Permalink }}
+                {{ $combinedCopy := printf "In-Text Citation (APA 7): %s\nAPA 7 Reference: %s" $inText $fullRef }}
+                {{ $drawerId := printf "essay-card-cite-%d" $idx }}
+                {{ $citeLabel := cond (eq $.Lang "es") "Citar APA 7" "Cite APA 7" }}
+                {{ $hideLabel := cond (eq $.Lang "es") "Ocultar APA 7" "Hide APA 7" }}
+                {{ $copyLabel := cond (eq $.Lang "es") "Copiar APA 7" "Copy APA 7" }}
+                {{ $copiedLabel := cond (eq $.Lang "es") "¡APA 7 copiado!" "Copied APA 7!" }}
 
                 <article 
                   class="essay-card-item flex flex-col justify-between rounded-xl border border-zinc-200 bg-white p-6 shadow-sm transition hover:border-zinc-400 hover:shadow-md dark:border-zinc-800 dark:bg-zinc-900/60 dark:hover:border-zinc-600"
@@ -201,7 +256,7 @@
                       {{ end }}
                       
                       <div class="flex flex-wrap gap-1">
-                        {{ range .Params.categories }}
+                        {{ range $p.Params.categories }}
                           <span class="rounded bg-zinc-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400">
                             {{ . }}
                           </span>
@@ -211,28 +266,38 @@
 
                     <!-- Polished Essay Title -->
                     <h2 class="text-lg font-bold leading-snug text-zinc-950 dark:text-white">
-                      <a href="{{ .RelPermalink }}" class="hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white" style="text-decoration: none; color: inherit;">
-                        {{ .Title }}
+                      <a href="{{ $p.RelPermalink }}" class="hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white" style="text-decoration: none; color: inherit;">
+                        {{ $p.Title }}
                       </a>
                     </h2>
 
                     <!-- Summary / Excerpt -->
                     <p class="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400 line-clamp-3">
-                      {{ .Description | default .Summary }}
+                      {{ $p.Description | default $p.Summary }}
                     </p>
                   </div>
 
                   <!-- Card Footer Meta -->
-                  <div class="mt-6 flex items-center justify-between border-t border-zinc-100 pt-4 text-xs font-semibold text-zinc-500 dark:border-zinc-800 dark:text-zinc-400">
-                    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 02, 2006" }}</time>
-                    <a 
-                      href="{{ .RelPermalink }}" 
-                      class="inline-flex min-h-[32px] items-center text-zinc-950 hover:underline dark:text-white"
-                      aria-label="Read {{ .Title }}"
-                      style="text-decoration: none; color: inherit;"
-                    >
-                      {{ if eq $.Lang "es" }}Leer Ensayo →{{ else }}Read Essay →{{ end }}
-                    </a>
+                  <div class="mt-6 border-t border-zinc-100 pt-4 dark:border-zinc-800">
+                    <div class="flex flex-wrap items-center justify-between gap-2 text-xs font-semibold text-zinc-500 dark:text-zinc-400">
+                      <time datetime="{{ $p.Date.Format "2006-01-02" }}">{{ $p.Date.Format "Jan 02, 2006" }}</time>
+                      <div class="flex flex-wrap items-center gap-1.5">
+                        <button type="button" class="ap-cite-pill" data-cite-toggle="{{ $idx }}" data-label-open="{{ $citeLabel }}" data-label-close="{{ $hideLabel }}" aria-expanded="false" aria-controls="{{ $drawerId }}">{{ $citeLabel }}</button>
+                        <button type="button" class="ap-cite-pill" data-cite-copy-btn="{{ $idx }}" data-label-default="{{ $copyLabel }}" data-label-copied="{{ $copiedLabel }}" data-cite-copy="{{ $combinedCopy }}" aria-controls="{{ $drawerId }}">{{ $copyLabel }}</button>
+                        <a 
+                          href="{{ $p.RelPermalink }}" 
+                          class="inline-flex min-h-[32px] items-center text-zinc-950 hover:underline dark:text-white"
+                          aria-label="Read {{ $p.Title }}"
+                          style="text-decoration: none; color: inherit; margin-left: 0.2rem;"
+                        >
+                          {{ if eq $.Lang "es" }}Leer Ensayo →{{ else }}Read Essay →{{ end }}
+                        </a>
+                      </div>
+                    </div>
+                    <div id="{{ $drawerId }}" class="ap-cite-drawer" hidden>
+                      <div style="margin-bottom: 0.28rem;"><strong>{{ if eq $.Lang "es" }}Cita en el texto (APA 7):{{ else }}In-Text Citation (APA 7):{{ end }}</strong> <code>{{ $inText }}</code></div>
+                      <div><strong>{{ if eq $.Lang "es" }}Referencia completa (APA 7):{{ else }}Full APA 7 Reference:{{ end }}</strong> {{ $fullRef }}</div>
+                    </div>
                   </div>
                 </article>
               {{ end }}
@@ -241,6 +306,74 @@
           </div>
         </div>
     </main>
+
+    <script>
+      (function() {
+        function copyTextWithFallback(text) {
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(text).catch(function() {
+              fallbackCopyTextarea(text);
+            });
+          } else {
+            fallbackCopyTextarea(text);
+          }
+        }
+        function fallbackCopyTextarea(text) {
+          try {
+            var ta = document.createElement('textarea');
+            ta.value = text;
+            ta.setAttribute('readonly', '');
+            ta.style.position = 'fixed';
+            ta.style.top = '-9999px';
+            ta.style.left = '-9999px';
+            document.body.appendChild(ta);
+            ta.select();
+            document.execCommand('copy');
+            document.body.removeChild(ta);
+          } catch (e) {}
+        }
+        var grid = document.getElementById('essays-grid');
+        if (!grid) return;
+        grid.addEventListener('click', function(e) {
+          var toggleBtn = e.target.closest('[data-cite-toggle]');
+          if (toggleBtn) {
+            var dId = toggleBtn.getAttribute('aria-controls');
+            var dEl = dId ? document.getElementById(dId) : null;
+            if (dEl) {
+              var nextHidden = !dEl.hidden;
+              dEl.hidden = nextHidden;
+              toggleBtn.setAttribute('aria-expanded', nextHidden ? 'false' : 'true');
+              toggleBtn.textContent = nextHidden
+                ? (toggleBtn.getAttribute('data-label-open') || 'Cite APA 7')
+                : (toggleBtn.getAttribute('data-label-close') || 'Hide APA 7');
+            }
+            return;
+          }
+          var copyBtn = e.target.closest('[data-cite-copy-btn]');
+          if (copyBtn) {
+            var copyPayload = copyBtn.getAttribute('data-cite-copy') || '';
+            var drawerId = copyBtn.getAttribute('aria-controls');
+            var drawer = drawerId ? document.getElementById(drawerId) : null;
+            copyTextWithFallback(copyPayload);
+            if (drawer && drawer.hidden) {
+              drawer.hidden = false;
+              var idx = copyBtn.getAttribute('data-cite-copy-btn');
+              var tBtn = grid.querySelector('[data-cite-toggle="' + idx + '"]');
+              if (tBtn) {
+                tBtn.setAttribute('aria-expanded', 'true');
+                tBtn.textContent = tBtn.getAttribute('data-label-close') || 'Hide APA 7';
+              }
+            }
+            copyBtn.setAttribute('data-copied', 'true');
+            copyBtn.textContent = copyBtn.getAttribute('data-label-copied') || 'Copied APA 7!';
+            setTimeout(function() {
+              copyBtn.setAttribute('data-copied', 'false');
+              copyBtn.textContent = copyBtn.getAttribute('data-label-default') || 'Copy APA 7';
+            }, 2800);
+          }
+        });
+      })();
+    </script>
 
 {{ partial "footer.html" . }}
 </body>

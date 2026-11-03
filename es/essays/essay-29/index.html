@@ -335,6 +335,10 @@
       <a href="/es/roi-calculator/" style="text-decoration: none; color: #3f3f46; font-size: 0.9rem; font-weight: 600;">Calculadora ROI</a>
       <a href="/es/essays/" style="text-decoration: none; color: #3f3f46; font-size: 0.9rem; font-weight: 600;">Ensayos</a>
       <a href="/research-log/" style="text-decoration: none; color: #0B192C; font-size: 0.9rem; font-weight: 700;">Bitácora</a>
+      <button type="button" data-open-qa-modal style="min-height: 44px; min-width: 44px; padding: 0.35rem 0.75rem; border-radius: 0.45rem; border: 1.5px solid #0B192C; background-color: #FAFBF7; color: #0B192C; font-family: monospace; font-size: 0.75rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.35rem;">
+        <span>[Q&amp;A]</span>
+        <span>Consultar / ⌘K</span>
+      </button>
 
       
       
@@ -352,7 +356,10 @@
     </nav>
 
     
-    <div id="ap-mobile-nav" style="display: none; align-items: center; gap: 1rem;">
+    <div id="ap-mobile-nav" style="display: none; align-items: center; gap: 0.5rem;">
+      <button type="button" data-open-qa-modal aria-label="Abrir ventana de preguntas y respuestas Q&A" style="min-height: 44px; min-width: 44px; padding: 0.35rem 0.65rem; border-radius: 0.375rem; border: 1.5px solid #002147; background-color: #FFF9F0; color: #002147; font-family: monospace; font-size: 0.75rem; font-weight: 800; cursor: pointer;">
+        [Q&amp;A]
+      </button>
       <div style="display: flex; align-items: center; border: 1px solid #d4d4d8; border-radius: 0.375rem; background-color: #f4f4f5; padding: 0.125rem; gap: 0.125rem;">
         <a href="/essays/essay-29/" style="padding: 0.25rem 0.5rem; font-size: 0.75rem; font-weight: 700; text-decoration: none; border-radius: 0.25rem; color: #52525b;">EN</a>
         <a href="/es/essays/essay-29/" style="padding: 0.25rem 0.5rem; font-size: 0.75rem; font-weight: 700; text-decoration: none; border-radius: 0.25rem; background-color: #002147; color: #fff;">ES</a>
@@ -395,6 +402,579 @@
   enforceHeaderLayout();
 </script>
 
+<style>
+  dialog#ap-qa-dialog {
+    padding: 0;
+    border: 2px solid #0B192C;
+    border-radius: 1rem;
+    background-color: #FAFBF7;
+    color: #0B192C;
+    width: min(94vw, 56rem);
+    max-height: 86vh;
+    margin: auto;
+    box-shadow: 0 25px 50px -12px rgba(11, 25, 44, 0.38);
+  }
+  dialog#ap-qa-dialog[open] {
+    display: flex;
+    flex-direction: column;
+  }
+  dialog#ap-qa-dialog:modal {
+    overscroll-behavior: contain;
+  }
+  dialog#ap-qa-dialog::backdrop {
+    background-color: rgba(11, 25, 44, 0.65);
+    backdrop-filter: blur(3px);
+    overflow: hidden;
+    overscroll-behavior: contain;
+  }
+  .ap-qa-chip {
+    display: inline-flex;
+    align-items: center;
+    min-height: 36px;
+    padding: 0.35rem 0.7rem;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 0.72rem;
+    font-weight: 700;
+    border-radius: 0.5rem;
+    border: 1.5px solid #0B192C;
+    background-color: #FFFFFF;
+    color: #0B192C;
+    cursor: pointer;
+    transition: background-color 0.15s ease, color 0.15s ease;
+  }
+  .ap-qa-chip:hover,
+  .ap-qa-chip:focus-visible,
+  .ap-qa-chip[aria-pressed="true"] {
+    background-color: #0B192C;
+    color: #FAFBF7;
+  }
+  .ap-qa-tab {
+    display: inline-flex;
+    align-items: center;
+    min-height: 36px;
+    padding: 0.3rem 0.65rem;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 0.72rem;
+    font-weight: 700;
+    border-radius: 0.375rem;
+    border: 1.5px solid #D5D5C8;
+    background-color: #F3F4EC;
+    color: #0B192C;
+    cursor: pointer;
+  }
+  .ap-qa-tab[aria-pressed="true"] {
+    background-color: #0B192C;
+    color: #FAFBF7;
+    border-color: #0B192C;
+  }
+  .ap-sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+  .ap-cite-pill {
+    display: inline-flex;
+    align-items: center;
+    min-height: 30px;
+    padding: 0.2rem 0.6rem;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 0.7rem;
+    font-weight: 800;
+    border-radius: 999px;
+    border: 1.5px solid #0B192C;
+    background-color: #FFFFFF;
+    color: #0B192C;
+    cursor: pointer;
+    transition: background-color 0.15s ease, color 0.15s ease;
+  }
+  .ap-cite-pill:hover,
+  .ap-cite-pill:focus-visible {
+    background-color: #0B192C;
+    color: #FFFFFF;
+  }
+  .ap-cite-pill[data-copied="true"] {
+    background-color: #14532d;
+    border-color: #14532d;
+    color: #FFFFFF;
+  }
+  .ap-cite-drawer {
+    margin-top: 0.55rem;
+    padding: 0.6rem 0.75rem;
+    background-color: #FAFBF7;
+    border: 1.5px solid #0B192C;
+    border-left: 4px solid #680014;
+    border-radius: 0.45rem;
+    font-size: 0.75rem;
+    color: #0B192C;
+    line-height: 1.45;
+  }
+</style>
+
+<dialog id="ap-qa-dialog" closedby="any" aria-labelledby="ap-qa-title" data-lang="es">
+  
+  <div style="padding: 1.15rem 1.5rem; border-bottom: 1.5px solid #E6E6DC; background-color: #FFFFFF; display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; border-top-left-radius: 0.875rem; border-top-right-radius: 0.875rem;">
+    <div>
+      <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; margin-bottom: 0.25rem;">
+        <span style="font-family: monospace; font-size: 0.7rem; font-weight: 800; padding: 0.15rem 0.5rem; border-radius: 0.25rem; background-color: #0B192C; color: #FAFBF7;">
+          S-A-R v2.2 &bull; DOM GraphRAG + Briefs
+        </span>
+        <span style="font-family: monospace; font-size: 0.7rem; font-weight: 700; color: #1B2A4A;">
+          7 Informes PDF &bull; 92 Entradas de Bitácora &bull; 40 Ensayos &bull; US DOL TEN 07-25
+        </span>
+      </div>
+      <h2 id="ap-qa-title" style="font-size: 1.2rem; font-weight: 800; color: #0B192C; margin: 0; line-height: 1.3;">
+        Consultar la Arquitectura: Informes Técnicos, Bitácora y DOM GraphRAG
+      </h2>
+    </div>
+
+    <div style="display: flex; align-items: center; gap: 0.5rem; flex-shrink: 0;">
+      <a href="/qa-embed/" style="min-height: 44px; display: inline-flex; align-items: center; padding: 0.4rem 0.75rem; border-radius: 0.5rem; border: 1.5px solid #680014; background-color: #680014; color: #FFFFFF; font-family: monospace; font-size: 0.72rem; font-weight: 800; text-decoration: none;">
+        Buscador SSoT Cursos EXW (980 Nodos) &rarr;
+      </a>
+      <form method="dialog" style="margin: 0;">
+        <button type="submit" value="close" aria-label="Cerrar ventana de consulta (Esc)" style="min-height: 44px; min-width: 44px; padding: 0.4rem 0.75rem; border-radius: 0.5rem; border: 1.5px solid #0B192C; background-color: #FAFBF7; color: #0B192C; font-family: monospace; font-size: 0.75rem; font-weight: 800; cursor: pointer;">
+          Cerrar [Esc]
+        </button>
+      </form>
+    </div>
+  </div>
+
+  
+  <div style="padding: 1rem 1.5rem; border-bottom: 1px solid #E6E6DC; background-color: #FAFBF7;">
+    <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.75rem;">
+      <label for="ap-qa-input" class="ap-sr-only">
+        Buscar en Informes Técnicos, Bitácora Maestra, Ensayos y DOM GraphRAG
+      </label>
+      <input
+        id="ap-qa-input"
+        type="search"
+        autofocus
+        autocomplete="off"
+        placeholder="Pregunte sobre US DOL TEN 07-25, DOM GraphRAG, Brief 01-07, WCAG 9:1, Food Informatics..."
+        style="width: 100%; min-height: 46px; padding: 0.65rem 1rem; border-radius: 0.625rem; border: 2px solid #0B192C; background-color: #FFFFFF; color: #0B192C; font-size: 0.95rem; font-weight: 600;"
+      />
+      <button
+        type="button"
+        id="ap-qa-clear-btn"
+        style="min-height: 46px; padding: 0 0.85rem; border-radius: 0.625rem; border: 1.5px solid #0B192C; background-color: #FFFFFF; color: #0B192C; font-family: monospace; font-size: 0.75rem; font-weight: 700; cursor: pointer; white-space: nowrap;"
+      >
+        Limpiar
+      </button>
+    </div>
+
+    
+    <div role="group" aria-label="Filtrar por categoría de corpus" style="display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.65rem;">
+      <button type="button" class="ap-qa-tab" data-cat="all" aria-pressed="true">
+        Todo el Corpus (143)
+      </button>
+      <button type="button" class="ap-qa-tab" data-cat="briefs" aria-pressed="false">
+        Informes y PDFs (7)
+      </button>
+      <button type="button" class="ap-qa-tab" data-cat="dol-ten-07-25" aria-pressed="false">
+        US DOL TEN 07-25
+      </button>
+      <button type="button" class="ap-qa-tab" data-cat="dom-graphrag" aria-pressed="false">
+        DOM GraphRAG &amp; CaC
+      </button>
+      <button type="button" class="ap-qa-tab" data-cat="research-log" aria-pressed="false">
+        Bitácora Maestra (92)
+      </button>
+      <button type="button" class="ap-qa-tab" data-cat="essays" aria-pressed="false">
+        Ensayos (40)
+      </button>
+    </div>
+
+    
+    <div id="ap-qa-suggestions" style="display: flex; flex-wrap: wrap; gap: 0.35rem;" aria-label="Consultas frecuentes sugeridas"></div>
+  </div>
+
+  
+  <div id="ap-qa-status" role="status" aria-live="polite" style="padding: 0.45rem 1.5rem; background-color: #F3F4EC; border-bottom: 1px solid #E6E6DC; font-family: monospace; font-size: 0.72rem; font-weight: 700; color: #0B192C; display: flex; justify-content: space-between; align-items: center;">
+    <span id="ap-qa-status-text">Listo para consultar el grafo de conocimiento soberano.</span>
+    <span>W3C PROV-O &bull; 0 Cloud Egress</span>
+  </div>
+
+  
+  <div id="ap-qa-results" style="padding: 1.25rem 1.5rem; overflow-y: auto; flex: 1 1 auto; display: flex; flex-direction: column; gap: 0.85rem;"></div>
+</dialog>
+
+<script>
+(function() {
+  var dialog = document.getElementById('ap-qa-dialog');
+  if (!dialog) return;
+
+  var isEs = dialog.getAttribute('data-lang') === 'es';
+  var input = document.getElementById('ap-qa-input');
+  var clearBtn = document.getElementById('ap-qa-clear-btn');
+  var resultsContainer = document.getElementById('ap-qa-results');
+  var suggestionsContainer = document.getElementById('ap-qa-suggestions');
+  var statusText = document.getElementById('ap-qa-status-text');
+  var tabButtons = dialog.querySelectorAll('.ap-qa-tab');
+
+  var qaData = null;
+  var activeCategory = 'all';
+
+  
+  if (!('closedBy' in HTMLDialogElement.prototype)) {
+    var outside = function(e, d) {
+      var r = d.getBoundingClientRect();
+      return e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom;
+    };
+    var pressedOutside = false;
+    dialog.addEventListener('pointerdown', function(e) {
+      pressedOutside = outside(e, dialog);
+    });
+    dialog.addEventListener('pointerup', function(e) {
+      if (pressedOutside && outside(e, dialog)) {
+        dialog.close();
+      }
+    });
+  }
+
+  function escapeHtml(str) {
+    return String(str || '')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+
+  function scoreItem(item, queryTokens) {
+    if (!queryTokens.length) {
+      
+      if (item.category === 'dol-ten-07-25') return 100;
+      if (item.category === 'briefs') return 90;
+      if (item.category === 'dom-graphrag') return 85;
+      if (item.category === 'essays') return 70;
+      return 60;
+    }
+    var title = (isEs ? item.title_es : item.title_en).toLowerCase();
+    var answer = (isEs ? item.answer_es : item.answer_en).toLowerCase();
+    var kw = (item.keywords || '').toLowerCase();
+    var domPath = (item.dom_path || '').toLowerCase();
+    var badge = (item.badge || '').toLowerCase();
+
+    var score = 0;
+    for (var i = 0; i < queryTokens.length; i++) {
+      var t = queryTokens[i];
+      if (!t) continue;
+      if (title.indexOf(t) !== -1) score += 12;
+      if (kw.indexOf(t) !== -1) score += 10;
+      if (badge.indexOf(t) !== -1) score += 8;
+      if (domPath.indexOf(t) !== -1) score += 6;
+      if (answer.indexOf(t) !== -1) score += 5;
+    }
+    return score;
+  }
+
+  function renderResults() {
+    if (!qaData || !qaData.items) return;
+    var rawQuery = (input.value || '').trim().toLowerCase();
+    var tokens = rawQuery.split(/\s+/).filter(Boolean);
+
+    var filtered = [];
+    for (var i = 0; i < qaData.items.length; i++) {
+      var item = qaData.items[i];
+      if (activeCategory !== 'all' && item.category !== activeCategory) continue;
+      var s = scoreItem(item, tokens);
+      if (tokens.length === 0 || s > 0) {
+        filtered.push({ item: item, score: s });
+      }
+    }
+
+    filtered.sort(function(a, b) { return b.score - a.score; });
+    var topItems = filtered.slice(0, 18);
+
+    statusText.textContent = isEs
+      ? ('Mostrando ' + topItems.length + ' de ' + filtered.length + ' nodos verificados del corpus')
+      : ('Showing ' + topItems.length + ' of ' + filtered.length + ' verified corpus nodes');
+
+    if (!topItems.length) {
+      resultsContainer.innerHTML = '<div style="padding: 1.5rem; background-color: #FFFFFF; border: 1.5px solid #E6E6DC; border-radius: 0.75rem; color: #0B192C; font-size: 0.9rem;">' +
+        (isEs
+          ? 'No se encontraron coincidencias exactas. Intente con términos como <strong>US DOL TEN 07-25</strong>, <strong>DOM GraphRAG</strong>, <strong>Brief 01</strong>, <strong>WCAG 9:1</strong> o <strong>Food Informatics</strong>.'
+          : 'No exact matches found. Try querying <strong>US DOL TEN 07-25</strong>, <strong>DOM GraphRAG</strong>, <strong>Brief 01</strong>, <strong>WCAG 9:1</strong>, or <strong>Food Informatics</strong>.') +
+        '</div>';
+      return;
+    }
+
+    var html = '';
+    for (var j = 0; j < topItems.length; j++) {
+      var it = topItems[j].item;
+      var title = isEs ? it.title_es : it.title_en;
+      var answer = isEs ? it.answer_es : it.answer_en;
+      var apa = buildArchApa7Citation(it, title);
+      var citeBtnLabel = isEs ? 'Citar APA 7' : 'Cite APA 7';
+      var citeHideLabel = isEs ? 'Ocultar APA 7' : 'Hide APA 7';
+      var copyBtnLabel = isEs ? 'Copiar APA 7' : 'Copy APA 7';
+      var citeCopiedLabel = isEs ? '¡APA 7 copiado!' : 'Copied APA 7!';
+      var drawerId = 'ap-arch-cite-drawer-' + j;
+      var linksHtml = '<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.45rem; margin-top: 0.75rem; padding-top: 0.65rem; border-top: 1px solid #E6E6DC;">';
+      if (it.links && it.links.length) {
+        for (var k = 0; k < it.links.length; k++) {
+          var lnk = it.links[k];
+          var lbl = isEs ? lnk.label_es : lnk.label_en;
+          var isExt = lnk.url.indexOf('http') === 0;
+          var isPdf = lnk.url.indexOf('.pdf') !== -1;
+          linksHtml += '<a href="' + escapeHtml(lnk.url) + '"' +
+            (isExt ? ' target="_blank" rel="noopener noreferrer"' : '') +
+            (isPdf ? ' download' : '') +
+            ' style="font-family: monospace; font-size: 0.75rem; font-weight: 800; color: #0B192C; text-decoration: underline; margin-right: 0.25rem;">' +
+            escapeHtml(lbl) + ' &rarr;</a>';
+        }
+      }
+      linksHtml += '<button type="button" class="ap-cite-pill" data-cite-toggle="' + j + '" data-label-open="' + escapeHtml(citeBtnLabel) + '" data-label-close="' + escapeHtml(citeHideLabel) + '" aria-expanded="false" aria-controls="' + drawerId + '">' + escapeHtml(citeBtnLabel) + '</button>';
+      linksHtml += '<button type="button" class="ap-cite-pill" data-cite-copy-btn="' + j + '" data-label-default="' + escapeHtml(copyBtnLabel) + '" data-label-copied="' + escapeHtml(citeCopiedLabel) + '" data-cite-copy="' + escapeHtml(apa.combined) + '" aria-controls="' + drawerId + '">' + escapeHtml(copyBtnLabel) + '</button>';
+      linksHtml += '</div>';
+      linksHtml += '<div id="' + drawerId + '" class="ap-cite-drawer" hidden>' +
+        '<div style="margin-bottom: 0.28rem;"><strong>' + (isEs ? 'Cita en el texto (APA 7):' : 'In-Text Citation (APA 7):') + '</strong> <code style="background-color: #FFFFFF; padding: 0.1rem 0.35rem; border: 1px solid #D5D5C8; border-radius: 0.25rem; font-weight: 700;">' + escapeHtml(apa.inText) + '</code></div>' +
+        '<div><strong>' + (isEs ? 'Referencia completa (APA 7):' : 'Full APA 7 Reference:') + '</strong> ' + escapeHtml(apa.reference) + '</div>' +
+      '</div>';
+
+      html += '<article style="padding: 1.1rem 1.25rem; background-color: #FFFFFF; border: 1.5px solid #D5D5C8; border-radius: 0.75rem;">' +
+        '<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.4rem; margin-bottom: 0.4rem;">' +
+          '<span style="font-family: monospace; font-size: 0.68rem; font-weight: 800; background-color: #F3F4EC; color: #0B192C; padding: 0.15rem 0.45rem; border-radius: 0.25rem; border: 1px solid #D5D5C8;">' + escapeHtml(it.badge) + '</span>' +
+          '<span style="font-family: monospace; font-size: 0.68rem; color: #1B2A4A; font-weight: 600;">' + escapeHtml(it.dom_path) + '</span>' +
+        '</div>' +
+        '<h3 style="font-size: 1rem; font-weight: 800; color: #0B192C; margin: 0 0 0.45rem 0; line-height: 1.35;">' + escapeHtml(title) + '</h3>' +
+        '<p style="font-size: 0.85rem; color: #0B192C; line-height: 1.6; margin: 0;">' + escapeHtml(answer) + '</p>' +
+        linksHtml +
+      '</article>';
+    }
+    resultsContainer.innerHTML = html;
+  }
+
+  function buildArchApa7Citation(it, title) {
+    var cat = String(it.category || '');
+    var badge = String(it.badge || '');
+    var domPath = String(it.dom_path || '');
+    var cleanTitle = String(title || it.title_en || 'Sovereign Clinical AI Architecture');
+    var firstUrl = 'https://alanpruitt.com/';
+    if (it.links && it.links.length && it.links[0].url) {
+      var u = String(it.links[0].url);
+      firstUrl = u.indexOf('http') === 0 ? u : ('https://alanpruitt.com' + (u.indexOf('/') === 0 ? u : ('/' + u)));
+    }
+    var inText = '(Pruitt, 2026)';
+    var reference = '';
+
+    if (cat === 'dol-ten-07-25') {
+      inText = '(U.S. Department of Labor, Employment and Training Administration [DOL ETA], 2026; Pruitt, 2026)';
+      reference = 'U.S. Department of Labor, Employment and Training Administration. (2026, February 13). Training and Employment Notice No. 07-25: Artificial Intelligence (AI) Literacy Framework. https://www.dol.gov/agencies/eta/advisories/ten-07-25 [Operationalized in Pruitt, A. (2026). ' + cleanTitle + '. Arizona Western College. ' + firstUrl + ']';
+    } else if (cat === 'briefs') {
+      reference = 'Pruitt, A. (2026). ' + cleanTitle + ' [White paper]. Matador Wellness Center Clinical AI Residency, Arizona Western College. ' + firstUrl;
+    } else if (cat === 'essays') {
+      reference = 'Pruitt, A. (2026). ' + cleanTitle + '. In Curriculum-as-Code & Sovereign Clinical AI Essays. ' + firstUrl;
+    } else if (cat === 'research-log') {
+      var dateMatch = cleanTitle.match(/^\[([^\]]+)\]\s*(.*)$/);
+      var dateStr = dateMatch ? dateMatch[1] : '2026';
+      var logTitle = dateMatch ? dateMatch[2] : cleanTitle;
+      reference = 'Pruitt, A. (' + dateStr + '). ' + logTitle + ' (' + badge + '). In CaC & CaaS Master Research Log Observatory. https://alanpruitt.com/research-log/';
+    } else {
+      reference = 'Pruitt, A. (2026). ' + cleanTitle + ' (' + domPath + '). Curriculum-as-Code & Clinical AI Architecture Observatory, Arizona Western College. ' + firstUrl;
+    }
+
+    return {
+      inText: inText,
+      reference: reference,
+      combined: 'In-Text Citation (APA 7): ' + inText + '\nAPA 7 Reference: ' + reference
+    };
+  }
+
+  function copyTextWithFallback(text) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).catch(function() {
+        fallbackCopyTextarea(text);
+      });
+    } else {
+      fallbackCopyTextarea(text);
+    }
+  }
+
+  function fallbackCopyTextarea(text) {
+    try {
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      ta.setAttribute('readonly', '');
+      ta.style.position = 'fixed';
+      ta.style.top = '-9999px';
+      ta.style.left = '-9999px';
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+    } catch (e) {}
+  }
+
+  resultsContainer.addEventListener('click', function(e) {
+    var toggleBtn = e.target.closest('[data-cite-toggle]');
+    if (toggleBtn) {
+      var dId = toggleBtn.getAttribute('aria-controls');
+      var dEl = dId ? document.getElementById(dId) : null;
+      if (dEl) {
+        var nextHidden = !dEl.hidden;
+        dEl.hidden = nextHidden;
+        toggleBtn.setAttribute('aria-expanded', nextHidden ? 'false' : 'true');
+        toggleBtn.textContent = nextHidden
+          ? (toggleBtn.getAttribute('data-label-open') || 'Cite APA 7')
+          : (toggleBtn.getAttribute('data-label-close') || 'Hide APA 7');
+      }
+      return;
+    }
+    var copyBtn = e.target.closest('[data-cite-copy-btn]');
+    if (copyBtn) {
+      var copyPayload = copyBtn.getAttribute('data-cite-copy') || '';
+      var drawerId = copyBtn.getAttribute('aria-controls');
+      var drawer = drawerId ? document.getElementById(drawerId) : null;
+      copyTextWithFallback(copyPayload);
+      if (drawer && drawer.hidden) {
+        drawer.hidden = false;
+        var idx = copyBtn.getAttribute('data-cite-copy-btn');
+        var tBtn = resultsContainer.querySelector('[data-cite-toggle="' + idx + '"]');
+        if (tBtn) {
+          tBtn.setAttribute('aria-expanded', 'true');
+          tBtn.textContent = tBtn.getAttribute('data-label-close') || 'Hide APA 7';
+        }
+      }
+      copyBtn.setAttribute('data-copied', 'true');
+      copyBtn.textContent = copyBtn.getAttribute('data-label-copied') || 'Copied APA 7!';
+      setTimeout(function() {
+        copyBtn.setAttribute('data-copied', 'false');
+        copyBtn.textContent = copyBtn.getAttribute('data-label-default') || 'Copy APA 7';
+      }, 2800);
+    }
+  });
+
+  function renderSuggestions() {
+    if (!qaData || !qaData.suggested_queries) return;
+    var html = '';
+    for (var i = 0; i < qaData.suggested_queries.length; i++) {
+      var sq = qaData.suggested_queries[i];
+      var lbl = isEs ? sq.label_es : sq.label_en;
+      html += '<button type="button" class="ap-qa-chip" data-query="' + escapeHtml(sq.query) + '">' + escapeHtml(lbl) + '</button>';
+    }
+    suggestionsContainer.innerHTML = html;
+    var chips = suggestionsContainer.querySelectorAll('.ap-qa-chip');
+    for (var c = 0; c < chips.length; c++) {
+      chips[c].addEventListener('click', function() {
+        var q = this.getAttribute('data-query') || '';
+        input.value = q;
+        activeCategory = 'all';
+        for (var t = 0; t < tabButtons.length; t++) {
+          tabButtons[t].setAttribute('aria-pressed', tabButtons[t].getAttribute('data-cat') === 'all' ? 'true' : 'false');
+        }
+        renderResults();
+      });
+    }
+  }
+
+  function ensureDataLoaded() {
+    if (qaData) {
+      renderResults();
+      return;
+    }
+    statusText.textContent = isEs ? 'Cargando índice soberano DOM GraphRAG...' : 'Loading sovereign DOM GraphRAG & Briefs index...';
+    fetch('/data/sovereign-qa-index.json')
+      .then(function(r) { return r.json(); })
+      .then(function(data) {
+        qaData = data;
+        renderSuggestions();
+        renderResults();
+      })
+      .catch(function() {
+        statusText.textContent = isEs ? 'Error al cargar el índice.' : 'Unable to load Q&A index.';
+      });
+  }
+
+  function openQaModal(initialQuery, categoryFilter) {
+    if (categoryFilter) {
+      activeCategory = categoryFilter;
+      for (var t = 0; t < tabButtons.length; t++) {
+        tabButtons[t].setAttribute('aria-pressed', tabButtons[t].getAttribute('data-cat') === categoryFilter ? 'true' : 'false');
+      }
+    }
+    if (typeof initialQuery === 'string') {
+      input.value = initialQuery;
+    }
+    if (!dialog.open) {
+      dialog.showModal();
+    }
+    ensureDataLoaded();
+    setTimeout(function() { input.focus(); }, 30);
+  }
+
+  window.openAlanPruittQaModal = openQaModal;
+
+  
+  document.addEventListener('click', function(e) {
+    var btn = e.target.closest('[data-open-qa-modal]');
+    if (!btn) return;
+    e.preventDefault();
+    var q = btn.getAttribute('data-qa-query') || '';
+    var cat = btn.getAttribute('data-qa-category') || '';
+    openQaModal(q, cat || 'all');
+  });
+
+  
+  document.addEventListener('keydown', function(e) {
+    if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
+      e.preventDefault();
+      if (dialog.open) {
+        dialog.close();
+      } else {
+        openQaModal();
+      }
+    }
+  });
+
+  input.addEventListener('input', renderResults);
+
+  clearBtn.addEventListener('click', function() {
+    input.value = '';
+    activeCategory = 'all';
+    for (var t = 0; t < tabButtons.length; t++) {
+      tabButtons[t].setAttribute('aria-pressed', tabButtons[t].getAttribute('data-cat') === 'all' ? 'true' : 'false');
+    }
+    renderResults();
+    input.focus();
+  });
+
+  for (var t = 0; t < tabButtons.length; t++) {
+    tabButtons[t].addEventListener('click', function() {
+      activeCategory = this.getAttribute('data-cat') || 'all';
+      for (var j = 0; j < tabButtons.length; j++) {
+        tabButtons[j].setAttribute('aria-pressed', tabButtons[j] === this ? 'true' : 'false');
+      }
+      renderResults();
+    });
+  }
+
+  
+  try {
+    var params = new URLSearchParams(window.location.search);
+    var qaParam = params.get('qa');
+    var qParam = params.get('q') || '';
+    if (qaParam) {
+      var validCats = ['all', 'briefs', 'dol-ten-07-25', 'dom-graphrag', 'research-log', 'essays'];
+      var targetCat = validCats.indexOf(qaParam) !== -1 ? qaParam : 'all';
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', function() {
+          openQaModal(qParam, targetCat);
+        });
+      } else {
+        openQaModal(qParam, targetCat);
+      }
+    }
+  } catch (err) {}
+})();
+</script>
+
+
 
     <main class="w-full max-w-6xl mx-auto px-6 py-8 flex-grow">
         <article class="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-16 lg:px-8 pb-24 sm:pb-16">
@@ -424,30 +1004,132 @@
 </div>
 
 
-<div class="mb-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between border-b border-zinc-200 pb-6 dark:border-zinc-800 text-left">
-  <div>
-    <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
-      <time datetime="2026-08-29">August 29, 2026</time>
-      <span>&bull;</span>
-      <span>6 min read</span>
+
+
+
+
+
+
+
+
+
+
+<div class="mb-8 border-b border-zinc-200 pb-6 dark:border-zinc-800 text-left">
+  <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+    <div>
+      <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
+        <time datetime="2026-08-29">August 29, 2026</time>
+        <span>&bull;</span>
+        <span>6 min read</span>
+      </div>
+    </div>
+
+    
+    <div class="no-print flex flex-wrap items-center gap-2">
+      <button
+        type="button"
+        id="single-essay-cite-toggle"
+        data-label-open="Citar APA 7"
+        data-label-close="Ocultar APA 7"
+        aria-expanded="false"
+        aria-controls="single-essay-cite-drawer"
+        style="display: inline-flex; align-items: center; min-height: 44px; padding: 0.4rem 0.85rem; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 0.75rem; font-weight: 800; border-radius: 999px; border: 1.5px solid #0B192C; background-color: #FFFFFF; color: #0B192C; cursor: pointer;"
+      >
+        Citar APA 7
+      </button>
+      <button
+        type="button"
+        id="single-essay-cite-copy"
+        data-label-default="Copiar APA 7"
+        data-label-copied="¡APA 7 copiado!"
+        data-cite-copy="In-Text Citation (APA 7): (Pruitt, 2026)
+APA 7 Reference: Pruitt, A. (2026, August 29). Ensayo 29: El Cambio Aguas Arriba — Por Qué la Accesibilidad Post-Producción Es un Fallo de Diseño Arquitectónico. In Curriculum-as-Code &amp; Sovereign AI Strategy Essays. https://alanpruitt.com/es/essays/essay-29/"
+        aria-controls="single-essay-cite-drawer"
+        style="display: inline-flex; align-items: center; min-height: 44px; padding: 0.4rem 0.85rem; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 0.75rem; font-weight: 800; border-radius: 999px; border: 1.5px solid #0B192C; background-color: #FFFFFF; color: #0B192C; cursor: pointer;"
+      >
+        Copiar APA 7
+      </button>
+      <button 
+        type="button" 
+        onclick="window.print()" 
+        class="inline-flex min-h-[44px] items-center gap-2 rounded-lg border border-zinc-300 bg-white px-3.5 py-2 text-xs font-bold uppercase tracking-wider text-zinc-800 shadow-sm transition hover:bg-zinc-50 hover:text-zinc-950 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-200 dark:hover:bg-zinc-800 dark:hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white"
+        aria-label="Print or save this essay as a PDF"
+      >
+        <svg class="h-4 w-4 shrink-0 text-zinc-600 dark:text-zinc-300" style="width: 16px !important; height: 16px !important;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
+        </svg>
+        <span>Imprimir / PDF</span>
+      </button>
     </div>
   </div>
 
-  
-  <div class="no-print">
-    <button 
-      type="button" 
-      onclick="window.print()" 
-      class="inline-flex min-h-[44px] items-center gap-2 rounded-lg border border-zinc-300 bg-white px-3.5 py-2 text-xs font-bold uppercase tracking-wider text-zinc-800 shadow-sm transition hover:bg-zinc-50 hover:text-zinc-950 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-200 dark:hover:bg-zinc-800 dark:hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white"
-      aria-label="Print or save this essay as a PDF"
-    >
-      <svg class="h-4 w-4 shrink-0 text-zinc-600 dark:text-zinc-300" style="width: 16px !important; height: 16px !important;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
-      </svg>
-      <span>Imprimir / PDF</span>
-    </button>
+  <div id="single-essay-cite-drawer" class="no-print" hidden style="margin-top: 0.85rem; padding: 0.75rem 0.95rem; background-color: #FAF8F5; border: 1.5px solid #0B192C; border-left: 5px solid #680014; border-radius: 0.5rem; font-size: 0.82rem; color: #0B192C; line-height: 1.5;">
+    <div style="margin-bottom: 0.3rem;"><strong>Cita en el texto (APA 7):</strong> <code style="background-color: #FFFFFF; padding: 0.1rem 0.4rem; border: 1px solid #0B192C; border-radius: 0.25rem; font-weight: 700;">(Pruitt, 2026)</code></div>
+    <div><strong>Referencia completa (APA 7):</strong> Pruitt, A. (2026, August 29). Ensayo 29: El Cambio Aguas Arriba — Por Qué la Accesibilidad Post-Producción Es un Fallo de Diseño Arquitectónico. In Curriculum-as-Code &amp; Sovereign AI Strategy Essays. https://alanpruitt.com/es/essays/essay-29/</div>
   </div>
 </div>
+
+<script>
+  (function() {
+    var toggleBtn = document.getElementById('single-essay-cite-toggle');
+    var copyBtn = document.getElementById('single-essay-cite-copy');
+    var drawer = document.getElementById('single-essay-cite-drawer');
+    if (!toggleBtn || !copyBtn || !drawer) return;
+
+    function copyTextWithFallback(text) {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).catch(function() {
+          fallbackCopyTextarea(text);
+        });
+      } else {
+        fallbackCopyTextarea(text);
+      }
+    }
+    function fallbackCopyTextarea(text) {
+      try {
+        var ta = document.createElement('textarea');
+        ta.value = text;
+        ta.setAttribute('readonly', '');
+        ta.style.position = 'fixed';
+        ta.style.top = '-9999px';
+        ta.style.left = '-9999px';
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+      } catch (e) {}
+    }
+
+    toggleBtn.addEventListener('click', function() {
+      var nextHidden = !drawer.hidden;
+      drawer.hidden = nextHidden;
+      toggleBtn.setAttribute('aria-expanded', nextHidden ? 'false' : 'true');
+      toggleBtn.textContent = nextHidden
+        ? (toggleBtn.getAttribute('data-label-open') || 'Cite APA 7')
+        : (toggleBtn.getAttribute('data-label-close') || 'Hide APA 7');
+    });
+
+    copyBtn.addEventListener('click', function() {
+      var payload = copyBtn.getAttribute('data-cite-copy') || '';
+      copyTextWithFallback(payload);
+      if (drawer.hidden) {
+        drawer.hidden = false;
+        toggleBtn.setAttribute('aria-expanded', 'true');
+        toggleBtn.textContent = toggleBtn.getAttribute('data-label-close') || 'Hide APA 7';
+      }
+      copyBtn.style.backgroundColor = '#14532d';
+      copyBtn.style.borderColor = '#14532d';
+      copyBtn.style.color = '#FFFFFF';
+      copyBtn.textContent = copyBtn.getAttribute('data-label-copied') || 'Copied APA 7!';
+      setTimeout(function() {
+        copyBtn.style.backgroundColor = '#FFFFFF';
+        copyBtn.style.borderColor = '#0B192C';
+        copyBtn.style.color = '#0B192C';
+        copyBtn.textContent = copyBtn.getAttribute('data-label-default') || 'Copy APA 7';
+      }, 2800);
+    });
+  })();
+</script>
 
             </header>
 
@@ -607,6 +1289,9 @@
         </a>
         <a href="https://www.linkedin.com/in/alanpruitt/" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; justify-content: center; min-height: 44px; min-width: 44px; padding: 6px 14px; color: #0C2340; text-decoration: underline; text-underline-offset: 4px;">
           LinkedIn
+        </a>
+        <a href="https://substack.com/@alanpruitt/" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; justify-content: center; min-height: 44px; min-width: 44px; padding: 6px 14px; color: #0C2340; text-decoration: underline; text-underline-offset: 4px;">
+          Substack
         </a>
       </nav>
 
