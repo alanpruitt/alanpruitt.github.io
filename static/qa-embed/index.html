@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sovereign Architecture Q&amp;A Workbench | Alan Pruitt (Course ID: 42051)</title>
+  <meta name="description" content="Canvas LMS embeddable Q&A workbench querying Alan Pruitt's 7 Architecture Briefs & White Papers, U.S. DOL ETA TEN No. 07-25 AI Literacy Crosswalk, 92 Master Research Log entries, 40 Essays, and distilled DOM GraphRAG.">
+  <link rel="canonical" href="https://alanpruitt.com/qa-embed/">
+  <style>
+    :root {
+      --bg-creme-50: #FAFBF7;
+      --bg-creme-100: #F3F4EC;
+      --bg-creme-200: #E6E6DC;
+      --navy-900: #0B192C;
+      --navy-800: #1B2A4A;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg-creme-50);
+      color: var(--navy-900);
+      line-height: 1.5;
+    }
+    .ap-sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+    .ap-qa-chip {
+      display: inline-flex;
+      align-items: center;
+      min-height: 36px;
+      padding: 0.35rem 0.7rem;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.72rem;
+      font-weight: 700;
+      border-radius: 0.5rem;
+      border: 1.5px solid #0B192C;
+      background-color: #FFFFFF;
+      color: #0B192C;
+      cursor: pointer;
+    }
+    .ap-qa-chip:hover,
+    .ap-qa-chip:focus-visible {
+      background-color: #0B192C;
+      color: #FAFBF7;
+    }
+    .ap-qa-tab {
+      display: inline-flex;
+      align-items: center;
+      min-height: 38px;
+      padding: 0.3rem 0.65rem;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.72rem;
+      font-weight: 700;
+      border-radius: 0.375rem;
+      border: 1.5px solid #D5D5C8;
+      background-color: #F3F4EC;
+      color: #0B192C;
+      cursor: pointer;
+    }
+    .ap-qa-tab[aria-pressed="true"] {
+      background-color: #0B192C;
+      color: #FAFBF7;
+      border-color: #0B192C;
+    }
+    .lang-btn {
+      min-height: 38px;
+      min-width: 44px;
+      padding: 0.25rem 0.6rem;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.75rem;
+      font-weight: 800;
+      border: 1.5px solid #0B192C;
+      border-radius: 0.375rem;
+      cursor: pointer;
+      background-color: #FFFFFF;
+      color: #0B192C;
+    }
+    .lang-btn[aria-pressed="true"] {
+      background-color: #0B192C;
+      color: #FAFBF7;
+    }
+  </style>
+</head>
+<body>
+  <main style="max-width: 64rem; margin: 0 auto; border: 2px solid #0B192C; border-radius: 0.875rem; background-color: #FAFBF7; overflow: hidden;">
+    <!-- Top Header Bar -->
+    <div style="padding: 1rem 1.25rem; border-bottom: 1.5px solid #E6E6DC; background-color: #FFFFFF; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.75rem;">
+      <div>
+        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.45rem; margin-bottom: 0.2rem;">
+          <span style="font-family: monospace; font-size: 0.68rem; font-weight: 800; padding: 0.15rem 0.45rem; border-radius: 0.25rem; background-color: #0B192C; color: #FAFBF7;">
+            S-A-R v2.2 &bull; Canvas Embed Workbench
+          </span>
+          <span id="embed-sub-badge" style="font-family: monospace; font-size: 0.68rem; font-weight: 700; color: #1B2A4A;">
+            7 PDF Briefs &bull; 92 Research Log Entries &bull; 40 Essays &bull; US DOL TEN 07-25
+          </span>
+        </div>
+        <h2 id="embed-title" style="font-size: 1.1rem; font-weight: 800; color: #0B192C; margin: 0;">
+          Ask the Architecture: Briefs, White Papers, Research Log &amp; DOM GraphRAG
+        </h2>
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 0.4rem;">
+        <button type="button" id="btn-lang-en" class="lang-btn" aria-pressed="true">EN</button>
+        <button type="button" id="btn-lang-es" class="lang-btn" aria-pressed="false">ES</button>
+        <a href="https://alanpruitt.com/?qa=open" target="_blank" rel="noopener noreferrer" style="min-height: 38px; display: inline-flex; align-items: center; padding: 0.25rem 0.65rem; border-radius: 0.375rem; border: 1.5px solid #0B192C; background-color: #FAFBF7; color: #0B192C; font-family: monospace; font-size: 0.72rem; font-weight: 800; text-decoration: none;">
+          Full Screen &nearr;
+        </a>
+      </div>
+    </div>
+
+    <!-- Search & Filter Controls -->
+    <div style="padding: 0.9rem 1.25rem; border-bottom: 1px solid #E6E6DC; background-color: #FAFBF7;">
+      <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.65rem;">
+        <label for="embed-qa-input" class="ap-sr-only">Search Architecture Briefs, White Papers, Master Research Log, Essays, and DOM GraphRAG</label>
+        <input
+          id="embed-qa-input"
+          type="search"
+          autocomplete="off"
+          placeholder="Ask about US DOL TEN 07-25, DOM GraphRAG, Briefs 01–07, WCAG 9:1, Food Informatics, Argon 4..."
+          style="width: 100%; min-height: 44px; padding: 0.55rem 0.9rem; border-radius: 0.5rem; border: 2px solid #0B192C; background-color: #FFFFFF; color: #0B192C; font-size: 0.92rem; font-weight: 600;"
+        />
+        <button
+          type="button"
+          id="embed-qa-clear"
+          style="min-height: 44px; min-width: 64px; padding: 0 0.75rem; border-radius: 0.5rem; border: 1.5px solid #0B192C; background-color: #FFFFFF; color: #0B192C; font-family: monospace; font-size: 0.75rem; font-weight: 800; cursor: pointer;"
+        >
+          Reset
+        </button>
+      </div>
+
+      <div role="group" aria-label="Filter by corpus category" style="display: flex; flex-wrap: wrap; gap: 0.35rem; margin-bottom: 0.6rem;">
+        <button type="button" class="ap-qa-tab" data-cat="all" aria-pressed="true" id="tab-all">All Corpus (143)</button>
+        <button type="button" class="ap-qa-tab" data-cat="briefs" aria-pressed="false" id="tab-briefs">Briefs &amp; PDFs (7)</button>
+        <button type="button" class="ap-qa-tab" data-cat="dol-ten-07-25" aria-pressed="false">US DOL TEN 07-25</button>
+        <button type="button" class="ap-qa-tab" data-cat="dom-graphrag" aria-pressed="false">DOM GraphRAG &amp; CaC</button>
+        <button type="button" class="ap-qa-tab" data-cat="research-log" aria-pressed="false" id="tab-rlog">Research Log (92)</button>
+        <button type="button" class="ap-qa-tab" data-cat="essays" aria-pressed="false" id="tab-essays">Essays (40)</button>
+      </div>
+
+      <div id="embed-qa-suggestions" style="display: flex; flex-wrap: wrap; gap: 0.35rem;"></div>
+    </div>
+
+    <!-- Telemetry Status Bar -->
+    <div role="status" aria-live="polite" style="padding: 0.4rem 1.25rem; background-color: #F3F4EC; border-bottom: 1px solid #E6E6DC; font-family: monospace; font-size: 0.7rem; font-weight: 700; color: #0B192C; display: flex; justify-content: space-between; align-items: center;">
+      <span id="embed-qa-status">Loading sovereign DOM GraphRAG &amp; Briefs index...</span>
+      <span>W3C PROV-O &bull; 9:1 Contrast Verified</span>
+    </div>
+
+    <!-- Results List -->
+    <div id="embed-qa-results" style="padding: 1rem 1.25rem; max-height: 410px; overflow-y: auto; display: flex; flex-direction: column; gap: 0.75rem;"></div>
+  </main>
+
+  <script>
+  (function() {
+    var params = new URLSearchParams(window.location.search);
+    var isEs = params.get('lang') === 'es';
+    var activeCategory = params.get('cat') || 'all';
+    var initialQuery = params.get('q') || '';
+
+    var input = document.getElementById('embed-qa-input');
+    var clearBtn = document.getElementById('embed-qa-clear');
+    var resultsContainer = document.getElementById('embed-qa-results');
+    var suggestionsContainer = document.getElementById('embed-qa-suggestions');
+    var statusText = document.getElementById('embed-qa-status');
+    var tabButtons = document.querySelectorAll('.ap-qa-tab');
+    var btnEn = document.getElementById('btn-lang-en');
+    var btnEs = document.getElementById('btn-lang-es');
+
+    if (initialQuery) input.value = initialQuery;
+
+    var qaData = null;
+
+    function escapeHtml(str) {
+      return String(str || '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+
+    function updateLangUi() {
+      document.documentElement.lang = isEs ? 'es' : 'en';
+      btnEn.setAttribute('aria-pressed', isEs ? 'false' : 'true');
+      btnEs.setAttribute('aria-pressed', isEs ? 'true' : 'false');
+      document.getElementById('embed-title').textContent = isEs
+        ? 'Consultar la Arquitectura: Informes Técnicos, Bitácora y DOM GraphRAG'
+        : 'Ask the Architecture: Briefs, White Papers, Research Log & DOM GraphRAG';
+      document.getElementById('embed-sub-badge').textContent = isEs
+        ? '7 Informes PDF • 92 Entradas de Bitácora • 40 Ensayos • US DOL TEN 07-25'
+        : '7 PDF Briefs • 92 Research Log Entries • 40 Essays • US DOL TEN 07-25';
+      input.placeholder = isEs
+        ? 'Pregunte sobre US DOL TEN 07-25, DOM GraphRAG, Brief 01-07, WCAG 9:1, Food Informatics...'
+        : 'Ask about US DOL TEN 07-25, DOM GraphRAG, Briefs 01–07, WCAG 9:1, Food Informatics, Argon 4...';
+      clearBtn.textContent = isEs ? 'Limpiar' : 'Reset';
+      document.getElementById('tab-all').textContent = isEs ? 'Todo el Corpus (143)' : 'All Corpus (143)';
+      document.getElementById('tab-briefs').textContent = isEs ? 'Informes y PDFs (7)' : 'Briefs & PDFs (7)';
+      document.getElementById('tab-rlog').textContent = isEs ? 'Bitácora Maestra (92)' : 'Research Log (92)';
+      document.getElementById('tab-essays').textContent = isEs ? 'Ensayos (40)' : 'Essays (40)';
+      renderSuggestions();
+      renderResults();
+    }
+
+    function scoreItem(item, queryTokens) {
+      if (!queryTokens.length) {
+        if (item.category === 'dol-ten-07-25') return 100;
+        if (item.category === 'briefs') return 90;
+        if (item.category === 'dom-graphrag') return 85;
+        if (item.category === 'essays') return 70;
+        return 60;
+      }
+      var title = (isEs ? item.title_es : item.title_en).toLowerCase();
+      var answer = (isEs ? item.answer_es : item.answer_en).toLowerCase();
+      var kw = (item.keywords || '').toLowerCase();
+      var domPath = (item.dom_path || '').toLowerCase();
+      var badge = (item.badge || '').toLowerCase();
+
+      var score = 0;
+      for (var i = 0; i < queryTokens.length; i++) {
+        var t = queryTokens[i];
+        if (!t) continue;
+        if (title.indexOf(t) !== -1) score += 12;
+        if (kw.indexOf(t) !== -1) score += 10;
+        if (badge.indexOf(t) !== -1) score += 8;
+        if (domPath.indexOf(t) !== -1) score += 6;
+        if (answer.indexOf(t) !== -1) score += 5;
+      }
+      return score;
+    }
+
+    function renderResults() {
+      if (!qaData || !qaData.items) return;
+      var rawQuery = (input.value || '').trim().toLowerCase();
+      var tokens = rawQuery.split(/\s+/).filter(Boolean);
+
+      var filtered = [];
+      for (var i = 0; i < qaData.items.length; i++) {
+        var item = qaData.items[i];
+        if (activeCategory !== 'all' && item.category !== activeCategory) continue;
+        var s = scoreItem(item, tokens);
+        if (tokens.length === 0 || s > 0) {
+          filtered.push({ item: item, score: s });
+        }
+      }
+
+      filtered.sort(function(a, b) { return b.score - a.score; });
+      var topItems = filtered.slice(0, 15);
+
+      statusText.textContent = isEs
+        ? ('Mostrando ' + topItems.length + ' de ' + filtered.length + ' nodos verificados del corpus')
+        : ('Showing ' + topItems.length + ' of ' + filtered.length + ' verified corpus nodes');
+
+      if (!topItems.length) {
+        resultsContainer.innerHTML = '<div style="padding: 1.25rem; background-color: #FFFFFF; border: 1.5px solid #E6E6DC; border-radius: 0.75rem; color: #0B192C; font-size: 0.88rem;">' +
+          (isEs
+            ? 'No se encontraron coincidencias exactas. Intente con <strong>US DOL TEN 07-25</strong>, <strong>DOM GraphRAG</strong>, <strong>Brief 01</strong> o <strong>WCAG 9:1</strong>.'
+            : 'No exact matches found. Try querying <strong>US DOL TEN 07-25</strong>, <strong>DOM GraphRAG</strong>, <strong>Brief 01</strong>, or <strong>WCAG 9:1</strong>.') +
+          '</div>';
+        return;
+      }
+
+      var html = '';
+      for (var j = 0; j < topItems.length; j++) {
+        var it = topItems[j].item;
+        var title = isEs ? it.title_es : it.title_en;
+        var answer = isEs ? it.answer_es : it.answer_en;
+        var linksHtml = '';
+        if (it.links && it.links.length) {
+          linksHtml = '<div style="display: flex; flex-wrap: wrap; gap: 0.65rem; margin-top: 0.65rem; padding-top: 0.55rem; border-top: 1px solid #E6E6DC;">';
+          for (var k = 0; k < it.links.length; k++) {
+            var lnk = it.links[k];
+            var lbl = isEs ? lnk.label_es : lnk.label_en;
+            var fullUrl = lnk.url.indexOf('http') === 0 ? lnk.url : ('https://alanpruitt.com' + lnk.url);
+            linksHtml += '<a href="' + escapeHtml(fullUrl) + '" target="_blank" rel="noopener noreferrer" style="font-family: monospace; font-size: 0.74rem; font-weight: 800; color: #0B192C; text-decoration: underline;">' +
+              escapeHtml(lbl) + ' &rarr;</a>';
+          }
+          linksHtml += '</div>';
+        }
+
+        html += '<article style="padding: 1rem 1.15rem; background-color: #FFFFFF; border: 1.5px solid #D5D5C8; border-radius: 0.75rem;">' +
+          '<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.4rem; margin-bottom: 0.35rem;">' +
+            '<span style="font-family: monospace; font-size: 0.68rem; font-weight: 800; background-color: #F3F4EC; color: #0B192C; padding: 0.12rem 0.45rem; border-radius: 0.25rem; border: 1px solid #D5D5C8;">' + escapeHtml(it.badge) + '</span>' +
+            '<span style="font-family: monospace; font-size: 0.68rem; color: #1B2A4A; font-weight: 600;">' + escapeHtml(it.dom_path) + '</span>' +
+          '</div>' +
+          '<h3 style="font-size: 0.96rem; font-weight: 800; color: #0B192C; margin: 0 0 0.4rem 0; line-height: 1.35;">' + escapeHtml(title) + '</h3>' +
+          '<p style="font-size: 0.84rem; color: #0B192C; line-height: 1.58; margin: 0;">' + escapeHtml(answer) + '</p>' +
+          linksHtml +
+        '</article>';
+      }
+      resultsContainer.innerHTML = html;
+    }
+
+    function renderSuggestions() {
+      if (!qaData || !qaData.suggested_queries) return;
+      var html = '';
+      for (var i = 0; i < qaData.suggested_queries.length; i++) {
+        var sq = qaData.suggested_queries[i];
+        var lbl = isEs ? sq.label_es : sq.label_en;
+        html += '<button type="button" class="ap-qa-chip" data-query="' + escapeHtml(sq.query) + '">' + escapeHtml(lbl) + '</button>';
+      }
+      suggestionsContainer.innerHTML = html;
+      var chips = suggestionsContainer.querySelectorAll('.ap-qa-chip');
+      for (var c = 0; c < chips.length; c++) {
+        chips[c].addEventListener('click', function() {
+          input.value = this.getAttribute('data-query') || '';
+          activeCategory = 'all';
+          for (var t = 0; t < tabButtons.length; t++) {
+            tabButtons[t].setAttribute('aria-pressed', tabButtons[t].getAttribute('data-cat') === 'all' ? 'true' : 'false');
+          }
+          renderResults();
+        });
+      }
+    }
+
+    btnEn.addEventListener('click', function() { isEs = false; updateLangUi(); });
+    btnEs.addEventListener('click', function() { isEs = true; updateLangUi(); });
+    input.addEventListener('input', renderResults);
+    clearBtn.addEventListener('click', function() {
+      input.value = '';
+      activeCategory = 'all';
+      for (var t = 0; t < tabButtons.length; t++) {
+        tabButtons[t].setAttribute('aria-pressed', tabButtons[t].getAttribute('data-cat') === 'all' ? 'true' : 'false');
+      }
+      renderResults();
+      input.focus();
+    });
+
+    for (var t = 0; t < tabButtons.length; t++) {
+      tabButtons[t].addEventListener('click', function() {
+        activeCategory = this.getAttribute('data-cat') || 'all';
+        for (var j = 0; j < tabButtons.length; j++) {
+          tabButtons[j].setAttribute('aria-pressed', tabButtons[j] === this ? 'true' : 'false');
+        }
+        renderResults();
+      });
+    }
+
+    fetch('/data/sovereign-qa-index.json')
+      .then(function(r) { return r.json(); })
+      .then(function(data) {
+        qaData = data;
+        updateLangUi();
+      })
+      .catch(function() {
+        statusText.textContent = 'Unable to load Q&A index.';
+      });
+  })();
+  </script>
+</body>
+</html>

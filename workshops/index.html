@@ -806,6 +806,24 @@
       renderResults();
     });
   }
+
+  
+  try {
+    var params = new URLSearchParams(window.location.search);
+    var qaParam = params.get('qa');
+    var qParam = params.get('q') || '';
+    if (qaParam) {
+      var validCats = ['all', 'briefs', 'dol-ten-07-25', 'dom-graphrag', 'research-log', 'essays'];
+      var targetCat = validCats.indexOf(qaParam) !== -1 ? qaParam : 'all';
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', function() {
+          openQaModal(qParam, targetCat);
+        });
+      } else {
+        openQaModal(qParam, targetCat);
+      }
+    }
+  } catch (err) {}
 })();
 </script>
 
