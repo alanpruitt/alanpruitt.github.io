@@ -94,11 +94,16 @@
       </h2>
     </div>
 
-    <form method="dialog" style="margin: 0; flex-shrink: 0;">
-      <button type="submit" value="close" aria-label="{{ if eq .Lang "es" }}Cerrar ventana de consulta (Esc){{ else }}Close Q&A modal (Esc){{ end }}" style="min-height: 44px; min-width: 44px; padding: 0.4rem 0.75rem; border-radius: 0.5rem; border: 1.5px solid #0B192C; background-color: #FAFBF7; color: #0B192C; font-family: monospace; font-size: 0.75rem; font-weight: 800; cursor: pointer;">
-        {{ if eq .Lang "es" }}Cerrar [Esc]{{ else }}Close [Esc]{{ end }}
-      </button>
-    </form>
+    <div style="display: flex; align-items: center; gap: 0.5rem; flex-shrink: 0;">
+      <a href="/qa-embed/" style="min-height: 44px; display: inline-flex; align-items: center; padding: 0.4rem 0.75rem; border-radius: 0.5rem; border: 1.5px solid #680014; background-color: #680014; color: #FFFFFF; font-family: monospace; font-size: 0.72rem; font-weight: 800; text-decoration: none;">
+        {{ if eq .Lang "es" }}Buscador SSoT Cursos EXW (980 Nodos) &rarr;{{ else }}EXW Course SSoT RAG (980 Nodes) &rarr;{{ end }}
+      </a>
+      <form method="dialog" style="margin: 0;">
+        <button type="submit" value="close" aria-label="{{ if eq .Lang "es" }}Cerrar ventana de consulta (Esc){{ else }}Close Q&A modal (Esc){{ end }}" style="min-height: 44px; min-width: 44px; padding: 0.4rem 0.75rem; border-radius: 0.5rem; border: 1.5px solid #0B192C; background-color: #FAFBF7; color: #0B192C; font-family: monospace; font-size: 0.75rem; font-weight: 800; cursor: pointer;">
+          {{ if eq .Lang "es" }}Cerrar [Esc]{{ else }}Close [Esc]{{ end }}
+        </button>
+      </form>
+    </div>
   </div>
 
   <!-- Search Input & Category Filters -->
