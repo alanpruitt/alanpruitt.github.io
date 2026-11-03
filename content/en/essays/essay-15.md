@@ -1,3 +1,10 @@
+---
+title: "Essay 15: Algorithmic Pedagogy & Continuous Integration — Engineering Zero-Regression Learning Environments"
+date: "2026-08-12"
+description: "How Continuous Integration (CI) and Algorithmic Pedagogy treat learning outcomes, prerequisite graphs, and WCAG 2.2 AA compliance rules as executable source code to prevent version decay across higher education."
+categories: ["curriculum-as-code"]
+---
+
 ## Essay 15: Algorithmic Pedagogy & Continuous Integration — Engineering Zero-Regression Learning Environments
 
 When traditional course design meets institutional scaling, it almost always encounters a friction point: version decay. Syllabi drift out of alignment with lab rubrics, external links break, accreditation standards shift, and manual updates introduce silent regressions into LMS course shells.

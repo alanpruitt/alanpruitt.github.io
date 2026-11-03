@@ -1,3 +1,10 @@
+---
+title: "Essay 18: The Illusion of the Feed — Upstream SSoT and Feed Link Rot Governance"
+date: "2026-08-14"
+description: "Why relying on live external web links and dynamic social media widgets inside an LMS introduces compounding link rot, and how upstream Single Source of Truth (SSoT) configuration control ensures durable course architectures."
+categories: ["curriculum-as-code"]
+---
+
 <!-- markdownlint-disable MD024 MD003 -->
 
 ## Essay 18: The Illusion of the Feed: Upstream SSoT and Feed Link Rot Governance

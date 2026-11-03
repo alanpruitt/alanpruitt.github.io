@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Essay 24"
+title: "Essay 24: Chatbots & Canvas LMS — A Cautionary Tale"
 permalink: /essay-24/
 id: "24"
 slug: "24-chatbots-canvas-lms-cautionary-tale"
@@ -8,8 +8,9 @@ title_es: "Chatbots y Canvas LMS: Una Advertencia sobre la Delegación Agéntica
 date: "2026-08-17"
 course: "EXW101"
 term: "Fall 2026"
-ssot: "The Einstein Protocol"
+ssot: "Active Verification Telemetry & Integrity Protocol"
 tags: ["AI", "Canvas LMS", "EdTech", "CurriculumAsCode", "InstructionalDesign"]
+description: "Why integrating commercial AI chatbots inside Canvas LMS introduces severe institutional risks, compromises FERPA/ADA standards, and how high-friction Socratic assessments preserve human voice and presence."
 summary: "Why integrating commercial AI chatbots inside Canvas LMS introduces severe institutional risks, compromises FERPA/ADA standards, and how high-friction Socratic assessments preserve human voice and presence."
 summary_es: "Por qué la integración de chatbots comerciales en Canvas LMS introduce riesgos institucionales graves, compromete FERPA/ADA y cómo las evaluaciones socráticas conservan la voz humana."
 lang_default: "en"

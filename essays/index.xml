@@ -126,14 +126,14 @@
 				<description>How EXW245 decouples cognitive pre-flight mathematical verification from physical laboratory execution using a two-part scaffold pairing Gemini AI simulation sandboxes with Lode Corival research-grade cycle ergometers.</description>
 			</item>
 			<item>
-				<title>Essay 26</title>
+				<title>Essay 26: The POUR-Audit Framework in Curriculum-as-Code</title>
 				<link>https://alanpruitt.com/essays/26-curriculum-as-code-pour-audit-framework/</link>
 				<pubDate>Wed, 19 Aug 2026 00:00:00 +0000</pubDate>
 				<guid>https://alanpruitt.com/essays/26-curriculum-as-code-pour-audit-framework/</guid>
 				<description>An analysis of the POUR-Audit framework within Curriculum-as-Code paradigms, highlighting automated verification checks for heading hierarchies, image alt-text, and legacy reference deprecation.</description>
 			</item>
 			<item>
-				<title>Essay 24</title>
+				<title>Essay 24: Chatbots &amp; Canvas LMS — A Cautionary Tale</title>
 				<link>https://alanpruitt.com/essays/24-chatbots-canvas-lms-cautionary-tale/</link>
 				<pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
 				<guid>https://alanpruitt.com/essays/24-chatbots-canvas-lms-cautionary-tale/</guid>
@@ -145,6 +145,20 @@
 				<pubDate>Fri, 14 Aug 2026 00:00:00 +0000</pubDate>
 				<guid>https://alanpruitt.com/essays/17-resolving-array-parsing-script-failures/</guid>
 				<description>&lt;!-- =========================================================================&#xA;  LANG: ENGLISH&#xA;  ========================================================================= --&gt;&#xA;&lt;div data-lang=&#34;en&#34;&gt;&#xA;&lt;h2 id=&#34;essay-17-engineering-resilience-resolving-false-positive-contrast-errors-and-array-parsing-script-failures-via-curriculum-as-code&#34;&gt;Essay 17: Engineering Resilience: Resolving False-Positive Contrast Errors and Array Parsing Script Failures via Curriculum-as-Code&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;strong&gt;TL;DR:&lt;/strong&gt; Automated accessibility checkers in Learning Management Systems often flag false-positive contrast errors due to array parsing script failures caused by deeply nested, visual-editor HTML bloat. Curriculum-as-Code (C-a-C) resolves this at the source by replacing GUI color adjustments with deterministic Markdown pipelines, native semantic hierarchies starting at &lt;code&gt;&amp;lt;h2&amp;gt;&lt;/code&gt;, and zero inline color overrides.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Essay 18: The Illusion of the Feed — Upstream SSoT and Feed Link Rot Governance</title>
+				<link>https://alanpruitt.com/essays/18-the-illusion-of-the-feed/</link>
+				<pubDate>Fri, 14 Aug 2026 00:00:00 +0000</pubDate>
+				<guid>https://alanpruitt.com/essays/18-the-illusion-of-the-feed/</guid>
+				<description>&lt;!-- markdownlint-disable MD024 MD003 --&gt;&#xA;&lt;h2 id=&#34;essay-18-the-illusion-of-the-feed-upstream-ssot-and-feed-link-rot-governance&#34;&gt;Essay 18: The Illusion of the Feed: Upstream SSoT and Feed Link Rot Governance&lt;/h2&gt;&#xA;&lt;h2 id=&#34;learning-objectives&#34;&gt;Learning Objectives&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Analyze the impact of link rot on digital course content.&lt;/li&gt;&#xA;&lt;li&gt;Establish upstream Single Source of Truth (SSoT) configuration control.&lt;/li&gt;&#xA;&lt;li&gt;Design glare-resilient, high-contrast, offline-first course architectures.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;instructional-content&#34;&gt;Instructional Content&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;strong&gt;Key Concept:&lt;/strong&gt; Relying on live external web links and dynamic social media widgets inside an LMS creates an illusion of real-time engagement while introducing a compounding vulnerability of link rot. Upstream Single Source of Truth (SSoT) governance mitigates this risk by externalizing external resources as config-controlled assets in centralized database manifests.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Essay 15: Algorithmic Pedagogy &amp; Continuous Integration — Engineering Zero-Regression Learning Environments</title>
+				<link>https://alanpruitt.com/essays/essay-15/</link>
+				<pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
+				<guid>https://alanpruitt.com/essays/essay-15/</guid>
+				<description>&lt;h2 id=&#34;essay-15-algorithmic-pedagogy--continuous-integration--engineering-zero-regression-learning-environments&#34;&gt;Essay 15: Algorithmic Pedagogy &amp;amp; Continuous Integration — Engineering Zero-Regression Learning Environments&lt;/h2&gt;&#xA;&lt;p&gt;When traditional course design meets institutional scaling, it almost always encounters a friction point: version decay. Syllabi drift out of alignment with lab rubrics, external links break, accreditation standards shift, and manual updates introduce silent regressions into LMS course shells.&lt;/p&gt;&#xA;&lt;p&gt;In software development, this problem was solved decades ago through &lt;strong&gt;Continuous Integration (CI)&lt;/strong&gt; and automated testing. In higher education, the solution is &lt;strong&gt;Algorithmic Pedagogy&lt;/strong&gt;—the practice of treating learning outcomes, prerequisite graphs, and compliance rules as executable source code.&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>The AI Safety Auditor Pattern in Applied Kinesiology</title>
@@ -243,20 +257,6 @@
 				<pubDate>Thu, 30 Jul 2026 00:00:00 +0000</pubDate>
 				<guid>https://alanpruitt.com/essays/01-ai-assessment-design/</guid>
 				<description>&lt;h2 id=&#34;shifting-from-ai-fear-to-strategic-assessment-design&#34;&gt;Shifting from AI Fear to Strategic Assessment Design&lt;/h2&gt;&#xA;&lt;p&gt;How Curriculum-as-Code paradigms transform educators from passive task checkers into problem architects by auditing the cognitive process rather than standard answers.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;strong&gt;Disclaimer:&lt;/strong&gt; The Curriculum-as-Code architecture, S-A-R Standard, and open-source software tools described in this essay represent my independent faculty engineering and research through Webcognita LLC and do not represent official policy or endorsement by Arizona Western College or The University of Arizona.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title></title>
-				<link>https://alanpruitt.com/essays/18-the-illusion-of-the-feed/</link>
-				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-				<guid>https://alanpruitt.com/essays/18-the-illusion-of-the-feed/</guid>
-				<description>&lt;!-- markdownlint-disable MD024 MD003 --&gt;&#xA;&lt;h2 id=&#34;essay-18-the-illusion-of-the-feed-upstream-ssot-and-feed-link-rot-governance&#34;&gt;Essay 18: The Illusion of the Feed: Upstream SSoT and Feed Link Rot Governance&lt;/h2&gt;&#xA;&lt;h2 id=&#34;learning-objectives&#34;&gt;Learning Objectives&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Analyze the impact of link rot on digital course content.&lt;/li&gt;&#xA;&lt;li&gt;Establish upstream Single Source of Truth (SSoT) configuration control.&lt;/li&gt;&#xA;&lt;li&gt;Design glare-resilient, high-contrast, offline-first course architectures.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;instructional-content&#34;&gt;Instructional Content&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;strong&gt;Key Concept:&lt;/strong&gt; Relying on live external web links and dynamic social media widgets inside an LMS creates an illusion of real-time engagement while introducing a compounding vulnerability of link rot. Upstream Single Source of Truth (SSoT) governance mitigates this risk by externalizing external resources as config-controlled assets in centralized database manifests.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title></title>
-				<link>https://alanpruitt.com/essays/essay-15/</link>
-				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-				<guid>https://alanpruitt.com/essays/essay-15/</guid>
-				<description>&lt;h2 id=&#34;essay-15-algorithmic-pedagogy--continuous-integration--engineering-zero-regression-learning-environments&#34;&gt;Essay 15: Algorithmic Pedagogy &amp;amp; Continuous Integration — Engineering Zero-Regression Learning Environments&lt;/h2&gt;&#xA;&lt;p&gt;When traditional course design meets institutional scaling, it almost always encounters a friction point: version decay. Syllabi drift out of alignment with lab rubrics, external links break, accreditation standards shift, and manual updates introduce silent regressions into LMS course shells.&lt;/p&gt;&#xA;&lt;p&gt;In software development, this problem was solved decades ago through &lt;strong&gt;Continuous Integration (CI)&lt;/strong&gt; and automated testing. In higher education, the solution is &lt;strong&gt;Algorithmic Pedagogy&lt;/strong&gt;—the practice of treating learning outcomes, prerequisite graphs, and compliance rules as executable source code.&lt;/p&gt;</description>
 			</item>
 	</channel>
 </rss>
