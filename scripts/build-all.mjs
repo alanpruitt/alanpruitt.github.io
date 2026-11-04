@@ -1,5 +1,6 @@
-import { readFileSync, writeFileSync, readdirSync, existsSync, mkdirSync } from 'fs';
+import { readFileSync, writeFileSync, readdirSync, existsSync, mkdirSync, cpSync } from 'fs';
 import { resolve, join, basename } from 'path';
+import { execFileSync } from 'child_process';
 
 const SITE_ORIGIN = 'https://alanpruitt.com';
 const primaryContentDir = resolve('content/en/essays');
@@ -273,16 +274,28 @@ function buildGlobal404(routingMap) {
 </html>`;
 }
 
-function buildSitemap(essays) {
-  const urls = [
-    `  <url>\n    <loc>${SITE_ORIGIN}/</loc>\n    <changefreq>weekly</changefreq>\n    <priority>1.0</priority>\n  </url>`,
-    ...essays.map(essay => `  <url>\n    <loc>${essay.canonicalUrl}</loc>\n    <lastmod>${essay.date}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.8</priority>\n  </url>`)
-  ];
+function buildAtom(essays) {
+  const updated = essays.length ? new Date(essays[0].date).toISOString() : new Date().toISOString();
+  const entries = essays.map(essay => `  <entry>
+    <title>${escapeXml(essay.title)}</title>
+    <link href="${essay.canonicalUrl}/" />
+    <id>${essay.canonicalUrl}/</id>
+    <updated>${new Date(essay.date).toISOString()}</updated>
+    <summary>${escapeXml(essay.summary || essay.title)}</summary>
+  </entry>`).join('\n');
 
-  return `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${urls.join('\n')}
-</urlset>`;
+  return `<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Alan Pruitt (Coach Alan) — Curriculum-as-Code &amp; Sovereign AI Essays</title>
+  <link href="${SITE_ORIGIN}/atom.xml" rel="self" />
+  <link href="${SITE_ORIGIN}/" />
+  <updated>${updated}</updated>
+  <id>${SITE_ORIGIN}/</id>
+  <author>
+    <name>Alan Pruitt</name>
+  </author>
+${entries}
+</feed>`;
 }
 
 function buildRss(essays) {
@@ -399,7 +412,7 @@ function run() {
   }
 
   const files = readdirSync(CONTENT_DIR).filter(file => file.endsWith('.md') && !file.startsWith('_'));
-  console.log(`\n🚀 Initializing Dual-Route Generation across ${files.length} essay(s)...`);
+  console.log(`\n[*] Initializing Dual-Route Generation across ${files.length} essay(s)...`);
 
   const essays = [];
   const routingMap = {};
@@ -441,7 +454,7 @@ function run() {
       }
     }
 
-    console.log(`✅ Indexed ${primarySlug} -> [${allSlugs.join(', ')}]`);
+    console.log(`[OK] Indexed ${primarySlug} -> [${allSlugs.join(', ')}]`);
   }
 
   // Sort newest first for chronological feed delivery
@@ -455,33 +468,39 @@ function run() {
 
   // Generate Global SPA 404 Fallback Router
   writeFileSync(resolve(DIST_DIR, '404.html'), buildGlobal404(routingMap), 'utf-8');
-  console.log('🛡️ Generated: 404.html (Universal routing safeguard)');
+  console.log('[OK] Generated: 404.html (Universal routing safeguard)');
 
-  // 1. Sitemap
-  writeFileSync(resolve(DIST_DIR, 'sitemap.xml'), buildSitemap(essays), 'utf-8');
-  console.log('🗺️ Generated: sitemap.xml');
-
-  // 2. RSS Feed (v2.0)
-  writeFileSync(resolve(DIST_DIR, 'rss.xml'), buildRss(essays), 'utf-8');
-  console.log('📡 Generated: rss.xml');
-
-  // 3. JSON Feed (v1.1)
+  // 1. JSON Feed (v1.1) & Atom Feed (v1.0)
   writeFileSync(resolve(DIST_DIR, 'feed.json'), generateJsonFeed(essays), 'utf-8');
-  console.log('📄 Generated: feed.json');
+  console.log('[OK] Generated: feed.json');
+  writeFileSync(resolve(DIST_DIR, 'atom.xml'), buildAtom(essays), 'utf-8');
+  console.log('[OK] Generated: atom.xml');
 
-  // 1. Build Primary Archive: essays/index.html
-  const essaysDir = resolve(DIST_DIR, 'essays');
-  if (!existsSync(essaysDir)) mkdirSync(essaysDir, { recursive: true });
-  writeFileSync(resolve(essaysDir, 'index.html'), generateArchiveHtml(essays), 'utf-8');
-  console.log('📚 Generated Archive: essays/index.html');
+  // 2. Run Hugo SSG (--minify --noBuildLock) so canonical Hugo layouts, bilingual sitemaps, and index.xml win
+  console.log('[*] Running Hugo SSG (--minify --noBuildLock)...');
+  execFileSync('/opt/homebrew/bin/hugo', ['--minify', '--noBuildLock'], { cwd: DIST_DIR, stdio: 'inherit' });
+  cpSync(resolve(DIST_DIR, 'public'), DIST_DIR, { recursive: true });
 
-  // 2. Build Alias / Backward-Compatible Archive: articles/index.html
-  const articlesDir = resolve(DIST_DIR, 'articles');
-  if (!existsSync(articlesDir)) mkdirSync(articlesDir, { recursive: true });
-  // writeFileSync(resolve(articlesDir, 'index.html'), generateArchiveHtml(essays), 'utf-8');
-  console.log('📚 Preserved custom Alias Archive: articles/index.html');
+  // 3. Synchronize rss.xml & feed.xml with Hugo's canonical index.xml and refresh sitemap lastmod timestamps
+  if (existsSync(resolve(DIST_DIR, 'index.xml'))) {
+    const idxXml = readFileSync(resolve(DIST_DIR, 'index.xml'));
+    writeFileSync(resolve(DIST_DIR, 'rss.xml'), idxXml);
+    writeFileSync(resolve(DIST_DIR, 'feed.xml'), idxXml);
+    writeFileSync(resolve(DIST_DIR, 'public/rss.xml'), idxXml);
+    writeFileSync(resolve(DIST_DIR, 'public/feed.xml'), idxXml);
+    console.log('[OK] Synchronized: rss.xml & feed.xml with canonical Hugo index.xml');
+  }
 
-  console.log('\n🎉 Dual-Route generation and syndication builds complete.\n');
+  const nowIso = new Date().toISOString();
+  for (const smRel of ['sitemap.xml', 'public/sitemap.xml', 'es/sitemap.xml', 'public/es/sitemap.xml']) {
+    const smPath = resolve(DIST_DIR, smRel);
+    if (existsSync(smPath)) {
+      const smTxt = readFileSync(smPath, 'utf-8').replace(/<lastmod>.*?<\/lastmod>/g, `<lastmod>${nowIso}</lastmod>`);
+      writeFileSync(smPath, smTxt, 'utf-8');
+    }
+  }
+
+  console.log('\n[SUCCESS] Unified Dual-Route, Hugo SSG, Sitemap & Feed build complete.\n');
 }
 
 run();
