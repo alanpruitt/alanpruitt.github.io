@@ -1,6 +1,6 @@
 # Essay 27: Curriculum-as-Code, ADA Title II Compliance, and Fleet-Wide Accessibility Refactoring
 
-### Introduction
+## Introduction
 In modern instructional design, scaling course materials across a multi-course fleet requires a rigorous engineering approach. At Arizona Western College, my approach to building robust, equitable, and accessible learning environments for courses like EXW 101, 150, 245, and 265 relies on a **Curriculum-as-Code (C-as-C)** methodology. By treating curriculum files as version-controlled code, I can automate quality assurance, enforce strict institutional standards, and rapidly execute critical compliance refactors across live production shells.
 
 ### The Intersection of Curriculum-as-Code and the POUR Framework

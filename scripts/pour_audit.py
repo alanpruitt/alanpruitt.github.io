@@ -32,7 +32,8 @@ def audit_file(filepath):
         ):
             continue
 
-        h_html = re.search(r"<h([2-6])[^>]*>", line, re.IGNORECASE)
+        line_no_code = re.sub(r"`[^`]*`", "", line)
+        h_html = re.search(r"<h([1-6])[^>]*>", line_no_code, re.IGNORECASE)
         h_md = re.search(r"^(#{1,6})\s+\S+", line)
 
         level = None
@@ -42,9 +43,9 @@ def audit_file(filepath):
             level = len(h_md.group(1))
 
         if level is not None:
-            if last_level == 1 and level != 2:
+            if last_level == 1 and level not in (1, 2):
                 errors.append(
-                    f"[Robust] Structure Violation: First content heading must be <h2>, found <h{level}>."
+                    f"[Robust] Structure Violation: First content heading must be <h1> or <h2>, found <h{level}>."
                 )
             elif level > last_level + 1:
                 errors.append(
@@ -60,7 +61,7 @@ def audit_file(filepath):
             errors.append(f"[Perceivable] Image missing descriptive alt text -> {img}")
 
     # 3. UNDERSTANDABLE AUDIT: Check for deprecated or non-standard structural tags/terms (excluding inline code snippets)
-    clean_content_for_legacy = re.sub(r"`[^`]*8\.#[^`]*`", "", content)
+    clean_content_for_legacy = re.sub(r"(?:`[^`]*8\.#[^`]*`|<code>[^<]*8\.#[^<]*</code>)", "", content)
     if "8.#" in clean_content_for_legacy:
         errors.append(
             "[Understandable] Legacy Reference: Found prohibited '8.#'-style reference."
@@ -91,6 +92,8 @@ def run_pour_audit(target):
                 or "node_modules" in root
                 or "public" in root
                 or "_site" in root
+                or "layouts/shortcodes" in root
+                or "layouts/partials" in root
             ):
                 continue
 

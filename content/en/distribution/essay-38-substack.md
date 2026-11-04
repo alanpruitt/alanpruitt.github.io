@@ -21,7 +21,7 @@ The answer is clear: flat *Docs-as-Code* without structural pedagogy and cryptog
 
 ---
 
-### Anatomy of the Flat-Vector Trap
+## Anatomy of the Flat-Vector Trap
 
 Higher education—especially clinical exercise physiology and nutrition governed by non-negotiable **Federal Single Sources of Truth** (**PAGA 2nd Ed. 2018**, **2025–2030 Dietary Guidelines for Americans**, **ACSM 12th Ed.**, and the **NASM OPT Model**)—operates under strict safety gates. Leaving a Retrieval-Augmented Generation (RAG) pipeline flat creates four structural fault lines:
 

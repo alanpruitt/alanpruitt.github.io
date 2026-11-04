@@ -1,4 +1,5 @@
 
+<a href="#main-content" style="position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden; z-index: 100; background-color: #0B192C; color: #FAFBF7; padding: 0.75rem 1.25rem; font-weight: 800; font-size: 0.875rem; border-radius: 0.5rem; text-decoration: none;" onfocus="this.style.left='1rem';this.style.top='1rem';this.style.width='auto';this.style.height='auto';" onblur="this.style.left='-9999px';this.style.width='1px';this.style.height='1px';">{{ if eq .Lang "es" }}Saltar al contenido principal{{ else }}Skip to main content{{ end }}</a>
 <header style="position: sticky; top: 0; z-index: 50; width: 100%; border-bottom: 1px solid #e4e4e7; background-color: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px);">
   <div style="max-width: 64rem; margin: 0 auto; height: 4rem; display: flex; align-items: center; justify-content: space-between; padding: 0 1.25rem;">
     
@@ -78,4 +79,3 @@
   document.addEventListener("DOMContentLoaded", enforceHeaderLayout);
   enforceHeaderLayout();
 </script>
-{{ partial "qa-modal.html" . }}
