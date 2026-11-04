@@ -4,6 +4,8 @@ title: "Essay 39: What If I Didn't Automate the Threshold?"
 subtitle: "Why Programmatic Canvas Rubric Validation and Edge AI Workflows Transcend Manual LMS Point Floor Inflation"
 date: 2026-11-04
 author: "Alan Pruitt"
+slug: "39-automate-the-threshold"
+url: "/articles/39-automate-the-threshold.html"
 categories: [Curriculum-as-Code, Educational Technology, AI Engineering]
 ---
 
