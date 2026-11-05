@@ -1,0 +1,20 @@
+{{/* Dynamic Essay Disclaimer partial based on essay front matter tags */}}
+{{ $isPolicy := false }}
+{{ $isTech := false }}
+{{ if .Params.tags }}
+  {{ $isPolicy = intersect .Params.tags (slice "Federal Policy" "Compliance" "Policy") }}
+  {{ $isTech = intersect .Params.tags (slice "Curriculum-as-Code" "Architecture" "Automation" "Observatory" "M1 Pipeline") }}
+{{ end }}
+
+<div class="essay-disclaimer p-4 my-6 border-l-4 border-gray-400 bg-gray-50 dark:bg-gray-900 dark:border-gray-600 text-sm text-gray-700 dark:text-gray-300">
+  <p class="font-semibold mb-1">Disclaimer:</p>
+  <p>
+    {{ if and $isPolicy (gt (len $isPolicy) 0) }}
+    The analysis of federal guidelines, compliance frameworks, and regulatory advisories described in this essay represents independent faculty research and policy critique conducted exclusively through Webcognita LLC. It does not constitute official policy, legal interpretation, or endorsement by Arizona Western College or The University of Arizona.
+    {{ else if and $isTech (gt (len $isTech) 0) }}
+    The Curriculum-as-Code architecture, S-A-R Standard, and open-source software tools described in this essay represent independen    The Curriculum-as-Code architecture, S-A-R Standard, and open-source software toational policy or endorsement by Arizona Western College or The University of Arizona.
+    {{ else }}
+    The Curriculum-as-Code architecture, S-A-R Standard, and open-source software tools described in this essay represent independent faculty engineering and research through Webcognita LLC and do not represent official policy or endorsement by Arizona Western College or The University of Arizona.
+    {{ end }}
+  </p>
+</div>
