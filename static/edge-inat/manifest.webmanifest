@@ -1,0 +1,10 @@
+{
+  "name": "Edge-iNat • Sonoran Desert Offline Biodiversity & Trail Safety AI",
+  "short_name": "Edge-iNat",
+  "description": "100% offline open-source Edge AI biodiversity and field safety identifier for Yuma County, AZ & Imperial Valley, CA.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0F172A",
+  "theme_color": "#7A0019",
+  "lang": "en-US"
+}

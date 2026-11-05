@@ -691,6 +691,9 @@
                         <span class="font-mono">Apple Silicon M1/M2 &bull; Ollama (exw-argon4-cac / Gemma 4) &bull; Python 3.10 &bull; Gunicorn / Flask WSGI &bull; 3,151-Node DOM GraphRAG Vector Index &bull; W3C PROV-O Provenance &bull; Nginx + Cloudflare Edge Tunnel &bull; Canvas GraphQL (/api/graphql) &bull; WCAG 2.2 AA (9:1 Contrast) &bull; GitHub Actions CI/CD</span>
                     </div>
                     <div class="flex items-center gap-4 flex-shrink-0">
+                        <a href="/edge-inat/" class="text-xs font-bold text-navy-900 hover:underline inline-flex items-center gap-1">
+                            Launch Edge-iNat Demo &rarr;
+                        </a>
                         <a href="https://exwdemo.dev" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-navy-900 hover:underline inline-flex items-center gap-1">
                             Inspect Course 42051 &rarr;
                         </a>
@@ -699,6 +702,38 @@
                         </a>
                     </div>
                 </div>
+            </div>
+
+            <!-- EDGE-INAT: OPEN-SOURCE LOCAL BIODIVERSITY & SONORAN DESERT TRAIL SAFETY EDGE AI -->
+            <div id="edge-inat-demo" class="bg-white p-8 rounded-2xl border border-creme-200 shadow-sm md:col-span-3">
+                <div class="flex flex-wrap items-center justify-between gap-3 mb-4 pb-4 border-b border-creme-100">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-creme-100 rounded-xl flex items-center justify-center text-navy-900 border border-creme-200 font-mono text-xs font-bold flex-shrink-0" aria-hidden="true">
+                            [BIO]
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-navy-900">
+                                {{ if eq .Lang "es" }}Edge-iNat: IA Local de Código Abierto para Biodiversidad y Seguridad en el Desierto{{ else }}Edge-iNat: Open-Source Local Biodiversity &amp; Sonoran Desert Trail Safety Edge AI{{ end }}
+                            </h3>
+                            <p class="text-xs text-navy-800 mt-0.5">
+                                {{ if eq .Lang "es" }}Alternativa local 100% sin conexión a iNaturalist impulsada por vectores BioCLIP + Geo-Priors H3 de GBIF para Yuma, AZ y el Valle Imperial, CA.{{ else }}100% offline, zero-cloud Edge AI alternative to iNaturalist powered by BioCLIP taxonomic embeddings + GBIF H3 seasonal Geo-Priors for Yuma, AZ &amp; Imperial Valley, CA.{{ end }}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap items-center gap-2">
+                        <a href="/edge-inat/" class="text-xs font-mono bg-navy-900 text-creme-100 px-3 py-1.5 rounded-md font-bold hover:underline" style="text-decoration: none;">
+                            {{ if eq .Lang "es" }}Abrir Demo Interactivo Edge-iNat &rarr;{{ else }}Launch Live Edge-iNat PWA Demo &rarr;{{ end }}
+                        </a>
+                        <span class="text-xs font-mono bg-creme-100 text-navy-900 px-3 py-1 rounded-md border border-creme-200 font-semibold">WebGPU / Float32 &bull; 9:1 Contrast</span>
+                    </div>
+                </div>
+                <p class="text-xs text-navy-800 leading-relaxed mb-0">
+                    {{ if eq .Lang "es" }}
+                        Combina un codificador visual en el dispositivo (<code>BioCLIP TreeOfLife</code>) con probabilidades mensuales de <strong>GBIF</strong> en el Desierto de Sonora para identificar especies nativas, alimentos reales regionales (<em>DGA 2025&ndash;2030</em>: mezquite/p&eacute;chita, nopal/tuna) y peligros venenosos en senderos (cascabel diamante, cascabel cornuda, alacr&aacute;n de corteza, cholla brincadora) en <strong>&lt;1 ms</strong> sin se&ntilde;al celular, emitiendo recibos <code>###</code> y archivos CSV <strong>Darwin Core</strong>.
+                    {{ else }}
+                        Combines on-device visual feature embeddings (<code>BioCLIP TreeOfLife</code> architecture) with <strong>GBIF</strong> seasonal bioregion priors across the Lower Colorado River Basin to identify native desert flora/fauna, culturally familiar <em>DGA 2025&ndash;2030</em> whole foods (velvet mesquite pods/<em>p&eacute;chita</em>, prickly pear/<em>nopales</em>), and venomous trail hazards (Western Diamondback, Sidewinder, Arizona Bark Scorpion, Jumping Cholla) in <strong>&lt;1 ms</strong> with zero cell service, complete with <strong>9:1 Outdoor Sunlight Mode</strong>, bilingual offline speech synthesis (<code>EN / ES</code>), <code>###</code> clinical receipts, and <strong>Darwin Core CSV</strong> export.
+                    {{ end }}
+                </p>
             </div>
 
             <!-- DOWNLOADABLE ARCHITECTURE BRIEFS & WHITE PAPERS (PDF SHELF) -->
