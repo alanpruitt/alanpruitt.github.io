@@ -1,0 +1,73 @@
+#!/usr/bin/env python3
+import json
+import os
+import sys
+import urllib.request
+
+COURSES = ["EXW101", "EXW150", "EXW245", "EXW265"]
+AUDIT_DIR = "audits"
+os.makedirs(AUDIT_DIR, exist_ok=True)
+
+OLLAMA_URL = "http://localhost:11434/api/generate"
+
+def audit_course(course: str):
+    file_path = f"content/courses/{course}/home.md"
+    out_path = f"{AUDIT_DIR}/{course}-home-audit.txt"
+
+    if not os.path.exists(file_path):
+        print(f"[-] File not found for {course}: {file_path}")
+        return
+
+    with open(file_path, "r", encoding="utf-8") as f:
+        content = f.read()
+
+    print(f"[+] Auditing {course} ({len(content)} bytes)...")
+
+    prompt = f"""### Audit this Welcome (Home Page) for {course}. Verify that:
+1. Heading hierarchies start strictly at h2 (reserving h1 for Canvas).
+2. Tone is welcoming, clear, and appropriately calibrated ({course} introductory vs. transfer rigor).
+3. Formatting uses scannable bullet points and avoids dense text walls.
+
+### CONTENT TO AUDIT:
+{content}
+"""
+
+    payload = {
+        "model": "gemma4:e2b",
+        "prompt": prompt,
+        "stream": False,
+        "options": {
+            "num_ctx": 16384,
+            "num_predict": 2048,
+            "temperature": 0.2
+        }
+    }
+
+    req = urllib.request.Request(
+        OLLAMA_URL,
+        data=json.dumps(payload).encode("utf-8"),
+        headers={"Content-Type": "application/json"}
+    )
+
+    try:
+        with urllib.request.urlopen(req, timeout=300) as resp:
+            data = json.loads(resp.read().decode("utf-8"))
+            response_text = data.get("response", "").strip()
+            eval_count = data.get("eval_count", 0)
+            done_reason = data.get("done_reason", "unknown")
+            print(f"    Done {course}: {eval_count} tokens generated (reason: {done_reason})")
+            
+            with open(out_path, "w", encoding="utf-8") as out:
+                out.write(response_text + "\n")
+            print(f"    Saved: {out_path}")
+    except Exception as e:
+        print(f"[-] Error auditing {course}: {e}")
+
+def main():
+    target = sys.argv[1] if len(sys.argv) > 1 else None
+    courses = [target] if target else COURSES
+    for c in courses:
+        audit_course(c)
+
+if __name__ == "__main__":
+    main()

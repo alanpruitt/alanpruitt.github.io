@@ -1,0 +1,1 @@
+/Users/alanpruitt/EXW-MASTER-LIBRARY/02_COURSES/EXW265/Fall_2026/EXW265_Syllabus_Fall2026.html

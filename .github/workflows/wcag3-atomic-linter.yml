@@ -1,0 +1,131 @@
+name: WCAG 3.0 Atomic Accessibility Linter
+
+on:
+  pull_request:
+    branches:
+      - main
+      - master
+    paths:
+      - '**.html'
+      - '**.md'
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  accessibility-audit:
+    name: Run Atomic Linter & Post Suggestions
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Get Changed Files
+        id: changed-files
+        uses: tj-actions/changed-files@v44
+        with:
+          files: |
+            **.html
+            **.md
+
+      - name: Run WCAG 3.0 Atomic Audit
+        id: run-audit
+        if: steps.changed-files.outputs.any_changed == 'true'
+        continue-on-error: true
+        run: |
+          python .github/scripts/wcag3_linter.py \
+            --json-out wcag3_report.json \
+            ${{ steps.changed-files.outputs.all_changed_files }}
+
+      - name: Post One-Click PR Review Suggestions
+        if: steps.changed-files.outputs.any_changed == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+
+            if (!fs.existsSync('wcag3_report.json')) {
+              core.info('No audit report found. Skipping review.');
+              return;
+            }
+
+            const report = JSON.parse(fs.readFileSync('wcag3_report.json', 'utf8'));
+            const violations = report.violations;
+
+            if (!violations || violations.length === 0) {
+              core.info('No accessibility violations detected.');
+              return;
+            }
+
+            // Get PR commit SHA and changed files diff info
+            const pullNumber = context.issue.number;
+            const { data: pullRequest } = await github.rest.pulls.get({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: pullNumber,
+            });
+            const commitId = pullRequest.head.sha;
+
+            // Fetch list of modified files with their patches to ensure line numbers are valid diff targets
+            const { data: files } = await github.rest.pulls.listFiles({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: pullNumber,
+            });
+            const changedFileMap = new Set(files.map(f => f.filename));
+
+            const reviewComments = [];
+
+            for (const v of violations) {
+              if (!changedFileMap.has(v.file)) {
+                continue; // Do not attempt to comment on unchanged diff files
+              }
+
+              let body = `### ♿ Atomic Accessibility Violation: \`${v.rule}\`\n\n`;
+              body += `**Outcome:** ${v.outcome}\n`;
+              body += `**Finding:** ${v.message}\n\n`;
+
+              if (v.suggestion) {
+                body += `Commit the automated fix below to resolve this assertion:\n\n`;
+                body += `\`\`\`suggestion\n${v.suggestion}\n\`\`\``;
+              }
+
+              reviewComments.push({
+                path: v.file,
+                line: v.line,
+                side: 'RIGHT',
+                body: body
+              });
+            }
+
+            if (reviewComments.length > 0) {
+              try {
+                await github.rest.pulls.createReview({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  pull_number: pullNumber,
+                  commit_id: commitId,
+                  event: 'REQUEST_CHANGES',
+                  body: `## ♿ WCAG 3.0 Atomic Audit: Action Required\n\nThe atomic linter flagged **${violations.length}** violation(s). You can review the inline suggestions below and click **Commit suggestion** to resolve them directly.`,
+                  comments: reviewComments
+                });
+                core.info(`Created pull request review with ${reviewComments.length} inline suggestions.`);
+              } catch (err) {
+                core.warning(`Failed to submit batch review: ${err.message}. Line might be outside current diff.`);
+              }
+            }
+
+      - name: Enforce Branch Protection Check
+        if: steps.run-audit.outcome == 'failure'
+        run: |
+          echo "::error::Atomic accessibility violations must be resolved before merging."
+          exit 1

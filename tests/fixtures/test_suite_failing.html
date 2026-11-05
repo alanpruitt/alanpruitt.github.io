@@ -1,0 +1,100 @@
+<!-- tests/fixtures/test_suite_failing.html -->
+<!-- Comprehensive WCAG 3.0 Atomic Test Suite with Edge Cases -->
+
+<!-- VIOLATION 1: RULE_HEAD_ROOT (h1 forbidden in embedded canvas content) -->
+<h1 class="page-title main-accent">EXW245: Cardiopulmonary Lab Protocols</h1>
+
+<!-- COMPLIANT: Valid h2 start -->
+<h2 id="protocol-overview">1.0 Protocol Overview & Ergometer Calibration</h2>
+<p>Biometric intake parameters and graded exercise protocols using the Lode Corival.</p>
+
+<!-- VIOLATION 2: RULE_HEAD_NO_SKIP (Skipped h2 -> h4 without h3) -->
+<h4 class="sub-heading-alert" data-audited="false">Sub-Section: Pre-Test Safety Screening</h4>
+<p>Ensure resting ECG and blood pressure readings are within target limits.</p>
+
+<!-- COMPLIANT: Heading linear return -->
+<h3>1.1 Calibration Sequence</h3>
+
+<!-- VIOLATION 3: RULE_TABLE_CAPTION (Missing caption) -->
+<!-- VIOLATION 4: RULE_TABLE_TH_SCOPE (Bare th missing scope) -->
+<!-- EDGE CASE: th containing child span and multiline attribute formatting -->
+<table class="data-grid tabular-stats" border="0">
+  <thead>
+    <tr>
+      <th class="stage-col">
+        <span>Stage #</span>
+      </th>
+      <th scope="col">Workload (Watts)</th>
+      <!-- VIOLATION 5: RULE_TABLE_TH_SCOPE (Whitespace edge case) -->
+      <th   class="hr-col"  >Cadence (RPM)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Stage 1</td>
+      <td>50 W</td>
+      <td>60 RPM</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- COMPLIANT TABLE: Contains caption and explicit th scope attributes -->
+<table class="data-grid-valid">
+  <caption>Baseline Cycle Ergometer Calibration Thresholds</caption>
+  <thead>
+    <tr>
+      <th scope="col">Setting</th>
+      <th scope="col">Tolerance</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Braking Accuracy</th>
+      <td>&plusmn; 2 Watts</td>
+    </tr>
+  </tbody>
+</table>
+
+<section class="form-container">
+  <h2>2.0 Biometric Participant Intake</h2>
+
+  <form id="intake-form">
+    <!-- COMPLIANT: Explicit label for="..." binding -->
+    <label for="client-name">Participant Name:</label>
+    <input type="text" id="client-name" name="client_name" />
+
+    <!-- VIOLATION 6: RULE_FORM_ID_COLLISION (Duplicate ID 'client-vo2') -->
+    <label for="client-vo2">Initial VO2 Estimate (ml/kg/min):</label>
+    <input type="text" id="client-vo2" name="vo2_init" />
+
+    <label for="client-vo2">Confirmed VO2 Max (ml/kg/min):</label>
+    <input type="text" id="client-vo2" name="vo2_final" />
+
+    <!-- VIOLATION 7: RULE_FORM_EXPLICIT_LABEL (Orphan input missing label for or nesting) -->
+    <input type="text" name="resting_systolic" placeholder="Resting Systolic BP" />
+
+    <!-- COMPLIANT: Implicit nested label wrapping input -->
+    <label>
+      Resting Diastolic BP:
+      <input type="text" name="resting_diastolic" />
+    </label>
+
+    <!-- COMPLIANT: Buttons and hidden fields excluded from labeling rule -->
+    <input type="hidden" name="csrf_token" value="abc123xyz" />
+    <input type="submit" value="Log Biometrics" />
+  </form>
+</section>
+
+<section class="visual-assets">
+  <h2>3.0 Visual Ergometer Reference</h2>
+
+  <!-- COMPLIANT: Valid alt text within 120-char budget (48 chars) -->
+  <img src="lode_corival_base.png" alt="Lode Corival cycle ergometer control interface." />
+
+  <!-- VIOLATION 8: RULE_ALT_EXISTS (Missing alt attribute entirely) -->
+  <img src="unlabeled_ergometer.png" class="diagram-fluid" />
+
+  <!-- VIOLATION 9: RULE_ALT_LENGTH_120 (Alt text exceeds 120 character limit - 146 chars) -->
+  <img src="ergometer_calibration_rig.png" 
+       alt="Close-up photograph showing the mechanical hyperbolic braking assembly and digital flywheel sensor calibration rig on the clinical Lode Corival bike." />
+</section>

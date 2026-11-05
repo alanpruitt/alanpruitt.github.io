@@ -14,3 +14,10 @@ _site/
 .jekyll-cache/
 public/
 resources/
+
+# Test & CI reports
+wcag3_report.json
+wcag3_test_report.json
+__pycache__/
+*.pyc
+.venv/
