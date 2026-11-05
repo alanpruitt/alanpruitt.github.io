@@ -23,6 +23,12 @@
   {{- end }}
   {{- if eq .Language.Lang "en" }}
   <url>
+    <loc>https://alanpruitt.com/edge-inat/</loc>
+    <lastmod>{{ now.Format "2006-01-02T15:04:05-07:00" }}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>https://alanpruitt.com/research-log/</loc>
     <lastmod>{{ now.Format "2006-01-02T15:04:05-07:00" }}</lastmod>
     <changefreq>weekly</changefreq>

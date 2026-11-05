@@ -7,7 +7,7 @@ author: "Alan Pruitt"
 categories: [Curriculum-as-Code, Educational Technology, AI Engineering]
 ---
 
-When I first engineered a Git-versioned Markdown repository with automated CI/CD workflows to manage my multi-course exercise science and clinical nutrition fleet (`EXW 101`, `EXW 150`, `EXW 245`, and `EXW 265`), I could have stopped at standard Docs-as-Code. 
+When I first engineered a Git-versioned Markdown repository with automated CI/CD workflows to manage my multi-course exercise science and clinical nutrition fleet (`EXW 101`, `EXW 150`, `EXW 245`, and `EXW 265`), I could have stopped at standard Docs-as-Code.
 
 I already had clean Markdown source files, automated Canvas synchronization, and a robust local vector index over thousands of curriculum chunks. By conventional educational technology standards, my pipeline was finished.
 
