@@ -1,0 +1,1519 @@
+{
+  "@context": "https://schema.org/",
+  "@type": [
+    "Dataset",
+    "LearningResource",
+    "Course"
+  ],
+  "@id": "https://alanpruitt.com/#dataset-kin-265",
+  "name": "KIN-265: Exercise for Special Populations: Adapted Physical Activity & Chronic Conditions (Open Educational Resource Fleet)",
+  "alternateName": [
+    "Exercise for Special Populations: Adapted Physical Activity & Chronic Conditions",
+    "EXW-265: Exercise for Special Populations: Adapted Physical Activity & Chronic Conditions (Arizona Western College)"
+  ],
+  "courseCode": "KIN-265",
+  "identifier": "KIN-265-OER-2026-V2.2",
+  "version": "2.2.0",
+  "datePublished": "2026-11-07",
+  "dateModified": "2026-11-07",
+  "description": "Standardized ZTC OER module package for KIN-265 (Exercise for Special Populations: Adapted Physical Activity & Chronic Conditions) incorporating Curriculum-as-Code publishing, the Clinical Framing Protocol (Pattern / Rule / Solve), Physical Activity Guidelines for Americans (PAGA), 2nd Edition (2018) as the Academic Single Source of Truth (SSoT), and the U.S. Department of Labor AI Literacy Framework (TEN No. 07-25) with WCAG 2.2 AA (9:1 Double-Contrast Guard) compliance.",
+  "url": "https://alanpruitt.com/export/kin-265/metadata.json",
+  "sameAs": [
+    "https://www.oercommons.org/courses/kin-265",
+    "https://exwdemo.dev"
+  ],
+  "isAccessibleForFree": true,
+  "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+  "inLanguage": [
+    "en-US",
+    "es-MX"
+  ],
+  "educationalLevel": "Higher Education (Lower-Division Undergraduate)",
+  "learningResourceType": [
+    "Full Course",
+    "Module Readings",
+    "Clinical Case Simulations",
+    "Rubric-Aligned Laboratory Assignments"
+  ],
+  "creator": {
+    "@type": "Organization",
+    "@id": "https://www.webcognita.com/#organization",
+    "name": "Webcognita LLC",
+    "url": "https://www.webcognita.com/",
+    "founder": "Alan Lee Pruitt"
+  },
+  "author": {
+    "@type": "Person",
+    "@id": "https://alanpruitt.com/#person",
+    "name": "Alan Lee Pruitt",
+    "alternateName": "Coach Alan",
+    "jobTitle": "Adjunct Faculty of Exercise Science & Instructional Designer",
+    "url": "https://alanpruitt.com/",
+    "affiliation": {
+      "@type": "CollegeOrUniversity",
+      "name": "Arizona Western College",
+      "url": "https://www.azwestern.edu/"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Arizona Western College — Matador Wellness Center Clinical AI Residency",
+    "url": "https://alanpruitt.com/"
+  },
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": [
+      "student",
+      "instructor"
+    ]
+  },
+  "accessibilityFeature": [
+    "structuralNavigation",
+    "tableOfContents",
+    "highContrastDisplay",
+    "alternativeText",
+    "plainLanguageSummary",
+    "bilingualEnglishSpanish"
+  ],
+  "accessibilityHazard": "none",
+  "accessibilitySummary": "Conforms to WCAG 2.2 AA and Arizona Western College 9:1 Double-Contrast Guard with 0 open Canvas Course Accessibility Checker issues and bilingual In Plain English / Norteño-Spanish reading guides.",
+  "educationalAlignment": [
+    {
+      "@type": "AlignmentObject",
+      "alignmentType": "teaches",
+      "educationalFramework": "Common Core State Standards",
+      "targetName": "CCSS.ELA-LITERACY.W.11-12.6",
+      "targetUrl": "http://www.corestandards.org/ELA-Literacy/W/11-12/6/",
+      "targetDescription": "Use technology, including the Internet, to produce, publish, and update individual or shared writing products in response to ongoing feedback, including new arguments or information.",
+      "description": "Use technology, including the Internet, to produce, publish, and update individual or shared writing products in response to ongoing feedback."
+    },
+    {
+      "@type": "AlignmentObject",
+      "alignmentType": "teaches",
+      "educationalFramework": "Washington State ELA Learning Standards",
+      "targetName": "WA.ELA.11-12.W.6",
+      "targetDescription": "Produce, publish, and update digital compositions reflecting real-world professional communication and digital citizenship.",
+      "description": "Produce, publish, and update digital compositions reflecting real-world professional communication and digital citizenship."
+    },
+    {
+      "@type": "AlignmentObject",
+      "alignmentType": "teaches",
+      "educationalFramework": "Common Core State Standards — Science & Technical Subjects",
+      "targetName": "CCSS.ELA-LITERACY.RST.11-12.7",
+      "targetUrl": "http://www.corestandards.org/ELA-Literacy/RST/11-12/7/",
+      "targetDescription": "Integrate and evaluate multiple sources of information presented in diverse formats and media (e.g., quantitative data, video, multimedia) in order to address a question or solve a problem.",
+      "description": "Integrate and evaluate quantitative simulator telemetry and federal clinical guidelines to frame and solve movement and wellness cases."
+    },
+    {
+      "@type": "AlignmentObject",
+      "alignmentType": "requires",
+      "educationalFramework": "Physical Activity Guidelines for Americans (PAGA), 2nd Edition (2018)",
+      "targetName": "HHS-PAGA-2018-2ND-ED",
+      "targetUrl": "https://health.gov/our-work/nutrition-physical-activity/physical-activity-guidelines",
+      "targetDescription": "Federal benchmark for aerobic (150–300 min/week moderate-intensity) and muscle-strengthening (2+ days/week) physical activity across the lifespan.",
+      "description": "Primary federal clinical rulebook for EXW-101 (KIN-101), EXW-210 (KIN-210), and EXW-265 (KIN-265)."
+    },
+    {
+      "@type": "AlignmentObject",
+      "alignmentType": "teaches",
+      "educationalFramework": "U.S. Department of Labor (DOL) ETA Training and Employment Notice (TEN) No. 07-25: AI Literacy Framework (Feb 13, 2026)",
+      "targetName": "US-DOL-TEN-07-25",
+      "targetDescription": "5 Foundational Content Areas (1. Understand AI Principles, 2. Explore AI Uses, 3. Direct AI Effectively, 4. Evaluate Outputs, 5. Use AI Responsibly) and 7 Community College Delivery Design Principles.",
+      "description": "Workforce AI Problem Framing & Output Auditing via the Centaur Protocol and Pattern / Rule / Solve."
+    },
+    {
+      "@type": "AlignmentObject",
+      "alignmentType": "assesses",
+      "educationalFramework": "Arizona Western College Institutional Learning Outcomes (HLC Accredited)",
+      "targetName": "AWC-ILO-1-CRITICAL-THINKING",
+      "targetDescription": "Critical Thinking & Ethical Inquiry: Diagnose client cases, vital signs, and Yuma / Imperial Valley environmental stressors (Pattern).",
+      "description": "Assessed in Part 1 (Pattern Recognition & P-T-C-F Prompt)."
+    },
+    {
+      "@type": "AlignmentObject",
+      "alignmentType": "assesses",
+      "educationalFramework": "Arizona Western College Institutional Learning Outcomes (HLC Accredited)",
+      "targetName": "AWC-ILO-2-QUANTITATIVE-LITERACY",
+      "targetDescription": "Quantitative & Information Literacy: Audit AI calculations against federal SSoT thresholds (Rule).",
+      "description": "Assessed in Part 2 (150-Word Clinical Audit against SSoT)."
+    },
+    {
+      "@type": "AlignmentObject",
+      "alignmentType": "assesses",
+      "educationalFramework": "Arizona Western College Institutional Learning Outcomes (HSI Title V Equity)",
+      "targetName": "AWC-ILO-3-COMMUNICATION",
+      "targetDescription": "Written & Technical Communication: Defend clinical interventions in plain English or authentic Norteño-Spanish (Solve & Active Verification).",
+      "description": "Assessed in Part 3 (150-Word Active Verification Defense)."
+    }
+  ],
+  "keywords": [
+    "KIN-265",
+    "EXW-265",
+    "Adapted Physical Activity & Special Populations",
+    "Physical Activity Guidelines for Americans (PAGA), 2nd Edition (2018)",
+    "Pattern Rule Solve",
+    "Zero Textbook Cost",
+    "ZTC",
+    "WCAG 2.2 AA",
+    "Hispanic-Serving Institution",
+    "Open Educational Resources"
+  ],
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "KIN-265 Full Course OER Package (Modules 00–16)",
+      "encodingFormat": "application/zip",
+      "contentUrl": "https://alanpruitt.com/export/kin-265_full_course_oer_package.zip"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "KIN-265 Module 01 Starter OER Package",
+      "encodingFormat": "application/zip",
+      "contentUrl": "https://alanpruitt.com/export/kin-265_module-01_oer_package.zip"
+    }
+  ],
+  "schema_version": "S-A-R-v2.2-OER-Commons-Syndication",
+  "generated_at": "2026-11-07T23:52:50.435876+00:00",
+  "course_code": "KIN-265",
+  "course_slug": "kin-265",
+  "course_title": "Exercise for Special Populations: Adapted Physical Activity & Chronic Conditions",
+  "discipline_domain": "Adapted Physical Activity & Special Populations",
+  "source_institution_crosswalk": {
+    "canonical_source_code": "EXW-265",
+    "originating_institution": "Arizona Western College (Hispanic-Serving Institution — Yuma, AZ / Imperial Valley, CA)",
+    "residency_program": "Matador Wellness Center Clinical AI Residency",
+    "author": "Coach Alan Pruitt"
+  },
+  "academic_ssot": "Physical Activity Guidelines for Americans (PAGA), 2nd Edition (2018)",
+  "workforce_ai_framework": "U.S. Department of Labor (DOL) ETA TEN No. 07-25 AI Literacy Framework (Feb 13, 2026)",
+  "pedagogical_architecture": {
+    "clinical_framing_protocol": "Pattern / Rule / Solve (Patrón / Regla / Solución)",
+    "centaur_protocol": "Student as Architect/Pilot (Problem Framing) • AI as Engine/Calculator (Problem Solving)",
+    "grading_scale": "10-7-0 Mastery Grading Scale (Unlimited Revisions for Mastery)",
+    "bilingual_accessibility": "In Plain English & Norteño-Spanish Callouts on Every Module"
+  },
+  "achieve_oer_rubrics_conformance": {
+    "rubrics_evaluated": "Achieve OER Rubrics I–VIII (v4)",
+    "wcag_standard": "WCAG 2.2 AA + 9:1 Double-Contrast Guard",
+    "verified_html_files": 114,
+    "verified_markdown_files": 102,
+    "open_accessibility_issues": 0
+  },
+  "modules_exported": [
+    "module-00",
+    "module-01",
+    "module-02",
+    "module-03",
+    "module-04",
+    "module-05",
+    "module-06",
+    "module-07",
+    "module-08",
+    "module-09",
+    "module-10",
+    "module-11",
+    "module-12",
+    "module-13",
+    "module-14",
+    "module-15",
+    "module-16"
+  ],
+  "files": [
+    {
+      "path": "module-00/0-1-course-welcome-and-regional-grounding-slash-bienvenida-al-curso-y-enfoque-regional.html",
+      "format": "html",
+      "bytes": 7787,
+      "sha256": "0d190ffeefcce6122c199155b97d059974ebf7c7e03d7afa78727dfb1e5d7776"
+    },
+    {
+      "path": "module-00/0-1-course-welcome-and-regional-grounding.html",
+      "format": "html",
+      "bytes": 9230,
+      "sha256": "4fb8559fec7a6796964ec5eef28e9ea434831859ae5d22375720e39756574c6a"
+    },
+    {
+      "path": "module-00/0-2-course-syllabus-and-communication-guidelines-slash-plan-de-estudios-y-pautas-de-comunicacion.html",
+      "format": "html",
+      "bytes": 17084,
+      "sha256": "cec0314f21f5e7197e016b70a2195477a8bbf512a55b4cec54098228f6f0c41c"
+    },
+    {
+      "path": "module-00/0-2-course-syllabus-and-communication-guidelines-slash-plan-de-estudios-y-pautas-de-comunicacion.md",
+      "format": "markdown",
+      "bytes": 4585,
+      "sha256": "9dbb91f0dcd18d2d0815f6364c8526c03da0652c30b510a9d2616d94dd7e347b"
+    },
+    {
+      "path": "module-00/0-2-course-syllabus-and-communication-guidelines.html",
+      "format": "html",
+      "bytes": 6603,
+      "sha256": "bfcbc2734be242be2f32e735fe8d2b3e1b5a85e4b597a3fd544de8fd21daf090"
+    },
+    {
+      "path": "module-00/0-2-course-syllabus-and-communication-guidelines.md",
+      "format": "markdown",
+      "bytes": 3025,
+      "sha256": "909baf3b2cf6d0f822ee4e233e901603d4c2db6ba837f54a302a1853a6fdc477"
+    },
+    {
+      "path": "module-00/0-3-technical-requirements-and-mobile-access-slash-requisitos-tecnicos-y-acceso-movil.html",
+      "format": "html",
+      "bytes": 5041,
+      "sha256": "4b20ec22c7a96ec4b50875302108f72fc716b83ed6b605328085a3e44a10d342"
+    },
+    {
+      "path": "module-00/0-3-technical-requirements-and-mobile-access.html",
+      "format": "html",
+      "bytes": 6401,
+      "sha256": "686961d253ebc19ac3654b83328ab8cc9fc4e234c32c42e096c0eb5c95157564"
+    },
+    {
+      "path": "module-00/0-4-the-exw-ai-simulation-workspace-and-delimiter-protocol.html",
+      "format": "html",
+      "bytes": 64988,
+      "sha256": "1146bc574fba3dc982ba89f9c639d1dddc404ac232f2bfa8bd06cac7b213387e"
+    },
+    {
+      "path": "module-00/0-4-the-exw-ai-tool-kit-and-delimiter-protocol-slash-el-kit-de-herramientas-de-ia-y-protocolo-delimitador.html",
+      "format": "html",
+      "bytes": 74235,
+      "sha256": "b375066bd892d0b2b45a3c12de4c04fed7d1e8dffff42cd3066b5ab6f39ba5b9"
+    },
+    {
+      "path": "module-00/0-5-course-navigation-and-the-10-slash-7-slash-0-mastery-scale-slash-navegacion-del-curso-y-escala-de-maestria-10-slash-.html",
+      "format": "html",
+      "bytes": 38097,
+      "sha256": "e225da051d46a2d04ac1dfcedf81a6d996da1e680aa91ca35652f98698f59b8f"
+    },
+    {
+      "path": "module-00/0-5-course-navigation-and-the-10-slash-7-slash-0-mastery-scale.html",
+      "format": "html",
+      "bytes": 37461,
+      "sha256": "e25ad22d81d7b4b8ada9486ac2840c53636aad54de917aa947b576182e20bb2a"
+    },
+    {
+      "path": "module-00/0-6-discussion-squad-qa-slash-discusion-preguntas-y-respuestas-del-grupo.html",
+      "format": "html",
+      "bytes": 6445,
+      "sha256": "d977d4cb08382a8b3131d12cb38dfc09938d25452e992e85700fd3c90730bbd8"
+    },
+    {
+      "path": "module-00/0-6-discussion-squad-qa-slash-discusion-preguntas-y-respuestas-del-grupo.md",
+      "format": "markdown",
+      "bytes": 3330,
+      "sha256": "dac0e68046ecc1b9178495ecc2a5367429ea9225f7f8b83d42f061632300cb8b"
+    },
+    {
+      "path": "module-00/0-6-discussion-squad-qa.html",
+      "format": "html",
+      "bytes": 7852,
+      "sha256": "297406efd6bc12ce751e3e67ba3aae0aac595ab56a3528741a71a4df49f1a21c"
+    },
+    {
+      "path": "module-00/0-6-discussion-squad-qa.md",
+      "format": "markdown",
+      "bytes": 4058,
+      "sha256": "ded1c9441202aff8f69d414aefa480b2542395d314846081f448006eef215082"
+    },
+    {
+      "path": "module-00/module-00-overview-and-course-orientation-slash-vision-general-e-induccion.html",
+      "format": "html",
+      "bytes": 63477,
+      "sha256": "31eb08dbc4427b633af391a3899e61e8de776f56784428c92467c79dc8420b5a"
+    },
+    {
+      "path": "module-00/module-00-overview-and-course-orientation-slash-vision-general-e-induccion.md",
+      "format": "markdown",
+      "bytes": 26934,
+      "sha256": "49baf9214c4c409d18e2e67f48592f4d43336dc1de05b10483491862c1b390bc"
+    },
+    {
+      "path": "module-00/module-00-overview-and-course-orientation.html",
+      "format": "html",
+      "bytes": 72590,
+      "sha256": "7bdbc3917c9cb64a56ace80d5ee3d5155cafb332536a76a5bff272994d71c1e0"
+    },
+    {
+      "path": "module-00/module-00-overview-and-course-orientation.md",
+      "format": "markdown",
+      "bytes": 28560,
+      "sha256": "8a76c257c621327317953f3ae70d86c93af3801228b3f8bfb34918cf449560ff"
+    },
+    {
+      "path": "module-00/module-00-summary-and-wrap-up-slash-resumen-y-cierre.html",
+      "format": "html",
+      "bytes": 58974,
+      "sha256": "1a50e0befac6b2e1d32b0396ca330a831322365349b850f001206b22bb9d0e45"
+    },
+    {
+      "path": "module-00/module-00-summary-and-wrap-up.html",
+      "format": "html",
+      "bytes": 63765,
+      "sha256": "a503510fe2ef85bbfbe4c791844381ca70ced0ff24dc59118ea2165526cb2553"
+    },
+    {
+      "path": "module-00/reference-guide-clinical-special-populations-standards.html",
+      "format": "html",
+      "bytes": 48744,
+      "sha256": "26a11425469b97b9d6b850747f7e4ebb641aaf49fd9f6c8f21ecaf9a92e25f2c"
+    },
+    {
+      "path": "module-00/reference-guide-paga-2018-chapter-2-adult-and-special-population-benchmarks.html",
+      "format": "html",
+      "bytes": 37402,
+      "sha256": "b921c4c5ea7b28c194e985931110353fa5b2ace338564db8466ad4c04b8214e6"
+    },
+    {
+      "path": "module-00/setup-ai-professional-repository-student-google-drive.html",
+      "format": "html",
+      "bytes": 17505,
+      "sha256": "3d0161dadd45b85a340f19dcddf3f23e3817e9eb3de9144d33370d1473614119"
+    },
+    {
+      "path": "module-00/Module-00-Master.md",
+      "format": "markdown",
+      "bytes": 13571,
+      "sha256": "7bea3c7915e351e800e5dca586ba4c2d0181d40c58a9a47adc5d806109ae6aca"
+    },
+    {
+      "path": "module-01/mod-01-lab-and-simulation-01.html",
+      "format": "html",
+      "bytes": 57145,
+      "sha256": "0838e1f4b19f873c372cf5bd4822ffdfc8973cd323e5613e51b390d316ac10e7"
+    },
+    {
+      "path": "module-01/mod-01-lab-and-simulation-01.md",
+      "format": "markdown",
+      "bytes": 19499,
+      "sha256": "db33f819a90aeae3ef1a1686eb7123d974fe8340c149d702257dfeb2ad309bbf"
+    },
+    {
+      "path": "module-01/mod-01-lab-and-simulation-02.html",
+      "format": "html",
+      "bytes": 67611,
+      "sha256": "97a2d18fda0b074274d88896c542849ad10d0b4457985b6cbcec1c6f3d1aee85"
+    },
+    {
+      "path": "module-01/mod-01-lab-and-simulation-02.md",
+      "format": "markdown",
+      "bytes": 23018,
+      "sha256": "20cc6f0253cfc127fe6a2af591fc53e464fddcb0c2710254e27e57bbee467fbe"
+    },
+    {
+      "path": "module-01/mod-01-clinical-discussion.html",
+      "format": "html",
+      "bytes": 30305,
+      "sha256": "b006343f5a3f94579e336bc9716d415c59712d0b90320fffe31f2b229263881f"
+    },
+    {
+      "path": "module-01/mod-01-clinical-discussion.md",
+      "format": "markdown",
+      "bytes": 8095,
+      "sha256": "eb218becfcf08b7e0379fcf2965f747cb229f8c0335196da940c9cc20bd74c13"
+    },
+    {
+      "path": "module-01/mod-01-overview-cardiac-rehab-and-heart-recovery-safety.html",
+      "format": "html",
+      "bytes": 29088,
+      "sha256": "efd56de0c054cb666526e7602d32d869a43fd1d75e3ccfa2ed1c2214eb2b2d74"
+    },
+    {
+      "path": "module-01/mod-01-overview-cardiac-rehab-and-heart-recovery-safety.md",
+      "format": "markdown",
+      "bytes": 10740,
+      "sha256": "42aada3d9822cafea891d18faa849f2729cc09beec44ace560a03bfe4762807a"
+    },
+    {
+      "path": "module-01/mod-01-required-readings-cardiac-rehab-and-heart-recovery-safety.html",
+      "format": "html",
+      "bytes": 39610,
+      "sha256": "f26c5e528a6e468e075c0207160b3708104f3c61921f8f7e2292dbe654900171"
+    },
+    {
+      "path": "module-01/mod-01-required-readings-cardiac-rehab-and-heart-recovery-safety.md",
+      "format": "markdown",
+      "bytes": 14189,
+      "sha256": "9fe522c923034ec1af7625ca05bbf6e257b0acb0dff3e4edcb117035a831d2ae"
+    },
+    {
+      "path": "module-01/mod-01-summary-and-wrap-up-cardiac-rehab-and-heart-recovery-safety.html",
+      "format": "html",
+      "bytes": 50236,
+      "sha256": "11ebb49e6e0ce852714ae5f7a402d13d209c1120bebc71e410e3d2d9fdf52d6f"
+    },
+    {
+      "path": "module-01/mod-01-summary-and-wrap-up-cardiac-rehab-and-heart-recovery-safety.md",
+      "format": "markdown",
+      "bytes": 16842,
+      "sha256": "d596c86afb358638c7377cb654c124342a121ead15412344168a258b7f8a7c35"
+    },
+    {
+      "path": "module-02/mod-02-lab-and-simulation-01.html",
+      "format": "html",
+      "bytes": 89022,
+      "sha256": "458f7ceae9e44d4b2383bb780c4eeca91eb5447c6fde229510913fd6f449f84a"
+    },
+    {
+      "path": "module-02/mod-02-lab-and-simulation-01.md",
+      "format": "markdown",
+      "bytes": 19727,
+      "sha256": "10e4c1b891569b2a06310f7e6fcb500bdc7be2ad6a81f049051fe7b3cf0869f7"
+    },
+    {
+      "path": "module-02/mod-02-lab-and-simulation-02.html",
+      "format": "html",
+      "bytes": 81266,
+      "sha256": "25347b9d78e12e3e1f9667702878d43bb96fbcefb045fdc053c27a332bb3c7a1"
+    },
+    {
+      "path": "module-02/mod-02-lab-and-simulation-02.md",
+      "format": "markdown",
+      "bytes": 19657,
+      "sha256": "5ef083875eceadfcadeb55d6d10dd3cad94ac1daacc23d74366973ebe273de77"
+    },
+    {
+      "path": "module-02/mod-02-clinical-discussion.html",
+      "format": "html",
+      "bytes": 35283,
+      "sha256": "7ad28bd74ba6f6b4bc81e0c41a173dba0048fbe99c29d2b3378a053bdb5aa978"
+    },
+    {
+      "path": "module-02/mod-02-clinical-discussion.md",
+      "format": "markdown",
+      "bytes": 7562,
+      "sha256": "4219bd5bfb2f9e50a15b6de50b5369c0101b298c0b2d091a02b941c73412969c"
+    },
+    {
+      "path": "module-02/mod-02-overview-type-2-diabetes-and-blood-sugar-safety.html",
+      "format": "html",
+      "bytes": 25804,
+      "sha256": "44b12dd5386342a9a6f4011c48219b5402b31c9184564061bf6551c5e8f514fc"
+    },
+    {
+      "path": "module-02/mod-02-overview-type-2-diabetes-and-blood-sugar-safety.md",
+      "format": "markdown",
+      "bytes": 10228,
+      "sha256": "010f6edf8235d2b20436887b22839f45b44640f70b0a4d4fa54f071a22ba00c9"
+    },
+    {
+      "path": "module-02/mod-02-required-readings-type-2-diabetes-and-blood-sugar-safety.html",
+      "format": "html",
+      "bytes": 31042,
+      "sha256": "0fe88f29d92432a8d2cc7f85f231d36dc44790db462adff82cc9afc9f79424d8"
+    },
+    {
+      "path": "module-02/mod-02-required-readings-type-2-diabetes-and-blood-sugar-safety.md",
+      "format": "markdown",
+      "bytes": 12019,
+      "sha256": "595adea476d18b8e96a63ef2e805f98dbf83a0ae575aa0ec196803cfd68456e9"
+    },
+    {
+      "path": "module-02/mod-02-summary-and-wrap-up-type-2-diabetes-and-blood-sugar-safety.html",
+      "format": "html",
+      "bytes": 46518,
+      "sha256": "83308906851ae4e08814ae36e55f9211acaf91e1dcbb3d24359cc8f3207cb1d2"
+    },
+    {
+      "path": "module-02/mod-02-summary-and-wrap-up-type-2-diabetes-and-blood-sugar-safety.md",
+      "format": "markdown",
+      "bytes": 16881,
+      "sha256": "cc20143048a648400b3f27e9969078bb6aed960001c540d11b8de44c46f6ca11"
+    },
+    {
+      "path": "module-03/mod-03-lab-and-simulation-01.html",
+      "format": "html",
+      "bytes": 44480,
+      "sha256": "9cb7d73cae86a9ac4cfa0f1afd37873d32c9e31e77c17935072a566f77f5766d"
+    },
+    {
+      "path": "module-03/mod-03-lab-and-simulation-01.md",
+      "format": "markdown",
+      "bytes": 10953,
+      "sha256": "c312d26b4c2dfa3edc23cd1b61ee4f698bf2a1a87fde1533d6db211aeeabc138"
+    },
+    {
+      "path": "module-03/mod-03-lab-and-simulation-02.html",
+      "format": "html",
+      "bytes": 56511,
+      "sha256": "a4010a8b281a57616a34a5390df7a3a5388634aa0070f39dfe4f765d76d10cea"
+    },
+    {
+      "path": "module-03/mod-03-lab-and-simulation-02.md",
+      "format": "markdown",
+      "bytes": 18946,
+      "sha256": "8a0db4158ba5ba843739a0cd3681b4a94e4b919f253d00c26895a1ec18dbdd08"
+    },
+    {
+      "path": "module-03/mod-03-clinical-discussion.html",
+      "format": "html",
+      "bytes": 24990,
+      "sha256": "cbe565fd7c05782b9fa6900b9ac4ea32eea4d9f3c804eae12b3b8fabaaa02559"
+    },
+    {
+      "path": "module-03/mod-03-clinical-discussion.md",
+      "format": "markdown",
+      "bytes": 6232,
+      "sha256": "fcd65fe8fde27d0d041f6a3176fecb5d874e926a831598bef2859510030ff48e"
+    },
+    {
+      "path": "module-03/mod-03-overview-bone-density-muscle-loss-and-fall-prevention.html",
+      "format": "html",
+      "bytes": 16125,
+      "sha256": "62e70901b967b0dcb79c4d09f1057d99603e532175997da24b882ea43e1df6f6"
+    },
+    {
+      "path": "module-03/mod-03-overview-bone-density-muscle-loss-and-fall-prevention.md",
+      "format": "markdown",
+      "bytes": 5845,
+      "sha256": "635a750260aa236b6f2f3c971c2a685f404937880549c7a9d40f8e78cc6f72ff"
+    },
+    {
+      "path": "module-03/mod-03-required-readings-bone-density-muscle-loss-and-fall-prevention.html",
+      "format": "html",
+      "bytes": 46205,
+      "sha256": "1c5b7d9e7dd447df1121fe0cc2b98e2ef21933ddc2a7ecf43e15a5dca668fbb3"
+    },
+    {
+      "path": "module-03/mod-03-required-readings-bone-density-muscle-loss-and-fall-prevention.md",
+      "format": "markdown",
+      "bytes": 16411,
+      "sha256": "7b119035b5f1fc5d001b80b15e1eca7cf2050a73561da62b444f3d070ed871e8"
+    },
+    {
+      "path": "module-03/mod-03-summary-and-wrap-up-bone-density-muscle-loss-and-fall-prevention.html",
+      "format": "html",
+      "bytes": 50313,
+      "sha256": "1a164eb9ec6cedc5709b24dad59eaf2d97ec93e49e97515a9326d064ea04edc3"
+    },
+    {
+      "path": "module-03/mod-03-summary-and-wrap-up-bone-density-muscle-loss-and-fall-prevention.md",
+      "format": "markdown",
+      "bytes": 17219,
+      "sha256": "93f184d8a338069196ee2256fb0a0ec7f2fc9af090b67801ace21820fc2ae488"
+    },
+    {
+      "path": "module-04/mod-04-lab-and-simulation-01.html",
+      "format": "html",
+      "bytes": 68308,
+      "sha256": "71290d7b46e96b0430badcb2462c04b011f2e3755a08d669b77830ac1c25fcab"
+    },
+    {
+      "path": "module-04/mod-04-lab-and-simulation-01.md",
+      "format": "markdown",
+      "bytes": 23777,
+      "sha256": "1779edce83956a6c9cba7b69a1342b5694141f666f4eb7d59c756f56601a760c"
+    },
+    {
+      "path": "module-04/mod-04-lab-and-simulation-02.html",
+      "format": "html",
+      "bytes": 56871,
+      "sha256": "125f3a695195047ece36473521e6b1e6396a49a50960486d90f5425468f12dd1"
+    },
+    {
+      "path": "module-04/mod-04-lab-and-simulation-02.md",
+      "format": "markdown",
+      "bytes": 19405,
+      "sha256": "13333f7d4c53bcef52bdd5d85a4ae31e9d1ad766e2c38b3439cd25bf0d1654c9"
+    },
+    {
+      "path": "module-04/mod-04-clinical-discussion.html",
+      "format": "html",
+      "bytes": 33231,
+      "sha256": "7e80c92065270fc6f9e746354ffa1c3ab7f64f4e3773acd9426905d12c21bf5a"
+    },
+    {
+      "path": "module-04/mod-04-clinical-discussion.md",
+      "format": "markdown",
+      "bytes": 6646,
+      "sha256": "1540b9468172a161689184bdccf73fb75520e2a7f9f99bb35c0027eefad0bfb2"
+    },
+    {
+      "path": "module-04/mod-04-overview-safe-exercise-during-and-after-pregnancy.html",
+      "format": "html",
+      "bytes": 29129,
+      "sha256": "21b7ab0d371c6aaea5456c5858a6afdda54695879803336998f9a59c7504957c"
+    },
+    {
+      "path": "module-04/mod-04-overview-safe-exercise-during-and-after-pregnancy.md",
+      "format": "markdown",
+      "bytes": 10783,
+      "sha256": "0d4c0a1bc2448af145f29d93bca8e49cd443283596c1ad7d4816b7d306cfaa1a"
+    },
+    {
+      "path": "module-04/mod-04-required-readings-safe-exercise-during-and-after-pregnancy.html",
+      "format": "html",
+      "bytes": 43547,
+      "sha256": "cfd7238f22755192a60ace4c95deb7abd3fe3756edf233a033e5ccd59f7b1f8a"
+    },
+    {
+      "path": "module-04/mod-04-required-readings-safe-exercise-during-and-after-pregnancy.md",
+      "format": "markdown",
+      "bytes": 15846,
+      "sha256": "e57b67f2a2969c485a5c284c1d5fe2c218166da78a88df4fa1a2847ae898ebce"
+    },
+    {
+      "path": "module-04/mod-04-summary-and-wrap-up-safe-exercise-during-and-after-pregnancy.html",
+      "format": "html",
+      "bytes": 53727,
+      "sha256": "878cc2d77976003bb6223b195a5eaaad5b982b6b686b030a0515cadabe60909f"
+    },
+    {
+      "path": "module-04/mod-04-summary-and-wrap-up-safe-exercise-during-and-after-pregnancy.md",
+      "format": "markdown",
+      "bytes": 21116,
+      "sha256": "ad1834a0bb94229377082e5c9a7c98a97670d0c884b891dc4bb278cdedc454a8"
+    },
+    {
+      "path": "module-05/mod-05-lab-and-simulation-01.html",
+      "format": "html",
+      "bytes": 47872,
+      "sha256": "ef4289763b1000fe93f0f2eb12b0efda1e753858d02ee130ecbf576077bc8dbc"
+    },
+    {
+      "path": "module-05/mod-05-lab-and-simulation-01.md",
+      "format": "markdown",
+      "bytes": 15693,
+      "sha256": "6769f37454a91d8868c9ae6bc3ba3d0ece67c278b402329e44087ff95d08e9af"
+    },
+    {
+      "path": "module-05/mod-05-lab-and-simulation-02.html",
+      "format": "html",
+      "bytes": 57049,
+      "sha256": "4fda38cd608deb18a40478cebd8a9ad7a8e354d8d81b94b66f80b4d219e07cee"
+    },
+    {
+      "path": "module-05/mod-05-lab-and-simulation-02.md",
+      "format": "markdown",
+      "bytes": 19642,
+      "sha256": "9fc48db842e6b897b60745c233d27ded955b8b44e1d54463a0b13c0caea031f7"
+    },
+    {
+      "path": "module-05/mod-05-clinical-discussion.html",
+      "format": "html",
+      "bytes": 32318,
+      "sha256": "d5e11b973ed98344f0c5bc39e936acf445bb8134f07990fecfcbe39051a70a4c"
+    },
+    {
+      "path": "module-05/mod-05-clinical-discussion.md",
+      "format": "markdown",
+      "bytes": 7658,
+      "sha256": "8e5f328c3465c9d8886be429052dfe31b7154b1b5826adfea28aaf3a2022a094"
+    },
+    {
+      "path": "module-05/mod-05-overview-breathing-and-lung-conditions-copd-and-asthma.html",
+      "format": "html",
+      "bytes": 29194,
+      "sha256": "cb3b305574b5e5aff68af120928330c18e32079a4ca34680747dade9d8fbae7c"
+    },
+    {
+      "path": "module-05/mod-05-overview-breathing-and-lung-conditions-copd-and-asthma.md",
+      "format": "markdown",
+      "bytes": 10774,
+      "sha256": "a69f3379bd647569d83fda28fea5574c1e5fa2b9ad6beec30484a8f983295b7d"
+    },
+    {
+      "path": "module-05/mod-05-required-readings-breathing-and-lung-conditions-copd-and-asthma.html",
+      "format": "html",
+      "bytes": 45147,
+      "sha256": "9ed32202e44223f59c19242c5ba23de016d891b958305dee091dba20f17c9ac5"
+    },
+    {
+      "path": "module-05/mod-05-required-readings-breathing-and-lung-conditions-copd-and-asthma.md",
+      "format": "markdown",
+      "bytes": 16464,
+      "sha256": "e0a14832db6fb80c92944559e24492d9f14578d5ca5642e988ad07a92977f676"
+    },
+    {
+      "path": "module-05/mod-05-summary-and-wrap-up-breathing-and-lung-conditions-copd-and-asthma.html",
+      "format": "html",
+      "bytes": 51416,
+      "sha256": "bd07a0dfac05955bf644ea938736fcda5c56f5c5b59d23890e870b9be676b552"
+    },
+    {
+      "path": "module-05/mod-05-summary-and-wrap-up-breathing-and-lung-conditions-copd-and-asthma.md",
+      "format": "markdown",
+      "bytes": 17568,
+      "sha256": "77fad41ed5ebd68c2d6ce72b8bab253f0751ffb84f6f1c87e8ae86b81b10fc89"
+    },
+    {
+      "path": "module-06/mod-06-lab-and-simulation-01.html",
+      "format": "html",
+      "bytes": 71160,
+      "sha256": "f8023045858610363077f4cb3d3dc23e8f9c8625c47ba41cbfa68b3356277f6a"
+    },
+    {
+      "path": "module-06/mod-06-lab-and-simulation-01.md",
+      "format": "markdown",
+      "bytes": 19635,
+      "sha256": "72fcb240b2ac524c8d789c4f35090cf12ad48d10a21b2a164a8ccfcd9846a195"
+    },
+    {
+      "path": "module-06/mod-06-lab-and-simulation-02.html",
+      "format": "html",
+      "bytes": 63750,
+      "sha256": "2b092f9623af9f5016a718433afed16c6e308108d866b93b82e2014519d9ce8f"
+    },
+    {
+      "path": "module-06/mod-06-lab-and-simulation-02.md",
+      "format": "markdown",
+      "bytes": 19274,
+      "sha256": "3cde867de6fc5c1dff105d35f6a442409ed4a7eac6f3d78befd6c13a60242f42"
+    },
+    {
+      "path": "module-06/mod-06-clinical-discussion.html",
+      "format": "html",
+      "bytes": 31326,
+      "sha256": "1f4b6bf3d2ad5c95807ecb804ca5350289f7465c1ee586a0c29bcc4ce6bd2ae1"
+    },
+    {
+      "path": "module-06/mod-06-clinical-discussion.md",
+      "format": "markdown",
+      "bytes": 9813,
+      "sha256": "b26090f992536a1d25b636fb394b53dd3bf5843d1f02e497af705b88dac99491"
+    },
+    {
+      "path": "module-06/mod-06-overview-high-blood-pressure-and-medication-safety.html",
+      "format": "html",
+      "bytes": 30291,
+      "sha256": "3cd38c0b42cd994b1469f8a7a735853de106cf58ecd761bcfaaaa1fa858d99dd"
+    },
+    {
+      "path": "module-06/mod-06-overview-high-blood-pressure-and-medication-safety.md",
+      "format": "markdown",
+      "bytes": 11590,
+      "sha256": "2b4c4c41e1eff942a98981e148f749e5908e6a0e7c41a8cb7e9907272738a3f1"
+    },
+    {
+      "path": "module-06/mod-06-required-readings-high-blood-pressure-and-medication-safety.html",
+      "format": "html",
+      "bytes": 58914,
+      "sha256": "968cd4020025649f7f7cd0a09cfb8e85080a2dc77127dd85d01fd059d7763df0"
+    },
+    {
+      "path": "module-06/mod-06-required-readings-high-blood-pressure-and-medication-safety.md",
+      "format": "markdown",
+      "bytes": 23616,
+      "sha256": "49946902171686e374cea3c573867c96414d2bb1d1e067dd2efd90a5c9197dbe"
+    },
+    {
+      "path": "module-06/mod-06-summary-and-wrap-up-high-blood-pressure-and-medication-safety.html",
+      "format": "html",
+      "bytes": 50956,
+      "sha256": "3518bf299137108e49a0105b8950fa5f269052ba10a99facd1140d9ee59d07e0"
+    },
+    {
+      "path": "module-06/mod-06-summary-and-wrap-up-high-blood-pressure-and-medication-safety.md",
+      "format": "markdown",
+      "bytes": 17277,
+      "sha256": "ea9cc3d5599476837688da7516688961b0f153151777b7914180b968d9aaac55"
+    },
+    {
+      "path": "module-07/mod-07-lab-and-simulation-01.html",
+      "format": "html",
+      "bytes": 41426,
+      "sha256": "7c110dc289f7ed2f71a788a298a45dcdcb311d0070a0663a5e257a3ea64d7e7b"
+    },
+    {
+      "path": "module-07/mod-07-lab-and-simulation-01.md",
+      "format": "markdown",
+      "bytes": 9221,
+      "sha256": "9a712afa82457e119dd7afbbcced25efe969b2b7978f6ddc637956d772631f06"
+    },
+    {
+      "path": "module-07/mod-07-lab-and-simulation-02.html",
+      "format": "html",
+      "bytes": 63529,
+      "sha256": "07233f905f9ace12a6189da44006893f6105eb529d9a9fea26b96f17cad98fb4"
+    },
+    {
+      "path": "module-07/mod-07-lab-and-simulation-02.md",
+      "format": "markdown",
+      "bytes": 15824,
+      "sha256": "7097f198cb2ff94ea67122eebf7cc12465d6f37510478fee84fa11b3c42abcc1"
+    },
+    {
+      "path": "module-07/mod-07-lab-and-simulation-03.html",
+      "format": "html",
+      "bytes": 63379,
+      "sha256": "c3cdffdc3e5f4c1921a23e4ce156027f40884bbe94421544db4d10d3f6a605fc"
+    },
+    {
+      "path": "module-07/mod-07-lab-and-simulation-03.md",
+      "format": "markdown",
+      "bytes": 19737,
+      "sha256": "063210c1c60cd22637f84a1578023cbdef31e129ea5bc78a663656dab067bf2d"
+    },
+    {
+      "path": "module-07/mod-07-overview-metabolic-syndrome-and-blood-sugar-management.html",
+      "format": "html",
+      "bytes": 29861,
+      "sha256": "6b12418ccd1324b38eade91b9d6eb4056ec65012e5a42db3337514a8e13b54ae"
+    },
+    {
+      "path": "module-07/mod-07-overview-metabolic-syndrome-and-blood-sugar-management.md",
+      "format": "markdown",
+      "bytes": 11236,
+      "sha256": "ce1aa427c4a64d1039ee3f11e3de05999c62fe755b05cde1ae60fd1291c9060c"
+    },
+    {
+      "path": "module-07/mod-07-required-readings-metabolic-syndrome-and-blood-sugar-management.html",
+      "format": "html",
+      "bytes": 56402,
+      "sha256": "e46e24a2a493f1c0510b3343752b1fd3d2ffd0c6227ef4405c8ff4092f42d62b"
+    },
+    {
+      "path": "module-07/mod-07-required-readings-metabolic-syndrome-and-blood-sugar-management.md",
+      "format": "markdown",
+      "bytes": 21220,
+      "sha256": "67ca242900661465d5a1dc869cfc82cd8d25f3c6060cbc9a0eae32ffe31b2cc3"
+    },
+    {
+      "path": "module-07/mod-07-summary-and-wrap-up-metabolic-syndrome-and-blood-sugar-management.html",
+      "format": "html",
+      "bytes": 49823,
+      "sha256": "e53cf8493911c77b183ff59ce8f6356162e9129c42f609e35d27317b3d05239a"
+    },
+    {
+      "path": "module-07/mod-07-summary-and-wrap-up-metabolic-syndrome-and-blood-sugar-management.md",
+      "format": "markdown",
+      "bytes": 16577,
+      "sha256": "45a6ab5198c656228584a57bc4963c5f5f21067c0b2d812651842772133eac84"
+    },
+    {
+      "path": "module-08/mod-08-lab-and-simulation-01.html",
+      "format": "html",
+      "bytes": 17497,
+      "sha256": "cc48f8cebe1fc5e9afeacde3d9bdf20fa4080c73f38059b40ecad67d1db46314"
+    },
+    {
+      "path": "module-08/mod-08-lab-and-simulation-01.md",
+      "format": "markdown",
+      "bytes": 5237,
+      "sha256": "ceb01c59c448684d261b92207280f8273ba58189ec3b676a9795b119290f33a7"
+    },
+    {
+      "path": "module-08/mod-08-lab-and-simulation-02.html",
+      "format": "html",
+      "bytes": 66771,
+      "sha256": "a0c0fdc93cd0dcec918ece6f5ea0c7c0d9a2842c050c579ae24e764f4ef84121"
+    },
+    {
+      "path": "module-08/mod-08-lab-and-simulation-02.md",
+      "format": "markdown",
+      "bytes": 16013,
+      "sha256": "79f9b306c1defdc3588c6246fe13d1ec8199490d818993246f49b167850c70b4"
+    },
+    {
+      "path": "module-08/mod-08-lab-and-simulation-03.html",
+      "format": "html",
+      "bytes": 53335,
+      "sha256": "f3a12e638376debf9d64bdbbe0e35fcb6cfb53e81fc24e26612405c3796b6e24"
+    },
+    {
+      "path": "module-08/mod-08-lab-and-simulation-03.md",
+      "format": "markdown",
+      "bytes": 15992,
+      "sha256": "4e3b734b858fe59458f50b8c5c4b2c5fd795718bbb11aa746935d319fe63a98a"
+    },
+    {
+      "path": "module-08/mod-08-overview-fitness-testing-vital-signs-and-warning-signs.html",
+      "format": "html",
+      "bytes": 24695,
+      "sha256": "3f8a888d7424dba9120a89f17f5df8b989e9018b1d42f38b2427d1942a94736a"
+    },
+    {
+      "path": "module-08/mod-08-overview-fitness-testing-vital-signs-and-warning-signs.md",
+      "format": "markdown",
+      "bytes": 9545,
+      "sha256": "3e198cd403a6d2b81eb31608049483be58ac2196b73af8e1290414b0e99896d0"
+    },
+    {
+      "path": "module-08/mod-08-required-readings-fitness-testing-vital-signs-and-warning-signs.html",
+      "format": "html",
+      "bytes": 40633,
+      "sha256": "968b5f100c3b702509c2f15e56921b8354ab8f4ce568c4ecc7762cb959779a26"
+    },
+    {
+      "path": "module-08/mod-08-required-readings-fitness-testing-vital-signs-and-warning-signs.md",
+      "format": "markdown",
+      "bytes": 14722,
+      "sha256": "689da243262e83c844bd1fabc2170ce1bcbc68319c66d185e4c5f09d0cbb1915"
+    },
+    {
+      "path": "module-08/mod-08-summary-and-wrap-up-fitness-testing-vital-signs-and-warning-signs.html",
+      "format": "html",
+      "bytes": 34553,
+      "sha256": "36180abdd3f1ae7170e389ab4ac8ba01c4cc8fe0958ff6d652f20b995c79d144"
+    },
+    {
+      "path": "module-08/mod-08-summary-and-wrap-up-fitness-testing-vital-signs-and-warning-signs.md",
+      "format": "markdown",
+      "bytes": 12489,
+      "sha256": "784ad7505729eed45c906d9b91debb6c2e3fd43463dd8c80edc5706a1375706a"
+    },
+    {
+      "path": "module-09/mod-09-lab-and-simulation-01.html",
+      "format": "html",
+      "bytes": 67744,
+      "sha256": "2ea21a78536a35bce04c1a80453e130ca546800c3ca2f8291dc7664b641193df"
+    },
+    {
+      "path": "module-09/mod-09-lab-and-simulation-01.md",
+      "format": "markdown",
+      "bytes": 16649,
+      "sha256": "04ff886722d44248716e87ca34ed046291cff980da52ed522814b6b652a33ffe"
+    },
+    {
+      "path": "module-09/mod-09-lab-and-simulation-02.html",
+      "format": "html",
+      "bytes": 67342,
+      "sha256": "133c761ccb2f4efa083d6d25cf441cd3ff4660a68f01115953c19167fa643d79"
+    },
+    {
+      "path": "module-09/mod-09-lab-and-simulation-02.md",
+      "format": "markdown",
+      "bytes": 23566,
+      "sha256": "f32caf7b7ecc13cf2dcb0d5db62300842c253beb1760ef343cd37e4e2e94d89c"
+    },
+    {
+      "path": "module-09/mod-09-clinical-discussion.html",
+      "format": "html",
+      "bytes": 37247,
+      "sha256": "e92e0add38b3be4772ef38230a1cd05158aee1c7613c49e53b8c5927961e8651"
+    },
+    {
+      "path": "module-09/mod-09-clinical-discussion.md",
+      "format": "markdown",
+      "bytes": 7761,
+      "sha256": "e59c3b733180bac48815e9ccd1a8be20b19b94c2f834cdc8e3fc2bb2f6360848"
+    },
+    {
+      "path": "module-09/mod-09-overview-heart-conditions-medical-clearance-and-heat-safety.html",
+      "format": "html",
+      "bytes": 26713,
+      "sha256": "04bb76225adf91d4f0c690222078af43209fe2a69441dbed4326e5d5804950a5"
+    },
+    {
+      "path": "module-09/mod-09-overview-heart-conditions-medical-clearance-and-heat-safety.md",
+      "format": "markdown",
+      "bytes": 9574,
+      "sha256": "a1ac3fc61dfc3238fa720fcc43975d351326cc5754202a508de5681b72420a7e"
+    },
+    {
+      "path": "module-09/mod-09-required-readings-heart-conditions-medical-clearance-and-heat-safety.html",
+      "format": "html",
+      "bytes": 22673,
+      "sha256": "d4920df6e5da291fcad8e5eafa2b6782d4724e5d76de7a3d13c5ba3ab31282c2"
+    },
+    {
+      "path": "module-09/mod-09-required-readings-heart-conditions-medical-clearance-and-heat-safety.md",
+      "format": "markdown",
+      "bytes": 8176,
+      "sha256": "4ce88d1104718ce8042a3fd77c86e0f969c857c2fcd9682d7d87791a41b76ee8"
+    },
+    {
+      "path": "module-09/mod-09-summary-and-wrap-up-heart-conditions-medical-clearance-and-heat-safety.html",
+      "format": "html",
+      "bytes": 34458,
+      "sha256": "3792d99e1255966a311c4f665d75a270d42e7bbacf897ea5478f44b5bb430bdf"
+    },
+    {
+      "path": "module-09/mod-09-summary-and-wrap-up-heart-conditions-medical-clearance-and-heat-safety.md",
+      "format": "markdown",
+      "bytes": 12308,
+      "sha256": "e2a75c663176026025bf3323fe0f5ac171e650809de088a675670418e10c2d82"
+    },
+    {
+      "path": "module-10/mod-10-lab-and-simulation-01.html",
+      "format": "html",
+      "bytes": 71162,
+      "sha256": "4b9b0870b8ae8101ee4c82a88df6081971636307d76980f7b96d315672993b2d"
+    },
+    {
+      "path": "module-10/mod-10-lab-and-simulation-01.md",
+      "format": "markdown",
+      "bytes": 19302,
+      "sha256": "e5e3eaf52da7a8e85ff29b4ccd9da721dcc7e1087988cc0c590255d5105f6d9b"
+    },
+    {
+      "path": "module-10/mod-10-lab-and-simulation-02.html",
+      "format": "html",
+      "bytes": 85164,
+      "sha256": "fe8e4231d9a60ed05e2e332bda0d573cbe3ffbd256b02061337e882b7c951749"
+    },
+    {
+      "path": "module-10/mod-10-lab-and-simulation-02.md",
+      "format": "markdown",
+      "bytes": 22432,
+      "sha256": "6f2d2c5cd5f5b1dc18e5223b025dd99dde95c064d632f9cf7ca4bae920ec9415"
+    },
+    {
+      "path": "module-10/mod-10-clinical-discussion.html",
+      "format": "html",
+      "bytes": 43214,
+      "sha256": "afa6c092dfe94482761520202665d11f73650c9f6595164c7a93f2931e88609e"
+    },
+    {
+      "path": "module-10/mod-10-clinical-discussion.md",
+      "format": "markdown",
+      "bytes": 8936,
+      "sha256": "047973e0801f2e1041b495708e06d732b66035d1566a2e3023f59ef64f8fa508"
+    },
+    {
+      "path": "module-10/mod-10-overview-chronic-lung-conditions-and-air-quality-safety.html",
+      "format": "html",
+      "bytes": 30043,
+      "sha256": "1d33cdb4455cf3274c53f5b8a93ea8022ba354af460c25ee4c804ed006ef0729"
+    },
+    {
+      "path": "module-10/mod-10-overview-chronic-lung-conditions-and-air-quality-safety.md",
+      "format": "markdown",
+      "bytes": 11295,
+      "sha256": "fc7ba40f024d9a138f5468377041721d12666a2415caa22b9bc677277e373a6e"
+    },
+    {
+      "path": "module-10/mod-10-required-readings-chronic-lung-conditions-and-air-quality-safety.html",
+      "format": "html",
+      "bytes": 26339,
+      "sha256": "20b0c0da9085f05c1f36179040fc0c3498bf0cfc3b030d5986f2b4858af993e9"
+    },
+    {
+      "path": "module-10/mod-10-required-readings-chronic-lung-conditions-and-air-quality-safety.md",
+      "format": "markdown",
+      "bytes": 10063,
+      "sha256": "efb478baf7c6f5a8b60bfb57257e4e9510b3b39d05afc430f478d14701d083cf"
+    },
+    {
+      "path": "module-10/mod-10-summary-and-wrap-up-chronic-lung-conditions-and-air-quality-safety.html",
+      "format": "html",
+      "bytes": 39532,
+      "sha256": "3cafbd867fc575b36c30d0b753a58d1a57756b3e446089715e96772d0af2f000"
+    },
+    {
+      "path": "module-10/mod-10-summary-and-wrap-up-chronic-lung-conditions-and-air-quality-safety.md",
+      "format": "markdown",
+      "bytes": 14824,
+      "sha256": "28e3d5007cc19fc406d9a663ace43355382de8c65bac439fec4ea1f23aeec6ad"
+    },
+    {
+      "path": "module-11/mod-11-lab-and-simulation-01.html",
+      "format": "html",
+      "bytes": 73260,
+      "sha256": "bfc718691700b50e12358b54408f126f3d0e8b2ed0d83dbc02675fcb34fa4098"
+    },
+    {
+      "path": "module-11/mod-11-lab-and-simulation-01.md",
+      "format": "markdown",
+      "bytes": 19227,
+      "sha256": "5734d658567a5677f8d8b77b2789874914eaf1f231772d732bab68417ff68bb1"
+    },
+    {
+      "path": "module-11/mod-11-lab-and-simulation-02.html",
+      "format": "html",
+      "bytes": 81460,
+      "sha256": "4cc1f6c8f85412120c3f554c7d8c17a947ea7a9e2b57252ee0c6c27377dedfeb"
+    },
+    {
+      "path": "module-11/mod-11-lab-and-simulation-02.md",
+      "format": "markdown",
+      "bytes": 26452,
+      "sha256": "883c74e94a68d6e17364cd3adbbcd80703da9e1bb181419003ea75929e9bf5ff"
+    },
+    {
+      "path": "module-11/mod-11-clinical-discussion.html",
+      "format": "html",
+      "bytes": 46020,
+      "sha256": "eba03e719609535088103bd56a86ded8ede15ebabaecff57f8fd81850e4339ee"
+    },
+    {
+      "path": "module-11/mod-11-clinical-discussion.md",
+      "format": "markdown",
+      "bytes": 8987,
+      "sha256": "061829331993decf849c4aa9946649838ead9bca1407205d99b0d10ed01b7ae2"
+    },
+    {
+      "path": "module-11/mod-11-overview-diabetes-weight-management-and-low-impact-exercise.html",
+      "format": "html",
+      "bytes": 33651,
+      "sha256": "9a4a2afe14252a6dc606cce3f57a11361928c31320936ce28e09a68ccf71090a"
+    },
+    {
+      "path": "module-11/mod-11-overview-diabetes-weight-management-and-low-impact-exercise.md",
+      "format": "markdown",
+      "bytes": 11961,
+      "sha256": "89b3a372d6a56342ff4b61568cd7c179100db0f08d8d3a8d7fcbcdcd38d7f086"
+    },
+    {
+      "path": "module-11/mod-11-required-readings-diabetes-weight-management-and-low-impact-exercise.html",
+      "format": "html",
+      "bytes": 30216,
+      "sha256": "9e90c9cd9e669c7c71bfe1e7639be220f7657c30fafb42bcec6e16c8f5a1af60"
+    },
+    {
+      "path": "module-11/mod-11-required-readings-diabetes-weight-management-and-low-impact-exercise.md",
+      "format": "markdown",
+      "bytes": 10258,
+      "sha256": "12ab6ba6b67fc1ca2feb21cea2b952c597c06c4e04044b16109c6058802244d1"
+    },
+    {
+      "path": "module-11/mod-11-summary-and-wrap-up-diabetes-weight-management-and-low-impact-exercise.html",
+      "format": "html",
+      "bytes": 41238,
+      "sha256": "dd37c0926ba71b89fa102265aed1f2784321cbe0c3d7726d831664a714364796"
+    },
+    {
+      "path": "module-11/mod-11-summary-and-wrap-up-diabetes-weight-management-and-low-impact-exercise.md",
+      "format": "markdown",
+      "bytes": 14627,
+      "sha256": "c1a4b9412cffa722f0d2596915b3bc546dccb0f63f02c96706ceb22dbc9996d7"
+    },
+    {
+      "path": "module-12/mod-12-lab-and-simulation-01.html",
+      "format": "html",
+      "bytes": 74096,
+      "sha256": "b2778031a5e819beb6ea61ffceab2a976af1d739860745fbf8b44fa888df20f8"
+    },
+    {
+      "path": "module-12/mod-12-lab-and-simulation-01.md",
+      "format": "markdown",
+      "bytes": 14174,
+      "sha256": "e098e137c87fa3be659c44e26d50b0fc39e6a284faf2b162a3db5d44a65a49fe"
+    },
+    {
+      "path": "module-12/mod-12-lab-and-simulation-02.html",
+      "format": "html",
+      "bytes": 61166,
+      "sha256": "420cacdaa8ce7070de11de6c33b11530db09e0d23d791c4dad722bd3d42752a0"
+    },
+    {
+      "path": "module-12/mod-12-lab-and-simulation-02.md",
+      "format": "markdown",
+      "bytes": 12752,
+      "sha256": "14c35158aeb7b0f793099d9af04cc3d245057bb1562445ee934cb2d38a63e8b9"
+    },
+    {
+      "path": "module-12/mod-12-clinical-discussion.html",
+      "format": "html",
+      "bytes": 58046,
+      "sha256": "f5cbe148be548d30784679aca43dafeb03eb1f08cb7f37ad7d2f36469880826e"
+    },
+    {
+      "path": "module-12/mod-12-clinical-discussion.md",
+      "format": "markdown",
+      "bytes": 11388,
+      "sha256": "c4cfda2dc8048c48f5482f520d4fd4ab1dbbc3e9d3cf8e985104313d76bd27bd"
+    },
+    {
+      "path": "module-12/mod-12-overview-arthritis-joint-stiffness-and-bone-safe-exercise.html",
+      "format": "html",
+      "bytes": 36496,
+      "sha256": "d1d567ee1e6961c2d7899137d08c574c386232eb940670381b2ecdca396635db"
+    },
+    {
+      "path": "module-12/mod-12-overview-arthritis-joint-stiffness-and-bone-safe-exercise.md",
+      "format": "markdown",
+      "bytes": 10294,
+      "sha256": "c150a603b27a0642189c37fcc670f4cf244ae6eb8bb0f25074a79f7b4a39f12d"
+    },
+    {
+      "path": "module-12/mod-12-required-readings-arthritis-joint-stiffness-and-bone-safe-exercise.html",
+      "format": "html",
+      "bytes": 30594,
+      "sha256": "2be75f4517734d3326a15a130ebb7c3654604069ed4d15810a2b521972012896"
+    },
+    {
+      "path": "module-12/mod-12-required-readings-arthritis-joint-stiffness-and-bone-safe-exercise.md",
+      "format": "markdown",
+      "bytes": 9232,
+      "sha256": "0f515d810314d644ac322107e6256c5788a16d59b1e37a3077d79fe86d20a4aa"
+    },
+    {
+      "path": "module-12/mod-12-summary-and-wrap-up-arthritis-joint-stiffness-and-bone-safe-exercise.html",
+      "format": "html",
+      "bytes": 37499,
+      "sha256": "26358f08a3da82ac03498efe20ec73bf8f678c448c7e2cdb4693d798746e9bb3"
+    },
+    {
+      "path": "module-12/mod-12-summary-and-wrap-up-arthritis-joint-stiffness-and-bone-safe-exercise.md",
+      "format": "markdown",
+      "bytes": 12926,
+      "sha256": "dc7aa6e34bad03f57a5c571ec0c60e8507a29a62c3e8e61e2dbf482140c663dc"
+    },
+    {
+      "path": "module-13/mod-13-lab-and-simulation-01.html",
+      "format": "html",
+      "bytes": 74198,
+      "sha256": "b482d4c471cd96ecf0e4d1718ac5426c66854613c0e659adc538857297d8b710"
+    },
+    {
+      "path": "module-13/mod-13-lab-and-simulation-01.md",
+      "format": "markdown",
+      "bytes": 14227,
+      "sha256": "ef250bdf8a2412f334fd714aa64a6ed5263f4b6330d6b4302c561739c618c907"
+    },
+    {
+      "path": "module-13/mod-13-lab-and-simulation-02.html",
+      "format": "html",
+      "bytes": 60396,
+      "sha256": "0fa6c20e815a6fcd8aa8eea75e62f4b9e49367a4f8f3697c3348836daa01a262"
+    },
+    {
+      "path": "module-13/mod-13-lab-and-simulation-02.md",
+      "format": "markdown",
+      "bytes": 13088,
+      "sha256": "5e804d3b0bfb5f2c0d3acea1d5092b98087840e3785cbb933bea162aeb2db5ec"
+    },
+    {
+      "path": "module-13/mod-13-clinical-discussion.html",
+      "format": "html",
+      "bytes": 58224,
+      "sha256": "2fbf424c46d6348c954948a5b34847f53139556302cd414ec9bb77b813426dd7"
+    },
+    {
+      "path": "module-13/mod-13-clinical-discussion.md",
+      "format": "markdown",
+      "bytes": 11527,
+      "sha256": "768ba50c34d00ea3fa6d456373c035ec537260e67c86720b8f7170c76dd3ec51"
+    },
+    {
+      "path": "module-13/mod-13-overview-nerve-conditions-stroke-parkinsons-and-ms.html",
+      "format": "html",
+      "bytes": 36400,
+      "sha256": "72f1231a2cc613dd185e99c409b111d513552eb0d0520575611b5bb2f6930273"
+    },
+    {
+      "path": "module-13/mod-13-overview-nerve-conditions-stroke-parkinsons-and-ms.md",
+      "format": "markdown",
+      "bytes": 10164,
+      "sha256": "0919c8a956fcc871e11281a72bef640de563c8d7ab75095b4b1e589fb74141d6"
+    },
+    {
+      "path": "module-13/mod-13-required-readings-nerve-conditions-stroke-parkinsons-and-ms.html",
+      "format": "html",
+      "bytes": 32297,
+      "sha256": "bcbce93d7af8537bae3682133be1ecc9f6718396e1aa079c0de87647f96326d2"
+    },
+    {
+      "path": "module-13/mod-13-required-readings-nerve-conditions-stroke-parkinsons-and-ms.md",
+      "format": "markdown",
+      "bytes": 9865,
+      "sha256": "781ad1fba4cadd353d7cabf982fcb203fad31f4dc4306357f1c0cbdc8e26bef6"
+    },
+    {
+      "path": "module-13/mod-13-summary-and-wrap-up-nerve-conditions-stroke-parkinsons-and-ms.html",
+      "format": "html",
+      "bytes": 39126,
+      "sha256": "a6474292b1cde5ef8e9daeda4c336259e7904246f830ddae1e2d464cd1f7ec4f"
+    },
+    {
+      "path": "module-13/mod-13-summary-and-wrap-up-nerve-conditions-stroke-parkinsons-and-ms.md",
+      "format": "markdown",
+      "bytes": 15172,
+      "sha256": "64ce0983067c0eb3cab1d1a62b37d6df1fa849846faa10c8b28e8ad771ab4004"
+    },
+    {
+      "path": "module-14/mod-14-lab-and-simulation-01.html",
+      "format": "html",
+      "bytes": 20807,
+      "sha256": "50d9325f43ffbfcf04b717783ca46927d9a66e13f35ebd5789c60853dbbbbea1"
+    },
+    {
+      "path": "module-14/mod-14-lab-and-simulation-01.md",
+      "format": "markdown",
+      "bytes": 8393,
+      "sha256": "efb2d0a2b9776207f6c7d2765f110d4fdbc17b929bca1fb2e047768093ceaaf3"
+    },
+    {
+      "path": "module-14/mod-14-lab-and-simulation-02.html",
+      "format": "html",
+      "bytes": 74212,
+      "sha256": "8c101074c07f6ab101af03c67edd5bcd9b0f30f86f6c53e367d195895f5f166b"
+    },
+    {
+      "path": "module-14/mod-14-lab-and-simulation-02.md",
+      "format": "markdown",
+      "bytes": 14376,
+      "sha256": "e53e7b41a4ccc6e3f3ad4a3ccf14f82668917e173f0c4f300e56845abba1b64e"
+    },
+    {
+      "path": "module-14/mod-14-lab-and-simulation-03.html",
+      "format": "html",
+      "bytes": 60188,
+      "sha256": "f3983b05240b5d86864673b0b578c71334e2121b1280a855e6b0c44e0715e8bb"
+    },
+    {
+      "path": "module-14/mod-14-lab-and-simulation-03.md",
+      "format": "markdown",
+      "bytes": 12924,
+      "sha256": "45307cb553f313a6088e6752d245e0ac8b624a583b760fe3d7e7fe0d2a0d081c"
+    },
+    {
+      "path": "module-14/mod-14-overview-cancer-recovery-and-fatigue-management.html",
+      "format": "html",
+      "bytes": 37191,
+      "sha256": "a8dd828e263505c92c86e21de10457d5909b4723048b173663b85631e539abf3"
+    },
+    {
+      "path": "module-14/mod-14-overview-cancer-recovery-and-fatigue-management.md",
+      "format": "markdown",
+      "bytes": 11801,
+      "sha256": "db9d859269cf897d70c14e1cfa7c3661aa0bb75d30fc9a8082b1f9c5a268e45d"
+    },
+    {
+      "path": "module-14/mod-14-required-readings-cancer-recovery-and-fatigue-management.html",
+      "format": "html",
+      "bytes": 32033,
+      "sha256": "ff699d0aaba565c094da09cf4561b9fb5de8fa14e857b8dd5c7c1ab4498713bd"
+    },
+    {
+      "path": "module-14/mod-14-required-readings-cancer-recovery-and-fatigue-management.md",
+      "format": "markdown",
+      "bytes": 9596,
+      "sha256": "8c5a8126792b8276e55410d4721568f7ba6ccd849b5031df14b623103aae80ba"
+    },
+    {
+      "path": "module-14/mod-14-summary-and-wrap-up-cancer-recovery-and-fatigue-management.html",
+      "format": "html",
+      "bytes": 37570,
+      "sha256": "56313c1f4477086af5e9df9dddabcd67459a6b5d612c4bfb57169a3c31bf0ca3"
+    },
+    {
+      "path": "module-14/mod-14-summary-and-wrap-up-cancer-recovery-and-fatigue-management.md",
+      "format": "markdown",
+      "bytes": 12958,
+      "sha256": "50de58a2f5cc5cef83cf2fbf264191bcc176d9348061c01c27fc13334126f4d6"
+    },
+    {
+      "path": "module-15/mod-15-lab-and-simulation-01.html",
+      "format": "html",
+      "bytes": 73987,
+      "sha256": "a02c2346ba3a72b97a93c751bd2f7952389f784ff56fda9b3f37669c8f53cab6"
+    },
+    {
+      "path": "module-15/mod-15-lab-and-simulation-01.md",
+      "format": "markdown",
+      "bytes": 13856,
+      "sha256": "c04470117727dd8d18c0cec0eb12254db6948e65e91ce9b3f34759e88b83c299"
+    },
+    {
+      "path": "module-15/mod-15-lab-and-simulation-02.html",
+      "format": "html",
+      "bytes": 53539,
+      "sha256": "38d4c8d8abcd16d90d0a4a7bd7ca8cd0e7b4729960bdad881791f66adc4905df"
+    },
+    {
+      "path": "module-15/mod-15-lab-and-simulation-02.md",
+      "format": "markdown",
+      "bytes": 11507,
+      "sha256": "f693386a1766999a141a4f58b0dbb5d3a60d85b158229b0d35dfa3af6cdef2d3"
+    },
+    {
+      "path": "module-15/mod-15-clinical-discussion.html",
+      "format": "html",
+      "bytes": 54722,
+      "sha256": "ba91e2a4c06845bb44b0bea40f756cac85b05331c27bd3b175ebd37ff0478064"
+    },
+    {
+      "path": "module-15/mod-15-clinical-discussion.md",
+      "format": "markdown",
+      "bytes": 10493,
+      "sha256": "a5fef22dcab9f0e1ddf45671c261f171a240de50ac5526f2c00c73db35108169"
+    },
+    {
+      "path": "module-15/mod-15-overview-autoimmune-flare-ups-energy-pacing-and-portfolio-prep.html",
+      "format": "html",
+      "bytes": 36819,
+      "sha256": "03cf16fb0f3084dc60eaccadd8983a1dcbaf09801ce2730631182a6bb6cb3957"
+    },
+    {
+      "path": "module-15/mod-15-overview-autoimmune-flare-ups-energy-pacing-and-portfolio-prep.md",
+      "format": "markdown",
+      "bytes": 10288,
+      "sha256": "0539321970ce4a1533e978e21e5bafd0602d6a90d0f817b2040bc5b6fb302acf"
+    },
+    {
+      "path": "module-15/mod-15-required-readings-autoimmune-flare-ups-energy-pacing-and-portfolio-prep.html",
+      "format": "html",
+      "bytes": 32183,
+      "sha256": "eba8bc99be592f04fe0bb2ce53ceda19cef62010885ff7e30c77358d25e16499"
+    },
+    {
+      "path": "module-15/mod-15-required-readings-autoimmune-flare-ups-energy-pacing-and-portfolio-prep.md",
+      "format": "markdown",
+      "bytes": 9719,
+      "sha256": "e25004dc3bcdeb4b6d33bf4804b6c234d9aacbf53ea4013d70c86bea479c7c1d"
+    },
+    {
+      "path": "module-15/mod-15-summary-and-wrap-up-autoimmune-flare-ups-energy-pacing-and-portfolio-prep.html",
+      "format": "html",
+      "bytes": 37764,
+      "sha256": "6885dcd04a7339b33b8de9f4eb1ea5b6b564d58d5abfb55c51389cfc3c77e224"
+    },
+    {
+      "path": "module-15/mod-15-summary-and-wrap-up-autoimmune-flare-ups-energy-pacing-and-portfolio-prep.md",
+      "format": "markdown",
+      "bytes": 12984,
+      "sha256": "4c365de195cb3bd694c5aa1c79953c69d32f255ab1bc731a04e2450178559e40"
+    },
+    {
+      "path": "module-16/mod-16-lab-and-simulation-01.html",
+      "format": "html",
+      "bytes": 73451,
+      "sha256": "68164323bd622e8e2abbe3047dc16d6bead5a2cae880be952c8a4f0d56992993"
+    },
+    {
+      "path": "module-16/mod-16-lab-and-simulation-01.md",
+      "format": "markdown",
+      "bytes": 13520,
+      "sha256": "803bba793b4e42081357627c7b6e0a19732336963f9dcd0604fc75d24ff2c051"
+    },
+    {
+      "path": "module-16/mod-16-lab-and-simulation-02.html",
+      "format": "html",
+      "bytes": 55142,
+      "sha256": "3d63045f27b2604e74d1b7fa4a7c6c72a9776f623d23fab28c4db16880dd4400"
+    },
+    {
+      "path": "module-16/mod-16-lab-and-simulation-02.md",
+      "format": "markdown",
+      "bytes": 10054,
+      "sha256": "50d620e3a028662774261f6a144a2b64169147b6959ab47520893fa04156ca37"
+    },
+    {
+      "path": "module-16/mod-16-overview-multi-condition-safety-and-final-portfolio-closeout.html",
+      "format": "html",
+      "bytes": 37416,
+      "sha256": "d7caa0155c8965ae3f85cc80a822a8581a843d91eb4981a4c6c95f3d7594417a"
+    },
+    {
+      "path": "module-16/mod-16-overview-multi-condition-safety-and-final-portfolio-closeout.md",
+      "format": "markdown",
+      "bytes": 10055,
+      "sha256": "b7c305b06156d1844b73b17c20c6d59ac1dd348e50ad57a8ff6bdbec66be67fd"
+    },
+    {
+      "path": "module-16/mod-16-required-readings-multi-condition-safety-and-final-portfolio-closeout.html",
+      "format": "html",
+      "bytes": 31830,
+      "sha256": "f8cd77274669cd4ef66f6e5bbef94e19421270b215f213c15e0dc501f4de0a9f"
+    },
+    {
+      "path": "module-16/mod-16-required-readings-multi-condition-safety-and-final-portfolio-closeout.md",
+      "format": "markdown",
+      "bytes": 9679,
+      "sha256": "9efe9e048b8fa15e517f9b9cdfc6e6f4976fe164e4bf9b61ac86be5b3facbb6a"
+    },
+    {
+      "path": "module-16/mod-16-summary-and-wrap-up-multi-condition-safety-and-final-portfolio-closeout.html",
+      "format": "html",
+      "bytes": 21068,
+      "sha256": "705d01b97d803d86c9aee81a17272e48d142a6316c2bc1f6d4cf4918f3741b36"
+    },
+    {
+      "path": "module-16/mod-16-summary-and-wrap-up-multi-condition-safety-and-final-portfolio-closeout.md",
+      "format": "markdown",
+      "bytes": 6674,
+      "sha256": "57d98f17265cb449d89e4ad02c4c945fb713dd4c10d9ce18a6087f6c45c25c7f"
+    }
+  ]
+}

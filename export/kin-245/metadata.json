@@ -1,0 +1,426 @@
+{
+  "@context": "https://schema.org/",
+  "@type": [
+    "Dataset",
+    "LearningResource",
+    "Course"
+  ],
+  "@id": "https://alanpruitt.com/#dataset-kin-245",
+  "name": "KIN-245: Exercise Testing & Prescription: Clinical Ergometry & Physiological Assessment (Open Educational Resource Fleet)",
+  "alternateName": [
+    "Exercise Testing & Prescription: Clinical Ergometry & Physiological Assessment",
+    "EXW-245: Exercise Testing & Prescription: Clinical Ergometry & Physiological Assessment (Arizona Western College)"
+  ],
+  "courseCode": "KIN-245",
+  "identifier": "KIN-245-OER-2026-V2.2",
+  "version": "2.2.0",
+  "datePublished": "2026-11-07",
+  "dateModified": "2026-11-07",
+  "description": "Standardized ZTC OER module package for KIN-245 (Exercise Testing & Prescription: Clinical Ergometry & Physiological Assessment) incorporating Curriculum-as-Code publishing, the Clinical Framing Protocol (Pattern / Rule / Solve), ACSM's Guidelines for Exercise Testing and Prescription, 12th Edition (2025) as the Academic Single Source of Truth (SSoT), and the U.S. Department of Labor AI Literacy Framework (TEN No. 07-25) with WCAG 2.2 AA (9:1 Double-Contrast Guard) compliance.",
+  "url": "https://alanpruitt.com/export/kin-245/metadata.json",
+  "sameAs": [
+    "https://www.oercommons.org/courses/kin-245",
+    "https://exwdemo.dev"
+  ],
+  "isAccessibleForFree": true,
+  "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+  "inLanguage": [
+    "en-US",
+    "es-MX"
+  ],
+  "educationalLevel": "Higher Education (Lower-Division Undergraduate)",
+  "learningResourceType": [
+    "Full Course",
+    "Module Readings",
+    "Clinical Case Simulations",
+    "Rubric-Aligned Laboratory Assignments"
+  ],
+  "creator": {
+    "@type": "Organization",
+    "@id": "https://www.webcognita.com/#organization",
+    "name": "Webcognita LLC",
+    "url": "https://www.webcognita.com/",
+    "founder": "Alan Lee Pruitt"
+  },
+  "author": {
+    "@type": "Person",
+    "@id": "https://alanpruitt.com/#person",
+    "name": "Alan Lee Pruitt",
+    "alternateName": "Coach Alan",
+    "jobTitle": "Adjunct Faculty of Exercise Science & Instructional Designer",
+    "url": "https://alanpruitt.com/",
+    "affiliation": {
+      "@type": "CollegeOrUniversity",
+      "name": "Arizona Western College",
+      "url": "https://www.azwestern.edu/"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Arizona Western College — Matador Wellness Center Clinical AI Residency",
+    "url": "https://alanpruitt.com/"
+  },
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": [
+      "student",
+      "instructor"
+    ]
+  },
+  "accessibilityFeature": [
+    "structuralNavigation",
+    "tableOfContents",
+    "highContrastDisplay",
+    "alternativeText",
+    "plainLanguageSummary",
+    "bilingualEnglishSpanish"
+  ],
+  "accessibilityHazard": "none",
+  "accessibilitySummary": "Conforms to WCAG 2.2 AA and Arizona Western College 9:1 Double-Contrast Guard with 0 open Canvas Course Accessibility Checker issues and bilingual In Plain English / Norteño-Spanish reading guides.",
+  "educationalAlignment": [
+    {
+      "@type": "AlignmentObject",
+      "alignmentType": "teaches",
+      "educationalFramework": "Common Core State Standards",
+      "targetName": "CCSS.ELA-LITERACY.W.11-12.6",
+      "targetUrl": "http://www.corestandards.org/ELA-Literacy/W/11-12/6/",
+      "targetDescription": "Use technology, including the Internet, to produce, publish, and update individual or shared writing products in response to ongoing feedback, including new arguments or information.",
+      "description": "Use technology, including the Internet, to produce, publish, and update individual or shared writing products in response to ongoing feedback."
+    },
+    {
+      "@type": "AlignmentObject",
+      "alignmentType": "teaches",
+      "educationalFramework": "Washington State ELA Learning Standards",
+      "targetName": "WA.ELA.11-12.W.6",
+      "targetDescription": "Produce, publish, and update digital compositions reflecting real-world professional communication and digital citizenship.",
+      "description": "Produce, publish, and update digital compositions reflecting real-world professional communication and digital citizenship."
+    },
+    {
+      "@type": "AlignmentObject",
+      "alignmentType": "teaches",
+      "educationalFramework": "Common Core State Standards — Science & Technical Subjects",
+      "targetName": "CCSS.ELA-LITERACY.RST.11-12.7",
+      "targetUrl": "http://www.corestandards.org/ELA-Literacy/RST/11-12/7/",
+      "targetDescription": "Integrate and evaluate multiple sources of information presented in diverse formats and media (e.g., quantitative data, video, multimedia) in order to address a question or solve a problem.",
+      "description": "Integrate and evaluate quantitative simulator telemetry and federal clinical guidelines to frame and solve movement and wellness cases."
+    },
+    {
+      "@type": "AlignmentObject",
+      "alignmentType": "requires",
+      "educationalFramework": "ACSM's Guidelines for Exercise Testing and Prescription, 12th Edition (2025)",
+      "targetName": "ACSM-GETP-12TH-ED-2025",
+      "targetDescription": "Clinical pre-participation screening, physiological ergometry, exercise testing, and hemodynamic safety gates.",
+      "description": "Primary clinical testing and prescription benchmark for EXW-245 (KIN-245) and EXW-210 (KIN-210)."
+    },
+    {
+      "@type": "AlignmentObject",
+      "alignmentType": "teaches",
+      "educationalFramework": "U.S. Department of Labor (DOL) ETA Training and Employment Notice (TEN) No. 07-25: AI Literacy Framework (Feb 13, 2026)",
+      "targetName": "US-DOL-TEN-07-25",
+      "targetDescription": "5 Foundational Content Areas (1. Understand AI Principles, 2. Explore AI Uses, 3. Direct AI Effectively, 4. Evaluate Outputs, 5. Use AI Responsibly) and 7 Community College Delivery Design Principles.",
+      "description": "Workforce AI Problem Framing & Output Auditing via the Centaur Protocol and Pattern / Rule / Solve."
+    },
+    {
+      "@type": "AlignmentObject",
+      "alignmentType": "assesses",
+      "educationalFramework": "Arizona Western College Institutional Learning Outcomes (HLC Accredited)",
+      "targetName": "AWC-ILO-1-CRITICAL-THINKING",
+      "targetDescription": "Critical Thinking & Ethical Inquiry: Diagnose client cases, vital signs, and Yuma / Imperial Valley environmental stressors (Pattern).",
+      "description": "Assessed in Part 1 (Pattern Recognition & P-T-C-F Prompt)."
+    },
+    {
+      "@type": "AlignmentObject",
+      "alignmentType": "assesses",
+      "educationalFramework": "Arizona Western College Institutional Learning Outcomes (HLC Accredited)",
+      "targetName": "AWC-ILO-2-QUANTITATIVE-LITERACY",
+      "targetDescription": "Quantitative & Information Literacy: Audit AI calculations against federal SSoT thresholds (Rule).",
+      "description": "Assessed in Part 2 (150-Word Clinical Audit against SSoT)."
+    },
+    {
+      "@type": "AlignmentObject",
+      "alignmentType": "assesses",
+      "educationalFramework": "Arizona Western College Institutional Learning Outcomes (HSI Title V Equity)",
+      "targetName": "AWC-ILO-3-COMMUNICATION",
+      "targetDescription": "Written & Technical Communication: Defend clinical interventions in plain English or authentic Norteño-Spanish (Solve & Active Verification).",
+      "description": "Assessed in Part 3 (150-Word Active Verification Defense)."
+    }
+  ],
+  "keywords": [
+    "KIN-245",
+    "EXW-245",
+    "Clinical Exercise Physiology",
+    "ACSM's Guidelines for Exercise Testing and Prescription, 12th Edition (2025)",
+    "Pattern Rule Solve",
+    "Zero Textbook Cost",
+    "ZTC",
+    "WCAG 2.2 AA",
+    "Hispanic-Serving Institution",
+    "Open Educational Resources"
+  ],
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "KIN-245 Full Course OER Package (Modules 00–16)",
+      "encodingFormat": "application/zip",
+      "contentUrl": "https://alanpruitt.com/export/kin-245_full_course_oer_package.zip"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "KIN-245 Module 01 Starter OER Package",
+      "encodingFormat": "application/zip",
+      "contentUrl": "https://alanpruitt.com/export/kin-245_module-01_oer_package.zip"
+    }
+  ],
+  "schema_version": "S-A-R-v2.2-OER-Commons-Syndication",
+  "generated_at": "2026-11-07T23:52:52.342149+00:00",
+  "course_code": "KIN-245",
+  "course_slug": "kin-245",
+  "course_title": "Exercise Testing & Prescription: Clinical Ergometry & Physiological Assessment",
+  "discipline_domain": "Clinical Exercise Physiology",
+  "source_institution_crosswalk": {
+    "canonical_source_code": "EXW-245",
+    "originating_institution": "Arizona Western College (Hispanic-Serving Institution — Yuma, AZ / Imperial Valley, CA)",
+    "residency_program": "Matador Wellness Center Clinical AI Residency",
+    "author": "Coach Alan Pruitt"
+  },
+  "academic_ssot": "ACSM's Guidelines for Exercise Testing and Prescription, 12th Edition (2025)",
+  "workforce_ai_framework": "U.S. Department of Labor (DOL) ETA TEN No. 07-25 AI Literacy Framework (Feb 13, 2026)",
+  "pedagogical_architecture": {
+    "clinical_framing_protocol": "Pattern / Rule / Solve (Patrón / Regla / Solución)",
+    "centaur_protocol": "Student as Architect/Pilot (Problem Framing) • AI as Engine/Calculator (Problem Solving)",
+    "grading_scale": "10-7-0 Mastery Grading Scale (Unlimited Revisions for Mastery)",
+    "bilingual_accessibility": "In Plain English & Norteño-Spanish Callouts on Every Module"
+  },
+  "achieve_oer_rubrics_conformance": {
+    "rubrics_evaluated": "Achieve OER Rubrics I–VIII (v4)",
+    "wcag_standard": "WCAG 2.2 AA + 9:1 Double-Contrast Guard",
+    "verified_html_files": 17,
+    "verified_markdown_files": 17,
+    "open_accessibility_issues": 0
+  },
+  "modules_exported": [
+    "module-00",
+    "module-01",
+    "module-02",
+    "module-03",
+    "module-04",
+    "module-05",
+    "module-06",
+    "module-07",
+    "module-08",
+    "module-09",
+    "module-10",
+    "module-11",
+    "module-12",
+    "module-13",
+    "module-14",
+    "module-15",
+    "module-16"
+  ],
+  "files": [
+    {
+      "path": "module-00/Module-00-Master.html",
+      "format": "html",
+      "bytes": 48213,
+      "sha256": "2b778c9d2d0772208d9d38f4da6092dc48b8c3a30b188239ae9bb5d04ab64808"
+    },
+    {
+      "path": "module-00/Module-00-Master.md",
+      "format": "markdown",
+      "bytes": 13644,
+      "sha256": "653f2f17d9f95bc24f5204b9ce7efa98b5e41c5497ea7f35be5b11944c58121d"
+    },
+    {
+      "path": "module-01/Module-01-Master.html",
+      "format": "html",
+      "bytes": 28732,
+      "sha256": "b2bacd50380f0957083586b2599b2ebaa2d6379ef840e39f572c13755391a8b2"
+    },
+    {
+      "path": "module-01/Module-01-Master.md",
+      "format": "markdown",
+      "bytes": 8532,
+      "sha256": "231be250f85ae2cbe336272e3f1d13b0f01ca4d210512bd269163cb3a785d762"
+    },
+    {
+      "path": "module-02/Module-02-Master.html",
+      "format": "html",
+      "bytes": 18507,
+      "sha256": "ff2d5138bc814cddd38a90baff78db4b3e13fa17947257309efb233349c21881"
+    },
+    {
+      "path": "module-02/Module-02-Master.md",
+      "format": "markdown",
+      "bytes": 8196,
+      "sha256": "942c4393abbd598d03dac23141470fa26f8dd6a024b6cb63777da60aa57130f4"
+    },
+    {
+      "path": "module-03/Module-03-Master.html",
+      "format": "html",
+      "bytes": 29060,
+      "sha256": "6356c826b693452398bf1f6cbec1bfe7628ccf60b01af2d42bf83e153afca65d"
+    },
+    {
+      "path": "module-03/Module-03-Master.md",
+      "format": "markdown",
+      "bytes": 9408,
+      "sha256": "d7229384f387a1cddfe28bc78dfdd4b93269396ee49f3009b187b325e64dda9b"
+    },
+    {
+      "path": "module-04/Module-04-Master.html",
+      "format": "html",
+      "bytes": 29060,
+      "sha256": "3b2ee22aaeb5d3c6933186f27eec3ad9b55aea895007674c588b6480deac3151"
+    },
+    {
+      "path": "module-04/Module-04-Master.md",
+      "format": "markdown",
+      "bytes": 8689,
+      "sha256": "762f466196168d10dc05df15217d5d105628a0624f74668c82622a458c1e1f57"
+    },
+    {
+      "path": "module-05/Module-05-Master.html",
+      "format": "html",
+      "bytes": 29060,
+      "sha256": "2884f12c18bb75e9fda422934963ecaa011a2550de159a346a7da01af53f4cf4"
+    },
+    {
+      "path": "module-05/Module-05-Master.md",
+      "format": "markdown",
+      "bytes": 8697,
+      "sha256": "b97d574cb29c77be3c9296b97f4356824b23f25ad94caa773eb0399ed3824aad"
+    },
+    {
+      "path": "module-06/Module-06-Master.html",
+      "format": "html",
+      "bytes": 21979,
+      "sha256": "e409e083befca1393102a1f336e45707ae06174077ef9de75a1f0915a85eda7f"
+    },
+    {
+      "path": "module-06/Module-06-Master.md",
+      "format": "markdown",
+      "bytes": 7763,
+      "sha256": "f76646a1110942cf3395ee825b3d14c27b844e072fa8d50c0d35de56df5f4bf4"
+    },
+    {
+      "path": "module-07/Module-07-Master.html",
+      "format": "html",
+      "bytes": 22161,
+      "sha256": "a94db3ad55eecdb6cde3a459f2d9fdd458d3e7593b5168a0455ffb12b3e9f2bb"
+    },
+    {
+      "path": "module-07/Module-07-Master.md",
+      "format": "markdown",
+      "bytes": 7956,
+      "sha256": "8c391338d4da421679a3c41669cb256df67aa9c763cfff9e4e0cfe554859d5b1"
+    },
+    {
+      "path": "module-08/Module-08-Master.html",
+      "format": "html",
+      "bytes": 22821,
+      "sha256": "4071684024b95861f375e9fdcb596f941e44ec17488bc9b3489456279fdd9cb7"
+    },
+    {
+      "path": "module-08/Module-08-Master.md",
+      "format": "markdown",
+      "bytes": 8523,
+      "sha256": "8fa4b06a8b2e17113f20d074955c4f70e2f21bca5df43826bb7bf994a92f4293"
+    },
+    {
+      "path": "module-09/Module-09-Master.html",
+      "format": "html",
+      "bytes": 22158,
+      "sha256": "dfcfa50f0fd98ddd4699d492cb27ee8ff411610c54d4640c3884e526e3394123"
+    },
+    {
+      "path": "module-09/Module-09-Master.md",
+      "format": "markdown",
+      "bytes": 8097,
+      "sha256": "8db5cc027c2f494dfc0c4ac9857503a4db1665d53bcc57483c2dd02e8ed5ae30"
+    },
+    {
+      "path": "module-10/Module-10-Master.html",
+      "format": "html",
+      "bytes": 21955,
+      "sha256": "5a7a5ec2668692794aedc3d0c7a413ebf2f2347cb5f270685bf70ba0e66fe470"
+    },
+    {
+      "path": "module-10/Module-10-Master.md",
+      "format": "markdown",
+      "bytes": 8341,
+      "sha256": "88ed5e21584c8b539e0f98be36f1f06cb60d7bbd409bd9257886e8a12a658ebd"
+    },
+    {
+      "path": "module-11/Module-11-Master.html",
+      "format": "html",
+      "bytes": 22359,
+      "sha256": "a5d17d321f907db2e410dcf1042c5abdadbdd39664a734fdea048c160ec25075"
+    },
+    {
+      "path": "module-11/Module-11-Master.md",
+      "format": "markdown",
+      "bytes": 8518,
+      "sha256": "841691f5811453204ed10a8a89cce02cc12b44d4fe6e6ebb67362f609145cfc9"
+    },
+    {
+      "path": "module-12/Module-12-Master.html",
+      "format": "html",
+      "bytes": 22460,
+      "sha256": "3d4ad1dece54498ab55a6bc67536664bb48d43a4687d3be8eacc2e2c0bb4894b"
+    },
+    {
+      "path": "module-12/Module-12-Master.md",
+      "format": "markdown",
+      "bytes": 8765,
+      "sha256": "47c897a132e43b0da13387286858418951e3ee234359b68b005a455aa350419c"
+    },
+    {
+      "path": "module-13/Module-13-Master.html",
+      "format": "html",
+      "bytes": 22381,
+      "sha256": "a20de0e6a67126d3efb34bc56865ce38b168d158a149f8dbed7a126aff998f08"
+    },
+    {
+      "path": "module-13/Module-13-Master.md",
+      "format": "markdown",
+      "bytes": 8737,
+      "sha256": "56d79a1b935099bb6507d86d36818a93652da23cb700a42556b1588efae6defd"
+    },
+    {
+      "path": "module-14/Module-14-Master.html",
+      "format": "html",
+      "bytes": 23073,
+      "sha256": "e49f197a653a419b4a7bb3387ab6c5226f92c95735a6be1430736f2db4ce98b5"
+    },
+    {
+      "path": "module-14/Module-14-Master.md",
+      "format": "markdown",
+      "bytes": 9288,
+      "sha256": "39ecfade32cc6557234dcb49fec09aa58749e2a82ab5cebfc5e35230f8bc2cf6"
+    },
+    {
+      "path": "module-15/Module-15-Master.html",
+      "format": "html",
+      "bytes": 23843,
+      "sha256": "70f985424726bf17c957b0dad066199da31d3e0c8856c8fe2fdc5a53465f6772"
+    },
+    {
+      "path": "module-15/Module-15-Master.md",
+      "format": "markdown",
+      "bytes": 8269,
+      "sha256": "7e0a954aab277b15f7821f74106a96a0299b2e8639cb4a8fc54ebd0876e60fbd"
+    },
+    {
+      "path": "module-16/Module-16-Master.html",
+      "format": "html",
+      "bytes": 22051,
+      "sha256": "450579e4e25bbf6da7d00db2884247bf7c96a1f3da35631330332291e6949c37"
+    },
+    {
+      "path": "module-16/Module-16-Master.md",
+      "format": "markdown",
+      "bytes": 7887,
+      "sha256": "7cc4e1d7e133fd86a7168f7ea3cc4935ac8b3b2d45a76f9249c60890446a7a90"
+    }
+  ]
+}

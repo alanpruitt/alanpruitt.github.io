@@ -1,0 +1,1543 @@
+{
+  "@context": "https://schema.org/",
+  "@type": [
+    "Dataset",
+    "LearningResource",
+    "Course"
+  ],
+  "@id": "https://alanpruitt.com/#dataset-hlth-150",
+  "name": "HLTH-150: Nutrition for Exercise & Sport: Performance Nutrition & Dietary Guidelines (Open Educational Resource Fleet)",
+  "alternateName": [
+    "Nutrition for Exercise & Sport: Performance Nutrition & Dietary Guidelines",
+    "EXW-150: Nutrition for Exercise & Sport: Performance Nutrition & Dietary Guidelines (Arizona Western College)"
+  ],
+  "courseCode": "HLTH-150",
+  "identifier": "HLTH-150-OER-2026-V2.2",
+  "version": "2.2.0",
+  "datePublished": "2026-11-07",
+  "dateModified": "2026-11-07",
+  "description": "Standardized ZTC OER module package for HLTH-150 (Nutrition for Exercise & Sport: Performance Nutrition & Dietary Guidelines) incorporating Curriculum-as-Code publishing, the Clinical Framing Protocol (Pattern / Rule / Solve), 2025–2030 Dietary Guidelines for Americans (\"Real Food\" Focus) as the Academic Single Source of Truth (SSoT), and the U.S. Department of Labor AI Literacy Framework (TEN No. 07-25) with WCAG 2.2 AA (9:1 Double-Contrast Guard) compliance.",
+  "url": "https://alanpruitt.com/export/hlth-150/metadata.json",
+  "sameAs": [
+    "https://www.oercommons.org/courses/hlth-150",
+    "https://exwdemo.dev"
+  ],
+  "isAccessibleForFree": true,
+  "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+  "inLanguage": [
+    "en-US",
+    "es-MX"
+  ],
+  "educationalLevel": "Higher Education (Lower-Division Undergraduate)",
+  "learningResourceType": [
+    "Full Course",
+    "Module Readings",
+    "Clinical Case Simulations",
+    "Rubric-Aligned Laboratory Assignments"
+  ],
+  "creator": {
+    "@type": "Organization",
+    "@id": "https://www.webcognita.com/#organization",
+    "name": "Webcognita LLC",
+    "url": "https://www.webcognita.com/",
+    "founder": "Alan Lee Pruitt"
+  },
+  "author": {
+    "@type": "Person",
+    "@id": "https://alanpruitt.com/#person",
+    "name": "Alan Lee Pruitt",
+    "alternateName": "Coach Alan",
+    "jobTitle": "Adjunct Faculty of Exercise Science & Instructional Designer",
+    "url": "https://alanpruitt.com/",
+    "affiliation": {
+      "@type": "CollegeOrUniversity",
+      "name": "Arizona Western College",
+      "url": "https://www.azwestern.edu/"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Arizona Western College — Matador Wellness Center Clinical AI Residency",
+    "url": "https://alanpruitt.com/"
+  },
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": [
+      "student",
+      "instructor"
+    ]
+  },
+  "accessibilityFeature": [
+    "structuralNavigation",
+    "tableOfContents",
+    "highContrastDisplay",
+    "alternativeText",
+    "plainLanguageSummary",
+    "bilingualEnglishSpanish"
+  ],
+  "accessibilityHazard": "none",
+  "accessibilitySummary": "Conforms to WCAG 2.2 AA and Arizona Western College 9:1 Double-Contrast Guard with 0 open Canvas Course Accessibility Checker issues and bilingual In Plain English / Norteño-Spanish reading guides.",
+  "educationalAlignment": [
+    {
+      "@type": "AlignmentObject",
+      "alignmentType": "teaches",
+      "educationalFramework": "Common Core State Standards",
+      "targetName": "CCSS.ELA-LITERACY.W.11-12.6",
+      "targetUrl": "http://www.corestandards.org/ELA-Literacy/W/11-12/6/",
+      "targetDescription": "Use technology, including the Internet, to produce, publish, and update individual or shared writing products in response to ongoing feedback, including new arguments or information.",
+      "description": "Use technology, including the Internet, to produce, publish, and update individual or shared writing products in response to ongoing feedback."
+    },
+    {
+      "@type": "AlignmentObject",
+      "alignmentType": "teaches",
+      "educationalFramework": "Washington State ELA Learning Standards",
+      "targetName": "WA.ELA.11-12.W.6",
+      "targetDescription": "Produce, publish, and update digital compositions reflecting real-world professional communication and digital citizenship.",
+      "description": "Produce, publish, and update digital compositions reflecting real-world professional communication and digital citizenship."
+    },
+    {
+      "@type": "AlignmentObject",
+      "alignmentType": "teaches",
+      "educationalFramework": "Common Core State Standards — Science & Technical Subjects",
+      "targetName": "CCSS.ELA-LITERACY.RST.11-12.7",
+      "targetUrl": "http://www.corestandards.org/ELA-Literacy/RST/11-12/7/",
+      "targetDescription": "Integrate and evaluate multiple sources of information presented in diverse formats and media (e.g., quantitative data, video, multimedia) in order to address a question or solve a problem.",
+      "description": "Integrate and evaluate quantitative simulator telemetry and federal clinical guidelines to frame and solve movement and wellness cases."
+    },
+    {
+      "@type": "AlignmentObject",
+      "alignmentType": "requires",
+      "educationalFramework": "2025–2030 Dietary Guidelines for Americans (\"Real Food\" Focus)",
+      "targetName": "USDA-HHS-DGA-2025-2030",
+      "targetUrl": "https://www.dietaryguidelines.gov/",
+      "targetDescription": "Federal dietary benchmark emphasizing whole, nutrient-dense real foods, hydration, and chronic disease risk reduction.",
+      "description": "Primary federal nutrition rulebook for EXW-150 (HLTH-150)."
+    },
+    {
+      "@type": "AlignmentObject",
+      "alignmentType": "teaches",
+      "educationalFramework": "U.S. Department of Labor (DOL) ETA Training and Employment Notice (TEN) No. 07-25: AI Literacy Framework (Feb 13, 2026)",
+      "targetName": "US-DOL-TEN-07-25",
+      "targetDescription": "5 Foundational Content Areas (1. Understand AI Principles, 2. Explore AI Uses, 3. Direct AI Effectively, 4. Evaluate Outputs, 5. Use AI Responsibly) and 7 Community College Delivery Design Principles.",
+      "description": "Workforce AI Problem Framing & Output Auditing via the Centaur Protocol and Pattern / Rule / Solve."
+    },
+    {
+      "@type": "AlignmentObject",
+      "alignmentType": "assesses",
+      "educationalFramework": "Arizona Western College Institutional Learning Outcomes (HLC Accredited)",
+      "targetName": "AWC-ILO-1-CRITICAL-THINKING",
+      "targetDescription": "Critical Thinking & Ethical Inquiry: Diagnose client cases, vital signs, and Yuma / Imperial Valley environmental stressors (Pattern).",
+      "description": "Assessed in Part 1 (Pattern Recognition & P-T-C-F Prompt)."
+    },
+    {
+      "@type": "AlignmentObject",
+      "alignmentType": "assesses",
+      "educationalFramework": "Arizona Western College Institutional Learning Outcomes (HLC Accredited)",
+      "targetName": "AWC-ILO-2-QUANTITATIVE-LITERACY",
+      "targetDescription": "Quantitative & Information Literacy: Audit AI calculations against federal SSoT thresholds (Rule).",
+      "description": "Assessed in Part 2 (150-Word Clinical Audit against SSoT)."
+    },
+    {
+      "@type": "AlignmentObject",
+      "alignmentType": "assesses",
+      "educationalFramework": "Arizona Western College Institutional Learning Outcomes (HSI Title V Equity)",
+      "targetName": "AWC-ILO-3-COMMUNICATION",
+      "targetDescription": "Written & Technical Communication: Defend clinical interventions in plain English or authentic Norteño-Spanish (Solve & Active Verification).",
+      "description": "Assessed in Part 3 (150-Word Active Verification Defense)."
+    }
+  ],
+  "keywords": [
+    "HLTH-150",
+    "EXW-150",
+    "Health Education & Performance Nutrition",
+    "2025–2030 Dietary Guidelines for Americans (\"Real Food\" Focus)",
+    "Pattern Rule Solve",
+    "Zero Textbook Cost",
+    "ZTC",
+    "WCAG 2.2 AA",
+    "Hispanic-Serving Institution",
+    "Open Educational Resources"
+  ],
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "HLTH-150 Full Course OER Package (Modules 00–16)",
+      "encodingFormat": "application/zip",
+      "contentUrl": "https://alanpruitt.com/export/hlth-150_full_course_oer_package.zip"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "HLTH-150 Module 01 Starter OER Package",
+      "encodingFormat": "application/zip",
+      "contentUrl": "https://alanpruitt.com/export/hlth-150_module-01_oer_package.zip"
+    }
+  ],
+  "schema_version": "S-A-R-v2.2-OER-Commons-Syndication",
+  "generated_at": "2026-11-07T23:52:40.546358+00:00",
+  "course_code": "HLTH-150",
+  "course_slug": "hlth-150",
+  "course_title": "Nutrition for Exercise & Sport: Performance Nutrition & Dietary Guidelines",
+  "discipline_domain": "Health Education & Performance Nutrition",
+  "source_institution_crosswalk": {
+    "canonical_source_code": "EXW-150",
+    "originating_institution": "Arizona Western College (Hispanic-Serving Institution — Yuma, AZ / Imperial Valley, CA)",
+    "residency_program": "Matador Wellness Center Clinical AI Residency",
+    "author": "Coach Alan Pruitt"
+  },
+  "academic_ssot": "2025–2030 Dietary Guidelines for Americans (\"Real Food\" Focus)",
+  "workforce_ai_framework": "U.S. Department of Labor (DOL) ETA TEN No. 07-25 AI Literacy Framework (Feb 13, 2026)",
+  "pedagogical_architecture": {
+    "clinical_framing_protocol": "Pattern / Rule / Solve (Patrón / Regla / Solución)",
+    "centaur_protocol": "Student as Architect/Pilot (Problem Framing) • AI as Engine/Calculator (Problem Solving)",
+    "grading_scale": "10-7-0 Mastery Grading Scale (Unlimited Revisions for Mastery)",
+    "bilingual_accessibility": "In Plain English & Norteño-Spanish Callouts on Every Module"
+  },
+  "achieve_oer_rubrics_conformance": {
+    "rubrics_evaluated": "Achieve OER Rubrics I–VIII (v4)",
+    "wcag_standard": "WCAG 2.2 AA + 9:1 Double-Contrast Guard",
+    "verified_html_files": 120,
+    "verified_markdown_files": 100,
+    "open_accessibility_issues": 0
+  },
+  "modules_exported": [
+    "module-00",
+    "module-01",
+    "module-02",
+    "module-03",
+    "module-04",
+    "module-05",
+    "module-06",
+    "module-07",
+    "module-08",
+    "module-09",
+    "module-10",
+    "module-11",
+    "module-12",
+    "module-13",
+    "module-14",
+    "module-15",
+    "module-16"
+  ],
+  "files": [
+    {
+      "path": "module-00/0-1-course-welcome-and-regional-grounding.html",
+      "format": "html",
+      "bytes": 11333,
+      "sha256": "e7d7ee8cdcc6f2ef5466f98e05546da4073dbea2e00fbf6d444511aa7c9d691d"
+    },
+    {
+      "path": "module-00/0-2-course-syllabus-and-communication-guidelines.html",
+      "format": "html",
+      "bytes": 16929,
+      "sha256": "6e04d6d629a0a60fb5b266674fc9b26a2fcda14210e8dbb56b8bcdce67898557"
+    },
+    {
+      "path": "module-00/0-2-course-syllabus-and-communication-guidelines.md",
+      "format": "markdown",
+      "bytes": 7897,
+      "sha256": "575ca5ecd0af08992b58f6d0150a111ee2c5126de78291a7ca67e6d596f15b37"
+    },
+    {
+      "path": "module-00/0-3-technical-requirements-and-mobile-access.html",
+      "format": "html",
+      "bytes": 16785,
+      "sha256": "224f499cb6e0bc799e6010b27bbbcfbd6dfe559bd4627fab29e8a557a91bbb49"
+    },
+    {
+      "path": "module-00/0-4-the-exw-ai-simulation-workspace-and-delimiter-protocol.html",
+      "format": "html",
+      "bytes": 74119,
+      "sha256": "72e7a94495636e1724a26b89338779e1cd3d239d92e7306793206750aa68ae14"
+    },
+    {
+      "path": "module-00/0-5-course-navigation-and-the-10-slash-7-slash-0-mastery-scale.html",
+      "format": "html",
+      "bytes": 48173,
+      "sha256": "9fbb8915b93042b97d1c2c95430f2591bebdddd5d79fbcaa10b40fda678f1802"
+    },
+    {
+      "path": "module-00/0-6-discussion-squad-qa.html",
+      "format": "html",
+      "bytes": 19263,
+      "sha256": "4b7e0caa8144f985e9d035f5de5b16bc83d799705b475a616152d7f656812611"
+    },
+    {
+      "path": "module-00/0-6-discussion-squad-qa.md",
+      "format": "markdown",
+      "bytes": 8910,
+      "sha256": "3b2b716b0e6220a6a6b2fad3525dc58420ebe491ec07c567d3103692e558ad66"
+    },
+    {
+      "path": "module-00/module-00-overview-and-course-orientation.html",
+      "format": "html",
+      "bytes": 73386,
+      "sha256": "9eaee40e4ca7c659270fb7dcd6148d213d5dddb67b6623fa05c7dc86a189cc6b"
+    },
+    {
+      "path": "module-00/module-00-overview-and-course-orientation.md",
+      "format": "markdown",
+      "bytes": 29300,
+      "sha256": "63e5073ce81bf996fc7961cce59e47109bb6c3a2952ac3acc5a1e41e639bd8ad"
+    },
+    {
+      "path": "module-00/module-00-summary-and-wrap-up.html",
+      "format": "html",
+      "bytes": 62945,
+      "sha256": "25af3992d5660d3779923d052c0187f88b395d13f2241a26e0ec8b4b460302b1"
+    },
+    {
+      "path": "module-00/reference-guide-usda-dietary-guidelines-and-acsm-nutrition-standards.html",
+      "format": "html",
+      "bytes": 50828,
+      "sha256": "e22499865868831c23ce26ff125305c080dbf8c7c1fec24419f31c10af690c8d"
+    },
+    {
+      "path": "module-00/setup-ai-professional-repository-student-google-drive.html",
+      "format": "html",
+      "bytes": 26631,
+      "sha256": "4b89feaaa0397504191a698cad705f59ae0d23505026a2bfbde6674dcfc69711"
+    },
+    {
+      "path": "module-00/Module-00-Master.html",
+      "format": "html",
+      "bytes": 48484,
+      "sha256": "9ce2a7e5b589ea49089f6d65196183572b768d711e1a96753f274f3ee5dcc8ef"
+    },
+    {
+      "path": "module-00/Module-00-Master.md",
+      "format": "markdown",
+      "bytes": 12868,
+      "sha256": "db0488303269b0c3fc87f990ab4b0c530aee52e2f2184bf64d52ed8c9fc82083"
+    },
+    {
+      "path": "module-01/mod-01-lab-and-simulation-01.html",
+      "format": "html",
+      "bytes": 56613,
+      "sha256": "f69a67cdad520ed2bb69a42389a9fe56852bf80c30ec836da2ad28be23462263"
+    },
+    {
+      "path": "module-01/mod-01-lab-and-simulation-01.md",
+      "format": "markdown",
+      "bytes": 18983,
+      "sha256": "fc9567aef7672752462b514201dd1fa9e3bd258fdfb51218cd093fad4d886fc7"
+    },
+    {
+      "path": "module-01/mod-01-lab-and-simulation-02.html",
+      "format": "html",
+      "bytes": 66371,
+      "sha256": "8ea04b94990bf911033d056cbc4a0605d5396d92e76798bdb8c97bc5070283a8"
+    },
+    {
+      "path": "module-01/mod-01-lab-and-simulation-02.md",
+      "format": "markdown",
+      "bytes": 21835,
+      "sha256": "a0449decaf169c05626923289c212c80c8f568cdd5342ff8d39810c44f1c1567"
+    },
+    {
+      "path": "module-01/mod-01-clinical-discussion.html",
+      "format": "html",
+      "bytes": 30122,
+      "sha256": "3ddbeef82a2ae6436d54c787552b6c643f4d223097cccece6c3b720c31b1e990"
+    },
+    {
+      "path": "module-01/mod-01-clinical-discussion.md",
+      "format": "markdown",
+      "bytes": 7951,
+      "sha256": "51f33e55e9262ebc4b0589915f591aef340fe87950a21bc3b36d353a5d7afacf"
+    },
+    {
+      "path": "module-01/mod-01-overview-daily-calorie-and-macronutrient-balance.html",
+      "format": "html",
+      "bytes": 28834,
+      "sha256": "6352de6d83ff6258316e90d077801aa89b3e7bd7777860947bb50ea6d5a8cb6c"
+    },
+    {
+      "path": "module-01/mod-01-overview-daily-calorie-and-macronutrient-balance.md",
+      "format": "markdown",
+      "bytes": 10465,
+      "sha256": "5ed26acfcf60e4f760d336ea3a38ef4b657e1ee08290c6ac8c38c49d37cb8eb4"
+    },
+    {
+      "path": "module-01/mod-01-required-readings-daily-calorie-and-macronutrient-balance.html",
+      "format": "html",
+      "bytes": 41086,
+      "sha256": "ab8e1da9273524a5a5df109c98495fbc53fab1893bd51eb8bae872e5e3620ace"
+    },
+    {
+      "path": "module-01/mod-01-required-readings-daily-calorie-and-macronutrient-balance.md",
+      "format": "markdown",
+      "bytes": 13812,
+      "sha256": "ce2d581383b59fce4a90b96511bcf95b63a4b98e760c4ad91a649fe487907f5a"
+    },
+    {
+      "path": "module-01/mod-01-summary-and-wrap-up-daily-calorie-and-macronutrient-balance.html",
+      "format": "html",
+      "bytes": 43860,
+      "sha256": "5d9123aea3a41a5e2958a4625edd295cac37328860893259710f9c38d593ce20"
+    },
+    {
+      "path": "module-01/Module-01-Master.html",
+      "format": "html",
+      "bytes": 27410,
+      "sha256": "f4ec5243dd277065d81f6e597093781c4135f9fe00df8e229568a4844a969ce4"
+    },
+    {
+      "path": "module-01/Module-01-Master.md",
+      "format": "markdown",
+      "bytes": 11449,
+      "sha256": "483674448942eafe5e00602a03353d129823f83da99da237ba21e78e6fe3c1af"
+    },
+    {
+      "path": "module-02/mod-02-lab-and-simulation-01.html",
+      "format": "html",
+      "bytes": 86150,
+      "sha256": "9f4b99dda0b87b3ff6a4fc4aae0d07c1b1e422d94ac622c8ae60d877f1e24594"
+    },
+    {
+      "path": "module-02/mod-02-lab-and-simulation-01.md",
+      "format": "markdown",
+      "bytes": 18964,
+      "sha256": "381fa0d86c6e16fd154340238b4eca3528b8527b2df971c169dc52cff9a8dcec"
+    },
+    {
+      "path": "module-02/mod-02-lab-and-simulation-02.html",
+      "format": "html",
+      "bytes": 81146,
+      "sha256": "69c2f2e3cf8b8b56e2ce3cfeeb58f5569317786cc9cfce931d40cf976c0d14f2"
+    },
+    {
+      "path": "module-02/mod-02-lab-and-simulation-02.md",
+      "format": "markdown",
+      "bytes": 19003,
+      "sha256": "3a2f9159570018581758da3ba60d2becfc93a1f9a4ccc3f688c40b3e0f7cb731"
+    },
+    {
+      "path": "module-02/mod-02-clinical-discussion.html",
+      "format": "html",
+      "bytes": 66333,
+      "sha256": "60fbed2a2ab207c85feb7ac9b7f07925ec744e6fc25a2cb6f3890df2121a8827"
+    },
+    {
+      "path": "module-02/mod-02-clinical-discussion.md",
+      "format": "markdown",
+      "bytes": 15137,
+      "sha256": "6de6895affab9bbb44184d12914ec0ba713797c412e776eac7dc279ed4528da4"
+    },
+    {
+      "path": "module-02/mod-02-overview-whole-food-carbohydrates-and-energy-fueling.html",
+      "format": "html",
+      "bytes": 23205,
+      "sha256": "539e81aa39cff4bc91ff3f4f0af182dc976dd0ac7822bb17e6665e1b96bb4f2c"
+    },
+    {
+      "path": "module-02/mod-02-overview-whole-food-carbohydrates-and-energy-fueling.md",
+      "format": "markdown",
+      "bytes": 8605,
+      "sha256": "c829da7e041dc0658495afb53a5ec6dab9c0e173d5ae88626a57a1b88c68af4d"
+    },
+    {
+      "path": "module-02/mod-02-required-readings-whole-food-carbohydrates-and-energy-fueling.html",
+      "format": "html",
+      "bytes": 31482,
+      "sha256": "8780f2127ee59240d62576598f42dd5cdfa633c69c579a19d23b8515f16b186e"
+    },
+    {
+      "path": "module-02/mod-02-required-readings-whole-food-carbohydrates-and-energy-fueling.md",
+      "format": "markdown",
+      "bytes": 10788,
+      "sha256": "07eadcc140ab60c9858f67bc7303d7f64e6b6bffa876a5a379f90c3c6f00bbce"
+    },
+    {
+      "path": "module-02/mod-02-summary-and-wrap-up-whole-food-carbohydrates-and-energy-fueling.html",
+      "format": "html",
+      "bytes": 43281,
+      "sha256": "4fd6ee5655731504404291cf3febd944786fb8bd7f4563fde78ccc52b68cfea9"
+    },
+    {
+      "path": "module-02/Module-02-Master.html",
+      "format": "html",
+      "bytes": 26310,
+      "sha256": "90fbf21149baa74fb368a9a9e04dad9c1df4e2a8cc34ea0f1ac4f22570283b5c"
+    },
+    {
+      "path": "module-02/Module-02-Master.md",
+      "format": "markdown",
+      "bytes": 10409,
+      "sha256": "b01d87d37587d5f55d3e8272a81ef545f69139745eb8e2155a0cb12810504035"
+    },
+    {
+      "path": "module-03/mod-03-lab-and-simulation-01.html",
+      "format": "html",
+      "bytes": 66780,
+      "sha256": "2029f5dec0917451b79afc254c3a22be6834b07c5a941a48e91cee2cf9fc6f9d"
+    },
+    {
+      "path": "module-03/mod-03-lab-and-simulation-01.md",
+      "format": "markdown",
+      "bytes": 22128,
+      "sha256": "46e3b32ed16f79474664281af10fc04b0e8c7d91284a1d492f65bf23e26aa44c"
+    },
+    {
+      "path": "module-03/mod-03-lab-and-simulation-02.html",
+      "format": "html",
+      "bytes": 56422,
+      "sha256": "d279e0367199054b232bb40d7d696edd5e99eef3d2b90c84c7b16c0eaa2e3b33"
+    },
+    {
+      "path": "module-03/mod-03-lab-and-simulation-02.md",
+      "format": "markdown",
+      "bytes": 18862,
+      "sha256": "731dc605c810814e4e6fe195e41aab6045b7904bc40d6c374e755f01dd62e088"
+    },
+    {
+      "path": "module-03/mod-03-clinical-discussion.html",
+      "format": "html",
+      "bytes": 42830,
+      "sha256": "c2e8117d003f36f62850b640a2f1474d1233b9cabda4784c7e74cb6e9404144e"
+    },
+    {
+      "path": "module-03/mod-03-clinical-discussion.md",
+      "format": "markdown",
+      "bytes": 13824,
+      "sha256": "4cb5e1b9f26bd2104da3acc78e3d993f0d84c6dbe5a9ce2ad2b6716bf36c2a1d"
+    },
+    {
+      "path": "module-03/mod-03-overview-whole-food-protein-and-muscle-maintenance.html",
+      "format": "html",
+      "bytes": 29163,
+      "sha256": "67447f2edd8ea4aac95c95afa2a83e92b71178dae8ac224a00367b5a261ffaad"
+    },
+    {
+      "path": "module-03/mod-03-overview-whole-food-protein-and-muscle-maintenance.md",
+      "format": "markdown",
+      "bytes": 10830,
+      "sha256": "fecf195012aefe202f75e50bc53a138103a31673db27d8cdf7133ad106122929"
+    },
+    {
+      "path": "module-03/mod-03-required-readings-whole-food-protein-and-muscle-maintenance.html",
+      "format": "html",
+      "bytes": 47607,
+      "sha256": "e466036f1ef9f2d4aee928e393b291cc54064fc54fd37ce5c8f8b4282bf9e23b"
+    },
+    {
+      "path": "module-03/mod-03-required-readings-whole-food-protein-and-muscle-maintenance.md",
+      "format": "markdown",
+      "bytes": 16371,
+      "sha256": "1f1d27872e097f4d86f393197f00eb279885db088d882a6a3b1a722a9264d61d"
+    },
+    {
+      "path": "module-03/mod-03-summary-and-wrap-up-whole-food-protein-and-muscle-maintenance.html",
+      "format": "html",
+      "bytes": 43311,
+      "sha256": "0aa5f40023b277f0b6e3455dd483f9eae5930ef105a40d367adfbc657906f983"
+    },
+    {
+      "path": "module-03/Module-03-Master.html",
+      "format": "html",
+      "bytes": 26441,
+      "sha256": "b61261ff610692177f1f91ec3c4eaeed749908214e0e05f02ca85226b3d80289"
+    },
+    {
+      "path": "module-03/Module-03-Master.md",
+      "format": "markdown",
+      "bytes": 10616,
+      "sha256": "9b62334ef9698633b5fc2deabd68ad3b55301ccb7828e0547f0b815d4b8f71e2"
+    },
+    {
+      "path": "module-04/mod-04-lab-and-simulation-01.html",
+      "format": "html",
+      "bytes": 68564,
+      "sha256": "06dca4e192e612ce0687ea8dcf0f9488929d25d068a3a9886ac800efcb38773e"
+    },
+    {
+      "path": "module-04/mod-04-lab-and-simulation-01.md",
+      "format": "markdown",
+      "bytes": 23846,
+      "sha256": "b0e82d02e7b849727c6d3ab8e80b129dd9053862562a3ee1d8ad9852901aac49"
+    },
+    {
+      "path": "module-04/mod-04-lab-and-simulation-02.html",
+      "format": "html",
+      "bytes": 55674,
+      "sha256": "37f0450cbecd44039d4440ec8ed6dc8d3febf0d6f181e88cb332bf49350f0b71"
+    },
+    {
+      "path": "module-04/mod-04-lab-and-simulation-02.md",
+      "format": "markdown",
+      "bytes": 17995,
+      "sha256": "5fe78f476461d64be6faea145f4b8ca5c2e908f0901bc64d7511bbb5a9f0568e"
+    },
+    {
+      "path": "module-04/mod-04-clinical-discussion.html",
+      "format": "html",
+      "bytes": 42574,
+      "sha256": "ea3a7a92a39a33ea38dee6c5b2b5d17f8b98908c8b84e8433038e8e5c3f44e01"
+    },
+    {
+      "path": "module-04/mod-04-clinical-discussion.md",
+      "format": "markdown",
+      "bytes": 13506,
+      "sha256": "e47256ed860004bccadf32b65390f86eb422e488a7f21920ddb18f703bc20a86"
+    },
+    {
+      "path": "module-04/mod-04-overview-hot-weather-hydration-and-fluid-replacement.html",
+      "format": "html",
+      "bytes": 29209,
+      "sha256": "9a1e2b0580ce61e201a2468f26544feb0522cd4c9af06f73f471a6408a37c334"
+    },
+    {
+      "path": "module-04/mod-04-overview-hot-weather-hydration-and-fluid-replacement.md",
+      "format": "markdown",
+      "bytes": 10798,
+      "sha256": "2207c25277c4cd862c9b88cee335be7f1e290d103701e23030b957b9c4da88d3"
+    },
+    {
+      "path": "module-04/mod-04-required-readings-hot-weather-hydration-and-fluid-replacement.html",
+      "format": "html",
+      "bytes": 41460,
+      "sha256": "dbb99e79474c2048b883feedcdcf9873a031ec8210667248cb9d865b6dc06ebd"
+    },
+    {
+      "path": "module-04/mod-04-required-readings-hot-weather-hydration-and-fluid-replacement.md",
+      "format": "markdown",
+      "bytes": 14532,
+      "sha256": "69bc68dae4a3c45b3620a1da2b95a086d6a664c1492594eca51adce18f06fa0a"
+    },
+    {
+      "path": "module-04/mod-04-summary-and-wrap-up-hot-weather-hydration-and-fluid-replacement.html",
+      "format": "html",
+      "bytes": 44892,
+      "sha256": "e6119d31e6ab7bbc4bf640b6ffc2c1cd72894d9301aca94524e264aa754d48c5"
+    },
+    {
+      "path": "module-04/Module-04-Master.html",
+      "format": "html",
+      "bytes": 26366,
+      "sha256": "613f7246454918c40105a05740060b44a54b4474af8ddff06bb3c4c9fedc7cbc"
+    },
+    {
+      "path": "module-04/Module-04-Master.md",
+      "format": "markdown",
+      "bytes": 11119,
+      "sha256": "96e9b008c1fe8c00cf67792684eca545965de110f6d14bc9903e396978e3fd3c"
+    },
+    {
+      "path": "module-05/mod-05-lab-and-simulation-01.html",
+      "format": "html",
+      "bytes": 83399,
+      "sha256": "d91b7022b0275e3c34a0f1f96f4b4bbdcc25a4bfa414ed4a4f2628f813784035"
+    },
+    {
+      "path": "module-05/mod-05-lab-and-simulation-01.md",
+      "format": "markdown",
+      "bytes": 21837,
+      "sha256": "dfb5cbc07b6be27ba65bf90170d0cd5f8b12b8d489283bbdaefeb11f58286fba"
+    },
+    {
+      "path": "module-05/mod-05-lab-and-simulation-02.html",
+      "format": "html",
+      "bytes": 55998,
+      "sha256": "8be8836038eca5d84d66950460b2998437c962776b613fc18abeff2f4372b19a"
+    },
+    {
+      "path": "module-05/mod-05-lab-and-simulation-02.md",
+      "format": "markdown",
+      "bytes": 18687,
+      "sha256": "108662b1600e6802a4d48e03c7dca8cc206b430e0ac6d771a4073372e89c709c"
+    },
+    {
+      "path": "module-05/mod-05-clinical-discussion.html",
+      "format": "html",
+      "bytes": 43028,
+      "sha256": "221b0aef767e20783eb9811a7a0a0bfd4a783a4980e946f4ddd3ab2f8a405017"
+    },
+    {
+      "path": "module-05/mod-05-clinical-discussion.md",
+      "format": "markdown",
+      "bytes": 14310,
+      "sha256": "2be54d7fb3a9414759c70071823068f9601d4ae4480875b93cf085a977b42253"
+    },
+    {
+      "path": "module-05/mod-05-overview-exercise-fuel-and-energy-systems.html",
+      "format": "html",
+      "bytes": 29322,
+      "sha256": "e370e0f9e46ed9f88aaab2cdcece9dd38fff20d3eab8dbda24a51fd0acbb9dea"
+    },
+    {
+      "path": "module-05/mod-05-overview-exercise-fuel-and-energy-systems.md",
+      "format": "markdown",
+      "bytes": 10934,
+      "sha256": "0a5fe1bd884b9acaa3a6a4ae4f6659ee163bbabb00a53772a2f995e4d95277f5"
+    },
+    {
+      "path": "module-05/mod-05-required-readings-exercise-fuel-and-energy-systems.html",
+      "format": "html",
+      "bytes": 43073,
+      "sha256": "fc264b591c5c113c3f223f51f8e1118618751f0446b0756238e99b901d553e19"
+    },
+    {
+      "path": "module-05/mod-05-required-readings-exercise-fuel-and-energy-systems.md",
+      "format": "markdown",
+      "bytes": 14553,
+      "sha256": "c58ee2c310978da67bed09ac1ea919e919a3bf22295dd98322b842561e16710d"
+    },
+    {
+      "path": "module-05/mod-05-summary-and-wrap-up-exercise-fuel-and-energy-systems.html",
+      "format": "html",
+      "bytes": 52025,
+      "sha256": "90630a0d960066c24e83a295e07a779c1b574a1276b52e09146ee47d62e80de6"
+    },
+    {
+      "path": "module-05/Module-05-Master.html",
+      "format": "html",
+      "bytes": 26309,
+      "sha256": "4a217c8289494e5b3eeb4f006dfcad43e92df1dfb50e1051d698141f286de771"
+    },
+    {
+      "path": "module-05/Module-05-Master.md",
+      "format": "markdown",
+      "bytes": 10833,
+      "sha256": "e7a55dee65b00f5dd5f9b6fbb4ffcda55b742993876c3b886a30d17a878bdbe5"
+    },
+    {
+      "path": "module-06/mod-06-lab-and-simulation-01.html",
+      "format": "html",
+      "bytes": 47603,
+      "sha256": "733fba9698c2a5cc26587852b472c1e9dd9a70bcf47b939cd78ee086814fd2dc"
+    },
+    {
+      "path": "module-06/mod-06-lab-and-simulation-01.md",
+      "format": "markdown",
+      "bytes": 15619,
+      "sha256": "3291b4b7a9f2be6561c6adee0e8403fa4bcacedc9e5a5ccbf1c9c1695301d536"
+    },
+    {
+      "path": "module-06/mod-06-lab-and-simulation-02.html",
+      "format": "html",
+      "bytes": 56647,
+      "sha256": "6f68dcb150d8194cc0244debaca6c0cd7bdba6d52b04b307681a34a0804496cf"
+    },
+    {
+      "path": "module-06/mod-06-lab-and-simulation-02.md",
+      "format": "markdown",
+      "bytes": 19176,
+      "sha256": "b839c6075e06e29bdd674bc408e8cedfa454f237882c520f3947643c158be545"
+    },
+    {
+      "path": "module-06/mod-06-clinical-discussion.html",
+      "format": "html",
+      "bytes": 44577,
+      "sha256": "4f5c4790dd5adaddc050123adaf9ac4b08d9ff5c970005b61a511b5db3a00973"
+    },
+    {
+      "path": "module-06/mod-06-clinical-discussion.md",
+      "format": "markdown",
+      "bytes": 15393,
+      "sha256": "67c039f43b2a038812a2ef473b004470812f16f8e0665e207a1bcc6a74eae15f"
+    },
+    {
+      "path": "module-06/mod-06-overview-essential-vitamins-minerals-and-daily-hydration.html",
+      "format": "html",
+      "bytes": 30099,
+      "sha256": "171abd784807cefaff14c4e0ee06c8f036f8bfcf3661b3178ec8bb48b2a66615"
+    },
+    {
+      "path": "module-06/mod-06-overview-essential-vitamins-minerals-and-daily-hydration.md",
+      "format": "markdown",
+      "bytes": 11474,
+      "sha256": "d7b66a14a65e6bd6164db7adf61806fee3e2286dfae7f1d83ed69c220bed1d95"
+    },
+    {
+      "path": "module-06/mod-06-required-readings-essential-vitamins-minerals-and-daily-hydration.html",
+      "format": "html",
+      "bytes": 23984,
+      "sha256": "8ec5a21fda6460d146b4a04c82326ff1c54b57ea123ac2debbf9417a680f5ca3"
+    },
+    {
+      "path": "module-06/mod-06-required-readings-essential-vitamins-minerals-and-daily-hydration.md",
+      "format": "markdown",
+      "bytes": 10391,
+      "sha256": "48cdcf0212018fd218b6c1c61dd46de6b99b563f165f12a13dff07b35c797d58"
+    },
+    {
+      "path": "module-06/mod-06-summary-and-wrap-up-essential-vitamins-minerals-and-daily-hydration.html",
+      "format": "html",
+      "bytes": 51834,
+      "sha256": "6e6c2f18f6897fdf34ffae24685c776bf733d87438c0c6a0acfac08a6525c27d"
+    },
+    {
+      "path": "module-06/Module-06-Master.html",
+      "format": "html",
+      "bytes": 28947,
+      "sha256": "2cb5413bfc6ea10dc94419e529b100a6ad3f84299fa68e8d599b3638418f0f01"
+    },
+    {
+      "path": "module-06/Module-06-Master.md",
+      "format": "markdown",
+      "bytes": 13122,
+      "sha256": "c786a8bc59f43ecaf1ad84bb06fae0c47e42a5e93c4b8933646d4c87dcf9b68a"
+    },
+    {
+      "path": "module-07/mod-07-lab-and-simulation-01.html",
+      "format": "html",
+      "bytes": 83957,
+      "sha256": "1f3e7a96138f31057587f39922c65f89ecc49fbff51e13679e6382b3be0bc853"
+    },
+    {
+      "path": "module-07/mod-07-lab-and-simulation-01.md",
+      "format": "markdown",
+      "bytes": 19867,
+      "sha256": "967ec20c8c1647805b25f0bbb290ececa3ad1ba639b7d9b9d72979d986493d85"
+    },
+    {
+      "path": "module-07/mod-07-lab-and-simulation-02.html",
+      "format": "html",
+      "bytes": 62029,
+      "sha256": "cd82becfab096a3427d54ddf79b6d8938debfc9e498f6dd144e928b4eaf6d800"
+    },
+    {
+      "path": "module-07/mod-07-lab-and-simulation-02.md",
+      "format": "markdown",
+      "bytes": 18897,
+      "sha256": "1e89e13910586085481bf1f90b593554fb7390872e1b03ed30ef2d11d27ba5f0"
+    },
+    {
+      "path": "module-07/mod-07-clinical-discussion.html",
+      "format": "html",
+      "bytes": 38884,
+      "sha256": "a91da320a75dd028245f96908f27580ef75a5170f48638547c74df0aacf823c2"
+    },
+    {
+      "path": "module-07/mod-07-clinical-discussion.md",
+      "format": "markdown",
+      "bytes": 10898,
+      "sha256": "45e86933032732c8767ada5928afb41e7e5084048368873667f698f498750804"
+    },
+    {
+      "path": "module-07/mod-07-overview-protein-timing-and-post-workout-muscle-recovery.html",
+      "format": "html",
+      "bytes": 28735,
+      "sha256": "d96104e434d3c3b16909547841783b913968b82319642d143e70315bf16daf3b"
+    },
+    {
+      "path": "module-07/mod-07-overview-protein-timing-and-post-workout-muscle-recovery.md",
+      "format": "markdown",
+      "bytes": 11141,
+      "sha256": "4f155a8156f04872905739571cec1ff0c767dbd23cb3b5f6de52d6c78f125f10"
+    },
+    {
+      "path": "module-07/mod-07-required-readings-protein-timing-and-post-workout-muscle-recovery.html",
+      "format": "html",
+      "bytes": 31784,
+      "sha256": "b5d36e923927445c92d3002ef0b74220b73bdc9351af724b91c37258fca91850"
+    },
+    {
+      "path": "module-07/mod-07-required-readings-protein-timing-and-post-workout-muscle-recovery.md",
+      "format": "markdown",
+      "bytes": 10452,
+      "sha256": "e322803fe6e4aa5dd30e316f23b609bdd84efd22539e02fb36efadb7a03ed51d"
+    },
+    {
+      "path": "module-07/mod-07-summary-and-wrap-up-protein-timing-and-post-workout-muscle-recovery.html",
+      "format": "html",
+      "bytes": 51711,
+      "sha256": "17b8123e90b016aa013e658b8aef62fdecf4de128650a86cade75f787048c61b"
+    },
+    {
+      "path": "module-07/Module-07-Master.html",
+      "format": "html",
+      "bytes": 21379,
+      "sha256": "f32e7937e0c0d996bb6fd20523827d284b40204a2b0848ffa03d4ab9483a1a68"
+    },
+    {
+      "path": "module-07/Module-07-Master.md",
+      "format": "markdown",
+      "bytes": 10637,
+      "sha256": "073a16d28408968622da113bf6b7af979747b6f2bc3801475d5cd709a0ddca8d"
+    },
+    {
+      "path": "module-08/mod-08-lab-and-simulation-01.html",
+      "format": "html",
+      "bytes": 17514,
+      "sha256": "0c2dd75769a309688ec3b0cb70d1624073553b06a3084f18276be7ef1f6c1b2b"
+    },
+    {
+      "path": "module-08/mod-08-lab-and-simulation-01.md",
+      "format": "markdown",
+      "bytes": 5247,
+      "sha256": "db418534e4c46b8105cc9ba736f141a8891e54ee37db92cb8782432d7e9203bf"
+    },
+    {
+      "path": "module-08/mod-08-lab-and-simulation-02.html",
+      "format": "html",
+      "bytes": 47600,
+      "sha256": "f1c7daf35a2e4d29e6134457b47c65dbfeedba42f27cfdb7228d3e593b08307d"
+    },
+    {
+      "path": "module-08/mod-08-lab-and-simulation-02.md",
+      "format": "markdown",
+      "bytes": 15621,
+      "sha256": "6338df1ce2d48ff1fe84f23afc0d7f660d8bc53aec312d08782598c23cdeb041"
+    },
+    {
+      "path": "module-08/mod-08-lab-and-simulation-03.html",
+      "format": "html",
+      "bytes": 43494,
+      "sha256": "5bcfd2d119068d8046adf50fa46a6a861423ee85fee49bf84443ebda738c8e14"
+    },
+    {
+      "path": "module-08/mod-08-lab-and-simulation-03.md",
+      "format": "markdown",
+      "bytes": 11583,
+      "sha256": "4db8698ab29521f18caafa6c297015d2329321072184624179d84c146c1b4d5f"
+    },
+    {
+      "path": "module-08/mod-08-overview-sweat-rate-calculations-and-desert-heat-safety.html",
+      "format": "html",
+      "bytes": 28720,
+      "sha256": "d81663ef345e03aeca9147d802934a5ee3a56c25ed1565b738042056879de165"
+    },
+    {
+      "path": "module-08/mod-08-overview-sweat-rate-calculations-and-desert-heat-safety.md",
+      "format": "markdown",
+      "bytes": 11142,
+      "sha256": "8e36114cc5e1177bbd34d6cb8dd3e612b2cbeec163f89aa703ee55606cea9c32"
+    },
+    {
+      "path": "module-08/mod-08-required-readings-sweat-rate-calculations-and-desert-heat-safety.html",
+      "format": "html",
+      "bytes": 33702,
+      "sha256": "a95d97565942d48f868205a06c80833b2586560571b3c59a4770b3e499aa5a0b"
+    },
+    {
+      "path": "module-08/mod-08-required-readings-sweat-rate-calculations-and-desert-heat-safety.md",
+      "format": "markdown",
+      "bytes": 12313,
+      "sha256": "1e8dd84bdb1ea95125d997d7f32d22aa819eebfcb4c9cca6102dc75d43609025"
+    },
+    {
+      "path": "module-08/mod-08-summary-and-wrap-up-sweat-rate-calculations-and-desert-heat-safety.html",
+      "format": "html",
+      "bytes": 45079,
+      "sha256": "f1885d9cc72de60c7318a1d1b620b2a4d3f7572c330bc667abb7401a3a2ab446"
+    },
+    {
+      "path": "module-08/Module-08-Master.html",
+      "format": "html",
+      "bytes": 20984,
+      "sha256": "73bd51213feb18c0fdb84869532973a359611e00e6755a50b817d35de6bbc8cd"
+    },
+    {
+      "path": "module-08/Module-08-Master.md",
+      "format": "markdown",
+      "bytes": 10512,
+      "sha256": "323c5676043e058df9e60c10ea947900580176f1f5bafff560ca86b669df57b6"
+    },
+    {
+      "path": "module-09/mod-09-lab-and-simulation-01.html",
+      "format": "html",
+      "bytes": 70842,
+      "sha256": "902cb1f274685be0620d8912d861e3aa4ce13b1256e55778fbfc20925faf8397"
+    },
+    {
+      "path": "module-09/mod-09-lab-and-simulation-01.md",
+      "format": "markdown",
+      "bytes": 17420,
+      "sha256": "78c5ac6d9bc4f3cc1b810a6da288ddc3180e691e031d992813fd1220aa5a4cd1"
+    },
+    {
+      "path": "module-09/mod-09-lab-and-simulation-02.html",
+      "format": "html",
+      "bytes": 67509,
+      "sha256": "773126013d2e665c284dcb8246ea1d013a45051aaa17f34bf8bd51653485ad24"
+    },
+    {
+      "path": "module-09/mod-09-lab-and-simulation-02.md",
+      "format": "markdown",
+      "bytes": 24740,
+      "sha256": "7c855538e8161414aa88abefb78fadb5f4b9cbe4e4d5b3670d9a774c4f1a2c20"
+    },
+    {
+      "path": "module-09/mod-09-clinical-discussion.html",
+      "format": "html",
+      "bytes": 45761,
+      "sha256": "1cee50c51dd4bb7a786108835ddcdf3170c5b5e903e8b536cc53ebda2bbc58b0"
+    },
+    {
+      "path": "module-09/mod-09-clinical-discussion.md",
+      "format": "markdown",
+      "bytes": 14745,
+      "sha256": "d436d9b75475c0313e6429b160d3f68e22ca79a00aa98feacd949193dfb5012b"
+    },
+    {
+      "path": "module-09/mod-09-overview-electrolytes-sweat-sodium-and-hydration-balance.html",
+      "format": "html",
+      "bytes": 27783,
+      "sha256": "de50432eed9e211e80d9d6f3f450c3661df43927363512c23790db22ee579c02"
+    },
+    {
+      "path": "module-09/mod-09-overview-electrolytes-sweat-sodium-and-hydration-balance.md",
+      "format": "markdown",
+      "bytes": 10646,
+      "sha256": "7f194f411555f21a863e632564d501aa21cba140a5eec5ce360ce9228468578f"
+    },
+    {
+      "path": "module-09/mod-09-required-readings-electrolytes-sweat-sodium-and-hydration-balance.html",
+      "format": "html",
+      "bytes": 30820,
+      "sha256": "31c4d45aad8b1c3b37c904efbad0d8024dc7460266b8626456b1d652436729ff"
+    },
+    {
+      "path": "module-09/mod-09-required-readings-electrolytes-sweat-sodium-and-hydration-balance.md",
+      "format": "markdown",
+      "bytes": 11899,
+      "sha256": "358d7769b486e914672723ce4430f1ed758707620501a4069dc18a1db2904cba"
+    },
+    {
+      "path": "module-09/mod-09-summary-and-wrap-up-electrolytes-sweat-sodium-and-hydration-balance.html",
+      "format": "html",
+      "bytes": 44886,
+      "sha256": "064e015773bf96812ed307d312f4d2f621c2bd22eda8e0841b0e5bc0b4c79721"
+    },
+    {
+      "path": "module-09/Module-09-Master.html",
+      "format": "html",
+      "bytes": 21100,
+      "sha256": "fcc5cb0e09fbf3a7378cee70dafc5a519159953baed878bfdf797072c3082dd0"
+    },
+    {
+      "path": "module-09/Module-09-Master.md",
+      "format": "markdown",
+      "bytes": 11398,
+      "sha256": "e68224246e132f997147c2456a700cc28535215bfab6bb67d687e7323ccbbf23"
+    },
+    {
+      "path": "module-10/mod-10-lab-and-simulation-01.html",
+      "format": "html",
+      "bytes": 76099,
+      "sha256": "a401761265621ded265bc031de47e0bbc76b579e2f359912b831a18b327796e4"
+    },
+    {
+      "path": "module-10/mod-10-lab-and-simulation-01.md",
+      "format": "markdown",
+      "bytes": 22542,
+      "sha256": "08ff6a76f634d1e907c44ecd189809f3dd932c6c17c88df2342e587da8359530"
+    },
+    {
+      "path": "module-10/mod-10-lab-and-simulation-02.html",
+      "format": "html",
+      "bytes": 85132,
+      "sha256": "a51724bb1a6309d9bb73883b0f485805d2973c30cc546e20c4c605b551fbc29c"
+    },
+    {
+      "path": "module-10/mod-10-lab-and-simulation-02.md",
+      "format": "markdown",
+      "bytes": 22821,
+      "sha256": "a61a555cc18ba6cbf9bec1934745de106f16ca9809ea69becb92535d904bb368"
+    },
+    {
+      "path": "module-10/mod-10-clinical-discussion.html",
+      "format": "html",
+      "bytes": 36513,
+      "sha256": "bc97b781e70408bba14c7c7e46aaf8e9497e0b40bea7dbbadf4742971c25fccd"
+    },
+    {
+      "path": "module-10/mod-10-clinical-discussion.md",
+      "format": "markdown",
+      "bytes": 9396,
+      "sha256": "3078571eecc65e11da88e36b7c3c98d9d5d58bc406c69b74fdcd4678e63ee565"
+    },
+    {
+      "path": "module-10/mod-10-overview-pre-during-and-post-workout-meal-timing.html",
+      "format": "html",
+      "bytes": 31141,
+      "sha256": "130856d992de20860a106ca8ad2099d5c752471ec306b556de9a999167fa94ba"
+    },
+    {
+      "path": "module-10/mod-10-overview-pre-during-and-post-workout-meal-timing.md",
+      "format": "markdown",
+      "bytes": 12344,
+      "sha256": "4283492934cf258543d2b77084f494469ed4e835d8513598b4ea3a7220b79f27"
+    },
+    {
+      "path": "module-10/mod-10-required-readings-pre-during-and-post-workout-meal-timing.html",
+      "format": "html",
+      "bytes": 32877,
+      "sha256": "968d10f1e2f46e557c0fceff13810f4bf77e331b771dd470157cbe34cdc1b0b5"
+    },
+    {
+      "path": "module-10/mod-10-required-readings-pre-during-and-post-workout-meal-timing.md",
+      "format": "markdown",
+      "bytes": 12102,
+      "sha256": "f13f4378fdecc4f451d64eab7ee2c7d56d17a772961ae6e3d43d1189e40d84a2"
+    },
+    {
+      "path": "module-10/mod-10-summary-and-wrap-up-pre-during-and-post-workout-meal-timing.html",
+      "format": "html",
+      "bytes": 50037,
+      "sha256": "0a5139d378ab1843f7dd92fc07f7ce924fa14efa666e387599ce6d595f0f0799"
+    },
+    {
+      "path": "module-10/Module-10-Master.html",
+      "format": "html",
+      "bytes": 21187,
+      "sha256": "47a96135115cd5d3521d7b89b8df7c2ccebda02aebcca91559c512077d20d893"
+    },
+    {
+      "path": "module-10/Module-10-Master.md",
+      "format": "markdown",
+      "bytes": 11682,
+      "sha256": "f52e255815ce8f29420480381f153c1b307f49a0cf3d66d4d261d84f986c7e91"
+    },
+    {
+      "path": "module-11/mod-11-lab-and-simulation-01.html",
+      "format": "html",
+      "bytes": 60081,
+      "sha256": "10ba6b51ac9bff4a3e3f46b5748304ef486e7be3fafc00ad767578e8dad5c6d9"
+    },
+    {
+      "path": "module-11/mod-11-lab-and-simulation-01.md",
+      "format": "markdown",
+      "bytes": 17732,
+      "sha256": "b1dfd4320a4b2ec09c25ce24734af845356c6623194aabe1553618476461f754"
+    },
+    {
+      "path": "module-11/mod-11-lab-and-simulation-02.html",
+      "format": "html",
+      "bytes": 66155,
+      "sha256": "5a523fa601c0c1382d30427f85cd2d6556220d5833b90000b6b7c3308da2755d"
+    },
+    {
+      "path": "module-11/mod-11-lab-and-simulation-02.md",
+      "format": "markdown",
+      "bytes": 20975,
+      "sha256": "56ca30b1a460cad538e6a182f3e70462e03c814dd80a00cc760efd97ea11bd31"
+    },
+    {
+      "path": "module-11/mod-11-clinical-discussion.html",
+      "format": "html",
+      "bytes": 40330,
+      "sha256": "ec358f6d87b8625af567f2b7a47d30e7724dad44ae3b9755a62f6b2d9562c546"
+    },
+    {
+      "path": "module-11/mod-11-clinical-discussion.md",
+      "format": "markdown",
+      "bytes": 10309,
+      "sha256": "0d1885656781c092e2d278caaa320f1e25d17e820250017b816fa5313c212b14"
+    },
+    {
+      "path": "module-11/mod-11-overview-sports-supplements-label-safety-and-food-first-rules.html",
+      "format": "html",
+      "bytes": 34161,
+      "sha256": "2b80b7dd4ea8cfc5a8b25c4f44e06e4b462c6bb5e93f258e2bffdefacb72e045"
+    },
+    {
+      "path": "module-11/mod-11-overview-sports-supplements-label-safety-and-food-first-rules.md",
+      "format": "markdown",
+      "bytes": 12556,
+      "sha256": "1594b79891414926aea9dc496d4a901d015c66ab5de45d9082c10045678b3554"
+    },
+    {
+      "path": "module-11/mod-11-required-readings-sports-supplements-label-safety-and-food-first-rules.html",
+      "format": "html",
+      "bytes": 36568,
+      "sha256": "210dbc4cba77d291a19fc2bbdc4fc187877194ab9f173b4f2a10eed792fad7d6"
+    },
+    {
+      "path": "module-11/mod-11-required-readings-sports-supplements-label-safety-and-food-first-rules.md",
+      "format": "markdown",
+      "bytes": 12791,
+      "sha256": "1c5099c54e218dbd288a59ebd0cfc0c0c8e3e5e673bc0f65cf6a985de71d8e54"
+    },
+    {
+      "path": "module-11/mod-11-summary-and-wrap-up-sports-supplements-label-safety-and-food-first-rules.html",
+      "format": "html",
+      "bytes": 51467,
+      "sha256": "abc054f28a89de66773747a2f02a11a198af56d8bc3ca503654befe46a731504"
+    },
+    {
+      "path": "module-11/mod-11-summary-and-wrap-up-sports-supplements-label-safety-and-food-first-rules.md",
+      "format": "markdown",
+      "bytes": 18244,
+      "sha256": "ef7d31d21978975922eca6a0cae8a2a9f15c18d3798bf1f1ed3208803e822d31"
+    },
+    {
+      "path": "module-11/Module-11-Master.html",
+      "format": "html",
+      "bytes": 21482,
+      "sha256": "5059254dcd20e134d1424f87c5228e413eb4dc14c1a43db9beaf9ce59d14da6e"
+    },
+    {
+      "path": "module-11/Module-11-Master.md",
+      "format": "markdown",
+      "bytes": 11587,
+      "sha256": "c010395bf66543cbe9e87ea67209eaa0c37a5b19e45a67879ef0cbd056d41376"
+    },
+    {
+      "path": "module-12/mod-12-lab-and-simulation-01.html",
+      "format": "html",
+      "bytes": 55460,
+      "sha256": "26da0a2158f18183c882fc3bcced1be1f0004a7275887fdc57a4eb0f0de24747"
+    },
+    {
+      "path": "module-12/mod-12-lab-and-simulation-01.md",
+      "format": "markdown",
+      "bytes": 13667,
+      "sha256": "cf298c75cddf0099c8851175ca8353e6949dca6e362670d903dd5ebfad7d1aef"
+    },
+    {
+      "path": "module-12/mod-12-lab-and-simulation-02.html",
+      "format": "html",
+      "bytes": 66106,
+      "sha256": "679e471a772c7cc332c5ca3b5870cdded481e4b1e4cb9e2ab96c3d3c930b97a3"
+    },
+    {
+      "path": "module-12/mod-12-lab-and-simulation-02.md",
+      "format": "markdown",
+      "bytes": 18272,
+      "sha256": "5a97115db726e7ee315431aece6cea0f011de6de55dcc2ae0249658cf1efce7c"
+    },
+    {
+      "path": "module-12/mod-12-clinical-discussion.html",
+      "format": "html",
+      "bytes": 54199,
+      "sha256": "f71c056de95cc47d33df3b8f0f9c4f150ccac80438de51d7d006a55552d0606f"
+    },
+    {
+      "path": "module-12/mod-12-clinical-discussion.md",
+      "format": "markdown",
+      "bytes": 11574,
+      "sha256": "43ee0bbfce06d488ccc4a2f24f65f3b442e1424bfd1f6db49c6fefef4f882fbf"
+    },
+    {
+      "path": "module-12/mod-12-overview-healthy-weight-management-and-body-composition.html",
+      "format": "html",
+      "bytes": 37402,
+      "sha256": "7b0d339410881d38abb4eb0d648852e6a6fe94708f0fda276e120ddc220670b3"
+    },
+    {
+      "path": "module-12/mod-12-overview-healthy-weight-management-and-body-composition.md",
+      "format": "markdown",
+      "bytes": 11271,
+      "sha256": "a2774e5cc01549132c1314c6cb98a2eb1d4fd9fe2e6524a7d3013863636235df"
+    },
+    {
+      "path": "module-12/mod-12-required-readings-healthy-weight-management-and-body-composition.html",
+      "format": "html",
+      "bytes": 35822,
+      "sha256": "1a2d1b88fe4e83eb10de0fb04725acf6864d02dbd31f11a4a231746179840dd6"
+    },
+    {
+      "path": "module-12/mod-12-required-readings-healthy-weight-management-and-body-composition.md",
+      "format": "markdown",
+      "bytes": 11432,
+      "sha256": "dae64772a168aab646bde8c91540306772885dc97dbc7bc729ea6b75a2995b67"
+    },
+    {
+      "path": "module-12/mod-12-summary-and-wrap-up-healthy-weight-management-and-body-composition.html",
+      "format": "html",
+      "bytes": 47290,
+      "sha256": "06503366473c5ab82e1107d11df8cf445e7bc011a1f703d22614bd9130263c1d"
+    },
+    {
+      "path": "module-12/Module-12-Master.html",
+      "format": "html",
+      "bytes": 21759,
+      "sha256": "eca791a9cd2f55e2fe4a95364618043a18126c5a7d707bd32487825ba18917aa"
+    },
+    {
+      "path": "module-12/Module-12-Master.md",
+      "format": "markdown",
+      "bytes": 11582,
+      "sha256": "dcb8f7efac5147a4b49443ed124c62a710466e3cb4182153651daeb7b5995aec"
+    },
+    {
+      "path": "module-13/mod-13-lab-and-simulation-01.html",
+      "format": "html",
+      "bytes": 52132,
+      "sha256": "439b3e77402f20a1bb953ed84310d3ad642474a6fd5bf4fc0181df111ba58852"
+    },
+    {
+      "path": "module-13/mod-13-lab-and-simulation-01.md",
+      "format": "markdown",
+      "bytes": 12650,
+      "sha256": "4dca13149f98928bb1ccec2ea827f80aa20ca8f5b6e8b306fbb241b6fa1b8884"
+    },
+    {
+      "path": "module-13/mod-13-lab-and-simulation-02.html",
+      "format": "html",
+      "bytes": 66012,
+      "sha256": "4b3f878a352f919f8b868137f0a55a815c98be8f7f71414642efebdf5b053094"
+    },
+    {
+      "path": "module-13/mod-13-lab-and-simulation-02.md",
+      "format": "markdown",
+      "bytes": 18119,
+      "sha256": "e664af9679d4dc2d093652f06e875da5512fc0c3936680cf13de7e5a17ac71c3"
+    },
+    {
+      "path": "module-13/mod-13-clinical-discussion.html",
+      "format": "html",
+      "bytes": 54263,
+      "sha256": "dd5d92d5b6ddf104a3e36eefdf6f46736cdc71a99d2d61cfa31f8620eef7278b"
+    },
+    {
+      "path": "module-13/mod-13-clinical-discussion.md",
+      "format": "markdown",
+      "bytes": 11604,
+      "sha256": "36e1aa1981262c48ce95832a2bacd06328035625691c817b7213287fbb801f13"
+    },
+    {
+      "path": "module-13/mod-13-overview-disordered-eating-and-low-energy-availability-red-s.html",
+      "format": "html",
+      "bytes": 37341,
+      "sha256": "750d19ce2e344404ed4ff32144261122836afd9e4cda0e2fea85e92f257a0fb5"
+    },
+    {
+      "path": "module-13/mod-13-overview-disordered-eating-and-low-energy-availability-red-s.md",
+      "format": "markdown",
+      "bytes": 11180,
+      "sha256": "3f6c45423a90b7a246c83c2a9f3d4b2704174ba4170670a058cf6f0c9a914867"
+    },
+    {
+      "path": "module-13/mod-13-required-readings-disordered-eating-and-low-energy-availability-red-s.html",
+      "format": "html",
+      "bytes": 36882,
+      "sha256": "8e51b8108b842ce803d1de4dd323ccb99602b003f15c8b90b677a7e194eb97f1"
+    },
+    {
+      "path": "module-13/mod-13-required-readings-disordered-eating-and-low-energy-availability-red-s.md",
+      "format": "markdown",
+      "bytes": 11599,
+      "sha256": "641f1a1a310d12396016dfa1157070e588058b7431127543636693d3488c19d3"
+    },
+    {
+      "path": "module-13/mod-13-summary-and-wrap-up-disordered-eating-and-low-energy-availability-red-s.html",
+      "format": "html",
+      "bytes": 48893,
+      "sha256": "76873af0441fe4cec561011cee8fa885dfefbb9b240e48526adc833edc58898f"
+    },
+    {
+      "path": "module-13/mod-13-summary-and-wrap-up-disordered-eating-and-low-energy-availability-red-s.md",
+      "format": "markdown",
+      "bytes": 18328,
+      "sha256": "82dd9132bc7f917e5d9bcc4646aabb9a3f342ea60ffaaaf1d216ab7511d6f45e"
+    },
+    {
+      "path": "module-13/Module-13-Master.html",
+      "format": "html",
+      "bytes": 21815,
+      "sha256": "dd9f1ba20e0a17afc6e9e9b80b965143e95dd5ea156695880ec407d035ef6cd3"
+    },
+    {
+      "path": "module-13/Module-13-Master.md",
+      "format": "markdown",
+      "bytes": 11678,
+      "sha256": "515cb4a3bd15c09035fe39a94598cf175fa5c14bccbcf22483c153d604ad5880"
+    },
+    {
+      "path": "module-14/mod-14-lab-and-simulation-01.html",
+      "format": "html",
+      "bytes": 31162,
+      "sha256": "07d5802860a999dc9ca0d791b334c536580f150defd32ce385817c3a5449c57d"
+    },
+    {
+      "path": "module-14/mod-14-lab-and-simulation-01.md",
+      "format": "markdown",
+      "bytes": 10562,
+      "sha256": "7915afa9ea1a1c3ebba15fc2be2162c35ba936c0f9809c5bebf62207fca684de"
+    },
+    {
+      "path": "module-14/mod-14-lab-and-simulation-02.html",
+      "format": "html",
+      "bytes": 51849,
+      "sha256": "74f0c97ffbf23ac57eb2d64de948d17a55e5373a8c84454eac8df1f46c7df81a"
+    },
+    {
+      "path": "module-14/mod-14-lab-and-simulation-02.md",
+      "format": "markdown",
+      "bytes": 12363,
+      "sha256": "097d424be5b54a0021c4b3da2fe28e911483de82c393c86e23cd465a5f0f91a2"
+    },
+    {
+      "path": "module-14/mod-14-lab-and-simulation-03.html",
+      "format": "html",
+      "bytes": 38521,
+      "sha256": "58f1c962f2ec17444a57e39a112057f871d287516aaca00748251c3764b6b455"
+    },
+    {
+      "path": "module-14/mod-14-lab-and-simulation-03.md",
+      "format": "markdown",
+      "bytes": 9419,
+      "sha256": "4d6b94aecaa7e840fef6549c20379945dac6ec6fdc0bbca42cb9e48215ec4db5"
+    },
+    {
+      "path": "module-14/mod-14-overview-lifespan-nutrition-youth-pregnancy-and-older-adults.html",
+      "format": "html",
+      "bytes": 37802,
+      "sha256": "783c6383a619bca16f7ae2fe2d80757b2d3f5b92a9ab59c0cfa19b03ef3098c7"
+    },
+    {
+      "path": "module-14/mod-14-overview-lifespan-nutrition-youth-pregnancy-and-older-adults.md",
+      "format": "markdown",
+      "bytes": 12519,
+      "sha256": "131890fc345f933ca776ab83c0791135a3871b166aaebc3d0e63ab214fc0402f"
+    },
+    {
+      "path": "module-14/mod-14-required-readings-lifespan-nutrition-youth-pregnancy-and-older-adults.html",
+      "format": "html",
+      "bytes": 35016,
+      "sha256": "7266f455d4bd49609296121ad5fe472815c88ce38c36ff0c2eefb513ece0cfe3"
+    },
+    {
+      "path": "module-14/mod-14-required-readings-lifespan-nutrition-youth-pregnancy-and-older-adults.md",
+      "format": "markdown",
+      "bytes": 11131,
+      "sha256": "3a38cdf8c99382b7f356855e884014e43f4f51bcf9859767bcd1397d22b20a5d"
+    },
+    {
+      "path": "module-14/mod-14-summary-and-wrap-up-lifespan-nutrition-youth-pregnancy-and-older-adults.html",
+      "format": "html",
+      "bytes": 46928,
+      "sha256": "2cc371acdb322cd0d6dcf3a842c06ddc52a5072626844a2b7e69887a4256e6b8"
+    },
+    {
+      "path": "module-14/Module-14-Master.html",
+      "format": "html",
+      "bytes": 21895,
+      "sha256": "74ffa4db99ad478d1b9d4d150a36cd30f04055587640f8ef68207c3edaf5610a"
+    },
+    {
+      "path": "module-14/Module-14-Master.md",
+      "format": "markdown",
+      "bytes": 11583,
+      "sha256": "c10ef6f27f311c4f011570490bfaeb20d503a18e762eed9d1c513fcea352050e"
+    },
+    {
+      "path": "module-15/mod-15-lab-and-simulation-01.html",
+      "format": "html",
+      "bytes": 51691,
+      "sha256": "eca1cb2fbd0eea16269314f2ef5c8a8d04e6618cda6fd9ce842aea34367d7d90"
+    },
+    {
+      "path": "module-15/mod-15-lab-and-simulation-01.md",
+      "format": "markdown",
+      "bytes": 12205,
+      "sha256": "49c59557e881ac4b7b841abd1fa29141eb5538d4afb9fc6b2c82507cd798c160"
+    },
+    {
+      "path": "module-15/mod-15-lab-and-simulation-02.html",
+      "format": "html",
+      "bytes": 66758,
+      "sha256": "ed3c92df39cb471795ad03e24ced5504e0b9813cb0807a337697829ef6918b52"
+    },
+    {
+      "path": "module-15/mod-15-lab-and-simulation-02.md",
+      "format": "markdown",
+      "bytes": 18453,
+      "sha256": "f396bdf39e6cac4813d23e70ee34daa2109fad4abd0c06da010fde40607de6b7"
+    },
+    {
+      "path": "module-15/mod-15-clinical-discussion.html",
+      "format": "html",
+      "bytes": 42723,
+      "sha256": "7b6c2fcef6b530e479e7c7f04a41ccc4c63826d4708ed475e89bdca3488fc663"
+    },
+    {
+      "path": "module-15/mod-15-clinical-discussion.md",
+      "format": "markdown",
+      "bytes": 10284,
+      "sha256": "76791f16af85f8859e647fad4f7695bbbcee909964f32da0eda4c92ae5b60f01"
+    },
+    {
+      "path": "module-15/mod-15-overview-nutrition-scope-of-practice-and-complete-client-planning.html",
+      "format": "html",
+      "bytes": 37930,
+      "sha256": "2780a0b8dc5b36e8bfce8c59362accb4334b4ba8dfb2d96db077d2e3b57c1d01"
+    },
+    {
+      "path": "module-15/mod-15-overview-nutrition-scope-of-practice-and-complete-client-planning.md",
+      "format": "markdown",
+      "bytes": 11287,
+      "sha256": "89556ac53dc157fe5a26ea386924c69e8aa0c7ac8da06e7a6362fa4acd77a71e"
+    },
+    {
+      "path": "module-15/mod-15-required-readings-nutrition-scope-of-practice-and-complete-client-planning.html",
+      "format": "html",
+      "bytes": 34316,
+      "sha256": "1e026582f3321a60c1343a5c7e9edb26d9879a921a290a8148c377d7b990655e"
+    },
+    {
+      "path": "module-15/mod-15-required-readings-nutrition-scope-of-practice-and-complete-client-planning.md",
+      "format": "markdown",
+      "bytes": 10852,
+      "sha256": "382030e9bfcd452a97cb1a3328840be56d0f2de9567bd0a932173032273b9f58"
+    },
+    {
+      "path": "module-15/mod-15-summary-and-wrap-up-nutrition-scope-of-practice-and-complete-client-planning.html",
+      "format": "html",
+      "bytes": 28417,
+      "sha256": "cd07f21c481095bb7c21d9fd8ebedb26896ff8651779ab47f0cde1631dcbfb49"
+    },
+    {
+      "path": "module-15/Module-15-Master.html",
+      "format": "html",
+      "bytes": 21930,
+      "sha256": "8ddbaeb85f4c3c540f340b3a02dbf24b9205e910deb7b603914c2347723e0c1d"
+    },
+    {
+      "path": "module-15/Module-15-Master.md",
+      "format": "markdown",
+      "bytes": 11684,
+      "sha256": "9ee566d59dc2812741df2fede80519afb04a8e71a7602ee12678ca245aa093b0"
+    },
+    {
+      "path": "module-16/mod-16-lab-and-simulation-01.html",
+      "format": "html",
+      "bytes": 74023,
+      "sha256": "f08aa5b3a27bb5e2622dd8dccb7390f73a90f34d54254f42da6e923923773ecb"
+    },
+    {
+      "path": "module-16/mod-16-lab-and-simulation-01.md",
+      "format": "markdown",
+      "bytes": 18125,
+      "sha256": "367add55df65ef1429bef356e9404861a103b8ec4d3dda174f5064ba602c320a"
+    },
+    {
+      "path": "module-16/mod-16-overview-final-nutrition-portfolio-and-semester-closeout.html",
+      "format": "html",
+      "bytes": 31784,
+      "sha256": "0f058ec6213dd7d3078f84b429da7667b1a98f6c6706ecd0e490eb8956b7fe5a"
+    },
+    {
+      "path": "module-16/mod-16-overview-final-nutrition-portfolio-and-semester-closeout.md",
+      "format": "markdown",
+      "bytes": 8384,
+      "sha256": "1d3fc7325c4b0e23a2f27cd35bf753058873dc9cb1d4f5a91c67babf64d68e16"
+    },
+    {
+      "path": "module-16/mod-16-required-readings-final-nutrition-portfolio-and-semester-closeout.html",
+      "format": "html",
+      "bytes": 29219,
+      "sha256": "8b46aa6d2c070f9249d57e3464eece0fd59ac0d2f3d32dcfa9755f7d0428d902"
+    },
+    {
+      "path": "module-16/mod-16-required-readings-final-nutrition-portfolio-and-semester-closeout.md",
+      "format": "markdown",
+      "bytes": 10059,
+      "sha256": "6225f48ae742e5fef8daefa5e11b4be8e1296fc3a5eeb6af7b6a7aa774cee67b"
+    },
+    {
+      "path": "module-16/Module-16-Master.html",
+      "format": "html",
+      "bytes": 21013,
+      "sha256": "cefe4dd6c58a4c81ee4478f72615ccfefe126e3956deab752ec84b7bb9c9ebcc"
+    },
+    {
+      "path": "module-16/Module-16-Master.md",
+      "format": "markdown",
+      "bytes": 8226,
+      "sha256": "270d111faffdebddf5450887b7e913ae57bc080d8e4db833bab3ff18f33ed98c"
+    }
+  ]
+}
