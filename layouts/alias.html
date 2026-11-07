@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex, follow">
+  <link rel="canonical" href="{{ .Permalink }}">
+  <meta http-equiv="refresh" content="0; url={{ .Permalink }}">
+  <title>Redirecting to {{ .Permalink }}</title>
+  <script>window.location.replace("{{ .Permalink }}" + window.location.search + window.location.hash);</script>
+</head>
+<body style="font-family: sans-serif; padding: 20px; color: #0B192C; background-color: #FAF8F5;">
+  <p>Redirecting to <a href="{{ .Permalink }}">{{ .Permalink }}</a>...</p>
+</body>
+</html>

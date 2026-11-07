@@ -15,7 +15,6 @@ tags:
   - "Instructional Engineering"
   - "Clinical Protocols"
 lang_default: "en"
-canonical_url: "https://alanpruitt.com/articles/10-ai-safety-auditor-pattern.html"
 categories: ["ai-safety-protocols"]
 ---
 <!-- =========================================================================

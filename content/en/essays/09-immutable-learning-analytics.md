@@ -15,7 +15,6 @@ tags:
   - "Sovereign AI"
   - "FERPA Compliance"
 lang_default: "en"
-canonical_url: "https://alanpruitt.com/articles/09-immutable-learning-analytics.html"
 categories: ["ada-title-ii"]
 ---
 <!-- =========================================================================

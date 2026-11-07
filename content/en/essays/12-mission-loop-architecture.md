@@ -15,7 +15,6 @@ tags:
   - "Health Sciences"
   - "Curriculum-as-Code"
 lang_default: "en"
-canonical_url: "https://alanpruitt.com/articles/12-mission-loop-architecture.html"
 categories: ["curriculum-as-code"]
 ---
 <!-- =========================================================================

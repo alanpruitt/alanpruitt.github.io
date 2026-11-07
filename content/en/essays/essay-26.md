@@ -14,8 +14,11 @@ description: "An analysis of the POUR-Audit framework within Curriculum-as-Code 
 summary: "An analysis of the POUR-Audit framework within Curriculum-as-Code paradigms, highlighting automated verification checks for heading hierarchies, image alt-text, and legacy reference deprecation."
 summary_es: "Un análisis del marco de auditoría POUR dentro de los paradigmas de Currículum como Código, destacando la verificación automatizada de accesibilidad."
 lang_default: "en"
-canonical_url: "https://alanpruitt.com/articles/26-curriculum-as-code-pour-audit-framework.html"
 categories: ["ada-title-ii"]
+aliases:
+  - "/essays/essay-26/"
+  - "/essays/26/"
+  - "/essays/essay26/"
 ---
 ## The POUR-Audit Framework in Curriculum-as-Code
 

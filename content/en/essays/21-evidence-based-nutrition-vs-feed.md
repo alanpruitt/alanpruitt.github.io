@@ -11,7 +11,6 @@ tags: ["CurriculumAsCode", "Nutrition", "SportsNutrition", "SSoT", "InformationL
 summary: "How EXW150 uses Curriculum-as-Code, the Mission Loop framework, and federal SSoT standards to insulate community college students from social media fad diets, predatory supplement claims, and unanchored AI nutrition advice."
 summary_es: "Cómo EXW150 utiliza Currículum como Código, el marco del Bucle de Misión y los estándares federales SSoT para aislar a los estudiantes de dietas de moda, afirmaciones de suplementos y consejos de IA no anclados."
 lang_default: "en"
-canonical_url: "https://alanpruitt.com/articles/21-evidence-based-nutrition-vs-feed.html"
 categories: ["curriculum-as-code"]
 ---
 ## Evidence-Based Nutrition vs. The Feed: Upstream SSoT Governance in Sports Nutrition

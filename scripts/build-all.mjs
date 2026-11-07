@@ -198,6 +198,7 @@ function generateRedirectHtml(targetCanonicalUrl) {
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="robots" content="noindex, follow">
   <meta http-equiv="refresh" content="0; url=${targetCanonicalUrl}">
   <link rel="canonical" href="${targetCanonicalUrl}">
   <title>Redirecting to ${targetCanonicalUrl}</title>
@@ -224,9 +225,12 @@ function deriveAllSlugs(filename, metadata) {
     slugs.add(`essay${num}`);
   }
 
-  // Include explicit frontmatter aliases
+  // Include explicit frontmatter aliases (normalized to bare slug inside essays/)
   if (Array.isArray(metadata.aliases)) {
-    metadata.aliases.forEach(alias => slugs.add(alias.toLowerCase().trim()));
+    metadata.aliases.forEach(alias => {
+      const cleaned = alias.toLowerCase().trim().replace(/^\/+|\/+$/g, '').replace(/^essays\//, '');
+      if (cleaned) slugs.add(cleaned);
+    });
   }
 
   return { primarySlug, allSlugs: Array.from(slugs) };
@@ -278,8 +282,8 @@ function buildAtom(essays) {
   const updated = essays.length ? new Date(essays[0].date).toISOString() : new Date().toISOString();
   const entries = essays.map(essay => `  <entry>
     <title>${escapeXml(essay.title)}</title>
-    <link href="${essay.canonicalUrl}/" />
-    <id>${essay.canonicalUrl}/</id>
+    <link href="${essay.canonicalUrl}" />
+    <id>${essay.canonicalUrl}</id>
     <updated>${new Date(essay.date).toISOString()}</updated>
     <summary>${escapeXml(essay.summary || essay.title)}</summary>
   </entry>`).join('\n');
@@ -423,7 +427,7 @@ function run() {
     const { metadata, markdownBody } = parseFrontmatter(raw);
 
     const { primarySlug, allSlugs } = deriveAllSlugs(file, metadata);
-    const canonicalUrl = `${SITE_ORIGIN}/essays/${primarySlug}`;
+    const canonicalUrl = `${SITE_ORIGIN}/essays/${primarySlug}/`;
     const date = metadata.date || new Date().toISOString().split('T')[0];
 
     const essayData = {

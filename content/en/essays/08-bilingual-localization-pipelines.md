@@ -15,7 +15,6 @@ tags:
   - "Sovereign AI"
   - "OER Accessibility"
 lang_default: "en"
-canonical_url: "https://alanpruitt.com/articles/08-bilingual-localization-pipelines.html"
 categories: ["ada-title-ii"]
 ---
 <!-- =========================================================================

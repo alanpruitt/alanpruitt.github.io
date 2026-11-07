@@ -1,8 +1,14 @@
 ---
 title: "Distribution Archives"
-sitemap:
-  disable: true
 build:
   render: "never"
   list: "never"
+sitemap:
+  disable: true
+cascade:
+  build:
+    render: "never"
+    list: "never"
+  sitemap:
+    disable: true
 ---

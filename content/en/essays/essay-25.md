@@ -7,6 +7,10 @@ slug: "essay-25"
 description: "Why proprietary LMS accessibility checkers create false confidence, how schema divergence masks non-compliance, and how Curriculum-as-Code restores audit parity."
 categories: ["Curriculum-as-Code", "Accessibility", "Higher Education Governance", "ADA Title II"]
 layout: "single"
+aliases:
+  - "/essays/25-curriculum-as-code-sovereign-infrastructure/"
+  - "/essays/25/"
+  - "/essays/essay25/"
 ---
 
 ## The Illusion of the Green Checkmark

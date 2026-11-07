@@ -11,7 +11,6 @@ tags: ["CurriculumAsCode", "Kinesiology", "PhysicalEducation", "PAGA", "PublicHe
 summary: "How EXW101 deploys Curriculum-as-Code, the federal PAGA 2018 SSoT, and the Mission Loop framework to deconstruct systemic inactivity patterns and build community-level health interventions in rural borderland regions."
 summary_es: "Cómo EXW101 utiliza Currículum como Código, el estándar federal PAGA 2018 SSoT y el Bucle de Misión para deconstruir la inactividad sistémica y diseñar intervenciones de salud comunitaria en regiones fronterizas rurales."
 lang_default: "en"
-canonical_url: "https://alanpruitt.com/articles/22-foundational-human-movement-in-the-algorithmic-age.html"
 categories: ["curriculum-as-code"]
 ---
 ## Foundational Human Movement in the Algorithmic Age: PAGA 2018 SSoT & Community Inactivity Interventions
