@@ -83,17 +83,26 @@
       <div class="mt-8 pt-6 border-t border-zinc-200 dark:border-zinc-800 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs text-zinc-900 dark:text-zinc-100">
         <div>
           <p class="font-semibold text-zinc-950 dark:text-white">
-            {{ if eq .Lang "es" }}Consultas Generales o Retainers de Asesoría{{ else }}General Inquiries & Retainer Engagements{{ end }}
+            {{ if eq .Lang "es" }}Consultas Generales, Adquisiciones o Retainers de Asesoría{{ else }}General Inquiries, Institutional Procurement &amp; Retainer Engagements{{ end }}
           </p>
-          <p class="mt-0.5">alan.pruitt@gmail.com &bull; Principal Consultant, Webcognita LLC</p>
+          <p class="mt-0.5">alan.pruitt@gmail.com &bull; Principal Consultant, Webcognita LLC (VOSB &bull; EIN: 81-0809739)</p>
         </div>
-        <a 
-          href="mailto:alan.pruitt@gmail.com?subject=Webcognita%20Executive%20Advisory%20Inquiry" 
-          class="inline-flex min-h-[44px] items-center text-xs font-bold text-zinc-950 dark:text-white underline underline-offset-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white"
-          style="min-height: 44px; display: inline-flex;"
-        >
-          {{ if eq .Lang "es" }}Enviar Correo Directo &rarr;{{ else }}Send Direct Email &rarr;{{ end }}
-        </a>
+        <div class="flex flex-wrap items-center gap-4">
+          <a 
+            href="/contact.html" 
+            class="inline-flex min-h-[44px] items-center text-xs font-bold text-zinc-950 dark:text-white underline underline-offset-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white"
+            style="min-height: 44px; display: inline-flex;"
+          >
+            {{ if eq .Lang "es" }}Directorio de Contacto y Línea de Voz Protegida &rarr;{{ else }}Full Institutional Contact &amp; Voice Directory &rarr;{{ end }}
+          </a>
+          <a 
+            href="mailto:alan.pruitt@gmail.com?subject=Webcognita%20Executive%20Advisory%20Inquiry" 
+            class="inline-flex min-h-[44px] items-center text-xs font-bold text-zinc-950 dark:text-white underline underline-offset-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-zinc-950 dark:focus-visible:outline-white"
+            style="min-height: 44px; display: inline-flex;"
+          >
+            {{ if eq .Lang "es" }}Enviar Correo Directo &rarr;{{ else }}Send Direct Email &rarr;{{ end }}
+          </a>
+        </div>
       </div>
 
     </div>
