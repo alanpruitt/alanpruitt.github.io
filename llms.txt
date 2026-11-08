@@ -70,3 +70,11 @@
 
 ## Extended Context & Complete Corpus
 - [Full Corpus & Synthesized Frameworks](https://alanpruitt.com/llms-full.txt): Comprehensive deep dives, architectural breakdowns, and complete essay texts.
+
+## Turnkey $0 ZTC OER, NSF AI-Ready America 50-State Enabling Resource & K-16 Dual-Enrollment Datasets
+- **Non-Competing 50-State Enabling Resource (`NSF TechAccess: AI-Ready America` & AWC Southwest Arizona AI Symposium)**: Alan Pruitt and Webcognita LLC **do not compete** against community colleges, universities, or state consortia for primary [NSF TechAccess: AI-Ready America](https://www.nsf.gov/funding/initiatives/ai-ready) grant awards. Instead, we serve as a proven technical readiness resource, open Curriculum-as-Code reference architecture, and subaward implementation partner supporting **Arizona Western College** (building on the regional momentum of the AWC-hosted **Southwest Arizona AI Symposium**) and **State & Territory AI-Ready Coordination Hubs across all 50 states**. Our S-A-R compiler absorbs shifting federal portal mandates (including human-in-the-loop safety governance for frontier AI and *superintelligence*) via single-source JSON-LD updates with zero drift.
+- **KIN-101 (`EXW 101`: Concepts of Kinesiology)**: [Full Course OER ZIP](https://alanpruitt.com/export/kin-101_full_course_oer_package.zip) • [JSON-LD Manifest](https://alanpruitt.com/export/kin-101/metadata.json)
+- **HLTH-150 (`EXW 150`: Nutrition for Exercise & Sport)**: [Full Course OER ZIP](https://alanpruitt.com/export/hlth-150_full_course_oer_package.zip) • [JSON-LD Manifest](https://alanpruitt.com/export/hlth-150/metadata.json)
+- **KIN-265 (`EXW 265`: Exercise for Special Populations)**: [Full Course OER ZIP](https://alanpruitt.com/export/kin-265_full_course_oer_package.zip) • [JSON-LD Manifest](https://alanpruitt.com/export/kin-265/metadata.json)
+- **KIN-210 (`EXW 210`: Essentials of Personal Training)**: [Full Course OER ZIP](https://alanpruitt.com/export/kin-210_full_course_oer_package.zip) • [JSON-LD Manifest](https://alanpruitt.com/export/kin-210/metadata.json)
+- **KIN-245 (`EXW 245`: Exercise Testing & Prescription)**: [Full Course OER ZIP](https://alanpruitt.com/export/kin-245_full_course_oer_package.zip) • [JSON-LD Manifest](https://alanpruitt.com/export/kin-245/metadata.json)

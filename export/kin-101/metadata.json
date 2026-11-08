@@ -14,8 +14,8 @@
   "courseCode": "KIN-101",
   "identifier": "KIN-101-OER-2026-V2.2",
   "version": "2.2.0",
-  "datePublished": "2026-11-07",
-  "dateModified": "2026-11-07",
+  "datePublished": "2026-11-08",
+  "dateModified": "2026-11-08",
   "description": "Standardized ZTC OER module package for KIN-101 (Concepts of Kinesiology: Foundational Movement & Physical Activity) incorporating Curriculum-as-Code publishing, the Clinical Framing Protocol (Pattern / Rule / Solve), Physical Activity Guidelines for Americans (PAGA), 2nd Edition (2018) as the Academic Single Source of Truth (SSoT), and the U.S. Department of Labor AI Literacy Framework (TEN No. 07-25) with WCAG 2.2 AA (9:1 Double-Contrast Guard) compliance.",
   "url": "https://alanpruitt.com/export/kin-101/metadata.json",
   "sameAs": [
@@ -118,8 +118,18 @@
       "alignmentType": "teaches",
       "educationalFramework": "U.S. Department of Labor (DOL) ETA Training and Employment Notice (TEN) No. 07-25: AI Literacy Framework (Feb 13, 2026)",
       "targetName": "US-DOL-TEN-07-25",
+      "targetUrl": "https://www.dol.gov/agencies/eta/advisories/ten-07-25",
       "targetDescription": "5 Foundational Content Areas (1. Understand AI Principles, 2. Explore AI Uses, 3. Direct AI Effectively, 4. Evaluate Outputs, 5. Use AI Responsibly) and 7 Community College Delivery Design Principles.",
       "description": "Workforce AI Problem Framing & Output Auditing via the Centaur Protocol and Pattern / Rule / Solve."
+    },
+    {
+      "@type": "AlignmentObject",
+      "alignmentType": "teaches",
+      "educationalFramework": "U.S. National Science Foundation (NSF) TechAccess: AI-Ready America Initiative (50-State Workforce Readiness, AI Literacy & Superintelligence Human-in-the-Loop Safety Governance)",
+      "targetName": "NSF-TECHACCESS-AI-READY-2026",
+      "targetUrl": "https://www.nsf.gov/funding/initiatives/ai-ready",
+      "targetDescription": "Nationwide 50-state and territory initiative accelerating practical AI literacy, experiential workforce upskilling, small business empowerment, and human-in-the-loop safety governance for frontier AI and superintelligence systems.",
+      "description": "Operationalized at Arizona Western College (building on the AWC Southwest Arizona AI Symposium) as a non-competing, turnkey Curriculum-as-Code reference architecture and enabling resource for State & Territory AI-Ready Coordination Hubs."
     },
     {
       "@type": "AlignmentObject",
@@ -173,7 +183,7 @@
     }
   ],
   "schema_version": "S-A-R-v2.2-OER-Commons-Syndication",
-  "generated_at": "2026-11-07T23:52:30.921694+00:00",
+  "generated_at": "2026-11-08T00:25:32.769730+00:00",
   "course_code": "KIN-101",
   "course_slug": "kin-101",
   "course_title": "Concepts of Kinesiology: Foundational Movement & Physical Activity",
