@@ -23,6 +23,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          submodules: recursive
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -55,6 +56,12 @@ jobs:
 
       - name: Run Markdown Linter Check
         run: npm run lint:md
+
+      - name: Run POUR & WCAG 3.0 Institutional Infrastructure Audit
+        run: |
+          python3 pour_audit.py content/en/institutional-infrastructure/_index.md
+          python3 pour_audit.py content/es/institutional-infrastructure/_index.md
+          python3 scripts/wcag3_atomic_linter.py content/en/institutional-infrastructure/_index.md content/es/institutional-infrastructure/_index.md
 
       - name: Start Local Static Server & Run Playwright Audit
         env:

@@ -317,6 +317,38 @@ PROV_O_CONTEXT = {
 }
 ```
 
+### Reference Implementation: `.github/workflows/deploy.yml` (CI/CD WCAG & Canonical Gate)
+
+Below is the automated GitHub Actions production deployment workflow (`.github/workflows/deploy.yml`) executing Hugo `--minify`, canonical tag verification (`inject_canonicals.py`), `markdownlint`, `pour_audit.py`, `wcag3_atomic_linter.py`, Playwright route auditing, and native GitHub Pages artifact deployment (`actions/deploy-pages@v4`):
+
+```yaml
+name: Deploy Hugo Site with WCAG & Route Verification
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build-and-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          submodules: recursive
+      - uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: "latest"
+          extended: true
+      - name: Build, Inject Canonicals & Audit WCAG/POUR
+        run: |
+          hugo --minify
+          python3 scripts/inject_canonicals.py
+          npm run lint:md
+          python3 pour_audit.py content/en/institutional-infrastructure/_index.md
+          python3 scripts/wcag3_atomic_linter.py content/en/institutional-infrastructure/_index.md
+```
+
 ---
 
 > **Institutional Notice & Compliance Disclaimer:**

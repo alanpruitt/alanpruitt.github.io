@@ -317,6 +317,38 @@ PROV_O_CONTEXT = {
 }
 ```
 
+### Implementación de Referencia: `.github/workflows/deploy.yml` (Compuerta CI/CD WCAG y Canónica)
+
+A continuación se presenta el flujo de trabajo automatizado de despliegue en producción con GitHub Actions (`.github/workflows/deploy.yml`) que ejecuta Hugo `--minify`, verificación de etiquetas canónicas (`inject_canonicals.py`), `markdownlint`, `pour_audit.py`, `wcag3_atomic_linter.py`, auditoría de rutas con Playwright y despliegue nativo de artefactos en GitHub Pages (`actions/deploy-pages@v4`):
+
+```yaml
+name: Deploy Hugo Site with WCAG & Route Verification
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build-and-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          submodules: recursive
+      - uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: "latest"
+          extended: true
+      - name: Build, Inject Canonicals & Audit WCAG/POUR
+        run: |
+          hugo --minify
+          python3 scripts/inject_canonicals.py
+          npm run lint:md
+          python3 pour_audit.py content/es/institutional-infrastructure/_index.md
+          python3 scripts/wcag3_atomic_linter.py content/es/institutional-infrastructure/_index.md
+```
+
 ---
 
 > **Aviso Institucional y Descargo de Responsabilidad:**
