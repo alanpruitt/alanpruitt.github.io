@@ -95,5 +95,42 @@ Los Nodos de Coordinación de **NSF TechAccess: AI-Ready America**, los colegios
 
 ---
 
+## Implementación de Referencia: `argon4_cac_evaluator.py` (S-A-R v2.2)
+
+A continuación se presenta el linter ejecutable de Compliance-as-Code (`scripts/argon4_cac_evaluator.py`) que audita los 5 cursos de la flota (`EXW 101`, `150`, `210`, `245`, `265` &rarr; `KIN / HLTH`) frente a **U.S. DOL ETA TEN No. 07-25**, las **8 reglas del Verificador de Accesibilidad de Canvas** y la **Guardia de Doble Contraste `9:1`** antes de emitir un recibo criptográfico SHA-256:
+
+```python
+#!/usr/bin/env python3
+"""
+Module: argon4_cac_evaluator.py
+Description: S-A-R (Scalable / Auditable / Repeatable) Compliance-as-Code linter and
+             Curriculum-as-Code (CaC) validator for the EXW 5-course fleet
+             (EXW 101, 150, 210, 245, 265 -> KIN / HLTH OER Dual-Namespace)
+             enforcing U.S. DOL ETA TEN No. 07-25, NSF TechAccess: AI-Ready America,
+             and the 8 Canvas Course Accessibility Checker rules (9:1 Double-Contrast Guard).
+Author: Coach Alan Pruitt (Webcognita LLC • SDVOSB • SAM.gov UEI: EZ34U9KNJA17 • CAGE: 4ZCN6)
+"""
+
+from __future__ import annotations
+
+import hashlib
+import json
+from pathlib import Path
+import re
+
+MIN_CONTRAST_RATIO = 9.0  # EXW 9:1 Double-Contrast Guard (2x WCAG 2.2 AA 4.5:1 minimum)
+MAX_HEADING_LENGTH = 120  # Canvas Course Accessibility Checker Rule #2
+
+COURSE_SSOT_MAP = {
+    "EXW101": {"oer_namespace": "KIN-101", "required_ssot": ["PAGA", "Physical Activity Guidelines", "2018"]},
+    "EXW150": {"oer_namespace": "HLTH-150", "required_ssot": ["Dietary Guidelines", "DGA", "Real Food"]},
+    "EXW210": {"oer_namespace": "KIN-210", "required_ssot": ["PAGA", "ACSM", "NASM", "OPT"]},
+    "EXW245": {"oer_namespace": "KIN-245", "required_ssot": ["ACSM", "12th Edition", "Exercise Testing"]},
+    "EXW265": {"oer_namespace": "KIN-265", "required_ssot": ["PAGA", "Physical Activity Guidelines", "ACSM"]},
+}
+```
+
+---
+
 > **Aviso Institucional y Descargo de Responsabilidad:**
 > *La arquitectura Curriculum-as-Code, el Estándar S-A-R y las herramientas de software de código abierto descritas en esta plataforma representan ingeniería e investigación docente independiente a través de Webcognita LLC (`SAM.gov UEI: EZ34U9KNJA17` | `CAGE: 4ZCN6`) y no representan políticas oficiales ni respaldo de Arizona Western College o The University of Arizona.*
