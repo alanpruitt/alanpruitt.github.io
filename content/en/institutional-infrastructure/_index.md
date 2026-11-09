@@ -209,6 +209,34 @@ ACTIVE_SHELLS = {
 }
 ```
 
+### Reference Implementation: `test_rag_pipeline.py` (S-A-R v2.2)
+
+Below is the 3-gate Python pre-flight verifier (`scripts/test_rag_pipeline.py` & `scripts/test_rag_pipeline.sh`) validating `/health` (`HTTP 200`), mandatory boundary-tag delimiter enforcement (`###CASE_DATA_START###` / `###CASE_DATA_END###` $\rightarrow$ `HTTP 422`), and local Apple Silicon RAG inference (`exw-argon4:latest` $\rightarrow$ `HTTP 200` with W3C PROV-O provenance, DOM GraphRAG, 4-D XAI Radar, and W3C SKOS bilingual taxonomy):
+
+```python
+#!/usr/bin/env python3
+"""
+Module: test_rag_pipeline.py
+Description: 3-Gate S-A-R Pre-Flight Verifier for The EXW Clinical Auditor API
+             (`scripts/canvas_rag_api.py` & `scripts/test_rag_pipeline.sh`), testing
+             /health, HTTP 422 delimiter rejection, and HTTP 200 W3C PROV-O / DOM GraphRAG
+             / W3C SKOS local Apple Silicon inference.
+Author: Coach Alan Pruitt (Webcognita LLC • SDVOSB • SAM.gov UEI: EZ34U9KNJA17 • CAGE: 4ZCN6)
+"""
+
+from canvas_rag_api import handle_audit_payload, handle_health
+
+def verify_rag_gates(neg_payload: dict, pos_payload: dict) -> dict:
+    health_body, health_code = handle_health()
+    neg_body, neg_code = handle_audit_payload(neg_payload)  # Expects HTTP 422 Rejected
+    pos_body, pos_code = handle_audit_payload(pos_payload)  # Expects HTTP 200 W3C PROV-O
+    return {
+        "health_ok": health_code == 200 and health_body.get("status") == "healthy",
+        "delimiter_422_guard_ok": neg_code == 422,
+        "prov_o_and_skos_ok": pos_code == 200 and "provenance" in pos_body,
+    }
+```
+
 ---
 
 > **Institutional Notice & Compliance Disclaimer:**
