@@ -186,6 +186,29 @@ CANVAS_3STAGE_PIPELINE_MATRIX = {
 }
 ```
 
+### Reference Implementation: `push_announcement.py` (S-A-R v2.2)
+
+Below is the idempotent announcement publisher (`scripts/push_announcement.py`) enforcing the **Plain-English & Norteño-Spanish Student-Facing Gate** (`validate_plain_english_copy()`), **`9:1` Double-Contrast Guard**, and in-place `GET` &rarr; `PUT` deduplication across all 5 fleet courses:
+
+```python
+#!/usr/bin/env python3
+"""
+Module: push_announcement.py
+Description: Idempotent S-A-R Canvas LMS Announcement Publisher enforcing the
+             Plain-English / Norteño-Spanish student-facing gate, 9:1 contrast
+             verification, and read-only dry-run safety across EXW 101-265.
+Author: Coach Alan Pruitt (Webcognita LLC • SDVOSB • SAM.gov UEI: EZ34U9KNJA17 • CAGE: 4ZCN6)
+"""
+
+ACTIVE_SHELLS = {
+    "EXW101": {"oer_namespace": "KIN-101", "fall26_pro_id": 38773, "dev_8wk_id": 42044, "sp27_pro_id": 41088},
+    "EXW150": {"oer_namespace": "HLTH-150", "fall26_pro_id": 39322, "dev_id": 38147, "sp27_pro_id": 41625},
+    "EXW210": {"oer_namespace": "KIN-210", "dev_warm_standby_id": 42045},
+    "EXW245": {"oer_namespace": "KIN-245", "dev_id": 38148},
+    "EXW265": {"oer_namespace": "KIN-265", "fall26_pro_id": 38769, "dev_id": 38156, "sp27_pro_id": 41083},
+}
+```
+
 ---
 
 > **Institutional Notice & Compliance Disclaimer:**
