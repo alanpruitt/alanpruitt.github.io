@@ -78,8 +78,15 @@
         .prose h3 { font-size: 1.25rem; font-weight: 700; color: #09090b; margin-top: 1.5rem; margin-bottom: 0.75rem; text-align: left; }
         .prose p { margin-top: 0.5rem; margin-bottom: 1rem; font-size: 1rem; line-height: 1.6; color: #18181b; text-align: left; }
         .prose ul { margin-top: 0.5rem; margin-bottom: 1rem; padding-left: 1.5rem; list-style-type: disc; color: #18181b; text-align: left; }
+        .prose ol { margin-top: 0.5rem; margin-bottom: 1rem; padding-left: 1.5rem; list-style-type: decimal; color: #18181b; text-align: left; }
         .prose li { margin-bottom: 0.5rem; }
         .prose hr { margin-top: 2rem; margin-bottom: 2rem; border-top: 3px solid #a1a1aa; }
+        .prose table { width: 100%; border-collapse: collapse; margin-top: 1.25rem; margin-bottom: 1.5rem; background-color: #ffffff; color: #09090b; border: 1px solid #a1a1aa; }
+        .prose caption { caption-side: top; text-align: left; font-weight: 700; font-size: 0.95rem; padding: 0.5rem 0; color: #09090b; background-color: transparent; }
+        .prose th { background-color: #0B192C; color: #ffffff; font-weight: 700; text-align: left; padding: 0.75rem 1rem; border: 1px solid #0B192C; font-size: 0.9rem; }
+        .prose td { background-color: #ffffff; color: #18181b; text-align: left; padding: 0.75rem 1rem; border: 1px solid #d4d4d8; vertical-align: top; font-size: 0.95rem; line-height: 1.55; }
+        .prose blockquote { margin: 1.5rem 0; padding: 1rem 1.25rem; border-left: 4px solid #0B192C; background-color: #ffffff; color: #18181b; border-radius: 0.25rem; }
+        .prose code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 0.875em; padding: 0.15rem 0.35rem; border-radius: 0.25rem; background-color: #ffffff; color: #09090b; border: 1px solid #d4d4d8; }
 
         /* Dark mode overrides */
         @media (prefers-color-scheme: dark) {
@@ -87,8 +94,14 @@
             .prose h2 { color: #ffffff; }
             .prose h3 { color: #ffffff; }
             .prose p { color: #f4f4f5; }
-            .prose ul { color: #f4f4f5; }
+            .prose ul, .prose ol { color: #f4f4f5; }
             .prose hr { border-top: 3px solid #52525b; }
+            .prose table { background-color: #09090b; color: #f4f4f5; border-color: #52525b; }
+            .prose caption { color: #ffffff; }
+            .prose th { background-color: #18181b; color: #ffffff; border-color: #52525b; }
+            .prose td { background-color: #09090b; color: #f4f4f5; border-color: #3f3f46; }
+            .prose blockquote { border-left-color: #ffffff; background-color: #18181b; color: #f4f4f5; }
+            .prose code { background-color: #18181b; color: #ffffff; border-color: #52525b; }
             .border-zinc-200 { border-color: #27272a; }
         }
     </style>
@@ -98,7 +111,7 @@
 
     {{ partial "header.html" . }}
 
-    <main class="w-full max-w-6xl mx-auto px-6 py-8 flex-grow">
+    <main id="main-content" class="w-full max-w-6xl mx-auto px-6 py-8 flex-grow">
         <article class="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-16 lg:px-8">
             
             <!-- Breadcrumb Navigation -->

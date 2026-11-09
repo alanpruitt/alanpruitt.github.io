@@ -1,0 +1,99 @@
+---
+title: "Institutional Infrastructure & U.S. DOL TEN No. 07-25 Framework"
+date: 2026-11-09T08:30:00-07:00
+description: "Non-Competing 50-State Enabling Partner for NSF TechAccess: AI-Ready America, U.S. DOL ETA TEN No. 07-25 Compliance, and Curriculum-as-Code (CaC) Frameworks."
+layout: "single"
+draft: false
+keywords:
+  - "NSF TechAccess AI-Ready America"
+  - "U.S. DOL ETA TEN No. 07-25"
+  - "Curriculum-as-Code"
+  - "Non-Competing 50-State Enabling Partner"
+  - "ADA Title II WCAG 2.2 AA 9:1 Contrast"
+  - "Air-Gapped Ollama Gemma FERPA"
+  - "Webcognita LLC SDVOSB EZ34U9KNJA17"
+---
+
+## Empowering State Hubs & Institutions as a Non-Competing 50-State Enabling Partner
+
+Deploying turnkey **Curriculum-as-Code (CaC)** pipelines, air-gapped local RAG coaching engines, and zero-cost OER course fleets that satisfy **NSF TechAccess: AI-Ready America**, **U.S. DOL ETA TEN No. 07-25** (Issued February 13, 2026), and federal **ADA Title II (`28 CFR Part 35`)** accessibility mandates out of the box.
+
+---
+
+## Core Infrastructure: Curriculum-as-Code (CaC) & The S-A-R Standard
+
+Traditional curriculum development is static, siloed, and slow to adapt. **Curriculum-as-Code (CaC)** treats course design as **Scalable, Auditable, and Repeatable (S-A-R)** software infrastructure to deliver institutional agility:
+
+* **Version-Controlled Single Sources of Truth (SSoT):** Course content lives in structured Git and Markdown repositories (`EXW-Master-Library`) driven by a **3-Stage "Write Once -> Push Many" Zero-Drift Publishing Pipeline**, enabling instant synchronization across Canvas LMS shells via a **Canvas GraphQL-First API** transport and automated **Non-Destructive Dual-Namespace OER Syndication (`EXW` -> `KIN / HLTH`)**.
+* **Automated ADA Title II & `9:1` Double-Contrast Linters:** Custom build pipelines programmatically enforce all **8 Canvas Course Accessibility Checker rules** before content reaches student screens—including sequential semantic hierarchy starting at `<h2>`, explicit table scopes and captions, and a strict **`9:1` Double-Contrast Guard** (doubling WCAG 2.2 AA's `4.5:1` baseline).
+* **Air-Sovereign Local AI Integration (`AI-AWARE` -> `AI-READY`):** Local AI coaching and auditing engines (`exw-argon4`, `exw-argon4-cac`, `exw-gemma4` via Apple Silicon Ollama and Google Gemma open-weight models) are integrated directly into the repository workflow alongside a **`3,265`-node DOM GraphRAG pedagogical graph** and **`W3C PROV-O` cryptographic provenance receipts**—guaranteeing 100% FERPA and HIPAA data sovereignty with zero cloud egress or recurring commercial licensing fees.
+
+---
+
+## The U.S. DOL ETA TEN No. 07-25 & CaC Integration Matrix
+
+### Part A: The 5 Foundational AI Literacy Content Areas
+
+To satisfy institutional accreditors (HLC), state workforce boards, and federal grant officers, our Curriculum-as-Code architecture maps every kinesiology, health, and nutrition module directly to the five foundational competencies of the **U.S. DOL AI Literacy Framework (TEN No. 07-25)**:
+
+<table>
+  <caption>U.S. DOL ETA TEN No. 07-25 Foundational AI Literacy Competencies and Curriculum-as-Code Operationalization</caption>
+  <thead>
+    <tr>
+      <th scope="col">U.S. DOL TEN No. 07-25 Competency</th>
+      <th scope="col">Curriculum-as-Code (CaC) Operationalization</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1. Understand AI Principles</th>
+      <td>Students contrast probabilistic next-token generation against deterministic federal and national Single Sources of Truth (<strong>PAGA 2nd Ed. 2018, 2025–2030 Dietary Guidelines for Americans, ACSM 12th Ed. 2025, and NASM OPT Model</strong>), diagnosing algorithmic hallucinations through version-controlled codebase audits.</td>
+    </tr>
+    <tr>
+      <th scope="row">2. Explore AI Uses</th>
+      <td>Experiential deployment via CaC modules and edge clinical simulators (<code>exwtoolkit.com</code>), including bilingual (<strong>English and Norteño-Spanish</strong>) patient education handouts, Sonoran Desert heat-stress kinesiology prescriptions, and real-food nutritional audits.</td>
+    </tr>
+    <tr>
+      <th scope="row">3. Direct AI Effectively</th>
+      <td>Mastery of structured <strong>P-T-C-F (Persona, Task, Context, Format)</strong> prompt engineering paired with our mandatory <strong>triple-hash (<code>###</code>) case-data delimiter encapsulation protocol</strong>, isolating clinical inputs to prevent prompt injection and optimize local KV-cache memory.</td>
+    </tr>
+    <tr>
+      <th scope="row">4. Evaluate Outputs</th>
+      <td>Execution of the <strong>Clinical Framing Protocol (<code>Pattern / Rule / Solve</code> &bull; <code>Patrón / Regla / Solución</code>)</strong>, a <strong>150-word SSoT Clinical Audit</strong>, and <strong>Active Verification Telemetry</strong> (tactile simulator calibration plus a 150-word verbatim clinical defense in the student's own voice), graded on the iterative <strong>10-7-0 Mastery Scale</strong>.</td>
+    </tr>
+    <tr>
+      <th scope="row">5. Use AI Responsibly</th>
+      <td>Strict enforcement of clinical scope-of-practice gates, mandatory AI disclosure standards, and air-gapped local AI inference (Apple Silicon Ollama and open-weight Google Gemma) ensuring zero student PII or FERPA data leakage to commercial cloud servers.</td>
+    </tr>
+  </tbody>
+</table>
+
+### Part B: Alignment with the 7 Community College Delivery Design Principles
+
+1. **Enable Experiential Learning:** Tactile client case simulations on `exwtoolkit.com` paired with live P-T-C-F prompt auditing.
+2. **Embed Learning in Context:** Grounded in authentic regional demographics and extreme-heat physiology (**Yuma, AZ and Imperial Valley, CA** Hispanic-Serving Institution context).
+3. **Build Complementary Human Skills (The Centaur Protocol):** Trains the student as the **Architect and Pilot** (*Problem Framing & Clinical Judgment*) and positions AI strictly as the **Engine and Clinical Calculator** (*Problem Solving & Processing*).
+4. **Address Prerequisites & Equitable Access:** Every module opens with a bilingual **In Plain English / En Palabras Sencillas** callout, zero-textbook-cost (`$0 ZTC`) CC BY 4.0 OER materials, and browser-native simulators requiring zero paid AI subscriptions.
+5. **Create Pathways for Continued Learning:** Dual-mapped from K-16 dual-enrollment standards (`CCSS` and `WA.ELA`) to community college transfer catalogs (`KIN` and `HLTH`) and workforce credentials.
+6. **Prepare Enabling Roles:** Equips allied health, wellness, and exercise science paraprofessionals to safely govern AI decision-support tools in clinical and community settings.
+7. **Design for Agility:** Terminology-agile central standards registry (`01_INFRASTRUCTURE/educational_alignment_registry.json`) that recompiles all 5 courses and 10 OER packages in seconds when federal guidelines update.
+
+---
+
+## Why We Are the Non-Competing 50-State Enabling Partner
+
+**NSF TechAccess: AI-Ready America** Coordination Hubs, community colleges, and state workforce boards need ready-to-deploy technical infrastructure, not another competing prime applicant:
+
+* **Zero Grant Friction:** We **never** compete against community colleges, universities, or state consortia for primary NSF State or Territory Coordination Hub or state block grants; we serve strictly as a **50-state technical readiness resource, open reference architecture, and subaward implementation partner** that helps primary awardees accelerate their broader impacts.
+* **Turnkey Dual-Namespace OER Fleet:** Instant 4-Tier `educationalAlignment` crosswalk mapping across all 5 fleet courses—bridging local catalog codes (`EXW 101`, `EXW 150`, `EXW 210`, `EXW 245`, `EXW 265`) to national transfer namespaces (**`KIN-101`, `HLTH-150`, `KIN-210`, `KIN-245`, `KIN-265`**) with `Schema.org/Dataset` JSON-LD syndication.
+* **Sovereign, Air-Gapped AI Architecture:** Built on local Apple Silicon (`M1` and `M2`) Ollama and open-weight Google Gemma frameworks—guaranteeing 100% FERPA compliance with zero recurring cloud subscription costs.
+* **Verified Federal Subaward & Procurement Readiness (`Webcognita LLC`):**
+  * **Socioeconomic Status:** Service-Disabled Veteran-Owned Small Business (`SDVOSB / VOSB` — USMC Veteran)
+  * **`SAM.gov` UEI:** `EZ34U9KNJA17` &bull; **`CAGE` Code:** `4ZCN6`
+  * **NAICS Codes:** `541511` (Primary), `541715`, `541512`, `611710`, `541690`
+  * **Federal PSC Codes:** `U008` (Curriculum Development), `U012` (IT and AI Training), `DA01`, `DJ01`, `R425`, `AN12`
+
+---
+
+> **Institutional Notice & Compliance Disclaimer:**
+> *The Curriculum-as-Code architecture, S-A-R Standard, and open-source software tools described on this platform represent independent faculty engineering and research through Webcognita LLC (`SAM.gov UEI: EZ34U9KNJA17` | `CAGE: 4ZCN6`) and do not represent official policy or endorsement by Arizona Western College or The University of Arizona.*
