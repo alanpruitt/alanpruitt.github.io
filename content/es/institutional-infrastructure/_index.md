@@ -256,6 +256,25 @@ FLEET_MODULES = ["EXW101", "EXW150", "EXW210", "EXW245", "EXW265"]
 TEN_COMPLIANCE_TAG = 'data-exw-dol-ten="07-25"'
 ```
 
+### Implementación de Referencia: `argon4_local_rag_verify.py` (S-A-R v2.2)
+
+A continuación se presenta el verificador soberano del índice RAG en Apple Silicon (`scripts/argon4_local_rag_verify.py`) que valida la integridad criptográfica SHA-256 de los fragmentos (`verify_rag_chunk_integrity()`) en los `3,638` fragmentos curriculares indexados (`nomic-embed-text` + `exw-argon4-cac:latest`) y aplica el encapsulado delimitador `### RETRIEVED ACADEMIC SSoT CONTEXT ###`:
+
+```python
+#!/usr/bin/env python3
+"""
+Module: argon4_local_rag_verify.py
+Description: Sovereign Apple Silicon RAG Corpus & Vector Index Integrity Verifier
+             (`exw-argon4-cac:latest` + `nomic-embed-text`), validating SHA-256
+             chunk provenance and ### RETRIEVED ACADEMIC SSoT CONTEXT ### encapsulation.
+Author: Coach Alan Pruitt (Webcognita LLC • SDVOSB • SAM.gov UEI: EZ34U9KNJA17 • CAGE: 4ZCN6)
+"""
+
+OLLAMA_MODEL = "exw-argon4-cac:latest"
+EMBEDDING_MODEL = "nomic-embed-text"
+SOVEREIGN_MODEL_TRIAD = ("exw-argon4-cac:latest", "exw-argon4:latest", "exw-gemma4:latest")
+```
+
 ---
 
 > **Aviso Institucional y Descargo de Responsabilidad:**
