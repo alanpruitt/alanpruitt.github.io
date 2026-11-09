@@ -374,6 +374,23 @@ CHECKLIST_PHASES = [
 ]
 ```
 
+### Reference Implementation: `argon4_ollama_env_config.sh` (Apple Silicon Sovereign Ollama Runtime)
+
+Below is the Apple Silicon unified-memory configuration and verification script (`scripts/argon4_ollama_env_config.sh`) tuning `OLLAMA_FLASH_ATTENTION=1`, `OLLAMA_KV_CACHE_TYPE="q8_0"`, `OLLAMA_NUM_PARALLEL=4`, and `OLLAMA_MAX_LOADED_MODELS=2` while verifying the live `/api/tags` manifest for `exw-argon4-cac:latest`, `exw-argon4:latest`, `exw-gemma4:latest`, and `nomic-embed-text:latest`:
+
+```zsh
+#!/bin/zsh
+export OLLAMA_HOST="127.0.0.1:11434"
+export OLLAMA_MODELS="${HOME}/.ollama/models"
+export OLLAMA_NUM_PARALLEL=4
+export OLLAMA_MAX_LOADED_MODELS=2
+export OLLAMA_FLASH_ATTENTION=1
+export OLLAMA_KV_CACHE_TYPE="q8_0"
+
+curl -sf "http://${OLLAMA_HOST}/api/tags" > /dev/null
+ollama list | grep -E "exw-argon4-cac|exw-argon4|exw-gemma4|nomic-embed-text|gemma"
+```
+
 ---
 
 > **Institutional Notice & Compliance Disclaimer:**
