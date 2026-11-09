@@ -294,6 +294,29 @@ MAX_GRAPHQL_COMPLEXITY = 375_000
 TEN_COMPLIANCE_TAG = 'data-exw-dol-ten="07-25"'
 ```
 
+### Reference Implementation: `prov_o_receipt_generator.py` (W3C PROV-O JSON-LD S-A-R v2.2)
+
+Below is the **W3C PROV-O (`http://www.w3.org/ns/prov#`) + W3C SKOS** provenance receipt generator (`scripts/prov_o_receipt_generator.py`) binding `exw:LocalRAGInferenceExecution` (`prov:Activity`), `exw:CurriculumMarkdownCorpus` (`prov:Entity`), `exw:OllamaModelExwArgon4Cac` (`prov:Entity`), `exw:Argon4AppleSiliconNode` (`prov:SoftwareAgent`), and `exw:ComplianceAuditReceipt` (`prov:Entity`) into a SHA-256 signed JSON-LD graph:
+
+```python
+#!/usr/bin/env python3
+"""
+Module: prov_o_receipt_generator.py
+Description: W3C PROV-O + W3C SKOS JSON-LD Provenance Receipt Generator tracing
+             119 curriculum Markdown modules, 3,638 SHA-256 vector chunks, and
+             local Apple Silicon inference (`exw-argon4-cac:latest` + `nomic-embed-text`).
+Author: Coach Alan Pruitt (Webcognita LLC • SDVOSB • SAM.gov UEI: EZ34U9KNJA17 • CAGE: 4ZCN6)
+"""
+
+PROV_O_CONTEXT = {
+    "prov": "http://www.w3.org/ns/prov#",
+    "exw": "https://alanpruitt.com/ns/exw#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "schema": "https://schema.org/",
+}
+```
+
 ---
 
 > **Institutional Notice & Compliance Disclaimer:**
