@@ -275,6 +275,25 @@ EMBEDDING_MODEL = "nomic-embed-text"
 SOVEREIGN_MODEL_TRIAD = ("exw-argon4-cac:latest", "exw-argon4:latest", "exw-gemma4:latest")
 ```
 
+### Reference Implementation: `canvas_graphql_sync.py` (S-A-R v2.2)
+
+Below is the **Canvas GraphQL-First (`/api/graphql`)** synchronization validator (`scripts/canvas_graphql_sync.py` & `scripts/canvas_graphql_baseline.py`) verifying all fleet queries and mutations against the Live AWC Canvas GraphQL Schema Baseline (`30` root queries, `122` root mutations, `674` named types, `<375,000` complexity ceiling) across `EXW101`, `EXW150`, `EXW210`, `EXW245`, and `EXW265`:
+
+```python
+#!/usr/bin/env python3
+"""
+Module: canvas_graphql_sync.py
+Description: Canvas LMS GraphQL-First (/api/graphql) & Curriculum-as-Code (CaC)
+             Synchronization Orchestrator validating queries/mutations against
+             docs/standards/canvas_graphql_schema_baseline.json (<375,000 complexity).
+Author: Coach Alan Pruitt (Webcognita LLC • SDVOSB • SAM.gov UEI: EZ34U9KNJA17 • CAGE: 4ZCN6)
+"""
+
+CANVAS_GRAPHQL_ENDPOINT = "https://azwestern.instructure.com/api/graphql"
+MAX_GRAPHQL_COMPLEXITY = 375_000
+TEN_COMPLIANCE_TAG = 'data-exw-dol-ten="07-25"'
+```
+
 ---
 
 > **Institutional Notice & Compliance Disclaimer:**
