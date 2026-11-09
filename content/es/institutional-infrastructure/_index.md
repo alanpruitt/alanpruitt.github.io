@@ -93,6 +93,7 @@ Los Nodos de Coordinación de **NSF TechAccess: AI-Ready America**, los colegios
   * **Códigos NAICS:** `541511` (Primario), `541715`, `541512`, `611710`, `541690`
   * **Códigos Federales PSC:** `U008` (Desarrollo Curricular), `U012` (Capacitación en TI e IA), `DA01`, `DJ01`, `R425`, `AN12`
   * **Publicaciones Oficiales `.edu` en AWC:** [Campeón de Pequeñas Empresas de Veteranos de Arizona 2025 por la U.S. SBA (PDF Oficial AWC SBDC)](https://www.azwestern.edu/sites/default/files/awc/sbdc/stories/Alan%20Pruitt.pdf) &bull; [Adaptive Training Available at AWC — Especialista en Atletas Adaptativos Financiado por el VA y Telemetría Acústica en Ergómetros (AWC News, 7 de febrero de 2018)](https://www.azwestern.edu/news/adaptive-training-available-awc)
+  * **Arquitectura de Referencia Abierta y Repositorios de Código:** [Alan Pruitt (`@alanpruitt`) en GitHub — Repositorios Curriculum-as-Code (CaC) y S-A-R v2.2](https://github.com/alanpruitt)
 
 ---
 

@@ -9,6 +9,42 @@
     <meta name="author" content="Alan Pruitt">
     <link rel="canonical" href="{{ .Permalink }}">
     <link rel="me" href="https://www.linkedin.com/in/alanpruitt/">
+    <link rel="me" href="https://github.com/alanpruitt">
+    <link rel="me" href="https://www.webcognita.com/">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": {{ .Title | jsonify }},
+      "description": {{ (.Description | default "Alan Pruitt (Coach Alan) — Curriculum Architect, AI Strategist, USMC Veteran & Founder of Webcognita LLC.") | jsonify }},
+      "url": {{ .Permalink | jsonify }},
+      "inLanguage": {{ (.Lang | default "en") | jsonify }},
+      "author": {
+        "@type": "Person",
+        "@id": "https://alanpruitt.com/#person",
+        "name": "Alan Pruitt",
+        "alternateName": "Coach Alan",
+        "url": "https://alanpruitt.com/",
+        "sameAs": [
+          "https://github.com/alanpruitt",
+          "https://www.linkedin.com/in/alanpruitt/",
+          "https://www.webcognita.com/"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://www.webcognita.com/#organization",
+        "name": "Webcognita LLC",
+        "url": "https://www.webcognita.com/",
+        "sameAs": [
+          "https://github.com/alanpruitt",
+          "https://www.linkedin.com/in/alanpruitt/",
+          "https://alanpruitt.com/"
+        ]
+      }
+    }
+    </script>
 
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Alan Pruitt | Curriculum-as-Code">

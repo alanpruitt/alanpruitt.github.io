@@ -93,6 +93,7 @@ To satisfy institutional accreditors (HLC), state workforce boards, and federal 
   * **NAICS Codes:** `541511` (Primary), `541715`, `541512`, `611710`, `541690`
   * **Federal PSC Codes:** `U008` (Curriculum Development), `U012` (IT and AI Training), `DA01`, `DJ01`, `R425`, `AN12`
   * **Official `.edu` Institutional Features:** [2025 U.S. SBA Arizona Veteran Small Business Champion of the Year (AWC SBDC PDF)](https://www.azwestern.edu/sites/default/files/awc/sbdc/stories/Alan%20Pruitt.pdf) &bull; [Adaptive Training Available at AWC — VA Grant-Funded Adaptive Athlete Specialist & Audio-Feedback Ergometer Telemetry (AWC News, Feb 7, 2018)](https://www.azwestern.edu/news/adaptive-training-available-awc)
+  * **Open-Source Reference Architecture & Codebase:** [Alan Pruitt (`@alanpruitt`) on GitHub — Curriculum-as-Code (CaC) & S-A-R v2.2 Repositories](https://github.com/alanpruitt)
 
 ---
 
