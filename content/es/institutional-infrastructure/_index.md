@@ -237,6 +237,25 @@ def verify_rag_gates(neg_payload: dict, pos_payload: dict) -> dict:
     }
 ```
 
+### Implementación de Referencia: `argon4_fleet_evaluator.py` (Compuerta 5: Auditoría U.S. DOL TEN N.º 07-25)
+
+A continuación se presenta el evaluador de cumplimiento pre-commit de la Compuerta 5 (`scripts/argon4_fleet_evaluator.py`) que audita los 119 archivos curriculares activos de `EXW101`, `EXW150`, `EXW210`, `EXW245` y `EXW265` para las **Áreas de Contenido 3–5 de la directiva U.S. DOL ETA TEN N.º 07-25** (Ingeniería de Prompts `P-T-C-F`, `Auditoría Clínica SSoT de 150 Palabras` y `Verificación Activa de 150 Palabras`) y sella los metadatos `data-exw-dol-ten="07-25"`:
+
+```python
+#!/usr/bin/env python3
+"""
+Module: argon4_fleet_evaluator.py
+Description: Gate 5 Pre-Commit Compliance Evaluator enforcing U.S. DOL ETA TEN No. 07-25
+             Content Areas 3-5 (P-T-C-F Prompt Engineering, 150-Word Clinical SSoT Audit,
+             and Active Verification) and Pattern / Rule / Solve clinical framing across
+             all 5 fleet courses (EXW101, EXW150, EXW210, EXW245, EXW265).
+Author: Coach Alan Pruitt (Webcognita LLC • SDVOSB • SAM.gov UEI: EZ34U9KNJA17 • CAGE: 4ZCN6)
+"""
+
+FLEET_MODULES = ["EXW101", "EXW150", "EXW210", "EXW245", "EXW265"]
+TEN_COMPLIANCE_TAG = 'data-exw-dol-ten="07-25"'
+```
+
 ---
 
 > **Aviso Institucional y Descargo de Responsabilidad:**
