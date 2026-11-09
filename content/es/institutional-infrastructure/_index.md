@@ -391,6 +391,31 @@ curl -sf "http://${OLLAMA_HOST}/api/tags" > /dev/null
 ollama list | grep -E "exw-argon4-cac|exw-argon4|exw-gemma4|nomic-embed-text|gemma"
 ```
 
+### Manifiesto Maestro de Estado de Despliegue (`m2_argon4_cac_deployment_status.json`)
+
+A continuación se presenta el manifiesto consolidado de estado de despliegue S-A-R v2.2 generado por `scripts/argon4_checklist_evaluator.py`, que vincula las 5 fases de despliegue y los 13 recibos criptográficos de auditoría en `EXW-Master-Library`, Canvas LMS (`EXW 101`, `150`, `210`, `245`, `265` $\rightarrow$ `KIN / HLTH`), `alanpruitt.com` y `webcognita.com`:
+
+```json
+{
+  "system_report": "M2 / Argon 4 Curriculum-as-Code (CaC) Deployment Status",
+  "schema_version": "2.2.0",
+  "author": "Coach Alan L. Pruitt (Webcognita LLC • SDVOSB • SAM.gov UEI: EZ34U9KNJA17 • CAGE: 4ZCN6)",
+  "strategic_positioning": "Non-Competing 50-State Enabling Partner for NSF TechAccess: AI-Ready America & U.S. DOL ETA TEN No. 07-25 Initiatives",
+  "infrastructure_status": {
+    "hardware_nodes": "M1 MacBook Pro <-> M2 MacBook Air <-> Argon 4 Edge Node (Thunderbolt Bridge 192.168.100.2 & Mandatory Two-Machine Git Handshake)",
+    "local_rag_inference": "Active (Apple Silicon MLX Ollama runtime hosting exw-argon4-cac:latest, exw-argon4:latest, exw-gemma4:latest & nomic-embed-text:latest across 3,638 SHA-256 chunks)",
+    "ferpa_compliance": "100% Air-Gapped Sovereign Execution (Zero Cloud Egress)"
+  },
+  "pipeline_execution_summary": {
+    "phase_1_repository_sync": "PASSED (119 active Markdown SSoT modules verified across EXW101, EXW150, EXW210, EXW245, EXW265)",
+    "phase_2_rag_preflight": "PASSED (Flask API /health HTTP 200, HTTP 422 ###CASE_DATA_START### delimiter guard & W3C PROV-O / SKOS active)",
+    "phase_3_compliance_gates": "PASSED (Gate 5 TEN No. 07-25 data-exw-dol-ten='07-25' & 9:1 Double-Contrast Guard verified)",
+    "phase_4_lms_sync": "PASSED (Canvas GraphQL-First /api/graphql & 3-Stage CaC receipts verified across EXW101, EXW150, EXW210, EXW245, EXW265 -> KIN / HLTH)",
+    "phase_5_production_deployment": "PASSED (Hugo static site build, 232 canonicals, POUR/WCAG 3.0 linters, GitHub Actions CI/CD & 12-shell Coach Alan portrait verified)"
+  }
+}
+```
+
 ---
 
 > **Aviso Institucional y Descargo de Responsabilidad:**
