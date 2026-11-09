@@ -162,6 +162,30 @@ def verify_discussion_baseline(module_id: str, current_replies: int) -> bool:
     return current_replies >= required_min
 ```
 
+### Reference Implementation: `canvas_cac_sync.py` (S-A-R v2.2)
+
+Below is the **3-Stage "Write Once -> Push Many" Zero-Drift Synchronization Engine** (`01_INFRASTRUCTURE/canvas_cac_sync.py`) pairing the **Canvas GraphQL-First Mandate (`/api/graphql`)** with exact-slug REST page upserts and mandatory `remediate_canvas_rce_html()` pre-write accessibility gating across all 12 instructional DEV/PRO shells and `EXW-Demo (42051)`:
+
+```python
+#!/usr/bin/env python3
+"""
+Module: canvas_cac_sync.py
+Description: 3-Stage "Write Once -> Push Many" Zero-Drift Curriculum-as-Code (CaC)
+             synchronization engine for Canvas LMS (GraphQL-First + Exact-Slug REST Upsert),
+             enforcing all 8 Canvas Course Accessibility Checker rules and the 9:1 Double-Contrast Guard.
+Author: Coach Alan Pruitt (Webcognita LLC • SDVOSB • SAM.gov UEI: EZ34U9KNJA17 • CAGE: 4ZCN6)
+"""
+
+CANVAS_3STAGE_PIPELINE_MATRIX = {
+    "EXW101": {"oer_namespace": "KIN-101", "stage1_fall26_pro": 38773, "stage2_dev_8wk": 42044, "stage2_dev_16wk": 38157, "stage3_sp27_pro": 41088},
+    "EXW150": {"oer_namespace": "HLTH-150", "stage1_fall26_pro": 39322, "stage2_dev": 38147, "stage3_sp27_pro": 41625},
+    "EXW210": {"oer_namespace": "KIN-210", "stage2_dev_warm_standby": 42045},
+    "EXW245": {"oer_namespace": "KIN-245", "stage2_dev": 38148},
+    "EXW265": {"oer_namespace": "KIN-265", "stage1_fall26_pro": 38769, "stage2_dev": 38156, "stage3_sp27_pro": 41083},
+    "EXW-DEMO": {"oer_namespace": "EXW-DEMO-HUB", "showcase_id": 42051},
+}
+```
+
 ---
 
 > **Institutional Notice & Compliance Disclaimer:**
