@@ -62,8 +62,10 @@
 
 ---
 
-## 4. Curriculum-as-Code Essay Series (Essays 01–38)
+## 4. Curriculum-as-Code Essay Series (Essays 01–40)
 
+- **[Essay 40: What If I Didn't Operationalize the Framework? – Turning U.S. DOL ETA Advisory TEN No. 07-25 into Born-Accessible Curriculum-as-Code](https://alanpruitt.com/essays/essay-40-federal-workforce-ai-literacy/):** Operationalizing all 5 Foundational AI Content Areas and 7 Community College Delivery Design Principles of U.S. DOL TEN No. 07-25 via Curriculum-as-Code (S-A-R v2.2), air-gapped Edge AI, and 9:1 ADA Title II Compliance as Code.
+- **[Essay 39: What If I Didn't Automate the Threshold?](https://alanpruitt.com/essays/essay-39-automate-the-threshold/):** Why programmatic Canvas rubric validation, 10-7-0 zero-floor thresholds, and air-gapped Edge AI workflows eliminate manual LMS point inflation.
 - **[Essay 38: What If I Didn't Build the Graph? – Why Curriculum-as-Code Transcends Flat Docs-as-Code with DOM GraphRAG & W3C PROV-O](https://alanpruitt.com/essays/essay-38-dom-graphrag-and-prov-o-curriculum-as-code/):** Enriching 3,151 curriculum vectors with DOM GraphRAG, W3C PROV-O provenance receipts, Born-Accessible 9:1 XAI radar scorecards, and W3C SKOS Norteño-Spanish clinical ontologies.
 - **[Essay 37: WCAG 3.0 Cognitive Accessibility in Curriculum-as-Code](https://alanpruitt.com/essays/essay-37-wcag-3-cognitive-accessibility):** Reducing student cognitive load through deterministic *In Plain English* and *Norteño-Spanish* scaffolding.
 - **[Essay 36: What If I Didn't Standardize the Loop?](https://alanpruitt.com/essays/essay-36):** Why standardizing the clinical problem-framing protocol across an entire course fleet eliminates instructional entropy and student onboarding friction.
