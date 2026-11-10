@@ -21,7 +21,7 @@ description: "Standard contract clauses defining pre-existing intellectual prope
    * **The Clinical Framing Protocol (`Pattern / Rule / Solve` • `Patrón / Regla / Solución`)** pedagogical architectures;
    * **The 10-7-0 Mastery Grading Scale** and **Active Verification** assessment telemetry frameworks;
    * **POUR, WCAG 2.2 AA, and WCAG 3.0 Atomic Accessibility Linters** and **9:1 High-Contrast** remediation engines; and
-   * **Client-side edge simulator engines (`exwtoolkit.com`)** and **local air-gapped AI auditing workflows (`Argon 4` / `Gemma 4`)**.
+   * **Client-side edge simulator engines (`exwtoolkit.com`)** and **local air-gapped AI auditing workflows (`Carbon 4` / `Gemma 4`)**.
 2. **Reservation of Rights:** Provider retains sole and exclusive ownership of all right, title, and interest in and to Provider IP, including all applicable copyright, trademark, patent, and trade secret rights. Nothing in any governing contract, Purchase Order, or SOW shall be construed to transfer or assign ownership of Provider IP to the Customer.
 
 ---

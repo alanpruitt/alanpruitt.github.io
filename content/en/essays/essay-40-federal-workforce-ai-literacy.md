@@ -54,7 +54,7 @@ Drawing on my experience as an **Adjunct Faculty member of Exercise Science & We
 |  [Part A: 5 AI Content Areas]   -->  Centaur Protocol + 4-Part Lab Standard   |
 |  [Part B: 7 Delivery Principles]-->  Zero-Login Simulators + 8/16-Wk Agility  |
 |  [Compliance as Code CI/CD]     -->  9:1 WCAG 2.2 AA + WCAG 3.0 + FERPA Gate  |
-|  [Air-Gapped Edge AI Nodes]     -->  Local Gemma Argon 4 / Carbon 4 + PROV-O  |
+|  [Air-Gapped Edge AI Nodes]     -->  Local Gemini Carbon 4 / Carbon 4 + PROV-O  |
 +-------------------------------------------------------------------------------+
 ```
 
@@ -84,7 +84,7 @@ As documented in my [**Master Research Log Observatory (`CaC, CaaS & Compliance 
 | **3. Build Complementary Human Skills** | Simon Sinek's **Golden Circle (`WHY -> HOW -> WHAT`)** fused with **`Pattern / Rule / Solve`** problem framing and bilingual client cue cards. |
 | **4. Address Prerequisites & Equitable Access** | `$0 ZTC` mobile-first OER, **WCAG 2.2 AA (`9:1` Double-Contrast Guard)** achieving `0/0` Canvas Accessibility Checker issues, and **WCAG 3.0** *In Plain English* + *Norteño-Spanish* callouts. |
 | **5. Create Pathways for Continued Learning** | Stackable `EXW_Professional_AI_Repository` portfolios + 4-Tier `Schema.org/Dataset` (`KIN` / `HLTH`) **K–16 Dual-Enrollment Deliverables**. |
-| **6. Prepare Enabling Roles** | Automated **W3C PROV-O** cryptographic audit receipts and local Apple Silicon (`M1/M2`) **Google Gemma Argon 4** (and next-gen **Carbon 4**) faculty co-pilots. |
+| **6. Prepare Enabling Roles** | Automated **W3C PROV-O** cryptographic audit receipts and local Apple Silicon (`M1/M2`) **Google Gemini Carbon 4** (and next-gen **Carbon 4**) faculty co-pilots. |
 | **7. Design for Agility** | Deterministic **"Write Once -> Push Many"** refactoring—converting a 16-week master shell into a zero-drift 8-week accelerated production shell (`60/60` pages, `45/45` sequential assignments, `0/0` accessibility issues) in minutes. |
 
 ---

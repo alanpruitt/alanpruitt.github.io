@@ -28,7 +28,7 @@ The Centaur Protocol frames every student as the Clinical Architect and AI stric
 
 Zero-login web simulators on exwtoolkit [.] com and paga2018 [.] dev pair P-T-C-F prompts and ### delimiters with Federal Single Sources of Truth (PAGA 2018, 2025–2030 DGA, ACSM 12th Ed., NASM OPT)
 
-150-word human Active Verification defenses and air-gapped Google Gemini Argon 4 models locally on Apple Silicon (M1/M2) preserve 100% FERPA privacy
+150-word human Active Verification defenses and air-gapped Google Gemini Carbon 4 models locally on Apple Silicon (M1/M2) preserve 100% FERPA privacy
 
 Canvas GraphQL automation refactors 16-week master shells into zero-drift 8-week accelerated courses at 0/0 Canvas Accessibility Checker issues
 

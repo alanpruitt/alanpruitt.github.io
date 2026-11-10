@@ -29,7 +29,7 @@ My Python inspection scripts scan every assignment rubric across EXW 101, 150, 2
 On my 10-7-0 Mastery Grading Scale, 0/10 (Recalibrate) is never punitive. Every lab pairs a clean zero floor with unlimited resubmissions and bilingual WCAG 3.0 feedback (In Plain English and Norteno-Spanish) using Pattern / Rule / Solve.
 
 3. Air-Gapped Apple Silicon Edge AI
-Instead of sending gradebook telemetry to cloud chatbots, my M1/M2 workstations run local Gemma Argon 4 models via Ollama and the Antigravity IDE to audit 9:1 ADA Title II contrast and log W3C PROV-O receipts with 100% FERPA sovereignty.
+Instead of sending gradebook telemetry to cloud chatbots, my M1/M2 workstations run local Gemini Carbon 4 models via Ollama and the Antigravity IDE to audit 9:1 ADA Title II contrast and log W3C PROV-O receipts with 100% FERPA sovereignty.
 
 How does your institution audit LMS rubric drift across multi-section courses before grades post?
 

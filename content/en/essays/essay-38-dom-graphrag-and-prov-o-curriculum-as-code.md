@@ -49,7 +49,7 @@ Higher education—especially clinical exercise physiology and nutrition governe
 
 Drawing on my experience as an **Adjunct Faculty member of Exercise Science & Wellness at Arizona Western College**, a **Generative AI Strategist at The University of Arizona**, and **Principal of Webcognita LLC (VOSB)**, I independently designed the **S-A-R Standard (Scalable / Auditable / Repeatable)** so that I can close every architectural gap deterministically across my **scalable $0 ZTC Open Educational Resource (OER) course fleet**.
 
-Instead of settling for flat *Docs-as-Code*, I upgraded my **EXW Master Library (`v2.2`)** with four open-standard semantic layers running on **air-gapped Google Gemini Argon 4 models locally on my Apple Silicon (M1/M2) workstations for 100% FERPA privacy**:
+Instead of settling for flat *Docs-as-Code*, I upgraded my **EXW Master Library (`v2.2`)** with four open-standard semantic layers running on **air-gapped Google Gemini Carbon 4 models locally on my Apple Silicon (M1/M2) workstations for 100% FERPA privacy**:
 
 ```text
 +-----------------------------------------------------------------------------+
@@ -77,7 +77,7 @@ When a student audits a lab inside Canvas, my engine retrieves not just a matchi
 Every live **Sovereign AI Auditing** response returned by my local API (`scripts/canvas_rag_api.py`) now emits a formal **W3C PROV-O (`http://www.w3.org/ns/prov#`)** JSON-LD provenance graph (`prov_o_receipt`) alongside a deterministic SHA-256 `receipt_id`:
 - **`prov:Entity` (`exw:SSoTCorpus`):** The exact federal guideline (`PAGA 2018`, `DGA 2025-2030`, `ACSM 12th Ed.`, or `NASM OPT`) and the Git-versioned curriculum chunks retrieved.
 - **`prov:Activity` (`exw:ClinicalAuditSynthesis`):** The timestamped execution of the local RAG + Clinical Framing audit.
-- **`prov:Agent` (`exw:SovereignArgon4Auditor`):** My air-gapped local **Google Gemini Argon 4** engine running on Apple Silicon (`M1/M2`) with zero external cloud telemetry.
+- **`prov:Agent` (`exw:SovereignArgon4Auditor`):** My air-gapped local **Google Gemini Carbon 4** engine running on Apple Silicon (`M1/M2`) with zero external cloud telemetry.
 
 ### 3. Born-Accessible (`9:1` Contrast) 4-Dimensional XAI Radar Scorecard
 

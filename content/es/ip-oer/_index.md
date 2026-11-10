@@ -21,7 +21,7 @@ description: "Cláusulas contractuales estándar sobre propiedad intelectual pre
    * Las arquitecturas pedagógicas del **Protocolo de Encuadre Clínico (`Patrón / Regla / Solución` • `Pattern / Rule / Solve`)**;
    * La **Escala de Dominio 10-7-0** y los marcos de telemetría de evaluación con **Verificación Activa**;
    * Los **auditores atómicos de accesibilidad POUR, WCAG 2.2 AA y WCAG 3.0** y los motores de remediación de **Alto Contraste `9:1`**; y
-   * Los **motores de simulación perimetral en el navegador (`exwtoolkit.com`)** y los **flujos de auditoría de IA en hardware local aislado (`Argon 4` / `Gemma 4`)**.
+   * Los **motores de simulación perimetral en el navegador (`exwtoolkit.com`)** y los **flujos de auditoría de IA en hardware local aislado (`Carbon 4` / `Gemma 4`)**.
 2. **Reserva de Derechos:** El Proveedor conserva la titularidad única y exclusiva de todos los derechos, títulos e intereses sobre la Propiedad Intelectual del Proveedor, incluyendo todos los derechos aplicables de autor, marca registrada, patente y secreto comercial. Ninguna disposición en un contrato, Orden de Compra o SOW se interpretará como una transferencia o cesión de la titularidad de la Propiedad Intelectual del Proveedor al Cliente.
 
 ---

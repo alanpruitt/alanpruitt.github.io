@@ -214,7 +214,7 @@ ACTIVE_SHELLS = {
 
 ### Implementación de Referencia: `test_rag_pipeline.py` (S-A-R v2.2)
 
-A continuación se presenta el verificador pre-vuelo de 3 compuertas (`scripts/test_rag_pipeline.py` y `scripts/test_rag_pipeline.sh`) que valida `/health` (`HTTP 200`), la aplicación obligatoria de delimitadores (`###CASE_DATA_START###` / `###CASE_DATA_END###` $\rightarrow$ `HTTP 422`) y la inferencia RAG local en Apple Silicon (`exw-argon4:latest` $\rightarrow$ `HTTP 200` con procedencia W3C PROV-O, DOM GraphRAG, Radar XAI 4-D y taxonomía bilingüe W3C SKOS):
+A continuación se presenta el verificador pre-vuelo de 3 compuertas (`scripts/test_rag_pipeline.py` y `scripts/test_rag_pipeline.sh`) que valida `/health` (`HTTP 200`), la aplicación obligatoria de delimitadores (`###CASE_DATA_START###` / `###CASE_DATA_END###` $\rightarrow$ `HTTP 422`) y la inferencia RAG local en Apple Silicon (`exw-carbon4:latest` $\rightarrow$ `HTTP 200` con procedencia W3C PROV-O, DOM GraphRAG, Radar XAI 4-D y taxonomía bilingüe W3C SKOS):
 
 ```python
 #!/usr/bin/env python3
@@ -261,21 +261,21 @@ TEN_COMPLIANCE_TAG = 'data-exw-dol-ten="07-25"'
 
 ### Implementación de Referencia: `argon4_local_rag_verify.py` (S-A-R v2.2)
 
-A continuación se presenta el verificador soberano del índice RAG en Apple Silicon (`scripts/argon4_local_rag_verify.py`) que valida la integridad criptográfica SHA-256 de los fragmentos (`verify_rag_chunk_integrity()`) en los `3,638` fragmentos curriculares indexados (`nomic-embed-text` + `exw-argon4-cac:latest`) y aplica el encapsulado delimitador `### RETRIEVED ACADEMIC SSoT CONTEXT ###`:
+A continuación se presenta el verificador soberano del índice RAG en Apple Silicon (`scripts/argon4_local_rag_verify.py`) que valida la integridad criptográfica SHA-256 de los fragmentos (`verify_rag_chunk_integrity()`) en los `3,638` fragmentos curriculares indexados (`nomic-embed-text` + `exw-carbon4-cac:latest`) y aplica el encapsulado delimitador `### RETRIEVED ACADEMIC SSoT CONTEXT ###`:
 
 ```python
 #!/usr/bin/env python3
 """
 Module: argon4_local_rag_verify.py
 Description: Sovereign Apple Silicon RAG Corpus & Vector Index Integrity Verifier
-             (`exw-argon4-cac:latest` + `nomic-embed-text`), validating SHA-256
+             (`exw-carbon4-cac:latest` + `nomic-embed-text`), validating SHA-256
              chunk provenance and ### RETRIEVED ACADEMIC SSoT CONTEXT ### encapsulation.
 Author: Coach Alan Pruitt (Webcognita LLC • SDVOSB • SAM.gov UEI: EZ34U9KNJA17 • CAGE: 4ZCN6)
 """
 
-OLLAMA_MODEL = "exw-argon4-cac:latest"
+OLLAMA_MODEL = "exw-carbon4-cac:latest"
 EMBEDDING_MODEL = "nomic-embed-text"
-SOVEREIGN_MODEL_TRIAD = ("exw-argon4-cac:latest", "exw-argon4:latest", "exw-gemma4:latest")
+SOVEREIGN_MODEL_TRIAD = ("exw-carbon4-cac:latest", "exw-carbon4:latest", "exw-gemma4:latest")
 ```
 
 ### Implementación de Referencia: `canvas_graphql_sync.py` (S-A-R v2.2)
@@ -307,7 +307,7 @@ A continuación se presenta el generador de recibos de procedencia **W3C PROV-O 
 Module: prov_o_receipt_generator.py
 Description: W3C PROV-O + W3C SKOS JSON-LD Provenance Receipt Generator tracing
              119 curriculum Markdown modules, 3,638 SHA-256 vector chunks, and
-             local Apple Silicon inference (`exw-argon4-cac:latest` + `nomic-embed-text`).
+             local Apple Silicon inference (`exw-carbon4-cac:latest` + `nomic-embed-text`).
 Author: Coach Alan Pruitt (Webcognita LLC • SDVOSB • SAM.gov UEI: EZ34U9KNJA17 • CAGE: 4ZCN6)
 """
 
@@ -377,7 +377,7 @@ CHECKLIST_PHASES = [
 
 ### Implementación de Referencia: `argon4_ollama_env_config.sh` (Entorno Soberano Ollama en Apple Silicon)
 
-A continuación se presenta el script de configuración y verificación de memoria unificada en Apple Silicon (`scripts/argon4_ollama_env_config.sh`) que ajusta `OLLAMA_FLASH_ATTENTION=1`, `OLLAMA_KV_CACHE_TYPE="q8_0"`, `OLLAMA_NUM_PARALLEL=4` y `OLLAMA_MAX_LOADED_MODELS=2` mientras verifica el manifiesto en vivo `/api/tags` para `exw-argon4-cac:latest`, `exw-argon4:latest`, `exw-gemma4:latest` y `nomic-embed-text:latest`:
+A continuación se presenta el script de configuración y verificación de memoria unificada en Apple Silicon (`scripts/argon4_ollama_env_config.sh`) que ajusta `OLLAMA_FLASH_ATTENTION=1`, `OLLAMA_KV_CACHE_TYPE="q8_0"`, `OLLAMA_NUM_PARALLEL=4` y `OLLAMA_MAX_LOADED_MODELS=2` mientras verifica el manifiesto en vivo `/api/tags` para `exw-carbon4-cac:latest`, `exw-carbon4:latest`, `exw-gemma4:latest` y `nomic-embed-text:latest`:
 
 ```zsh
 #!/bin/zsh
@@ -398,13 +398,13 @@ A continuación se presenta el manifiesto consolidado de estado de despliegue S-
 
 ```json
 {
-  "system_report": "M2 / Argon 4 Curriculum-as-Code (CaC) Deployment Status",
+  "system_report": "M2 / Carbon 4 Curriculum-as-Code (CaC) Deployment Status",
   "schema_version": "2.2.0",
   "author": "Coach Alan L. Pruitt (Webcognita LLC • SDVOSB • SAM.gov UEI: EZ34U9KNJA17 • CAGE: 4ZCN6)",
   "strategic_positioning": "Non-Competing 50-State Enabling Partner for NSF TechAccess: AI-Ready America & U.S. DOL ETA TEN No. 07-25 Initiatives",
   "infrastructure_status": {
-    "hardware_nodes": "M1 MacBook Pro <-> M2 MacBook Air <-> Argon 4 Edge Node (Thunderbolt Bridge 192.168.100.2 & Mandatory Two-Machine Git Handshake)",
-    "local_rag_inference": "Active (Apple Silicon MLX Ollama runtime hosting exw-argon4-cac:latest, exw-argon4:latest, exw-gemma4:latest & nomic-embed-text:latest across 3,638 SHA-256 chunks)",
+    "hardware_nodes": "M1 MacBook Pro <-> M2 MacBook Air <-> Carbon 4 Edge Node (Thunderbolt Bridge 192.168.100.2 & Mandatory Two-Machine Git Handshake)",
+    "local_rag_inference": "Active (Apple Silicon MLX Ollama runtime hosting exw-carbon4-cac:latest, exw-carbon4:latest, exw-gemma4:latest & nomic-embed-text:latest across 3,638 SHA-256 chunks)",
     "ferpa_compliance": "100% Air-Gapped Sovereign Execution (Zero Cloud Egress)"
   },
   "pipeline_execution_summary": {

@@ -11,7 +11,7 @@ keywords:
   - "NSF TechAccess: AI-Ready America"
   - "NSF AI-Ready America Enabling Resource & K–16 Dual-Enrollment Deliverables"
   - "Non-Competing 50-State Enabling Resource"
-  - "Air-Gapped Edge AI (Google Gemma Argon 4 & Carbon 4)"
+  - "Air-Gapped Edge AI (Google Gemini Carbon 4 & Carbon 4)"
   - "Webcognita LLC (SDVOSB • SAM.gov UEI: EZ34U9KNJA17 • CAGE: 4ZCN6)"
 ---
 

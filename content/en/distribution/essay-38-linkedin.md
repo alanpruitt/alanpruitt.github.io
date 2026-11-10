@@ -36,7 +36,7 @@ W3C SKOS ontologies mapping Norteño Spanish to Federal Single Sources of Truth 
 
 W3C PROV-O cryptographic receipts proving SHA-256 lineage from federal guidelines to local output
 
-By running air-gapped Google Gemini Argon 4 models locally on Apple Silicon (M1/M2), my Canvas GraphQL and Sovereign AI Auditing pipeline runs with zero cloud egress.
+By running air-gapped Google Gemini Carbon 4 models locally on Apple Silicon (M1/M2), my Canvas GraphQL and Sovereign AI Auditing pipeline runs with zero cloud egress.
 
 The technical guardrails transferred seamlessly with the graph:
 

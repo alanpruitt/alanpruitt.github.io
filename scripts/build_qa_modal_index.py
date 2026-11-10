@@ -258,19 +258,19 @@ def build_curated_executive_nodes():
             "id": "qa-air-gapped-m1-m2-ferpa",
             "category": "dom-graphrag",
             "badge": "DOM GraphRAG • Sovereign Edge AI",
-            "dom_path": "Course 42051 > Ring 2: THE HOW > Local Apple Silicon M1/M2 & Argon 4",
-            "title_en": "What does Air-Gapped Apple Silicon M1/M2 Ollama (Argon 4) mean for FERPA privacy and $0 ZTC cost?",
-            "title_es": "¿Qué significa el sistema aislado (Air-Gapped) Apple Silicon M1/M2 con Argon 4 para FERPA y costo $0?",
+            "dom_path": "Course 42051 > Ring 2: THE HOW > Local Apple Silicon M1/M2 & Carbon 4",
+            "title_en": "What does Air-Gapped Apple Silicon M1/M2 Ollama (Carbon 4) mean for FERPA privacy and $0 ZTC cost?",
+            "title_es": "¿Qué significa el sistema aislado (Air-Gapped) Apple Silicon M1/M2 con Carbon 4 para FERPA y costo $0?",
             "answer_en": (
                 "In plain English: Instead of sending student submissions or curriculum data to commercial cloud AI APIs, "
                 "our instructional grading and auditing pipeline runs offline on local Apple Silicon hardware (M1 Interactive "
                 "Antigravity IDE Cockpit + M2 Unattended 7:00 AM MST Daemon running 9.5 GB open-weight Ollama models "
-                "exw-argon4-cac:latest and exw-gemma4:latest). Student PII never leaves the local machine, guaranteeing "
+                "exw-carbon4-cac:latest and exw-gemma4:latest). Student PII never leaves the local machine, guaranteeing "
                 "100% FERPA compliance with $0 SaaS fees and $0 token costs."
             ),
             "answer_es": (
                 "En palabras sencillas: En lugar de enviar datos estudiantiles a la nube, ejecutamos los modelos abiertos "
-                "Google Gemini Argon 4 localmente en estaciones Apple Silicon M1 y M2 aisladas de internet. Los datos nunca "
+                "Google Gemini Carbon 4 localmente en estaciones Apple Silicon M1 y M2 aisladas de internet. Los datos nunca "
                 "tocan servidores externos, garantizando privacidad FERPA al 100% y cero costos de suscripción o tokens."
             ),
             "keywords": "air-gapped air gapped apple silicon m1 m2 ollama argon 4 gemma ferpa privacy zero trust $0 ztc local ai",

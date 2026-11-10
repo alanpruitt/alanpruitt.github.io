@@ -41,7 +41,7 @@ Leaving LMS rubric thresholds unmanaged creates two silent failure modes:
 Drawing on my work as an **Adjunct Faculty member of Exercise Science & Wellness at Arizona Western College**, a pro bono **Generative AI Strategist (`DCC`) at The University of Arizona (Yuma Campus)**, and **Founder of Webcognita LLC (`SDVOSB / VOSB`)**, I integrated automated validation directly into my **Curriculum-as-Code (S-A-R Standard)** pipeline:
 
 * **Programmatic Canvas Rubric Patching:** Using Python automation scripts over the Canvas API, my pipeline inspects rubric criteria ratings, flags non-zero default floors, and patches them from `1` pt to `0` pts behind `DRY_RUN` safety verification while preserving `Unlimited` mastery resubmissions (`allowed_attempts = -1`).
-* **Air-Gapped Edge AI Workflow Automation (`agy` & Ollama):** Running local models (`exw-argon4-cac:latest`) on Apple Silicon (`M1`/`M2`) to execute daily cadence sweeps, lint course Markdown files to my **9:1 Double-Contrast Guard**, and verify compliance without exposing **100% FERPA**-protected student data.
+* **Air-Gapped Edge AI Workflow Automation (`agy` & Ollama):** Running local models (`exw-carbon4-cac:latest`) on Apple Silicon (`M1`/`M2`) to execute daily cadence sweeps, lint course Markdown files to my **9:1 Double-Contrast Guard**, and verify compliance without exposing **100% FERPA**-protected student data.
 
 * **Read the complete canonical essay on alanpruitt.com:** [Essay 39: What If I Didn't Automate the Threshold?](https://alanpruitt.com/essays/essay-39-automate-the-threshold/)
 * **Explore my U.S. DOL TEN No. 07-25 & NSF AI-Ready Infrastructure Hub:** [alanpruitt.com/institutional-infrastructure/](https://alanpruitt.com/institutional-infrastructure/)
@@ -51,7 +51,7 @@ Drawing on my work as an **Adjunct Faculty member of Exercise Science & Wellness
 ### How I Made This
 
 * **Concept & Framework:** Conceived and architected by Alan Pruitt (Webcognita LLC), grounded in the S-A-R Standard (Scalable / Auditable / Repeatable), Compliance as Code, and The Clinical Framing Protocol (`Pattern / Rule / Solve`).
-* **Drafting & Execution:** Co-authored and refined using Google Antigravity IDE and my local air-gapped `exw-argon4-cac:latest` model against live Canvas GraphQL rubric audit receipts.
+* **Drafting & Execution:** Co-authored and refined using Google Antigravity IDE and my local air-gapped `exw-carbon4-cac:latest` model against live Canvas GraphQL rubric audit receipts.
 * **Verification:** Every clinical reference, Canvas API constraint, and accessibility benchmark was human-audited and verified by the author prior to publication.
 
 > **Disclaimer:** The Curriculum-as-Code architecture, Compliance-as-Code linters, S-A-R Standard, and open-source software tools described in this essay represent my independent faculty engineering and research through Webcognita LLC and do not represent official policy or endorsement by Arizona Western College, The University of Arizona, the U.S. Department of Labor, or the National Science Foundation.

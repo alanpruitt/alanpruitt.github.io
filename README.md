@@ -21,7 +21,7 @@
   - *2025–2030 Dietary Guidelines for Americans ("Real Food" Focus)* (`EXW 150`)
   - *ACSM's Guidelines for Exercise Testing and Prescription, 12th Edition (2025)* (`EXW 210`, `EXW 245`)
   - *NASM Optimum Performance Training (OPT) Model* (`EXW 210`)
-- **Air-Gapped Dual-Workstation Apple Silicon Edge AI:** Pairing an **M1 Interactive Antigravity (AGY) IDE Host Workstation** with an **M2 Unattended 7:00 AM MST Daemon & Local Ollama Engine** (`exw-argon4:latest`, `exw-argon4-cac:latest`, `exw-gemma4:latest`) so student FERPA telemetry never leaves local hardware.
+- **Air-Gapped Dual-Workstation Apple Silicon Edge AI:** Pairing an **M1 Interactive Antigravity (AGY) IDE Host Workstation** with an **M2 Unattended 7:00 AM MST Daemon & Local Ollama Engine** (`exw-carbon4:latest`, `exw-carbon4-cac:latest`, `exw-gemma4:latest`) so student FERPA telemetry never leaves local hardware.
 
 ---
 
@@ -30,7 +30,7 @@
 - **Public Canvas LMS Showcase Shell (`EXW-Demo — Course ID: 42051`):** [https://azwestern.instructure.com/courses/42051](https://azwestern.instructure.com/courses/42051) — Open, non-student-facing AWC Canvas shell demonstrating 56 born-accessible Curriculum-as-Code pages, bilingual `EN`/`ES` tabs, and embedded clinical simulators with `0` WCAG 2.2 AA violations.
 - **The EXW Clinical Auditor (Sovereign SSoT DOM GraphRAG, W3C PROV-O & Active Verification Engine):**
   - **Layer 1 (DOM GraphRAG & 3,151-Vector SSoT Retrieval):** Validates `###CASE_DATA_START###` / `###CASE_DATA_END###` boundaries, normalizes clinical shorthand (`y/o`, `w/o`, `c/o`, `h/o`, `s/p`) before tokenization, and queries **3,151 DOM GraphRAG curriculum chunks** enriched with hierarchical `dom_path` (`h2 > h3`), `clinical_framing_role`, `clo_alignment`, and RDF-style knowledge-graph triples (`partOfModule`, `governedBySSoT`, `fulfillsClinicalRole`, `alignsWithCLO`) across `PAGA 2018 2nd Ed.`, `DGA 2025–2030`, `ACSM 12th Ed. 2025`, and `NASM OPT`.
-  - **Layer 2 (Sovereign Apple Silicon Ollama Inference):** Executes 100% locally on M1/M2 Unified Memory via custom Ollama Modelfiles (`exw-argon4-cac:latest`). Evaluates `Pattern / Rule / Solve` reasoning and the mandatory **150-word Active Verification ("Why" Check)** on the **10-7-0 Mastery Scale**, locking output strictly to English or authentic Norteño-Spanish in Coach Alan's voice (`0%` cloud token egress, `100%` FERPA compliance).
+  - **Layer 2 (Sovereign Apple Silicon Ollama Inference):** Executes 100% locally on M1/M2 Unified Memory via custom Ollama Modelfiles (`exw-carbon4-cac:latest`). Evaluates `Pattern / Rule / Solve` reasoning and the mandatory **150-word Active Verification ("Why" Check)** on the **10-7-0 Mastery Scale**, locking output strictly to English or authentic Norteño-Spanish in Coach Alan's voice (`0%` cloud token egress, `100%` FERPA compliance).
   - **Layer 3 (W3C PROV-O Provenance Receipts, Gunicorn/Flask WSGI & CI/CD):** Emits machine-verifiable **W3C PROV-O provenance receipts** (`@context: "http://www.w3.org/ns/prov#"`, `wasGeneratedBy`, `wasAttributedTo`, `wasDerivedFrom`) over a multi-worker `Gunicorn + Flask WSGI` service (`127.0.0.1:5050`, `/api/v1/audit`, `/audit/submission`), supervised by macOS `launchd` (`KeepAlive`), fronted by `Nginx` TLS + Cloudflare HTTPS Tunnel, and continuously verified via `make test-pipeline`.
 - **Downloadable Architecture Briefs & White Papers (`alanpruitt.com/#architecture-briefs`):**
   1. [Sovereign Clinical AI, DOM GraphRAG & W3C PROV-O Architecture Brief (`S-A-R v2.2`, PDF)](https://alanpruitt.com/docs/EXW_S_A_R_v2_2_DOM_GraphRAG_and_PROV_O_Architecture_Brief.pdf)
@@ -111,7 +111,7 @@
 - **Static Site Generator:** Hugo (`hugo --minify`) + canonical tag enforcement (`python3 scripts/inject_canonicals.py`) + POUR WCAG 2.2 AA (`9:1`) auditor (`python3 pour_audit.py`).
 - **Immutable Search Console Ownership Guards:**
   - Static HTML verification endpoint: [`static/google79ce991311bd4c24.html`](https://alanpruitt.com/google79ce991311bd4c24.html)
-  - `<head>` meta verification token (`CzTdgB5WJ_UjWFg7HpV9VOOACNmsgHQP1mFMI2b_tls`) enforced across Hugo layouts, `.github/workflows/deploy.yml`, and the daily 7:00 AM MST Argon 4 platform vector monitor (`scripts/argon4_platform_vector_monitor.py`).
+  - `<head>` meta verification token (`CzTdgB5WJ_UjWFg7HpV9VOOACNmsgHQP1mFMI2b_tls`) enforced across Hugo layouts, `.github/workflows/deploy.yml`, and the daily 7:00 AM MST Carbon 4 platform vector monitor (`scripts/argon4_platform_vector_monitor.py`).
 - **Machine-Readable Syndication & Discovery:**
   - [LLMs.txt Summary (`https://alanpruitt.com/llms.txt`)](https://alanpruitt.com/llms.txt)
   - [LLMs-Full.txt Complete Corpus (`https://alanpruitt.com/llms-full.txt`)](https://alanpruitt.com/llms-full.txt)

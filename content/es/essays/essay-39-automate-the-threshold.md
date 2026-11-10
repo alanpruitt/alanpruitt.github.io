@@ -7,7 +7,7 @@ draft: false
 slug: "essay-39-automate-the-threshold"
 translationKey: "essay-39"
 author: "Alan Pruitt"
-description: "Cómo automatizar la validación de rúbricas 10-7-0 con piso cero en Canvas GraphQL y auditorías locales de IA en el borde (Gemma Argon 4) garantiza rigor clínico, accesibilidad WCAG 2.2 AA (9:1) y privacidad FERPA."
+description: "Cómo automatizar la validación de rúbricas 10-7-0 con piso cero en Canvas GraphQL y auditorías locales de IA en el borde (Gemini Carbon 4) garantiza rigor clínico, accesibilidad WCAG 2.2 AA (9:1) y privacidad FERPA."
 summary: "Cómo automatizar la validación de rúbricas 10-7-0 con piso cero en Canvas GraphQL y auditorías locales de IA en el borde garantiza rigor clínico, accesibilidad 9:1 y privacidad FERPA."
 categories:
   - "Curriculum-as-Code"
@@ -42,7 +42,7 @@ Apoyándome en mi labor docente en **Arizona Western College (HSI)**, como **Est
 
 1. **Parcheo y Verificación Programática de Rúbricas en Canvas:** Mis scripts en Python auditan cada criterio en las `11` aulas de Canvas, detectan cualquier piso distinto de cero y lo ajustan de `1` pt a `0` pts con respaldo previo, simulación `DRY_RUN` y reverificación.
 2. **Recalibración Formativa con Intentos Ilimitados (`10-7-0`):** Un `0 / 10` (*Recalibrar*) nunca es punitivo; va acompañado de `allowed_attempts = -1` (*Intentos ilimitados*) y retroalimentación accesible bajo **WCAG 3.0** (*En palabras sencillas* / español norteño auténtico) siguiendo **El Protocolo de Encuadre Clínico (`Patrón / Regla / Solución`)**.
-3. **Orquestación Local Aislada (`M1` / `M2` y Ollama `Gemma Argon 4`):** Toda la telemetría de accesibilidad **ADA Título II / WCAG 2.2 AA (`9:1` Double-Contrast Guard)** y los recibos criptográficos `W3C PROV-O` se ejecutan localmente en silicio Apple sin exponer datos estudiantiles protegidos por **FERPA**—sirviendo como arquitectura habilitadora no competitiva para **[NSF TechAccess: AI-Ready America](/es/institutional-infrastructure/)** y **[U.S. DOL TEN No. 07-25](/es/institutional-infrastructure/)**.
+3. **Orquestación Local Aislada (`M1` / `M2` y Ollama `Gemini Carbon 4`):** Toda la telemetría de accesibilidad **ADA Título II / WCAG 2.2 AA (`9:1` Double-Contrast Guard)** y los recibos criptográficos `W3C PROV-O` se ejecutan localmente en silicio Apple sin exponer datos estudiantiles protegidos por **FERPA**—sirviendo como arquitectura habilitadora no competitiva para **[NSF TechAccess: AI-Ready America](/es/institutional-infrastructure/)** y **[U.S. DOL TEN No. 07-25](/es/institutional-infrastructure/)**.
 
 ---
 
