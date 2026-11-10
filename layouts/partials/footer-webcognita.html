@@ -1,0 +1,136 @@
+{{/* layouts/partials/footer-webcognita.html */}}
+<style>
+  .site-footer {
+    margin-top: 4rem;
+    border-top: 1px solid #E2D9C8;
+    background-color: #F5F2EB;
+    color: #0C2340;
+  }
+  .site-footer .footer-container {
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: #0C2340;
+  }
+  .site-footer .footer-copyright {
+    text-align: center;
+  }
+  .site-footer .footer-copyright p,
+  .site-footer .footer-tagline p {
+    margin: 0;
+  }
+  .site-footer .footer-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1.5rem;
+    row-gap: 0.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+  }
+  .site-footer a {
+    color: #0C2340;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    font-weight: 600;
+  }
+  .site-footer a:hover {
+    color: #940925;
+  }
+  .site-footer a:focus-visible {
+    outline: 2px solid #940925;
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+  .site-footer .footer-tagline {
+    font-size: 0.75rem;
+    line-height: 1.45;
+    color: #0C2340;
+    text-align: center;
+    max-width: 24rem;
+  }
+  @media (min-width: 768px) {
+    .site-footer .footer-container {
+      flex-direction: row;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+    .site-footer .footer-copyright {
+      text-align: left;
+    }
+    .site-footer .footer-tagline {
+      text-align: right;
+    }
+  }
+</style>
+<footer id="site-footer" class="site-footer" aria-label="{{ if eq .Lang "es" }}Pie de página corporativo{{ else }}Company Footer{{ end }}">
+  <div class="footer-container max-w-7xl mx-auto px-4 py-8 flex flex-col md:flex-row justify-between items-center text-sm text-[#0C2340] dark:text-zinc-200 border-t border-[#E2D9C8] dark:border-zinc-800">
+    
+    <div class="footer-copyright mb-4 md:mb-0">
+      <p class="font-semibold">&copy; {{ now.Year }} Webcognita LLC (UEI: EZ34U9KNJA17 &bull; CAGE: 4ZCN6 &bull; EIN: 81-0809739). {{ if eq .Lang "es" }}Todos los derechos reservados.{{ else }}All rights reserved.{{ end }}</p>
+      <p class="text-xs text-[#0C2340] dark:text-zinc-300 mt-1" style="margin-top: 0.25rem; font-size: 0.75rem;">NAICS 541511, 541512, 541715, 611710, 541690</p>
+    </div>
+
+    <nav class="footer-nav mb-4 md:mb-0" aria-label="{{ if eq .Lang "es" }}Navegación corporativa del pie de página{{ else }}Corporate Footer Navigation{{ end }}">
+      <ul class="flex flex-wrap gap-6 list-none m-0 p-0">
+        <li>
+          <a href="/privacy/" style="min-height: 44px; display: inline-flex; align-items: center;" class="underline hover:text-[#940925] dark:hover:text-emerald-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#940925]">
+            {{ if eq .Lang "es" }}Política de Privacidad{{ else }}Privacy Policy{{ end }}
+          </a>
+        </li>
+        <li>
+          <a href="/terms/" style="min-height: 44px; display: inline-flex; align-items: center;" class="underline hover:text-[#940925] dark:hover:text-emerald-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#940925]">
+            {{ if eq .Lang "es" }}Términos de Servicio{{ else }}Terms of Service{{ end }}
+          </a>
+        </li>
+        <li>
+          <a href="https://alanpruitt.com/dpa/" target="_blank" rel="noopener noreferrer" style="min-height: 44px; display: inline-flex; align-items: center;" class="underline hover:text-[#940925] dark:hover:text-emerald-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#940925]">
+            DPA
+          </a>
+        </li>
+        <li>
+          <a href="https://alanpruitt.com/ip-oer/" target="_blank" rel="noopener noreferrer" style="min-height: 44px; display: inline-flex; align-items: center;" class="underline hover:text-[#940925] dark:hover:text-emerald-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#940925]">
+            {{ if eq .Lang "es" }}IP y OER{{ else }}IP &amp; OER{{ end }}
+          </a>
+        </li>
+        <li>
+          <a href="/accessibility.html" style="min-height: 44px; display: inline-flex; align-items: center;" class="underline hover:text-[#940925] dark:hover:text-emerald-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#940925]">
+            {{ if eq .Lang "es" }}Accesibilidad{{ else }}Accessibility{{ end }}
+          </a>
+        </li>
+        <li>
+          <a href="/contact.html" style="min-height: 44px; display: inline-flex; align-items: center;" class="underline hover:text-[#940925] dark:hover:text-emerald-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#940925]">
+            {{ if eq .Lang "es" }}Contacto{{ else }}Contact{{ end }}
+          </a>
+        </li>
+        <li>
+          <a href="/sitemap.xml" style="min-height: 44px; display: inline-flex; align-items: center;" class="underline hover:text-[#940925] dark:hover:text-emerald-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#940925]">
+            Sitemap
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="footer-tagline text-xs text-[#0C2340] dark:text-zinc-300 text-center md:text-right max-w-sm">
+      <p>
+        {{ if eq .Lang "es" }}
+          Impulsado por Curriculum-as-Code &bull; Consultoría Profesional de IA y Arquitectura EdTech Institucional.
+        {{ else }}
+          Powered by Curriculum-as-Code &bull; Professional AI Consulting &amp; Institutional EdTech Architecture.
+        {{ end }}
+      </p>
+    </div>
+
+  </div>
+</footer>
