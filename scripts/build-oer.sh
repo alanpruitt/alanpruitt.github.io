@@ -99,7 +99,7 @@ This repository contains a production-ready, open-access instructional suite for
 ### 1. Primary Human Authorship & Curriculum Architecture
 * **Primary Author & Architect:** Alan Pruitt (Coach Alan), Founder & Chief Curriculum Architect, Webcognita LLC; Adjunct Faculty, Arizona Western College; Generative AI Strategist, University of Arizona Yuma Campus.
 * **Domain Credentials:** Google Gemini Certified Faculty, U.S. Marine Corps Veteran.
-* **Human Editorial & Clinical Scope:** All core pedagogical frameworks, the Mission Loop architecture (Pattern / Rule / Solve), course structures, and clinical safety thresholds were authored, verified, and audited by the human author against federal health standards.
+* **Human Editorial & Clinical Scope:** All core pedagogical frameworks, the Clinical Framing Protocol architecture (Pattern / Rule / Solve), course structures, and clinical safety thresholds were authored, verified, and audited by the human author against federal health standards.
 
 ### 2. Nature and Scope of Generative AI Collaboration
 Generative AI was **not** used to wholesale-generate unvetted educational content or replace human instruction. Rather, AI tools (Google Gemini 1.5 Pro/Ultra, local open-weight Ollama instances) were utilized strictly as:

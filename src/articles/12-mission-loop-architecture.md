@@ -1,6 +1,6 @@
 ---
-title: "The Mission Loop Architecture: Pattern, Rule, and Solve in Coded Instruction"
-title_es: "La Arquitectura del Bucle de Misión: Patrón, Regla y Solución en la Instrucción Codificada"
+title: "The Clinical Framing Protocol Architecture: Pattern, Rule, and Solve in Coded Instruction"
+title_es: "La Arquitectura del Protocolo de Encuadre Clínico: Patrón, Regla y Solución en la Instrucción Codificada"
 description: "Structuring deterministic health science problem-solving pipelines that enforce pattern identification, rule citation, and audited intervention."
 description_es: "Estructurando tuberías deterministas de resolución de problemas en ciencias de la salud que imponen identificación de patrones, cita de reglas y solución auditada."
 essay_number: "12"
@@ -9,7 +9,7 @@ author: "Alan Pruitt"
 read_time: "9 min read"
 source_type: "Markdown SSoT"
 tags:
-  - "Mission Loop"
+  - "Clinical Framing Protocol"
   - "Instructional Engineering"
   - "Pedagogical Architecture"
   - "Health Sciences"
@@ -23,17 +23,17 @@ canonical_url: "https://alanpruitt.com/articles/12-mission-loop-architecture.htm
   ========================================================================= -->
 <div data-lang="en">
 
-# The Mission Loop Architecture: Pattern, Rule, and Solve in Coded Instruction
+# The Clinical Framing Protocol Architecture: Pattern, Rule, and Solve in Coded Instruction
 
 In traditional health science education, assignment prompts often ask open-ended questions like "Describe how you would design an exercise program for a diabetic client." While well-intentioned, these unconstrained assignments invite vague responses, obscure student reasoning errors, and make objective assessment extraordinarily difficult.
 
-When curriculum is engineered as code, learning tasks require a structured, deterministic execution pipeline: **The Mission Loop**.
+When curriculum is engineered as code, learning tasks require a structured, deterministic execution pipeline: **The Clinical Framing Protocol**.
 
-## 1. The Architecture of the Mission Loop
+## 1. The Architecture of the Clinical Framing Protocol
 
-The Mission Loop divides weekly problem-solving tasks into three explicit, sequential phases: **Pattern**, **Rule**, and **Solve**.
+The Clinical Framing Protocol divides weekly problem-solving tasks into three explicit, sequential phases: **Pattern**, **Rule**, and **Solve**.
 
-### Mission Loop Execution Protocol
+### Clinical Framing Protocol Execution Protocol
 
 ```markdown
 [1. PATTERN (Observation & Framing)]
@@ -49,11 +49,11 @@ The Mission Loop divides weekly problem-solving tasks into three explicit, seque
 - Validation: Pass through the AI Safety Auditor gate for compliance verification.
 ```
 
-> "Open-ended prompts produce vague answers; the Mission Loop forces students to cite the evidence-based rule before prescribing the clinical solution."
+> "Open-ended prompts produce vague answers; the Clinical Framing Protocol forces students to cite the evidence-based rule before prescribing the clinical solution."
 
 ## 2. Converting Open Prompts into Deterministic Pipelines
 
-Transforming vague homework assignments into Mission Loops establishes unambiguous rubrics for both students and evaluators:
+Transforming vague homework assignments into Clinical Framing Protocols establishes unambiguous rubrics for both students and evaluators:
 
 1. **Pattern Phase:** Students extract quantitative indicators (e.g., resting BP > 130/80 mmHg, HbA1c > 6.5%) rather than offering general descriptions.
 2. **Rule Phase:** Students cite the governing federal or clinical guideline clause that dictates treatment protocols.
@@ -61,7 +61,7 @@ Transforming vague homework assignments into Mission Loops establishes unambiguo
 
 ## 3. Benefits for Higher Education Curricula
 
-Implementing Mission Loops across exercise physiology and nutrition coursework delivers core architectural advantages:
+Implementing Clinical Framing Protocols across exercise physiology and nutrition coursework delivers core architectural advantages:
 
 * **Elimination of Fluff:** Submissions focus strictly on physiological evidence and clinical logic rather than filler text.
 * **Objective Grading Automation:** Pre-defined Pattern and Rule targets enable automated unit testing of student reasoning.
@@ -74,17 +74,17 @@ Implementing Mission Loops across exercise physiology and nutrition coursework d
   ========================================================================= -->
 <div data-lang="es" class="hidden-lang">
 
-# La Arquitectura del Bucle de Misión: Patrón, Regla y Solución en la Instrucción Codificada
+# La Arquitectura del Protocolo de Encuadre Clínico: Patrón, Regla y Solución en la Instrucción Codificada
 
 En la educación tradicional en ciencias de la salud, las consignas de tareas a menudo plantean preguntas abiertas como "Describa cómo diseñaría un programa de ejercicios para un cliente diabético". Aunque bien intencionadas, estas tareas sin restricciones invitan a respuestas vagas, oscurecen los errores de razonamiento de los estudiantes y dificultan enormemente la evaluación objetiva.
 
-Cuando el currículum se diseña como código, las tareas de aprendizaje requieren una tubería de ejecución estructurada y determinista: **El Bucle de Misión**.
+Cuando el currículum se diseña como código, las tareas de aprendizaje requieren una tubería de ejecución estructurada y determinista: **El Protocolo de Encuadre Clínico**.
 
-## 1. La Arquitectura del Bucle de Misión
+## 1. La Arquitectura del Protocolo de Encuadre Clínico
 
-El Bucle de Misión divide las tareas semanales de resolución de problemas en tres fases explícitas y secuenciales: **Patrón**, **Regla** y **Solución**.
+El Protocolo de Encuadre Clínico divide las tareas semanales de resolución de problemas en tres fases explícitas y secuenciales: **Patrón**, **Regla** y **Solución**.
 
-### Protocolo de Ejecución del Bucle de Misión
+### Protocolo de Ejecución del Protocolo de Encuadre Clínico
 
 ```markdown
 [1. PATRÓN (Observación y Encuadre)]
@@ -100,7 +100,7 @@ El Bucle de Misión divide las tareas semanales de resolución de problemas en t
 - Validación: Pasar por el filtro del Auditor de Seguridad de IA para verificación de cumplimiento.
 ```
 
-> "Las consignas abiertas producen respuestas vagas; el Bucle de Misión obliga a los estudiantes a citar la regla basada en evidencia antes de prescribir la solución clínica."
+> "Las consignas abiertas producen respuestas vagas; el Protocolo de Encuadre Clínico obliga a los estudiantes a citar la regla basada en evidencia antes de prescribir la solución clínica."
 
 ## 2. Conversión de Consignas Abiertas en Tuberías Deterministas
 

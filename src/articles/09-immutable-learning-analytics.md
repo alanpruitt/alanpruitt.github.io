@@ -52,7 +52,7 @@ Privacy-first telemetry flips the traditional model on its head: data collection
   "course_id": "EXW101",
   "module_id": "mod_06_cardio",
   "telemetry": {
-    "node_type": "mission_loop_audit",
+    "node_type": "clinical_framing_protocol_audit",
     "interaction_time_ms": 4200,
     "completed_sequence": true,
     "self_assessment_score": 0.85
@@ -103,7 +103,7 @@ La telemetría centrada en la privacidad invierte el modelo tradicional: la reco
   "course_id": "EXW101",
   "module_id": "mod_06_cardio",
   "telemetry": {
-    "node_type": "mission_loop_audit",
+    "node_type": "clinical_framing_protocol_audit",
     "interaction_time_ms": 4200,
     "completed_sequence": true,
     "self_assessment_score": 0.85

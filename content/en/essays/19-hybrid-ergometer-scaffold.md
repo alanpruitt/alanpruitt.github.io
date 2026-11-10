@@ -93,9 +93,9 @@ To guarantee institutional quality and legal compliance across public community 
 
 ---
 
-## 6. The Mission Loop Assessment in Production
+## 6. The Clinical Framing Protocol Assessment in Production
 
-Assessment across all EXW245 laboratory modules follows the **Mission Loop (Pattern / Rule / Solve)** architecture:
+Assessment across all EXW245 laboratory modules follows the **Clinical Framing Protocol (Pattern / Rule / Solve)** architecture:
 
 * **Pattern:** Identify baseline cardiovascular indicators, resting blood pressure responses, and potential contraindications to exercise testing.
 * **Rule:** Apply the federal Physical Activity Guidelines for Americans (PAGA 2018, 2nd Ed.) and ACSM 12th Edition testing criteria strictly—halting protocols immediately upon reaching 85% of age-predicted maximum heart rate or observing adverse symptomology.

@@ -27,7 +27,7 @@ The hierarchy is mostly correct, but there is a slight inconsistency in the use 
 The tone is expertly calibrated. It successfully manages the tension between the high-stakes, rigorous nature of the clinical material and the modern, forward-thinking philosophy of AI education.
 
 *   **Welcoming & Clear:** The introduction is direct and immediately establishes the high-level, specialized nature of the course. The "Coach's Note" and the "Mission Support" section provide necessary human context and support.
-*   **Calibrated Rigor:** The content successfully balances the "transfer rigor" (ACSM standards, specific protocols, academic integrity rules) with the "introductory" welcoming tone. The language is authoritative ("clinical guardian," "Commanders," "Mission Loop") but grounded in clear, actionable steps.
+*   **Calibrated Rigor:** The content successfully balances the "transfer rigor" (ACSM standards, specific protocols, academic integrity rules) with the "introductory" welcoming tone. The language is authoritative ("clinical guardian," "Commanders," "Clinical Framing Protocol") but grounded in clear, actionable steps.
 *   **AI Philosophy:** The subsequent sections on "AI for Good" and "Institutional Agility" shift the tone effectively from pure clinical instruction to a discussion of modern, ethical, and practical application, positioning the course as future-proof.
 
 ### 3. Formatting and Scannability (Bullet Points and Text Walls)

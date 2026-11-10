@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-11-10T06:13:56Z",
+  "generated_at": "2026-11-10T21:58:47Z",
   "published_count": 40,
   "max_published_number": 40,
   "staged_numbers": [
@@ -177,7 +177,7 @@
     {
       "essay_number": 12,
       "status": "published",
-      "title": "The Mission Loop Architecture: Pattern, Rule, and Solve in Coded Instruction",
+      "title": "The Clinical Framing Protocol Architecture: Pattern, Rule, and Solve in Coded Instruction",
       "date": "2026-08-11",
       "slug": "12-mission-loop-architecture",
       "canonical_url": "https://alanpruitt.com/essays/12-mission-loop-architecture/",
@@ -186,7 +186,7 @@
       "substack_kit": null,
       "linkedin_kit": null,
       "substack_live_url": null,
-      "word_count": 848
+      "word_count": 862
     },
     {
       "essay_number": 13,
@@ -242,7 +242,7 @@
       "substack_kit": null,
       "linkedin_kit": null,
       "substack_live_url": null,
-      "word_count": 895
+      "word_count": 898
     },
     {
       "essay_number": 17,
@@ -284,7 +284,7 @@
       "substack_kit": null,
       "linkedin_kit": null,
       "substack_live_url": null,
-      "word_count": 984
+      "word_count": 986
     },
     {
       "essay_number": 20,
@@ -298,7 +298,7 @@
       "substack_kit": null,
       "linkedin_kit": null,
       "substack_live_url": null,
-      "word_count": 1355
+      "word_count": 1358
     },
     {
       "essay_number": 21,
@@ -312,7 +312,7 @@
       "substack_kit": null,
       "linkedin_kit": null,
       "substack_live_url": null,
-      "word_count": 1102
+      "word_count": 1104
     },
     {
       "essay_number": 22,
@@ -326,7 +326,7 @@
       "substack_kit": null,
       "linkedin_kit": null,
       "substack_live_url": null,
-      "word_count": 1238
+      "word_count": 1241
     },
     {
       "essay_number": 23,
@@ -354,7 +354,7 @@
       "substack_kit": null,
       "linkedin_kit": null,
       "substack_live_url": null,
-      "word_count": 955
+      "word_count": 957
     },
     {
       "essay_number": 25,
@@ -435,7 +435,7 @@
     {
       "essay_number": 30,
       "status": "published",
-      "title": "The Logic Grid: Why Good Assessment Looks Like Sudoku (and How the Mission Loop Solves the AI Crisis)",
+      "title": "The Logic Grid: Why Good Assessment Looks Like Sudoku (and How the Clinical Framing Protocol Solves the AI Crisis)",
       "date": "2026-09-03",
       "slug": "essay-30-the-logic-grid",
       "canonical_url": "https://alanpruitt.com/essays/essay-30-the-logic-grid/",
@@ -444,7 +444,7 @@
       "substack_kit": null,
       "linkedin_kit": null,
       "substack_live_url": null,
-      "word_count": 1032
+      "word_count": 1035
     },
     {
       "essay_number": 31,
@@ -540,7 +540,7 @@
       "substack_kit": null,
       "linkedin_kit": null,
       "substack_live_url": "https://alanpruitt.substack.com/p/what-if-i-didnt-standardize-the-loop",
-      "word_count": 770,
+      "word_count": 771,
       "substack_word_count": 618,
       "substack_has_canonical_backlink": false,
       "substack_has_disclaimer": false

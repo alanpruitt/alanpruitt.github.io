@@ -18,7 +18,7 @@ description: "Standard contract clauses defining pre-existing intellectual prope
 
 1. **Definition of Provider IP:** "Provider IP" means all proprietary software codebases, compilers, architectural frameworks, templates, pre-existing digital assets, courseware structures, documentation, know-how, and methodologies developed, acquired, or authored by Webcognita LLC or Alan Pruitt prior to or independently of the governing Statement of Work (SOW). Provider IP explicitly includes, without limitation:
    * **Curriculum-as-Code (C-a-C)** publishing, linting, and Zero-Drift synchronization pipelines;
-   * **The Clinical Framing Protocol (`Pattern / Rule / Solve`)** and **Mission Loop** pedagogical architectures;
+   * **The Clinical Framing Protocol (`Pattern / Rule / Solve` • `Patrón / Regla / Solución`)** pedagogical architectures;
    * **The 10-7-0 Mastery Grading Scale** and **Active Verification** assessment telemetry frameworks;
    * **POUR, WCAG 2.2 AA, and WCAG 3.0 Atomic Accessibility Linters** and **9:1 High-Contrast** remediation engines; and
    * **Client-side edge simulator engines (`exwtoolkit.com`)** and **local air-gapped AI auditing workflows (`Argon 4` / `Gemma 4`)**.

@@ -18,7 +18,7 @@ description: "Cláusulas contractuales estándar sobre propiedad intelectual pre
 
 1. **Definición de Propiedad Intelectual del Proveedor:** "Propiedad Intelectual del Proveedor" ("Provider IP") significa todas las bases de código de software propietario, compiladores, marcos arquitectónicos, plantillas, activos digitales preexistentes, estructuras curriculares, documentación, conocimientos técnicos y metodologías desarrollados, adquiridos o creados por Webcognita LLC o Alan Pruitt antes o independientemente del Alcance de Trabajo (SOW) aplicable. La Propiedad Intelectual del Proveedor incluye explícitamente, sin limitación:
    * Los flujos de publicación, auditoría y sincronización sin desviaciones de **Currículo como Código (Curriculum-as-Code, C-a-C)**;
-   * Las arquitecturas pedagógicas del **Protocolo de Encuadre Clínico (`Patrón / Regla / Solución`)** y **Mission Loop**;
+   * Las arquitecturas pedagógicas del **Protocolo de Encuadre Clínico (`Patrón / Regla / Solución` • `Pattern / Rule / Solve`)**;
    * La **Escala de Dominio 10-7-0** y los marcos de telemetría de evaluación con **Verificación Activa**;
    * Los **auditores atómicos de accesibilidad POUR, WCAG 2.2 AA y WCAG 3.0** y los motores de remediación de **Alto Contraste `9:1`**; y
    * Los **motores de simulación perimetral en el navegador (`exwtoolkit.com`)** y los **flujos de auditoría de IA en hardware local aislado (`Argon 4` / `Gemma 4`)**.

@@ -19,7 +19,7 @@ permalink: /essays/essay-16-canvas-lms-3-track-ai-branch/
 
 ## TL;DR Summary
 * **The Paradigm Shift:** Traditional online discussion boards suffer from the "echo chamber" effect. Extending our **3-Track Self-Guided AI Branch ("Build Your Own Journey")** and **Bilingual Scaffolding (English/Español)** across all 16 weekly modules turns standard Canvas discussions into active, interdisciplinary clinical case conferences.
-* **The Operational Loop:** Students select one of three career-aligned tracks (**Track 1: Clinical**, **Track 2: Community**, or **Track 3: Performance**), consult Google Gemini using triple-hash (`###`) data isolation, post their 3-part **Mission Loop** analysis, and perform mandatory **cross-track peer audits**.
+* **The Operational Loop:** Students select one of three career-aligned tracks (**Track 1: Clinical**, **Track 2: Community**, or **Track 3: Performance**), consult Google Gemini using triple-hash (`###`) data isolation, post their 3-part **Clinical Framing Protocol** analysis, and perform mandatory **cross-track peer audits**.
 * **Accessibility & Deployment:** Fully compliant with WCAG 2.1 AA (Creme/Navy palette), Quality Matters (QM) 5.2, Universal Design for Learning (UDL), and mobile-first Canvas LMS deployment across the full EXW curriculum.
 
 ---

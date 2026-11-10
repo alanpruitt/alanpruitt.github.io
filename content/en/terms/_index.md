@@ -51,7 +51,7 @@ When you purchase a commercial digital product, toolkit, courseware asset, or te
 
 ### 5. Intellectual Property Rights and Open Educational Resources (OER)
 
-* **Proprietary IP & Original Writings:** All original essays, software architectures, commercial toolkits, and frameworks (including the Mission Loop, Pattern / Rule / Solve clinical framing architecture, and Curriculum-as-Code pipelines) published on `webcognita.com` and `alanpruitt.com` remain the intellectual property of Webcognita LLC and Alan Pruitt. Commercial reproduction or redistribution without written permission is prohibited.
+* **Proprietary IP & Original Writings:** All original essays, software architectures, commercial toolkits, and frameworks (including The Clinical Framing Protocol [Pattern / Rule / Solve], the S-A-R Standard, and Curriculum-as-Code pipelines) published on `webcognita.com` and `alanpruitt.com` remain the intellectual property of Webcognita LLC and Alan Pruitt. Commercial reproduction or redistribution without written permission is prohibited.
 * **Open Educational Resources (`CC BY 4.0`):** Designated public curriculum packages and scholarly datasets explicitly marked with a **Creative Commons Attribution 4.0 International (`CC BY 4.0`)** license may be shared and adapted for educational and research purposes, provided appropriate credit is given to Alan Pruitt (`alanpruitt.com`).
 * **Client IP:** You retain full ownership of any proprietary code, institutional data, or documents you supply to Webcognita LLC for the purpose of a consulting engagement.
 

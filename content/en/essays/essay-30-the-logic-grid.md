@@ -1,9 +1,9 @@
 ---
-title: "The Logic Grid: Why Good Assessment Looks Like Sudoku (and How the Mission Loop Solves the AI Crisis)"
+title: "The Logic Grid: Why Good Assessment Looks Like Sudoku (and How the Clinical Framing Protocol Solves the AI Crisis)"
 date: 2026-09-03T10:00:00-07:00
 draft: false
-description: "How a warm-up routine in an adult GED classroom exposed the core flaw of generative AI in higher education--and gave rise to the Mission Loop framework."
-tags: ["Curriculum-as-Code", "Mission Loop", "Instructional Design", "GenAI", "Higher Ed"]
+description: "How a warm-up routine in an adult GED classroom exposed the core flaw of generative AI in higher education--and gave rise to the Clinical Framing Protocol."
+tags: ["Curriculum-as-Code", "Clinical Framing Protocol", "Instructional Design", "GenAI", "Higher Ed"]
 categories: ["Curriculum-as-Code", "AI Safety Protocols", "Pedagogy"]
 series: ["Curriculum Architecture"]
 essayNumber: 30
@@ -47,7 +47,7 @@ Learners quickly discovered that when they stopped guessing and focused entirely
 
 The psychological transformation was immediate. Panic gave way to systematic curiosity. Students began using the phrase on actual practice tests: "Wait, what is the pattern here? What rule am I supposed to apply?"
 
-Confidence stabilized, guessing disappeared, and pass rates surged. The **Mission Loop (Pattern / Rule / Solve)** was born.
+Confidence stabilized, guessing disappeared, and pass rates surged. The **Clinical Framing Protocol (Pattern / Rule / Solve)** was born.
 
 ---
 
@@ -63,7 +63,7 @@ The solution is not to ban the technology. It is to architect the assignment so 
 
 ```text
 +-------------------------------------------------------------------+-
-|                         THE MISSION LOOP                           |
+|                         THE CLINICAL FRAMING PROTOCOL                           |
 |                                                                  |
 |   [ 1. PATTERN ]          [ 2. RULE ]            [ 3. SOLVE ]     |
 |   Local Telemetry    ->   SSoT Constraints  ->   Actionable Proof |
@@ -90,7 +90,7 @@ Students design the intervention--and then audit it. If they use an LLM to gener
 In an era of ubiquitous AI, an assignment that only asks for a final essay is an invitation to guess. It rewards superficial completion over cognitive development.
 
 The adult learners working through those morning Sudoku grids taught us an enduring lesson: **True confidence does not come from having an answer; it comes from trusting your method.**
-When we design our courses as code--version-controlled, accessible, and grounded in the Mission Loop--we stop policing text and start teaching students how to think. We transform them from passive consumers of machine-generated text into sovereign auditors capable of navigating any grid the world puts in front of them.
+When we design our courses as code--version-controlled, accessible, and grounded in the Clinical Framing Protocol--we stop policing text and start teaching students how to think. We transform them from passive consumers of machine-generated text into sovereign auditors capable of navigating any grid the world puts in front of them.
 
 ---
 

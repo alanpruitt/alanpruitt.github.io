@@ -8,8 +8,8 @@ course: "EXW150"
 term: "Fall 2026"
 ssot: "PAGA 2018 (2nd Ed.) / Dietary Guidelines for Americans"
 tags: ["CurriculumAsCode", "Nutrition", "SportsNutrition", "SSoT", "InformationLiteracy"]
-summary: "How EXW150 uses Curriculum-as-Code, the Mission Loop framework, and federal SSoT standards to insulate community college students from social media fad diets, predatory supplement claims, and unanchored AI nutrition advice."
-summary_es: "Cómo EXW150 utiliza Currículum como Código, el marco del Bucle de Misión y los estándares federales SSoT para aislar a los estudiantes de dietas de moda, afirmaciones de suplementos y consejos de IA no anclados."
+summary: "How EXW150 uses Curriculum-as-Code, the Clinical Framing Protocol, and federal SSoT standards to insulate community college students from social media fad diets, predatory supplement claims, and unanchored AI nutrition advice."
+summary_es: "Cómo EXW150 utiliza Currículum como Código, el marco del Protocolo de Encuadre Clínico y los estándares federales SSoT para aislar a los estudiantes de dietas de moda, afirmaciones de suplementos y consejos de IA no anclados."
 lang_default: "en"
 categories: ["curriculum-as-code"]
 ---
@@ -97,15 +97,15 @@ Execute the following verification checks:
 
 ---
 
-## 4. The Mission Loop in Metabolic Problem Solving
+## 4. The Clinical Framing Protocol in Metabolic Problem Solving
 
 In sports nutrition education, evaluating energy systems and fueling strategies requires a repeatable, objective analytical framework.
 
-In **EXW150**, students apply the **Mission Loop (Pattern / Rule / Solve)** to break through marketing narratives and build metabolically sound fueling plans:
+In **EXW150**, students apply the **Clinical Framing Protocol (Pattern / Rule / Solve)** to break through marketing narratives and build metabolically sound fueling plans:
 
 ```text
 ┌────────────────────────────────────────────────────────────────────────┐
-│                   THE MISSION LOOP NUTRITION PIPELINE                  │
+│                   THE CLINICAL FRAMING NUTRITION PIPELINE                  │
 │                                                                        │
 │  [ PATTERN ] ──► Identify training volume, energy intake & deficits   │
 │        │                                                               │

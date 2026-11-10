@@ -9,7 +9,7 @@ Digital accessibility is frequently treated as an afterthought—a manual remedi
 My integration of the **POUR framework (Perceivable, Operable, Understandable, and Robust)** into my C-as-C pipeline transforms accessibility from a static policy into an active, automated engineering standard:
 * **Perceivable:** I enforce high-contrast color palettes (such as Creme and Navy) and automated checks for descriptive alt text across all physiological diagrams and nutritional charts.
 * **Operable:** I ensure that my mobile-first Markdown and HTML layouts provide predictable, consistent navigation that works seamlessly across devices and assistive technologies.
-* **Understandable:** I utilize my consistent **Mission Loop** (Pattern / Rule / Solve) framework and my professional, supportive **Narrator voice** to maintain cognitive accessibility and clear readability.
+* **Understandable:** I utilize my consistent **Clinical Framing Protocol** (Pattern / Rule / Solve) framework and my professional, supportive **Narrator voice** to maintain cognitive accessibility and clear readability.
 * **Robust:** I implement strict semantic HTML hierarchies (mandating that my content starts at `<h2>` and nests sequentially without skipping levels) so that screen readers interpret my course code reliably.
 
 ### Edge Use Case: Fleet-Wide Emoji and Icon Stripping for ADA Title II

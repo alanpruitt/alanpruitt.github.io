@@ -8,8 +8,8 @@ course: "EXW101"
 term: "Fall 2026"
 ssot: "PAGA 2018 (2nd Ed.)"
 tags: ["CurriculumAsCode", "Kinesiology", "PhysicalEducation", "PAGA", "PublicHealth", "OER"]
-summary: "How EXW101 deploys Curriculum-as-Code, the federal PAGA 2018 SSoT, and the Mission Loop framework to deconstruct systemic inactivity patterns and build community-level health interventions in rural borderland regions."
-summary_es: "Cómo EXW101 utiliza Currículum como Código, el estándar federal PAGA 2018 SSoT y el Bucle de Misión para deconstruir la inactividad sistémica y diseñar intervenciones de salud comunitaria en regiones fronterizas rurales."
+summary: "How EXW101 deploys Curriculum-as-Code, the federal PAGA 2018 SSoT, and the Clinical Framing Protocol to deconstruct systemic inactivity patterns and build community-level health interventions in rural borderland regions."
+summary_es: "Cómo EXW101 utiliza Currículum como Código, el estándar federal PAGA 2018 SSoT y el Protocolo de Encuadre Clínico para deconstruir la inactividad sistémica y diseñar intervenciones de salud comunitaria en regiones fronterizas rurales."
 lang_default: "en"
 categories: ["curriculum-as-code"]
 ---
@@ -21,7 +21,7 @@ When students are asked to evaluate physical inactivity in their communities, th
 
 Unconstrained Large Language Models exacerbate this distortion. Out-of-the-box AI models routinely generate hyper-individualistic, gym-centric exercise regimens that ignore systemic socioeconomic barriers, built-environment limitations, and federal baseline volume minimums.
 
-In **EXW101 (Concepts of Kinesiology & Physical Education)** for Fall 2026, we close our four-course instructional engineering series by applying **Curriculum-as-Code (CaC)** to foundational movement: anchoring human activity to the federal **PAGA 2018 (2nd Ed.)** Single Source of Truth (SSoT) and deploying the Mission Loop to frame physical inactivity as a solvable public health challenge.
+In **EXW101 (Concepts of Kinesiology & Physical Education)** for Fall 2026, we close our four-course instructional engineering series by applying **Curriculum-as-Code (CaC)** to foundational movement: anchoring human activity to the federal **PAGA 2018 (2nd Ed.)** Single Source of Truth (SSoT) and deploying the Clinical Framing Protocol to frame physical inactivity as a solvable public health challenge.
 
 ---
 
@@ -96,15 +96,15 @@ Execute the following verification checks:
 
 ---
 
-## 4. The Mission Loop in Community Health Problem Solving
+## 4. The Clinical Framing Protocol in Community Health Problem Solving
 
 In concepts of kinesiology education, evaluating community-level inactivity and physical barriers requires a repeatable, objective analytical framework.
 
-In **EXW101**, students apply the **Mission Loop (Pattern / Rule / Solve)** to break through commercial narratives and build accessible, SSoT-aligned physical activity plans:
+In **EXW101**, students apply the **Clinical Framing Protocol (Pattern / Rule / Solve)** to break through commercial narratives and build accessible, SSoT-aligned physical activity plans:
 
 ```text
 ┌────────────────────────────────────────────────────────────────────────┐
-│                   THE MISSION LOOP KINESIOLOGY PIPELINE                │
+│                   THE CLINICAL FRAMING KINESIOLOGY PIPELINE                │
 │                                                                        │
 │  [ PATTERN ] ──► Identify sedentary habits, built barriers & schedules │
 │        │                                                               │

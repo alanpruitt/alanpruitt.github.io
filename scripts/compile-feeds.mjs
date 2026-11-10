@@ -46,8 +46,8 @@ const ESSAYS = [
     url: "https://alanpruitt.com/articles/22-foundational-human-movement-in-the-algorithmic-age.html",
     legacyUrl: "https://alanpruitt.com/essays/22-foundational-human-movement-in-the-algorithmic-age.html",
     tags: ["CurriculumAsCode", "Kinesiology", "PhysicalEducation", "PAGA", "PublicHealth", "OER"],
-    summary: "How EXW101 deploys Curriculum-as-Code, the federal PAGA 2018 SSoT, and the Mission Loop framework to deconstruct systemic inactivity patterns and build community-level health interventions in rural borderland regions.",
-    summaryEs: "Cómo EXW101 implementa Currículum como Código, las directrices federales PAGA 2018 como SSoT y el marco del Bucle de Misión para desglosar patrones de inactividad sistémica y crear intervenciones comunitarias en regiones fronterizas."
+    summary: "How EXW101 deploys Curriculum-as-Code, the federal PAGA 2018 SSoT, and the Clinical Framing Protocol to deconstruct systemic inactivity patterns and build community-level health interventions in rural borderland regions.",
+    summaryEs: "Cómo EXW101 implementa Currículum como Código, las directrices federales PAGA 2018 como SSoT y el marco del Protocolo de Encuadre Clínico para desglosar patrones de inactividad sistémica y crear intervenciones comunitarias en regiones fronterizas."
   },
   {
     id: "21",
@@ -62,8 +62,8 @@ const ESSAYS = [
     url: "https://alanpruitt.com/articles/21-evidence-based-nutrition-vs-feed.html",
     legacyUrl: "https://alanpruitt.com/essays/21-evidence-based-nutrition-vs-feed.html",
     tags: ["CurriculumAsCode", "Nutrition", "SportsNutrition", "SSoT", "InformationLiteracy", "OER"],
-    summary: "How EXW150 uses Curriculum-as-Code, the Mission Loop framework, and federal SSoT standards to insulate community college students from social media fad diets, predatory supplement claims, and unanchored AI nutrition advice.",
-    summaryEs: "Cómo EXW150 utiliza Currículum como Código, el marco del Bucle de Misión y los estándares federales de SSoT para aislar a los estudiantes de dietas de moda en redes sociales, suplementos engañosos y consejos de nutrición no verificados de la IA."
+    summary: "How EXW150 uses Curriculum-as-Code, the Clinical Framing Protocol, and federal SSoT standards to insulate community college students from social media fad diets, predatory supplement claims, and unanchored AI nutrition advice.",
+    summaryEs: "Cómo EXW150 utiliza Currículum como Código, el marco del Protocolo de Encuadre Clínico y los estándares federales de SSoT para aislar a los estudiantes de dietas de moda en redes sociales, suplementos engañosos y consejos de nutrición no verificados de la IA."
   },
   {
     id: '20',
@@ -132,7 +132,7 @@ const ESSAYS = [
   {
     id: '12',
     slug: '12-mission-loop-architecture',
-    title: 'The Mission Loop Architecture: Pattern, Rule, and Solve in Coded Instruction',
+    title: 'The Clinical Framing Protocol Architecture: Pattern, Rule, and Solve in Coded Instruction',
     date: '2026-07-03T12:00:00Z',
     summary: 'Structuring deterministic health science problem-solving pipelines that enforce pattern identification.',
     tags: ['MissionLoop', 'Pedagogy', 'Kinesiology']

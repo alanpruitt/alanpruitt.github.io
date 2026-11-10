@@ -96,15 +96,15 @@ Assigned Target: Develop Initial 4-Week Aerobic & Resistance Progression
 
 ---
 
-## 4. The Mission Loop in Special Population Safety
+## 4. The Clinical Framing Protocol in Special Population Safety
 
 In clinical kinesiology, problem-solving cannot be treated as an unstructured creative exercise. Every exercise adaptation for vulnerable populations must follow a verifiable, deterministic loop.
 
-In EXW265, student analysis is structured around the **Mission Loop (Pattern / Rule / Solve)**:
+In EXW265, student analysis is structured around the **Clinical Framing Protocol (Pattern / Rule / Solve)**:
 
 ```text
 ┌────────────────────────────────────────────────────────────────────────┐
-│                   THE MISSION LOOP CLINICAL PIPELINE                   │
+│                   THE CLINICAL FRAMING PROTOCOL CLINICAL PIPELINE                   │
 │                                                                        │
 │  [ PATTERN ] ──► Identify clinical diagnoses, medications & mobility   │
 │        │                                                               │

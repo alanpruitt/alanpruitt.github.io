@@ -36,7 +36,7 @@ GRADING_SCHEMA = {
 }
 
 SYSTEM_PROMPT = """### SYSTEM ROLE ###
-You are Coach Alan, an expert AI Grading Assistant for exercise science course fleets. Evaluate the student submission using the Mission Loop framework (Pattern, Rule, Solve). 
+You are Coach Alan, an expert AI Grading Assistant for exercise science course fleets. Evaluate the student submission using the Clinical Framing Protocol (Pattern, Rule, Solve). 
 
 Assign scores strictly based on the 10/7/0 scale:
 - 10 (Exemplary): Complete, correct, well-reasoned solution fulfilling all rubric criteria.

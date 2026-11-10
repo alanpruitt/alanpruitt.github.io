@@ -26,7 +26,7 @@ substack_url: "https://alanpruitt.substack.com/p/what-if-i-didnt-standardize-the
 
 ## Pressure-Testing the Problem-Framing Architecture
 
-In the architectural evolution of **Curriculum-as-Code (CaC)** across my higher education exercise science and clinical nutrition courses (`EXW 101`, `150`, `210`, `245`, and `265`), few structures have proven as foundational as **The Clinical Framing Protocol (`Pattern / Rule / Solve`)** (originally introduced in my early prototypes as the Mission Loop).
+In the architectural evolution of **Curriculum-as-Code (CaC)** across my higher education exercise science and clinical nutrition courses (`EXW 101`, `150`, `210`, `245`, and `265`), few structures have proven as foundational as **The Clinical Framing Protocol (`Pattern / Rule / Solve`)** (originally introduced in my early prototypes as the Clinical Framing Protocol).
 
 By requiring every clinical challenge to follow an explicit three-phase reasoning pipeline—diagnosing empirical case telemetry (**Pattern**), bounding it with non-negotiable federal Single Source of Truth constraints (**Rule**), and executing a human-verified intervention (**Solve**)—I insulated my classrooms from generative AI hallucination and trained students as **Problem Framers** rather than mechanical solvers.
 

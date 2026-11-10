@@ -51,7 +51,7 @@ Cuando adquiere un producto digital comercial, paquete de herramientas, recurso 
 
 ### 5. Derechos de Propiedad Intelectual y Recursos Educativos Abiertos (OER)
 
-* **Propiedad Intelectual Propietaria y Escritos Originales:** Todos los ensayos originales, arquitecturas de software, herramientas comerciales y marcos metodológicos (incluyendo el Mission Loop, la arquitectura clínica Patrón / Regla / Solución y los flujos de Curriculum-as-Code) publicados en `webcognita.com` y `alanpruitt.com` siguen siendo propiedad intelectual de Webcognita LLC y Alan Pruitt. Queda prohibida su reproducción o redistribución comercial sin permiso por escrito.
+* **Propiedad Intelectual Propietaria y Escritos Originales:** Todos los ensayos originales, arquitecturas de software, herramientas comerciales y marcos metodológicos (incluyendo el Protocolo de Encuadre Clínico [Patrón / Regla / Solución], el Estándar S-A-R y los flujos de Curriculum-as-Code) publicados en `webcognita.com` y `alanpruitt.com` siguen siendo propiedad intelectual de Webcognita LLC y Alan Pruitt. Queda prohibida su reproducción o redistribución comercial sin permiso por escrito.
 * **Recursos Educativos Abiertos (`CC BY 4.0`):** Los paquetes curriculares públicos y conjuntos de datos académicos designados explícitamente bajo la licencia **Creative Commons Atribución 4.0 Internacional (`CC BY 4.0`)** pueden compartirse y adaptarse con fines educativos y de investigación, siempre que se otorgue el crédito correspondiente a Alan Pruitt (`alanpruitt.com`).
 * **Propiedad Intelectual del Cliente:** Usted conserva la plena titularidad de cualquier código propietario, dato institucional o documento que suministre a Webcognita LLC con el propósito de un contrato de consultoría.
 

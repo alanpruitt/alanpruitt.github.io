@@ -19,7 +19,7 @@ The tone is expertly calibrated. It successfully balances the necessary welcomin
 ### 3. Formatting (Scannable Bullet Points & Avoiding Text Walls)
 **Status: PASS**
 
-The formatting is excellent. The use of `<ul>` (for the Lab Scaffolding) and numbered lists (for the Master the Loop workflow) transforms dense procedural information into highly scannable, actionable steps. The use of bolding effectively highlights critical terms (SSoT, PAGA, ACSM, Mission Loop).
+The formatting is excellent. The use of `<ul>` (for the Lab Scaffolding) and numbered lists (for the Master the Loop workflow) transforms dense procedural information into highly scannable, actionable steps. The use of bolding effectively highlights critical terms (SSoT, PAGA, ACSM, Clinical Framing Protocol).
 
 ---
 

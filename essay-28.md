@@ -18,7 +18,7 @@ A hands-on, administrative relief workshop designed for educators to eliminate w
 3. **Secure Engine:** Processing within the secure enterprise environment (`google.arizona.edu`).
 4. **Sovereign Auditor Review:** Final faculty editorial control and verification.
 
-### Core Operating Framework: The Mission Loop
+### Core Operating Framework: The Clinical Framing Protocol
 - **Pattern:** Identify administrative bottlenecks and workflow friction.
 - **Rule:** Apply governing standards (FERPA, ADA Title II, SSoT, and delimiters).
 - **Solve:** Deploy structured prompt packages for immediate administrative relief.
@@ -36,7 +36,7 @@ Practicing explicit triple-hash delimiter architecture to isolate variable data 
 Enforcing mandatory PII sanitization workflows before running evaluations, recognizing that enterprise security is never a FERPA bypass.
 
 ### Workshop Summary & Resource Index
-- **Enforce the Mission Loop:** Diagnose patterns, apply rules, and deploy structured solves.
+- **Enforce the Clinical Framing Protocol:** Diagnose patterns, apply rules, and deploy structured solves.
 - **Protect the Boundary:** Isolate variable data with explicit triple-hash delimiters (`###`).
 - **Sanitize Relentlessly:** Strip all student PII before ingestion.
 - **Retain Authority:** Maintain 100% editorial judgment as a Sovereign Auditor.

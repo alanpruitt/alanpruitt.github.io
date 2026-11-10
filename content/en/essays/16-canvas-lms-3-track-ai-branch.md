@@ -19,7 +19,7 @@ aliases:
 ## TL;DR Summary
 
 * **The Paradigm Shift:** Traditional online discussion boards suffer from the "echo chamber" effect. Extending our **3-Track Self-Guided AI Branch ("Build Your Own Journey")** and **Bilingual Scaffolding (English/Español)** across all 16 weekly modules turns standard Canvas discussions into active, interdisciplinary clinical case conferences.
-* **The Operational Loop:** Students select one of three career-aligned tracks ( **Track 1: Clinical**, **Track 2: Community**, or **Track 3: Performance** ), consult Google Gemini using triple-hash ( `###` ) data isolation, post their 3-part **Mission Loop** analysis, and perform mandatory **cross-track peer audits**.
+* **The Operational Loop:** Students select one of three career-aligned tracks ( **Track 1: Clinical**, **Track 2: Community**, or **Track 3: Performance** ), consult Google Gemini using triple-hash ( `###` ) data isolation, post their 3-part **Clinical Framing Protocol** analysis, and perform mandatory **cross-track peer audits**.
 * **Accessibility & Deployment:** Fully compliant with WCAG 2.1 AA (Creme/Navy palette), Quality Matters (QM) 5.2, Universal Design for Learning (UDL), and mobile-first Canvas LMS deployment across the full EXW curriculum.
 
 ## 1. Executive Summary & Pedagogical Rationale
@@ -29,7 +29,7 @@ The modern higher education landscape—particularly within kinesiology, exercis
 By embedding the **3-Track Self-Guided AI Branch ("Build Your Own Journey")** and **Bilingual Scaffolding** into our weekly Canvas Discussions, we transform routine discussion boards into dynamic, active-learning environments.
 
 ```text
-[Phase 1: Track Selection] ──> [Phase 2: AI Preceptor Consultation (###)] ──> [Phase 3: Mission Loop Initial Post]
+[Phase 1: Track Selection] ──> [Phase 2: AI Preceptor Consultation (###)] ──> [Phase 3: Clinical Framing Protocol Initial Post]
                                                                                                  │
                                                                                                  ▼
 [Peer Reply 2: Yuma Environmental Audit] <── [Peer Reply 1: Cross-Track Clinical Audit] <────────┘
@@ -81,7 +81,7 @@ All discussion workflows strictly enforce evidence-based federal and academic st
 
 To ensure structural consistency across all 16 modules in EXW101, EXW150, and EXW265, every weekly discussion forum follows a standardized 3-step interaction loop:
 
-* **Step 1 (Initial Post):** Select Track + AI Preceptor Audit ( `###` ) + Mission Loop (Pattern / Rule / Solve).
+* **Step 1 (Initial Post):** Select Track + AI Preceptor Audit ( `###` ) + Clinical Framing Protocol (Pattern / Rule / Solve).
 * **Step 2 (Peer Reply #1):** Cross-Track Clinical Audit (Reply to a DIFFERENT Track).
 * **Step 3 (Peer Reply #2):** Environmental / Regional Localization Audit (Yuma Heat & Local Access).
 
