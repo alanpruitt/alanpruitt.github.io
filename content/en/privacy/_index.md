@@ -67,5 +67,5 @@ For privacy inquiries, data deletion requests, or questions regarding this polic
 
 * **Principal:** Alan Pruitt
 * **Organization:** Webcognita LLC (Veteran-Owned Small Business)
-* **Institutional Compliance Rider:** [Data Processing Addendum (DPA)](/dpa/) • [Terms of Service](/terms/)
+* **Institutional Compliance Rider:** [Data Processing Addendum (DPA)](/dpa/) • [IP & OER Licensing Rider](/ip-oer/) • [Terms of Service](/terms/)
 * **Contact Email:** `alan.pruitt@gmail.com`

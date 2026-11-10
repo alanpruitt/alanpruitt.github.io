@@ -16,7 +16,7 @@ description: "Data Processing Addendum (DPA), FERPA compliance rider, ADA Title 
 
 ### 1. Purpose, Scope, and Order of Precedence
 
-This Data Processing Addendum ("DPA") supplements the [Webcognita LLC Terms of Service](/terms/) and [Privacy Policy](/privacy/) as well as any governing institutional contract, Purchase Order, or Statement of Work (SOW). This DPA ensures strict compliance with statutory data privacy, accessibility, and AI governance mandates, including the **Family Educational Rights and Privacy Act (FERPA, 20 U.S.C. § 1232g; 34 CFR Part 99)**, **DOJ ADA Title II (28 CFR Part 35)**, state-level student and public data privacy statutes, and institutional IT security policies. In the event of any conflict between the terms of this DPA and the general Terms of Service, the terms of this DPA shall govern.
+This Data Processing Addendum ("DPA") supplements the [Webcognita LLC Terms of Service](/terms/), [Privacy Policy](/privacy/), and [IP & OER Licensing Rider](/ip-oer/) as well as any governing institutional contract, Purchase Order, or Statement of Work (SOW). This DPA ensures strict compliance with statutory data privacy, accessibility, and AI governance mandates, including the **Family Educational Rights and Privacy Act (FERPA, 20 U.S.C. § 1232g; 34 CFR Part 99)**, **DOJ ADA Title II (28 CFR Part 35)**, state-level student and public data privacy statutes, and institutional IT security policies. In the event of any conflict between the terms of this DPA and the general Terms of Service, the terms of this DPA shall govern.
 
 ---
 

@@ -84,5 +84,5 @@ Para preguntas, permisos, notificaciones legales o consultas relacionadas con es
 
 * **Director Principal:** Alan Pruitt
 * **Organización:** Webcognita LLC (Veteran-Owned Small Business)
-* **Anexo de Cumplimiento Institucional:** [Anexo de Procesamiento de Datos (DPA)](/es/dpa/) • [Política de Privacidad](/es/privacy/)
+* **Anexo de Cumplimiento Institucional:** [Anexo de Procesamiento de Datos (DPA)](/es/dpa/) • [Anexo de Propiedad Intelectual y OER](/es/ip-oer/) • [Política de Privacidad](/es/privacy/)
 * **Correo Electrónico de Contacto:** `alan.pruitt@gmail.com`
