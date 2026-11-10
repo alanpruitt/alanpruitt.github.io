@@ -15,6 +15,7 @@ tags:
   - "POUR-Audit"
 description: "Cómo operacionalizo los cuatro principios de accesibilidad POUR (Perceptible, Operable, Comprensible y Robusto) mediante verificaciones automatizadas en Git y CI/CD dentro de Currículum como Código."
 summary: "Cómo operacionalizo los cuatro principios de accesibilidad POUR (Perceptible, Operable, Comprensible y Robusto) mediante verificaciones automatizadas en Git y CI/CD dentro de Currículum como Código."
+substack_url: "https://alanpruitt.substack.com/p/navigating-compliance-upstream-the"
 ---
 
 ## Llevando la Accesibilidad Aguas Arriba Antes de Tocar el LMS

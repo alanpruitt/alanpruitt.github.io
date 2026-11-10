@@ -51,6 +51,17 @@
       >
         {{ $copyLabel }}
       </button>
+      {{ with .Params.substack_url }}
+      <a
+        href="{{ . }}"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="{{ if eq $.Lang "es" }}Leer edición en Substack (abre en pestaña nueva){{ else }}Read Substack newsletter edition (opens in new tab){{ end }}"
+        style="display: inline-flex; align-items: center; min-height: 44px; padding: 0.4rem 0.85rem; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 0.75rem; font-weight: 800; border-radius: 999px; border: 1.5px solid #0B192C; background-color: #FFFFFF; color: #0B192C; text-decoration: none;"
+      >
+        {{ if eq $.Lang "es" }}Edición Substack{{ else }}Substack Edition{{ end }}
+      </a>
+      {{ end }}
       <button 
         type="button" 
         onclick="window.print()" 

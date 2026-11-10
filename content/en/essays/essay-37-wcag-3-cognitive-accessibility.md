@@ -8,6 +8,7 @@ aliases:
   - /essays/essay-37/
   - /essays/37/
   - /essays/essay37/
+substack_url: "https://alanpruitt.substack.com/p/what-if-i-didnt-future-proofing-my"
 ---
 
 When I manage a multi-course fleet like EXW101, EXW150, EXW210, EXW245, and EXW265, it is easy to fall into the trap of baseline compliance. As long as the contrast ratios pass, the alt-text is present, and the links aren't broken, I could technically check the accessibility box and call it a day.

@@ -19,6 +19,7 @@ tags:
   - "Estándar S-A-R"
   - "US DOL TEN 07-25"
   - "ADA Título II"
+substack_url: "https://alanpruitt.substack.com/p/what-if-i-didnt-automate-the-threshold"
 ---
 
 ## Más Allá de Docs-as-Code: Poniendo a Prueba el Umbral de Evaluación

@@ -22,6 +22,7 @@ aliases:
   - "/essays/essay-32/"
   - "/essays/essay32/"
   - "/essays/from-retrofit-to-architecture/"
+substack_url: "https://alanpruitt.substack.com/p/from-retrofit-to-architecture-operationalizing"
 ---
 
 ## Moving Beyond the Post-Production Scramble

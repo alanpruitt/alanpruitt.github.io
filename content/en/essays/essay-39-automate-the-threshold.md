@@ -26,6 +26,7 @@ aliases:
   - "/essays/39/"
   - "/essays/essay-39/"
   - "/essays/essay39/"
+substack_url: "https://alanpruitt.substack.com/p/what-if-i-didnt-automate-the-threshold"
 ---
 
 ## Beyond Static Docs-as-Code: Testing the Assessment Threshold

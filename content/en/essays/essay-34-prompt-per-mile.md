@@ -20,6 +20,7 @@ aliases:
   - "/essays/34/"
   - "/essays/essay-34/"
   - "/essays/essay34/"
+substack_url: "https://alanpruitt.substack.com/p/from-gsu-demo-day-to-vibe-coding"
 ---
 
 ## Turning Fleeting Curiosity into Shipped Architecture

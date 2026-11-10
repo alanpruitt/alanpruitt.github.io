@@ -11,6 +11,7 @@ aliases:
   - /essays/essay-38/
   - /essays/38/
   - /essays/essay38/
+substack_url: "https://alanpruitt.substack.com/p/essay-38-what-if-i-didnt-build-the"
 ---
 
 When I first engineered a **Git-versioned Markdown repository** with **automated CI/CD workflows** to manage my multi-course exercise science and clinical nutrition fleet (`EXW 101`, `EXW 150`, `EXW 210`, `EXW 245`, and `EXW 265`), I could have stopped at standard *Docs-as-Code*.

@@ -7,6 +7,7 @@ slug: "essay-28"
 description: "Why static accessibility disclaimers fail the ADA Title II mandate, and how higher-ed leadership can deploy living, CI/CD-backed conformance statements."
 categories: ["Curriculum-as-Code", "Accessibility", "Higher Education Governance", "ADA Title II"]
 layout: "single"
+substack_url: "https://alanpruitt.substack.com/p/navigating-ada-title-ii-conformance"
 ---
 
 ## The Legal Fiction of the Static Disclaimer

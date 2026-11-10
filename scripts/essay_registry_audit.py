@@ -255,6 +255,12 @@ def verify_substack_parity(records, strict_network=False):
             rec = by_num[matched_num]
             rec["substack_live_url"] = link
             rec["substack_word_count"] = sub_words
+            canon_no_slash = rec["canonical_url"].rstrip("/")
+            hrefs = re.findall(r'href=["\']([^"\']+)["\']', content)
+            has_exact_backlink = any(h.rstrip("/") == canon_no_slash for h in hrefs)
+            has_sub_disclaimer = "do not represent official policy" in plain
+            rec["substack_has_canonical_backlink"] = has_exact_backlink
+            rec["substack_has_disclaimer"] = has_sub_disclaimer
             if rec["word_count"] < int(sub_words * 0.85):
                 errors.append(
                     f"[SUBSTACK DRIFT] Essay #{matched_num:02d} ({rec['en_file']}) has {rec['word_count']}W "
@@ -314,7 +320,8 @@ def render_markdown_ledger(registry):
         es_badge = "Yes" if r["es_file"] else "—"
         if r.get("substack_live_url"):
             sub_wc = r.get("substack_word_count", "")
-            sub_badge = f"[Live ({sub_wc}W)]({r['substack_live_url']})"
+            bl_flag = "Backlink OK" if r.get("substack_has_canonical_backlink") else "Needs Backlink"
+            sub_badge = f"[Live ({sub_wc}W • {bl_flag})]({r['substack_live_url']})"
         else:
             sub_badge = "—"
         route = r["canonical_url"].replace(SITE_ORIGIN, "")

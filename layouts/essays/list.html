@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="CzTdgB5WJ_UjWFg7HpV9VOOACNmsgHQP1mFMI2b_tls" />
-    <title>{{ if eq .Lang "es" }}Ensayos de Estrategia Institucional y Currículo-como-Código (01–38){{ else }}Curriculum-as-Code &amp; Sovereign AI Strategy Essays (01–38){{ end }} | Alan Pruitt</title>
+    {{ $essayTotal := len (where .Site.RegularPages "Section" "essays") }}
+    <title>{{ if eq .Lang "es" }}Ensayos de Estrategia Institucional y Currículo-como-Código (01–{{ printf "%02d" $essayTotal }}){{ else }}Curriculum-as-Code &amp; Sovereign AI Strategy Essays (01–{{ printf "%02d" $essayTotal }}){{ end }} | Alan Pruitt</title>
     <meta name="description" content="Explore the Curriculum-as-Code (S-A-R Standard), U.S. DOL ETA Advisory TEN No. 07-25 AI Literacy Framework, automated WCAG 2.2 AA (9:1 Double-Contrast Guard) &amp; WCAG 3.0 cognitive accessibility continuous integration for higher education, NSF TechAccess: AI-Ready America, K–16 Dual-Enrollment Deliverables, and Non-Competing 50-State Enabling Resource essay corpus by Alan Pruitt (Coach Alan), Founder of Webcognita LLC (SDVOSB).">
     <meta name="keywords" content="Alan Pruitt, Coach Alan, Curriculum-as-Code, S-A-R Standard, U.S. DOL ETA Advisory TEN No. 07-25 AI Literacy Framework, Automated WCAG 2.2 AA 9:1 Double-Contrast Guard, WCAG 3.0 Cognitive Accessibility Continuous Integration for Higher Education, ADA Title II, NSF TechAccess: AI-Ready America, NSF AI-Ready America Enabling Resource, K-16 Dual-Enrollment Deliverables, Non-Competing 50-State Enabling Resource, Air-Gapped Edge AI, Google Gemma Argon 4, Google Carbon 4, Google Cloud Certified Generative AI Leader GAIL, University of Arizona Designated Campus Colleague, Webcognita LLC SDVOSB, SAM.gov UEI EZ34U9KNJA17, CAGE 4ZCN6">
     <meta name="author" content="Alan Pruitt">
@@ -15,8 +16,8 @@
 
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Alan Pruitt | Curriculum-as-Code">
-    <meta property="og:title" content="Curriculum-as-Code &amp; Sovereign AI Strategy Essays (01–38) | Alan Pruitt">
-    <meta property="og:description" content="Explore the 38-essay Curriculum-as-Code, ADA Title II / WCAG 2.2 AA (9:1) &amp; WCAG 3.0 compliance, and Air-Gapped Apple Silicon Edge AI research corpus by Alan Pruitt.">
+    <meta property="og:title" content="Curriculum-as-Code &amp; Sovereign AI Strategy Essays (01–{{ printf "%02d" $essayTotal }}) | Alan Pruitt">
+    <meta property="og:description" content="Explore the {{ $essayTotal }}-essay Curriculum-as-Code, ADA Title II / WCAG 2.2 AA (9:1) &amp; WCAG 3.0 compliance, and Air-Gapped Apple Silicon Edge AI research corpus by Alan Pruitt.">
     <meta property="og:url" content="{{ .Permalink }}">
     <meta property="og:image" content="https://alanpruitt.com/assets/og-preview.png">
     <meta property="og:image:width" content="1200">

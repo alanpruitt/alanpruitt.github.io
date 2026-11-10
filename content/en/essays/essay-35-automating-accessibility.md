@@ -9,6 +9,7 @@ aliases:
   - /essays/essay-35-automating-accessibility/
   - /essays/35/
   - /essays/essay35/
+substack_url: "https://alanpruitt.substack.com/p/what-if-i-didnt-automate-accessibility"
 ---
 
 When public higher education institutions faced the Department of Justice's mandate for **ADA Title II (WCAG 2.1/2.2 Level AA)** compliance, traditional instructional design hit an operational wall. Manually auditing hundreds of Canvas pages, inspecting heading tags in rich text editors, and manually verifying image alt-text lengths across multi-section course fleets is unsustainable.

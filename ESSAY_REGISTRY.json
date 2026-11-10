@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-11-10T05:26:53Z",
+  "generated_at": "2026-11-10T05:35:04Z",
   "published_count": 40,
   "max_published_number": 40,
   "staged_numbers": [
@@ -383,7 +383,9 @@
       "linkedin_kit": null,
       "substack_live_url": "https://alanpruitt.substack.com/p/navigating-compliance-upstream-the",
       "word_count": 570,
-      "substack_word_count": 521
+      "substack_word_count": 521,
+      "substack_has_canonical_backlink": false,
+      "substack_has_disclaimer": false
     },
     {
       "essay_number": 27,
@@ -412,7 +414,9 @@
       "linkedin_kit": null,
       "substack_live_url": "https://alanpruitt.substack.com/p/navigating-ada-title-ii-conformance",
       "word_count": 687,
-      "substack_word_count": 238
+      "substack_word_count": 238,
+      "substack_has_canonical_backlink": true,
+      "substack_has_disclaimer": false
     },
     {
       "essay_number": 29,
@@ -469,7 +473,9 @@
       "linkedin_kit": null,
       "substack_live_url": "https://alanpruitt.substack.com/p/from-retrofit-to-architecture-operationalizing",
       "word_count": 737,
-      "substack_word_count": 727
+      "substack_word_count": 727,
+      "substack_has_canonical_backlink": false,
+      "substack_has_disclaimer": false
     },
     {
       "essay_number": 33,
@@ -484,7 +490,9 @@
       "linkedin_kit": null,
       "substack_live_url": "https://alanpruitt.substack.com/p/what-happens-when-you-stop-renting",
       "word_count": 1023,
-      "substack_word_count": 1030
+      "substack_word_count": 1030,
+      "substack_has_canonical_backlink": false,
+      "substack_has_disclaimer": false
     },
     {
       "essay_number": 34,
@@ -499,7 +507,9 @@
       "linkedin_kit": null,
       "substack_live_url": "https://alanpruitt.substack.com/p/from-gsu-demo-day-to-vibe-coding",
       "word_count": 782,
-      "substack_word_count": 780
+      "substack_word_count": 780,
+      "substack_has_canonical_backlink": false,
+      "substack_has_disclaimer": false
     },
     {
       "essay_number": 35,
@@ -514,7 +524,9 @@
       "linkedin_kit": null,
       "substack_live_url": "https://alanpruitt.substack.com/p/what-if-i-didnt-automate-accessibility",
       "word_count": 428,
-      "substack_word_count": 446
+      "substack_word_count": 446,
+      "substack_has_canonical_backlink": false,
+      "substack_has_disclaimer": false
     },
     {
       "essay_number": 36,
@@ -529,7 +541,9 @@
       "linkedin_kit": null,
       "substack_live_url": "https://alanpruitt.substack.com/p/what-if-i-didnt-standardize-the-loop",
       "word_count": 770,
-      "substack_word_count": 618
+      "substack_word_count": 618,
+      "substack_has_canonical_backlink": false,
+      "substack_has_disclaimer": false
     },
     {
       "essay_number": 37,
@@ -544,7 +558,9 @@
       "linkedin_kit": null,
       "substack_live_url": "https://alanpruitt.substack.com/p/what-if-i-didnt-future-proofing-my",
       "word_count": 467,
-      "substack_word_count": 484
+      "substack_word_count": 484,
+      "substack_has_canonical_backlink": false,
+      "substack_has_disclaimer": false
     },
     {
       "essay_number": 38,
@@ -559,7 +575,9 @@
       "linkedin_kit": "content/en/distribution/essay-38-linkedin.md",
       "substack_live_url": "https://alanpruitt.substack.com/p/essay-38-what-if-i-didnt-build-the",
       "word_count": 1222,
-      "substack_word_count": 952
+      "substack_word_count": 952,
+      "substack_has_canonical_backlink": true,
+      "substack_has_disclaimer": true
     },
     {
       "essay_number": 39,
@@ -574,7 +592,9 @@
       "linkedin_kit": "content/en/distribution/essay-39-linkedin.md",
       "substack_live_url": "https://alanpruitt.substack.com/p/what-if-i-didnt-automate-the-threshold",
       "word_count": 945,
-      "substack_word_count": 630
+      "substack_word_count": 630,
+      "substack_has_canonical_backlink": false,
+      "substack_has_disclaimer": true
     },
     {
       "essay_number": 40,

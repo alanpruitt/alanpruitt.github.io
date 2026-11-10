@@ -34,6 +34,8 @@
       "headline": {{ .Title | jsonify }},
       "description": {{ (.Description | default .Summary) | jsonify }},
       "url": {{ .Permalink | jsonify }},
+      "mainEntityOfPage": {{ .Permalink | jsonify }},
+      {{ with .Params.substack_url }}"sameAs": {{ . | jsonify }},{{ end }}
       "inLanguage": "{{ .Lang | default "en" }}",
       "keywords": [
         "Curriculum-as-Code (S-A-R Standard)",

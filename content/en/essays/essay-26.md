@@ -31,6 +31,7 @@ aliases:
   - "/essays/26/"
   - "/essays/essay26/"
   - "/essays/navigating-compliance-upstream/"
+substack_url: "https://alanpruitt.substack.com/p/navigating-compliance-upstream-the"
 ---
 
 ## Moving Accessibility Upstream Before Content Touches the LMS

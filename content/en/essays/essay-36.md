@@ -21,6 +21,7 @@ slug: "essay-36"
 aliases:
   - "/essays/36/"
   - "/essays/essay36/"
+substack_url: "https://alanpruitt.substack.com/p/what-if-i-didnt-standardize-the-loop"
 ---
 
 ## Pressure-Testing the Problem-Framing Architecture

@@ -7,6 +7,7 @@ slug: "essay-28"
 description: "Por qué los descargos estáticos de accesibilidad fallan ante el mandato del Título II de la ADA y cómo implementar declaraciones vivas respaldadas por CI/CD."
 categories: ["Curriculum-as-Code", "Accesibilidad", "Gobernanza en Educación Superior", "Título II de la ADA"]
 layout: "single"
+substack_url: "https://alanpruitt.substack.com/p/navigating-ada-title-ii-conformance"
 ---
 
 ## La Ficción Legal del Descargo Estático

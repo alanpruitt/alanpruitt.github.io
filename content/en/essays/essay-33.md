@@ -11,7 +11,7 @@ draft: false
 category: "Curriculum-as-Code"
 
 summary: "A practical look at trading proprietary WYSIWYG editors for plain-text repositories, automated linters, and true instructional ownership."
-
+substack_url: "https://alanpruitt.substack.com/p/what-happens-when-you-stop-renting"
 ---
 
 A practical look at trading proprietary WYSIWYG editors for plain-text repositories, automated linters, and true instructional ownership. September arrives, and higher education runs on a very familiar, exhausting script.
