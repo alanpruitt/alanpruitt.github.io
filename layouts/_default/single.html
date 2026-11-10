@@ -53,13 +53,7 @@
     </script>
     {{ partial "schema-alanpruitt.html" . }}
 
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Alan Pruitt | Curriculum-as-Code">
-    <meta property="og:title" content="{{ .Title }} | Alan Pruitt">
-    <meta property="og:description" content="{{ .Description | default "Alan Pruitt (Coach Alan) — Curriculum Architect, AI Strategist, USMC Veteran & Founder of Webcognita LLC." }}">
-    <meta property="og:url" content="{{ .Permalink }}">
-    <meta property="og:image" content="https://alanpruitt.com/assets/og-preview.png">
-    <meta name="twitter:card" content="summary_large_image">
+    {{ partial "meta-og-alanpruitt.html" . }}
 
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%230B192C'/></svg>">
 

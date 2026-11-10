@@ -1,0 +1,35 @@
+{{/* layouts/partials/meta-og-alanpruitt.html */}}
+{{- $title := .Site.Title -}}
+{{- if .IsHome -}}
+  {{- $title = "Alan Pruitt (Coach Alan) | Curriculum-as-Code & OER Manifesto" -}}
+{{- else if .Title -}}
+  {{- $title = printf "%s | Alan Pruitt" .Title -}}
+{{- end -}}
+
+{{- $desc := .Description | default .Params.summary | default (.Summary | plainify | truncate 200) | default .Site.Params.description -}}
+{{- $img := (.Params.image | default .Site.Params.defaultImage | default "assets/og-preview.png") | absURL -}}
+{{- $imgAlt := .Params.imageAlt | default .Site.Params.defaultImageAlt | default "Alan Pruitt (Coach Alan) — Curriculum-as-Code & OER Manifesto" -}}
+
+<meta property="og:title" content="{{ $title }}">
+<meta property="og:description" content="{{ $desc }}">
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:site_name" content="Alan Pruitt — Curriculum-as-Code &amp; OER Manifesto">
+<meta property="og:locale" content="{{ if eq .Lang "es" }}es_MX{{ else }}en_US{{ end }}">
+<meta property="og:image" content="{{ $img }}">
+<meta property="og:image:secure_url" content="{{ $img }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{{ $imgAlt }}">
+{{- if .IsPage }}
+<meta property="article:author" content="https://www.linkedin.com/in/alanpruitt/">
+{{- if not .Date.IsZero }}
+<meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+{{- end }}
+{{- end }}
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ $title }}">
+<meta name="twitter:description" content="{{ $desc }}">
+<meta name="twitter:image" content="{{ $img }}">
+<meta name="twitter:image:alt" content="{{ $imgAlt }}">

@@ -5,6 +5,11 @@ disableKinds = ["taxonomy", "term"]
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
 
+[params]
+  description = "Alan Pruitt (Coach Alan) — Curriculum Architect, Sovereign AI Strategist, USMC Veteran & Founder of Webcognita LLC. Pioneering Curriculum-as-Code (S-A-R Standard), ADA Title II / WCAG 2.2 AA (9:1) compliance, and $0 ZTC Open Educational Resources (OER)."
+  defaultImage = "assets/og-preview.png"
+  defaultImageAlt = "Alan Pruitt (Coach Alan) — Curriculum-as-Code, Digital Accessibility Governance & OER Manifesto"
+
 [outputs]
   home = ["HTML", "RSS", "JSON"]
 
