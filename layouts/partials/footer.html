@@ -65,6 +65,15 @@
         <a href="https://substack.com/@alanpruitt/" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; justify-content: center; min-height: 44px; min-width: 44px; padding: 6px 14px; color: #0C2340; text-decoration: underline; text-underline-offset: 4px;">
           Substack
         </a>
+        <a href="{{ if eq .Lang "es" }}/es/privacy/{{ else }}/privacy/{{ end }}" style="display: inline-flex; align-items: center; justify-content: center; min-height: 44px; min-width: 44px; padding: 6px 14px; color: #0C2340; text-decoration: underline; text-underline-offset: 4px;">
+          {{ if eq .Lang "es" }}Privacidad{{ else }}Privacy{{ end }}
+        </a>
+        <a href="{{ if eq .Lang "es" }}/es/terms/{{ else }}/terms/{{ end }}" style="display: inline-flex; align-items: center; justify-content: center; min-height: 44px; min-width: 44px; padding: 6px 14px; color: #0C2340; text-decoration: underline; text-underline-offset: 4px;">
+          {{ if eq .Lang "es" }}Términos{{ else }}Terms{{ end }}
+        </a>
+        <a href="{{ if eq .Lang "es" }}/es/dpa/{{ else }}/dpa/{{ end }}" style="display: inline-flex; align-items: center; justify-content: center; min-height: 44px; min-width: 44px; padding: 6px 14px; color: #0C2340; text-decoration: underline; text-underline-offset: 4px;">
+          DPA
+        </a>
       </nav>
 
     </div>
