@@ -1,29 +1,40 @@
-###
-# Script: translate_sync.py
-# Purpose: Auto-sync English content changes to Norteño Spanish Markdown files.
-###
+#!/usr/bin/env python3
+"""
+Script: translate_sync.py
+Purpose: Validates English/Spanish content alignment and delegates sequential essay
+         integrity checks to scripts/essay_registry_audit.py.
+"""
 
 import os
 import subprocess
+import sys
 
-CONTENT_DIR = "content/en"
-ES_DIR = "content/es"
+CONTENT_EN = "content/en/essays"
+CONTENT_ES = "content/es/essays"
 
-def get_english_files():
-    files = []
-    for root, _, filenames in os.walk(CONTENT_DIR):
-        for filename in filenames:
-            if filename.endswith(".md"):
-                files.append(os.path.join(root, filename))
-    return files
 
-def trigger_norteno_translation(file_path):
-    print(f"### Auditing and translating: {file_path} into Norteño Spanish ###")
-    # Integration point for local Ollama inference using the Norteño dialect lexicon
-    pass
+def main():
+    en_files = {
+        fn for fn in os.listdir(CONTENT_EN)
+        if fn.endswith(".md") and fn != "_index.md"
+    }
+    es_files = {
+        fn for fn in os.listdir(CONTENT_ES)
+        if fn.endswith(".md") and fn != "_index.md"
+    } if os.path.exists(CONTENT_ES) else set()
+
+    orphaned_es = sorted(es_files - en_files)
+    if orphaned_es:
+        print(f"[FAIL] Orphaned Spanish essay file(s) with no matching English canonical file: {orphaned_es}")
+        sys.exit(1)
+
+    print(
+        f"[TRANSLATION SYNC] Verified {len(en_files)} English canonical essays and "
+        f"{len(es_files)} bilingual Spanish mirrors (0 orphaned routes)."
+    )
+    res = subprocess.run([sys.executable, "scripts/essay_registry_audit.py", "--ci"])
+    sys.exit(res.returncode)
+
 
 if __name__ == "__main__":
-    en_files = get_english_files()
-    print(f"Found {len(en_files)} English source files. Running sync check...")
-    for f in en_files:
-        trigger_norteno_translation(f)
+    main()

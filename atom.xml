@@ -16,11 +16,11 @@
     <summary>How I operationalized U.S. DOL ETA Training and Employment Notice (TEN) No. 07-25 across my $0 ZTC Open Educational Resource course fleet using Curriculum-as-Code (S-A-R v2.2), air-gapped Edge AI, and 9:1 ADA Title II Compliance as Code.</summary>
   </entry>
   <entry>
-    <title>Essay 39: What If I Didn&apos;t Automate the Threshold?</title>
+    <title>Essay 39: What If I Didn&apos;t Automate the Threshold? – Programmatic Canvas Rubric Validation &amp; Edge AI Workflows</title>
     <link href="https://alanpruitt.com/essays/essay-39-automate-the-threshold/" />
     <id>https://alanpruitt.com/essays/essay-39-automate-the-threshold/</id>
-    <updated>2026-11-04T00:00:00.000Z</updated>
-    <summary>Essay 39: What If I Didn&apos;t Automate the Threshold?</summary>
+    <updated>2026-11-04T19:40:00.000Z</updated>
+    <summary>Why leaving LMS rubric point floors at 1 point silently corrupts 10-7-0 mastery telemetry, and how I automated zero-floor Canvas GraphQL rubric validation and air-gapped Apple Silicon Edge AI auditing across my EXW course fleet.</summary>
   </entry>
   <entry>
     <title>Essay 38: What If I Didn&apos;t Build the Graph? – Why Curriculum-as-Code Transcends Flat Docs-as-Code with DOM GraphRAG &amp; W3C PROV-O</title>
@@ -37,25 +37,25 @@
     <summary>Essay 37: What If I Didn&apos;t? – Future-Proofing My Course Fleet with WCAG 3.0 Cognitive Accessibility</summary>
   </entry>
   <entry>
-    <title>Essay 36: What If I Didn&apos;t Standardize the Loop?</title>
+    <title>Essay 36: What If I Didn&apos;t Standardize the Loop? – Deterministic Clinical Problem Framing in Higher Education</title>
     <link href="https://alanpruitt.com/essays/essay-36/" />
     <id>https://alanpruitt.com/essays/essay-36/</id>
     <updated>2026-09-23T15:45:00.000Z</updated>
-    <summary>Essay 36: What If I Didn&apos;t Standardize the Loop?</summary>
+    <summary>A counterfactual exploration of instructional engineering: why failing to standardize The Clinical Framing Protocol (Pattern / Rule / Solve) surrenders academic rigor, inflates grading fatigue, and compromises institutional compliance.</summary>
   </entry>
   <entry>
-    <title>Essay 35: Automating Accessibility - Curriculum-as-Code &amp; Continuous Integration</title>
+    <title>Essay 35: What If I Didn&apos;t Automate Accessibility? – Curriculum-as-Code &amp; Continuous Integration</title>
     <link href="https://alanpruitt.com/essays/essay-35/" />
     <id>https://alanpruitt.com/essays/essay-35/</id>
     <updated>2026-09-18T17:40:00.000Z</updated>
-    <summary>Essay 35: Automating Accessibility - Curriculum-as-Code &amp; Continuous Integration</summary>
+    <summary>Essay 35: What If I Didn&apos;t Automate Accessibility? – Curriculum-as-Code &amp; Continuous Integration</summary>
   </entry>
   <entry>
-    <title>Essay 34: From GSU Demo Day to Vibe-Coding</title>
+    <title>Essay 34: From GSU Demo Day to Vibe-Coding – What Happens When You Stop Scrolling and Start Building</title>
     <link href="https://alanpruitt.com/essays/essay-34-prompt-per-mile/" />
     <id>https://alanpruitt.com/essays/essay-34-prompt-per-mile/</id>
-    <updated>2026-09-17T00:00:00.000Z</updated>
-    <summary>From GSU Demo Day to Vibe-Coding: Prompt-Per-Mile metrics, sovereign AI orchestration, and the shift from task-checking to problem-architecting.</summary>
+    <updated>2026-09-18T00:40:00.000Z</updated>
+    <summary>From a LinkedIn question about GSU Demo Day train transit to shipping the live Prompt-per-Mile Offset Calculator in ten minutes using Curriculum-as-Code and rapid prototyping.</summary>
   </entry>
   <entry>
     <title>What Happens When You Stop Renting Your Curriculum</title>
@@ -63,6 +63,13 @@
     <id>https://alanpruitt.com/essays/what-happens-when-you-stop-renting-your-curriculum/</id>
     <updated>2026-09-15T00:00:00.000Z</updated>
     <summary>A practical look at trading proprietary WYSIWYG editors for plain-text repositories, automated linters, and true instructional ownership.</summary>
+  </entry>
+  <entry>
+    <title>Essay 32: From Retrofit to Architecture – Operationalizing ADA Title II Compliance Before the Deadline</title>
+    <link href="https://alanpruitt.com/essays/essay-32-from-retrofit-to-architecture/" />
+    <id>https://alanpruitt.com/essays/essay-32-from-retrofit-to-architecture/</id>
+    <updated>2026-09-10T19:00:00.000Z</updated>
+    <summary>Why treating ADA Title II digital accessibility as a post-production LMS retrofit fails at scale, and how my Curriculum-as-Code CI/CD pipeline bakes WCAG 2.2 AA compliance directly into the source repository.</summary>
   </entry>
   <entry>
     <title>The Logic Grid: Why Good Assessment Looks Like Sudoku (and How the Mission Loop Solves the AI Crisis)</title>
@@ -100,11 +107,11 @@
     <summary>Essay 25: The Accessibility Checker Parity Illusion: Schema Divergence &amp; CaC</summary>
   </entry>
   <entry>
-    <title>Curriculum-as-Code, ADA Title II Compliance, and Fleet-Wide Accessibility Refactoring</title>
+    <title>Essay 27: Curriculum-as-Code, ADA Title II Compliance, and Fleet-Wide Accessibility Refactoring</title>
     <link href="https://alanpruitt.com/essays/essay-27/" />
     <id>https://alanpruitt.com/essays/essay-27/</id>
     <updated>2026-08-25T23:53:00.000Z</updated>
-    <summary>Curriculum-as-Code, ADA Title II Compliance, and Fleet-Wide Accessibility Refactoring</summary>
+    <summary>How engineering course architectures in plain Markdown with automated CI/CD linters solves ADA Title II compliance and enables rapid, fleet-wide accessibility refactoring across live Canvas shells.</summary>
   </entry>
   <entry>
     <title>The Hybrid Ergometer Scaffold: Synchronizing AI Simulation with Lab Precision</title>
@@ -142,11 +149,11 @@
     <summary>The Accessibility Checker Parity Illusion: Schema Divergence &amp; Curriculum-as-Code</summary>
   </entry>
   <entry>
-    <title>Essay 26: The POUR-Audit Framework in Curriculum-as-Code</title>
+    <title>Essay 26: Navigating Compliance Upstream – The Curriculum-as-Code POUR-Audit Framework</title>
     <link href="https://alanpruitt.com/essays/26-curriculum-as-code-pour-audit-framework/" />
     <id>https://alanpruitt.com/essays/26-curriculum-as-code-pour-audit-framework/</id>
     <updated>2026-08-19T00:00:00.000Z</updated>
-    <summary>An analysis of the POUR-Audit framework within Curriculum-as-Code paradigms, highlighting automated verification checks for heading hierarchies, image alt-text, and legacy reference deprecation.</summary>
+    <summary>How I operationalize the W3C POUR accessibility principles (Perceivable, Operable, Understandable, Robust) as automated pre-commit and CI/CD verification checks inside a Curriculum-as-Code repository.</summary>
   </entry>
   <entry>
     <title>Essay 24: Chatbots &amp; Canvas LMS — A Cautionary Tale</title>

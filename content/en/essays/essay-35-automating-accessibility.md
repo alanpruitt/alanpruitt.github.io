@@ -1,5 +1,5 @@
 ---
-title: "Essay 35: Automating Accessibility - Curriculum-as-Code & Continuous Integration"
+title: "Essay 35: What If I Didn't Automate Accessibility? – Curriculum-as-Code & Continuous Integration"
 date: 2026-09-18T10:40:00-07:00
 draft: false
 description: "How automated GitHub Actions linters and Curriculum-as-Code turn ADA Title II and WCAG 2.2 AA (9:1 Double-Contrast Guard) accessibility compliance into a continuous integration baseline."
@@ -32,7 +32,7 @@ In software engineering, "Shift-Left" means catching defects early in the develo
 
 ## Core Audit Guardrails
 
-Our custom **Curriculum-as-Code Accessibility Linter** enforces deterministic rules across the entire course fleet:
+My custom **Curriculum-as-Code Accessibility Linter** enforces deterministic rules across my entire course fleet:
 
 1. **Deterministic Heading Hierarchy (WCAG 1.3.1)**:
    - Canvas LMS reserves `<h1>` for page titles. All document content must begin at `<h2>`.

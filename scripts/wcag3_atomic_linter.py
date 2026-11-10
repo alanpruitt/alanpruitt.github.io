@@ -31,10 +31,17 @@ class WCAG3AtomicAuditor:
     def audit_heading_progression(self) -> None:
         """Outcome: Structured Headings - Enforces h2 start and linear hierarchy across HTML and Markdown."""
         levels: List[Tuple[int, int]] = []
+        in_fence = False
 
         for line_idx, line in enumerate(self.lines):
             line_no = line_idx + 1
             stripped = line.strip()
+
+            if stripped.startswith("```") or stripped.startswith("~~~"):
+                in_fence = not in_fence
+                continue
+            if in_fence:
+                continue
 
             # Ignore structural Centaur/prompt delimiters, table rows, and protocol bounds
             if (
@@ -46,8 +53,9 @@ class WCAG3AtomicAuditor:
             ):
                 continue
 
-            h_html = re.search(r"<h([1-6])\b[^>]*>", line, re.IGNORECASE)
-            h_md = re.match(r"^(#{1,6})\s+\S+", line)
+            line_no_inline_code = re.sub(r"`[^`]*`", "", line)
+            h_html = re.search(r"<h([1-6])\b[^>]*>", line_no_inline_code, re.IGNORECASE)
+            h_md = re.match(r"^(#{1,6})\s+\S+", line_no_inline_code)
 
             level = None
             if h_html:

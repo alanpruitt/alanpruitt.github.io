@@ -1,56 +1,80 @@
 ---
 layout: post
-title: "Essay 26: The POUR-Audit Framework in Curriculum-as-Code"
+title: "Essay 26: Navigating Compliance Upstream – The Curriculum-as-Code POUR-Audit Framework"
 permalink: /essay-26/
 id: "26"
 slug: "26-curriculum-as-code-pour-audit-framework"
-title_es: "Currículum como Código y el Marco de Auditoría POUR"
+translationKey: "essay-26"
+title_es: "Ensayo 26: Navegando el Cumplimiento Aguas Arriba – El Marco de Auditoría POUR en Currículum como Código"
 date: "2026-08-19"
+publishDate: "2026-08-19"
+draft: false
+author: "Alan Pruitt"
 course: "EXW101"
 term: "Fall 2026"
 ssot: "Active Verification Telemetry & Integrity Protocol"
-tags: ["AI", "CurriculumAsCode", "EdTech", "LMS", "Accessibility", "OpenSource", "POUR"]
-description: "An analysis of the POUR-Audit framework within Curriculum-as-Code paradigms, highlighting automated verification checks for heading hierarchies, image alt-text, and legacy reference deprecation."
-summary: "An analysis of the POUR-Audit framework within Curriculum-as-Code paradigms, highlighting automated verification checks for heading hierarchies, image alt-text, and legacy reference deprecation."
-summary_es: "Un análisis del marco de auditoría POUR dentro de los paradigmas de Currículum como Código, destacando la verificación automatizada de accesibilidad."
+tags:
+  - "Curriculum-as-Code"
+  - "ADA Title II"
+  - "WCAG 2.2 AA"
+  - "Accessibility"
+  - "POUR"
+description: "How I operationalize the W3C POUR accessibility principles (Perceivable, Operable, Understandable, Robust) as automated pre-commit and CI/CD verification checks inside a Curriculum-as-Code repository."
+summary: "How I operationalize the W3C POUR accessibility principles (Perceivable, Operable, Understandable, Robust) as automated pre-commit and CI/CD verification checks inside a Curriculum-as-Code repository."
+summary_es: "Cómo operacionalizo los cuatro principios de accesibilidad POUR (Perceptible, Operable, Comprensible y Robusto) mediante verificaciones automatizadas en Git y CI/CD."
 lang_default: "en"
-categories: ["ada-title-ii"]
+categories:
+  - "ada-title-ii"
+  - "Curriculum-as-Code"
 aliases:
   - "/essays/essay-26/"
   - "/essays/26/"
   - "/essays/essay26/"
+  - "/essays/navigating-compliance-upstream/"
 ---
-## The POUR-Audit Framework in Curriculum-as-Code
 
-Treating educational content as software—known as *Curriculum-as-Code* (CaC)—enables the integration of automated verification pipelines to enforce instructional quality, semantic hierarchy, and digital accessibility. The **POUR-Audit framework** operationalizes Web Content Accessibility Guidelines (WCAG) into testable, programmatically audited standards directly inside git workflows.
+## Moving Accessibility Upstream Before Content Touches the LMS
 
-### 1. Perceivable: Asset Alt-Text Enforcement
+When the U.S. Department of Justice codified technical digital accessibility standards under **ADA Title II** for public higher education institutions, it signaled the end of reactive, page-by-page patching inside Learning Management System (LMS) rich-text editors. Manually repairing broken heading structures, missing image `alt` descriptions, and low-contrast inline CSS across hundreds of course pages is an unsustainable administrative trap.
 
-Digital equity requires that all instructional media is perceivable. Programmatic scans analyze `<img ...>` tags in the course fleet:
+To achieve permanent, scalable conformance across my `EXW` course fleet, I moved accessibility validation upstream into a version-controlled software engineering workflow: **Curriculum-as-Code (CaC)**. By managing course modules in plain-text Markdown governed by automated Git pre-commit and CI/CD linters, I enforce my **POUR-Audit Framework** before a single line of HTML ever reaches Canvas LMS.
 
-* **Descriptive Text:** Every image tag must contain a descriptive `alt` attribute.
-* **Prohibited Placeholders:** Empty placeholders (`alt=""` or `alt=''`) are flagged as failures to prevent decorative bypass of active educational charts.
+---
 
-### 2. Operable: Navigation and Focus Flow Parity
+## Operationalizing the Four W3C POUR Pillars as Executable Code
 
-Operable interfaces ensure that all students can navigate course layouts using keyboard controls and adaptive gear:
+### 1. Perceivable: Automated Asset & High-Contrast Verification
 
-* **Focus Indicators:** Audits verify that interactive elements within custom Canvas containers retain highly visible focus rings.
-* **Focus Traps:** Programmatic checks scan script bindings to ensure custom modal layers do not create keyboard focus traps.
+Digital equity requires every visual diagram, clinical table, and text callout to be unambiguously perceivable across viewports and assistive technologies:
 
-### 3. Understandable: Legacy Term Deprecation
+* **Context-Specific `alt` Enforcement:** My repository scanners inspect every `<img>` and Markdown image reference, rejecting missing `alt` attributes, empty placeholders on informative charts, or raw filenames (such as `.png` or `.svg`), while enforcing concise `<= 120`-character clinical descriptions.
+* **Universal High-Contrast Assurance (`9:1` Double-Contrast Guard):** Automated style checks verify explicit foreground and background hex pairs—such as Deep Navy (`#002147`) and Matador Red (`#940925`) on crisp `#FFFFFF`—exceeding **WCAG 2.2 Level AA** minimums across desktop and mobile displays.
 
-To maintain clear and accurate instructional pathways, the audit monitors prohibited legacy terms and references:
+### 2. Operable: Predictable Keyboard Navigation & Zero Focus Traps
 
-* **Legacy Patterns:** References containing deprecated structural patterns (such as `"8.#"`-style module references) are checked and flagged.
-* **Unified Terminology:** Ensures course fleet documentation aligns with current academic sources of truth (SSoT).
+Every interactive simulation, collapsible rubric, and external toolkit widget must remain 100% operable via keyboard navigation and switch devices:
 
-### 4. Robust: Semantic Structure and Hierarchy
+* **Visible Focus Indicators & Touch Targets:** Automated audits verify visible `:focus-visible` rings, `44x44px` minimum mobile tap targets, and logical tab order across custom interactive components.
+* **Screen-Reader Signal Clarity:** Stripping decorative Unicode emojis and non-semantic visual clutter eliminates disruptive audio noise for students navigating on mobile screen readers.
 
-A robust curriculum is built on standard HTML5 landmarks that assistive technologies can parse reliably. The audit checks heading structures to confirm strict semantic progression:
+### 3. Understandable: Deterministic Structure & SSoT Terminology Hygiene
 
-* **Entry Constraints:** The content body must start with a `##` (H2) heading level. H1 is reserved exclusively for the Canvas LMS Page Title.
-* **Structural Parity:** Audits scan header trees programmatically, ensuring no skipped heading levels (e.g. from H2 to H4) exist, which disorients screen readers.
+Cognitive predictability reduces extraneous load so students can focus on clinical reasoning rather than deciphering inconsistent page layouts:
+
+* **Sequential Heading Nesting:** Continuous integration scripts enforce a strict `<h2>` -> `<h3>` -> `<h4>` outline (reserving `<h1>` strictly for the Canvas Page Title) so every module follows an identical structural rhythm.
+* **Legacy Pattern & Terminology Deprecation:** My linters automatically flag deprecated module numbering patterns and legacy rubric terms, keeping every course aligned with current federal Single Sources of Truth (**PAGA 2018**, **2025–2030 DGA**, **ACSM 12th Ed.**, and **NASM OPT**) and plain-language **WCAG 3.0** scaffolding.
+
+### 4. Robust: Standards-Compliant Semantic Landmarks
+
+A robust curriculum compiles into clean, parser-safe HTML5 landmarks (`<table>` with descriptive `<caption>` and `<th scope="col">`, semantic `<ul>`/`<ol>` lists, and explicit `lang="es"` attributes on bilingual blocks) that current and future assistive technologies parse without ambiguity.
+
+---
+
+## The Sovereign Auditor Model
+
+Under my **Curriculum-as-Code** architecture, accessibility conformance is no longer an exhausting end-of-semester audit event—it is a continuous, automated baseline enforced on every `git commit`. When federal guidelines or LMS accessibility rules evolve, updating a single linter rule and compiler pass refactors an entire multi-section course fleet in seconds rather than weeks.
+
+* **Read the Substack Edition:** [Navigating Compliance Upstream: The Curriculum-as-Code POUR-Audit Framework (Substack)](https://alanpruitt.substack.com/p/navigating-compliance-upstream-the)
 
 ---
 

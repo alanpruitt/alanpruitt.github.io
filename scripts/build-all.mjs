@@ -481,9 +481,15 @@ function run() {
   console.log('[OK] Generated: atom.xml');
 
   // 2. Run Hugo SSG (--minify --noBuildLock) so canonical Hugo layouts, bilingual sitemaps, and index.xml win
-  console.log('[*] Running Hugo SSG (--minify --noBuildLock)...');
-  execFileSync('/opt/homebrew/bin/hugo', ['--minify', '--noBuildLock'], { cwd: DIST_DIR, stdio: 'inherit' });
+  const hugoBin = existsSync('/opt/homebrew/bin/hugo') ? '/opt/homebrew/bin/hugo' : 'hugo';
+  console.log(`[*] Running Hugo SSG (${hugoBin} --minify --noBuildLock)...`);
+  execFileSync(hugoBin, ['--minify', '--noBuildLock'], { cwd: DIST_DIR, stdio: 'inherit' });
   cpSync(resolve(DIST_DIR, 'public'), DIST_DIR, { recursive: true });
+
+  // 2b. Refresh Sequential Essay Registry & Substack Parity Ledger
+  if (existsSync(resolve(DIST_DIR, 'scripts/essay_registry_audit.py'))) {
+    execFileSync('python3', ['scripts/essay_registry_audit.py', '--write'], { cwd: DIST_DIR, stdio: 'inherit' });
+  }
 
   // 3. Synchronize rss.xml & feed.xml with Hugo's canonical index.xml and refresh sitemap lastmod timestamps
   if (existsSync(resolve(DIST_DIR, 'index.xml'))) {
