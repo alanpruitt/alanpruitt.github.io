@@ -14,21 +14,21 @@
         </p>
       </div>
 
-      <!-- Centered ZTC & Creative Commons Notice Box -->
+      <!-- Centered ZTC, Creative Commons & Institutional Disclaimer Box -->
       <div class="w-full max-w-2xl border-t border-b border-[#E2D9C8] py-5 px-4 dark:border-zinc-800 text-xs text-zinc-700 dark:text-zinc-300 flex flex-col gap-2.5 items-center text-center">
         <p class="leading-relaxed">
           <strong>{{ if eq .Lang "es" }}Cero Costo de Libros de Texto (ZTC):{{ else }}Zero Textbook Cost (ZTC):{{ end }}</strong>
           {{ if eq .Lang "es" }}
-            Todos los materiales de este sitio son Recursos Educativos Abiertos (OER) accesibles y sin barreras arancelarias.
+            Los materiales educativos abiertos (OER) se publican bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es" class="font-semibold underline hover:text-[#001F3F] dark:hover:text-emerald-400 focus:ring-2 focus:ring-[#003366]" target="_blank" rel="license noopener noreferrer">CC BY-NC-SA 4.0 Internacional</a> salvo que se indique lo contrario (<a href="/es/ip-oer/" class="font-semibold underline">Anexo IP y OER</a>).
           {{ else }}
-            All workshop materials are accessible Open Educational Resources (OER) provided freely with zero paywall barriers.
+            Open educational materials are published under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="font-semibold underline hover:text-[#001F3F] dark:hover:text-emerald-400 focus:ring-2 focus:ring-[#003366]" target="_blank" rel="license noopener noreferrer">CC BY-NC-SA 4.0 International</a> unless otherwise noted (<a href="/ip-oer/" class="font-semibold underline">IP &amp; OER Rider</a>).
           {{ end }}
         </p>
-        <p class="leading-relaxed">
+        <p class="disclaimer leading-relaxed">
           {{ if eq .Lang "es" }}
-            Este contenido está bajo licencia <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es" class="font-semibold underline hover:text-[#001F3F] dark:hover:text-emerald-400 focus:ring-2 focus:ring-[#003366]" target="_blank" rel="license noopener noreferrer">CC BY-NC-SA 4.0 Internacional</a>.
+            <strong>Aviso Legal:</strong> Investigación docente independiente, ingeniería de software y publicación OER por Alan Pruitt y Webcognita LLC (VOSB). Las opiniones y arquitecturas no representan políticas oficiales ni el aval de Arizona Western College ni de The University of Arizona.
           {{ else }}
-            This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="font-semibold underline hover:text-[#001F3F] dark:hover:text-emerald-400 focus:ring-2 focus:ring-[#003366]" target="_blank" rel="license noopener noreferrer">CC BY-NC-SA 4.0 International</a>.
+            <strong>Disclaimer:</strong> Independent faculty research, software engineering, and OER publishing by Alan Pruitt and Webcognita LLC (VOSB). Views and architectures do not represent official policy or endorsement by Arizona Western College or The University of Arizona.
           {{ end }}
         </p>
       </div>
@@ -76,6 +76,9 @@
         </a>
         <a href="{{ if eq .Lang "es" }}/es/ip-oer/{{ else }}/ip-oer/{{ end }}" style="display: inline-flex; align-items: center; justify-content: center; min-height: 44px; min-width: 44px; padding: 6px 14px; color: #0C2340; text-decoration: underline; text-underline-offset: 4px;">
           {{ if eq .Lang "es" }}IP y OER{{ else }}IP &amp; OER{{ end }}
+        </a>
+        <a href="/sitemap.xml" style="display: inline-flex; align-items: center; justify-content: center; min-height: 44px; min-width: 44px; padding: 6px 14px; color: #0C2340; text-decoration: underline; text-underline-offset: 4px;">
+          Sitemap
         </a>
       </nav>
 
