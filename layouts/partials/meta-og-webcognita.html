@@ -1,0 +1,28 @@
+{{/* layouts/partials/meta-og-webcognita.html */}}
+{{- $title := .Site.Title | default "Webcognita LLC | AI Consulting & EdTech Architecture" -}}
+{{- if and (not .IsHome) .Title -}}
+  {{- $title = printf "%s | Webcognita LLC" .Title -}}
+{{- end -}}
+
+{{- $desc := .Description | default .Params.summary | default .Site.Params.description | default "Webcognita LLC (SAM.gov UEI: EZ34U9KNJA17 • CAGE: 4ZCN6 • EIN: 81-0809739) — Specializing in educational technology architecture, AI consulting, digital accessibility governance, and Curriculum-as-Code pipelines." -}}
+{{- $img := (.Params.image | default .Site.Params.defaultImage | default "assets/og-preview.png") | absURL -}}
+{{- $imgAlt := .Params.imageAlt | default .Site.Params.defaultImageAlt | default "Webcognita LLC (SDVOSB / VOSB) — AI Consulting, Digital Accessibility Governance & Curriculum-as-Code Architecture" -}}
+{{- $ogType := .Params.og_type | default "website" -}}
+
+<meta property="og:title" content="{{ $title }}">
+<meta property="og:description" content="{{ $desc }}">
+<meta property="og:type" content="{{ $ogType }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:site_name" content="Webcognita LLC — AI Consulting &amp; EdTech Architecture">
+<meta property="og:locale" content="{{ if eq .Lang "es" }}es_MX{{ else }}en_US{{ end }}">
+<meta property="og:image" content="{{ $img }}">
+<meta property="og:image:secure_url" content="{{ $img }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{{ $imgAlt }}">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ $title }}">
+<meta name="twitter:description" content="{{ $desc }}">
+<meta name="twitter:image" content="{{ $img }}">
+<meta name="twitter:image:alt" content="{{ $imgAlt }}">
