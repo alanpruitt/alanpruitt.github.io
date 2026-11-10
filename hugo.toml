@@ -1,5 +1,5 @@
 baseURL = "https://alanpruitt.com/"
-languageCode = "en-us"
+locale = "en-US"
 title = "Alan Pruitt — Curriculum-as-Code & OER Manifesto"
 enableMissingTranslationPlaceholders = false
 disableKinds = ["taxonomy", "term"]
