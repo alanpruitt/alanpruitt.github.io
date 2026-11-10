@@ -1,4 +1,6 @@
 baseURL = "https://alanpruitt.com/"
+languageCode = "en-us"
+title = "Alan Pruitt — Curriculum-as-Code & OER Manifesto"
 enableMissingTranslationPlaceholders = false
 disableKinds = ["taxonomy", "term"]
 
@@ -10,8 +12,15 @@ defaultContentLanguageInSubdir = false
   defaultImage = "assets/og-preview.png"
   defaultImageAlt = "Alan Pruitt (Coach Alan) — Curriculum-as-Code, Digital Accessibility Governance & OER Manifesto"
 
+[sitemap]
+  changefreq = "weekly"
+  priority = 0.5
+  filename = "sitemap.xml"
+
 [outputs]
-  home = ["HTML", "RSS", "JSON"]
+  home = ["HTML", "JSON", "RSS"]
+  page = ["HTML"]
+  section = ["HTML", "RSS"]
 
 [markup.goldmark.renderer]
   unsafe = true
@@ -22,14 +31,14 @@ defaultContentLanguageInSubdir = false
     locale = "en-US"
     contentDir = "content/en"
     weight = 1
-    title = "Coach Alan"
+    title = "Alan Pruitt — Curriculum-as-Code & OER Manifesto"
 
   [languages.es]
     label = "ES"
     locale = "es-MX"
     contentDir = "content/es"
     weight = 2
-    title = "Coach Alan"
+    title = "Alan Pruitt — Arquitectura Curriculum-as-Code y Manifiesto OER"
 
 # Inside [languages.en] menu definition:
 [[languages.en.menu.main]]
@@ -42,4 +51,3 @@ defaultContentLanguageInSubdir = false
   name = "Calculadora ROI"
   url = "/roi-calculator/"
   weight = 4
-
