@@ -235,7 +235,7 @@ async function runAudits() {
         const routePath = parsed.pathname;
 
         // Enforce trailing slash on directory routes (prevent 301 redirects for AI crawlers)
-        if (!routePath.endsWith('/') && !/\.(html|pdf|txt|xml|json|png|jpg|svg|md)$/i.test(routePath)) {
+        if (!routePath.endsWith('/') && !/\.(html|pdf|txt|xml|json|png|jpg|svg|md|zip|imscc)$/i.test(routePath)) {
           console.error(`  ❌ FAIL: ${manifestPath} contains non-canonical directory URL missing trailing slash (causes 301): ${fullUrl}`);
           totalErrors++;
           manifestErrors++;
