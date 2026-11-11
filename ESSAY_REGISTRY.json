@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-11-10T23:54:20Z",
+  "generated_at": "2026-11-11T04:33:55Z",
   "published_count": 40,
   "max_published_number": 40,
   "staged_numbers": [
@@ -574,7 +574,7 @@
       "substack_kit": "content/en/distribution/essay-38-substack.md",
       "linkedin_kit": "content/en/distribution/essay-38-linkedin.md",
       "substack_live_url": "https://alanpruitt.substack.com/p/essay-38-what-if-i-didnt-build-the",
-      "word_count": 1222,
+      "word_count": 1221,
       "substack_word_count": 952,
       "substack_has_canonical_backlink": true,
       "substack_has_disclaimer": true

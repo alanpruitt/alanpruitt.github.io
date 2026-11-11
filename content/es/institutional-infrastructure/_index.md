@@ -299,7 +299,7 @@ TEN_COMPLIANCE_TAG = 'data-exw-dol-ten="07-25"'
 
 ### Implementación de Referencia: `prov_o_receipt_generator.py` (W3C PROV-O JSON-LD S-A-R v2.2)
 
-A continuación se presenta el generador de recibos de procedencia **W3C PROV-O (`http://www.w3.org/ns/prov#`) + W3C SKOS** (`scripts/prov_o_receipt_generator.py`) que vincula `exw:LocalRAGInferenceExecution` (`prov:Activity`), `exw:CurriculumMarkdownCorpus` (`prov:Entity`), `exw:OllamaModelExwArgon4Cac` (`prov:Entity`), `exw:Argon4AppleSiliconNode` (`prov:SoftwareAgent`) y `exw:ComplianceAuditReceipt` (`prov:Entity`) en un grafo JSON-LD firmado con SHA-256:
+A continuación se presenta el generador de recibos de procedencia **W3C PROV-O (`http://www.w3.org/ns/prov#`) + W3C SKOS** (`scripts/prov_o_receipt_generator.py`) que vincula `exw:LocalRAGInferenceExecution` (`prov:Activity`), `exw:CurriculumMarkdownCorpus` (`prov:Entity`), `exw:OllamaModelExwCarbon4Cac` (`prov:Entity`), `exw:Carbon4AppleSiliconNode` (`prov:SoftwareAgent`) y `exw:ComplianceAuditReceipt` (`prov:Entity`) en un grafo JSON-LD firmado con SHA-256:
 
 ```python
 #!/usr/bin/env python3

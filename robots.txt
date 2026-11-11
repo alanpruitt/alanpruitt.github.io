@@ -9,6 +9,7 @@ Allow: /research-log/
 Allow: /qa-embed/
 Allow: /data/sovereign-qa-index.json
 Allow: /data/exw-ssot-rag-index.json
+Disallow: /distribution/
 
 User-agent: OAI-SearchBot
 Allow: /
@@ -43,6 +44,7 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
+# Sitemap reference for search engine indexing
 Sitemap: https://alanpruitt.com/sitemap.xml
 Sitemap: https://alanpruitt.com/en/sitemap.xml
 Sitemap: https://alanpruitt.com/es/sitemap.xml

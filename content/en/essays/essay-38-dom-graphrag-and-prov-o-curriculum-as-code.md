@@ -58,7 +58,7 @@ Instead of settling for flat *Docs-as-Code*, I upgraded my **EXW Master Library 
 |  [1. W3C SKOS Ontology]  ->  Bilingual Norteño-Spanish <-> Clinical SSoT    |
 |  [2. DOM GraphRAG]       ->  3,151 Nodes Linked by CLOs & Pattern/Rule/Solve|
 |  [3. Born-Accessible XAI]->  9:1 Contrast 4D Radar (Pattern/Rule/Solve/Ver.)|
-|  [4. W3C PROV-O Receipt] ->  Cryptographic SHA-256 Lineage (SSoT -> Argon4) |
+|  [4. W3C PROV-O Receipt] ->  Cryptographic SHA-256 Lineage (SSoT -> Carbon4)|
 +-----------------------------------------------------------------------------+
 ```
 
@@ -77,7 +77,7 @@ When a student audits a lab inside Canvas, my engine retrieves not just a matchi
 Every live **Sovereign AI Auditing** response returned by my local API (`scripts/canvas_rag_api.py`) now emits a formal **W3C PROV-O (`http://www.w3.org/ns/prov#`)** JSON-LD provenance graph (`prov_o_receipt`) alongside a deterministic SHA-256 `receipt_id`:
 - **`prov:Entity` (`exw:SSoTCorpus`):** The exact federal guideline (`PAGA 2018`, `DGA 2025-2030`, `ACSM 12th Ed.`, or `NASM OPT`) and the Git-versioned curriculum chunks retrieved.
 - **`prov:Activity` (`exw:ClinicalAuditSynthesis`):** The timestamped execution of the local RAG + Clinical Framing audit.
-- **`prov:Agent` (`exw:SovereignArgon4Auditor`):** My air-gapped local **Google Gemini Carbon 4** engine running on Apple Silicon (`M1/M2`) with zero external cloud telemetry.
+- **`prov:Agent` (`exw:SovereignCarbon4Auditor`):** My air-gapped local **Google Gemini Carbon 4** engine running on Apple Silicon (`M1/M2`) with zero external cloud telemetry.
 
 ### 3. Born-Accessible (`9:1` Contrast) 4-Dimensional XAI Radar Scorecard
 
