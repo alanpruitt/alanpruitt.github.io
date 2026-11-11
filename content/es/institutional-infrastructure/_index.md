@@ -320,6 +320,15 @@ PROV_O_CONTEXT = {
 }
 ```
 
+### Implementación de Referencia: `build_oer_syndication_export.py` (Compilador de Doble Espacio de Nombres y Estándares K–16 de 4 Niveles)
+
+Las instituciones suelen enfrentar un dilema de acreditación al escalar programas de Doble Inscripción, Perkins V CTE, Running Start y WIOA. Incluir estándares de preparatoria (`CCSS` o `WA.ELA`) en el programa oficial universitario puede generar observaciones de acreditadores regionales sobre el rigor postsecundario. Omitirlos por completo invisibiliza el curso ante distritos escolares, OER Commons y Google Dataset Search.
+
+Nuestro **Compilador de Doble Espacio de Nombres (`EXW` -> `KIN / HLTH`) y Estándares de 4 Niveles** (`scripts/build_oer_syndication_export.py` + `01_INFRASTRUCTURE/educational_alignment_registry.json`) resuelve ambos frentes desde un único registro JSON con cero colisión de acreditación:
+
+* **Plano del Programa Oficial Universitario:** Preserva íntegramente las competencias postsecundarias HLC y de transferencia universitaria (`Procedimientos 601.3 / 615.3`) sin dilución de nivel secundario.
+* **Plano de Sindicación K–16 y Fuerza Laboral:** Compila automáticamente el **Nivel 1** (SSoTs Clínicos Federales), **Nivel 2** (`US-DOL-TEN-07-25` y `NSF-TECHACCESS-AI-READY-2026`), **Nivel 3** (ILOs HLC) y **Nivel 4** (`CCSS.ELA-LITERACY.W.11-12.6`, `CCSS.ELA-LITERACY.RST.11-12.7`, `WA.ELA.11-12.W.6`—adaptable en minutos a cualquiera de los 50 estados) dentro de las tablas del Módulo 00, paquetes `.zip` OER con SHA-256 y `Schema.org/Dataset` JSON-LD.
+
 ### Implementación de Referencia: `.github/workflows/deploy.yml` (Compuerta CI/CD WCAG y Canónica)
 
 A continuación se presenta el flujo de trabajo automatizado de despliegue en producción con GitHub Actions (`.github/workflows/deploy.yml`) que ejecuta Hugo `--minify`, verificación de etiquetas canónicas (`inject_canonicals.py`), `markdownlint`, `pour_audit.py`, `wcag3_atomic_linter.py`, auditoría de rutas con Playwright y despliegue nativo de artefactos en GitHub Pages (`actions/deploy-pages@v4`):

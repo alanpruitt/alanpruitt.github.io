@@ -320,6 +320,15 @@ PROV_O_CONTEXT = {
 }
 ```
 
+### Reference Implementation: `build_oer_syndication_export.py` (Dual-Namespace & 4-Tier K–16 Standards Compiler)
+
+Most institutions face an accreditation catch-22 when scaling Dual-Enrollment, Perkins V CTE, Running Start, and WIOA cohorts. Placing Grade 11–12 standards (`CCSS` or `WA.ELA`) on a college syllabus risks regional accreditor questions over collegiate credit rigor. Omitting those codes entirely hides the course from K–12 Dual-Enrollment districts, OER Commons harvesters, and Google Dataset Search.
+
+Our **Dual-Namespace (`EXW` -> `KIN / HLTH`) & 4-Tier Standards Compiler** (`scripts/build_oer_syndication_export.py` + `01_INFRASTRUCTURE/educational_alignment_registry.json`) solves both from a single JSON registry with zero accreditation collision:
+
+* **Collegiate Syllabus Plane:** Preserves pure HLC / university-transfer post-secondary competencies (`Procedure 601.3 / 615.3`) with zero secondary-level dilution.
+* **K–16 & Workforce Syndication Plane:** Automatically compiles **Tier 1** Federal Clinical SSoTs, **Tier 2** Workforce AI Literacy (`US-DOL-TEN-07-25` & `NSF-TECHACCESS-AI-READY-2026`), **Tier 3** HLC ILOs, and **Tier 4** Dual-Enrollment Bridge Standards (`CCSS.ELA-LITERACY.W.11-12.6`, `CCSS.ELA-LITERACY.RST.11-12.7`, `WA.ELA.11-12.W.6`—adaptable in minutes to any of the 50 states) into Module 00 crosswalk tables, SHA-256 `.zip` OER packages, and `Schema.org/Dataset` JSON-LD.
+
 ### Reference Implementation: `.github/workflows/deploy.yml` (CI/CD WCAG & Canonical Gate)
 
 Below is the automated GitHub Actions production deployment workflow (`.github/workflows/deploy.yml`) executing Hugo `--minify`, canonical tag verification (`inject_canonicals.py`), `markdownlint`, `pour_audit.py`, `wcag3_atomic_linter.py`, Playwright route auditing, and native GitHub Pages artifact deployment (`actions/deploy-pages@v4`):
