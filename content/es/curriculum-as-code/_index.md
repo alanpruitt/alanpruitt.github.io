@@ -42,6 +42,9 @@ keywords:
     <a href="#citacion-academica" style="display: inline-flex; min-height: 44px; align-items: center; padding: 0.55rem 1rem; border-radius: 0.5rem; background-color: #FFFFFF; color: #0B192C; font-size: 0.85rem; font-weight: 700; text-decoration: underline; border: 1.5px solid #0B192C;">
       Citar Documento (APA 7 y BibTeX)
     </a>
+    <a href="https://alanpruitt.substack.com/p/what-if-i-didnt-trace-the-lineage" target="_blank" rel="noopener noreferrer" style="display: inline-flex; min-height: 44px; align-items: center; padding: 0.55rem 1rem; border-radius: 0.5rem; background-color: #FFFFFF; color: #0B192C; font-size: 0.85rem; font-weight: 700; text-decoration: underline; border: 1.5px solid #0B192C;">
+      Substack (EN): &ldquo;What If I Didn&rsquo;t Trace the Lineage?&rdquo; &rarr;
+    </a>
     <a href="https://me.developers.google.com/u/alanpruitt" target="_blank" rel="noopener noreferrer" style="display: inline-flex; min-height: 44px; align-items: center; padding: 0.55rem 1rem; border-radius: 0.5rem; background-color: #FFFFFF; color: #0B192C; font-size: 0.85rem; font-weight: 700; text-decoration: underline; border: 1.5px solid #0B192C;">
       Autor Verificado: g.dev/alanpruitt &rarr;
     </a>

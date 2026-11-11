@@ -3,6 +3,7 @@
 - **Title:** What If I Didn't Trace the Lineage? – The Origin and Evolution of Curriculum-as-Code (2018–2026)
 - **Subtitle:** How Curriculum-as-Code evolved from 2018 Kubernetes network labs and my 2021 GitHub AI Co-Pilot CEDS award into a neuro-symbolic S-A-R v2.2 academic operating system.
 - **Suggested Substack Custom URL Slug:** `what-if-i-didnt-trace-the-lineage`
+- **Live Substack URL:** `https://alanpruitt.substack.com/p/what-if-i-didnt-trace-the-lineage`
 - **Canonical URL:** `https://alanpruitt.com/curriculum-as-code/`
 - **2-Page Archival Whitepaper PDF:** `https://alanpruitt.com/docs/Curriculum-as-Code-Origin-and-Evolution-Whitepaper.pdf`
 - **Architecture Briefs Shelf:** `https://alanpruitt.com/#architecture-briefs`
