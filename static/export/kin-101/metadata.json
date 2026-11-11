@@ -188,7 +188,7 @@
     }
   ],
   "schema_version": "S-A-R-v2.2-OER-Commons-Syndication",
-  "generated_at": "2026-11-11T04:47:10.451165+00:00",
+  "generated_at": "2026-11-11T05:26:20.372607+00:00",
   "course_code": "KIN-101",
   "course_slug": "kin-101",
   "course_title": "Concepts of Kinesiology: Foundational Movement & Physical Activity",
@@ -209,9 +209,11 @@
   },
   "achieve_oer_rubrics_conformance": {
     "rubrics_evaluated": "Achieve OER Rubrics I–VIII (v4)",
+    "achieve_score": "21/21 (100.0%)",
+    "ai_attribution_disclosure": "PASSED",
     "wcag_standard": "WCAG 2.2 AA + 9:1 Double-Contrast Guard",
-    "verified_html_files": 151,
-    "verified_markdown_files": 97,
+    "verified_html_files": 138,
+    "verified_markdown_files": 131,
     "open_accessibility_issues": 0
   },
   "modules_exported": [
@@ -249,8 +251,8 @@
     {
       "path": "module-00/0-2-course-syllabus-and-communication-guidelines.md",
       "format": "markdown",
-      "bytes": 7880,
-      "sha256": "040afd670b66823f10e45201682e022b2d9f0de3f066c26c90d543c03b60f2d5"
+      "bytes": 17146,
+      "sha256": "ef36919fa1ee13bee49b2d8f5b7070e9bafb6cee8e7c8f3bc776b95d049d3008"
     },
     {
       "path": "module-00/0-3-technical-requirements-and-mobile-access.html",
@@ -271,6 +273,36 @@
       "sha256": "7edc61a315ac12f8c398b51129be5b2e5938a1df60eb64e91f3373af1c93a574"
     },
     {
+      "path": "module-00/00-overview.md",
+      "format": "markdown",
+      "bytes": 37354,
+      "sha256": "55454858d12272c5ff95f2859c2ec43b6d5ab75e16eef12a44499c926b448b1a"
+    },
+    {
+      "path": "module-00/Module-00-Master.html",
+      "format": "html",
+      "bytes": 49618,
+      "sha256": "6399ca228ead5e022f9e5cf69d3e976258b148ae906ff4c895ef57122be35c61"
+    },
+    {
+      "path": "module-00/Module-00-Master.md",
+      "format": "markdown",
+      "bytes": 21348,
+      "sha256": "742474f3ad7c845d63fb1451167df51ef1d58a550998f069000a491e2d045644"
+    },
+    {
+      "path": "module-00/mod-00-clinical-discussion.html",
+      "format": "html",
+      "bytes": 14129,
+      "sha256": "5e7b21704bcf5b4a3580e90a1f6183af96491f126ac34a315a670fc05d22e216"
+    },
+    {
+      "path": "module-00/mod-00-clinical-discussion.md",
+      "format": "markdown",
+      "bytes": 14389,
+      "sha256": "90a435068a1d120c6e718c32ec6f7ba2734c6e3d4e4752c1ec5b44d9d8e7b7ce"
+    },
+    {
       "path": "module-00/module-00-overview-and-course-orientation.html",
       "format": "html",
       "bytes": 71228,
@@ -279,14 +311,20 @@
     {
       "path": "module-00/module-00-overview-and-course-orientation.md",
       "format": "markdown",
-      "bytes": 28042,
-      "sha256": "a3018be5445858cc28fd87aac35c8d38bdefe21af6db6b3137c3daa74b3e6b2a"
+      "bytes": 37308,
+      "sha256": "a381d8eb071fdb1e2e6071c0ed3737cb4f423e3a8e816b88aecb2c913f9c4b2e"
     },
     {
       "path": "module-00/module-00-summary-and-wrap-up.html",
       "format": "html",
       "bytes": 62463,
       "sha256": "602f2975b18142e7a962fa14fd2d9bfb0b186df77338525bec4177ad82a425cc"
+    },
+    {
+      "path": "module-00/module-00-summary-and-wrap-up.md",
+      "format": "markdown",
+      "bytes": 40084,
+      "sha256": "9ca30989810f3dbdb77d2a518de3bbc4cd2fc64657a03c972eb5665b203a6d46"
     },
     {
       "path": "module-00/reference-guide-paga-2018-chapter-2-adult-and-special-population-benchmarks.html",
@@ -301,100 +339,16 @@
       "sha256": "780c096832dd36ea95a21e265572f26cf8c5eea0f8d197191393d0eefa824050"
     },
     {
-      "path": "module-00/Module-00-Master.html",
-      "format": "html",
-      "bytes": 49618,
-      "sha256": "6399ca228ead5e022f9e5cf69d3e976258b148ae906ff4c895ef57122be35c61"
-    },
-    {
-      "path": "module-00/Module-00-Master.md",
-      "format": "markdown",
-      "bytes": 12083,
-      "sha256": "a6ab14bf27be9436917051839750465fc48b8bb85c47178e7cca8b528cd68dd4"
-    },
-    {
-      "path": "module-00/mod-00-clinical-discussion.html",
-      "format": "html",
-      "bytes": 14129,
-      "sha256": "5e7b21704bcf5b4a3580e90a1f6183af96491f126ac34a315a670fc05d22e216"
-    },
-    {
-      "path": "module-00/mod-00-clinical-discussion.md",
-      "format": "markdown",
-      "bytes": 4278,
-      "sha256": "9085ea6e657a7cb95d57f815137890a7bb3966df6efe8f58ae98ee680382fd2b"
-    },
-    {
       "path": "module-00/welcome.html",
       "format": "html",
       "bytes": 11538,
       "sha256": "51ff2318069b3774f2e40b442490f9af48346acdba3bac50aba43cf567c1b589"
     },
     {
-      "path": "module-01/mod-01-lab-and-simulation-01.html",
-      "format": "html",
-      "bytes": 55632,
-      "sha256": "56f7fc8fc733bae1228b30345156694102e157a04ca72701166170a7cb46ff18"
-    },
-    {
-      "path": "module-01/mod-01-lab-and-simulation-01.md",
+      "path": "module-01/00-overview.md",
       "format": "markdown",
-      "bytes": 18186,
-      "sha256": "f3984a813153dfb2aa6320f0022124605c02fe4436d9d4a80f0d5b046e933606"
-    },
-    {
-      "path": "module-01/mod-01-lab-and-simulation-02.html",
-      "format": "html",
-      "bytes": 49631,
-      "sha256": "d9a20d1cfa8440e08e03b667849e042b9627a69c27c3f308071744dbc65d2bed"
-    },
-    {
-      "path": "module-01/mod-01-lab-and-simulation-02.md",
-      "format": "markdown",
-      "bytes": 13475,
-      "sha256": "6afea98a2323eff1d19b5f149f9123eed498d78a3b9e1d3f7adda618a8280ec9"
-    },
-    {
-      "path": "module-01/mod-01-clinical-discussion.html",
-      "format": "html",
-      "bytes": 29857,
-      "sha256": "ecd582a427d19389406c6bdab5476774418c2c91f218a09f3592052649ea129c"
-    },
-    {
-      "path": "module-01/mod-01-clinical-discussion.md",
-      "format": "markdown",
-      "bytes": 7788,
-      "sha256": "5a6f7b68f2bd02cf94b94cc6c540d00025f81891126f65dc3c08767ead59fd4a"
-    },
-    {
-      "path": "module-01/mod-01-overview-human-movement-audit.html",
-      "format": "html",
-      "bytes": 25025,
-      "sha256": "bf8a720f929c417688eaf187d42f8984bedaa506f6e6639b02381375d88654ce"
-    },
-    {
-      "path": "module-01/mod-01-overview-human-movement-audit.md",
-      "format": "markdown",
-      "bytes": 8354,
-      "sha256": "77d19c1baf90255e3014bb21f609de36ae8e6c9dfdcab8425e90fe821419f1c7"
-    },
-    {
-      "path": "module-01/mod-01-required-readings-human-movement-audit.html",
-      "format": "html",
-      "bytes": 37619,
-      "sha256": "0224a3489904757e2a7671a1dd265f7ebf5b149e9cc813c5fbf94c2b07f999cf"
-    },
-    {
-      "path": "module-01/mod-01-required-readings-human-movement-audit.md",
-      "format": "markdown",
-      "bytes": 13500,
-      "sha256": "68ba1c7023f310e534abe8c516b17e8f510de6af8e683fc0aecae1d3eba180f9"
-    },
-    {
-      "path": "module-01/mod-01-summary-and-wrap-up-human-movement-audit.html",
-      "format": "html",
-      "bytes": 42762,
-      "sha256": "9c582b4f21d7fff8fba50b9e633dc850467002a10db1bba96c6b68368656d165"
+      "bytes": 17671,
+      "sha256": "bfb794db0cb534c8e0d272c72518ce5625e8fe557dc7726dd236d54e92193992"
     },
     {
       "path": "module-01/Module-01-Master.html",
@@ -405,8 +359,44 @@
     {
       "path": "module-01/Module-01-Master.md",
       "format": "markdown",
-      "bytes": 7197,
-      "sha256": "4494bec0d78dc45da88ddf33a3cb002544ee4ed75798f5fb5b4c2e8f24fe1baf"
+      "bytes": 14774,
+      "sha256": "0c6a82574a3bc05eab3f239024e89f618ab2d0cce90012c2746ce36a7303e12f"
+    },
+    {
+      "path": "module-01/mod-01-clinical-discussion.html",
+      "format": "html",
+      "bytes": 5703,
+      "sha256": "71424d45a3231d9df1f9611d54b18e6c79e8933b2f81cc8bc2eea849bcb3f42b"
+    },
+    {
+      "path": "module-01/mod-01-clinical-discussion.md",
+      "format": "markdown",
+      "bytes": 17054,
+      "sha256": "cd9661de5dc62f50bbbd7ede0af07f7ffa8911259a2d9ae258ccf162fad31b6b"
+    },
+    {
+      "path": "module-01/mod-01-lab-and-simulation-01.html",
+      "format": "html",
+      "bytes": 55632,
+      "sha256": "56f7fc8fc733bae1228b30345156694102e157a04ca72701166170a7cb46ff18"
+    },
+    {
+      "path": "module-01/mod-01-lab-and-simulation-01.md",
+      "format": "markdown",
+      "bytes": 28381,
+      "sha256": "d773fd7a799eaac9727a232eb3cb29d84119c75e0ce86681cce7773f4309b279"
+    },
+    {
+      "path": "module-01/mod-01-lab-and-simulation-02.html",
+      "format": "html",
+      "bytes": 49631,
+      "sha256": "d9a20d1cfa8440e08e03b667849e042b9627a69c27c3f308071744dbc65d2bed"
+    },
+    {
+      "path": "module-01/mod-01-lab-and-simulation-02.md",
+      "format": "markdown",
+      "bytes": 23586,
+      "sha256": "2dea05f5bf91211a1bf1c4b484df67ba649aade9e002923bc70cc9c971a9592d"
     },
     {
       "path": "module-01/mod-01-lab-and-simulation-09.html",
@@ -417,80 +407,50 @@
     {
       "path": "module-01/mod-01-lab-and-simulation-09.md",
       "format": "markdown",
-      "bytes": 4153,
-      "sha256": "c5d7e1713e80a15d8d08b1f21060f43e4037b19b0f05ab7ff0eaa5eef6193b16"
+      "bytes": 13415,
+      "sha256": "ff5bdbbe904b9134b838c46e64e91b2587743949420735d0ffcd3ad139d5722b"
     },
     {
-      "path": "module-01/mod-01-clinical-discussion.html",
+      "path": "module-01/mod-01-overview-human-movement-audit.html",
       "format": "html",
-      "bytes": 5703,
-      "sha256": "71424d45a3231d9df1f9611d54b18e6c79e8933b2f81cc8bc2eea849bcb3f42b"
+      "bytes": 25025,
+      "sha256": "bf8a720f929c417688eaf187d42f8984bedaa506f6e6639b02381375d88654ce"
     },
     {
-      "path": "module-02/mod-02-lab-and-simulation-01.html",
-      "format": "html",
-      "bytes": 50499,
-      "sha256": "7ebeec42c4fc08567db672ef2d1790fe2457157c3fcc77c75966f575d660745a"
-    },
-    {
-      "path": "module-02/mod-02-lab-and-simulation-01.md",
+      "path": "module-01/mod-01-overview-human-movement-audit.md",
       "format": "markdown",
-      "bytes": 13922,
-      "sha256": "38c1e43202198a0153af10c26d6b34d63ba036abd5392212fcec3fe736d41e52"
+      "bytes": 17620,
+      "sha256": "d80ef4a0e6518b5b55ce8fea57d9b7fbdd0e101b7b3f512b6e18f9c241acb8e5"
     },
     {
-      "path": "module-02/mod-02-lab-and-simulation-02.html",
+      "path": "module-01/mod-01-required-readings-human-movement-audit.html",
       "format": "html",
-      "bytes": 55016,
-      "sha256": "92d8147eb82acf63c1f759e2522b6a1b458b8d6fcf9f6d4dd6e6a44dbd43dbb9"
+      "bytes": 37619,
+      "sha256": "0224a3489904757e2a7671a1dd265f7ebf5b149e9cc813c5fbf94c2b07f999cf"
     },
     {
-      "path": "module-02/mod-02-lab-and-simulation-02.md",
+      "path": "module-01/mod-01-required-readings-human-movement-audit.md",
       "format": "markdown",
-      "bytes": 15310,
-      "sha256": "c9ae5172af824c5a08ec0af07a61af9512b080b1f81cd4df09f0e9182e48ed16"
+      "bytes": 22850,
+      "sha256": "092ae00ebca87c9bc02ac8043b50bdfabd5d2d9aff125629148a1eac21e9e5f3"
     },
     {
-      "path": "module-02/mod-02-clinical-discussion.html",
+      "path": "module-01/mod-01-summary-and-wrap-up-human-movement-audit.html",
       "format": "html",
-      "bytes": 40188,
-      "sha256": "bc7a801bee8906362883cbfcde8cd382e44e2ba491ef233d71c1a13fe1dad13d"
+      "bytes": 42762,
+      "sha256": "9c582b4f21d7fff8fba50b9e633dc850467002a10db1bba96c6b68368656d165"
     },
     {
-      "path": "module-02/mod-02-clinical-discussion.md",
+      "path": "module-01/mod-01-summary-and-wrap-up-human-movement-audit.md",
       "format": "markdown",
-      "bytes": 9266,
-      "sha256": "6980e33de48b00b8f5cf7e96c57d5ef5b8ea330a254997ced325e953f983efa1"
+      "bytes": 24078,
+      "sha256": "afba239b0fe3c456f97da8275bb25e14e361aa6123c04dd05367fb4ca02ddd6b"
     },
     {
-      "path": "module-02/mod-02-overview-body-movement-and-exercise-physiology.html",
-      "format": "html",
-      "bytes": 24781,
-      "sha256": "5c96bc8dc4b736da3e3cfd0eea1746626c7929aa4e2f11833666283c633de9ce"
-    },
-    {
-      "path": "module-02/mod-02-overview-body-movement-and-exercise-physiology.md",
+      "path": "module-02/00-overview.md",
       "format": "markdown",
-      "bytes": 8037,
-      "sha256": "c8d4375f50175787eebc1a359b2be6d679ea1b5306ca8936589ef8c3efd02dba"
-    },
-    {
-      "path": "module-02/mod-02-required-readings-body-movement-and-exercise-physiology.html",
-      "format": "html",
-      "bytes": 22864,
-      "sha256": "6483fefcc5d4861d1d00907409b5e8ae4a36d757faddcca5e29662fef73fad01"
-    },
-    {
-      "path": "module-02/mod-02-required-readings-body-movement-and-exercise-physiology.md",
-      "format": "markdown",
-      "bytes": 6708,
-      "sha256": "40750ebb5f8206e2726f91507f626a14c8bdd1d88430228579d7c4134670bff0"
-    },
-    {
-      "path": "module-02/mod-02-summary-and-wrap-up-body-movement-and-exercise-physiology.html",
-      "format": "html",
-      "bytes": 43618,
-      "sha256": "6cc7e8dce2b3ea1be9103f89a8b9eb53f44f46d2f5b7b1e449225e2fb1a170ba"
+      "bytes": 17337,
+      "sha256": "19797ca89369e89d3e0746d5569bef28f17b1921c83f8db348bebd7e51b3ca55"
     },
     {
       "path": "module-02/Module-02-Master.html",
@@ -501,14 +461,8 @@
     {
       "path": "module-02/Module-02-Master.md",
       "format": "markdown",
-      "bytes": 13266,
-      "sha256": "e560f86129fd973d155944bda72224bb281c8e52faeaa49aba2b66fbba0e5813"
-    },
-    {
-      "path": "module-02/mod-02-clinical-discussion.html",
-      "format": "html",
-      "bytes": 44346,
-      "sha256": "57600bda46a583382a3529c8e3c48a3538df75725e398b677dda72887de13851"
+      "bytes": 20844,
+      "sha256": "521114f1e607f2966077e0a71ad6b97c681602a529ef71b49e2cbb6be7fb07bf"
     },
     {
       "path": "module-02/history-sociology.html",
@@ -517,70 +471,82 @@
       "sha256": "ca94e5cad4ec5b01dc097b85289d4902e5a1852cc1ded20fa3f2adb21054c827"
     },
     {
-      "path": "module-03/mod-03-lab-and-simulation-01.html",
+      "path": "module-02/mod-02-clinical-discussion.html",
       "format": "html",
-      "bytes": 44820,
-      "sha256": "f737bbc7bedaac2dd264d276f5098ebbdeade2cccec0a967d6af39534ccf5122"
+      "bytes": 44346,
+      "sha256": "57600bda46a583382a3529c8e3c48a3538df75725e398b677dda72887de13851"
     },
     {
-      "path": "module-03/mod-03-lab-and-simulation-01.md",
+      "path": "module-02/mod-02-clinical-discussion.md",
       "format": "markdown",
-      "bytes": 10892,
-      "sha256": "614c03ba90a64c64bfc8f498b76da538706cf63063974af010ebac3ee1e9aafd"
+      "bytes": 19377,
+      "sha256": "01275403e3164efce8e11c6be02daa9e5d4b26862f600442ccacd6ba176a20ad"
     },
     {
-      "path": "module-03/mod-03-lab-and-simulation-02.html",
+      "path": "module-02/mod-02-lab-and-simulation-01.html",
       "format": "html",
-      "bytes": 43997,
-      "sha256": "3f5abd35c997541d5e613fcbe90f44801a9ad0442d51dc68339b691891159bb0"
+      "bytes": 50499,
+      "sha256": "7ebeec42c4fc08567db672ef2d1790fe2457157c3fcc77c75966f575d660745a"
     },
     {
-      "path": "module-03/mod-03-lab-and-simulation-02.md",
+      "path": "module-02/mod-02-lab-and-simulation-01.md",
       "format": "markdown",
-      "bytes": 10659,
-      "sha256": "833574931907fb54a9b75f690bcb2236ac13d25e273bf84f432ac0ecdfd507ba"
+      "bytes": 24033,
+      "sha256": "546f29d5669c51ce18f861a9f6a80be2c27e733af7da089bc688fee3faac39f6"
     },
     {
-      "path": "module-03/mod-03-clinical-discussion.html",
+      "path": "module-02/mod-02-lab-and-simulation-02.html",
       "format": "html",
-      "bytes": 42056,
-      "sha256": "38f4e81a2fa02c1ce74422669455ae0db2b782337f3064f2fa70f89fec71e834"
+      "bytes": 55016,
+      "sha256": "92d8147eb82acf63c1f759e2522b6a1b458b8d6fcf9f6d4dd6e6a44dbd43dbb9"
     },
     {
-      "path": "module-03/mod-03-clinical-discussion.md",
+      "path": "module-02/mod-02-lab-and-simulation-02.md",
       "format": "markdown",
-      "bytes": 13353,
-      "sha256": "3fd9fa55206c42fdb376bc081bc998c7b23befcffc3b99d1ad121294e162060e"
+      "bytes": 25421,
+      "sha256": "662d7908c040c3d983286e8ee973ff4ab07e5e055a78303c78f7f08ed1d95e6e"
     },
     {
-      "path": "module-03/mod-03-overview-history-of-physical-culture-and-fitness.html",
+      "path": "module-02/mod-02-overview-body-movement-and-exercise-physiology.html",
       "format": "html",
-      "bytes": 29022,
-      "sha256": "b4ffca089e04422cf81bee822bc400838ae2fa012a3b7b8a7923c6f78f3788dc"
+      "bytes": 24781,
+      "sha256": "5c96bc8dc4b736da3e3cfd0eea1746626c7929aa4e2f11833666283c633de9ce"
     },
     {
-      "path": "module-03/mod-03-overview-history-of-physical-culture-and-fitness.md",
+      "path": "module-02/mod-02-overview-body-movement-and-exercise-physiology.md",
       "format": "markdown",
-      "bytes": 10695,
-      "sha256": "935e1ddf5e9414edb788ca3fd4527bd756a9d764f596cede58632703ee3a41cd"
+      "bytes": 17303,
+      "sha256": "cd9900625c12c9d045f33ebdeb2ba9bb84b1ad2059be0f72add81032338b5ea4"
     },
     {
-      "path": "module-03/mod-03-required-readings-history-of-physical-culture-and-fitness.html",
+      "path": "module-02/mod-02-required-readings-body-movement-and-exercise-physiology.html",
       "format": "html",
-      "bytes": 41067,
-      "sha256": "f4a3b3da52f4a8c93d38b34d756e4b243dd55ed583f8f3acb997c6b596249d0b"
+      "bytes": 22864,
+      "sha256": "6483fefcc5d4861d1d00907409b5e8ae4a36d757faddcca5e29662fef73fad01"
     },
     {
-      "path": "module-03/mod-03-required-readings-history-of-physical-culture-and-fitness.md",
+      "path": "module-02/mod-02-required-readings-body-movement-and-exercise-physiology.md",
       "format": "markdown",
-      "bytes": 13060,
-      "sha256": "354b4d79df9ccb5a4f13e327760989b6524c7c3cc443818e7cea57ffa2757fb3"
+      "bytes": 15974,
+      "sha256": "acd077c122acef56149cf291f33adabda3cb445202f003e07462d61b811e69c4"
     },
     {
-      "path": "module-03/mod-03-summary-and-wrap-up-history-of-physical-culture-and-fitness.html",
+      "path": "module-02/mod-02-summary-and-wrap-up-body-movement-and-exercise-physiology.html",
       "format": "html",
-      "bytes": 48569,
-      "sha256": "f4d43073a20b3e7087c6602008620d4821b715631bf711a4ce0d5d3625615c8c"
+      "bytes": 43618,
+      "sha256": "6cc7e8dce2b3ea1be9103f89a8b9eb53f44f46d2f5b7b1e449225e2fb1a170ba"
+    },
+    {
+      "path": "module-02/mod-02-summary-and-wrap-up-body-movement-and-exercise-physiology.md",
+      "format": "markdown",
+      "bytes": 24586,
+      "sha256": "409a4e3fc27366264c3de8cc797eb3fbf8bd03ea6eab6b3f3a16d7163fee22bc"
+    },
+    {
+      "path": "module-03/00-overview.md",
+      "format": "markdown",
+      "bytes": 20077,
+      "sha256": "28dd9c8ec3401901de220c2770a4621d473e71101781283ba2899c5232dc1228"
     },
     {
       "path": "module-03/Module-03-Master.html",
@@ -591,8 +557,8 @@
     {
       "path": "module-03/Module-03-Master.md",
       "format": "markdown",
-      "bytes": 12536,
-      "sha256": "7efeb320dccaeedc99e498ae27a44ff85f71748c2d27e6b94670ef6af80a7db5"
+      "bytes": 20113,
+      "sha256": "a89d809ee0ad784c527b40771ad29cf460e49e94c19ce02288c0d5e2ded57eda"
     },
     {
       "path": "module-03/mod-03-clinical-discussion.html",
@@ -601,76 +567,82 @@
       "sha256": "911a0a8a4d43eb81bd1c13c27a03dc9e9f2baaf09c7936b191b5c96dd6c5061e"
     },
     {
+      "path": "module-03/mod-03-clinical-discussion.md",
+      "format": "markdown",
+      "bytes": 23548,
+      "sha256": "fc806559e4bdfcf851501f0e21be09e383713e22ab54fba88ebf3b54d28c40cf"
+    },
+    {
+      "path": "module-03/mod-03-lab-and-simulation-01.html",
+      "format": "html",
+      "bytes": 44820,
+      "sha256": "f737bbc7bedaac2dd264d276f5098ebbdeade2cccec0a967d6af39534ccf5122"
+    },
+    {
+      "path": "module-03/mod-03-lab-and-simulation-01.md",
+      "format": "markdown",
+      "bytes": 21003,
+      "sha256": "c6efea5e560dab2c896f8c865a4ce83fa9ecb13a8697b617b0cd1218c4df735b"
+    },
+    {
+      "path": "module-03/mod-03-lab-and-simulation-02.html",
+      "format": "html",
+      "bytes": 43997,
+      "sha256": "3f5abd35c997541d5e613fcbe90f44801a9ad0442d51dc68339b691891159bb0"
+    },
+    {
+      "path": "module-03/mod-03-lab-and-simulation-02.md",
+      "format": "markdown",
+      "bytes": 20770,
+      "sha256": "151d3114636a2d2f64e8caa07690a73e470504bb92393a4a6d2fad50fca18ee6"
+    },
+    {
+      "path": "module-03/mod-03-overview-history-of-physical-culture-and-fitness.html",
+      "format": "html",
+      "bytes": 29022,
+      "sha256": "b4ffca089e04422cf81bee822bc400838ae2fa012a3b7b8a7923c6f78f3788dc"
+    },
+    {
+      "path": "module-03/mod-03-overview-history-of-physical-culture-and-fitness.md",
+      "format": "markdown",
+      "bytes": 20045,
+      "sha256": "97576bedce317102b895e51d9a33a2ba1a630b991b664caedcf985fcce60b2d6"
+    },
+    {
+      "path": "module-03/mod-03-required-readings-history-of-physical-culture-and-fitness.html",
+      "format": "html",
+      "bytes": 41067,
+      "sha256": "f4a3b3da52f4a8c93d38b34d756e4b243dd55ed583f8f3acb997c6b596249d0b"
+    },
+    {
+      "path": "module-03/mod-03-required-readings-history-of-physical-culture-and-fitness.md",
+      "format": "markdown",
+      "bytes": 22410,
+      "sha256": "b520c1c2692bdefc229a401a5701f0d49448e6dd9989703e47861b5393bff900"
+    },
+    {
+      "path": "module-03/mod-03-summary-and-wrap-up-history-of-physical-culture-and-fitness.html",
+      "format": "html",
+      "bytes": 48569,
+      "sha256": "f4d43073a20b3e7087c6602008620d4821b715631bf711a4ce0d5d3625615c8c"
+    },
+    {
+      "path": "module-03/mod-03-summary-and-wrap-up-history-of-physical-culture-and-fitness.md",
+      "format": "markdown",
+      "bytes": 26715,
+      "sha256": "7ee9bd9d6129be994a9de0fa3c30bd057fbdc816151a84f004062820ec668ea7"
+    },
+    {
       "path": "module-03/movement-mechanics.html",
       "format": "html",
       "bytes": 11580,
       "sha256": "256240d600d005bf21973a74ad97273d57c9b06205b68aeba1259b10d88fe2a4"
     },
     {
-      "path": "module-04/mod-04-lab-and-simulation-01.html",
-      "format": "html",
-      "bytes": 44749,
-      "sha256": "bfe836bcc8e4a5acc5fefd2204ba667bc02e4841fd0c926d1c262182772d3c6a"
-    },
-    {
-      "path": "module-04/mod-04-lab-and-simulation-01.md",
+      "path": "module-04/00-overview.md",
       "format": "markdown",
-      "bytes": 10844,
-      "sha256": "afe53addb5bd61f96751b683748e5de5c4e3763f953179fff1504e5113c8d590"
-    },
-    {
-      "path": "module-04/mod-04-lab-and-simulation-02.html",
-      "format": "html",
-      "bytes": 55440,
-      "sha256": "fe6107a81b9b183fb598e8edd5dfe6615d9aa63902e0e0f847eeabcf3e416042"
-    },
-    {
-      "path": "module-04/mod-04-lab-and-simulation-02.md",
-      "format": "markdown",
-      "bytes": 17799,
-      "sha256": "f24fb8d6081185756c93f31d56b838506f7fd26e1ca9b92f6bfd04b6f03902a2"
-    },
-    {
-      "path": "module-04/mod-04-clinical-discussion.html",
-      "format": "html",
-      "bytes": 41588,
-      "sha256": "c9e7209e697384db36baaa2198f55bd18a1ffa06502741678459ded97dcc2d04"
-    },
-    {
-      "path": "module-04/mod-04-clinical-discussion.md",
-      "format": "markdown",
-      "bytes": 12881,
-      "sha256": "74fb74f881d149d1250f4cf21e5607b1e8bd13ca54b0c1e8d29b90cc5d6af3a9"
-    },
-    {
-      "path": "module-04/mod-04-overview-career-pathways-and-credentials.html",
-      "format": "html",
-      "bytes": 29407,
-      "sha256": "dc766c2b2af850debaabe40dda29bfca41bc81e217480d9133693e41d44344b0"
-    },
-    {
-      "path": "module-04/mod-04-overview-career-pathways-and-credentials.md",
-      "format": "markdown",
-      "bytes": 11067,
-      "sha256": "a5fac86a64c0d4c42790a22767a46f93bc063557deac088a71c74d3f5ec034dd"
-    },
-    {
-      "path": "module-04/mod-04-required-readings-career-pathways-and-credentials.html",
-      "format": "html",
-      "bytes": 40434,
-      "sha256": "4f033d0f9ae9d2d8e7ec559f338f5099214152bf055e67812ab6349952d05e78"
-    },
-    {
-      "path": "module-04/mod-04-required-readings-career-pathways-and-credentials.md",
-      "format": "markdown",
-      "bytes": 14128,
-      "sha256": "74d6481dc735e15e5fdcf768570a50a3450ed8f81004f22ddbeeee8df7dc9528"
-    },
-    {
-      "path": "module-04/mod-04-summary-and-wrap-up-career-pathways-and-credentials.html",
-      "format": "html",
-      "bytes": 51654,
-      "sha256": "76852437d3087c218084de476e277ee6cc5d8cd258217227db30c4eadb6cfbcc"
+      "bytes": 20457,
+      "sha256": "1d9f41c2ff1a4f31a9708ba0c6f4025bab5a05ce47f6e5e8218c633d636cd4c6"
     },
     {
       "path": "module-04/Module-04-Master.html",
@@ -681,8 +653,8 @@
     {
       "path": "module-04/Module-04-Master.md",
       "format": "markdown",
-      "bytes": 13064,
-      "sha256": "c3f35bad97361f6df89d16265dda94abbd2116be7794c837709c98c2d965669c"
+      "bytes": 20642,
+      "sha256": "6c283a00dd7e286104ca4491fe12934693638a21226775b013170ffb73902098"
     },
     {
       "path": "module-04/mod-04-clinical-discussion.html",
@@ -691,76 +663,82 @@
       "sha256": "9fe750ce942c0648616db5ab9e142f3413f1a8cc419af5a8b393bc7f3650572e"
     },
     {
+      "path": "module-04/mod-04-clinical-discussion.md",
+      "format": "markdown",
+      "bytes": 23076,
+      "sha256": "b9069a8bc00521ebbe5cc2f77f840171fc75f2b705bc81c618c34eef6baa1d68"
+    },
+    {
+      "path": "module-04/mod-04-lab-and-simulation-01.html",
+      "format": "html",
+      "bytes": 44749,
+      "sha256": "bfe836bcc8e4a5acc5fefd2204ba667bc02e4841fd0c926d1c262182772d3c6a"
+    },
+    {
+      "path": "module-04/mod-04-lab-and-simulation-01.md",
+      "format": "markdown",
+      "bytes": 20955,
+      "sha256": "46eb0b46e1ae0c27726f189a1e84228373a352e97889d46eee70a4a93cf3a161"
+    },
+    {
+      "path": "module-04/mod-04-lab-and-simulation-02.html",
+      "format": "html",
+      "bytes": 55440,
+      "sha256": "fe6107a81b9b183fb598e8edd5dfe6615d9aa63902e0e0f847eeabcf3e416042"
+    },
+    {
+      "path": "module-04/mod-04-lab-and-simulation-02.md",
+      "format": "markdown",
+      "bytes": 27994,
+      "sha256": "6d46943c87943cf02bff085958e12e613174b60d8f60d39534e478e1b7df62d4"
+    },
+    {
+      "path": "module-04/mod-04-overview-career-pathways-and-credentials.html",
+      "format": "html",
+      "bytes": 29407,
+      "sha256": "dc766c2b2af850debaabe40dda29bfca41bc81e217480d9133693e41d44344b0"
+    },
+    {
+      "path": "module-04/mod-04-overview-career-pathways-and-credentials.md",
+      "format": "markdown",
+      "bytes": 20417,
+      "sha256": "113ae3c16cb2e37a8eb8282d127ed85ef0860915058f3313452a6a7bdf933a32"
+    },
+    {
+      "path": "module-04/mod-04-required-readings-career-pathways-and-credentials.html",
+      "format": "html",
+      "bytes": 40434,
+      "sha256": "4f033d0f9ae9d2d8e7ec559f338f5099214152bf055e67812ab6349952d05e78"
+    },
+    {
+      "path": "module-04/mod-04-required-readings-career-pathways-and-credentials.md",
+      "format": "markdown",
+      "bytes": 23478,
+      "sha256": "a93558647fdfcbdff48490fb010c1d6c6383986b57042a872c1e6bad6c4355fc"
+    },
+    {
+      "path": "module-04/mod-04-summary-and-wrap-up-career-pathways-and-credentials.html",
+      "format": "html",
+      "bytes": 51654,
+      "sha256": "76852437d3087c218084de476e277ee6cc5d8cd258217227db30c4eadb6cfbcc"
+    },
+    {
+      "path": "module-04/mod-04-summary-and-wrap-up-career-pathways-and-credentials.md",
+      "format": "markdown",
+      "bytes": 29638,
+      "sha256": "ca6f77eb45c0cdcf5eee5f12a5d63b919b8dbe1f00b0a1657b4305a460335491"
+    },
+    {
       "path": "module-04/physiological-mechanics.html",
       "format": "html",
       "bytes": 11842,
       "sha256": "ee8c2638e81e3a9fa0fcab7cf7ca6fa11f15e943a80b3a7b12976ba27c901398"
     },
     {
-      "path": "module-05/mod-05-lab-and-simulation-01.html",
-      "format": "html",
-      "bytes": 66591,
-      "sha256": "3ab255c90e5628b732ca498f7df80024cf0861450382f4e7cbf67cd1d2131ec0"
-    },
-    {
-      "path": "module-05/mod-05-lab-and-simulation-01.md",
+      "path": "module-05/00-overview.md",
       "format": "markdown",
-      "bytes": 22083,
-      "sha256": "49e86422a981c374fd298794f86fb056748834bc1c2eb1e77cf66e56c7b52459"
-    },
-    {
-      "path": "module-05/mod-05-lab-and-simulation-02.html",
-      "format": "html",
-      "bytes": 55644,
-      "sha256": "2966e2bd817f2cbe9440220cbceea1df89492c945545b05cd42ccce8500cfc5b"
-    },
-    {
-      "path": "module-05/mod-05-lab-and-simulation-02.md",
-      "format": "markdown",
-      "bytes": 18068,
-      "sha256": "4a6e65aa65075ba164ba1e32018881487f1fafac88ec9385d65beae6c26ee17c"
-    },
-    {
-      "path": "module-05/mod-05-clinical-discussion.html",
-      "format": "html",
-      "bytes": 41906,
-      "sha256": "f4cbb691853ce3c3afa6af6123b483dea4dede44aadb57e249f8ab9d04b34bef"
-    },
-    {
-      "path": "module-05/mod-05-clinical-discussion.md",
-      "format": "markdown",
-      "bytes": 13217,
-      "sha256": "fe8a4a6248147a95165380f1eceda64019fc96288b08a1b7fcd68a2e6f6ae5c1"
-    },
-    {
-      "path": "module-05/mod-05-overview-muscle-strength-and-joint-function.html",
-      "format": "html",
-      "bytes": 28858,
-      "sha256": "653b635b2693ccf5b6a2c53db867e5a38a72a5104858695e90501fde9d088758"
-    },
-    {
-      "path": "module-05/mod-05-overview-muscle-strength-and-joint-function.md",
-      "format": "markdown",
-      "bytes": 10923,
-      "sha256": "211023ee1dd3a486055def97ffc50ded0c2c00439e0de90c20b09cd6a80d2e27"
-    },
-    {
-      "path": "module-05/mod-05-required-readings-muscle-strength-and-joint-function.html",
-      "format": "html",
-      "bytes": 42829,
-      "sha256": "51b786be34e59c4953d6c1fd30715aebe41b5ebc03124825f41e539145a03c69"
-    },
-    {
-      "path": "module-05/mod-05-required-readings-muscle-strength-and-joint-function.md",
-      "format": "markdown",
-      "bytes": 15126,
-      "sha256": "f66ad68bd3be6482f92a1508f438090b09b809b8a05cbf54ab49cdccc29c1bf2"
-    },
-    {
-      "path": "module-05/mod-05-summary-and-wrap-up-muscle-strength-and-joint-function.html",
-      "format": "html",
-      "bytes": 50365,
-      "sha256": "8af57258aa27f9e9055d3f6fd9379ea53f53b0d583fff0209d44726a6c0ffdb6"
+      "bytes": 20282,
+      "sha256": "78ff876609e8c777dd093dfc0603090cc1fd4fe4ab8dd5b2393bf297f0e81c28"
     },
     {
       "path": "module-05/Module-05-Master.html",
@@ -771,8 +749,8 @@
     {
       "path": "module-05/Module-05-Master.md",
       "format": "markdown",
-      "bytes": 12864,
-      "sha256": "a5606134e7a9c6fd305d39b3b9ad52151f2fd3f935fc9620c9e511076587aa99"
+      "bytes": 20442,
+      "sha256": "8b8d3fd548c34c31e6d8bde69e93f49d0769768b0b0d539762d61e039891f2ca"
     },
     {
       "path": "module-05/mod-05-clinical-discussion.html",
@@ -781,64 +759,82 @@
       "sha256": "7a1ea1bfa9cb9bf62055a233a4055da84312928c8ee4cca90abcdf384b9b1b77"
     },
     {
+      "path": "module-05/mod-05-clinical-discussion.md",
+      "format": "markdown",
+      "bytes": 23412,
+      "sha256": "797574631e132a48adf59efcfc22a2609d6d4f17587d76ed84258f2995191685"
+    },
+    {
+      "path": "module-05/mod-05-lab-and-simulation-01.html",
+      "format": "html",
+      "bytes": 66591,
+      "sha256": "3ab255c90e5628b732ca498f7df80024cf0861450382f4e7cbf67cd1d2131ec0"
+    },
+    {
+      "path": "module-05/mod-05-lab-and-simulation-01.md",
+      "format": "markdown",
+      "bytes": 32278,
+      "sha256": "de9f6f76e5c028706778ce38f69d7f566fdf22d11191744737b2184105f193b7"
+    },
+    {
+      "path": "module-05/mod-05-lab-and-simulation-02.html",
+      "format": "html",
+      "bytes": 55644,
+      "sha256": "2966e2bd817f2cbe9440220cbceea1df89492c945545b05cd42ccce8500cfc5b"
+    },
+    {
+      "path": "module-05/mod-05-lab-and-simulation-02.md",
+      "format": "markdown",
+      "bytes": 28263,
+      "sha256": "960d6df088ec500d36eb06ca7a7d34418eaf40f0e3851013ecccaebd0b8cc172"
+    },
+    {
+      "path": "module-05/mod-05-overview-muscle-strength-and-joint-function.html",
+      "format": "html",
+      "bytes": 28858,
+      "sha256": "653b635b2693ccf5b6a2c53db867e5a38a72a5104858695e90501fde9d088758"
+    },
+    {
+      "path": "module-05/mod-05-overview-muscle-strength-and-joint-function.md",
+      "format": "markdown",
+      "bytes": 20245,
+      "sha256": "08c4ebed0c9bdea55a02043c3a0ad81b8c09930eeaf4e1995ca9749fc93b1698"
+    },
+    {
+      "path": "module-05/mod-05-required-readings-muscle-strength-and-joint-function.html",
+      "format": "html",
+      "bytes": 42829,
+      "sha256": "51b786be34e59c4953d6c1fd30715aebe41b5ebc03124825f41e539145a03c69"
+    },
+    {
+      "path": "module-05/mod-05-required-readings-muscle-strength-and-joint-function.md",
+      "format": "markdown",
+      "bytes": 24476,
+      "sha256": "d2b310e40acb39e9b8c8f4b560924c0a5851f17188c8a3ccb8872d1676b17828"
+    },
+    {
+      "path": "module-05/mod-05-summary-and-wrap-up-muscle-strength-and-joint-function.html",
+      "format": "html",
+      "bytes": 50365,
+      "sha256": "8af57258aa27f9e9055d3f6fd9379ea53f53b0d583fff0209d44726a6c0ffdb6"
+    },
+    {
+      "path": "module-05/mod-05-summary-and-wrap-up-muscle-strength-and-joint-function.md",
+      "format": "markdown",
+      "bytes": 28598,
+      "sha256": "574aa52d9d7eaf1f7ce25011be1507454f70ec8a191ed8b11e836433752b5be6"
+    },
+    {
       "path": "module-05/motor-behavior.html",
       "format": "html",
       "bytes": 11950,
       "sha256": "fcfa30f8743571e844d494fdf6d50511b5b479b2c070e66cec1a99279ad30492"
     },
     {
-      "path": "module-06/mod-06-lab-and-simulation-01.html",
-      "format": "html",
-      "bytes": 57079,
-      "sha256": "b1898bc8e916e97d111067595382f926dcef9c64813c0cf3ff1692a9a39f338f"
-    },
-    {
-      "path": "module-06/mod-06-lab-and-simulation-01.md",
+      "path": "module-06/00-overview.md",
       "format": "markdown",
-      "bytes": 19581,
-      "sha256": "fc92eb8f6c60c67a1ec97ed4f915b7717ec270d6f37658bfabe31e33b906bf06"
-    },
-    {
-      "path": "module-06/mod-06-clinical-discussion.html",
-      "format": "html",
-      "bytes": 44147,
-      "sha256": "c690fb26eb8e18248ad59395cb9f770e66489ebf32ecd46df3556c7b952a893c"
-    },
-    {
-      "path": "module-06/mod-06-clinical-discussion.md",
-      "format": "markdown",
-      "bytes": 15357,
-      "sha256": "d65045680aa3fa7085e7b143cffbdf94a53c2ec231b6a60d9426252296476f14"
-    },
-    {
-      "path": "module-06/mod-06-overview-energy-systems-and-workout-fueling.html",
-      "format": "html",
-      "bytes": 28798,
-      "sha256": "75647a34f4f7979d01b9277b98e466fc0fc3e81bcfc67ef0edabe84bb95d4d57"
-    },
-    {
-      "path": "module-06/mod-06-overview-energy-systems-and-workout-fueling.md",
-      "format": "markdown",
-      "bytes": 10708,
-      "sha256": "5b58579a4a267154c3a521e79c9eca7b570e58153a1b08245d0249eb0c8bf685"
-    },
-    {
-      "path": "module-06/mod-06-required-readings-energy-systems-and-workout-fueling.html",
-      "format": "html",
-      "bytes": 44186,
-      "sha256": "62626462935c712e5bc131ddf81056224f1e3cd75323a61d33078ca4fe03d81a"
-    },
-    {
-      "path": "module-06/mod-06-required-readings-energy-systems-and-workout-fueling.md",
-      "format": "markdown",
-      "bytes": 15307,
-      "sha256": "ee48fbfbf8e2681ebcea84257f6c214818353ac5c8907bc1fa001be4680507f0"
-    },
-    {
-      "path": "module-06/mod-06-summary-and-wrap-up-energy-systems-and-workout-fueling.html",
-      "format": "html",
-      "bytes": 51712,
-      "sha256": "a2f0d19c77df420d70f6d538ef475d4875f5c6681dea3fafb6be4f9abba3b8bf"
+      "bytes": 20095,
+      "sha256": "09be9b325cbe1e220ec60f8ce8fcf3fd5f4b50f3ccdfe4a49d31e042a8a5a14b"
     },
     {
       "path": "module-06/Module-06-Master.html",
@@ -849,8 +845,8 @@
     {
       "path": "module-06/Module-06-Master.md",
       "format": "markdown",
-      "bytes": 12996,
-      "sha256": "725bae1d602d472649224efdc15059f9bc1391199563c8ced92f84b6329b5c27"
+      "bytes": 20574,
+      "sha256": "1d276fedc67b9184f1b09ca78823cd9ebafe51b9af77d9017a46209e71d2b063"
     },
     {
       "path": "module-06/mod-06-clinical-discussion.html",
@@ -859,76 +855,70 @@
       "sha256": "8b4c33b6f5d2640d1b41beb4472d999deecac89737097d831f6e04037bac1f4e"
     },
     {
+      "path": "module-06/mod-06-clinical-discussion.md",
+      "format": "markdown",
+      "bytes": 25552,
+      "sha256": "049f96aa37ec53dd049a7bb5068d31a2ac647f13db2f91ca033efd62c0c1a2c1"
+    },
+    {
+      "path": "module-06/mod-06-lab-and-simulation-01.html",
+      "format": "html",
+      "bytes": 57079,
+      "sha256": "b1898bc8e916e97d111067595382f926dcef9c64813c0cf3ff1692a9a39f338f"
+    },
+    {
+      "path": "module-06/mod-06-lab-and-simulation-01.md",
+      "format": "markdown",
+      "bytes": 29776,
+      "sha256": "e025e4fa50e71907b3c2d7acceba3e3095fef07506424741b39166b406b6bfc4"
+    },
+    {
+      "path": "module-06/mod-06-overview-energy-systems-and-workout-fueling.html",
+      "format": "html",
+      "bytes": 28798,
+      "sha256": "75647a34f4f7979d01b9277b98e466fc0fc3e81bcfc67ef0edabe84bb95d4d57"
+    },
+    {
+      "path": "module-06/mod-06-overview-energy-systems-and-workout-fueling.md",
+      "format": "markdown",
+      "bytes": 20058,
+      "sha256": "4d21e0343d98685d4acb23f4a5a4cfd19eef93f5b1251d71ecad056fb619b9a9"
+    },
+    {
+      "path": "module-06/mod-06-required-readings-energy-systems-and-workout-fueling.html",
+      "format": "html",
+      "bytes": 44186,
+      "sha256": "62626462935c712e5bc131ddf81056224f1e3cd75323a61d33078ca4fe03d81a"
+    },
+    {
+      "path": "module-06/mod-06-required-readings-energy-systems-and-workout-fueling.md",
+      "format": "markdown",
+      "bytes": 24657,
+      "sha256": "e9aa8d3c5020fb27f0c1532f9558b276bb4cb30695cb1707059d4c8a80644de2"
+    },
+    {
+      "path": "module-06/mod-06-summary-and-wrap-up-energy-systems-and-workout-fueling.html",
+      "format": "html",
+      "bytes": 51712,
+      "sha256": "a2f0d19c77df420d70f6d538ef475d4875f5c6681dea3fafb6be4f9abba3b8bf"
+    },
+    {
+      "path": "module-06/mod-06-summary-and-wrap-up-energy-systems-and-workout-fueling.md",
+      "format": "markdown",
+      "bytes": 29831,
+      "sha256": "7ed2a1f60c077fd30f8627d2bfb977a3353e56cc654346a4fb81913d190743a1"
+    },
+    {
       "path": "module-06/sport-psychology.html",
       "format": "html",
       "bytes": 11960,
       "sha256": "6b0ecf51ad3dfef1ba0610d776b94c566975ba8b2d46be7a32ad44740b840464"
     },
     {
-      "path": "module-07/mod-07-lab-and-simulation-01.html",
-      "format": "html",
-      "bytes": 73767,
-      "sha256": "60a5b9f956152236354b95a75d9c7183aaa47ec8f08bb2c8ac09e58f75b2a0de"
-    },
-    {
-      "path": "module-07/mod-07-lab-and-simulation-01.md",
+      "path": "module-07/00-overview.md",
       "format": "markdown",
-      "bytes": 19606,
-      "sha256": "04d98585097c472d1e244333b22bab77dfa83b97768b91453eeb918a22413691"
-    },
-    {
-      "path": "module-07/mod-07-lab-and-simulation-02.html",
-      "format": "html",
-      "bytes": 79542,
-      "sha256": "1542fba1df994c2d1bf3f7699f44d32b1f0bbd293e400f607638725a23ba36a8"
-    },
-    {
-      "path": "module-07/mod-07-lab-and-simulation-02.md",
-      "format": "markdown",
-      "bytes": 19033,
-      "sha256": "f833e61abe79d39dd992fd8bcf1ada19f8fbbb7707cab9174d6cdbf84d6bdd3e"
-    },
-    {
-      "path": "module-07/mod-07-clinical-discussion.html",
-      "format": "html",
-      "bytes": 57736,
-      "sha256": "c42945e59ee5a567be4debd19c3a16a9e9b5b669da1d311b2ffb68c954648874"
-    },
-    {
-      "path": "module-07/mod-07-clinical-discussion.md",
-      "format": "markdown",
-      "bytes": 12660,
-      "sha256": "bb9fa6ce18250a206f47744075a33936a647cd2d7a83dadf3a101b5b6d95c64e"
-    },
-    {
-      "path": "module-07/mod-07-overview-movement-efficiency-posture-and-joint-alignment.html",
-      "format": "html",
-      "bytes": 24123,
-      "sha256": "e5372e4c65576cf6f15713334f217fdaf51e9b4cbe6fa4df4f17a40adf98b9aa"
-    },
-    {
-      "path": "module-07/mod-07-overview-movement-efficiency-posture-and-joint-alignment.md",
-      "format": "markdown",
-      "bytes": 8846,
-      "sha256": "2cb43f31c6fbc78f5cc1cc6da37b417a20baee2dc35c936d719998b6f1b7f45b"
-    },
-    {
-      "path": "module-07/mod-07-required-readings-movement-efficiency-posture-and-joint-alignment.html",
-      "format": "html",
-      "bytes": 21885,
-      "sha256": "471dd1d69089f6b7df35a01447666d882f7b9456c0b09da1d4f7cc7a4bf245d4"
-    },
-    {
-      "path": "module-07/mod-07-required-readings-movement-efficiency-posture-and-joint-alignment.md",
-      "format": "markdown",
-      "bytes": 7272,
-      "sha256": "132be8d814cdf636e45eb2de66a2b52b354fe974bde3fd16861eec9806c942c6"
-    },
-    {
-      "path": "module-07/mod-07-summary-and-wrap-up-movement-efficiency-posture-and-joint-alignment.html",
-      "format": "html",
-      "bytes": 36749,
-      "sha256": "c7e4c783e3aee3f6972ffbff291454d0639929961e37df45842bfff26626755a"
+      "bytes": 18192,
+      "sha256": "24b8147af171d3e16a82babd88740b7ad505115035824591a209feecfb0c19c9"
     },
     {
       "path": "module-07/Module-07-Master.html",
@@ -939,14 +929,8 @@
     {
       "path": "module-07/Module-07-Master.md",
       "format": "markdown",
-      "bytes": 12787,
-      "sha256": "6c47cc6b52eedecafdc49a28d210216136482ceea5698f5b611815ef82914472"
-    },
-    {
-      "path": "module-07/mod-07-clinical-discussion.html",
-      "format": "html",
-      "bytes": 63031,
-      "sha256": "98425ad9c5526e41d3b4dd2ed755d26990043362276660eebb433c8ad0172902"
+      "bytes": 20365,
+      "sha256": "6f8ddff6f0597bc0f29184c928a8abab2bd1ad15d20f3d72c8811b28bee93def"
     },
     {
       "path": "module-07/human-growth.html",
@@ -955,70 +939,82 @@
       "sha256": "2fbbcfdccdbe804a2390d11d7b1dd962ba7bea5857b43debc5e17edb95555319"
     },
     {
-      "path": "module-08/mod-08-lab-and-simulation-01.html",
+      "path": "module-07/mod-07-clinical-discussion.html",
       "format": "html",
-      "bytes": 47236,
-      "sha256": "baca85cf5dd6c383532b085fad6ed4ec76200504937b489d7ce84acfcfa3bb66"
+      "bytes": 63031,
+      "sha256": "98425ad9c5526e41d3b4dd2ed755d26990043362276660eebb433c8ad0172902"
     },
     {
-      "path": "module-08/mod-08-lab-and-simulation-01.md",
+      "path": "module-07/mod-07-clinical-discussion.md",
       "format": "markdown",
-      "bytes": 15189,
-      "sha256": "3b8b1a3b4b5677d4590ef48d21c8d7b643449907f6c7abbc0b547403f9a50518"
+      "bytes": 22827,
+      "sha256": "492f833be6e087010ab6e3df156a857fb22492444b2182f17704d325475ac39d"
     },
     {
-      "path": "module-08/mod-08-lab-and-simulation-02.html",
+      "path": "module-07/mod-07-lab-and-simulation-01.html",
       "format": "html",
-      "bytes": 17470,
-      "sha256": "cba587b7cbb842f298fd376741dde24f46ce220f1ae9003736ed2dd55a101a99"
+      "bytes": 73767,
+      "sha256": "60a5b9f956152236354b95a75d9c7183aaa47ec8f08bb2c8ac09e58f75b2a0de"
     },
     {
-      "path": "module-08/mod-08-lab-and-simulation-02.md",
+      "path": "module-07/mod-07-lab-and-simulation-01.md",
       "format": "markdown",
-      "bytes": 5254,
-      "sha256": "62876876e712c4582fbb0f071ac4e809b23875581c26eebe709b63e1b34ec5f4"
+      "bytes": 28928,
+      "sha256": "f60933220967181df779f4970a2af2e99500f0e7f3c3ab4ca089c26684285ea7"
     },
     {
-      "path": "module-08/mod-08-lab-and-simulation-03.html",
+      "path": "module-07/mod-07-lab-and-simulation-02.html",
       "format": "html",
-      "bytes": 69598,
-      "sha256": "d9214f3e53f3359b16cd2e3e9822cff5c65eb2c751a4ceb947770b08053dccfa"
+      "bytes": 79542,
+      "sha256": "1542fba1df994c2d1bf3f7699f44d32b1f0bbd293e400f607638725a23ba36a8"
     },
     {
-      "path": "module-08/mod-08-lab-and-simulation-03.md",
+      "path": "module-07/mod-07-lab-and-simulation-02.md",
       "format": "markdown",
-      "bytes": 17977,
-      "sha256": "92e0586df5b4c48c8314a2188285a3a1669729a50c91cb81993782d7d745d66c"
+      "bytes": 28355,
+      "sha256": "e160ce3773734b67c5420bfaed5a784bcb6be6074c7db6f545074efd5e142259"
     },
     {
-      "path": "module-08/mod-08-overview-motor-learning-and-skill-practice.html",
+      "path": "module-07/mod-07-overview-movement-efficiency-posture-and-joint-alignment.html",
       "format": "html",
-      "bytes": 24615,
-      "sha256": "1510fec142d5b8dab30c5b42f18b5813ef5f6c9c8a10c3e88580b1b6e6934158"
+      "bytes": 24123,
+      "sha256": "e5372e4c65576cf6f15713334f217fdaf51e9b4cbe6fa4df4f17a40adf98b9aa"
     },
     {
-      "path": "module-08/mod-08-overview-motor-learning-and-skill-practice.md",
+      "path": "module-07/mod-07-overview-movement-efficiency-posture-and-joint-alignment.md",
       "format": "markdown",
-      "bytes": 8977,
-      "sha256": "06172c1091f813184f4fefd98c2f0c4b0c096efd2b843dc315ea8a8868e205ef"
+      "bytes": 18168,
+      "sha256": "90c02f8f826fb755906998b4b44e20bdb8fb7a006d8f5515241713f11c50db1e"
     },
     {
-      "path": "module-08/mod-08-required-readings-motor-learning-and-skill-practice.html",
+      "path": "module-07/mod-07-required-readings-movement-efficiency-posture-and-joint-alignment.html",
       "format": "html",
-      "bytes": 23113,
-      "sha256": "c1914748fdec10d016b99a30848b771d13126dd079912f6c3e4c50b154689363"
+      "bytes": 21885,
+      "sha256": "471dd1d69089f6b7df35a01447666d882f7b9456c0b09da1d4f7cc7a4bf245d4"
     },
     {
-      "path": "module-08/mod-08-required-readings-motor-learning-and-skill-practice.md",
+      "path": "module-07/mod-07-required-readings-movement-efficiency-posture-and-joint-alignment.md",
       "format": "markdown",
-      "bytes": 8425,
-      "sha256": "d35151bb817dbed5970bbac04e9a9d9632df03236ca56a5055aa28a176434a06"
+      "bytes": 16538,
+      "sha256": "4aeeba587012551449b07da88ddde3a325a7943fecce88c92bf8484e80461c05"
     },
     {
-      "path": "module-08/mod-08-summary-and-wrap-up-motor-learning-and-skill-practice.html",
+      "path": "module-07/mod-07-summary-and-wrap-up-movement-efficiency-posture-and-joint-alignment.html",
       "format": "html",
-      "bytes": 36976,
-      "sha256": "f6f4748ca7507aa394945e839ad272375e55faaf878b5b4e162c3a4124a811ee"
+      "bytes": 36749,
+      "sha256": "c7e4c783e3aee3f6972ffbff291454d0639929961e37df45842bfff26626755a"
+    },
+    {
+      "path": "module-07/mod-07-summary-and-wrap-up-movement-efficiency-posture-and-joint-alignment.md",
+      "format": "markdown",
+      "bytes": 23795,
+      "sha256": "00539f20e055cd4867d0fb1c69aeb7a108eed0dfee476578cf21bf72d2c9bd3c"
+    },
+    {
+      "path": "module-08/00-overview.md",
+      "format": "markdown",
+      "bytes": 18337,
+      "sha256": "255e045dd452b82503efa626433994ec3740d0a07286b37b8cdaa7897cbf48b6"
     },
     {
       "path": "module-08/Module-08-Master.html",
@@ -1029,8 +1025,8 @@
     {
       "path": "module-08/Module-08-Master.md",
       "format": "markdown",
-      "bytes": 12209,
-      "sha256": "1bd7ee7e1001f4fb3f391fe0af408a69c0c0b4f8e2d2d3430f1c5537b4db34d5"
+      "bytes": 19861,
+      "sha256": "133aa0ee55a7c66e81bcce115b3d88c38bc60b8fd47a5774d58849c8b74a4d85"
     },
     {
       "path": "module-08/midterm-boundary.html",
@@ -1045,70 +1041,82 @@
       "sha256": "11f3036de0436dc7ee63754a33bd213d1cd40604f7bd8335e81bb1f65ab5f808"
     },
     {
-      "path": "module-09/mod-09-lab-and-simulation-01.html",
+      "path": "module-08/mod-08-lab-and-simulation-01.html",
       "format": "html",
-      "bytes": 69784,
-      "sha256": "ab75168fcbbdce6683c05b6c5b584f9b9338f6118f6715d9c3e639c65f739100"
+      "bytes": 47236,
+      "sha256": "baca85cf5dd6c383532b085fad6ed4ec76200504937b489d7ce84acfcfa3bb66"
     },
     {
-      "path": "module-09/mod-09-lab-and-simulation-01.md",
+      "path": "module-08/mod-08-lab-and-simulation-01.md",
       "format": "markdown",
-      "bytes": 17449,
-      "sha256": "201a87fe5ddb0aa09eff294fa7bed9183aa5308b5b1eee3ed8280c335da770bb"
+      "bytes": 24455,
+      "sha256": "91e36e5646580f488b881a2d69bb1e4f9221fb9e312706e20a0396573ac58cb6"
     },
     {
-      "path": "module-09/mod-09-lab-and-simulation-02.html",
+      "path": "module-08/mod-08-lab-and-simulation-02.html",
       "format": "html",
-      "bytes": 79522,
-      "sha256": "80e87575c5bf76d1b8d12dc258b2f595293d8c29ecb391b246b13af8905d1bfd"
+      "bytes": 17470,
+      "sha256": "cba587b7cbb842f298fd376741dde24f46ce220f1ae9003736ed2dd55a101a99"
     },
     {
-      "path": "module-09/mod-09-lab-and-simulation-02.md",
+      "path": "module-08/mod-08-lab-and-simulation-02.md",
       "format": "markdown",
-      "bytes": 18297,
-      "sha256": "1042cfd973c49e4abd0d8175856cd1ee3cdaf83d18355da4190a1c9f1b1df920"
+      "bytes": 14520,
+      "sha256": "059b76d45569977afc03a74d57ff9ade4eb60bb7c289d60379e0faa0a21ed19b"
     },
     {
-      "path": "module-09/mod-09-clinical-discussion.html",
+      "path": "module-08/mod-08-lab-and-simulation-03.html",
       "format": "html",
-      "bytes": 35199,
-      "sha256": "f4bde37526dacbaa9cc609e62c0f43156ac73fee9786a5bff66ad76ae1532a5b"
+      "bytes": 69598,
+      "sha256": "d9214f3e53f3359b16cd2e3e9822cff5c65eb2c751a4ceb947770b08053dccfa"
     },
     {
-      "path": "module-09/mod-09-clinical-discussion.md",
+      "path": "module-08/mod-08-lab-and-simulation-03.md",
       "format": "markdown",
-      "bytes": 6873,
-      "sha256": "13b3ca1228e6d3c22822420bcdcbeec4fc752788789a0f3e756b3424844a6946"
+      "bytes": 28088,
+      "sha256": "2870d574fbd22e93b38eab1ead5684f4e88cb34552041c967c95db0ac11fe243"
     },
     {
-      "path": "module-09/mod-09-overview-cardiorespiratory-fitness-and-safe-cardio.html",
+      "path": "module-08/mod-08-overview-motor-learning-and-skill-practice.html",
       "format": "html",
-      "bytes": 24293,
-      "sha256": "9281f7ac3445f93e680a264d5d6dbc228fa0cb181faef4ac63b74ec7a46c68f2"
+      "bytes": 24615,
+      "sha256": "1510fec142d5b8dab30c5b42f18b5813ef5f6c9c8a10c3e88580b1b6e6934158"
     },
     {
-      "path": "module-09/mod-09-overview-cardiorespiratory-fitness-and-safe-cardio.md",
+      "path": "module-08/mod-08-overview-motor-learning-and-skill-practice.md",
       "format": "markdown",
-      "bytes": 9154,
-      "sha256": "5744539592f10af8bebfe93029a64a94a55a34cbe23f9335bdf47fc78733cf54"
+      "bytes": 18299,
+      "sha256": "10d19c97c89d9c19632420f877146e409723d4207d0347537a7d80f08cf96ca3"
     },
     {
-      "path": "module-09/mod-09-required-readings-cardiorespiratory-fitness-and-safe-cardio.html",
+      "path": "module-08/mod-08-required-readings-motor-learning-and-skill-practice.html",
       "format": "html",
-      "bytes": 23548,
-      "sha256": "a5d08b396b61839aaeb24fb1221ac9623b6dbe7693042ca42a81a9a2d24400f7"
+      "bytes": 23113,
+      "sha256": "c1914748fdec10d016b99a30848b771d13126dd079912f6c3e4c50b154689363"
     },
     {
-      "path": "module-09/mod-09-required-readings-cardiorespiratory-fitness-and-safe-cardio.md",
+      "path": "module-08/mod-08-required-readings-motor-learning-and-skill-practice.md",
       "format": "markdown",
-      "bytes": 8939,
-      "sha256": "f4124dd723fd06c8a0c4d7a55e728484abf220c5cb8951a5a23efce09ebf930c"
+      "bytes": 17691,
+      "sha256": "e57a9b3c279938ace1a1a14792846c8d11b470ba05832a2663c9a93f24b03b95"
     },
     {
-      "path": "module-09/mod-09-summary-and-wrap-up-cardiorespiratory-fitness-and-safe-cardio.html",
+      "path": "module-08/mod-08-summary-and-wrap-up-motor-learning-and-skill-practice.html",
       "format": "html",
-      "bytes": 35880,
-      "sha256": "f324091d294d9e8391e12cb6e0409d42a005a7041439c760816eea34bda23f9f"
+      "bytes": 36976,
+      "sha256": "f6f4748ca7507aa394945e839ad272375e55faaf878b5b4e162c3a4124a811ee"
+    },
+    {
+      "path": "module-08/mod-08-summary-and-wrap-up-motor-learning-and-skill-practice.md",
+      "format": "markdown",
+      "bytes": 24159,
+      "sha256": "86da311cd6c1c59b845d4e421353fed5744b1bf71ce18f36e643c03e5e5f91fa"
+    },
+    {
+      "path": "module-09/00-overview.md",
+      "format": "markdown",
+      "bytes": 18506,
+      "sha256": "07bad80d5378e66ee8770907c2d3538aa610d7d07a3e2ad53f0f2b31a91141a4"
     },
     {
       "path": "module-09/Module-09-Master.html",
@@ -1119,8 +1127,8 @@
     {
       "path": "module-09/Module-09-Master.md",
       "format": "markdown",
-      "bytes": 4279,
-      "sha256": "b4d73381a13b32fb5613f4c438b0b871253d8c5bcf0f557dd9297771e3a47eee"
+      "bytes": 13544,
+      "sha256": "2350358556e370a4c5eced2d0e7c9950b7cf43632be46998d9477bd368edc81c"
     },
     {
       "path": "module-09/career-tracks.html",
@@ -1135,70 +1143,76 @@
       "sha256": "f44613a39c474abfe35cbd418279ec3643ad25206d083cc6d2f77675f4c638fa"
     },
     {
-      "path": "module-10/mod-10-lab-and-simulation-01.html",
-      "format": "html",
-      "bytes": 74133,
-      "sha256": "553f777c903775bd252f3c8851cc5ff0b3544a68d8521577f425bb0c6910b118"
-    },
-    {
-      "path": "module-10/mod-10-lab-and-simulation-01.md",
+      "path": "module-09/mod-09-clinical-discussion.md",
       "format": "markdown",
-      "bytes": 21428,
-      "sha256": "6b3d0b00a3d41868b667f670e5ed12313213ffe5e95244bb0724edbf9ec85b51"
+      "bytes": 17040,
+      "sha256": "b511c6dac1fd9f907a398aa0b2a2b0cdd809981168e86a2763f69303819b6ee9"
     },
     {
-      "path": "module-10/mod-10-lab-and-simulation-02.html",
+      "path": "module-09/mod-09-lab-and-simulation-01.html",
       "format": "html",
-      "bytes": 80556,
-      "sha256": "44f42ad8728b29c44fa4adff1e7c90519528d1c12682265fd501805a410f005b"
+      "bytes": 69784,
+      "sha256": "ab75168fcbbdce6683c05b6c5b584f9b9338f6118f6715d9c3e639c65f739100"
     },
     {
-      "path": "module-10/mod-10-lab-and-simulation-02.md",
+      "path": "module-09/mod-09-lab-and-simulation-01.md",
       "format": "markdown",
-      "bytes": 19726,
-      "sha256": "ef9045f37d3cb28e0a37c80d696310936fae2553fc39110674e04dc19ea9c883"
+      "bytes": 27560,
+      "sha256": "1c46736702eddfd894f05cf47ca1f3553b1aa81a69e8810310e5c3c2f252e379"
     },
     {
-      "path": "module-10/mod-10-clinical-discussion.html",
+      "path": "module-09/mod-09-lab-and-simulation-02.html",
       "format": "html",
-      "bytes": 33827,
-      "sha256": "1a9c69bfee68f0fa51fa8dd957cd60ac1ccf578889815f5fb37d733c992f6215"
+      "bytes": 79522,
+      "sha256": "80e87575c5bf76d1b8d12dc258b2f595293d8c29ecb391b246b13af8905d1bfd"
     },
     {
-      "path": "module-10/mod-10-clinical-discussion.md",
+      "path": "module-09/mod-09-lab-and-simulation-02.md",
       "format": "markdown",
-      "bytes": 9527,
-      "sha256": "4e96cf0a994cfe84894794865394edce7acae631dcaa3ad51e91c88b67be039c"
+      "bytes": 27619,
+      "sha256": "9e5cdfc2f8237cc406bfcee339ad772d86e33a6bd5ee3cd1b94bf64f9661c0b5"
     },
     {
-      "path": "module-10/mod-10-overview-body-composition-and-energy-balance.html",
+      "path": "module-09/mod-09-overview-cardiorespiratory-fitness-and-safe-cardio.html",
       "format": "html",
-      "bytes": 27761,
-      "sha256": "f8e613af725d40ca6522adee902f9f25eb55fbe951f0d02f37d321a2385a84f3"
+      "bytes": 24293,
+      "sha256": "9281f7ac3445f93e680a264d5d6dbc228fa0cb181faef4ac63b74ec7a46c68f2"
     },
     {
-      "path": "module-10/mod-10-overview-body-composition-and-energy-balance.md",
+      "path": "module-09/mod-09-overview-cardiorespiratory-fitness-and-safe-cardio.md",
       "format": "markdown",
-      "bytes": 10982,
-      "sha256": "f7173c6e585ea51f16c117dbe9d0f30a2fd84bdb13a4c12c4c239b5040d27c22"
+      "bytes": 18476,
+      "sha256": "3dfae33eb4704a7e8d74e35555417bbca155a5a3d15c186dccd403babb6fe10d"
     },
     {
-      "path": "module-10/mod-10-required-readings-body-composition-and-energy-balance.html",
+      "path": "module-09/mod-09-required-readings-cardiorespiratory-fitness-and-safe-cardio.html",
       "format": "html",
-      "bytes": 31846,
-      "sha256": "5ca18e657a2cbca576ed2f93648eef47b580e2c8336480752f8cf468d271c022"
+      "bytes": 23548,
+      "sha256": "a5d08b396b61839aaeb24fb1221ac9623b6dbe7693042ca42a81a9a2d24400f7"
     },
     {
-      "path": "module-10/mod-10-required-readings-body-composition-and-energy-balance.md",
+      "path": "module-09/mod-09-required-readings-cardiorespiratory-fitness-and-safe-cardio.md",
       "format": "markdown",
-      "bytes": 14094,
-      "sha256": "e36b5aa188de3bdbcb1b8781017784b68d0311be19ad2fde6e66b40935c117bf"
+      "bytes": 18205,
+      "sha256": "927d968cac7eae748f1e8b697e78ac15e1ba96a934841d3b8b5d649f912815b8"
     },
     {
-      "path": "module-10/mod-10-summary-and-wrap-up-body-composition-and-energy-balance.html",
+      "path": "module-09/mod-09-summary-and-wrap-up-cardiorespiratory-fitness-and-safe-cardio.html",
       "format": "html",
-      "bytes": 40597,
-      "sha256": "3ca4eb88a14fdfbeaa287322faebd5d5888194bb43eca2123a514dff09a2ec34"
+      "bytes": 35880,
+      "sha256": "f324091d294d9e8391e12cb6e0409d42a005a7041439c760816eea34bda23f9f"
+    },
+    {
+      "path": "module-09/mod-09-summary-and-wrap-up-cardiorespiratory-fitness-and-safe-cardio.md",
+      "format": "markdown",
+      "bytes": 23008,
+      "sha256": "4aa7b1edc18c8ceecd5897eb248dd2deacc6d20a97be037c2e2e46af5ca8f04e"
+    },
+    {
+      "path": "module-10/00-overview.md",
+      "format": "markdown",
+      "bytes": 20340,
+      "sha256": "c8beccaf02779e0462280062b80d56d9bb63084b0a856d0cfae2b469c5204e9a"
     },
     {
       "path": "module-10/Module-10-Master.html",
@@ -1209,8 +1223,8 @@
     {
       "path": "module-10/Module-10-Master.md",
       "format": "markdown",
-      "bytes": 14065,
-      "sha256": "9a7933ecf41a8d2d132d0875665e276fcab96ac306c6d43c1784aefda1b50291"
+      "bytes": 21643,
+      "sha256": "a8588614208094415ebdc9de22849269675a38f469ed889e9dd03800ef780505"
     },
     {
       "path": "module-10/mod-10-clinical-discussion.html",
@@ -1219,76 +1233,82 @@
       "sha256": "a9c207abda6813fbfccbd9d8888f6a721092e4581adccef40b6cda18475b6ceb"
     },
     {
+      "path": "module-10/mod-10-clinical-discussion.md",
+      "format": "markdown",
+      "bytes": 19638,
+      "sha256": "b1258c83826ea04d868d3abfbcdb046caa20e776eece9bb5db946d9e4b802750"
+    },
+    {
+      "path": "module-10/mod-10-lab-and-simulation-01.html",
+      "format": "html",
+      "bytes": 74133,
+      "sha256": "553f777c903775bd252f3c8851cc5ff0b3544a68d8521577f425bb0c6910b118"
+    },
+    {
+      "path": "module-10/mod-10-lab-and-simulation-01.md",
+      "format": "markdown",
+      "bytes": 30694,
+      "sha256": "29192fb1f389e02a0500824945e6cbed437f2bf12169896fbabbec3d61c1d97b"
+    },
+    {
+      "path": "module-10/mod-10-lab-and-simulation-02.html",
+      "format": "html",
+      "bytes": 80556,
+      "sha256": "44f42ad8728b29c44fa4adff1e7c90519528d1c12682265fd501805a410f005b"
+    },
+    {
+      "path": "module-10/mod-10-lab-and-simulation-02.md",
+      "format": "markdown",
+      "bytes": 29048,
+      "sha256": "702fa686f518725d230e19ec827e02c3299961b0ce449a36c8af55178a8df5e7"
+    },
+    {
+      "path": "module-10/mod-10-overview-body-composition-and-energy-balance.html",
+      "format": "html",
+      "bytes": 27761,
+      "sha256": "f8e613af725d40ca6522adee902f9f25eb55fbe951f0d02f37d321a2385a84f3"
+    },
+    {
+      "path": "module-10/mod-10-overview-body-composition-and-energy-balance.md",
+      "format": "markdown",
+      "bytes": 20304,
+      "sha256": "02075eff5f66a064db6b1528c5abd0d5a8e244e4996b96aee06ffb1788a8b580"
+    },
+    {
+      "path": "module-10/mod-10-required-readings-body-composition-and-energy-balance.html",
+      "format": "html",
+      "bytes": 31846,
+      "sha256": "5ca18e657a2cbca576ed2f93648eef47b580e2c8336480752f8cf468d271c022"
+    },
+    {
+      "path": "module-10/mod-10-required-readings-body-composition-and-energy-balance.md",
+      "format": "markdown",
+      "bytes": 23360,
+      "sha256": "0d256da0ac7e8d68f84cecb1493a319ebaafbb487a726843b0d5a09b20518938"
+    },
+    {
+      "path": "module-10/mod-10-summary-and-wrap-up-body-composition-and-energy-balance.html",
+      "format": "html",
+      "bytes": 40597,
+      "sha256": "3ca4eb88a14fdfbeaa287322faebd5d5888194bb43eca2123a514dff09a2ec34"
+    },
+    {
+      "path": "module-10/mod-10-summary-and-wrap-up-body-composition-and-energy-balance.md",
+      "format": "markdown",
+      "bytes": 25390,
+      "sha256": "8ca6cf1e579ed12786997ed2f6d70102c9657ffb0b89271182e570f71c3988af"
+    },
+    {
       "path": "module-10/public-health.html",
       "format": "html",
       "bytes": 12456,
       "sha256": "b2c375c636f02b8549799670f467e155dc7776b7cd291d80ee0227bf0dbfd0e8"
     },
     {
-      "path": "module-11/mod-11-lab-and-simulation-01.html",
-      "format": "html",
-      "bytes": 75477,
-      "sha256": "c7e5dbc1455fa2189449ed8cdaf7f0f6aa165df7e39e5db9bda33ce50075c261"
-    },
-    {
-      "path": "module-11/mod-11-lab-and-simulation-01.md",
+      "path": "module-11/00-overview.md",
       "format": "markdown",
-      "bytes": 20479,
-      "sha256": "4cfcc460a320f788a892678d4b671f72642d105a2c7a7ca7d11fada1f1b71b9a"
-    },
-    {
-      "path": "module-11/mod-11-lab-and-simulation-02.html",
-      "format": "html",
-      "bytes": 64700,
-      "sha256": "9eaf4a19159a48762b398271f2675b588132c77bbf69296a104f13781fae0aba"
-    },
-    {
-      "path": "module-11/mod-11-lab-and-simulation-02.md",
-      "format": "markdown",
-      "bytes": 18752,
-      "sha256": "055e4c53f7409e33e2d8e7c2a50950ba1c440cfc940155ac658f2b09910e60ed"
-    },
-    {
-      "path": "module-11/mod-11-clinical-discussion.html",
-      "format": "html",
-      "bytes": 37032,
-      "sha256": "68ca6f71ecf90767fc8501b8a95e04685ee744aa40b20ad6121fce2ead009c7d"
-    },
-    {
-      "path": "module-11/mod-11-clinical-discussion.md",
-      "format": "markdown",
-      "bytes": 9724,
-      "sha256": "5514ebe590ce3372c42669a81c4564b39cdf51226443caebb91c2066a9aa6af5"
-    },
-    {
-      "path": "module-11/mod-11-overview-lifespan-physical-activity-and-age-appropriate-exercise.html",
-      "format": "html",
-      "bytes": 30839,
-      "sha256": "a8f095f7c015255f75c34762e8f09c8884ca9d4727ca9439667616af5353c84f"
-    },
-    {
-      "path": "module-11/mod-11-overview-lifespan-physical-activity-and-age-appropriate-exercise.md",
-      "format": "markdown",
-      "bytes": 11252,
-      "sha256": "bbcd3f415fe4dcb93157fc8052e3f0684d2c1a770e042d27bd42f56ac90b9eaa"
-    },
-    {
-      "path": "module-11/mod-11-required-readings-lifespan-physical-activity-and-age-appropriate-exercise.html",
-      "format": "html",
-      "bytes": 32944,
-      "sha256": "f2238b92e851992ed49c848860624927f264adbf00976ccc98deddb0749ebf91"
-    },
-    {
-      "path": "module-11/mod-11-required-readings-lifespan-physical-activity-and-age-appropriate-exercise.md",
-      "format": "markdown",
-      "bytes": 12896,
-      "sha256": "8e3d410ed70f02210d6f683b44db92d13f90fa853732167009a8671463504656"
-    },
-    {
-      "path": "module-11/mod-11-summary-and-wrap-up-lifespan-physical-activity-and-age-appropriate-exercise.html",
-      "format": "html",
-      "bytes": 41830,
-      "sha256": "e002b3110505cad16beb5590c6f03dc970a4fdbfa571051885da3c0c2f2372c5"
+      "bytes": 20590,
+      "sha256": "7b8173877517ddc22f72e546f313e8c21d70fcf7c56431fb81145fd340b71a8a"
     },
     {
       "path": "module-11/Module-11-Master.html",
@@ -1299,8 +1319,8 @@
     {
       "path": "module-11/Module-11-Master.md",
       "format": "markdown",
-      "bytes": 14216,
-      "sha256": "22bd0d20da393fadcf34a0de30ef80659f297db7593de2313e0ca4ba06860e45"
+      "bytes": 21794,
+      "sha256": "0dd740a8ff775c21d7c404a65e7fde7fd749e8b6344bd0db14664f57ef1ed857"
     },
     {
       "path": "module-11/mod-11-clinical-discussion.html",
@@ -1309,76 +1329,82 @@
       "sha256": "07391bda2889f6c4b443d91bc170e9c2b8c8e7d356ee73bc12a9254ccf10cb1e"
     },
     {
+      "path": "module-11/mod-11-clinical-discussion.md",
+      "format": "markdown",
+      "bytes": 19835,
+      "sha256": "727e965094d10bb4fbc9601751b7c46c146f2c16853dfab503ae6bc270877bff"
+    },
+    {
+      "path": "module-11/mod-11-lab-and-simulation-01.html",
+      "format": "html",
+      "bytes": 75477,
+      "sha256": "c7e5dbc1455fa2189449ed8cdaf7f0f6aa165df7e39e5db9bda33ce50075c261"
+    },
+    {
+      "path": "module-11/mod-11-lab-and-simulation-01.md",
+      "format": "markdown",
+      "bytes": 29745,
+      "sha256": "8aee5ba0f697b4cdd700bd06b12672ed3d8f2cd6aa2ab84610a6ffe8598b6258"
+    },
+    {
+      "path": "module-11/mod-11-lab-and-simulation-02.html",
+      "format": "html",
+      "bytes": 64700,
+      "sha256": "9eaf4a19159a48762b398271f2675b588132c77bbf69296a104f13781fae0aba"
+    },
+    {
+      "path": "module-11/mod-11-lab-and-simulation-02.md",
+      "format": "markdown",
+      "bytes": 28018,
+      "sha256": "a224cfa5f7e5d489f0456f1d27d12c33b5a17d2cc261044ba45cd9f27941cab5"
+    },
+    {
+      "path": "module-11/mod-11-overview-lifespan-physical-activity-and-age-appropriate-exercise.html",
+      "format": "html",
+      "bytes": 30839,
+      "sha256": "a8f095f7c015255f75c34762e8f09c8884ca9d4727ca9439667616af5353c84f"
+    },
+    {
+      "path": "module-11/mod-11-overview-lifespan-physical-activity-and-age-appropriate-exercise.md",
+      "format": "markdown",
+      "bytes": 20574,
+      "sha256": "a2c1d8581e5e9ee103cdc329a35509ca4b442049cd85061ae054ae4e857b048f"
+    },
+    {
+      "path": "module-11/mod-11-required-readings-lifespan-physical-activity-and-age-appropriate-exercise.html",
+      "format": "html",
+      "bytes": 32944,
+      "sha256": "f2238b92e851992ed49c848860624927f264adbf00976ccc98deddb0749ebf91"
+    },
+    {
+      "path": "module-11/mod-11-required-readings-lifespan-physical-activity-and-age-appropriate-exercise.md",
+      "format": "markdown",
+      "bytes": 22162,
+      "sha256": "be2cf92752b8212286af7ac0ec4c65496df4160fbd50e56300982827024a3cfe"
+    },
+    {
+      "path": "module-11/mod-11-summary-and-wrap-up-lifespan-physical-activity-and-age-appropriate-exercise.html",
+      "format": "html",
+      "bytes": 41830,
+      "sha256": "e002b3110505cad16beb5590c6f03dc970a4fdbfa571051885da3c0c2f2372c5"
+    },
+    {
+      "path": "module-11/mod-11-summary-and-wrap-up-lifespan-physical-activity-and-age-appropriate-exercise.md",
+      "format": "markdown",
+      "bytes": 24454,
+      "sha256": "058280b20d1bdc4f4fbb3732b0ef9f6cde8cf7cba2146d17f84d44a855949dc7"
+    },
+    {
       "path": "module-11/sport-performance.html",
       "format": "html",
       "bytes": 12433,
       "sha256": "748a63a849562d0ee872f452052f8da95aa59caa397449f83e67d5c3663b6613"
     },
     {
-      "path": "module-12/mod-12-lab-and-simulation-01.html",
-      "format": "html",
-      "bytes": 39902,
-      "sha256": "f9d95be65eda8846d63bb379ed18e8a19517e2146350115050e8c7bfc51d0628"
-    },
-    {
-      "path": "module-12/mod-12-lab-and-simulation-01.md",
+      "path": "module-12/00-overview.md",
       "format": "markdown",
-      "bytes": 7682,
-      "sha256": "41340577a162443956128dafa1d02e2f0d2ec50613b64d087b8dc8296847da17"
-    },
-    {
-      "path": "module-12/mod-12-lab-and-simulation-02.html",
-      "format": "html",
-      "bytes": 31016,
-      "sha256": "8c8e8318c651c7cbf9572d76f42ab336df6e5fa9c389f0608f4f933f22650edf"
-    },
-    {
-      "path": "module-12/mod-12-lab-and-simulation-02.md",
-      "format": "markdown",
-      "bytes": 7419,
-      "sha256": "14ad8889d7ed69222038d7cdcd9665c1233c21f45b1917d0716cf2580e0dd048"
-    },
-    {
-      "path": "module-12/mod-12-clinical-discussion.html",
-      "format": "html",
-      "bytes": 55957,
-      "sha256": "ba0d9491c595c766799faee0e4d3bb17828050a38817cc6de4248d295571c020"
-    },
-    {
-      "path": "module-12/mod-12-clinical-discussion.md",
-      "format": "markdown",
-      "bytes": 11768,
-      "sha256": "b267f42d90d5686e2a836bb5c0447d6ab9910e3596df49be73d41e2d15e2ba94"
-    },
-    {
-      "path": "module-12/mod-12-overview-coaching-technology-philosophy-and-ai-toolkit.html",
-      "format": "html",
-      "bytes": 26070,
-      "sha256": "373907f40b643cd36bbb9fdf196819a6915d876934f5ee6eacbb79cb6342aef6"
-    },
-    {
-      "path": "module-12/mod-12-overview-coaching-technology-philosophy-and-ai-toolkit.md",
-      "format": "markdown",
-      "bytes": 8657,
-      "sha256": "7596dafed5a277f4b67ef0b08dc0aff457e22a525bcaf77ced64aaf89f1c217d"
-    },
-    {
-      "path": "module-12/mod-12-required-readings-coaching-technology-philosophy-and-ai-toolkit.html",
-      "format": "html",
-      "bytes": 37136,
-      "sha256": "b8133779e8c62c540145052d6cde13fc6921e0d5ecfa941f23c1ca3c03a2946c"
-    },
-    {
-      "path": "module-12/mod-12-required-readings-coaching-technology-philosophy-and-ai-toolkit.md",
-      "format": "markdown",
-      "bytes": 12595,
-      "sha256": "dff41347a9f58e6b510bcd05939ec72e140da6d5321e11668d014d30a7fc35a9"
-    },
-    {
-      "path": "module-12/mod-12-summary-and-wrap-up-coaching-technology-philosophy-and-ai-toolkit.html",
-      "format": "html",
-      "bytes": 37846,
-      "sha256": "c875ca7a930bdf8225c2a972a770a78d442d4830b679d3861b01313ec906a5b1"
+      "bytes": 17945,
+      "sha256": "4bce39e81d2d9fdb27950516076616aac064a9136d3de6c2fd6e7e3b819ac964"
     },
     {
       "path": "module-12/Module-12-Master.html",
@@ -1389,8 +1415,8 @@
     {
       "path": "module-12/Module-12-Master.md",
       "format": "markdown",
-      "bytes": 13807,
-      "sha256": "545e59044212935a67fbcb4a8209ddc56b1f2e00d5e5b59f8e33769ff726a3ad"
+      "bytes": 21384,
+      "sha256": "7383e5b2d39ad93795e7fd8d72383a7196955a97e4c820ef2e72e5fde6d417bd"
     },
     {
       "path": "module-12/active-infrastructure.html",
@@ -1405,70 +1431,76 @@
       "sha256": "d9c2dfcb98b8782f0556991746c7df95f93481a3f3efa5462ca5888512e9bc2f"
     },
     {
-      "path": "module-13/mod-13-lab-and-simulation-01.html",
-      "format": "html",
-      "bytes": 75915,
-      "sha256": "c99f055badf936980600ccef9b5a0e0840a8e5209e20db5a40c2092fe4e3e434"
-    },
-    {
-      "path": "module-13/mod-13-lab-and-simulation-01.md",
+      "path": "module-12/mod-12-clinical-discussion.md",
       "format": "markdown",
-      "bytes": 15920,
-      "sha256": "c6e922aec8d4429778d74d19c96dbb91dc754ad30f327f93e0644f3768dbf3db"
+      "bytes": 21879,
+      "sha256": "1aba3c2a47b2351a36c5dbf242c19c8e7a51f4c29dd0110e94e7ce1443f38b8a"
     },
     {
-      "path": "module-13/mod-13-lab-and-simulation-02.html",
+      "path": "module-12/mod-12-lab-and-simulation-01.html",
       "format": "html",
-      "bytes": 86444,
-      "sha256": "a7b778c8b94d5931015fc0a25d8b6f15a36c013f017448bf8df21857b2713aec"
+      "bytes": 39902,
+      "sha256": "f9d95be65eda8846d63bb379ed18e8a19517e2146350115050e8c7bfc51d0628"
     },
     {
-      "path": "module-13/mod-13-lab-and-simulation-02.md",
+      "path": "module-12/mod-12-lab-and-simulation-01.md",
       "format": "markdown",
-      "bytes": 15691,
-      "sha256": "a848437c1057ca4ae47d1a2ea1829f11394b905a2567604181351576ed37230a"
+      "bytes": 16948,
+      "sha256": "a809da03d512bd55baacf2c0fc0ee30352a826f21c06e33495294afe5e56e3e6"
     },
     {
-      "path": "module-13/mod-13-clinical-discussion.html",
+      "path": "module-12/mod-12-lab-and-simulation-02.html",
       "format": "html",
-      "bytes": 20991,
-      "sha256": "58e1259b95d808d3c7d11d6da1d010e06e38744fc97a126d14dd1e0c438771f7"
+      "bytes": 31016,
+      "sha256": "8c8e8318c651c7cbf9572d76f42ab336df6e5fa9c389f0608f4f933f22650edf"
     },
     {
-      "path": "module-13/mod-13-clinical-discussion.md",
+      "path": "module-12/mod-12-lab-and-simulation-02.md",
       "format": "markdown",
-      "bytes": 4638,
-      "sha256": "cd58483df7939274d876faf7c3447bddfd2a7fc49c73750fe8047a7eacb141e1"
+      "bytes": 16685,
+      "sha256": "eaf7912c5281917558ec435c939e70326df02430e312f7bbed379db2f1bff4a3"
     },
     {
-      "path": "module-13/mod-13-overview-joint-loading-and-safe-lifting-mechanics.html",
+      "path": "module-12/mod-12-overview-coaching-technology-philosophy-and-ai-toolkit.html",
       "format": "html",
-      "bytes": 33344,
-      "sha256": "684bdeeb639d1dbd7f3366c3b574bb6be03b76bd8521a260a0f21100470a39eb"
+      "bytes": 26070,
+      "sha256": "373907f40b643cd36bbb9fdf196819a6915d876934f5ee6eacbb79cb6342aef6"
     },
     {
-      "path": "module-13/mod-13-overview-joint-loading-and-safe-lifting-mechanics.md",
+      "path": "module-12/mod-12-overview-coaching-technology-philosophy-and-ai-toolkit.md",
       "format": "markdown",
-      "bytes": 9231,
-      "sha256": "d51e3a98f127f2f601ecb4133b91dc7bcb9005b5272773f799d1e676a53c5a0a"
+      "bytes": 17919,
+      "sha256": "f5815a87a2c3ffc9e30b74e1955fc46b4bb17ce50e9fc71dc0abf52c61aeded0"
     },
     {
-      "path": "module-13/mod-13-required-readings-joint-loading-and-safe-lifting-mechanics.html",
+      "path": "module-12/mod-12-required-readings-coaching-technology-philosophy-and-ai-toolkit.html",
       "format": "html",
-      "bytes": 36531,
-      "sha256": "d8ed6e1b7fd709ba57b95c469a1225494b79ae55d24b16201b1e6c39aa341ecc"
+      "bytes": 37136,
+      "sha256": "b8133779e8c62c540145052d6cde13fc6921e0d5ecfa941f23c1ca3c03a2946c"
     },
     {
-      "path": "module-13/mod-13-required-readings-joint-loading-and-safe-lifting-mechanics.md",
+      "path": "module-12/mod-12-required-readings-coaching-technology-philosophy-and-ai-toolkit.md",
       "format": "markdown",
-      "bytes": 11532,
-      "sha256": "e8b70184471bbf44cce02bd030394519928ccbd4b572660ecd0aa6db30c5d3f8"
+      "bytes": 21917,
+      "sha256": "55532d4712a8abb448834f3085045117efc7d0e5095e9f615abe4d79170c6f93"
     },
     {
-      "path": "module-13/mod-13-summary-and-wrap-up-joint-loading-and-safe-lifting-mechanics.html",
+      "path": "module-12/mod-12-summary-and-wrap-up-coaching-technology-philosophy-and-ai-toolkit.html",
       "format": "html",
-      "bytes": 38914,
-      "sha256": "fe34b712cf1f7825bc4310f920b42bdf57176e99889f61655cdbd7f02ad6d7c9"
+      "bytes": 37846,
+      "sha256": "c875ca7a930bdf8225c2a972a770a78d442d4830b679d3861b01313ec906a5b1"
+    },
+    {
+      "path": "module-12/mod-12-summary-and-wrap-up-coaching-technology-philosophy-and-ai-toolkit.md",
+      "format": "markdown",
+      "bytes": 22545,
+      "sha256": "32191eda627a7839eda8edf29d9a1cd55de0a418cedd89aea41a032f9bb58e70"
+    },
+    {
+      "path": "module-13/00-overview.md",
+      "format": "markdown",
+      "bytes": 18584,
+      "sha256": "ee2e8b3adc52672211bbc1041f7b89fe7fb2aa4be93fcf3fd5fb1cf01eb35794"
     },
     {
       "path": "module-13/Module-13-Master.html",
@@ -1479,14 +1511,8 @@
     {
       "path": "module-13/Module-13-Master.md",
       "format": "markdown",
-      "bytes": 13793,
-      "sha256": "e9dd403867846efd462e5595a3eda9e255797cfb55e396417af91f171d7011aa"
-    },
-    {
-      "path": "module-13/mod-13-clinical-discussion.html",
-      "format": "html",
-      "bytes": 6725,
-      "sha256": "31be1efca9ec8caf7e8ddae87bb304c346837a7369a0f2973b7e72f6c3bc8d50"
+      "bytes": 21371,
+      "sha256": "87bdd6f3ed7872e1483aa7dc852475fcce9de9d03ee8939bbdf64ef0d9da5456"
     },
     {
       "path": "module-13/exercise-basics.html",
@@ -1495,70 +1521,82 @@
       "sha256": "47e84a0c27d0ad304d4ac269377b53881911c4737d7611c4f5b535158a0fc766"
     },
     {
-      "path": "module-14/mod-14-lab-and-simulation-01.html",
+      "path": "module-13/mod-13-clinical-discussion.html",
       "format": "html",
-      "bytes": 27912,
-      "sha256": "29960e3392d1425be62ce097692b1d62260af997ab38f83fcb9a5cf49834fb3f"
+      "bytes": 6725,
+      "sha256": "31be1efca9ec8caf7e8ddae87bb304c346837a7369a0f2973b7e72f6c3bc8d50"
     },
     {
-      "path": "module-14/mod-14-lab-and-simulation-01.md",
+      "path": "module-13/mod-13-clinical-discussion.md",
       "format": "markdown",
-      "bytes": 11184,
-      "sha256": "cdd07c88923e2769c3edeed73225b745f113f8b9dfc646ac66c61e749ac615ee"
+      "bytes": 13904,
+      "sha256": "3ac77ade92464a94cc5e2b12d3a4141666d97a451d3da751d69780d67020bf76"
     },
     {
-      "path": "module-14/mod-14-lab-and-simulation-02.html",
+      "path": "module-13/mod-13-lab-and-simulation-01.html",
       "format": "html",
-      "bytes": 76187,
-      "sha256": "d5a7744d7c3947f9c71a3ff1e15aded59248af58136a16b475da892c002ae33d"
+      "bytes": 75915,
+      "sha256": "c99f055badf936980600ccef9b5a0e0840a8e5209e20db5a40c2092fe4e3e434"
     },
     {
-      "path": "module-14/mod-14-lab-and-simulation-02.md",
+      "path": "module-13/mod-13-lab-and-simulation-01.md",
       "format": "markdown",
-      "bytes": 15996,
-      "sha256": "6dc25da23f53ced3c8697afe18bc3a8536c29de242e4878414f33b98347b2477"
+      "bytes": 26031,
+      "sha256": "511f1f482134dadd2fbca7af16be693a058e9918c591d2f47108b1db9c83a525"
     },
     {
-      "path": "module-14/mod-14-lab-and-simulation-03.html",
+      "path": "module-13/mod-13-lab-and-simulation-02.html",
       "format": "html",
-      "bytes": 87414,
-      "sha256": "a42a108390c093d920ffbab85c157263019aea43466e01a48bcaa729e842bcb5"
+      "bytes": 86444,
+      "sha256": "a7b778c8b94d5931015fc0a25d8b6f15a36c013f017448bf8df21857b2713aec"
     },
     {
-      "path": "module-14/mod-14-lab-and-simulation-03.md",
+      "path": "module-13/mod-13-lab-and-simulation-02.md",
       "format": "markdown",
-      "bytes": 16325,
-      "sha256": "d48d2cc67b0774995db56bea914c920f00bd9a3ffa406caa37820c34c008b879"
+      "bytes": 25858,
+      "sha256": "12d908215cbd48b040b83ac1ad0ebf78835bf3b6b9ffb9c8ed75d657117dee19"
     },
     {
-      "path": "module-14/mod-14-overview-modifying-exercise-plans-fitt-for-chronic-conditions.html",
+      "path": "module-13/mod-13-overview-joint-loading-and-safe-lifting-mechanics.html",
       "format": "html",
-      "bytes": 34368,
-      "sha256": "b11f42ee10c8207dd074470142f222347ba1c5731b18793500abb53e0a39e380"
+      "bytes": 33344,
+      "sha256": "684bdeeb639d1dbd7f3366c3b574bb6be03b76bd8521a260a0f21100470a39eb"
     },
     {
-      "path": "module-14/mod-14-overview-modifying-exercise-plans-fitt-for-chronic-conditions.md",
+      "path": "module-13/mod-13-overview-joint-loading-and-safe-lifting-mechanics.md",
       "format": "markdown",
-      "bytes": 11039,
-      "sha256": "e1afd8675385ba9020500a212e16467f25096afc6b9ea0ecf4243fb5670d0cdc"
+      "bytes": 18553,
+      "sha256": "75930166be35fc165dba546706eea9467cceafde250834b7b5425feaf1aa177b"
     },
     {
-      "path": "module-14/mod-14-required-readings-modifying-exercise-plans-fitt-for-chronic-conditions.html",
+      "path": "module-13/mod-13-required-readings-joint-loading-and-safe-lifting-mechanics.html",
       "format": "html",
-      "bytes": 35822,
-      "sha256": "9a012ff281ef55d7380d91f1d783c4184a354449476bd1306d259451567671ba"
+      "bytes": 36531,
+      "sha256": "d8ed6e1b7fd709ba57b95c469a1225494b79ae55d24b16201b1e6c39aa341ecc"
     },
     {
-      "path": "module-14/mod-14-required-readings-modifying-exercise-plans-fitt-for-chronic-conditions.md",
+      "path": "module-13/mod-13-required-readings-joint-loading-and-safe-lifting-mechanics.md",
       "format": "markdown",
-      "bytes": 12432,
-      "sha256": "aaec0376f570f4a617d8afa303a8c495e3c2d36d440b9281159aeba4c581ea21"
+      "bytes": 20798,
+      "sha256": "ec427e7706e413d234d164dce97a3593caa981d2fea4e9f83cbbe56cfd7a4062"
     },
     {
-      "path": "module-14/mod-14-summary-and-wrap-up-modifying-exercise-plans-fitt-for-chronic-conditions.html",
+      "path": "module-13/mod-13-summary-and-wrap-up-joint-loading-and-safe-lifting-mechanics.html",
       "format": "html",
-      "bytes": 38135,
-      "sha256": "d20055b44b51c22a0ec2451b958cfc5f6494e24e2f0d987a47df53351f32bb76"
+      "bytes": 38914,
+      "sha256": "fe34b712cf1f7825bc4310f920b42bdf57176e99889f61655cdbd7f02ad6d7c9"
+    },
+    {
+      "path": "module-13/mod-13-summary-and-wrap-up-joint-loading-and-safe-lifting-mechanics.md",
+      "format": "markdown",
+      "bytes": 24169,
+      "sha256": "0fda58d80eb833f5398837c633f44532021c88f9753797f699d41a99015fa7b7"
+    },
+    {
+      "path": "module-14/00-overview.md",
+      "format": "markdown",
+      "bytes": 20380,
+      "sha256": "05b4c7d4a04441211a02c926971fca7908d0066bf7f77ebe773dc5b007d80536"
     },
     {
       "path": "module-14/Module-14-Master.html",
@@ -1569,8 +1607,8 @@
     {
       "path": "module-14/Module-14-Master.md",
       "format": "markdown",
-      "bytes": 11409,
-      "sha256": "98fd8f673aefc861d87e98681fefb77d7747c3cd0ce5a287d13b106a20eeaa23"
+      "bytes": 18986,
+      "sha256": "17ac9de064734ec53e4bafc8cb229e5fe1574a9e60a1898c9bd04f8df6c4b431"
     },
     {
       "path": "module-14/final-course-evaluation.html",
@@ -1585,58 +1623,82 @@
       "sha256": "3bec2f2329a4bc8e16c21458932fa17940105ecc6db61c63e80b33b3457f0710"
     },
     {
-      "path": "module-15/mod-15-lab-and-simulation-01.html",
+      "path": "module-14/mod-14-lab-and-simulation-01.html",
       "format": "html",
-      "bytes": 85905,
-      "sha256": "ba7e0f2a3c9a5a872cd0cb0bf0b1208315b93217ecc03cb450f175589bcffefe"
+      "bytes": 27912,
+      "sha256": "29960e3392d1425be62ce097692b1d62260af997ab38f83fcb9a5cf49834fb3f"
     },
     {
-      "path": "module-15/mod-15-lab-and-simulation-01.md",
+      "path": "module-14/mod-14-lab-and-simulation-01.md",
       "format": "markdown",
-      "bytes": 15670,
-      "sha256": "a2fa91947aab8912427481c8bf124c9563363975d65ea3225c6ec2513b1639f7"
+      "bytes": 20450,
+      "sha256": "fd709ad28865df216631f219801681c6bce4be7749b3660229ae5016f14f4cf1"
     },
     {
-      "path": "module-15/mod-15-clinical-discussion.html",
+      "path": "module-14/mod-14-lab-and-simulation-02.html",
       "format": "html",
-      "bytes": 56596,
-      "sha256": "7b07fb84145459a448b8d85f25d60edd7ce700403108c255f455439a47cc133a"
+      "bytes": 76187,
+      "sha256": "d5a7744d7c3947f9c71a3ff1e15aded59248af58136a16b475da892c002ae33d"
     },
     {
-      "path": "module-15/mod-15-clinical-discussion.md",
+      "path": "module-14/mod-14-lab-and-simulation-02.md",
       "format": "markdown",
-      "bytes": 11622,
-      "sha256": "f0017e6cdf32f3c7e1e4a9278af0c71929ac27a72e61eac38f16e44bab0d380c"
+      "bytes": 26107,
+      "sha256": "0cd653c43f9875fa230e3c41e3692894ff8999cb17d4ab1e69432324f484c728"
     },
     {
-      "path": "module-15/mod-15-overview-coaching-portfolio-prep-and-career-roadmaps.html",
+      "path": "module-14/mod-14-lab-and-simulation-03.html",
       "format": "html",
-      "bytes": 32944,
-      "sha256": "f0c1d857ec239ce326828104fb0c34f3e14d089b9ea188ab8bfe78293c426e56"
+      "bytes": 87414,
+      "sha256": "a42a108390c093d920ffbab85c157263019aea43466e01a48bcaa729e842bcb5"
     },
     {
-      "path": "module-15/mod-15-overview-coaching-portfolio-prep-and-career-roadmaps.md",
+      "path": "module-14/mod-14-lab-and-simulation-03.md",
       "format": "markdown",
-      "bytes": 9186,
-      "sha256": "33b43c1844440898624dab90d692d22f19fb2c5bd15bc97f0c6779d3acd6d2f3"
+      "bytes": 26492,
+      "sha256": "98476d5eaf375909626bcbd5118c83db7e17c35b6b9c167ef83e37b1208e1505"
     },
     {
-      "path": "module-15/mod-15-required-readings-coaching-portfolio-prep-and-career-roadmaps.html",
+      "path": "module-14/mod-14-overview-modifying-exercise-plans-fitt-for-chronic-conditions.html",
       "format": "html",
-      "bytes": 33988,
-      "sha256": "8154e11fc963c6988a616958f3d05ae8bd5c6bffb7e21b533247e9f703c69df0"
+      "bytes": 34368,
+      "sha256": "b11f42ee10c8207dd074470142f222347ba1c5731b18793500abb53e0a39e380"
     },
     {
-      "path": "module-15/mod-15-required-readings-coaching-portfolio-prep-and-career-roadmaps.md",
+      "path": "module-14/mod-14-overview-modifying-exercise-plans-fitt-for-chronic-conditions.md",
       "format": "markdown",
-      "bytes": 10752,
-      "sha256": "932783b487b7938fbe0c8e3ddbb34ad527572a003986307ce8e995ec07790bfc"
+      "bytes": 20361,
+      "sha256": "f86ad67e66d9d42b683706404f936871f5094f968becb1af62cbaa980ce8425e"
     },
     {
-      "path": "module-15/mod-15-summary-and-wrap-up-coaching-portfolio-prep-and-career-roadmaps.html",
+      "path": "module-14/mod-14-required-readings-modifying-exercise-plans-fitt-for-chronic-conditions.html",
       "format": "html",
-      "bytes": 33522,
-      "sha256": "a41c850c87c686e2495d084dd9275fa122c00436eb3c1b8c420e9a9df37d0db5"
+      "bytes": 35822,
+      "sha256": "9a012ff281ef55d7380d91f1d783c4184a354449476bd1306d259451567671ba"
+    },
+    {
+      "path": "module-14/mod-14-required-readings-modifying-exercise-plans-fitt-for-chronic-conditions.md",
+      "format": "markdown",
+      "bytes": 21698,
+      "sha256": "dda117984ca09ff37830711d234c44e464881fc2dfb7266c0dacdc071de768e6"
+    },
+    {
+      "path": "module-14/mod-14-summary-and-wrap-up-modifying-exercise-plans-fitt-for-chronic-conditions.html",
+      "format": "html",
+      "bytes": 38135,
+      "sha256": "d20055b44b51c22a0ec2451b958cfc5f6494e24e2f0d987a47df53351f32bb76"
+    },
+    {
+      "path": "module-14/mod-14-summary-and-wrap-up-modifying-exercise-plans-fitt-for-chronic-conditions.md",
+      "format": "markdown",
+      "bytes": 22505,
+      "sha256": "b5203a21ba7d570997a7e8327a156af12145e0deefcf9587afd9922e42c2e370"
+    },
+    {
+      "path": "module-15/00-overview.md",
+      "format": "markdown",
+      "bytes": 18536,
+      "sha256": "f84dd9cc279a71a0ed95e156524740bfba8621017e438f797903b337fb418d56"
     },
     {
       "path": "module-15/Module-15-Master.html",
@@ -1647,14 +1709,8 @@
     {
       "path": "module-15/Module-15-Master.md",
       "format": "markdown",
-      "bytes": 11902,
-      "sha256": "0e4502c5e8a3c88a4ac3e4d8cee7768ca82cca3b278a93c4bf7e48c9b9257082"
-    },
-    {
-      "path": "module-15/mod-15-clinical-discussion.html",
-      "format": "html",
-      "bytes": 42660,
-      "sha256": "3f9eb18cdafa861b5e7f9e432dc83206734f1d5c84adb659c1183e111009d040"
+      "bytes": 19479,
+      "sha256": "85cbeff11b70847eb82f0e3e11dc3697cd063e34be0edae42c6461c0d043ccd1"
     },
     {
       "path": "module-15/final-assessment.html",
@@ -1663,46 +1719,70 @@
       "sha256": "69e94de0f343c4a95a663c1d95e926a306042cb109a7c4ae8780533d9a7f0c91"
     },
     {
-      "path": "module-16/mod-16-lab-and-simulation-01.html",
+      "path": "module-15/mod-15-clinical-discussion.html",
       "format": "html",
-      "bytes": 50804,
-      "sha256": "01511a9b34c69b96a7013db50f4a6e69df1050b880dc3194e342283f023f9aca"
+      "bytes": 42660,
+      "sha256": "3f9eb18cdafa861b5e7f9e432dc83206734f1d5c84adb659c1183e111009d040"
     },
     {
-      "path": "module-16/mod-16-lab-and-simulation-01.md",
+      "path": "module-15/mod-15-clinical-discussion.md",
       "format": "markdown",
-      "bytes": 10270,
-      "sha256": "a8d16139bad1ad193a8088f0ad754b874b6f51cbaaf7a68a891ce53714353c2b"
+      "bytes": 21733,
+      "sha256": "aef5e9681172ea208606f26832f1409e3470f092b788b6ff3ec5d596f7b21fbe"
     },
     {
-      "path": "module-16/mod-16-overview-final-coaching-portfolio-and-semester-closeout.html",
+      "path": "module-15/mod-15-lab-and-simulation-01.html",
       "format": "html",
-      "bytes": 31871,
-      "sha256": "96e7afebaaf857190234df229b3bd4713c9eb00210b05f8b2767467b0e6fd92e"
+      "bytes": 85905,
+      "sha256": "ba7e0f2a3c9a5a872cd0cb0bf0b1208315b93217ecc03cb450f175589bcffefe"
     },
     {
-      "path": "module-16/mod-16-overview-final-coaching-portfolio-and-semester-closeout.md",
+      "path": "module-15/mod-15-lab-and-simulation-01.md",
       "format": "markdown",
-      "bytes": 8287,
-      "sha256": "393d1fb0f72a5552d1b8f3984eeb02d3cc1e5c51e4b2c0e31c37e1adb361d3a2"
+      "bytes": 25837,
+      "sha256": "c7a2372b9216f9e17db07a2c8d82fe300e34b30299355c9fe2fed819a5db28c4"
     },
     {
-      "path": "module-16/mod-16-required-readings-final-coaching-portfolio-and-semester-closeout.html",
+      "path": "module-15/mod-15-overview-coaching-portfolio-prep-and-career-roadmaps.html",
       "format": "html",
-      "bytes": 33315,
-      "sha256": "21a985c409e8aa936aeb496771af68713204d3639bb0c16e8ce694bdd0f44d11"
+      "bytes": 32944,
+      "sha256": "f0c1d857ec239ce326828104fb0c34f3e14d089b9ea188ab8bfe78293c426e56"
     },
     {
-      "path": "module-16/mod-16-required-readings-final-coaching-portfolio-and-semester-closeout.md",
+      "path": "module-15/mod-15-overview-coaching-portfolio-prep-and-career-roadmaps.md",
       "format": "markdown",
-      "bytes": 10315,
-      "sha256": "6c05bde7b6f49cb33163b443ac6ca9b7514eca0134254d6c1c348ab2c2974856"
+      "bytes": 18508,
+      "sha256": "8603842d58abc80f212ae736c23f44194875f469d5d229c42b6a12abd1156eeb"
     },
     {
-      "path": "module-16/mod-16-summary-and-wrap-up-final-coaching-portfolio-and-semester-closeout.html",
+      "path": "module-15/mod-15-required-readings-coaching-portfolio-prep-and-career-roadmaps.html",
       "format": "html",
-      "bytes": 23940,
-      "sha256": "53e8383a3a015187b7f318582e7510dae0a5f0ae0ed9ffa1532f76ebd556ced2"
+      "bytes": 33988,
+      "sha256": "8154e11fc963c6988a616958f3d05ae8bd5c6bffb7e21b533247e9f703c69df0"
+    },
+    {
+      "path": "module-15/mod-15-required-readings-coaching-portfolio-prep-and-career-roadmaps.md",
+      "format": "markdown",
+      "bytes": 20018,
+      "sha256": "9ae40b28c75aa99e8bbb40152dbfeafd70d8d04e579af2a8ff0e4bda4186c504"
+    },
+    {
+      "path": "module-15/mod-15-summary-and-wrap-up-coaching-portfolio-prep-and-career-roadmaps.html",
+      "format": "html",
+      "bytes": 33522,
+      "sha256": "a41c850c87c686e2495d084dd9275fa122c00436eb3c1b8c420e9a9df37d0db5"
+    },
+    {
+      "path": "module-15/mod-15-summary-and-wrap-up-coaching-portfolio-prep-and-career-roadmaps.md",
+      "format": "markdown",
+      "bytes": 20492,
+      "sha256": "ad784a1eff80b2a7e5525d6741ecb8f1ad99f9f40ff24d2d07fe8fedd4b5e311"
+    },
+    {
+      "path": "module-16/00-overview.md",
+      "format": "markdown",
+      "bytes": 17634,
+      "sha256": "d44a8019653c4dd2b9ec9ffd972fef2c58873dfa4d0643157d1b6f849a9670ba"
     },
     {
       "path": "module-16/Module-16-Master.html",
@@ -1713,14 +1793,62 @@
     {
       "path": "module-16/Module-16-Master.md",
       "format": "markdown",
-      "bytes": 11890,
-      "sha256": "9d10ce94fd65cb3e926cc1c70567ac3f970fbf742108c28d6ec8c639f837caaf"
+      "bytes": 19467,
+      "sha256": "b6f43cc7ef874bf16e1496a676b5e330aabb8775a3682d8b4790b93948c25825"
     },
     {
       "path": "module-16/final-exam.html",
       "format": "html",
       "bytes": 15284,
       "sha256": "4188a0def31c4ac18c27fa9e6174b9031d4793718c0901da307cd632774432cc"
+    },
+    {
+      "path": "module-16/mod-16-lab-and-simulation-01.html",
+      "format": "html",
+      "bytes": 50804,
+      "sha256": "01511a9b34c69b96a7013db50f4a6e69df1050b880dc3194e342283f023f9aca"
+    },
+    {
+      "path": "module-16/mod-16-lab-and-simulation-01.md",
+      "format": "markdown",
+      "bytes": 20437,
+      "sha256": "7e141074b9c10c3f151b261b369c7e70e2516bc02de4516f64cd42629d3815d7"
+    },
+    {
+      "path": "module-16/mod-16-overview-final-coaching-portfolio-and-semester-closeout.html",
+      "format": "html",
+      "bytes": 31871,
+      "sha256": "96e7afebaaf857190234df229b3bd4713c9eb00210b05f8b2767467b0e6fd92e"
+    },
+    {
+      "path": "module-16/mod-16-overview-final-coaching-portfolio-and-semester-closeout.md",
+      "format": "markdown",
+      "bytes": 17609,
+      "sha256": "9bb529ec71d979e80b4045f29285bedeba724a8d79354a089b2e683489ef5a1b"
+    },
+    {
+      "path": "module-16/mod-16-required-readings-final-coaching-portfolio-and-semester-closeout.html",
+      "format": "html",
+      "bytes": 33315,
+      "sha256": "21a985c409e8aa936aeb496771af68713204d3639bb0c16e8ce694bdd0f44d11"
+    },
+    {
+      "path": "module-16/mod-16-required-readings-final-coaching-portfolio-and-semester-closeout.md",
+      "format": "markdown",
+      "bytes": 19581,
+      "sha256": "ce8117cf8b2a4a201544997610f6e3900894bb5c69f607271e9603a909e190d8"
+    },
+    {
+      "path": "module-16/mod-16-summary-and-wrap-up-final-coaching-portfolio-and-semester-closeout.html",
+      "format": "html",
+      "bytes": 23940,
+      "sha256": "53e8383a3a015187b7f318582e7510dae0a5f0ae0ed9ffa1532f76ebd556ced2"
+    },
+    {
+      "path": "module-16/mod-16-summary-and-wrap-up-final-coaching-portfolio-and-semester-closeout.md",
+      "format": "markdown",
+      "bytes": 17628,
+      "sha256": "3d317ab83d68c39928e9554b7e6d0c2f534b5d0c2e8f0c5a4edd11097a243d51"
     }
   ]
 }
