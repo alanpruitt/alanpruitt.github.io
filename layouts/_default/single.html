@@ -8,6 +8,8 @@
     <meta name="description" content="{{ .Description | default "Alan Pruitt (Coach Alan) — Curriculum Architect, AI Strategist, USMC Veteran & Founder of Webcognita LLC." }}">
     <meta name="author" content="Alan Pruitt">
     <link rel="canonical" href="{{ .Permalink }}">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%230B192C'/></svg>">
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
     {{- if .IsTranslated }}
     {{- $enHref := .Permalink -}}
     {{- range .AllTranslations -}}
@@ -240,7 +242,9 @@
         .prose th { background-color: #0B192C; color: #ffffff; font-weight: 700; text-align: left; padding: 0.75rem 1rem; border: 1px solid #0B192C; font-size: 0.9rem; }
         .prose td { background-color: #ffffff; color: #18181b; text-align: left; padding: 0.75rem 1rem; border: 1px solid #d4d4d8; vertical-align: top; font-size: 0.95rem; line-height: 1.55; }
         .prose blockquote { margin: 1.5rem 0; padding: 1rem 1.25rem; border-left: 4px solid #0B192C; background-color: #ffffff; color: #18181b; border-radius: 0.25rem; }
-        .prose code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 0.875em; padding: 0.15rem 0.35rem; border-radius: 0.25rem; background-color: #ffffff; color: #09090b; border: 1px solid #d4d4d8; }
+        .prose :not(pre) > code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 0.875em; padding: 0.15rem 0.35rem; border-radius: 0.25rem; background-color: #ffffff; color: #09090b; border: 1px solid #d4d4d8; }
+        .prose pre { margin: 1.25rem 0; padding: 1rem 1.25rem; border-radius: 0.5rem; overflow-x: auto; background-color: #0B192C !important; color: #FFFFFF !important; border: 1.5px solid #0B192C; }
+        .prose pre code, .prose pre span { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 0.875rem; line-height: 1.55; background-color: transparent !important; color: #FFFFFF !important; border: 0 !important; padding: 0 !important; }
 
         /* Dark mode overrides */
         @media (prefers-color-scheme: dark) {
@@ -255,7 +259,9 @@
             .prose th { background-color: #18181b; color: #ffffff; border-color: #52525b; }
             .prose td { background-color: #09090b; color: #f4f4f5; border-color: #3f3f46; }
             .prose blockquote { border-left-color: #ffffff; background-color: #18181b; color: #f4f4f5; }
-            .prose code { background-color: #18181b; color: #ffffff; border-color: #52525b; }
+            .prose :not(pre) > code { background-color: #18181b; color: #ffffff; border-color: #52525b; }
+            .prose pre { background-color: #0B192C !important; color: #FFFFFF !important; border-color: #52525b; }
+            .prose pre code, .prose pre span { background-color: transparent !important; color: #FFFFFF !important; }
             .border-zinc-200 { border-color: #27272a; }
         }
     </style>

@@ -64,7 +64,11 @@
     <!-- Principal Architect Portrait + Scannable QR Code for Workshop Participants (Above the Fold) -->
     <aside aria-label="Alan Pruitt portrait and scannable QR code to open https://alanpruitt.com on mobile devices" style="flex: 0 0 185px; background-color: #ffffff; border: 2px solid #0B192C; border-radius: 0.875rem; padding: 0.75rem; text-align: center; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
       <div style="margin-bottom: 0.65rem; padding-bottom: 0.65rem; border-bottom: 1.5px solid #e4e4e7;">
-        <img src="/assets/alan-pruitt-portrait.jpg" alt="Alan Pruitt (Coach Alan), Founder of Webcognita LLC and Exercise Science Adjunct Faculty at Arizona Western College" width="145" height="209" loading="eager" decoding="async" style="display: block; width: 145px; height: auto; border-radius: 0.5rem; border: 1.5px solid #0B192C; margin: 0 auto 0.35rem auto;" />
+        <picture>
+          <source type="image/avif" srcset="/assets/alan-pruitt-portrait-290w.avif 290w, /assets/alan-pruitt-portrait-435w.avif 435w" sizes="145px" />
+          <source type="image/webp" srcset="/assets/alan-pruitt-portrait-290w.webp 290w, /assets/alan-pruitt-portrait-435w.webp 435w" sizes="145px" />
+          <img src="/assets/alan-pruitt-portrait.jpg" alt="Alan Pruitt (Coach Alan), Founder of Webcognita LLC and Exercise Science Adjunct Faculty at Arizona Western College" width="145" height="209" fetchpriority="high" decoding="async" style="display: block; width: 145px; height: auto; border-radius: 0.5rem; border: 1.5px solid #0B192C; margin: 0 auto 0.35rem auto;" />
+        </picture>
         <div style="font-family: 'Fira Code', monospace; font-size: 0.68rem; font-weight: 700; color: #0B192C; line-height: 1.25;">
           Alan Pruitt (Coach Alan)
         </div>
@@ -75,7 +79,7 @@
       <div style="font-family: 'Fira Code', monospace; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: #0B192C; margin-bottom: 0.35rem;">
         Scan for Mobile
       </div>
-      <img src="/assets/qr-alanpruitt.svg" alt="Scannable QR code linking to https://alanpruitt.com for mobile workshop participants" width="145" height="145" fetchpriority="high" decoding="sync" style="display: block; width: 145px; height: 145px; margin: 0 auto;" />
+      <img src="/assets/qr-alanpruitt.svg" alt="Scannable QR code linking to https://alanpruitt.com for mobile workshop participants" width="145" height="145" decoding="async" style="display: block; width: 145px; height: 145px; margin: 0 auto;" />
       <div style="font-family: 'Fira Code', monospace; font-size: 0.72rem; font-weight: 700; color: #0B192C; margin-top: 0.35rem;">
         alanpruitt.com
       </div>

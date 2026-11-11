@@ -94,11 +94,15 @@
         </div>
         <div style="display: flex; align-items: center; gap: 0.75rem; background-color: #ffffff; border: 2px solid #0B192C; border-radius: 0.75rem; padding: 0.5rem 0.75rem; text-align: center;">
           <div style="padding-right: 0.65rem; border-right: 1.5px solid #e4e4e7;">
-            <img src="/assets/alan-pruitt-portrait.jpg" alt="Fotografía de Alan Pruitt (Coach Alan), Fundador de Webcognita LLC y Docente Adjunto en Arizona Western College" width="84" height="121" loading="eager" decoding="async" style="display: block; width: 84px; height: auto; border-radius: 0.4rem; border: 1.5px solid #0B192C; margin: 0 auto;" />
+            <picture>
+              <source type="image/avif" srcset="/assets/alan-pruitt-portrait-290w.avif 290w, /assets/alan-pruitt-portrait-435w.avif 435w" sizes="84px" />
+              <source type="image/webp" srcset="/assets/alan-pruitt-portrait-290w.webp 290w, /assets/alan-pruitt-portrait-435w.webp 435w" sizes="84px" />
+              <img src="/assets/alan-pruitt-portrait.jpg" alt="Fotografía de Alan Pruitt (Coach Alan), Fundador de Webcognita LLC y Docente Adjunto en Arizona Western College" width="84" height="121" fetchpriority="high" decoding="async" style="display: block; width: 84px; height: auto; border-radius: 0.4rem; border: 1.5px solid #0B192C; margin: 0 auto;" />
+            </picture>
             <div style="font-family: 'Fira Code', monospace; font-size: 0.64rem; font-weight: 700; color: #0B192C; margin-top: 0.25rem;">Coach Alan</div>
           </div>
           <div>
-            <img src="/assets/qr-alanpruitt.svg" alt="Código QR escaneable para abrir https://alanpruitt.com en dispositivos móviles" width="110" height="110" fetchpriority="high" decoding="sync" style="display: block; width: 110px; height: 110px; margin: 0 auto;" />
+            <img src="/assets/qr-alanpruitt.svg" alt="Código QR escaneable para abrir https://alanpruitt.com en dispositivos móviles" width="110" height="110" decoding="async" style="display: block; width: 110px; height: 110px; margin: 0 auto;" />
             <div style="font-family: 'Fira Code', monospace; font-size: 0.7rem; font-weight: 700; color: #0B192C; margin-top: 0.25rem;">alanpruitt.com</div>
           </div>
         </div>
