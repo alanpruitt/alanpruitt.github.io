@@ -7,7 +7,7 @@
 > Personal portfolio, 40-essay research corpus, and sovereign **Curriculum-as-Code (CaC)** repository of **Alan Pruitt (Coach Alan)** — Founder & Chief Curriculum Architect of **Webcognita LLC** (`SDVOSB / VOSB` • `SAM.gov UEI: EZ34U9KNJA17` • `CAGE: 4ZCN6`), Exercise Science Adjunct Faculty at **Arizona Western College (AWC)**, Generative AI Strategist & Designated Campus Colleague (`DCC`) at **The University of Arizona**, **Google Gemini Certified Faculty**, **Google Cloud Launchpad for Veterans** participant, and **USMC Veteran**.
 
 - **Live Portfolio:** [https://alanpruitt.com](https://alanpruitt.com) ([Español / Norteño-Spanish](https://alanpruitt.com/es/))
-- **Google Developer Profile (Verified Credentials):** [https://me.developers.google.com/u/alanpruitt](https://me.developers.google.com/u/alanpruitt) (*Google Gemini Certified Faculty • Google Cloud Launchpad for Veterans • Google Cloud Certified Generative AI Leader*)
+- **Google Developer Profile & Verified Credentials:** [https://me.developers.google.com/u/alanpruitt](https://me.developers.google.com/u/alanpruitt) • [Accredible Wallet](https://www.credential.net/profile/alanpruitt/wallet) (*Google Gemini Certified Faculty • Google AI Professional Certificate • Google Prompting Essentials • Lean Six Sigma White Belt • Google Cloud Launchpad for Veterans*)
 - **Workshops & Public Canvas Proof Hub (`EXW-Demo 42051`):** [https://alanpruitt.com/workshops/](https://alanpruitt.com/workshops/)
 - **Corporate & Federal SDVOSB Practice:** [https://www.webcognita.com](https://www.webcognita.com) (`SAM.gov UEI: EZ34U9KNJA17` • `CAGE: 4ZCN6` • EIN `81-0809739`)
 - **LinkedIn:** [https://www.linkedin.com/in/alanpruitt/](https://www.linkedin.com/in/alanpruitt/)

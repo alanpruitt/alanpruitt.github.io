@@ -44,7 +44,6 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-# Sitemap reference for search engine indexing
 Sitemap: https://alanpruitt.com/sitemap.xml
 Sitemap: https://alanpruitt.com/en/sitemap.xml
 Sitemap: https://alanpruitt.com/es/sitemap.xml
