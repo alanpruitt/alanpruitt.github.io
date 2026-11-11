@@ -10,7 +10,17 @@
 
 ---
 
-### Part 1: Main LinkedIn Post Body (Copy-Paste — 2,470 Characters, 43 Lines, Zero Hyperlinks, Zero "We/Our", Zero Trailing Hashtags)
+### Step 1 (Do First in LinkedIn Composer): Drop PDF Document & Paste Carousel Title (`51` Characters — Under LinkedIn's `58`-Char Title Limit)
+
+Attach `Desktop/Curriculum-as-Code-Origin-and-Evolution-Whitepaper.pdf` via **Start a post -> `+` -> Add a document**, paste this title, and click **Done** *before* pasting the Main Post Body:
+
+```text
+Curriculum-as-Code (2018–2026): Origin & S-A-R v2.2
+```
+
+---
+
+### Step 2 (After Clicking "Done" on PDF Modal): Main LinkedIn Post Body (Copy-Paste — 2,544 Characters, 43 Lines, Zero Hyperlinks, Zero "We/Our", Zero Trailing Hashtags)
 
 ```text
 What if I didn't trace the lineage?
@@ -60,15 +70,7 @@ Swipe the 2-page PDF below and check the first comment for links.
 
 ---
 
-### Part 2: Optional Native LinkedIn Document Attachment Title (Attach `Curriculum-as-Code-Origin-and-Evolution-Whitepaper.pdf`)
-
-```text
-Curriculum-as-Code (2018–2026): Origin Genealogy & S-A-R v2.2 Reference Architecture
-```
-
----
-
-### Part 3: First Comment (Copy-Paste Immediately Below Main Post)
+### Step 3 (After Clicking "Post"): First Comment (Copy-Paste Immediately Below Published Post)
 
 ```text
 Explore the complete Curriculum-as-Code (2018–2026) Origin Specification, 2-Page Archival Whitepaper, and Substack dispatch:
