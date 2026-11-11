@@ -1,6 +1,7 @@
 ## LinkedIn Distribution Package: Origin Whitepaper 00 (1,391-Impression Blueprint)
 
 - **Target Canonical:** <https://alanpruitt.com/curriculum-as-code/>
+- **Live LinkedIn Activity URL:** <https://www.linkedin.com/feed/update/urn:li:activity:7526393204666077184/>
 - **Live Substack Dispatch:** <https://alanpruitt.substack.com/p/what-if-i-didnt-trace-the-lineage>
 - **Native LinkedIn Document Carousel Attachment:** `Curriculum-as-Code-Origin-and-Evolution-Whitepaper.pdf` (`2 Pages` • `533.8 KB`)
 - **Release Date:** 2026-11-11
