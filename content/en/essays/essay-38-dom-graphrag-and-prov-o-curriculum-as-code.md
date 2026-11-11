@@ -109,4 +109,4 @@ By binding every paragraph, bilingual clinical term, and AI audit receipt into a
 
 ### Explore My Architecture Briefs & White Papers
 
-All six of my formal architecture briefs and technical white papers—including the **EXW S-A-R v2.2 DOM GraphRAG & W3C PROV-O Architecture Brief** and my **AWC 2026 Innovation Fund "Project Horizon" White Papers**—are available for direct download in the [**Architecture Briefs & Grant White Papers shelf on alanpruitt.com**](/#architecture-briefs).
+For the complete 2018–2026 historical genealogy of Curriculum-as-Code (from 2018 NetOps container emulation to 2026 `S-A-R v2.2`), read the flagship **[Curriculum-as-Code (CaC) Origin & Evolution Whitepaper](/curriculum-as-code/)**. All nine of my formal architecture briefs and technical white papers—including the **EXW S-A-R v2.2 DOM GraphRAG & W3C PROV-O Architecture Brief** and my **AWC 2026 Innovation Fund "Project Horizon" White Papers**—are available for direct download in the [**Architecture Briefs & Grant White Papers shelf on alanpruitt.com**](/#architecture-briefs).

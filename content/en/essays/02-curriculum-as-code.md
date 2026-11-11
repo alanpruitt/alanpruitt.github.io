@@ -14,6 +14,8 @@ aliases:
 
 ## Curriculum-as-Code: Treating Educational Content Like Software Development
 
+> **Canonical Origin & Reference Hub:** For the complete 2018–2026 historical genealogy, 3-Generation Paradigm Matrix, and `S-A-R v2.2` neuro-symbolic specification, read the flagship whitepaper: **[Curriculum-as-Code (CaC): Origin Story, Historical Genealogy & Reference Architecture](/curriculum-as-code/)**.
+
 For decades, educators have been tethered to proprietary Learning Management Systems (LMS) that act as black boxes. These platforms lock valuable instructional assets into rigid databases, make version rollback nearly impossible, and break accessibility standards with every proprietary UI update.
 
 It is time to borrow an established paradigm from software engineering: **Curriculum-as-Code (CaC)**. By treating educational materials as source code, we gain the rigorous verification, portability, and version control required for high-accessibility academic environments.

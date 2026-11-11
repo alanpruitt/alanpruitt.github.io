@@ -12,6 +12,7 @@
 
     <!-- DESKTOP NAV (Right) -->
     <nav id="ap-desktop-nav" style="display: none; align-items: center; gap: 1.5rem;">
+      <a href="{{ if eq .Lang "es" }}/es/curriculum-as-code/{{ else }}/curriculum-as-code/{{ end }}" style="text-decoration: none; color: #0B192C; font-size: 0.9rem; font-weight: 800;">{{ if eq .Lang "es" }}Origen CaC{{ else }}CaC Origin{{ end }}</a>
       <a href="{{ if eq .Lang "es" }}/es/workshops/{{ else }}/workshops/{{ end }}" style="text-decoration: none; color: #3f3f46; font-size: 0.9rem; font-weight: 600;">{{ if eq .Lang "es" }}Talleres{{ else }}Workshops{{ end }}</a>
       <a href="{{ if eq .Lang "es" }}/es/roi-calculator/{{ else }}/roi-calculator/{{ end }}" style="text-decoration: none; color: #3f3f46; font-size: 0.9rem; font-weight: 600;">{{ if eq .Lang "es" }}Calculadora ROI{{ else }}ROI Calculator{{ end }}</a>
       <a href="{{ if eq .Lang "es" }}/es/essays/{{ else }}/essays/{{ end }}" style="text-decoration: none; color: #3f3f46; font-size: 0.9rem; font-weight: 600;">{{ if eq .Lang "es" }}Ensayos{{ else }}Essays{{ end }}</a>
@@ -51,6 +52,7 @@
           <svg style="width: 1rem; height: 1rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
         </summary>
         <div style="position: absolute; right: 0; top: calc(100% + 0.5rem); width: 14rem; background-color: #FFF9F0; border: 2px solid #002147; border-radius: 0.5rem; padding: 0.5rem; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); z-index: 60; display: flex; flex-direction: column; gap: 0.25rem;">
+          <a href="{{ if eq .Lang "es" }}/es/curriculum-as-code/{{ else }}/curriculum-as-code/{{ end }}" style="display: flex; justify-content: space-between; padding: 0.5rem 0.75rem; text-decoration: none; color: #002147; font-size: 0.875rem; font-weight: 800;"><span>{{ if eq .Lang "es" }}Origen CaC (Whitepaper){{ else }}CaC Origin Whitepaper{{ end }}</span><span style="color: #71717a;">&rarr;</span></a>
           <a href="{{ if eq .Lang "es" }}/es/workshops/{{ else }}/workshops/{{ end }}" style="display: flex; justify-content: space-between; padding: 0.5rem 0.75rem; text-decoration: none; color: #002147; font-size: 0.875rem; font-weight: 700;"><span>{{ if eq .Lang "es" }}Talleres{{ else }}Workshops{{ end }}</span><span style="color: #71717a;">&rarr;</span></a>
           <a href="{{ if eq .Lang "es" }}/es/roi-calculator/{{ else }}/roi-calculator/{{ end }}" style="display: flex; justify-content: space-between; padding: 0.5rem 0.75rem; text-decoration: none; color: #002147; font-size: 0.875rem; font-weight: 700;"><span>{{ if eq .Lang "es" }}Calculadora ROI{{ else }}ROI Calculator{{ end }}</span><span style="color: #71717a;">&rarr;</span></a>
           <a href="{{ if eq .Lang "es" }}/es/essays/{{ else }}/essays/{{ end }}" style="display: flex; justify-content: space-between; padding: 0.5rem 0.75rem; text-decoration: none; color: #002147; font-size: 0.875rem; font-weight: 700;"><span>{{ if eq .Lang "es" }}Ensayos{{ else }}Essays{{ end }}</span><span style="color: #71717a;">&rarr;</span></a>

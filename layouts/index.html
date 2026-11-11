@@ -14,6 +14,7 @@
     <link rel="alternate" hreflang="x-default" href="https://alanpruitt.com/">
     <link rel="me" href="https://www.linkedin.com/in/alanpruitt/">
     <link rel="me" href="https://github.com/alanpruitt">
+    <link rel="me" href="https://me.developers.google.com/u/alanpruitt">
     <link rel="me" href="https://substack.com/@alanpruitt/">
     <link rel="me" href="https://alanpruitt.substack.com/">
     <link rel="me" href="https://www.webcognita.com/">
@@ -178,6 +179,21 @@
                         }
                   ],
                   "subjectOf": [
+                        {
+                              "@type": "ScholarlyArticle",
+                              "@id": "https://alanpruitt.com/curriculum-as-code/#whitepaper",
+                              "headline": "From Infrastructure Automation to Clinical Pedagogy: The Origin and Evolution of Curriculum-as-Code (2018–2026)",
+                              "url": "https://alanpruitt.com/curriculum-as-code/",
+                              "datePublished": "2026-11-11",
+                              "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+                              "isAccessibleForFree": true,
+                              "author": {
+                                    "@id": "https://alanpruitt.com/#person"
+                              },
+                              "publisher": {
+                                    "@id": "https://www.webcognita.com/#organization"
+                              }
+                        },
                         {
                               "@type": "Dataset",
                               "@id": "https://alanpruitt.com/research-log/#dataset",
@@ -2070,11 +2086,43 @@
                         <button type="button" data-open-qa-modal data-qa-category="briefs" class="text-xs font-mono bg-navy-900 text-creme-100 px-3 py-1.5 rounded-md font-bold cursor-pointer hover:underline">
                             {{ if eq .Lang "es" }}[Q&amp;A] Consultar Informes y GraphRAG &rarr;{{ else }}[Q&amp;A] Query Briefs &amp; GraphRAG &rarr;{{ end }}
                         </button>
-                        <span class="text-xs font-mono bg-creme-100 text-navy-900 px-3 py-1 rounded-md border border-creme-200 font-semibold flex-shrink-0">8 Publications</span>
+                        <span class="text-xs font-mono bg-creme-100 text-navy-900 px-3 py-1 rounded-md border border-creme-200 font-semibold flex-shrink-0">9 Publications</span>
                     </div>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <!-- White Paper 00: Canonical Origin & Evolution of Curriculum-as-Code (2018-2026) -->
+                    <div class="p-5 rounded-xl bg-creme-50 border-2 border-navy-900 flex flex-col justify-between md:col-span-3">
+                        <div>
+                            <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                                <span class="text-xs font-mono text-navy-900 font-bold">
+                                    {{ if eq .Lang "es" }}WHITEPAPER DE ORIGEN 00 / GENEALOG&Iacute;A E HISTORIA DE CURRICULUM-AS-CODE (2018&ndash;2026){{ else }}ORIGIN WHITE PAPER 00 / CANONICAL GENEALOGY &amp; EVOLUTION OF CURRICULUM-AS-CODE (2018&ndash;2026){{ end }}
+                                </span>
+                                <span class="text-xs font-mono bg-navy-900 text-creme-100 px-2 py-0.5 rounded font-semibold">PILLAR HUB + PDF &bull; 2 PAGES &bull; 525 KB</span>
+                            </div>
+                            <h4 class="text-lg font-bold text-navy-900 mb-2">
+                                <a href="{{ if eq .Lang "es" }}/es/curriculum-as-code/{{ else }}/curriculum-as-code/{{ end }}" class="hover:underline">
+                                    {{ if eq .Lang "es" }}De la Automatizaci&oacute;n de Infraestructura a la Pedagog&iacute;a Cl&iacute;nica: Origen y Evoluci&oacute;n de Curriculum-as-Code (2018&ndash;2026){{ else }}From Infrastructure Automation to Clinical Pedagogy: The Origin and Evolution of Curriculum-as-Code (2018&ndash;2026){{ end }}
+                                </a>
+                            </h4>
+                            <p class="text-xs text-navy-800 leading-relaxed mb-3">
+                                {{ if eq .Lang "es" }}
+                                Documento can&oacute;nico de origen que traza las tres generaciones de <strong>Curriculum-as-Code (CaC)</strong>: desde los laboratorios de contenedores Kubernetes de NRE Labs en 2018 (<code>syringe.yaml</code>) y los repositorios tempranos de IA Co-Pilot en GitHub (Premio NADO 2021 de Alan Pruitt), hasta la arquitectura universitaria neuro-simb&oacute;lica <code>S-A-R v2.2</code> con <strong>DOM GraphRAG (<code>3,265</code> nodos)</strong>, recibos <strong>W3C PROV-O</strong>, ontolog&iacute;as <strong>W3C SKOS</strong> en espa&ntilde;ol norte&ntilde;o, cumplimiento <strong>ADA T&iacute;tulo II (<code>9:1</code>)</strong> e IA local aislada (<strong>Google Gemini Carbon 4</strong> y <strong>Gemma 4</strong>).
+                                {{ else }}
+                                Definitive origin whitepaper tracing all three generations of <strong>Curriculum-as-Code (CaC)</strong>: from 2018 NetOps Kubernetes container emulation at NRE Labs (<code>syringe.yaml</code>) and early GitHub AI Co-Pilot plain-text SSoTs (Alan Pruitt&rsquo;s August 2021 NADO Impact Award), to 2026 <code>S-A-R v2.2</code> neuro-symbolic higher-education pedagogy uniting a <strong><code>3,265</code>-node DOM GraphRAG</strong> graph, <strong>W3C PROV-O</strong> SHA-256 receipts, <strong>W3C SKOS</strong> Norte&ntilde;o-Spanish clinical ontologies, <strong>ADA Title II (<code>9:1</code>)</strong> Compliance-as-Code, and air-gapped <strong>Google Gemini Carbon 4 / Gemma 4</strong> Edge AI.
+                                {{ end }}
+                            </p>
+                        </div>
+                        <div class="flex flex-wrap items-center gap-4 mt-2 pt-2 border-t border-creme-200/60">
+                            <a href="{{ if eq .Lang "es" }}/es/curriculum-as-code/{{ else }}/curriculum-as-code/{{ end }}" class="text-xs font-bold text-navy-900 hover:underline inline-flex items-center gap-1">
+                                {{ if eq .Lang "es" }}Leer Centro de Referencia CaC &rarr;{{ else }}Read Canonical CaC Origin Hub &rarr;{{ end }}
+                            </a>
+                            <a href="/docs/Curriculum-as-Code-Origin-and-Evolution-Whitepaper.pdf" download class="text-xs font-semibold text-navy-800 hover:text-navy-900 hover:underline inline-flex items-center gap-1">
+                                {{ if eq .Lang "es" }}Descargar Whitepaper Original (PDF) &rarr;{{ else }}Download Origin Whitepaper (PDF) &rarr;{{ end }}
+                            </a>
+                        </div>
+                    </div>
+
                     <!-- Brief 1: Sovereign Clinical AI, DOM GraphRAG & W3C PROV-O -->
                     <div class="p-5 rounded-xl bg-creme-50 border border-creme-200 flex flex-col justify-between">
                         <div>
