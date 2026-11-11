@@ -249,7 +249,7 @@ This canonical origin paper anchors the longitudinal **40-Essay Curriculum-as-Co
 <h2 id="academic-citation">6. Academic Citation &amp; Attribution</h2>
 
 **APA 7th Edition:**  
-Pruitt, A. (2026). *From infrastructure automation to clinical pedagogy: The origin and evolution of Curriculum-as-Code (2018–2026)* (S-A-R Architecture Whitepaper v2.2). Webcognita LLC. https://alanpruitt.com/curriculum-as-code/
+Pruitt, A. (2026). *From infrastructure automation to clinical pedagogy: The origin and evolution of Curriculum-as-Code (2018–2026)* (S-A-R Architecture Whitepaper v2.2). Webcognita LLC. [https://alanpruitt.com/curriculum-as-code/](https://alanpruitt.com/curriculum-as-code/)
 
 ```bibtex
 @techreport{pruitt2026cac,

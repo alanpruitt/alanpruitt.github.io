@@ -34,8 +34,8 @@ jobs:
       - name: Install Node Dependencies
         run: npm ci
 
-      - name: Install Playwright Chromium & OS Dependencies
-        run: npx playwright install chromium --with-deps
+      - name: Install Playwright Chromium Browser
+        run: npx playwright install chromium
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
@@ -60,11 +60,13 @@ jobs:
       - name: Run POUR, WCAG 3.0 & Sequential Essay Registry Audit
         run: |
           python3 scripts/essay_registry_audit.py --ci --check-substack
+          python3 pour_audit.py content/en/curriculum-as-code/_index.md
+          python3 pour_audit.py content/es/curriculum-as-code/_index.md
           python3 pour_audit.py content/en/institutional-infrastructure/_index.md
           python3 pour_audit.py content/es/institutional-infrastructure/_index.md
           python3 pour_audit.py content/en/essays
           python3 pour_audit.py content/es/essays
-          python3 scripts/wcag3_atomic_linter.py content/en/institutional-infrastructure/_index.md content/es/institutional-infrastructure/_index.md content/en/essays/*.md content/es/essays/*.md
+          python3 scripts/wcag3_atomic_linter.py content/en/curriculum-as-code/_index.md content/es/curriculum-as-code/_index.md content/en/institutional-infrastructure/_index.md content/es/institutional-infrastructure/_index.md content/en/essays/*.md content/es/essays/*.md
 
       - name: Start Local Static Server & Run Playwright Audit
         env:

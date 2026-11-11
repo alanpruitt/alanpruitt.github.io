@@ -175,6 +175,6 @@ Ejecuta **Google Gemini Carbon 4** y **Gemma 4** localmente en estaciones Apple 
 <h2 id="citacion-academica">5. Citación Académica y Atribución</h2>
 
 **APA 7.ª Edición:**  
-Pruitt, A. (2026). *From infrastructure automation to clinical pedagogy: The origin and evolution of Curriculum-as-Code (2018–2026)* (S-A-R Architecture Whitepaper v2.2). Webcognita LLC. https://alanpruitt.com/curriculum-as-code/
+Pruitt, A. (2026). *From infrastructure automation to clinical pedagogy: The origin and evolution of Curriculum-as-Code (2018–2026)* (S-A-R Architecture Whitepaper v2.2). Webcognita LLC. [https://alanpruitt.com/curriculum-as-code/](https://alanpruitt.com/curriculum-as-code/)
 
 > **Aviso Legal:** La arquitectura Curriculum-as-Code, el Estándar S-A-R, el Protocolo de Encuadre Clínico y las herramientas de código abierto descritas en este documento representan investigación e ingeniería docente independiente a través de Webcognita LLC y no constituyen política oficial ni respaldo de Arizona Western College ni de The University of Arizona.
