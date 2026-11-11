@@ -68,7 +68,7 @@ La segunda etapa trasladó el enfoque hacia repositorios de texto plano como Fue
 
 ### 1.3 Generación 3 (2026): Arquitectura Neuro-Simbólica Soberana (S-A-R v2.2)
 
-Desarrollada y validada en aulas reales de **Arizona Western College (HSI)** y en investigación aplicada de IA en el borde en **The University of Arizona (Campus Yuma)** a través de **Webcognita LLC (`SDVOSB`)**, la arquitectura `S-A-R v2.2` compila módulos accesibles, rúbricas clínicas, ontologías bilingües y paquetes abiertos `Schema.org/Dataset` directamente desde Git hacia Canvas GraphQL (`POST /api/graphql`) sin depender de contenedores frágiles ni libros comerciales costosos.
+Desarrollada y validada en aulas reales de **Arizona Western College (HSI)**—donde el **77% del alumnado es latino** (`3.08` veces el umbral federal HSI del 25%) y el **62% son estudiantes universitarios de primera generación** (*"En AWC, el 77% de los estudiantes son latinos y el 62% son estudiantes de primera generación. Servimos a esta hermosa comunidad, pero los desafíos están en todas partes"*, Dra. Reetika Dhawan, Presidenta de AWC, citada en *The Yuma Sun*, 11 de noviembre de 2026)—y en investigación aplicada de IA en el borde en **The University of Arizona (Campus Yuma)** a través de **Webcognita LLC (`SDVOSB`)**, la arquitectura `S-A-R v2.2` compila módulos accesibles, rúbricas clínicas, ontologías bilingües y paquetes abiertos `Schema.org/Dataset` directamente desde Git hacia Canvas GraphQL (`POST /api/graphql`) sin depender de contenedores frágiles ni libros comerciales costosos.
 
 ---
 
