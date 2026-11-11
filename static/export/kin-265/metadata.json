@@ -14,8 +14,8 @@
   "courseCode": "KIN-265",
   "identifier": "KIN-265-OER-2026-V2.2",
   "version": "2.2.0",
-  "datePublished": "2026-11-08",
-  "dateModified": "2026-11-08",
+  "datePublished": "2026-11-11",
+  "dateModified": "2026-11-11",
   "description": "Standardized ZTC OER module package for KIN-265 (Exercise for Special Populations: Adapted Physical Activity & Chronic Conditions) incorporating Curriculum-as-Code publishing, the Clinical Framing Protocol (Pattern / Rule / Solve), Physical Activity Guidelines for Americans (PAGA), 2nd Edition (2018) as the Academic Single Source of Truth (SSoT), and the U.S. Department of Labor AI Literacy Framework (TEN No. 07-25) with WCAG 2.2 AA (9:1 Double-Contrast Guard) compliance.",
   "url": "https://alanpruitt.com/export/kin-265/metadata.json",
   "sameAs": [
@@ -40,7 +40,12 @@
     "@id": "https://www.webcognita.com/#organization",
     "name": "Webcognita LLC",
     "url": "https://www.webcognita.com/",
-    "founder": "Alan Lee Pruitt"
+    "founder": {
+      "@type": "Person",
+      "@id": "https://alanpruitt.com/#person",
+      "name": "Alan Lee Pruitt",
+      "url": "https://alanpruitt.com/"
+    }
   },
   "author": {
     "@type": "Person",
@@ -183,7 +188,7 @@
     }
   ],
   "schema_version": "S-A-R-v2.2-OER-Commons-Syndication",
-  "generated_at": "2026-11-08T00:25:52.345788+00:00",
+  "generated_at": "2026-11-11T04:47:30.015282+00:00",
   "course_code": "KIN-265",
   "course_slug": "kin-265",
   "course_title": "Exercise for Special Populations: Adapted Physical Activity & Chronic Conditions",
@@ -388,8 +393,8 @@
     {
       "path": "module-01/mod-01-lab-and-simulation-01.html",
       "format": "html",
-      "bytes": 57145,
-      "sha256": "0838e1f4b19f873c372cf5bd4822ffdfc8973cd323e5613e51b390d316ac10e7"
+      "bytes": 57147,
+      "sha256": "ed6f5fba1c2fbcaa20dc8ae0a6b7533a51e215f454178a80fae171591c28b4f3"
     },
     {
       "path": "module-01/mod-01-lab-and-simulation-01.md",
@@ -400,8 +405,8 @@
     {
       "path": "module-01/mod-01-lab-and-simulation-02.html",
       "format": "html",
-      "bytes": 67611,
-      "sha256": "97a2d18fda0b074274d88896c542849ad10d0b4457985b6cbcec1c6f3d1aee85"
+      "bytes": 67613,
+      "sha256": "befa9c608bcdb364bdf4cad03c3b76677398f2cc70bbb181e25762bd9ba38e4d"
     },
     {
       "path": "module-01/mod-01-lab-and-simulation-02.md",
@@ -412,8 +417,8 @@
     {
       "path": "module-01/mod-01-clinical-discussion.html",
       "format": "html",
-      "bytes": 30305,
-      "sha256": "b006343f5a3f94579e336bc9716d415c59712d0b90320fffe31f2b229263881f"
+      "bytes": 30307,
+      "sha256": "7c390644883aa899440c8426957428484c4021113fe2553fce42015893f91b24"
     },
     {
       "path": "module-01/mod-01-clinical-discussion.md",
@@ -424,8 +429,8 @@
     {
       "path": "module-01/mod-01-overview-cardiac-rehab-and-heart-recovery-safety.html",
       "format": "html",
-      "bytes": 29088,
-      "sha256": "efd56de0c054cb666526e7602d32d869a43fd1d75e3ccfa2ed1c2214eb2b2d74"
+      "bytes": 29090,
+      "sha256": "78fafd41eba2ed9a304ed93bb7ac649f050b113e606c65dbae1659a983e0cc0c"
     },
     {
       "path": "module-01/mod-01-overview-cardiac-rehab-and-heart-recovery-safety.md",
@@ -436,8 +441,8 @@
     {
       "path": "module-01/mod-01-required-readings-cardiac-rehab-and-heart-recovery-safety.html",
       "format": "html",
-      "bytes": 39610,
-      "sha256": "f26c5e528a6e468e075c0207160b3708104f3c61921f8f7e2292dbe654900171"
+      "bytes": 39612,
+      "sha256": "876684f79cfc4c4ea1eee731d4ac5f66732dbb477388d2593778f30a99761a22"
     },
     {
       "path": "module-01/mod-01-required-readings-cardiac-rehab-and-heart-recovery-safety.md",
@@ -448,8 +453,8 @@
     {
       "path": "module-01/mod-01-summary-and-wrap-up-cardiac-rehab-and-heart-recovery-safety.html",
       "format": "html",
-      "bytes": 50236,
-      "sha256": "11ebb49e6e0ce852714ae5f7a402d13d209c1120bebc71e410e3d2d9fdf52d6f"
+      "bytes": 50238,
+      "sha256": "01a3992b333a48cb7800a7400381bdcaa5e9a7cbb34942187125a831a0b08370"
     },
     {
       "path": "module-01/mod-01-summary-and-wrap-up-cardiac-rehab-and-heart-recovery-safety.md",
@@ -460,8 +465,8 @@
     {
       "path": "module-02/mod-02-lab-and-simulation-01.html",
       "format": "html",
-      "bytes": 89022,
-      "sha256": "458f7ceae9e44d4b2383bb780c4eeca91eb5447c6fde229510913fd6f449f84a"
+      "bytes": 89024,
+      "sha256": "41cfc549c6278e00a33ed687614a71f0c0dd164e5f10d99f2444f4fea96283c6"
     },
     {
       "path": "module-02/mod-02-lab-and-simulation-01.md",
@@ -472,8 +477,8 @@
     {
       "path": "module-02/mod-02-lab-and-simulation-02.html",
       "format": "html",
-      "bytes": 81266,
-      "sha256": "25347b9d78e12e3e1f9667702878d43bb96fbcefb045fdc053c27a332bb3c7a1"
+      "bytes": 81268,
+      "sha256": "bbac344d7bec74451793f9ec6bdc2c2fee4e5ed6a9630645c47b1c7c252996d2"
     },
     {
       "path": "module-02/mod-02-lab-and-simulation-02.md",
@@ -484,8 +489,8 @@
     {
       "path": "module-02/mod-02-clinical-discussion.html",
       "format": "html",
-      "bytes": 35283,
-      "sha256": "7ad28bd74ba6f6b4bc81e0c41a173dba0048fbe99c29d2b3378a053bdb5aa978"
+      "bytes": 35285,
+      "sha256": "3ce215202495ed9b057a89fbecaea771beeed554b8ee608c00b3b01ba272708c"
     },
     {
       "path": "module-02/mod-02-clinical-discussion.md",
@@ -496,8 +501,8 @@
     {
       "path": "module-02/mod-02-overview-type-2-diabetes-and-blood-sugar-safety.html",
       "format": "html",
-      "bytes": 25804,
-      "sha256": "44b12dd5386342a9a6f4011c48219b5402b31c9184564061bf6551c5e8f514fc"
+      "bytes": 25806,
+      "sha256": "2ac94f5621b8005a4ce732fbdb3fad5ff9d7d696b4c12a164d31c31f5fbc4a1d"
     },
     {
       "path": "module-02/mod-02-overview-type-2-diabetes-and-blood-sugar-safety.md",
@@ -508,8 +513,8 @@
     {
       "path": "module-02/mod-02-required-readings-type-2-diabetes-and-blood-sugar-safety.html",
       "format": "html",
-      "bytes": 31042,
-      "sha256": "0fe88f29d92432a8d2cc7f85f231d36dc44790db462adff82cc9afc9f79424d8"
+      "bytes": 31044,
+      "sha256": "10c7f799da75294ae77461607e17a731ceabe543495cdb760994d5d2fd435cbd"
     },
     {
       "path": "module-02/mod-02-required-readings-type-2-diabetes-and-blood-sugar-safety.md",
@@ -520,8 +525,8 @@
     {
       "path": "module-02/mod-02-summary-and-wrap-up-type-2-diabetes-and-blood-sugar-safety.html",
       "format": "html",
-      "bytes": 46518,
-      "sha256": "83308906851ae4e08814ae36e55f9211acaf91e1dcbb3d24359cc8f3207cb1d2"
+      "bytes": 46520,
+      "sha256": "d174f9c4b61be68ddf60285a8b881f6c1c4ff459e3ba8670e6f3c0d2430f9e06"
     },
     {
       "path": "module-02/mod-02-summary-and-wrap-up-type-2-diabetes-and-blood-sugar-safety.md",
@@ -532,8 +537,8 @@
     {
       "path": "module-03/mod-03-lab-and-simulation-01.html",
       "format": "html",
-      "bytes": 44480,
-      "sha256": "9cb7d73cae86a9ac4cfa0f1afd37873d32c9e31e77c17935072a566f77f5766d"
+      "bytes": 44482,
+      "sha256": "1ac1cc564bee917b6d6bc784ca3b34e451e283697c6a4f43e0fd40d0e9d696d7"
     },
     {
       "path": "module-03/mod-03-lab-and-simulation-01.md",
@@ -544,8 +549,8 @@
     {
       "path": "module-03/mod-03-lab-and-simulation-02.html",
       "format": "html",
-      "bytes": 56511,
-      "sha256": "a4010a8b281a57616a34a5390df7a3a5388634aa0070f39dfe4f765d76d10cea"
+      "bytes": 56513,
+      "sha256": "89637fee569d872eafe4f2c40efd978d9d2a165dc7145030061202e67863a619"
     },
     {
       "path": "module-03/mod-03-lab-and-simulation-02.md",
@@ -556,8 +561,8 @@
     {
       "path": "module-03/mod-03-clinical-discussion.html",
       "format": "html",
-      "bytes": 24990,
-      "sha256": "cbe565fd7c05782b9fa6900b9ac4ea32eea4d9f3c804eae12b3b8fabaaa02559"
+      "bytes": 24992,
+      "sha256": "6d43b039846d8e395bcdfdc76a65184c41ffda2a763188996290ce12a8782f88"
     },
     {
       "path": "module-03/mod-03-clinical-discussion.md",
@@ -568,8 +573,8 @@
     {
       "path": "module-03/mod-03-overview-bone-density-muscle-loss-and-fall-prevention.html",
       "format": "html",
-      "bytes": 16125,
-      "sha256": "62e70901b967b0dcb79c4d09f1057d99603e532175997da24b882ea43e1df6f6"
+      "bytes": 16127,
+      "sha256": "b2dc7393cb34e559f88486201d6939b1fbe03386797e8ba3580cd38a34ea57b3"
     },
     {
       "path": "module-03/mod-03-overview-bone-density-muscle-loss-and-fall-prevention.md",
@@ -580,8 +585,8 @@
     {
       "path": "module-03/mod-03-required-readings-bone-density-muscle-loss-and-fall-prevention.html",
       "format": "html",
-      "bytes": 46205,
-      "sha256": "1c5b7d9e7dd447df1121fe0cc2b98e2ef21933ddc2a7ecf43e15a5dca668fbb3"
+      "bytes": 46207,
+      "sha256": "616a63cdb0aac743a7aadad457098855d47897e5f80bc355dda9dc2f86e6692d"
     },
     {
       "path": "module-03/mod-03-required-readings-bone-density-muscle-loss-and-fall-prevention.md",
@@ -592,8 +597,8 @@
     {
       "path": "module-03/mod-03-summary-and-wrap-up-bone-density-muscle-loss-and-fall-prevention.html",
       "format": "html",
-      "bytes": 50313,
-      "sha256": "1a164eb9ec6cedc5709b24dad59eaf2d97ec93e49e97515a9326d064ea04edc3"
+      "bytes": 50315,
+      "sha256": "d80b703d0a7839bc56d5accee72a978bb5372ff1f9a2891ca21202d203829e8f"
     },
     {
       "path": "module-03/mod-03-summary-and-wrap-up-bone-density-muscle-loss-and-fall-prevention.md",
@@ -604,8 +609,8 @@
     {
       "path": "module-04/mod-04-lab-and-simulation-01.html",
       "format": "html",
-      "bytes": 68308,
-      "sha256": "71290d7b46e96b0430badcb2462c04b011f2e3755a08d669b77830ac1c25fcab"
+      "bytes": 68310,
+      "sha256": "5dde8e5e5a11e501c2144796643d72a30fbe33436d6a9bdace27658d87dcb718"
     },
     {
       "path": "module-04/mod-04-lab-and-simulation-01.md",
@@ -616,8 +621,8 @@
     {
       "path": "module-04/mod-04-lab-and-simulation-02.html",
       "format": "html",
-      "bytes": 56871,
-      "sha256": "125f3a695195047ece36473521e6b1e6396a49a50960486d90f5425468f12dd1"
+      "bytes": 56873,
+      "sha256": "bec7173210f7a1d6831319b760066ec6031bb24c73b6eec07fd284fb321255e2"
     },
     {
       "path": "module-04/mod-04-lab-and-simulation-02.md",
@@ -628,8 +633,8 @@
     {
       "path": "module-04/mod-04-clinical-discussion.html",
       "format": "html",
-      "bytes": 33231,
-      "sha256": "7e80c92065270fc6f9e746354ffa1c3ab7f64f4e3773acd9426905d12c21bf5a"
+      "bytes": 33233,
+      "sha256": "7c77d8eff296ebc3405076f1890ad0e2a6400cf979b129a3f82da02dc8ed628c"
     },
     {
       "path": "module-04/mod-04-clinical-discussion.md",
@@ -640,8 +645,8 @@
     {
       "path": "module-04/mod-04-overview-safe-exercise-during-and-after-pregnancy.html",
       "format": "html",
-      "bytes": 29129,
-      "sha256": "21b7ab0d371c6aaea5456c5858a6afdda54695879803336998f9a59c7504957c"
+      "bytes": 29131,
+      "sha256": "ddf71d831c0b45c4add40f08ca4b122db81671d4e48fcfea208d7c23b088b274"
     },
     {
       "path": "module-04/mod-04-overview-safe-exercise-during-and-after-pregnancy.md",
@@ -652,8 +657,8 @@
     {
       "path": "module-04/mod-04-required-readings-safe-exercise-during-and-after-pregnancy.html",
       "format": "html",
-      "bytes": 43547,
-      "sha256": "cfd7238f22755192a60ace4c95deb7abd3fe3756edf233a033e5ccd59f7b1f8a"
+      "bytes": 43549,
+      "sha256": "0233e430c2a61ea2897dd7d5cd2185b7c6f632f601e83eba176c3773f402598b"
     },
     {
       "path": "module-04/mod-04-required-readings-safe-exercise-during-and-after-pregnancy.md",
@@ -664,8 +669,8 @@
     {
       "path": "module-04/mod-04-summary-and-wrap-up-safe-exercise-during-and-after-pregnancy.html",
       "format": "html",
-      "bytes": 53727,
-      "sha256": "878cc2d77976003bb6223b195a5eaaad5b982b6b686b030a0515cadabe60909f"
+      "bytes": 53729,
+      "sha256": "3c934d0b1b26c94fc32ee20cfc7338056ec3d14b3560ce5b0055420e04026c08"
     },
     {
       "path": "module-04/mod-04-summary-and-wrap-up-safe-exercise-during-and-after-pregnancy.md",
@@ -676,8 +681,8 @@
     {
       "path": "module-05/mod-05-lab-and-simulation-01.html",
       "format": "html",
-      "bytes": 47872,
-      "sha256": "ef4289763b1000fe93f0f2eb12b0efda1e753858d02ee130ecbf576077bc8dbc"
+      "bytes": 47874,
+      "sha256": "834b11d66547619b7642ee30a63153d1eb93c1722bb4be831310cc55a99b8862"
     },
     {
       "path": "module-05/mod-05-lab-and-simulation-01.md",
@@ -688,8 +693,8 @@
     {
       "path": "module-05/mod-05-lab-and-simulation-02.html",
       "format": "html",
-      "bytes": 57049,
-      "sha256": "4fda38cd608deb18a40478cebd8a9ad7a8e354d8d81b94b66f80b4d219e07cee"
+      "bytes": 57051,
+      "sha256": "d1c3a62c995166207045e6ae04eccb4334e7038757dedf794631bee85f3ac096"
     },
     {
       "path": "module-05/mod-05-lab-and-simulation-02.md",
@@ -700,8 +705,8 @@
     {
       "path": "module-05/mod-05-clinical-discussion.html",
       "format": "html",
-      "bytes": 32318,
-      "sha256": "d5e11b973ed98344f0c5bc39e936acf445bb8134f07990fecfcbe39051a70a4c"
+      "bytes": 32320,
+      "sha256": "76a422f41958734ca8cfda8e77e30ee8c01176656770085ec02061fa493ea031"
     },
     {
       "path": "module-05/mod-05-clinical-discussion.md",
@@ -712,8 +717,8 @@
     {
       "path": "module-05/mod-05-overview-breathing-and-lung-conditions-copd-and-asthma.html",
       "format": "html",
-      "bytes": 29194,
-      "sha256": "cb3b305574b5e5aff68af120928330c18e32079a4ca34680747dade9d8fbae7c"
+      "bytes": 29196,
+      "sha256": "a7d8e668a81703641dfa45db89d52c780d160c7eb877b9d772c3bf639d1723b6"
     },
     {
       "path": "module-05/mod-05-overview-breathing-and-lung-conditions-copd-and-asthma.md",
@@ -724,8 +729,8 @@
     {
       "path": "module-05/mod-05-required-readings-breathing-and-lung-conditions-copd-and-asthma.html",
       "format": "html",
-      "bytes": 45147,
-      "sha256": "9ed32202e44223f59c19242c5ba23de016d891b958305dee091dba20f17c9ac5"
+      "bytes": 45149,
+      "sha256": "0f9e6d7625caf5302b66adfb9b49517dbd517281c2fef67353e67afb624359cc"
     },
     {
       "path": "module-05/mod-05-required-readings-breathing-and-lung-conditions-copd-and-asthma.md",
@@ -736,8 +741,8 @@
     {
       "path": "module-05/mod-05-summary-and-wrap-up-breathing-and-lung-conditions-copd-and-asthma.html",
       "format": "html",
-      "bytes": 51416,
-      "sha256": "bd07a0dfac05955bf644ea938736fcda5c56f5c5b59d23890e870b9be676b552"
+      "bytes": 51418,
+      "sha256": "200094ef7fe0c12807666e0836796baea486b3650f6e40532b54ab37c44d114d"
     },
     {
       "path": "module-05/mod-05-summary-and-wrap-up-breathing-and-lung-conditions-copd-and-asthma.md",
@@ -748,8 +753,8 @@
     {
       "path": "module-06/mod-06-lab-and-simulation-01.html",
       "format": "html",
-      "bytes": 71160,
-      "sha256": "f8023045858610363077f4cb3d3dc23e8f9c8625c47ba41cbfa68b3356277f6a"
+      "bytes": 71162,
+      "sha256": "c5bab84f9ee94ddde3f3a24024e32a683f5f08ba7e1d72f61e5b62979fb3c26c"
     },
     {
       "path": "module-06/mod-06-lab-and-simulation-01.md",
@@ -760,8 +765,8 @@
     {
       "path": "module-06/mod-06-lab-and-simulation-02.html",
       "format": "html",
-      "bytes": 63750,
-      "sha256": "2b092f9623af9f5016a718433afed16c6e308108d866b93b82e2014519d9ce8f"
+      "bytes": 63752,
+      "sha256": "c6691fc349dfad4c12d7f366e3594bc0abff33887d61101f12cd812e7a6bbe69"
     },
     {
       "path": "module-06/mod-06-lab-and-simulation-02.md",
@@ -772,8 +777,8 @@
     {
       "path": "module-06/mod-06-clinical-discussion.html",
       "format": "html",
-      "bytes": 31326,
-      "sha256": "1f4b6bf3d2ad5c95807ecb804ca5350289f7465c1ee586a0c29bcc4ce6bd2ae1"
+      "bytes": 31328,
+      "sha256": "d10b687ebceda46c8bedafae87fa7c7424f65d794eed2b23c7076ec92e4d0969"
     },
     {
       "path": "module-06/mod-06-clinical-discussion.md",
@@ -784,8 +789,8 @@
     {
       "path": "module-06/mod-06-overview-high-blood-pressure-and-medication-safety.html",
       "format": "html",
-      "bytes": 30291,
-      "sha256": "3cd38c0b42cd994b1469f8a7a735853de106cf58ecd761bcfaaaa1fa858d99dd"
+      "bytes": 30293,
+      "sha256": "2405ab62f120a910b558ed141a1474a1728e1e51d76f4f82571488678a80120b"
     },
     {
       "path": "module-06/mod-06-overview-high-blood-pressure-and-medication-safety.md",
@@ -796,8 +801,8 @@
     {
       "path": "module-06/mod-06-required-readings-high-blood-pressure-and-medication-safety.html",
       "format": "html",
-      "bytes": 58914,
-      "sha256": "968cd4020025649f7f7cd0a09cfb8e85080a2dc77127dd85d01fd059d7763df0"
+      "bytes": 58916,
+      "sha256": "43e2dfbdf2fcb29d9196e397ef020ec0a293ea79189002cdb905ee1dc0a2050f"
     },
     {
       "path": "module-06/mod-06-required-readings-high-blood-pressure-and-medication-safety.md",
@@ -808,8 +813,8 @@
     {
       "path": "module-06/mod-06-summary-and-wrap-up-high-blood-pressure-and-medication-safety.html",
       "format": "html",
-      "bytes": 50956,
-      "sha256": "3518bf299137108e49a0105b8950fa5f269052ba10a99facd1140d9ee59d07e0"
+      "bytes": 50958,
+      "sha256": "57e2c906f90dabb227888de7841e9a24beec7b8e4d40d7db14dfdb8849a54446"
     },
     {
       "path": "module-06/mod-06-summary-and-wrap-up-high-blood-pressure-and-medication-safety.md",
@@ -820,8 +825,8 @@
     {
       "path": "module-07/mod-07-lab-and-simulation-01.html",
       "format": "html",
-      "bytes": 41426,
-      "sha256": "7c110dc289f7ed2f71a788a298a45dcdcb311d0070a0663a5e257a3ea64d7e7b"
+      "bytes": 41428,
+      "sha256": "8b8cfddd814909e4020608afa193208afae8061723472bbe5e188d151c3c997a"
     },
     {
       "path": "module-07/mod-07-lab-and-simulation-01.md",
@@ -832,8 +837,8 @@
     {
       "path": "module-07/mod-07-lab-and-simulation-02.html",
       "format": "html",
-      "bytes": 63529,
-      "sha256": "07233f905f9ace12a6189da44006893f6105eb529d9a9fea26b96f17cad98fb4"
+      "bytes": 63531,
+      "sha256": "20a1947ad8b014713890536b1651cd24b2ad13c7ad8b9a37fc2e1a320f185f23"
     },
     {
       "path": "module-07/mod-07-lab-and-simulation-02.md",
@@ -844,8 +849,8 @@
     {
       "path": "module-07/mod-07-lab-and-simulation-03.html",
       "format": "html",
-      "bytes": 63379,
-      "sha256": "c3cdffdc3e5f4c1921a23e4ce156027f40884bbe94421544db4d10d3f6a605fc"
+      "bytes": 63381,
+      "sha256": "2f27d58628f875a1e5deafe542e0945a2239dc37f96aa65f2b4f0588fe3c5f69"
     },
     {
       "path": "module-07/mod-07-lab-and-simulation-03.md",
@@ -856,8 +861,8 @@
     {
       "path": "module-07/mod-07-overview-metabolic-syndrome-and-blood-sugar-management.html",
       "format": "html",
-      "bytes": 29861,
-      "sha256": "6b12418ccd1324b38eade91b9d6eb4056ec65012e5a42db3337514a8e13b54ae"
+      "bytes": 29863,
+      "sha256": "4a4015cb6c957413034345d4ba3911eaae1ec6d6bac6a3c4a1e4fe461619ccc4"
     },
     {
       "path": "module-07/mod-07-overview-metabolic-syndrome-and-blood-sugar-management.md",
@@ -868,8 +873,8 @@
     {
       "path": "module-07/mod-07-required-readings-metabolic-syndrome-and-blood-sugar-management.html",
       "format": "html",
-      "bytes": 56402,
-      "sha256": "e46e24a2a493f1c0510b3343752b1fd3d2ffd0c6227ef4405c8ff4092f42d62b"
+      "bytes": 56404,
+      "sha256": "47361d68e883aba6baddf595e80dc01b2f77d96dca4f233f8be2cf5eb774be13"
     },
     {
       "path": "module-07/mod-07-required-readings-metabolic-syndrome-and-blood-sugar-management.md",
@@ -880,8 +885,8 @@
     {
       "path": "module-07/mod-07-summary-and-wrap-up-metabolic-syndrome-and-blood-sugar-management.html",
       "format": "html",
-      "bytes": 49823,
-      "sha256": "e53cf8493911c77b183ff59ce8f6356162e9129c42f609e35d27317b3d05239a"
+      "bytes": 49825,
+      "sha256": "d0cdc8de524cbc90b6f20767c90b8e0698b0b6b896093adafcbc91bda2f71966"
     },
     {
       "path": "module-07/mod-07-summary-and-wrap-up-metabolic-syndrome-and-blood-sugar-management.md",
@@ -892,8 +897,8 @@
     {
       "path": "module-08/mod-08-lab-and-simulation-01.html",
       "format": "html",
-      "bytes": 17497,
-      "sha256": "cc48f8cebe1fc5e9afeacde3d9bdf20fa4080c73f38059b40ecad67d1db46314"
+      "bytes": 17499,
+      "sha256": "574683338b7f0a67472aa22919bb0ba20c8878caad3bfc9d03f8f89de24bf048"
     },
     {
       "path": "module-08/mod-08-lab-and-simulation-01.md",
@@ -904,8 +909,8 @@
     {
       "path": "module-08/mod-08-lab-and-simulation-02.html",
       "format": "html",
-      "bytes": 66771,
-      "sha256": "a0c0fdc93cd0dcec918ece6f5ea0c7c0d9a2842c050c579ae24e764f4ef84121"
+      "bytes": 66773,
+      "sha256": "d5e66141aade44cbe7435f55dd62571d519ac5ffc268639f5b222bcf1b1da4d5"
     },
     {
       "path": "module-08/mod-08-lab-and-simulation-02.md",
@@ -916,8 +921,8 @@
     {
       "path": "module-08/mod-08-lab-and-simulation-03.html",
       "format": "html",
-      "bytes": 53335,
-      "sha256": "f3a12e638376debf9d64bdbbe0e35fcb6cfb53e81fc24e26612405c3796b6e24"
+      "bytes": 53337,
+      "sha256": "647748e4b9bac06d778793a4a802b39328bed0b6f8c7586202201addeb575e57"
     },
     {
       "path": "module-08/mod-08-lab-and-simulation-03.md",
@@ -928,8 +933,8 @@
     {
       "path": "module-08/mod-08-overview-fitness-testing-vital-signs-and-warning-signs.html",
       "format": "html",
-      "bytes": 24695,
-      "sha256": "3f8a888d7424dba9120a89f17f5df8b989e9018b1d42f38b2427d1942a94736a"
+      "bytes": 24697,
+      "sha256": "96d6a61b5b88dc3fe728ade09f8744d7e54ceba888ecff60bdf5a6dc7e9b487b"
     },
     {
       "path": "module-08/mod-08-overview-fitness-testing-vital-signs-and-warning-signs.md",
@@ -940,8 +945,8 @@
     {
       "path": "module-08/mod-08-required-readings-fitness-testing-vital-signs-and-warning-signs.html",
       "format": "html",
-      "bytes": 40633,
-      "sha256": "968b5f100c3b702509c2f15e56921b8354ab8f4ce568c4ecc7762cb959779a26"
+      "bytes": 40635,
+      "sha256": "801d46d992515c6e9fe7a59d892d31dadfc9d65cfc61211ddde17185464376de"
     },
     {
       "path": "module-08/mod-08-required-readings-fitness-testing-vital-signs-and-warning-signs.md",
@@ -952,8 +957,8 @@
     {
       "path": "module-08/mod-08-summary-and-wrap-up-fitness-testing-vital-signs-and-warning-signs.html",
       "format": "html",
-      "bytes": 34553,
-      "sha256": "36180abdd3f1ae7170e389ab4ac8ba01c4cc8fe0958ff6d652f20b995c79d144"
+      "bytes": 34555,
+      "sha256": "5cac4172966c014ce4633bf375397396b54f29de0026dba7ff5403013064300e"
     },
     {
       "path": "module-08/mod-08-summary-and-wrap-up-fitness-testing-vital-signs-and-warning-signs.md",
@@ -964,8 +969,8 @@
     {
       "path": "module-09/mod-09-lab-and-simulation-01.html",
       "format": "html",
-      "bytes": 67744,
-      "sha256": "2ea21a78536a35bce04c1a80453e130ca546800c3ca2f8291dc7664b641193df"
+      "bytes": 67747,
+      "sha256": "2707fa2a58cd8f4269bfe80352e9a72b7403309460d837c608ed17df28590eb5"
     },
     {
       "path": "module-09/mod-09-lab-and-simulation-01.md",
@@ -976,8 +981,8 @@
     {
       "path": "module-09/mod-09-lab-and-simulation-02.html",
       "format": "html",
-      "bytes": 67342,
-      "sha256": "133c761ccb2f4efa083d6d25cf441cd3ff4660a68f01115953c19167fa643d79"
+      "bytes": 67345,
+      "sha256": "623cd8ad1bbf8cc970ae633d7ab20eea842d9e93be1f6c4a3c6a1685539acf33"
     },
     {
       "path": "module-09/mod-09-lab-and-simulation-02.md",
@@ -988,8 +993,8 @@
     {
       "path": "module-09/mod-09-clinical-discussion.html",
       "format": "html",
-      "bytes": 37247,
-      "sha256": "e92e0add38b3be4772ef38230a1cd05158aee1c7613c49e53b8c5927961e8651"
+      "bytes": 37250,
+      "sha256": "4998f7fa32a80b7e2758eb8d4c6a3270dc6aae4b9d0d1d7359570b192e11ef6f"
     },
     {
       "path": "module-09/mod-09-clinical-discussion.md",
@@ -1000,8 +1005,8 @@
     {
       "path": "module-09/mod-09-overview-heart-conditions-medical-clearance-and-heat-safety.html",
       "format": "html",
-      "bytes": 26713,
-      "sha256": "04bb76225adf91d4f0c690222078af43209fe2a69441dbed4326e5d5804950a5"
+      "bytes": 26715,
+      "sha256": "067ea4a4f60b7e5691de08fe175555b75c3c92682c6f703d72043cfbd8e75bdc"
     },
     {
       "path": "module-09/mod-09-overview-heart-conditions-medical-clearance-and-heat-safety.md",
@@ -1012,8 +1017,8 @@
     {
       "path": "module-09/mod-09-required-readings-heart-conditions-medical-clearance-and-heat-safety.html",
       "format": "html",
-      "bytes": 22673,
-      "sha256": "d4920df6e5da291fcad8e5eafa2b6782d4724e5d76de7a3d13c5ba3ab31282c2"
+      "bytes": 22675,
+      "sha256": "dc4afaaa0c32d6898a32f28829f50ae9558df927ce6de6bf94a3330b6a9015dd"
     },
     {
       "path": "module-09/mod-09-required-readings-heart-conditions-medical-clearance-and-heat-safety.md",
@@ -1024,8 +1029,8 @@
     {
       "path": "module-09/mod-09-summary-and-wrap-up-heart-conditions-medical-clearance-and-heat-safety.html",
       "format": "html",
-      "bytes": 34458,
-      "sha256": "3792d99e1255966a311c4f665d75a270d42e7bbacf897ea5478f44b5bb430bdf"
+      "bytes": 34460,
+      "sha256": "c8f1b76f2621545d6dabd105c03e1d5ba643801f0f0057554cb5b766ae6fced5"
     },
     {
       "path": "module-09/mod-09-summary-and-wrap-up-heart-conditions-medical-clearance-and-heat-safety.md",
@@ -1036,8 +1041,8 @@
     {
       "path": "module-10/mod-10-lab-and-simulation-01.html",
       "format": "html",
-      "bytes": 71162,
-      "sha256": "4b9b0870b8ae8101ee4c82a88df6081971636307d76980f7b96d315672993b2d"
+      "bytes": 71164,
+      "sha256": "0a2471b5f438b9381128629aa3a4bd5055a9d044613d5b5457468463fc7fe3c4"
     },
     {
       "path": "module-10/mod-10-lab-and-simulation-01.md",
@@ -1048,8 +1053,8 @@
     {
       "path": "module-10/mod-10-lab-and-simulation-02.html",
       "format": "html",
-      "bytes": 85164,
-      "sha256": "fe8e4231d9a60ed05e2e332bda0d573cbe3ffbd256b02061337e882b7c951749"
+      "bytes": 85166,
+      "sha256": "54f292051b968542f2cef8977d90077b7a472521071c1d3b95741ac86d21e467"
     },
     {
       "path": "module-10/mod-10-lab-and-simulation-02.md",
@@ -1060,8 +1065,8 @@
     {
       "path": "module-10/mod-10-clinical-discussion.html",
       "format": "html",
-      "bytes": 43214,
-      "sha256": "afa6c092dfe94482761520202665d11f73650c9f6595164c7a93f2931e88609e"
+      "bytes": 43216,
+      "sha256": "586f156297241c8b711bc25d2ad92850b8bf9ebcfcb6ea77bff39aaf626b721e"
     },
     {
       "path": "module-10/mod-10-clinical-discussion.md",
@@ -1072,8 +1077,8 @@
     {
       "path": "module-10/mod-10-overview-chronic-lung-conditions-and-air-quality-safety.html",
       "format": "html",
-      "bytes": 30043,
-      "sha256": "1d33cdb4455cf3274c53f5b8a93ea8022ba354af460c25ee4c804ed006ef0729"
+      "bytes": 30045,
+      "sha256": "af5ab67821528d6fdfec39b40232fae4cd778b0d93ab6aa6babef78202ba8d25"
     },
     {
       "path": "module-10/mod-10-overview-chronic-lung-conditions-and-air-quality-safety.md",
@@ -1084,8 +1089,8 @@
     {
       "path": "module-10/mod-10-required-readings-chronic-lung-conditions-and-air-quality-safety.html",
       "format": "html",
-      "bytes": 26339,
-      "sha256": "20b0c0da9085f05c1f36179040fc0c3498bf0cfc3b030d5986f2b4858af993e9"
+      "bytes": 26341,
+      "sha256": "56ecda0bcdb5a7ec1306ad6a2311e6a754948ece2580a674a1ebafe7245ceae9"
     },
     {
       "path": "module-10/mod-10-required-readings-chronic-lung-conditions-and-air-quality-safety.md",
@@ -1096,8 +1101,8 @@
     {
       "path": "module-10/mod-10-summary-and-wrap-up-chronic-lung-conditions-and-air-quality-safety.html",
       "format": "html",
-      "bytes": 39532,
-      "sha256": "3cafbd867fc575b36c30d0b753a58d1a57756b3e446089715e96772d0af2f000"
+      "bytes": 39534,
+      "sha256": "395caf64c43e4dc354220158183ef951b1287521c51c46afc9f9e3ddaa1bced8"
     },
     {
       "path": "module-10/mod-10-summary-and-wrap-up-chronic-lung-conditions-and-air-quality-safety.md",
@@ -1108,8 +1113,8 @@
     {
       "path": "module-11/mod-11-lab-and-simulation-01.html",
       "format": "html",
-      "bytes": 73260,
-      "sha256": "bfc718691700b50e12358b54408f126f3d0e8b2ed0d83dbc02675fcb34fa4098"
+      "bytes": 73263,
+      "sha256": "641c09e7093ce921c8990d4be0894e77f34caeb71125fe4588f4179f2dd067af"
     },
     {
       "path": "module-11/mod-11-lab-and-simulation-01.md",
@@ -1120,8 +1125,8 @@
     {
       "path": "module-11/mod-11-lab-and-simulation-02.html",
       "format": "html",
-      "bytes": 81460,
-      "sha256": "4cc1f6c8f85412120c3f554c7d8c17a947ea7a9e2b57252ee0c6c27377dedfeb"
+      "bytes": 81463,
+      "sha256": "b07e61c602ba688cc608471483535c1f5078ce8dc7a102064f62c123b19973f1"
     },
     {
       "path": "module-11/mod-11-lab-and-simulation-02.md",
@@ -1132,8 +1137,8 @@
     {
       "path": "module-11/mod-11-clinical-discussion.html",
       "format": "html",
-      "bytes": 46020,
-      "sha256": "eba03e719609535088103bd56a86ded8ede15ebabaecff57f8fd81850e4339ee"
+      "bytes": 46023,
+      "sha256": "851ff5f3e84833d53ad66cd38c7a83910fa9a5f620c4d5f52d18df94c1e3c3e7"
     },
     {
       "path": "module-11/mod-11-clinical-discussion.md",
@@ -1144,8 +1149,8 @@
     {
       "path": "module-11/mod-11-overview-diabetes-weight-management-and-low-impact-exercise.html",
       "format": "html",
-      "bytes": 33651,
-      "sha256": "9a4a2afe14252a6dc606cce3f57a11361928c31320936ce28e09a68ccf71090a"
+      "bytes": 33654,
+      "sha256": "1e7031a47892fcc4a6698490481a636704f79ac7f9c1d7e441c9fc4ee47cc7e7"
     },
     {
       "path": "module-11/mod-11-overview-diabetes-weight-management-and-low-impact-exercise.md",
@@ -1156,8 +1161,8 @@
     {
       "path": "module-11/mod-11-required-readings-diabetes-weight-management-and-low-impact-exercise.html",
       "format": "html",
-      "bytes": 30216,
-      "sha256": "9e90c9cd9e669c7c71bfe1e7639be220f7657c30fafb42bcec6e16c8f5a1af60"
+      "bytes": 30219,
+      "sha256": "b8c0eb97f97642ccf0c3957cde858c3ee87be9989e2e3677cbfb1d2ce486a682"
     },
     {
       "path": "module-11/mod-11-required-readings-diabetes-weight-management-and-low-impact-exercise.md",
@@ -1168,8 +1173,8 @@
     {
       "path": "module-11/mod-11-summary-and-wrap-up-diabetes-weight-management-and-low-impact-exercise.html",
       "format": "html",
-      "bytes": 41238,
-      "sha256": "dd37c0926ba71b89fa102265aed1f2784321cbe0c3d7726d831664a714364796"
+      "bytes": 41241,
+      "sha256": "30d176e92086ea9de7fce660afa754bc5dde97bf64fc820beb811ee6dbe9143f"
     },
     {
       "path": "module-11/mod-11-summary-and-wrap-up-diabetes-weight-management-and-low-impact-exercise.md",
@@ -1180,8 +1185,8 @@
     {
       "path": "module-12/mod-12-lab-and-simulation-01.html",
       "format": "html",
-      "bytes": 74096,
-      "sha256": "b2778031a5e819beb6ea61ffceab2a976af1d739860745fbf8b44fa888df20f8"
+      "bytes": 74097,
+      "sha256": "ec48860f61dcc0cb57a159e4ad181acb3b96c2f60b68f4b1dc763ab108da4f4b"
     },
     {
       "path": "module-12/mod-12-lab-and-simulation-01.md",
@@ -1192,8 +1197,8 @@
     {
       "path": "module-12/mod-12-lab-and-simulation-02.html",
       "format": "html",
-      "bytes": 61166,
-      "sha256": "420cacdaa8ce7070de11de6c33b11530db09e0d23d791c4dad722bd3d42752a0"
+      "bytes": 61167,
+      "sha256": "0f71e520e94e561c5f1a17da19d7b99c2978875b19877e521986a960d598b7e9"
     },
     {
       "path": "module-12/mod-12-lab-and-simulation-02.md",
@@ -1204,8 +1209,8 @@
     {
       "path": "module-12/mod-12-clinical-discussion.html",
       "format": "html",
-      "bytes": 58046,
-      "sha256": "f5cbe148be548d30784679aca43dafeb03eb1f08cb7f37ad7d2f36469880826e"
+      "bytes": 58047,
+      "sha256": "2ceee454ef8923f04b7fa117861de17b318e9364d46a952cd37eece99dfbdc0c"
     },
     {
       "path": "module-12/mod-12-clinical-discussion.md",
@@ -1252,8 +1257,8 @@
     {
       "path": "module-13/mod-13-lab-and-simulation-01.html",
       "format": "html",
-      "bytes": 74198,
-      "sha256": "b482d4c471cd96ecf0e4d1718ac5426c66854613c0e659adc538857297d8b710"
+      "bytes": 74199,
+      "sha256": "22b1b449e5f00d9dce8b1b43d2c9291010c4055d0e74b5b12e14bd9072190ce1"
     },
     {
       "path": "module-13/mod-13-lab-and-simulation-01.md",
@@ -1264,8 +1269,8 @@
     {
       "path": "module-13/mod-13-lab-and-simulation-02.html",
       "format": "html",
-      "bytes": 60396,
-      "sha256": "0fa6c20e815a6fcd8aa8eea75e62f4b9e49367a4f8f3697c3348836daa01a262"
+      "bytes": 60397,
+      "sha256": "fc014ef1578895a683f45c64f8a8f772a7ba79b429218e54d03bb2383d1b5b4a"
     },
     {
       "path": "module-13/mod-13-lab-and-simulation-02.md",
@@ -1276,8 +1281,8 @@
     {
       "path": "module-13/mod-13-clinical-discussion.html",
       "format": "html",
-      "bytes": 58224,
-      "sha256": "2fbf424c46d6348c954948a5b34847f53139556302cd414ec9bb77b813426dd7"
+      "bytes": 58225,
+      "sha256": "7816868f3710c1e78843b80ad2b906e7aa692ee3ddef60c5184948e471361a75"
     },
     {
       "path": "module-13/mod-13-clinical-discussion.md",
@@ -1312,8 +1317,8 @@
     {
       "path": "module-13/mod-13-summary-and-wrap-up-nerve-conditions-stroke-parkinsons-and-ms.html",
       "format": "html",
-      "bytes": 39126,
-      "sha256": "a6474292b1cde5ef8e9daeda4c336259e7904246f830ddae1e2d464cd1f7ec4f"
+      "bytes": 39128,
+      "sha256": "ca8de257a99d5162b3c0952457fee10a56204488c836726f69487aa681703e81"
     },
     {
       "path": "module-13/mod-13-summary-and-wrap-up-nerve-conditions-stroke-parkinsons-and-ms.md",
@@ -1324,8 +1329,8 @@
     {
       "path": "module-14/mod-14-lab-and-simulation-01.html",
       "format": "html",
-      "bytes": 20807,
-      "sha256": "50d9325f43ffbfcf04b717783ca46927d9a66e13f35ebd5789c60853dbbbbea1"
+      "bytes": 20810,
+      "sha256": "d65abb76f53493bff1cfe83ea117d66388be0fffc59d40d1fb1f0b96a3592caf"
     },
     {
       "path": "module-14/mod-14-lab-and-simulation-01.md",
@@ -1336,8 +1341,8 @@
     {
       "path": "module-14/mod-14-lab-and-simulation-02.html",
       "format": "html",
-      "bytes": 74212,
-      "sha256": "8c101074c07f6ab101af03c67edd5bcd9b0f30f86f6c53e367d195895f5f166b"
+      "bytes": 74213,
+      "sha256": "7d3292ab8f5cc9cf1a3596c48150a85f5ff123754235d358d7ec44e5db9856e5"
     },
     {
       "path": "module-14/mod-14-lab-and-simulation-02.md",
@@ -1348,8 +1353,8 @@
     {
       "path": "module-14/mod-14-lab-and-simulation-03.html",
       "format": "html",
-      "bytes": 60188,
-      "sha256": "f3983b05240b5d86864673b0b578c71334e2121b1280a855e6b0c44e0715e8bb"
+      "bytes": 60189,
+      "sha256": "330f18ff1963753c56d06db2fe72d78aeae81262f28cb8fbd77bbe31b7ccf500"
     },
     {
       "path": "module-14/mod-14-lab-and-simulation-03.md",
@@ -1360,8 +1365,8 @@
     {
       "path": "module-14/mod-14-overview-cancer-recovery-and-fatigue-management.html",
       "format": "html",
-      "bytes": 37191,
-      "sha256": "a8dd828e263505c92c86e21de10457d5909b4723048b173663b85631e539abf3"
+      "bytes": 37193,
+      "sha256": "fbed0d47639915e8c8e1c78ce184112f0442de3b948a1bd6afb5ade7269b5805"
     },
     {
       "path": "module-14/mod-14-overview-cancer-recovery-and-fatigue-management.md",
@@ -1396,8 +1401,8 @@
     {
       "path": "module-15/mod-15-lab-and-simulation-01.html",
       "format": "html",
-      "bytes": 73987,
-      "sha256": "a02c2346ba3a72b97a93c751bd2f7952389f784ff56fda9b3f37669c8f53cab6"
+      "bytes": 73988,
+      "sha256": "046ac6630809112b5ce478b4f7be51b8ee11983fc93c3b11580a4c0ec0f39716"
     },
     {
       "path": "module-15/mod-15-lab-and-simulation-01.md",
@@ -1408,8 +1413,8 @@
     {
       "path": "module-15/mod-15-lab-and-simulation-02.html",
       "format": "html",
-      "bytes": 53539,
-      "sha256": "38d4c8d8abcd16d90d0a4a7bd7ca8cd0e7b4729960bdad881791f66adc4905df"
+      "bytes": 53540,
+      "sha256": "406b283d0b6cb40176f9070b50c13839204a9a860c638b3ef167dab3f3d6e12a"
     },
     {
       "path": "module-15/mod-15-lab-and-simulation-02.md",
@@ -1420,8 +1425,8 @@
     {
       "path": "module-15/mod-15-clinical-discussion.html",
       "format": "html",
-      "bytes": 54722,
-      "sha256": "ba91e2a4c06845bb44b0bea40f756cac85b05331c27bd3b175ebd37ff0478064"
+      "bytes": 54723,
+      "sha256": "502710fda1e4e0241af15c6d5172b53ce39c6d2a41d135b4836a356b443cac36"
     },
     {
       "path": "module-15/mod-15-clinical-discussion.md",
@@ -1468,8 +1473,8 @@
     {
       "path": "module-16/mod-16-lab-and-simulation-01.html",
       "format": "html",
-      "bytes": 73451,
-      "sha256": "68164323bd622e8e2abbe3047dc16d6bead5a2cae880be952c8a4f0d56992993"
+      "bytes": 73452,
+      "sha256": "b5dce0af3c41c8fe09073e3d5c65d1a5d19f92a2e52a05a044eb2e8b0571384c"
     },
     {
       "path": "module-16/mod-16-lab-and-simulation-01.md",
@@ -1480,8 +1485,8 @@
     {
       "path": "module-16/mod-16-lab-and-simulation-02.html",
       "format": "html",
-      "bytes": 55142,
-      "sha256": "3d63045f27b2604e74d1b7fa4a7c6c72a9776f623d23fab28c4db16880dd4400"
+      "bytes": 55143,
+      "sha256": "eb8bf97f42b21b2acad22f58b63228c5d015703a4b6430379f7ce79e5776f2a8"
     },
     {
       "path": "module-16/mod-16-lab-and-simulation-02.md",

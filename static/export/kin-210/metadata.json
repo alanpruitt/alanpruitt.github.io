@@ -14,8 +14,8 @@
   "courseCode": "KIN-210",
   "identifier": "KIN-210-OER-2026-V2.2",
   "version": "2.2.0",
-  "datePublished": "2026-11-08",
-  "dateModified": "2026-11-08",
+  "datePublished": "2026-11-11",
+  "dateModified": "2026-11-11",
   "description": "Standardized ZTC OER module package for KIN-210 (Principles of Personal Training: Program Design & Movement Assessment) incorporating Curriculum-as-Code publishing, the Clinical Framing Protocol (Pattern / Rule / Solve), PAGA 2nd Ed. (2018); ACSM Guidelines 12th Ed. (2025); NASM OPT Model as the Academic Single Source of Truth (SSoT), and the U.S. Department of Labor AI Literacy Framework (TEN No. 07-25) with WCAG 2.2 AA (9:1 Double-Contrast Guard) compliance.",
   "url": "https://alanpruitt.com/export/kin-210/metadata.json",
   "sameAs": [
@@ -40,7 +40,12 @@
     "@id": "https://www.webcognita.com/#organization",
     "name": "Webcognita LLC",
     "url": "https://www.webcognita.com/",
-    "founder": "Alan Lee Pruitt"
+    "founder": {
+      "@type": "Person",
+      "@id": "https://alanpruitt.com/#person",
+      "name": "Alan Lee Pruitt",
+      "url": "https://alanpruitt.com/"
+    }
   },
   "author": {
     "@type": "Person",
@@ -199,7 +204,7 @@
     }
   ],
   "schema_version": "S-A-R-v2.2-OER-Commons-Syndication",
-  "generated_at": "2026-11-08T00:25:53.502179+00:00",
+  "generated_at": "2026-11-11T04:47:31.159846+00:00",
   "course_code": "KIN-210",
   "course_slug": "kin-210",
   "course_title": "Principles of Personal Training: Program Design & Movement Assessment",
@@ -253,8 +258,8 @@
     {
       "path": "module-01/module-00_orientation.html",
       "format": "html",
-      "bytes": 35508,
-      "sha256": "dff3604ca30f721c152f854fb734862b63a58a218a7b6a93ac992935e5e30f28"
+      "bytes": 35509,
+      "sha256": "9044587b284bf04011f79ebb2c591203583b271a756f32433a7c72ccba8cd3fe"
     },
     {
       "path": "module-01/module-00_orientation.md",
@@ -265,8 +270,8 @@
     {
       "path": "module-01/module-01_human_movement.html",
       "format": "html",
-      "bytes": 35987,
-      "sha256": "d01cda9f72f16f07235243094ef745c7ba47ad5a88b4256de223a899f5f5a462"
+      "bytes": 35988,
+      "sha256": "166cd1a057ef711486de5413121f553524aab281592aa110d63494ccd96a9480"
     },
     {
       "path": "module-01/module-01_human_movement.md",
@@ -283,8 +288,8 @@
     {
       "path": "module-02/module-02_anatomy_terminology.html",
       "format": "html",
-      "bytes": 35662,
-      "sha256": "1ce7e4b09ddaf88f1cd32b3ae3e1575e5b99afdd3bc5a4fad9b2f623b3561734"
+      "bytes": 35663,
+      "sha256": "e5728d63dc78d676db9b58354f0a2dee20043bc416e96c8a8c1db69d9c1c7f2e"
     },
     {
       "path": "module-02/module-02_anatomy_terminology.md",
@@ -301,8 +306,8 @@
     {
       "path": "module-03/module-03_cardiorespiratory.html",
       "format": "html",
-      "bytes": 35933,
-      "sha256": "b156a8c3abd9a1ec8a21423dc53fe13e31424663df5122fbd0a5db68839e37c5"
+      "bytes": 35934,
+      "sha256": "df854d781cfa7b9718db539b5cfe933c6172280dfbb4bc5e5071c70069152bbe"
     },
     {
       "path": "module-03/module-03_cardiorespiratory.md",
@@ -319,8 +324,8 @@
     {
       "path": "module-04/module-04_bioenergetics.html",
       "format": "html",
-      "bytes": 35669,
-      "sha256": "82db140639eaed9e04ab8044fb4d1668d487abfe27eb0995fd402a2a82c89ce5"
+      "bytes": 35670,
+      "sha256": "4ba52bc7a66571537f4f682782783b86cadcb5577869d447d9e783a12b96434c"
     },
     {
       "path": "module-04/module-04_bioenergetics.md",
@@ -337,8 +342,8 @@
     {
       "path": "module-05/module-05_biomechanics.html",
       "format": "html",
-      "bytes": 36294,
-      "sha256": "d15848b889aa9fd52ba272bf5db61a8113f3c8aa6fd5278df0f8fe3b988b6891"
+      "bytes": 36295,
+      "sha256": "1fc3a4c408b1f85a7be36090e52f8d360833e814a6fd314dbd16ea5a7748af8d"
     },
     {
       "path": "module-05/module-05_biomechanics.md",
@@ -355,8 +360,8 @@
     {
       "path": "module-06/module-06_assessments.html",
       "format": "html",
-      "bytes": 36200,
-      "sha256": "f882256abbd3f16f5353cc010a12d2a929be7cbb08252cd91b501f9c584e67a8"
+      "bytes": 36201,
+      "sha256": "e10cf834354b1cc41b51f221622ddf1e4d675c1162f73042a4597e5931d1e8e7"
     },
     {
       "path": "module-06/module-06_assessments.md",
@@ -373,8 +378,8 @@
     {
       "path": "module-07/module-07_flexibility.html",
       "format": "html",
-      "bytes": 36072,
-      "sha256": "0e5a5e6fe73b082e26ad1d820ab6cc4a4e7bf5eaa4ab85d5faf5493a5c7274ea"
+      "bytes": 36073,
+      "sha256": "46f872c1311cdfd4e325ae7edcef2a9076fe0423ec3e4182b7ebf35fa72ce3b7"
     },
     {
       "path": "module-07/module-07_flexibility.md",
@@ -391,8 +396,8 @@
     {
       "path": "module-08/module-08_cardio_programming.html",
       "format": "html",
-      "bytes": 35919,
-      "sha256": "53a5caf108a5a598bcc0a0cdf783f59a6905907e4b6b95eaf7b814e703e5381c"
+      "bytes": 35920,
+      "sha256": "6feaf674071d0610df3548d6647135ae31663f514463965be529c4c60a6e7e0b"
     },
     {
       "path": "module-08/module-08_cardio_programming.md",
@@ -409,8 +414,8 @@
     {
       "path": "module-09/module-09_core_balance.html",
       "format": "html",
-      "bytes": 36193,
-      "sha256": "6b40a55d41914120efec9d8b3bff39110a99dd88e017663bbaeb86806f288b12"
+      "bytes": 36194,
+      "sha256": "11901cbdee9d360715ae7330e75269523826199be277caf21019e8d802ce90d5"
     },
     {
       "path": "module-09/module-09_core_balance.md",
@@ -427,8 +432,8 @@
     {
       "path": "module-10/module-10_resistance_training.html",
       "format": "html",
-      "bytes": 36920,
-      "sha256": "af27122f73bbbf8276276d31101e58cb1ee5d26a8a64b622e6bb0b941ea7af1c"
+      "bytes": 36921,
+      "sha256": "493dcffe05f60823b0267821b05b155da46abb6bdb6926cbf7fec3964923bae8"
     },
     {
       "path": "module-10/module-10_resistance_training.md",
@@ -445,8 +450,8 @@
     {
       "path": "module-11/module-11_saq_training.html",
       "format": "html",
-      "bytes": 36253,
-      "sha256": "afbb75165faf27b97f9f04c3266f640ede23270734b84b71f672ae7f94b242a4"
+      "bytes": 36254,
+      "sha256": "350dd6aab8d09381cadafcf10c5b5ec0c4df1a6ccbef7ce01caafd6787a3a264"
     },
     {
       "path": "module-11/module-11_saq_training.md",
@@ -463,8 +468,8 @@
     {
       "path": "module-12/module-12_nutrition.html",
       "format": "html",
-      "bytes": 35700,
-      "sha256": "820338d845000e7d68d146c5bd87283466d62820c9f4219a3babaffb3f48245e"
+      "bytes": 35701,
+      "sha256": "4ed8029d9c947f0aeb24b10a67849c539412f3c46112e8e7a26495493d80d0c8"
     },
     {
       "path": "module-12/module-12_nutrition.md",
@@ -481,8 +486,8 @@
     {
       "path": "module-13/module-13_special_considerations.html",
       "format": "html",
-      "bytes": 35859,
-      "sha256": "16c695a5f9b764594c0ddce9d0845e0f8cec98a1c0c5ca5db03474fded983bf6"
+      "bytes": 35860,
+      "sha256": "0a0a2b424713abbf5f8f7ad113c3db5bd307519323fe3385ff623c2c1bbe271d"
     },
     {
       "path": "module-13/module-13_special_considerations.md",
@@ -499,8 +504,8 @@
     {
       "path": "module-14/module-14_behavioral_coaching.html",
       "format": "html",
-      "bytes": 35001,
-      "sha256": "3d0f9a476ef1374e6d84e2978eb89dd96042f7f4e5e2771d24268b590cedbc0a"
+      "bytes": 35002,
+      "sha256": "f736c9fd7c34eba009914dd3d416daa8cbb1266c887a5d88008a94ef38bebead"
     },
     {
       "path": "module-14/module-14_behavioral_coaching.md",
@@ -517,8 +522,8 @@
     {
       "path": "module-15/module-15_professional_dev.html",
       "format": "html",
-      "bytes": 35261,
-      "sha256": "5b816354ef71cfefe2c58dcc217f3d2404ac6ae3a37c207c49378a4592321012"
+      "bytes": 35262,
+      "sha256": "1227fff1ca7ebad058aba9a952fc01251240fcae363dde8c32a8400e37560fb0"
     },
     {
       "path": "module-15/module-15_professional_dev.md",
@@ -535,8 +540,8 @@
     {
       "path": "module-16/module-16_capstone.html",
       "format": "html",
-      "bytes": 35013,
-      "sha256": "9f9095be2af34a57823f11237136c25324b5000fcc87dfddf6336c21a24c591c"
+      "bytes": 35014,
+      "sha256": "c1114cf4b1f3c99ac6886b2175151968082281dff3e6c77b50e67ff49995ec79"
     },
     {
       "path": "module-16/module-16_capstone.md",
