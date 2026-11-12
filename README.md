@@ -9,7 +9,7 @@
 - **Live Portfolio:** [https://alanpruitt.com](https://alanpruitt.com) ([Español / Norteño-Spanish](https://alanpruitt.com/es/))
 - **Google Developer Profile & Verified Credentials:** [https://me.developers.google.com/u/alanpruitt](https://me.developers.google.com/u/alanpruitt) (*Google Gemini Certified Faculty • Google AI Professional Certificate • Google Prompting Essentials • Google Project Management Capstone • Google Cloud Launchpad for Veterans*)
 - **Workshops & Public Canvas Proof Hub (`EXW-Demo 42051`):** [https://alanpruitt.com/workshops/](https://alanpruitt.com/workshops/)
-- **Corporate & Federal SDVOSB Practice:** [https://www.webcognita.com](https://www.webcognita.com) (`SAM.gov UEI: EZ34U9KNJA17` • `CAGE: 4ZCN6` • EIN `81-0809739`)
+- **Corporate & Federal SDVOSB Practice:** [https://www.webcognita.com](https://www.webcognita.com) (`SAM.gov UEI: EZ34U9KNJA17` • `CAGE: 4ZCN6` • EIN `81-0809739` • [1-Page Capabilities Statement](https://www.webcognita.com/capabilities-statement.html) • [2-Page ATS Principal CV](https://www.webcognita.com/principal-qualifications.html))
 - **LinkedIn:** [https://www.linkedin.com/in/alanpruitt/](https://www.linkedin.com/in/alanpruitt/)
 - **LLM Portfolio Index (`llms.txt`):** [https://alanpruitt.com/llms.txt](https://alanpruitt.com/llms.txt) • [Full Corpus (`llms-full.txt`)](https://alanpruitt.com/llms-full.txt)
 
@@ -45,7 +45,7 @@
   5. [Project Horizon White Paper: Benchmarking W3C WCAG 3.0 APCA (`100,000+ Lux`) & Norteño-Spanish Screen-Reader Linting (PDF)](https://alanpruitt.com/docs/Project_Horizon_WCAG3_APCA_and_Norteno_ScreenReader_White_Paper.pdf)
   6. [Project Horizon: Vendor-Agnostic Air-Gapped Edge Testbed & Optical Telemetry Specifications (PDF)](https://alanpruitt.com/docs/Project_Horizon_Vendor-agnostic_Technical_Specs.pdf)
 - **Spring 2027 Active & Warm-Standby Fleet Architecture:**
-  - `EXW-150-002`: *Nutrition for Exercise & Sport* (16-Week Full Semester)
+  - `EXW-150-002`: *Nutrition for Exercise & Sport* (1st 8-Week Accelerated)
   - `EXW-265-001`: *Exercise for Special Populations* (16-Week Full Semester)
   - `EXW-101-001`: *Concepts of Kinesiology / Physical Education* (2nd 8-Week Accelerated)
   - `EXW-210`: *Essentials of Personal Fitness Training* (17/17 Modules populated in `SANDBOX-EXW-210-DEV` / `Course ID: 42045`)

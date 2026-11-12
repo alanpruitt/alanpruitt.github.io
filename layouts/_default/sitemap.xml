@@ -6,14 +6,15 @@
   <url>
     <loc>{{ .Permalink }}</loc>{{ if not .Lastmod.IsZero }}
     <lastmod>{{ safeHTML ( .Lastmod.Format "2006-01-02T15:04:05-07:00" ) }}</lastmod>{{ end }}{{ with .Sitemap.ChangeFreq }}
-    <changefreq>{{ . }}</changefreq>{{ end }}{{ if ge .Sitemap.Priority 0.0 }}
+    <changefreq>{{ . }}</changefreq>{{ end }}{{ if .IsHome }}
+    <priority>1.0</priority>{{ else if ge .Sitemap.Priority 0.0 }}
     <priority>{{ .Sitemap.Priority }}</priority>{{ end }}{{ if .IsTranslated }}
     {{- $defaultHref := .Permalink -}}
     {{- range .AllTranslations -}}
       {{- if eq .Language.Lang "en" -}}{{- $defaultHref = .Permalink -}}{{- end -}}
     <xhtml:link
                 rel="alternate"
-                hreflang="{{ .Language.Lang }}"
+                hreflang="{{ if eq .Language.Lang "es" }}es-MX{{ else }}en-US{{ end }}"
                 href="{{ .Permalink }}"
                 />
     {{- end }}
