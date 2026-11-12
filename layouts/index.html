@@ -954,12 +954,18 @@
                                     <div>
                                         <div class="flex items-center justify-between gap-2 mb-1">
                                             <span class="font-mono text-xs font-bold text-navy-900">arquitectodelsabor.dev</span>
-                                            <span class="font-mono text-xs font-semibold px-2 py-0.5 rounded bg-creme-200 text-navy-900">Espa&ntilde;ol I+D</span>
+                                            <span class="font-mono text-xs font-semibold px-2 py-0.5 rounded bg-creme-200 text-navy-900">AZ&ndash;Sonora &bull; es-MX</span>
                                         </div>
-                                        <h4 class="text-sm font-bold text-navy-900 mb-1" lang="es">Arquitecto del Sabor (UArizona)</h4>
-                                        <p class="text-xs text-navy-800 leading-relaxed mb-3">Spanish-language molecular culinary R&amp;D engine uniting flavor compound science with DGA-aligned clinical nutrition.</p>
+                                        <h4 class="text-sm font-bold text-navy-900 mb-1" lang="es">Arquitecto del Sabor (UArizona &bull; Borderlands R&amp;D)</h4>
+                                        <p class="text-xs text-navy-800 leading-relaxed mb-3">
+                                            {{ if eq .Lang "es" }}
+                                                Motor binacional Arizona&ndash;Sonora (<code>es-MX</code>) de I+D culinaria y nutrición DGA con prototipos Métricos/Imperiales y precios de canasta en <code>MXN</code> para San Luis Río Colorado, Sonora y Yuma.
+                                            {{ else }}
+                                                Bi-national Arizona&ndash;Sonora (<code>es-MX</code>) culinary &amp; DGA R&amp;D engine featuring Metric/Imperial formulations and <code>MXN</code> food-access telemetry calibrated for San Luis Río Colorado, Sonora &amp; Yuma.
+                                            {{ end }}
+                                        </p>
                                     </div>
-                                    <div><a href="https://arquitectodelsabor.dev" target="_blank" rel="noopener noreferrer" class="ap-action-link">Launch arquitectodelsabor.dev &rarr;</a></div>
+                                    <div><a href="https://arquitectodelsabor.dev/" target="_blank" rel="noopener noreferrer" class="ap-action-link">{{ if eq .Lang "es" }}Abrir arquitectodelsabor.dev &rarr;{{ else }}Launch arquitectodelsabor.dev &rarr;{{ end }}</a></div>
                                 </div>
 
                                 <div class="ap-card-clean">
