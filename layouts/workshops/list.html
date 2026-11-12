@@ -162,7 +162,7 @@
 
     {{ partial "header.html" . }}
 
-    <main class="w-full max-w-5xl mx-auto px-6 py-8 flex-grow">
+    <main id="main-content" class="w-full max-w-5xl mx-auto px-6 py-8 flex-grow">
 
         <!-- HERO & EXECUTIVE WELCOME CALLOUT -->
         <section class="bg-white p-8 rounded-2xl border-2 border-navy-900 shadow-sm mb-8" aria-labelledby="exw-demo-heading">
@@ -194,7 +194,7 @@
                     {{ if eq .Lang "es" }}
                     <div class="text-base text-navy-900" style="line-height: 1.75;">
                         <p class="mb-4">
-                            Construí este entorno demostrativo en Canvas (no visible para estudiantes inscritos) para mostrar cómo opero la flota de cursos de Ciencias del Ejercicio y Bienestar (<strong>EXW 101</strong>, <strong>EXW 150</strong>, <strong>EXW 210</strong>, <strong>EXW 245</strong> y <strong>EXW 265</strong>) en <strong>Arizona Western College (AWC)</strong> como un ecosistema unificado de <strong>Currículo-como-Código (Curriculum-as-Code)</strong> controlado por versiones en Git. Le invito a explorar el <strong>Portal Maestro (Home Hub)</strong>, la pestaña de <strong>Módulos</strong>—secuenciada de adentro hacia afuera utilizando el <strong>Círculo Dorado de Simon Sinek (<code>POR QUÉ &rarr; CÓMO &rarr; QUÉ</code>)</strong>—el <strong>Programa de Estudio (Syllabus)</strong> y el <strong>Kit de Herramientas Digitales en vivo (<a href="https://exwtoolkit.com" target="_blank" rel="noopener noreferrer" class="font-bold text-navy-900 hover:underline">exwtoolkit.com</a>)</strong>.
+                            Construí este entorno demostrativo en Canvas (no visible para estudiantes inscritos) para mostrar cómo opero la flota de cursos de Ciencias del Ejercicio y Bienestar (<strong>EXW 101</strong>, <strong>EXW 150</strong>, <strong>EXW 210</strong>, <strong>EXW 245</strong> y <strong>EXW 265</strong>) en <strong>Arizona Western College (AWC)</strong> como un ecosistema unificado de <strong>Currículo-como-Código (Curriculum-as-Code)</strong> controlado por versiones en Git. Le invito a explorar el <strong>Portal Maestro (Home Hub)</strong>, la pestaña de <strong>Módulos</strong>—secuenciada mediante la arquitectura soberana de tres etapas (<code>Mandato &rarr; Sistema &rarr; Evidencia</code>)—el <strong>Programa de Estudio (Syllabus)</strong> y el <strong>Kit de Herramientas Digitales en vivo (<a href="https://exwtoolkit.com" target="_blank" rel="noopener noreferrer" class="font-bold text-navy-900 hover:underline">exwtoolkit.com</a>)</strong>.
                         </p>
                         <p style="margin: 0;">
                             En lugar de depender de interfaces tradicionales de chatbots de IA en la nube, impulso mis flujos de trabajo instruccionales utilizando un modelo local de pesos abiertos <strong>Google Gemini Carbon 4 (Gemma)</strong> aislado de internet (<em>air-gapped</em>)—de código abierto, sin cuotas de suscripción SaaS, sin cobro por tokens y con seguridad de confianza cero (<em>zero-trust</em>)—ejecutándose localmente en mi hardware <strong>Apple Silicon M2 (MacBook Air)</strong>.
@@ -203,7 +203,7 @@
                     {{ else }}
                     <div class="text-base text-navy-900" style="line-height: 1.75;">
                         <p class="mb-4">
-                            I built this non-student-facing Canvas showcase shell to show how I run the <strong>Arizona Western College Exercise and Wellness (EXW) fleet</strong> (<strong>EXW 101</strong>, <strong>EXW 150</strong>, <strong>EXW 210</strong>, <strong>EXW 245</strong>, and <strong>EXW 265</strong>) as a unified, Git-version-controlled <strong>Curriculum-as-Code</strong> ecosystem. I invite you to explore the <strong>Home Hub</strong>, the <strong>Modules</strong> tab—sequenced using <strong>Simon Sinek&rsquo;s Golden Circle (<code>WHY &rarr; HOW &rarr; WHAT</code>)</strong>—the <strong>Syllabus</strong> blueprint, and the live <strong>Toolkit (<a href="https://exwtoolkit.com" target="_blank" rel="noopener noreferrer" class="font-bold text-navy-900 hover:underline">exwtoolkit.com</a>)</strong>.
+                            I built this non-student-facing Canvas showcase shell to show how I run the <strong>Arizona Western College Exercise and Wellness (EXW) fleet</strong> (<strong>EXW 101</strong>, <strong>EXW 150</strong>, <strong>EXW 210</strong>, <strong>EXW 245</strong>, and <strong>EXW 265</strong>) as a unified, Git-version-controlled <strong>Curriculum-as-Code</strong> ecosystem. I invite you to explore the <strong>Home Hub</strong>, the <strong>Modules</strong> tab—sequenced through our sovereign three-stage architecture (<code>Mandate &rarr; System &rarr; Proof</code>)—the <strong>Syllabus</strong> blueprint, and the live <strong>Toolkit (<a href="https://exwtoolkit.com" target="_blank" rel="noopener noreferrer" class="font-bold text-navy-900 hover:underline">exwtoolkit.com</a>)</strong>.
                         </p>
                         <p style="margin: 0;">
                             Instead of relying on traditional, cloud-based AI chatbot interfaces, I power my instructional workflows using an <strong>air-gapped Google Gemini Carbon 4 open-weight Gemma model</strong> (open-source with no SaaS/subscriber subscription fees, no tokens, and zero-trust security) running locally on my <strong>Apple Silicon M2 (MacBook Air)</strong> hardware.
@@ -263,7 +263,7 @@
                 </div>
                 {{ if eq .Lang "es" }}
                 <p class="text-sm text-navy-900 mb-3" style="line-height: 1.65;">
-                    A diferencia de los mandatos legales obligatorios como el <strong>Título II de la ADA</strong> o <strong>FERPA</strong>, el aviso <strong>U.S. Department of Labor (DOL) Employment and Training Administration (ETA) Training and Employment Notice (TEN) No. 07-25</strong> (<em>Marco de Alfabetización en Inteligencia Artificial</em>, emitido el 13 de febrero de 2026) es un <strong>marco federal voluntario</strong> diseñado para alinear a los colegios comunitarios y programas de educación técnica y laboral con la preparación nacional en IA. La flota EXW adopta este marco de forma proactiva integrando sus <strong>5 Áreas de Contenido Fundamental</strong> (<em>Comprender Principios de IA, Explorar Usos de IA, Dirigir la IA Eficazmente, Evaluar Resultados, Usar la IA Responsablemente</em>) y sus <strong>7 Principios de Diseño de Entrega para Colegios Comunitarios</strong> (<em>Aprendizaje Experiencial, Aprendizaje en Contexto, Habilidades Humanas Complementarias, Acceso Equitativo $0 ZTC, Rutas de Aprendizaje Continuo, Preparación de Roles Habilitadores y Diseño para la Agilidad</em>) directamente en nuestra arquitectura de <strong>Círculo Dorado (<code>POR QUÉ &rarr; CÓMO &rarr; QUÉ</code>)</strong>.
+                    A diferencia de los mandatos legales obligatorios como el <strong>Título II de la ADA</strong> o <strong>FERPA</strong>, el aviso <strong>U.S. Department of Labor (DOL) Employment and Training Administration (ETA) Training and Employment Notice (TEN) No. 07-25</strong> (<em>Marco de Alfabetización en Inteligencia Artificial</em>, emitido el 13 de febrero de 2026) es un <strong>marco federal voluntario</strong> diseñado para alinear a los colegios comunitarios y programas de educación técnica y laboral con la preparación nacional en IA. La flota EXW adopta este marco de forma proactiva integrando sus <strong>5 Áreas de Contenido Fundamental</strong> (<em>Comprender Principios de IA, Explorar Usos de IA, Dirigir la IA Eficazmente, Evaluar Resultados, Usar la IA Responsablemente</em>) y sus <strong>7 Principios de Diseño de Entrega para Colegios Comunitarios</strong> (<em>Aprendizaje Experiencial, Aprendizaje en Contexto, Habilidades Humanas Complementarias, Acceso Equitativo $0 ZTC, Rutas de Aprendizaje Continuo, Preparación de Roles Habilitadores y Diseño para la Agilidad</em>) directamente en nuestra arquitectura soberana de tres etapas (<code>Mandato &rarr; Sistema &rarr; Evidencia</code>) y el <strong>Protocolo de Encuadre Clínico (<code>Patrón / Regla / Solución</code>)</strong>.
                 </p>
                 <p class="text-sm text-navy-900" style="line-height: 1.65; margin: 0;">
                     <a href="https://azwestern.instructure.com/courses/42051/pages/exw-demo-coach-alan-the-exw-ai-landscape-institutional-alignment-and-literacy" target="_blank" rel="noopener noreferrer" class="font-bold text-navy-900 hover:underline">Inspeccionar el Cruce Completo de TEN No. 07-25 en EXW-Demo (Course ID: 42051) &rarr;</a> &nbsp;|&nbsp;
@@ -271,7 +271,7 @@
                 </p>
                 {{ else }}
                 <p class="text-sm text-navy-900 mb-3" style="line-height: 1.65;">
-                    Unlike statutory civil-rights mandates such as <strong>ADA Title II</strong> or <strong>FERPA</strong>, <strong>U.S. Department of Labor (DOL) Employment and Training Administration (ETA) Training and Employment Notice (TEN) No. 07-25</strong> (<em>Artificial Intelligence Literacy Framework</em>, issued February 13, 2026) is a <strong>voluntary federal workforce and community college framework</strong>. Almost no one in higher education has translated this federal advisory into live course architecture yet. Across the AWC EXW fleet, we proactively operationalize all <strong>5 Foundational Content Areas</strong> (<em>Understand AI Principles, Explore AI Uses, Direct AI Effectively, Evaluate Outputs, Use AI Responsibly</em>) and all <strong>7 Community College Delivery Design Principles</strong> (<em>Experiential Learning, Embedded Context, Complementary Human Judgment, $0 ZTC Equitable Access, Pathways for Continued Learning, Enabling Faculty Roles, and Agile Curriculum-as-Code Design</em>) inside <strong>Simon Sinek&rsquo;s Golden Circle (<code>WHY &rarr; HOW &rarr; WHAT</code>)</strong>.
+                    Unlike statutory civil-rights mandates such as <strong>ADA Title II</strong> or <strong>FERPA</strong>, <strong>U.S. Department of Labor (DOL) Employment and Training Administration (ETA) Training and Employment Notice (TEN) No. 07-25</strong> (<em>Artificial Intelligence Literacy Framework</em>, issued February 13, 2026) is a <strong>voluntary federal workforce and community college framework</strong>. Almost no one in higher education has translated this federal advisory into live course architecture yet. Across the AWC EXW fleet, we proactively operationalize all <strong>5 Foundational Content Areas</strong> (<em>Understand AI Principles, Explore AI Uses, Direct AI Effectively, Evaluate Outputs, Use AI Responsibly</em>) and all <strong>7 Community College Delivery Design Principles</strong> (<em>Experiential Learning, Embedded Context, Complementary Human Judgment, $0 ZTC Equitable Access, Pathways for Continued Learning, Enabling Faculty Roles, and Agile Curriculum-as-Code Design</em>) inside our sovereign three-stage module architecture (<code>Mandate &rarr; System &rarr; Proof</code>) and <strong>The Clinical Framing Protocol (<code>Pattern / Rule / Solve</code>)</strong>.
                 </p>
                 <p class="text-sm text-navy-900" style="line-height: 1.65; margin: 0;">
                     <a href="https://azwestern.instructure.com/courses/42051/pages/exw-demo-coach-alan-the-exw-ai-landscape-institutional-alignment-and-literacy" target="_blank" rel="noopener noreferrer" class="font-bold text-navy-900 hover:underline">Inspect the Live TEN No. 07-25 Crosswalk in EXW-Demo (Course ID: 42051) &rarr;</a> &nbsp;|&nbsp;
@@ -295,7 +295,7 @@
                         {{ if eq .Lang "es" }}Abrir EXW-Demo (Course ID: 42051) &rarr;{{ else }}Launch EXW-Demo (Course ID: 42051) &rarr;{{ end }}
                     </a>
                     <a href="https://azwestern.instructure.com/courses/42051/modules" target="_blank" rel="noopener noreferrer" class="cta-btn" style="background-color: transparent; color: #FAFBF7; border: 2px solid #FAFBF7;">
-                        {{ if eq .Lang "es" }}Explorar Módulos del Círculo Dorado &rarr;{{ else }}Explore Golden Circle Modules &rarr;{{ end }}
+                        {{ if eq .Lang "es" }}Explorar Secuencia de Módulos CaC &rarr;{{ else }}Explore Sovereign CaC Modules &rarr;{{ end }}
                     </a>
                     <a href="https://exwtoolkit.com" target="_blank" rel="noopener noreferrer" class="cta-btn" style="background-color: transparent; color: #FAFBF7; border: 2px solid #FAFBF7;">
                         {{ if eq .Lang "es" }}Abrir exwtoolkit.com &rarr;{{ else }}Launch exwtoolkit.com &rarr;{{ end }}
@@ -332,9 +332,9 @@
                         </h4>
                         <p class="text-xs text-navy-800 mb-3">
                             {{ if eq .Lang "es" }}
-                                Incluye el resumen ejecutivo en lenguaje claro (EN/ES), el flujo diario entre estaciones M1/M2, los enlaces en inglés y doblado al español de "Start With Why" de Simon Sinek y el directorio completo del Círculo Dorado.
+                                Incluye el resumen ejecutivo en lenguaje claro (EN/ES), el flujo diario sincronizado entre estaciones M1/M2, la gobernanza de alfabetización laboral en IA (TEN No. 07-25) y el directorio completo de módulos CaC.
                             {{ else }}
-                                Features the bilingual In Plain English executive overview, the M1/M2 daily workflow playbook, the English and Spanish-dubbed Simon Sinek "Start With Why" TED Talk callout, and the complete Golden Circle directory.
+                                Features the bilingual In Plain English executive overview, the synchronized M1/M2 daily workflow playbook, U.S. DOL TEN No. 07-25 AI literacy governance, and the complete Curriculum-as-Code module directory.
                             {{ end }}
                         </p>
                     </div>
@@ -343,23 +343,23 @@
                     </a>
                 </div>
 
-                <!-- Stop 2: Golden Circle Modules -->
+                <!-- Stop 2: Sovereign 3-Stage Modules -->
                 <div class="p-5 rounded-xl bg-creme-50 border border-creme-200 flex flex-col justify-between">
                     <div>
                         <div class="flex items-center justify-between mb-2">
-                            <span class="font-mono text-xs font-bold text-navy-800">STOP 02 &bull; GOLDEN CIRCLE MODULES</span>
-                            <span class="font-mono text-xs bg-creme-200 text-navy-900 px-2 py-0.5 rounded font-semibold">WHY &rarr; HOW &rarr; WHAT</span>
+                            <span class="font-mono text-xs font-bold text-navy-800">STOP 02 &bull; SOVEREIGN MODULE SPINE</span>
+                            <span class="font-mono text-xs bg-creme-200 text-navy-900 px-2 py-0.5 rounded font-semibold">MANDATE &rarr; SYSTEM &rarr; PROOF</span>
                         </div>
                         <h4 class="text-base font-bold text-navy-900 mb-2">
                             <a href="https://azwestern.instructure.com/courses/42051/modules" target="_blank" rel="noopener noreferrer" class="hover:underline">
-                                Inside-Out Golden Circle Module Sequence (56+ Pages)
+                                Three-Stage Curriculum-as-Code Module Sequence (56+ Pages)
                             </a>
                         </h4>
                         <p class="text-xs text-navy-800 mb-3">
                             {{ if eq .Lang "es" }}
-                                Secuenciado desde el interior hacia afuera: ANILLO 1: EL POR QUÉ (Gobernanza de IA, Derechos Civiles y Equidad HSI), ANILLO 2: EL CÓMO (Los 3 Vehículos de Auditoría y Arquitectura Local) y ANILLO 3: EL QUÉ (Simuladores en Vivo y Pruebas de Acreditación).
+                                Secuenciado en tres etapas deterministas: ETAPA 01: EL MANDATO (Gobernanza de IA, Derechos Civiles y Equidad HSI), ETAPA 02: EL SISTEMA (Los 3 Vehículos de Auditoría y Arquitectura Local) y ETAPA 03: LA EVIDENCIA (Simuladores en Vivo y Pruebas de Acreditación).
                             {{ else }}
-                                Sequenced from the inside-out: RING 1: THE WHY (AI Governance, Civil Rights Accessibility &amp; HSI Equity), RING 2: THE HOW (The 3 Audit Vehicles &amp; Local Apple Silicon Stack), and RING 3: THE WHAT (Live Simulators, 3-Track Labs &amp; Accreditation Proof).
+                                Sequenced across three deterministic tiers: STAGE 01: THE MANDATE (AI Governance, Civil Rights Accessibility &amp; HSI Equity), STAGE 02: THE SYSTEM (The 3 Audit Vehicles &amp; Local Apple Silicon Stack), and STAGE 03: THE PROOF (Live Simulators, 3-Track Labs &amp; Accreditation Evidence).
                             {{ end }}
                         </p>
                     </div>

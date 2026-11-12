@@ -206,7 +206,7 @@ def main():
                 "(3) Direct AI Effectively (Part 1: P-T-C-F Prompt + ### delimiters); (4) Evaluate Outputs (Part 2: 150-Word "
                 "Clinical SSoT Audit); and (5) Use AI Responsibly (Part 3: 150-Word Verbatim Active Verification Defense + "
                 "FERPA zero-PII hygiene) alongside its 7 Community College Delivery Design Principles ($0 ZTC OER, Yuma "
-                "context, experiential exwtoolkit.com simulation, and Golden Circle WHY -> HOW -> WHAT navigation)."
+                "context, experiential exwtoolkit.com simulation, and Sovereign Spine Mandate -> System -> Proof navigation)."
             ),
             "links": COURSE_LINKS["STANDARDS"],
         },

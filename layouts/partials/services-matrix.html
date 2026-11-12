@@ -1,57 +1,60 @@
-<section id="services" class="py-12 sm:py-16 border-b border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-950" aria-labelledby="services-heading">
-  <div class="w-full max-w-6xl px-4 sm:px-6 lg:px-8 mx-auto text-left">
+<div id="services" class="pt-6 border-t border-creme-200" role="region" aria-labelledby="services-heading">
+  <div class="w-full text-left">
     
-    <div class="mb-10 text-left mx-auto">
-      <h2 id="services-heading" class="text-2xl font-extrabold tracking-tight text-zinc-950 dark:text-white sm:text-3xl text-left">
-        {{ if eq .Lang "es" }}Servicios de Arquitectura Institucional y Cumplimiento{{ else }}Institutional Curriculum Architecture & Compliance Services{{ end }}
-      </h2>
-      <p class="mt-2 text-base text-zinc-900 dark:text-zinc-100 text-left">
+    <div class="mb-4 text-left">
+      <h3 id="services-heading" class="text-xl font-extrabold tracking-tight text-navy-900 text-left">
+        {{ if eq .Lang "es" }}Servicios de Arquitectura Institucional y Cumplimiento{{ else }}Institutional Curriculum Architecture &amp; Compliance Services{{ end }}
+      </h3>
+      <p class="mt-1 text-sm text-navy-800 text-left">
         {{ if eq .Lang "es" }}Elimine la responsabilidad regulatoria del Título II de la ADA mediante automatización determinista y soberanía de contenidos.{{ else }}Eliminate ADA Title II regulatory liability through deterministic automation and content sovereignty.{{ end }}
       </p>
     </div>
 
-    <!-- Semantic Service Matrix Table (WCAG 2.2 AA Compliant) -->
-    <div class="overflow-x-auto rounded-xl border border-zinc-200 dark:border-zinc-800" tabindex="0" role="region" aria-labelledby="services-heading">
-      <table class="w-full border-collapse text-left text-sm">
+    <!-- Semantic Service Matrix Table (WCAG 2.2 AA 9:1 Compliant) -->
+    <div class="overflow-x-auto rounded-xl border border-zinc-300 bg-white shadow-sm" tabindex="0" role="region" aria-labelledby="services-caption" style="background-color: #FFFFFF; color: #0B192C;">
+      <table class="w-full border-collapse text-left text-sm" style="background-color: #FFFFFF; color: #0B192C;">
+        <caption id="services-caption" style="padding: 0.75rem 1rem; font-weight: 700; font-size: 0.82rem; text-align: left; background-color: #F4F4F5; color: #0B192C; border-bottom: 1px solid #D4D4D8;">
+          {{ if eq .Lang "es" }}Matriz de Servicios Institucionales: Auditoría ADA Título II, Migración CaC y Habilitación Docente en IA{{ else }}Institutional Service Tracks: ADA Title II Fleet Audits, Curriculum-as-Code Migration, and Faculty GenAI Enablement{{ end }}
+        </caption>
         <thead>
-          <tr class="border-b border-zinc-200 bg-zinc-50 text-zinc-900 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-100">
-            <th scope="col" class="p-4 font-bold uppercase tracking-wider text-xs">Pillar / Service Track</th>
-            <th scope="col" class="p-4 font-bold uppercase tracking-wider text-xs">Methodology</th>
-            <th scope="col" class="p-4 font-bold uppercase tracking-wider text-xs">Institutional Deliverable</th>
+          <tr style="border-bottom: 2px solid #0B192C; background-color: #FFFFFF; color: #0B192C;">
+            <th scope="col" class="p-4 font-bold uppercase tracking-wider text-xs" style="background-color: #FFFFFF; color: #0B192C;">{{ if eq .Lang "es" }}Pilar de Servicio{{ else }}Pillar • Service Track{{ end }}</th>
+            <th scope="col" class="p-4 font-bold uppercase tracking-wider text-xs" style="background-color: #FFFFFF; color: #0B192C;">{{ if eq .Lang "es" }}Metodología Determinista{{ else }}Methodology{{ end }}</th>
+            <th scope="col" class="p-4 font-bold uppercase tracking-wider text-xs" style="background-color: #FFFFFF; color: #0B192C;">{{ if eq .Lang "es" }}Entregable Institucional{{ else }}Institutional Deliverable{{ end }}</th>
           </tr>
         </thead>
-        <tbody class="divide-y divide-zinc-200 dark:divide-zinc-800">
+        <tbody class="divide-y divide-zinc-200">
           <tr>
-            <th scope="row" class="p-4 font-bold text-zinc-950 dark:text-white">
-              1. Fleet ADA Title II Audit
+            <th scope="row" class="p-4 font-bold text-left align-top" style="background-color: #FFFFFF; color: #0B192C;">
+              {{ if eq .Lang "es" }}1. Auditoría de Flota ADA Título II{{ else }}1. Fleet ADA Title II Audit{{ end }}
             </th>
-            <td class="p-4 text-zinc-900 dark:text-zinc-100">
-              POUR-Audit Framework + 9:1 Double-Contrast Guard (Axe-core + Playwright CI/CD)
+            <td class="p-4 align-top" style="background-color: #FFFFFF; color: #0B192C;">
+              {{ if eq .Lang "es" }}Marco POUR-Audit + Guardia de Doble Contraste 9:1 (Axe-core + Playwright CI/CD){{ else }}POUR-Audit Framework + 9:1 Double-Contrast Guard (Axe-core + Playwright CI/CD){{ end }}
             </td>
-            <td class="p-4 text-zinc-900 dark:text-zinc-100">
-              Fleet-wide compliance ledger, 9:1 contrast &amp; WCAG 3.0 cognitive remediation, and heading hierarchy verification.
+            <td class="p-4 align-top" style="background-color: #FFFFFF; color: #0B192C;">
+              {{ if eq .Lang "es" }}Registro auditable de cumplimiento en toda la flota, remediación cognitiva WCAG 3.0 y contraste 9:1, y verificación jerárquica de encabezados.{{ else }}Fleet-wide compliance ledger, 9:1 contrast &amp; WCAG 3.0 cognitive remediation, and heading hierarchy verification.{{ end }}
             </td>
           </tr>
           <tr>
-            <th scope="row" class="p-4 font-bold text-zinc-950 dark:text-white">
-              2. Curriculum-as-Code Migration
+            <th scope="row" class="p-4 font-bold text-left align-top" style="background-color: #FFFFFF; color: #0B192C;">
+              {{ if eq .Lang "es" }}2. Migración a Currículo como Código{{ else }}2. Curriculum-as-Code Migration{{ end }}
             </th>
-            <td class="p-4 text-zinc-900 dark:text-zinc-100">
-              Git SSoT + Canvas GraphQL-First (/api/graphql) &amp; REST API Pipelines (S-A-R Standard)
+            <td class="p-4 align-top" style="background-color: #FFFFFF; color: #0B192C;">
+              {{ if eq .Lang "es" }}Git SSoT + Tuberías Canvas GraphQL (/api/graphql) y REST API (Estándar S-A-R){{ else }}Git SSoT + Canvas GraphQL-First (/api/graphql) &amp; REST API Pipelines (S-A-R Standard){{ end }}
             </td>
-            <td class="p-4 text-zinc-900 dark:text-zinc-100">
-              Decoupling from LMS lock-in, automated syllabus &amp; module deployments, zero configuration drift.
+            <td class="p-4 align-top" style="background-color: #FFFFFF; color: #0B192C;">
+              {{ if eq .Lang "es" }}Independencia del proveedor LMS, despliegue automatizado de programas y módulos con cero deriva de configuración.{{ else }}Decoupling from LMS lock-in, automated syllabus &amp; module deployments, zero configuration drift.{{ end }}
             </td>
           </tr>
           <tr>
-            <th scope="row" class="p-4 font-bold text-zinc-950 dark:text-white">
-              3. Faculty GenAI Enablement
+            <th scope="row" class="p-4 font-bold text-left align-top" style="background-color: #FFFFFF; color: #0B192C;">
+              {{ if eq .Lang "es" }}3. Habilitación Docente en IA Generativa{{ else }}3. Faculty GenAI Enablement{{ end }}
             </th>
-            <td class="p-4 text-zinc-900 dark:text-zinc-100">
-              The Clinical Framing Protocol (Pattern / Rule / Solve) &amp; Sovereign AI Workflows
+            <td class="p-4 align-top" style="background-color: #FFFFFF; color: #0B192C;">
+              {{ if eq .Lang "es" }}Protocolo de Encuadre Clínico (Patrón / Regla / Solución) y Flujos Soberanos de IA{{ else }}The Clinical Framing Protocol (Pattern / Rule / Solve) &amp; Sovereign AI Workflows{{ end }}
             </td>
-            <td class="p-4 text-zinc-900 dark:text-zinc-100">
-              60-min hands-on workshop blueprint: administrative reclamation, Golden Circle alignment, and AI assessment safety.
+            <td class="p-4 align-top" style="background-color: #FFFFFF; color: #0B192C;">
+              {{ if eq .Lang "es" }}Taller práctico de 60 minutos: recuperación de horas docentes, alineación con el Protocolo de Encuadre Clínico y seguridad en evaluaciones con IA.{{ else }}60-min hands-on workshop blueprint: administrative reclamation, Clinical Framing Protocol alignment, and AI assessment safety.{{ end }}
             </td>
           </tr>
         </tbody>
@@ -59,4 +62,4 @@
     </div>
 
   </div>
-</section>
+</div>

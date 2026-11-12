@@ -33,7 +33,7 @@ def build_curated_executive_nodes():
             "id": "qa-dol-ten-07-25-overview",
             "category": "dol-ten-07-25",
             "badge": "US DOL TEN No. 07-25 • Voluntary Framework",
-            "dom_path": "Golden Circle > WHY / HOW / WHAT > TEN 07-25 Crosswalk",
+            "dom_path": "Sovereign Spine > Mandate / System / Proof > TEN 07-25 Crosswalk",
             "title_en": "How does Alan Pruitt operationalize U.S. DOL ETA Advisory TEN No. 07-25 (Feb 13, 2026)?",
             "title_es": "¿Cómo operacionaliza Alan Pruitt el Aviso U.S. DOL ETA TEN No. 07-25 (13 de feb. de 2026)?",
             "answer_en": (
@@ -44,14 +44,14 @@ def build_curated_executive_nodes():
                 "(1. Understand AI Principles, 2. Explore AI Uses, 3. Direct AI Effectively, 4. Evaluate Outputs, "
                 "5. Use AI Responsibly) and all 7 Community College Delivery Design Principles (1. Experiential Learning, "
                 "2. Embedded Context, 3. Complementary Human Skills, 4. $0 ZTC Prerequisite & Equitable Access, "
-                "5. Continued Learning Pathways, 6. Enabling Faculty Roles, 7. Agile Design) directly into Simon Sinek's "
-                "Golden Circle (WHY -> HOW -> WHAT) and the Four-Part Submission Standard."
+                "5. Continued Learning Pathways, 6. Enabling Faculty Roles, 7. Agile Design) directly into Sovereign CaC's "
+                "Sovereign Spine (Mandate -> System -> Proof) and the Four-Part Submission Standard."
             ),
             "answer_es": (
                 "En palabras sencillas: El aviso U.S. Department of Labor (DOL) ETA TEN No. 07-25 (emitido el 13 de "
                 "febrero de 2026) es un marco federal voluntario para colegios comunitarios y desarrollo laboral. En "
                 "los 10 cursos de la flota EXW en AWC, integramos de forma proactiva sus 5 Áreas de Contenido Fundamental "
-                "y sus 7 Principios de Diseño de Entrega dentro del Círculo Dorado de Simon Sinek (POR QUÉ -> CÓMO -> QUÉ) "
+                "y sus 7 Principios de Diseño de Entrega dentro del arquitectura soberana de tres etapas (Mandato -> Sistema -> Evidencia) "
                 "y el estándar de evaluación clínica de 4 partes."
             ),
             "keywords": "dol ten 07-25 07 25 department of labor eta training and employment notice ai literacy framework voluntary 5 foundational content areas 7 delivery principles community college wioa workforce",
@@ -231,13 +231,13 @@ def build_curated_executive_nodes():
         {
             "id": "qa-golden-circle-clinical-framing",
             "category": "dom-graphrag",
-            "badge": "DOM GraphRAG • Golden Circle & Pedagogy",
-            "dom_path": "Course 42051 > Golden Circle (WHY -> HOW -> WHAT) > Pattern / Rule / Solve",
-            "title_en": "How do Simon Sinek's Golden Circle (WHY -> HOW -> WHAT) and Pattern / Rule / Solve work together?",
-            "title_es": "¿Cómo funcionan juntos el Círculo Dorado de Simon Sinek (POR QUÉ -> CÓMO -> QUÉ) y Patrón / Regla / Solución?",
+            "badge": "DOM GraphRAG • Sovereign Spine & Pedagogy",
+            "dom_path": "Course 42051 > Sovereign Spine (Mandate -> System -> Proof) > Pattern / Rule / Solve",
+            "title_en": "How do Sovereign Three-Stage Architecture (Mandate -> System -> Proof) and Pattern / Rule / Solve work together?",
+            "title_es": "¿Cómo funcionan juntos el arquitectura soberana de tres etapas (Mandato -> Sistema -> Evidencia) y Patrón / Regla / Solución?",
             "answer_en": (
                 "In plain English: Every module across the 10-course EXW fleet is sequenced from the inside out using "
-                "Simon Sinek's Golden Circle: (1) THE WHY establishes purpose, civil-rights equity ($0 ZTC, WCAG 2.2 AA 9:1), "
+                "Simon Sovereign Three-Stage Sequencing: (1) THE WHY establishes purpose, civil-rights equity ($0 ZTC, WCAG 2.2 AA 9:1), "
                 "and clinical foundations; (2) THE HOW equips students with the Clinical Framing Protocol (Pattern: diagnose "
                 "the client & Yuma environmental stressors -> Rule: apply federal SSoT benchmarks like PAGA 2018, DGA 2025-2030, "
                 "ACSM 12th Ed., or NASM OPT -> Solve: prescribe & audit the intervention); and (3) THE WHAT executes the "
@@ -245,12 +245,12 @@ def build_curated_executive_nodes():
             ),
             "answer_es": (
                 "En palabras sencillas: Cada módulo de la flota EXW se secuencia de adentro hacia afuera con el Círculo "
-                "Dorado de Simon Sinek (POR QUÉ -> CÓMO -> QUÉ) y el Protocolo de Encuadre Clínico (Patrón / Regla / Solución), "
+                "Dorado de Sovereign CaC (Mandato -> Sistema -> Evidencia) y el Protocolo de Encuadre Clínico (Patrón / Regla / Solución), "
                 "entrenando al estudiante como Arquitecto Clínico y a la IA como calculadora subordinada."
             ),
-            "keywords": "simon sinek golden circle start with why how what pattern rule solve patron regla solucion clinical framing protocol centaur",
+            "keywords": "sovereign spine mandate system proof institutional pattern rule solve patron regla solucion clinical framing protocol centaur",
             "links": [
-                {"label_en": "Inspect EXW-Demo Golden Circle Modules (Course 42051)", "label_es": "Inspeccionar Módulos del Círculo Dorado (Curso 42051)", "url": "https://azwestern.instructure.com/courses/42051/modules"},
+                {"label_en": "Inspect EXW-Demo Sovereign 3-Stage Spine Modules (Course 42051)", "label_es": "Inspeccionar Módulos del Arquitectura Soberana (Curso 42051)", "url": "https://azwestern.instructure.com/courses/42051/modules"},
                 {"label_en": "Workshops & 4-Stop Tour", "label_es": "Portal de Talleres y Recorrido en 4 Puntos", "url": "/workshops/"},
             ],
         },
@@ -400,13 +400,13 @@ def parse_essays():
         {
             "id": "essay-40",
             "category": "essays",
-            "badge": "ESSAY 40 • US DOL TEN 07-25 & Golden Circle OER",
+            "badge": "ESSAY 40 • US DOL TEN 07-25 & Sovereign 3-Stage Spine OER",
             "dom_path": "Curriculum-as-Code Essays > Essay 40",
-            "title_en": "Essay 40: What If I Didn't Map the Federal Blueprint? – Operationalizing U.S. DOL TEN No. 07-25 AI Literacy Inside a Golden Circle OER Fleet",
-            "title_es": "Ensayo 40: ¿Y si no hubiera mapeado el marco federal? – U.S. DOL TEN No. 07-25 y el Círculo Dorado OER",
-            "answer_en": "In plain English: Essay 40 demonstrates how to translate the voluntary U.S. Department of Labor (DOL) ETA Advisory TEN No. 07-25 (5 Foundational Content Areas + 7 Community College Delivery Design Principles) into Simon Sinek's Golden Circle (WHY -> HOW -> WHAT) and $0 ZTC Open Educational Resources.",
-            "answer_es": "En palabras sencillas: El Ensayo 40 muestra cómo operacionalizar el marco federal voluntario U.S. DOL ETA TEN No. 07-25 (5 Áreas + 7 Principios) dentro del Círculo Dorado de Simon Sinek y recursos educativos abiertos ($0 ZTC).",
-            "keywords": "essay 40 us dol eta ten 07-25 ai literacy framework golden circle simon sinek oer community college",
+            "title_en": "Essay 40: What If I Didn't Map the Federal Blueprint? – Operationalizing U.S. DOL TEN No. 07-25 AI Literacy Inside a Sovereign 3-Stage Spine OER Fleet",
+            "title_es": "Ensayo 40: ¿Y si no hubiera mapeado el marco federal? – U.S. DOL TEN No. 07-25 y el Arquitectura Soberana OER",
+            "answer_en": "In plain English: Essay 40 demonstrates how to translate the voluntary U.S. Department of Labor (DOL) ETA Advisory TEN No. 07-25 (5 Foundational Content Areas + 7 Community College Delivery Design Principles) into Sovereign Three-Stage Architecture (Mandate -> System -> Proof) and $0 ZTC Open Educational Resources.",
+            "answer_es": "En palabras sencillas: El Ensayo 40 muestra cómo operacionalizar el marco federal voluntario U.S. DOL ETA TEN No. 07-25 (5 Áreas + 7 Principios) dentro del Arquitectura Soberana de Sovereign CaC y recursos educativos abiertos ($0 ZTC).",
+            "keywords": "essay 40 us dol eta ten 07-25 ai literacy framework sovereign spine mandate system proof oer community college",
             "links": [
                 {"label_en": "Inspect Live Crosswalk in EXW-Demo (Course 42051)", "label_es": "Inspeccionar Cruce en Vivo en EXW-Demo", "url": "https://azwestern.instructure.com/courses/42051/pages/exw-demo-coach-alan-the-exw-ai-landscape-institutional-alignment-and-literacy"},
                 {"label_en": "View All Essays", "label_es": "Ver Todos los Ensayos", "url": "/essays/"},
@@ -500,9 +500,9 @@ def main():
                 "query": "ADA Title II WCAG 9:1 APCA",
             },
             {
-                "label_en": "Golden Circle (WHY -> HOW -> WHAT) & Pattern / Rule / Solve",
-                "label_es": "Círculo Dorado (POR QUÉ -> CÓMO -> QUÉ)",
-                "query": "Golden Circle Pattern Rule Solve",
+                "label_en": "Sovereign Spine (Mandate -> System -> Proof) & Pattern / Rule / Solve",
+                "label_es": "Arquitectura Soberana (Mandato -> Sistema -> Evidencia)",
+                "query": "Mandate System Proof Pattern Rule Solve",
             },
             {
                 "label_en": "Air-Gapped Apple Silicon M1/M2 & FERPA",

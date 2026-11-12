@@ -81,7 +81,7 @@ As documented in my [**Master Research Log Observatory (`CaC, CaaS & Compliance 
 | :--- | :--- |
 | **1. Enable Experiential Learning** | Tactile two-stage weekly workflow: Stage 1 Coaching Sprint micro-simulators + Stage 2 full 9-Box clinical consults. |
 | **2. Embed Learning in Context** | Hyper-local **Yuma / Imperial Valley** cases (agricultural harvest heat cramps at `108°F`, shift-work sedentary risk, borderland grocery budgets). |
-| **3. Build Complementary Human Skills** | Simon Sinek's **Golden Circle (`WHY -> HOW -> WHAT`)** fused with **`Pattern / Rule / Solve`** problem framing and bilingual client cue cards. |
+| **3. Build Complementary Human Skills** | Sovereign **`Mandate -> System -> Proof`** sequencing fused with **The Clinical Framing Protocol (`Pattern / Rule / Solve`)** and bilingual client cue cards. |
 | **4. Address Prerequisites & Equitable Access** | `$0 ZTC` mobile-first OER, **WCAG 2.2 AA (`9:1` Double-Contrast Guard)** achieving `0/0` Canvas Accessibility Checker issues, and **WCAG 3.0** *In Plain English* + *Norteño-Spanish* callouts. |
 | **5. Create Pathways for Continued Learning** | Stackable `EXW_Professional_AI_Repository` portfolios + 4-Tier `Schema.org/Dataset` (`KIN` / `HLTH`) **K–16 Dual-Enrollment Deliverables**. |
 | **6. Prepare Enabling Roles** | Automated **W3C PROV-O** cryptographic audit receipts and local Apple Silicon (`M1/M2`) **Google Gemini Carbon 4** (and next-gen **Carbon 4**) faculty co-pilots. |
