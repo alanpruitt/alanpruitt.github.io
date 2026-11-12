@@ -1,4 +1,5 @@
 [![Live Site: alanpruitt.com](https://img.shields.io/badge/Site-alanpruitt.com-002147)](https://alanpruitt.com)
+[![ORCID: 0009-0002-5038-7111](https://img.shields.io/badge/ORCID-0009--0002--5038--7111-002147?logo=orcid&logoColor=white)](https://orcid.org/0009-0002-5038-7111)
 [![WCAG 2.2 AA Accessibility (9:1 Guard)](https://img.shields.io/badge/WCAG-2.2%20AA%20(9%3A1)-success)](https://www.w3.org/WAI/standards-guidelines/wcag/)
 [![Google Developer Profile: Alan Pruitt (Gemini Certified Faculty & Cloud Launchpad)](https://img.shields.io/badge/Google%20Developers-Verified%20Profile-002147?logo=googledevelopers&logoColor=white)](https://me.developers.google.com/u/alanpruitt)
 
@@ -7,6 +8,7 @@
 > Personal portfolio, 40-essay research corpus, and sovereign **Curriculum-as-Code (CaC)** repository of **Alan Pruitt (Coach Alan)** — Founder & Chief Curriculum Architect of **Webcognita LLC** (`SDVOSB / VOSB` • `SAM.gov UEI: EZ34U9KNJA17` • `CAGE: 4ZCN6`), Exercise Science Adjunct Faculty at **Arizona Western College (AWC)**, Generative AI Strategist & Designated Campus Colleague (`DCC`) at **The University of Arizona**, **Google Gemini Certified Faculty**, **Google Cloud Launchpad for Veterans** participant, and **USMC Veteran**.
 
 - **Live Portfolio:** [https://alanpruitt.com](https://alanpruitt.com) ([Español / Norteño-Spanish](https://alanpruitt.com/es/))
+- **ORCID Researcher Identifier:** [https://orcid.org/0009-0002-5038-7111](https://orcid.org/0009-0002-5038-7111) (`0009-0002-5038-7111`)
 - **Google Developer Profile & Verified Credentials:** [https://me.developers.google.com/u/alanpruitt](https://me.developers.google.com/u/alanpruitt) (*Google Gemini Certified Faculty • Google AI Professional Certificate • Google Prompting Essentials • Google Project Management Capstone • Google Cloud Launchpad for Veterans*)
 - **Workshops & Public Canvas Proof Hub (`EXW-Demo 42051`):** [https://alanpruitt.com/workshops/](https://alanpruitt.com/workshops/)
 - **Corporate & Federal SDVOSB Practice:** [https://www.webcognita.com](https://www.webcognita.com) (`SAM.gov UEI: EZ34U9KNJA17` • `CAGE: 4ZCN6` • EIN `81-0809739` • [1-Page Capabilities Statement](https://www.webcognita.com/capabilities-statement.html) • [2-Page ATS Principal CV](https://www.webcognita.com/principal-qualifications.html))

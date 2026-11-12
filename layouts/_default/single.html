@@ -18,6 +18,7 @@
     {{- end }}
     <link rel="alternate" hreflang="x-default" href="{{ $enHref }}">
     {{- end }}
+    <link rel="me" href="https://orcid.org/0009-0002-5038-7111">
     <link rel="me" href="https://www.linkedin.com/in/alanpruitt/">
     <link rel="me" href="https://github.com/alanpruitt">
     <link rel="me" href="https://me.developers.google.com/u/alanpruitt">
@@ -27,6 +28,7 @@
     {{- with .Params.scholar_pdf_url }}
     <meta name="citation_title" content="{{ $.Params.scholar_title | default $.Title }}">
     <meta name="citation_author" content="Pruitt, Alan">
+    <meta name="citation_author_orcid" content="0009-0002-5038-7111">
     <meta name="citation_author_institution" content="Webcognita LLC">
     <meta name="citation_author_institution" content="Arizona Western College">
     <meta name="citation_author_institution" content="The University of Arizona">
@@ -51,9 +53,16 @@
         "@type": "Person",
         "@id": "https://alanpruitt.com/#person",
         "name": "Alan Pruitt",
+        "identifier": {
+          "@type": "PropertyValue",
+          "propertyID": "ORCID",
+          "value": "0009-0002-5038-7111",
+          "url": "https://orcid.org/0009-0002-5038-7111"
+        },
         "alternateName": "Coach Alan",
         "url": "https://alanpruitt.com/",
         "sameAs": [
+          "https://orcid.org/0009-0002-5038-7111",
           "https://github.com/alanpruitt",
           "https://www.linkedin.com/in/alanpruitt/",
           "https://me.developers.google.com/u/alanpruitt",
