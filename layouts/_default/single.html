@@ -38,6 +38,9 @@
     <meta name="citation_online_date" content="{{ $.Params.scholar_date | default "2026/11/11" }}">
     <meta name="citation_technical_report_institution" content="Webcognita LLC">
     <meta name="citation_technical_report_number" content="S-A-R-v2.2-ORIGIN">
+    {{- with $.Params.scholar_doi }}
+    <meta name="citation_doi" content="{{ . }}">
+    {{- end }}
     <meta name="citation_pdf_url" content="{{ . }}">
     <meta name="citation_public_url" content="{{ $.Permalink }}">
     <meta name="citation_language" content="{{ $.Lang | default "en" }}">
@@ -126,6 +129,16 @@
           "inLanguage": {{ (.Lang | default "en") | jsonify | safeJS }},
           "url": {{ .Permalink | jsonify | safeJS }},
           "mainEntityOfPage": {{ .Permalink | jsonify | safeJS }},
+          "identifier": {
+            "@type": "PropertyValue",
+            "propertyID": "DOI",
+            "value": "10.5281/zenodo.24170270",
+            "url": "https://doi.org/10.5281/zenodo.24170270"
+          },
+          "sameAs": [
+            "https://doi.org/10.5281/zenodo.24170270",
+            "https://zenodo.org/records/24170270"
+          ],
           "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
           "isAccessibleForFree": true,
           "author": { "@id": "https://alanpruitt.com/#person" },
@@ -138,6 +151,8 @@
           },
           "citation": [
             "https://github.com/nre-learning/nrelabs-curriculum",
+            "https://doi.org/10.5281/zenodo.24170994",
+            "https://doi.org/10.5281/zenodo.24172299",
             "https://alanpruitt.com/essays/02-curriculum-as-code/",
             "https://alanpruitt.com/essays/essay-38-dom-graphrag-and-prov-o-curriculum-as-code/",
             "https://alanpruitt.com/research-log/"

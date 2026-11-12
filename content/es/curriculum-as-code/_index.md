@@ -9,6 +9,7 @@ draft: false
 is_cac_pillar: true
 scholar_title: "From Infrastructure Automation to Clinical Pedagogy: The Origin and Evolution of Curriculum-as-Code (2018-2026)"
 scholar_date: "2026/11/11"
+scholar_doi: "10.5281/zenodo.24170270"
 scholar_pdf_url: "https://alanpruitt.com/docs/Curriculum-as-Code-Origin-and-Evolution-Whitepaper.pdf"
 sitemap:
   priority: 1.0
@@ -38,6 +39,9 @@ keywords:
   <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center;">
     <a href="/docs/Curriculum-as-Code-Origin-and-Evolution-Whitepaper.pdf" download style="display: inline-flex; min-height: 44px; align-items: center; padding: 0.55rem 1rem; border-radius: 0.5rem; background-color: #0B192C; color: #FFFFFF; font-size: 0.85rem; font-weight: 700; text-decoration: none; border: 1.5px solid #0B192C;">
       Descargar Whitepaper Original (PDF en inglés &bull; 2 Páginas &bull; 525 KB) &rarr;
+    </a>
+    <a href="https://doi.org/10.5281/zenodo.24170270" target="_blank" rel="noopener noreferrer" style="display: inline-flex; min-height: 44px; align-items: center; padding: 0.55rem 1rem; border-radius: 0.5rem; background-color: #FFFFFF; color: #0B192C; font-size: 0.85rem; font-weight: 700; text-decoration: underline; border: 1.5px solid #0B192C;">
+      DOI: 10.5281/zenodo.24170270 (CERN Zenodo) &rarr;
     </a>
     <a href="#citacion-academica" style="display: inline-flex; min-height: 44px; align-items: center; padding: 0.55rem 1rem; border-radius: 0.5rem; background-color: #FFFFFF; color: #0B192C; font-size: 0.85rem; font-weight: 700; text-decoration: underline; border: 1.5px solid #0B192C;">
       Citar Documento (APA 7 y BibTeX)
@@ -181,6 +185,6 @@ Ejecuta **Google Gemini Carbon 4** y **Gemma 4** localmente en estaciones Apple 
 <h2 id="citacion-academica">5. Citación Académica y Atribución</h2>
 
 **APA 7.ª Edición:**  
-Pruitt, A. (2026). *From infrastructure automation to clinical pedagogy: The origin and evolution of Curriculum-as-Code (2018–2026)* (S-A-R Architecture Whitepaper v2.2). Webcognita LLC. [https://alanpruitt.com/curriculum-as-code/](https://alanpruitt.com/curriculum-as-code/)
+Pruitt, A. L. (2026). *From infrastructure automation to clinical pedagogy: The origin and evolution of Curriculum-as-Code (2018–2026)* (Technical Report No. S-A-R-v2.2-ORIGIN). Webcognita LLC. [https://doi.org/10.5281/zenodo.24170270](https://doi.org/10.5281/zenodo.24170270)
 
 > **Aviso Legal:** La arquitectura Curriculum-as-Code, el Estándar S-A-R, el Protocolo de Encuadre Clínico y las herramientas de código abierto descritas en este documento representan investigación e ingeniería docente independiente a través de Webcognita LLC y no constituyen política oficial ni respaldo de Arizona Western College ni de The University of Arizona.

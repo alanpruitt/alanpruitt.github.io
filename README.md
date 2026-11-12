@@ -1,5 +1,6 @@
 [![Live Site: alanpruitt.com](https://img.shields.io/badge/Site-alanpruitt.com-002147)](https://alanpruitt.com)
 [![ORCID: 0009-0002-5038-7111](https://img.shields.io/badge/ORCID-0009--0002--5038--7111-002147?logo=orcid&logoColor=white)](https://orcid.org/0009-0002-5038-7111)
+[![DOI: 10.5281/zenodo.24170270](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.24170270-002147?logo=zenodo&logoColor=white)](https://doi.org/10.5281/zenodo.24170270)
 [![Zenodo: Curriculum-as-Code](https://img.shields.io/badge/Zenodo-curriculum--as--code-002147?logo=zenodo&logoColor=white)](https://zenodo.org/communities/curriculum-as-code)
 [![WCAG 2.2 AA Accessibility (9:1 Guard)](https://img.shields.io/badge/WCAG-2.2%20AA%20(9%3A1)-success)](https://www.w3.org/WAI/standards-guidelines/wcag/)
 [![Google Developer Profile: Alan Pruitt (Gemini Certified Faculty & Cloud Launchpad)](https://img.shields.io/badge/Google%20Developers-Verified%20Profile-002147?logo=googledevelopers&logoColor=white)](https://me.developers.google.com/u/alanpruitt)
@@ -42,11 +43,12 @@
   - **Layer 2 (Sovereign Apple Silicon Ollama Inference):** Executes 100% locally on M1/M2 Unified Memory via custom Ollama Modelfiles (`exw-carbon4-cac:latest`). Evaluates `Pattern / Rule / Solve` reasoning and the mandatory **150-word Active Verification ("Why" Check)** on the **10-7-0 Mastery Scale**, locking output strictly to English or authentic Norteño-Spanish in Coach Alan's voice (`0%` cloud token egress, `100%` FERPA compliance).
   - **Layer 3 (W3C PROV-O Provenance Receipts, Gunicorn/Flask WSGI & CI/CD):** Emits machine-verifiable **W3C PROV-O provenance receipts** (`@context: "http://www.w3.org/ns/prov#"`, `wasGeneratedBy`, `wasAttributedTo`, `wasDerivedFrom`) over a multi-worker `Gunicorn + Flask WSGI` service (`127.0.0.1:5050`, `/api/v1/audit`, `/audit/submission`), supervised by macOS `launchd` (`KeepAlive`), fronted by `Nginx` TLS + Cloudflare HTTPS Tunnel, and continuously verified via `make test-pipeline`.
 - **Downloadable Architecture Briefs & White Papers (`alanpruitt.com/#architecture-briefs`):**
-  1. [Sovereign Clinical AI, DOM GraphRAG & W3C PROV-O Architecture Brief (`S-A-R v2.2`, PDF)](https://alanpruitt.com/docs/EXW_S_A_R_v2_2_DOM_GraphRAG_and_PROV_O_Architecture_Brief.pdf)
+  0. [Origin White Paper 00: From Infrastructure Automation to Clinical Pedagogy — The Origin and Evolution of Curriculum-as-Code (2018–2026)](https://alanpruitt.com/curriculum-as-code/) ([DOI: `10.5281/zenodo.24170270`](https://doi.org/10.5281/zenodo.24170270))
+  1. [Sovereign Clinical AI, DOM GraphRAG & W3C PROV-O Architecture Brief (`S-A-R v2.2`, PDF)](https://alanpruitt.com/docs/EXW_S_A_R_v2_2_DOM_GraphRAG_and_PROV_O_Architecture_Brief.pdf) ([DOI: `10.5281/zenodo.24170994`](https://doi.org/10.5281/zenodo.24170994))
   2. [EXW Course Fleet Laboratory Manual (`v2.2`, PDF)](https://alanpruitt.com/docs/EXW_Course_Fleet_Laboratory_Manual_v2_2.pdf)
   3. [AWC WPE Novel 100-Level Curriculum Proposal Portfolio (`ACRES`, PDF)](https://alanpruitt.com/docs/AWC_WPE_Novel_100_Level_Curriculum_Proposal_Portfolio.pdf)
   4. [Project Horizon: 2026 AWC Innovation Fund Executive Grant Brief & 100-Point Rubric Matrix (`$8,850` Request, PDF)](https://alanpruitt.com/docs/AWC_2026_Innovation_Fund_Project_Horizon_Executive_Memo.pdf)
-  5. [Project Horizon White Paper: Benchmarking W3C WCAG 3.0 APCA (`100,000+ Lux`) & Norteño-Spanish Screen-Reader Linting (PDF)](https://alanpruitt.com/docs/Project_Horizon_WCAG3_APCA_and_Norteno_ScreenReader_White_Paper.pdf)
+  5. [Project Horizon White Paper: Benchmarking W3C WCAG 3.0 APCA (`100,000+ Lux`) & Norteño-Spanish Screen-Reader Linting (PDF)](https://alanpruitt.com/docs/Project_Horizon_WCAG3_APCA_and_Norteno_ScreenReader_White_Paper.pdf) ([DOI: `10.5281/zenodo.24172299`](https://doi.org/10.5281/zenodo.24172299))
   6. [Project Horizon: Vendor-Agnostic Air-Gapped Edge Testbed & Optical Telemetry Specifications (PDF)](https://alanpruitt.com/docs/Project_Horizon_Vendor-agnostic_Technical_Specs.pdf)
 - **Spring 2027 Active & Warm-Standby Fleet Architecture:**
   - `EXW-150-002`: *Nutrition for Exercise & Sport* (1st 8-Week Accelerated)
