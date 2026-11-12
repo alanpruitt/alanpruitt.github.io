@@ -14,8 +14,8 @@
   "courseCode": "KIN-210",
   "identifier": "KIN-210-OER-2026-V2.2",
   "version": "2.2.0",
-  "datePublished": "2026-11-11",
-  "dateModified": "2026-11-11",
+  "datePublished": "2026-11-12",
+  "dateModified": "2026-11-12",
   "description": "Standardized ZTC OER module package for KIN-210 (Principles of Personal Training: Program Design & Movement Assessment) incorporating Curriculum-as-Code publishing, the Clinical Framing Protocol (Pattern / Rule / Solve), PAGA 2nd Ed. (2018); ACSM Guidelines 12th Ed. (2025); NASM OPT Model as the Academic Single Source of Truth (SSoT), and the U.S. Department of Labor AI Literacy Framework (TEN No. 07-25) with WCAG 2.2 AA (9:1 Double-Contrast Guard) compliance.",
   "url": "https://alanpruitt.com/export/kin-210/metadata.json",
   "sameAs": [
@@ -44,7 +44,14 @@
       "@type": "Person",
       "@id": "https://alanpruitt.com/#person",
       "name": "Alan Lee Pruitt",
-      "url": "https://alanpruitt.com/"
+      "url": "https://alanpruitt.com/",
+      "sameAs": "https://orcid.org/0009-0002-5038-7111",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "ORCID",
+        "value": "0009-0002-5038-7111",
+        "url": "https://orcid.org/0009-0002-5038-7111"
+      }
     }
   },
   "author": {
@@ -54,10 +61,18 @@
     "alternateName": "Coach Alan",
     "jobTitle": "Adjunct Faculty of Exercise Science & Instructional Designer",
     "url": "https://alanpruitt.com/",
+    "sameAs": "https://orcid.org/0009-0002-5038-7111",
+    "identifier": {
+      "@type": "PropertyValue",
+      "propertyID": "ORCID",
+      "value": "0009-0002-5038-7111",
+      "url": "https://orcid.org/0009-0002-5038-7111"
+    },
     "affiliation": {
       "@type": "CollegeOrUniversity",
       "name": "Arizona Western College",
-      "url": "https://www.azwestern.edu/"
+      "url": "https://www.azwestern.edu/",
+      "sameAs": "https://ror.org/04z557486"
     }
   },
   "publisher": {
@@ -204,7 +219,7 @@
     }
   ],
   "schema_version": "S-A-R-v2.2-OER-Commons-Syndication",
-  "generated_at": "2026-11-11T05:26:41.554860+00:00",
+  "generated_at": "2026-11-12T21:22:29.829770+00:00",
   "course_code": "KIN-210",
   "course_slug": "kin-210",
   "course_title": "Principles of Personal Training: Program Design & Movement Assessment",
@@ -212,8 +227,10 @@
   "source_institution_crosswalk": {
     "canonical_source_code": "EXW-210",
     "originating_institution": "Arizona Western College (Hispanic-Serving Institution — Yuma, AZ / Imperial Valley, CA)",
+    "originating_institution_ror": "https://ror.org/04z557486",
     "residency_program": "Matador Wellness Center Clinical AI Residency",
-    "author": "Coach Alan Pruitt"
+    "author": "Coach Alan Pruitt",
+    "author_orcid": "https://orcid.org/0009-0002-5038-7111"
   },
   "academic_ssot": "PAGA 2nd Ed. (2018); ACSM Guidelines 12th Ed. (2025); NASM OPT Model",
   "workforce_ai_framework": "U.S. Department of Labor (DOL) ETA TEN No. 07-25 AI Literacy Framework (Feb 13, 2026)",
@@ -255,8 +272,8 @@
     {
       "path": "module-00/00-overview.md",
       "format": "markdown",
-      "bytes": 14810,
-      "sha256": "f31a5e69a7335553fc3282bfa3a6a1009fa9760c4b99aaee06e989cabb780abd"
+      "bytes": 14892,
+      "sha256": "71888802020cb4ce6c48167e8fd7c3b4d360d7eee5dee36bed4f5f626e96c697"
     },
     {
       "path": "module-00/module-00_orientation.html",
@@ -267,20 +284,20 @@
     {
       "path": "module-00/module-00_orientation.md",
       "format": "markdown",
-      "bytes": 14791,
-      "sha256": "baa9bad28168b54dbe377a642b52e561ce747b5321e10091f568aed7859547a1"
+      "bytes": 14873,
+      "sha256": "2075748acfd15e0e3e1afbdf281a2dd167b3ff1e2d5763f8a58d1f75c950ed60"
     },
     {
       "path": "module-01/00-overview.md",
       "format": "markdown",
-      "bytes": 13286,
-      "sha256": "46a85d657c9c341a8d52e90119e5a7cc760ab6b9dffe27e6bef8ef9fe36ce343"
+      "bytes": 13368,
+      "sha256": "d843d28a8a1a63f7dfc5a2c6c3e315f85c30b7aae231f0dcf110bf112ce4931f"
     },
     {
       "path": "module-01/WEEK_OVERVIEW.md",
       "format": "markdown",
-      "bytes": 13231,
-      "sha256": "1e504d87d49525878721d5e7234024bc1d564a31f4bfb55fa171fd54187bc17e"
+      "bytes": 13313,
+      "sha256": "1f0dd62b196d6567dceb8313c80b41c0a6b49517df86eef4839dc140ffb027bc"
     },
     {
       "path": "module-01/module-01_human_movement.html",
@@ -291,20 +308,20 @@
     {
       "path": "module-01/module-01_human_movement.md",
       "format": "markdown",
-      "bytes": 15332,
-      "sha256": "cb436d452e072bda0fdcf434922587df88b5a72babb8a199e29ab6ad2daa777c"
+      "bytes": 15414,
+      "sha256": "a990f9802ea80702b129e2afa3b4fbb7a2101e2555dfeafdd96bef933b041f69"
     },
     {
       "path": "module-02/00-overview.md",
       "format": "markdown",
-      "bytes": 12661,
-      "sha256": "5ae3a6622e7a176cd2e3893a08c720934c3bd890e4e114de4150aa912708e061"
+      "bytes": 12743,
+      "sha256": "36235aaaea708c4151ca0b42fef488bfb428b3f008a0f0fa2e42b6e9f3be5032"
     },
     {
       "path": "module-02/WEEK_OVERVIEW.md",
       "format": "markdown",
-      "bytes": 12603,
-      "sha256": "aa9a48fb3fa67bdd2ecf79f6bc18d2a147deb2d0d20ca740c54c85f5fb90d092"
+      "bytes": 12685,
+      "sha256": "ad733faed6e8f8b3eecdc156a25aa7a991eea1fa85125b2405b67e2d0a1ceb14"
     },
     {
       "path": "module-02/module-02_anatomy_terminology.html",
@@ -315,20 +332,20 @@
     {
       "path": "module-02/module-02_anatomy_terminology.md",
       "format": "markdown",
-      "bytes": 15006,
-      "sha256": "1dd4e906c36ae6943c0bfd0addcbaefe3c2938057cf38221f1aeca1a5e5a9a03"
+      "bytes": 15088,
+      "sha256": "9a9eaf5aa70a70d32d2a9cb6fc1e6d7820150194cc0b94cd9e63b74bba301269"
     },
     {
       "path": "module-03/00-overview.md",
       "format": "markdown",
-      "bytes": 12605,
-      "sha256": "f697ec6acf44e9df320a33ac54df2939278e966d5a9226a40950d3fb07cba2f4"
+      "bytes": 12687,
+      "sha256": "aa1c3027561e48ceb3e876734074de8ddab4ec993bd033b93db577b07856b715"
     },
     {
       "path": "module-03/WEEK_OVERVIEW.md",
       "format": "markdown",
-      "bytes": 12551,
-      "sha256": "eb36dc3da0c9709f948fa15da06f68f67b720211b8f913d81d2643fd34e4b64d"
+      "bytes": 12633,
+      "sha256": "3e1391dda5de54a07de403ac4574532972f6a93dd3cbe2563e8687bb964f50c4"
     },
     {
       "path": "module-03/module-03_cardiorespiratory.html",
@@ -339,20 +356,20 @@
     {
       "path": "module-03/module-03_cardiorespiratory.md",
       "format": "markdown",
-      "bytes": 15282,
-      "sha256": "68ce66d763807327ad2f991738c3d569bf010d50242012d6d3d40bd6ae15d777"
+      "bytes": 15364,
+      "sha256": "c727b3b0ec770b854b536374943664c2a7f862b87934f57cd3bdada4194dadd2"
     },
     {
       "path": "module-04/00-overview.md",
       "format": "markdown",
-      "bytes": 12610,
-      "sha256": "66ffeddb69f2e4babdd472d828e3300d3877340253c6f538686b5241b65ee4be"
+      "bytes": 12692,
+      "sha256": "08264de9a763b5d4b3e46df07f1bd04b4706f39b2b9c226c40190085371e5e19"
     },
     {
       "path": "module-04/WEEK_OVERVIEW.md",
       "format": "markdown",
-      "bytes": 12550,
-      "sha256": "4aeb334438609f70398f5e9dbd47d6f15773f8fa96aa87c33dbbd777a768f973"
+      "bytes": 12632,
+      "sha256": "4f49b8f7e5dae73cb4ea91691168a4d2b0bcb782840c923a7a0bd6b91e3e2e66"
     },
     {
       "path": "module-04/module-04_bioenergetics.html",
@@ -363,20 +380,20 @@
     {
       "path": "module-04/module-04_bioenergetics.md",
       "format": "markdown",
-      "bytes": 15025,
-      "sha256": "91f62b82bc84ea37a67098557b26de72c848279d292d95cb68c8120ba7f21e37"
+      "bytes": 15107,
+      "sha256": "ce4fbba9d4697ca4926b4a6b83669b138fb1b141064e59ca639db7ac23080aac"
     },
     {
       "path": "module-05/00-overview.md",
       "format": "markdown",
-      "bytes": 12724,
-      "sha256": "c7088d9b683c27d6dda26bf142134cc19dbc291407e915562b22dbc5295f1f1c"
+      "bytes": 12806,
+      "sha256": "028d891c1aec79432c03fbb24775d13cddc77e71bb645d68ab9a5429f49324c4"
     },
     {
       "path": "module-05/WEEK_OVERVIEW.md",
       "format": "markdown",
-      "bytes": 12668,
-      "sha256": "f9a218b581e595f257ae24e33337178e9f52d330075c11965252710ff583089a"
+      "bytes": 12750,
+      "sha256": "bcace17ab13c987f0862a326e16694c2fddf5d4bf1539d7b1657b6477702b46c"
     },
     {
       "path": "module-05/module-05_biomechanics.html",
@@ -387,20 +404,20 @@
     {
       "path": "module-05/module-05_biomechanics.md",
       "format": "markdown",
-      "bytes": 15643,
-      "sha256": "a94768c2ced5c74130fe5816b5b9c5ca25897fe62f6f3963231e0ecb5a92c3c2"
+      "bytes": 15725,
+      "sha256": "f4d3ec19d32c10d9957a3134dc280f51e61502f0127cedbbb9b696b331786e41"
     },
     {
       "path": "module-06/00-overview.md",
       "format": "markdown",
-      "bytes": 12676,
-      "sha256": "a8f10d6fa4bc00635640186a2d07207d5dcad132540e542446630d8dfc8451a4"
+      "bytes": 12758,
+      "sha256": "7810e7bea29d74740762173ffa81be78387ee45a0cadc426dbf528ff063a0b8c"
     },
     {
       "path": "module-06/WEEK_OVERVIEW.md",
       "format": "markdown",
-      "bytes": 12616,
-      "sha256": "d6f50d927ec5dac164f0838949060b572982dcfcfd1ff9d89ea189f759e60e70"
+      "bytes": 12698,
+      "sha256": "e1200a1c0ae78b78592b5c86c130f74e8e47c5f5a2e9512ac40672179dbc6ac1"
     },
     {
       "path": "module-06/module-06_assessments.html",
@@ -411,20 +428,20 @@
     {
       "path": "module-06/module-06_assessments.md",
       "format": "markdown",
-      "bytes": 15605,
-      "sha256": "e1e3d557eee6cdcc54c03d42b5e89445dc7cb191b3be6da62f52a21ace539c6e"
+      "bytes": 15687,
+      "sha256": "6051ef26168899fb107eea9b745f1401759e263305adbc6cf77be4b7effd2a2c"
     },
     {
       "path": "module-07/00-overview.md",
       "format": "markdown",
-      "bytes": 12693,
-      "sha256": "a6abb567fd48791cd68afe3921ede206e0340b7fd82b6c686dc8d3dedff40090"
+      "bytes": 12775,
+      "sha256": "0be8c31908d67eac95ee0a4a075ea82b6183277da9a55494ac803cf4bf98d27a"
     },
     {
       "path": "module-07/WEEK_OVERVIEW.md",
       "format": "markdown",
-      "bytes": 12644,
-      "sha256": "58c1587ac72925f4695eaa6b683a5e207bdfb37eb6ebe32d435ce22543bd393d"
+      "bytes": 12726,
+      "sha256": "78fe805d8a506436ba0de729baab37932ea22c9b66a12091c5f4e9252fa67d4f"
     },
     {
       "path": "module-07/module-07_flexibility.html",
@@ -435,20 +452,20 @@
     {
       "path": "module-07/module-07_flexibility.md",
       "format": "markdown",
-      "bytes": 15415,
-      "sha256": "4cc4f4e6553181aaeadf9b23516d325accc8a84dec8c26878f8fb69e1e7f2288"
+      "bytes": 15497,
+      "sha256": "b0836e0e599c6fbfefeb3103a402e84da3fb41c80a4a07b0205fe7149f6e9967"
     },
     {
       "path": "module-08/00-overview.md",
       "format": "markdown",
-      "bytes": 12659,
-      "sha256": "693e6481cdc9571ccfbdaf333b12df967d9a762b11fba0fa863f25cc02b3f94a"
+      "bytes": 12741,
+      "sha256": "9e7f3b113fec053b2c1eb881fcef2bc9b0764cf7aa34d34c091ac5a0d6c74be9"
     },
     {
       "path": "module-08/WEEK_OVERVIEW.md",
       "format": "markdown",
-      "bytes": 12616,
-      "sha256": "163a67ac86d82b11eef6c359255fdeb1c04e8f44aad1c8b66c38e80d1d9a0bdf"
+      "bytes": 12698,
+      "sha256": "a0f63e6a5f0413c10f1965754470f59b93cdf6bef015adcdecf042f7dcf9d395"
     },
     {
       "path": "module-08/module-08_cardio_programming.html",
@@ -459,20 +476,20 @@
     {
       "path": "module-08/module-08_cardio_programming.md",
       "format": "markdown",
-      "bytes": 15240,
-      "sha256": "4a4ff4d379cb4a378d99d303218a37b0288ca80951118a8e50d80fc840a726bf"
+      "bytes": 15322,
+      "sha256": "7b42e5413b1b24e98a0a29dbba09aed21338250f88b0227b62dd329e3f6ce815"
     },
     {
       "path": "module-09/00-overview.md",
       "format": "markdown",
-      "bytes": 12617,
-      "sha256": "0e0141d9d46abe153818dc36ad9e2ef1767029853e052ab3cc26d573b2ba2c3f"
+      "bytes": 12699,
+      "sha256": "92221637b9afc760b764de27f7416bd0ccba8ead9e1e315c932a3a669e6ba393"
     },
     {
       "path": "module-09/WEEK_OVERVIEW.md",
       "format": "markdown",
-      "bytes": 12562,
-      "sha256": "5469024a7606d49b313e83ca7400613fe7875e39957e0f93d9dc1d43b7413dcf"
+      "bytes": 12644,
+      "sha256": "aa161a4c7e6dc7e84cf0bcf7ef1e8fa4e4971a61bc574ee8ad01b4fcb21e9fe7"
     },
     {
       "path": "module-09/module-09_core_balance.html",
@@ -483,20 +500,20 @@
     {
       "path": "module-09/module-09_core_balance.md",
       "format": "markdown",
-      "bytes": 15507,
-      "sha256": "f4337b15b1299b7fa402f7c4a747a2ba164876c2d234dc6bfd1556c34a4a82dc"
+      "bytes": 15589,
+      "sha256": "79a9dab835041a6fac3e48c64b311dc74a3fd0e4e53f643a3a72020a9188b82d"
     },
     {
       "path": "module-10/00-overview.md",
       "format": "markdown",
-      "bytes": 12669,
-      "sha256": "0eb72af86a94d940647849b3f73ee327047a90ef21c3816247be120f269715f9"
+      "bytes": 12751,
+      "sha256": "ce45876e759ff7e259efeffdbcf5dee39357d02db26560cbb39ce778f0bf3c23"
     },
     {
       "path": "module-10/WEEK_OVERVIEW.md",
       "format": "markdown",
-      "bytes": 12630,
-      "sha256": "02c7846f0cdda0afa652b9d493e780ea0b6a9c006806f8bd5e6dcb3590e14daf"
+      "bytes": 12712,
+      "sha256": "c2af3ae483e8e4b79efa5e89dfc8ecab4c2cd096bad3619738676c007f3094a4"
     },
     {
       "path": "module-10/module-10_resistance_training.html",
@@ -507,20 +524,20 @@
     {
       "path": "module-10/module-10_resistance_training.md",
       "format": "markdown",
-      "bytes": 16206,
-      "sha256": "4592b77c3f4f0fdf0c1d0cb5b62b29ca3353635a7816ccb95d5d44d917b4a789"
+      "bytes": 16288,
+      "sha256": "070837ef9538f35554c8a0d256680ea115e4bc340732ed64184bae6396c62d59"
     },
     {
       "path": "module-11/00-overview.md",
       "format": "markdown",
-      "bytes": 12786,
-      "sha256": "a34864cd9334beeaf4746d33da3d6afa04a2b2f9356ae0933a850e36b276d28b"
+      "bytes": 12868,
+      "sha256": "0265d32d03c74b469ab8557d590262f1b35ffe484652a8d4b563b55feb6b2544"
     },
     {
       "path": "module-11/WEEK_OVERVIEW.md",
       "format": "markdown",
-      "bytes": 12750,
-      "sha256": "394c7c34b4c65cca008bbea742f85659ea03e05f4222e6aec0e7beea09879970"
+      "bytes": 12832,
+      "sha256": "e9d2f0bac42f710de8b62345e5122b78d36297630d084cb2d3a06819ec0d6586"
     },
     {
       "path": "module-11/module-11_saq_training.html",
@@ -531,20 +548,20 @@
     {
       "path": "module-11/module-11_saq_training.md",
       "format": "markdown",
-      "bytes": 15513,
-      "sha256": "c072c0e9aab9f473d1930aea22fac6b2b2114063670704030b2b2514a20953e7"
+      "bytes": 15595,
+      "sha256": "5cc2446c0022f7eafbfe05df120527e24445649df2fc71baefd61f77cadea931"
     },
     {
       "path": "module-12/00-overview.md",
       "format": "markdown",
-      "bytes": 12783,
-      "sha256": "059f6a18914284e3431d08b3c388c7fa6eb612a5a12c78531da6b387f9ae6e5d"
+      "bytes": 12865,
+      "sha256": "a55c4aef50adc5ea2eb776ec9f354968d611d620afbfd6b40ca8ba6e0d8ab3c4"
     },
     {
       "path": "module-12/WEEK_OVERVIEW.md",
       "format": "markdown",
-      "bytes": 12728,
-      "sha256": "2a775d597268dc4906fa3655fc2af4b8dcf84c97277723ee88127e5435d1e5de"
+      "bytes": 12810,
+      "sha256": "f1663bfee5f17bb8a7f46bf62d56859e7827a6aa99a6cf291aa79a27ed533ecd"
     },
     {
       "path": "module-12/module-12_nutrition.html",
@@ -555,20 +572,20 @@
     {
       "path": "module-12/module-12_nutrition.md",
       "format": "markdown",
-      "bytes": 14994,
-      "sha256": "f4563b8fa34c659b392246093f052e15d61f931bf444bd4a37ee063d20eece8f"
+      "bytes": 15076,
+      "sha256": "50f55e96fa91dc8842547fe37191dd3363b8a5380ca317e1b67888d90dbb2c4f"
     },
     {
       "path": "module-13/00-overview.md",
       "format": "markdown",
-      "bytes": 12712,
-      "sha256": "c3b980754aa8a2261db0f7aee5a607141173e5b4a416f5953a82c86e2f1be6cf"
+      "bytes": 12794,
+      "sha256": "2cd0651a5bcb752781cea65d651e780a2bf37fe3a9216fa7f2dd7cd04ac37f38"
     },
     {
       "path": "module-13/WEEK_OVERVIEW.md",
       "format": "markdown",
-      "bytes": 12665,
-      "sha256": "b8783bc5a59d09d3b088756e5a138ce1c643e4feb4fcf775a018bbf0b848dca4"
+      "bytes": 12747,
+      "sha256": "3f7876890684810e5053302e918b495ec3479024314093fed3451c2eb7909604"
     },
     {
       "path": "module-13/module-13_special_considerations.html",
@@ -579,20 +596,20 @@
     {
       "path": "module-13/module-13_special_considerations.md",
       "format": "markdown",
-      "bytes": 15183,
-      "sha256": "c605293a98c6166c4eaf14ea80405394a16c723d7de803758b085bedf646848f"
+      "bytes": 15265,
+      "sha256": "464d9c0b4fab75462ddb1d1eb8d4012ea287aabce7b4193b7d5471aa26db1ca0"
     },
     {
       "path": "module-14/00-overview.md",
       "format": "markdown",
-      "bytes": 12671,
-      "sha256": "df44d496241b3ea072b231c216546b77e0349d59abaf94cfc6e991ca4c0bded0"
+      "bytes": 12753,
+      "sha256": "c2aed250c54231ce6f0e8295a1dfb1edb71b3e33b7ad4b0e71d2a9367cf6812a"
     },
     {
       "path": "module-14/WEEK_OVERVIEW.md",
       "format": "markdown",
-      "bytes": 12619,
-      "sha256": "c5aa1b53a4b864987a328776a5e480d46be82e7689aea891aa7e8e485f8d3628"
+      "bytes": 12701,
+      "sha256": "4edc2e027adc85eed2d64e98bf2a78f4507e8565d7348954dccc81f2253944cd"
     },
     {
       "path": "module-14/module-14_behavioral_coaching.html",
@@ -603,20 +620,20 @@
     {
       "path": "module-14/module-14_behavioral_coaching.md",
       "format": "markdown",
-      "bytes": 14423,
-      "sha256": "d554c5d7aba46a96751131be40458e9f7634ee40b6993873ae539e04df4eae75"
+      "bytes": 14505,
+      "sha256": "22e3ca4e22d87431fdcd4c0b3236a0ed584bf4f16da945ea0b00427c5f2ddfce"
     },
     {
       "path": "module-15/00-overview.md",
       "format": "markdown",
-      "bytes": 12710,
-      "sha256": "7ed2dab3b63b9f945286a7f350120452e66272b2e5140098c8ce4b960b5412de"
+      "bytes": 12792,
+      "sha256": "bb5f8439ac62b361d5cc189743bfd00455523d510c81ea458f5ad9137dea822a"
     },
     {
       "path": "module-15/WEEK_OVERVIEW.md",
       "format": "markdown",
-      "bytes": 12658,
-      "sha256": "3cb8f19fbf8d8cbb44b4a75ce7f3c06e3123302903dd31830f7bf8115427d266"
+      "bytes": 12740,
+      "sha256": "46be0990e130d73e97759bffab0dccb0831129076050f88404374a08a90f827c"
     },
     {
       "path": "module-15/module-15_professional_dev.html",
@@ -627,20 +644,20 @@
     {
       "path": "module-15/module-15_professional_dev.md",
       "format": "markdown",
-      "bytes": 14712,
-      "sha256": "1753366a5d813d7d6bccc90ecbcfda91b33632691fe1bfe2e027f1c7d69de165"
+      "bytes": 14794,
+      "sha256": "82384472830d4dc7dfc49b63ab5b8ddc9243413f1e4f62cede8956016f621cdf"
     },
     {
       "path": "module-16/00-overview.md",
       "format": "markdown",
-      "bytes": 12721,
-      "sha256": "75471dd579a3efc564467b8fa42703c497570f943152a7bf2c9d247a5101b87b"
+      "bytes": 12803,
+      "sha256": "0b3f76ae3bff54ac4250177bc4cd54bfa1d47a2eb748985b292ff8f7a98a73c8"
     },
     {
       "path": "module-16/WEEK_OVERVIEW.md",
       "format": "markdown",
-      "bytes": 12669,
-      "sha256": "554778b62f6a2440393a84f36f9eae3f452380718c69dd9893643244a6c83777"
+      "bytes": 12751,
+      "sha256": "72af3022aed228ef2bd53726373f53bb1e996b5f60fff36a9a52b88ec425209c"
     },
     {
       "path": "module-16/module-16_capstone.html",
@@ -651,8 +668,8 @@
     {
       "path": "module-16/module-16_capstone.md",
       "format": "markdown",
-      "bytes": 14513,
-      "sha256": "dd7648ed945a1919e8d972cc0fc8ba0b526455e9b0ff0d54c2ac77caaf6baa3f"
+      "bytes": 14595,
+      "sha256": "4c93859dabdca6c3468b9b56830e8f4944a0f649bfc0941a97670b79a726cacd"
     }
   ]
 }

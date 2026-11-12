@@ -14,8 +14,8 @@
   "courseCode": "KIN-245",
   "identifier": "KIN-245-OER-2026-V2.2",
   "version": "2.2.0",
-  "datePublished": "2026-11-11",
-  "dateModified": "2026-11-11",
+  "datePublished": "2026-11-12",
+  "dateModified": "2026-11-12",
   "description": "Standardized ZTC OER module package for KIN-245 (Exercise Testing & Prescription: Clinical Ergometry & Physiological Assessment) incorporating Curriculum-as-Code publishing, the Clinical Framing Protocol (Pattern / Rule / Solve), ACSM's Guidelines for Exercise Testing and Prescription, 12th Edition (2025) as the Academic Single Source of Truth (SSoT), and the U.S. Department of Labor AI Literacy Framework (TEN No. 07-25) with WCAG 2.2 AA (9:1 Double-Contrast Guard) compliance.",
   "url": "https://alanpruitt.com/export/kin-245/metadata.json",
   "sameAs": [
@@ -44,7 +44,14 @@
       "@type": "Person",
       "@id": "https://alanpruitt.com/#person",
       "name": "Alan Lee Pruitt",
-      "url": "https://alanpruitt.com/"
+      "url": "https://alanpruitt.com/",
+      "sameAs": "https://orcid.org/0009-0002-5038-7111",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "ORCID",
+        "value": "0009-0002-5038-7111",
+        "url": "https://orcid.org/0009-0002-5038-7111"
+      }
     }
   },
   "author": {
@@ -54,10 +61,18 @@
     "alternateName": "Coach Alan",
     "jobTitle": "Adjunct Faculty of Exercise Science & Instructional Designer",
     "url": "https://alanpruitt.com/",
+    "sameAs": "https://orcid.org/0009-0002-5038-7111",
+    "identifier": {
+      "@type": "PropertyValue",
+      "propertyID": "ORCID",
+      "value": "0009-0002-5038-7111",
+      "url": "https://orcid.org/0009-0002-5038-7111"
+    },
     "affiliation": {
       "@type": "CollegeOrUniversity",
       "name": "Arizona Western College",
-      "url": "https://www.azwestern.edu/"
+      "url": "https://www.azwestern.edu/",
+      "sameAs": "https://ror.org/04z557486"
     }
   },
   "publisher": {
@@ -187,7 +202,7 @@
     }
   ],
   "schema_version": "S-A-R-v2.2-OER-Commons-Syndication",
-  "generated_at": "2026-11-11T05:26:42.331604+00:00",
+  "generated_at": "2026-11-12T21:22:30.595626+00:00",
   "course_code": "KIN-245",
   "course_slug": "kin-245",
   "course_title": "Exercise Testing & Prescription: Clinical Ergometry & Physiological Assessment",
@@ -195,8 +210,10 @@
   "source_institution_crosswalk": {
     "canonical_source_code": "EXW-245",
     "originating_institution": "Arizona Western College (Hispanic-Serving Institution — Yuma, AZ / Imperial Valley, CA)",
+    "originating_institution_ror": "https://ror.org/04z557486",
     "residency_program": "Matador Wellness Center Clinical AI Residency",
-    "author": "Coach Alan Pruitt"
+    "author": "Coach Alan Pruitt",
+    "author_orcid": "https://orcid.org/0009-0002-5038-7111"
   },
   "academic_ssot": "ACSM's Guidelines for Exercise Testing and Prescription, 12th Edition (2025)",
   "workforce_ai_framework": "U.S. Department of Labor (DOL) ETA TEN No. 07-25 AI Literacy Framework (Feb 13, 2026)",
@@ -238,8 +255,8 @@
     {
       "path": "module-00/00-overview.md",
       "format": "markdown",
-      "bytes": 23037,
-      "sha256": "be1d0f1bcb30ff7fd5d8e8a2a5eedcc742bc7856bc7f0f38b498f74ac795b08f"
+      "bytes": 23119,
+      "sha256": "8fda11ba9cf4d63ec5f87525cce241b3cb196c01337c9d89076814bbeac3a3c8"
     },
     {
       "path": "module-00/Module-00-Master.html",
@@ -250,14 +267,14 @@
     {
       "path": "module-00/Module-00-Master.md",
       "format": "markdown",
-      "bytes": 23014,
-      "sha256": "0cc25b44f705aafc0780bb2e40bc3c853055af170d363a7afb1416a72f495d71"
+      "bytes": 23096,
+      "sha256": "1554b9ebc7b0f112230726f853ac260850ca622b14fffca5bc1f49211e766db7"
     },
     {
       "path": "module-01/00-overview.md",
       "format": "markdown",
-      "bytes": 16262,
-      "sha256": "7bf406916c6e73db529065fa0d25190225bee6634aa790cc8fc7692914680d84"
+      "bytes": 16344,
+      "sha256": "1f4276a1105a6b9668331bdfe663c73a76934d05b6fea4e8321bc8076f084490"
     },
     {
       "path": "module-01/Module-01-Master.html",
@@ -268,14 +285,14 @@
     {
       "path": "module-01/Module-01-Master.md",
       "format": "markdown",
-      "bytes": 16207,
-      "sha256": "5e22da0258ed48da6981566bb42b02e0c0dd61cf2cd80311e2e793de374af873"
+      "bytes": 16289,
+      "sha256": "e7b89badea02f30e6c8cd8214a5cc61b75dbaa44becbc8e8365d6271908d4eb9"
     },
     {
       "path": "module-02/00-overview.md",
       "format": "markdown",
-      "bytes": 15914,
-      "sha256": "047bcffeffc9616a588199561a501d1cdbe3a0e4f3d059bd9e9ebde6d79caa9e"
+      "bytes": 15996,
+      "sha256": "b86927bf0f0a35ad36f6df244d12bb94662e04cd7967f523718e43a58660ab04"
     },
     {
       "path": "module-02/Module-02-Master.html",
@@ -286,14 +303,14 @@
     {
       "path": "module-02/Module-02-Master.md",
       "format": "markdown",
-      "bytes": 15876,
-      "sha256": "81f924b78da07bfafa8d492158add5abc137d918ec3b7cb610df39691a1cd83e"
+      "bytes": 15958,
+      "sha256": "8e4383108427cd50b7eb27ce689535372b12228250910016803b82ae6d42864f"
     },
     {
       "path": "module-03/00-overview.md",
       "format": "markdown",
-      "bytes": 17139,
-      "sha256": "075f6c04885f88d2408cac4c81f5c3bfbafbb41d2d2e031aa786c6e609647eb0"
+      "bytes": 17221,
+      "sha256": "74d04e805c3095ae3503aa62130e5dab4332b411629e8cc58ce18c1dc94ba43f"
     },
     {
       "path": "module-03/Module-03-Master.html",
@@ -304,14 +321,14 @@
     {
       "path": "module-03/Module-03-Master.md",
       "format": "markdown",
-      "bytes": 17087,
-      "sha256": "439b2a2fccfee74cd0a036f47a74af73228747f35e4f44200b0b5150b25b8fa5"
+      "bytes": 17169,
+      "sha256": "ac0096e882b0abd5e44136a06746ef74a601e785748c231ac722e98ae86f7f22"
     },
     {
       "path": "module-04/00-overview.md",
       "format": "markdown",
-      "bytes": 16412,
-      "sha256": "705768c200943727d798bef0e2e1ce4a3e38a7e0ec41f308fdc36b21113a4539"
+      "bytes": 16494,
+      "sha256": "6f76b07e301d0eed8d1a64fabc2ef36a66563bc06b1180075d03e52c5e85a72a"
     },
     {
       "path": "module-04/Module-04-Master.html",
@@ -322,14 +339,14 @@
     {
       "path": "module-04/Module-04-Master.md",
       "format": "markdown",
-      "bytes": 16364,
-      "sha256": "798cad4761c0c8a70b7ae1ede54ed5be2fdae159c6b0abd7d9ff8606e9af3c6a"
+      "bytes": 16446,
+      "sha256": "fc9a3f38358be31effa526c6110e9e6440e7ec8078dd0f1b6e422eaec0f3e880"
     },
     {
       "path": "module-05/00-overview.md",
       "format": "markdown",
-      "bytes": 16417,
-      "sha256": "09563508c32aa98a0227be21aceba1b28b6f51978e10e65eab11c8d0635e83b3"
+      "bytes": 16499,
+      "sha256": "51658fd23466022b8aab443e6bb864caa316602a5cb73570c9f1833377a9e656"
     },
     {
       "path": "module-05/Module-05-Master.html",
@@ -340,14 +357,14 @@
     {
       "path": "module-05/Module-05-Master.md",
       "format": "markdown",
-      "bytes": 16372,
-      "sha256": "f815bb1a5ef8932d264408ecd45ce64264514a1a042beba03565c66737d1acb8"
+      "bytes": 16454,
+      "sha256": "e529f3d26f4279235d1d05513b2077f433de74593d369243595ae4682d133da2"
     },
     {
       "path": "module-06/00-overview.md",
       "format": "markdown",
-      "bytes": 17151,
-      "sha256": "5360adec00130c2fb8a025d7c97bf745d793c881a1f3c5fa15418bfc5e1ba88f"
+      "bytes": 17233,
+      "sha256": "900fa1e09fce702c71681427a6c6919afc32bd179898f2ef2e850a9096822684"
     },
     {
       "path": "module-06/Module-06-Master.html",
@@ -358,14 +375,14 @@
     {
       "path": "module-06/Module-06-Master.md",
       "format": "markdown",
-      "bytes": 17127,
-      "sha256": "6ff0f931f9ef3c8c5d85e11afa56591139a3a0182db8ebc63a97d39978322841"
+      "bytes": 17209,
+      "sha256": "0ddf6c54def52c770c7d364ecc94bb1680f9dbcb1c54a347432135997f272bd9"
     },
     {
       "path": "module-07/00-overview.md",
       "format": "markdown",
-      "bytes": 17349,
-      "sha256": "ba8cbf0c473243ec792a63b1373efcd14d2a81aa10dc14eb2f9a1ab6fea5cf74"
+      "bytes": 17431,
+      "sha256": "602ccfa68818a0caecd8b645c690f33ed49f8162ee2c59fddaa22b91a2f5ccae"
     },
     {
       "path": "module-07/Module-07-Master.html",
@@ -376,14 +393,14 @@
     {
       "path": "module-07/Module-07-Master.md",
       "format": "markdown",
-      "bytes": 17320,
-      "sha256": "958e1328b5df70d66adc05b77b90d0376da75e3a8caf16f0f34bbd3e7f5ae6ce"
+      "bytes": 17402,
+      "sha256": "c20522006ff72e5a535c85eac78a44d8424b0c6a4f49d9a6b9ddd653422c759e"
     },
     {
       "path": "module-08/00-overview.md",
       "format": "markdown",
-      "bytes": 17917,
-      "sha256": "0449879a6564dcde70c571d66a15d1d0f8dc820144fa8d1e944d5208238eaf50"
+      "bytes": 17999,
+      "sha256": "43780281d3f0241602b42f3645d3cc38febac8ca43f426e703b81dc26f8fb661"
     },
     {
       "path": "module-08/Module-08-Master.html",
@@ -394,14 +411,14 @@
     {
       "path": "module-08/Module-08-Master.md",
       "format": "markdown",
-      "bytes": 17887,
-      "sha256": "bdc9d0cdf9cc46120042b9bf71294f234e04238332cdcd394e95b48ed9dec5e4"
+      "bytes": 17969,
+      "sha256": "721bdbb45448e1dbcd43b1ede03bade8d3617cdda7f83831353713168bf9a21b"
     },
     {
       "path": "module-09/00-overview.md",
       "format": "markdown",
-      "bytes": 17447,
-      "sha256": "b69c6ca760de99704b8bd932905f93f6105b56dcf2295d4220d781e19ec0ebff"
+      "bytes": 17529,
+      "sha256": "d7ab5064ad63fdd26545a1c2d37fa7af8297c898a7dc91a80fdd50b740f48f21"
     },
     {
       "path": "module-09/Module-09-Master.html",
@@ -412,14 +429,14 @@
     {
       "path": "module-09/Module-09-Master.md",
       "format": "markdown",
-      "bytes": 17460,
-      "sha256": "b8f6fbfee236fb6483ecd01ec9ebdfff428aaaafdddccc40d8447d5d2482a93e"
+      "bytes": 17542,
+      "sha256": "b69c54dcf7bb7cf9d5605c914f9c2b129c26de2055bd6d130c1f0612d44e5bec"
     },
     {
       "path": "module-10/00-overview.md",
       "format": "markdown",
-      "bytes": 17731,
-      "sha256": "4020eb4188975409fdb8853186f504f07a15aeb7153ed913bd6cfc4fb4113518"
+      "bytes": 17813,
+      "sha256": "79d9900742be2cb20de76c24bb99e1f5c6be727e1788d381d94edc47c348d79d"
     },
     {
       "path": "module-10/Module-10-Master.html",
@@ -430,14 +447,14 @@
     {
       "path": "module-10/Module-10-Master.md",
       "format": "markdown",
-      "bytes": 17705,
-      "sha256": "b33fa3d4ab06a564437b3891b96108cec92507199dab467aa7963c0bb7b48f70"
+      "bytes": 17787,
+      "sha256": "2de2b23e4c10971ab9dc80ae58035dd43a531da4506364183a233e14a3a3ae6d"
     },
     {
       "path": "module-11/00-overview.md",
       "format": "markdown",
-      "bytes": 17913,
-      "sha256": "99ef14e264fcb50ed2014d79c00c611e541d2ed44e88e7883101da2438effd32"
+      "bytes": 17995,
+      "sha256": "0f490e2730e36b6ce9dc1a77a96556ed055bcf30084a739021c3b84e5d0a0567"
     },
     {
       "path": "module-11/Module-11-Master.html",
@@ -448,14 +465,14 @@
     {
       "path": "module-11/Module-11-Master.md",
       "format": "markdown",
-      "bytes": 17882,
-      "sha256": "1d5b805eb5524438e7edd2f1e7682586604d2e45dbd86b92a03d37514b73bb0a"
+      "bytes": 17964,
+      "sha256": "2c17bf1ef1d7f6097bcdda264fad3bd21391abafed2ad8b9afb6223b43f29ff8"
     },
     {
       "path": "module-12/00-overview.md",
       "format": "markdown",
-      "bytes": 18160,
-      "sha256": "96e51a84a317fd4c9eb9e07c840be6820a94ed975d5776411308851f15cb18c3"
+      "bytes": 18242,
+      "sha256": "985a665a07fbc11293f812cf3204baae572c2bc93fad9b127d0549e3f52ab13a"
     },
     {
       "path": "module-12/Module-12-Master.html",
@@ -466,14 +483,14 @@
     {
       "path": "module-12/Module-12-Master.md",
       "format": "markdown",
-      "bytes": 18129,
-      "sha256": "825ec9175cb404cd91c80ed1c5314f83432d1d076fd23a26ea6ce3177d03718a"
+      "bytes": 18211,
+      "sha256": "4a6595ad77e26b1ebca9aae6164b9e4f5eb7443e440f42a6dc8555bda52d6074"
     },
     {
       "path": "module-13/00-overview.md",
       "format": "markdown",
-      "bytes": 18115,
-      "sha256": "7cc720af51b5693651ab962e1b52845cb1c3f9c83b3be2101e60a757e69a49c9"
+      "bytes": 18197,
+      "sha256": "443b92733b639115ec37157f0f9b5deb6667bb94c1ac32c81621dec0d55ca51d"
     },
     {
       "path": "module-13/Module-13-Master.html",
@@ -484,14 +501,14 @@
     {
       "path": "module-13/Module-13-Master.md",
       "format": "markdown",
-      "bytes": 18101,
-      "sha256": "8c230e42fcfe42727a41f3b38566e27ac82f33b585338d0848f4d6312aaadc69"
+      "bytes": 18183,
+      "sha256": "006b7c3e451aa71e6a467a4071585a8c725539627253b23c081665cba7b34d06"
     },
     {
       "path": "module-14/00-overview.md",
       "format": "markdown",
-      "bytes": 18667,
-      "sha256": "d2c04b55d8220a9320a9a2c13cca3cfb78d84dda7981bc9c95f7e5dc11f20c62"
+      "bytes": 18749,
+      "sha256": "a36cb4bb050b8b74dd2b71f4d4ebc8e90b77b7b4c6cca792699356af71857cc2"
     },
     {
       "path": "module-14/Module-14-Master.html",
@@ -502,14 +519,14 @@
     {
       "path": "module-14/Module-14-Master.md",
       "format": "markdown",
-      "bytes": 18652,
-      "sha256": "0167d23cb188803b937ffc4260e2975a4c2acc49fced7bd626359520baa5d0f1"
+      "bytes": 18734,
+      "sha256": "c44851d73637cb186245e05b5e8e6af75b2641dd86c3e4bbcdd12d08f8622267"
     },
     {
       "path": "module-15/00-overview.md",
       "format": "markdown",
-      "bytes": 17631,
-      "sha256": "5ca87939a4827af4adbc4d99962f864f88478a748547295a3553308c76daf1ff"
+      "bytes": 17713,
+      "sha256": "4dff341dd618b1eaa364fb11e9fbc2e7c91a4a35c9c14571bcf828fd9c87cec7"
     },
     {
       "path": "module-15/Module-15-Master.html",
@@ -520,14 +537,14 @@
     {
       "path": "module-15/Module-15-Master.md",
       "format": "markdown",
-      "bytes": 17632,
-      "sha256": "b3d95a01be17125641e0839bbc5980f49482198337343c889775ffbe24b8fa29"
+      "bytes": 17714,
+      "sha256": "647f95098778939a152e1b199c196b33d3cae7309e40bd05b243c2f150e9db46"
     },
     {
       "path": "module-16/00-overview.md",
       "format": "markdown",
-      "bytes": 15557,
-      "sha256": "1ba47435677ac9dd989bb602054a3eec27b8b8c569bc704246dc6de534b7a5a8"
+      "bytes": 15639,
+      "sha256": "f0ff911e9906069642d154837a356a1a2996d0b4bb963a1ee3586381ce7101e0"
     },
     {
       "path": "module-16/Module-16-Master.html",
@@ -538,8 +555,8 @@
     {
       "path": "module-16/Module-16-Master.md",
       "format": "markdown",
-      "bytes": 15562,
-      "sha256": "4f03554f036e736c35257358ba2db1bc07875e75b06ebb057410eeb8757f1a92"
+      "bytes": 15644,
+      "sha256": "aabfc4840ecf6f056787046d2fa332400cb827a41a043d57f5a7f622830a676b"
     }
   ]
 }
