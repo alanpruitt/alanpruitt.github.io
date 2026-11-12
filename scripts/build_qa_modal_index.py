@@ -307,26 +307,26 @@ def build_curated_executive_nodes():
         {
             "id": "qa-food-informatics-pwa-library",
             "category": "dom-graphrag",
-            "badge": "DOM GraphRAG • Food Informatics & 9 PWAs",
-            "dom_path": "Production Applications > Food Informatics & 9-App Lovable PWA Library",
-            "title_en": "What are Food Informatics Consulting ('Measure Twice, Cut Once') and the 9 Production PWAs?",
-            "title_es": "¿Qué son la Consultoría en Informática de Alimentos ('Medir Dos Veces, Cortar Una') y las 9 PWAs en producción?",
+            "badge": "DOM GraphRAG • Food Informatics & 8 PWAs",
+            "dom_path": "Production Applications > Food Informatics & 8-App Lovable PWA Library",
+            "title_en": "What are Food Informatics Consulting ('Measure Twice, Cut Once') and the 8 Production PWAs?",
+            "title_es": "¿Qué son la Consultoría en Informática de Alimentos ('Medir Dos Veces, Cortar Una') y las 8 PWAs en producción?",
             "answer_en": (
                 "In plain English: Grounded in Krupitzer & Stein (2021, Foods, 10(11), 2889), Food Informatics Consulting "
                 "uses on-device machine vision and structured Markdown handoffs to convert restaurant menus into gram-level "
                 "dish reformulation proposals (T2DM, GLP-1 Supportive, DASH, Prenatal, Celiac/Gluten-Free). It is part of our "
-                "9-app production PWA suite: exwtoolkit.com, paga2018.dev, exwdemo.dev, culinarycompass.dev, flavorarchitect.dev, "
+                "8-app production PWA suite: exwtoolkit.com, paga2018.dev, exwdemo.dev, flavorarchitect.dev, "
                 "arquitectodelsabor.dev, mdtodocs.app, prompt-mile-hero, and agflow-roi-dash."
             ),
             "answer_es": (
                 "En palabras sencillas: Basada en Krupitzer y Stein (2021), la Consultoría en Informática de Alimentos "
                 "convierte menús de restaurantes en datos estructurados en Markdown y propuestas de reformulación en gramos, "
-                "integrada dentro de nuestra biblioteca de 9 aplicaciones web progresivas (PWAs) en vivo."
+                "integrada dentro de nuestra biblioteca de 8 aplicaciones web progresivas (PWAs) en vivo."
             ),
-            "keywords": "food informatics consulting measure twice cut once krupitzer stein 2021 flavorarchitect culinarycompass exwtoolkit paga2018 exwdemo mdtodocs pwa",
+            "keywords": "food informatics consulting measure twice cut once krupitzer stein 2021 flavorarchitect exwtoolkit paga2018 exwdemo arquitectodelsabor mdtodocs pwa",
             "links": [
                 {"label_en": "Launch Food Informatics Hub (flavorarchitect.dev)", "label_es": "Abrir Hub de Informática de Alimentos", "url": "https://flavorarchitect.dev/food-informatics"},
-                {"label_en": "Explore All 9 Production PWAs", "label_es": "Explorar las 9 Aplicaciones PWA", "url": "/#applications"},
+                {"label_en": "Explore All 8 Production PWAs", "label_es": "Explorar las 8 Aplicaciones PWA", "url": "/#applications"},
                 {"label_en": "Webcognita LLC Capabilities Statement", "label_es": "Declaración de Capacidades de Webcognita LLC", "url": "https://www.webcognita.com/"},
             ],
         },
