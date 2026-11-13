@@ -58,10 +58,12 @@
         .justify-between { justify-content: space-between; }
         .grid { display: grid; }
         .grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+        .grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
         @media (min-width: 768px) {
             .md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
             .md\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+            .md\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
             .md\:col-span-2 { grid-column: span 2 / span 2; }
             .md\:col-span-3 { grid-column: span 3 / span 3; }
             .md\:flex-row { flex-direction: row; }
@@ -839,13 +841,13 @@
                     </p>
                 </div>
 
-                <!-- 3A: 3 Flagship Production Applications + <details> Drawer for Remaining 6 -->
+                <!-- 3A: 4 Flagship Production Applications + <details> Drawer for Remaining 6 -->
                 <div id="applications" class="mb-8">
                     <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
                         <h3 class="text-xl font-extrabold text-navy-900 m-0">
-                            {{ if eq .Lang "es" }}Sistemas Interactivos Destacados (3 Aplicaciones Insignia + 6 en Archivo){{ else }}Flagship Production Applications (3 Anchor Systems + 6 Live Utilities){{ end }}
+                            {{ if eq .Lang "es" }}Sistemas Interactivos Destacados (4 Aplicaciones Insignia + 6 en Archivo){{ else }}Flagship Production Applications (4 Anchor Systems + 6 Live Utilities){{ end }}
                         </h3>
-                        <span class="font-mono text-xs font-bold px-3 py-1 rounded-md bg-creme-200 text-navy-900">9 Live PWAs &amp; Edge Tools</span>
+                        <span class="font-mono text-xs font-bold px-3 py-1 rounded-md bg-creme-200 text-navy-900">10 Live PWAs &amp; Edge Tools</span>
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
@@ -916,6 +918,52 @@
                                     {{ if eq .Lang "es" }}Abrir flavorarchitect.dev &rarr;{{ else }}Launch flavorarchitect.dev &rarr;{{ end }}
                                 </a>
                             </div>
+                        </div>
+                    </div>
+
+                    <!-- Flagship 4 Spotlight Card: Google Cloud GAIL 2026 On-Demand Student Study & Practice Hub -->
+                    <div class="ap-card-featured mb-4">
+                        <div>
+                            <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                                <span class="font-mono text-xs font-bold text-navy-900">alanpruitt.com/gail2026/ &bull; #GAIL2026</span>
+                                <span class="font-mono text-xs font-semibold px-2.5 py-0.5 rounded bg-navy-900 text-creme-50">Launchpad for Veterans &bull; $0 Zero-Login</span>
+                            </div>
+                            <h4 class="text-base sm:text-lg font-extrabold text-navy-900 mb-2">
+                                {{ if eq .Lang "es" }}Google Cloud Generative AI Leader (GAIL) &mdash; Centro Estudiantil de Estudio y Práctica 2026{{ else }}Google Cloud Generative AI Leader (GAIL) &mdash; 2026 On-Demand Student Study &amp; Practice Hub{{ end }}
+                            </h4>
+                            <p class="text-xs sm:text-sm text-navy-800 leading-relaxed mb-3">
+                                {{ if eq .Lang "es" }}
+                                    Banco de estudio abierto compilado bajo <strong>Currículo como Código (JSON SSoT &rarr; Hugo SSG &lt;350 ms)</strong> para reconciliar la nomenclatura 2025 (<em>Vertex AI</em>, <em>Agentspace</em>, <em>Imagen</em>, <em>TF Lite</em>) con la plataforma 2026 (<em>Gemini Enterprise Agent Platform</em>, <em>Agent Studio</em>, <em>Nano Banana</em>, <em>LiteRT</em>). Incluye filtro instantáneo Rosetta, selector <code>Patrón / Regla / Solución</code>, examen diagnóstico y sincronización automática S-A-R.
+                                {{ else }}
+                                    Open-access <strong>Curriculum-as-Code certification workbench (JSON SSoT &rarr; Hugo SSG &lt;350 ms)</strong> reconciling Google Cloud&rsquo;s 2025 <em>Vertex AI / Agentspace / Imagen / TF Lite</em> naming with the 2026 <em>Gemini Enterprise Agent Platform / Agent Studio / Nano Banana / LiteRT</em> stack—uniting an instant Rosetta Stone filter, <code>Pattern / Rule / Solve</code> architecture selector, diagnostic quiz, and live S-A-R sync.
+                                {{ end }}
+                            </p>
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-2 mb-4">
+                                <div class="ap-kpi-box">
+                                    <div class="text-sm font-extrabold text-navy-900">12 Pairs</div>
+                                    <div class="text-xs text-navy-800">{{ if eq .Lang "es" }}Tabla Rosetta 2025 &harr; 2026{{ else }}2025 &harr; 2026 Rosetta Filter{{ end }}</div>
+                                </div>
+                                <div class="ap-kpi-box">
+                                    <div class="text-sm font-extrabold text-navy-900">4 Domains</div>
+                                    <div class="text-xs text-navy-800">{{ if eq .Lang "es" }}100% Mapa Oficial GAIL{{ else }}100% Official Blueprint{{ end }}</div>
+                                </div>
+                                <div class="ap-kpi-box">
+                                    <div class="text-sm font-extrabold text-navy-900">8 Scenarios</div>
+                                    <div class="text-xs text-navy-800">Pattern / Rule / Solve</div>
+                                </div>
+                                <div class="ap-kpi-box">
+                                    <div class="text-sm font-extrabold text-navy-900">12-Item Quiz</div>
+                                    <div class="text-xs text-navy-800">{{ if eq .Lang "es" }}Progreso local + PDF{{ else }}localStorage + Print PDF{{ end }}</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap items-center gap-2.5">
+                            <a href="{{ if eq .Lang "es" }}/es/gail2026/{{ else }}/gail2026/{{ end }}" class="ap-action-link-dark">
+                                {{ if eq .Lang "es" }}Abrir Centro Pantalla Completa (/es/gail2026/) &rarr;{{ else }}Launch Full-Screen &amp; Printable Hub (/gail2026/) &rarr;{{ end }}
+                            </a>
+                            <a href="#GAIL2026" onclick="var d=document.getElementById('GAIL2026');if(d){d.open=true;}" class="ap-action-link">
+                                {{ if eq .Lang "es" }}Desplegar Aquí en Página (#GAIL2026) &darr;{{ else }}Expand Inline Workbench (#GAIL2026) &darr;{{ end }}
+                            </a>
                         </div>
                     </div>
 
