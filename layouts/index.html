@@ -1009,6 +1009,19 @@
                             </div>
                         </div>
                     </details>
+
+                    <!-- On-Demand Student Certification Workbench: alanpruitt.com/#GAIL2026 -->
+                    <details id="GAIL2026" class="ap-drawer mt-4">
+                        <summary>
+                            <span>
+                                {{ if eq .Lang "es" }}[Herramienta Estudiantil #GAIL2026] Google Cloud Generative AI Leader (GAIL) &mdash; Centro de Estudio, Tabla Rosetta 2025&ndash;2026 y Examen Diagnóstico{{ else }}[On-Demand Student Tool #GAIL2026] Google Cloud Generative AI Leader (GAIL) &mdash; 2026 Study Hub, Rosetta Stone &amp; Diagnostic Quiz{{ end }}
+                            </span>
+                            <svg class="ap-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <div class="ap-drawer-body">
+                            {{ partial "gail2026-workbench.html" (dict "isStandalone" false) }}
+                        </div>
+                    </details>
                 </div>
 
                 <!-- 3B: Flagship Publications, 40-Essay Corpus & 50-State Open Datasets -->
@@ -1265,23 +1278,32 @@
 
         <script>
           (function() {
+            function resolveHashElement(rawHash) {
+              if (!rawHash || rawHash.length < 2) return null;
+              var cleanId = decodeURIComponent(rawHash.slice(1));
+              var exact = document.getElementById(cleanId);
+              if (exact) return exact;
+              if (cleanId.toUpperCase() === 'GAIL2026') {
+                return document.getElementById('GAIL2026');
+              }
+              return null;
+            }
             function openTargetedDetails() {
-              var hash = window.location.hash;
-              if (!hash || hash.length < 2) return;
-              var el = document.getElementById(hash.slice(1));
+              var el = resolveHashElement(window.location.hash);
               if (!el) return;
               var det = el.tagName === 'DETAILS' ? el : el.closest('details');
               if (det && !det.open) {
                 det.open = true;
               }
+              setTimeout(function() {
+                el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }, 40);
             }
             window.addEventListener('hashchange', openTargetedDetails);
             document.addEventListener('click', function(e) {
               var a = e.target.closest('a[href^="#"]');
               if (!a) return;
-              var id = a.getAttribute('href').slice(1);
-              if (!id) return;
-              var target = document.getElementById(id);
+              var target = resolveHashElement(a.getAttribute('href'));
               if (target && target.tagName === 'DETAILS') {
                 target.open = true;
               }
