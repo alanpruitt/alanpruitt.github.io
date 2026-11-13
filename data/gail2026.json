@@ -1,5 +1,5 @@
 {
-  "version": "1.1.0",
+  "version": "1.1.1",
   "lastUpdated": "2026-11-13",
   "title": "Google Cloud Generative AI Leader (GAIL) — 2026 On-Demand Student Study & Practice Hub",
   "subtitle": "Open-access, zero-login exam preparation workbench reconciling Google Cloud's 2025 Vertex AI / Agentspace terminology with the 2026 Gemini Enterprise Agent Platform curriculum.",
@@ -475,22 +475,27 @@
     }
   ],
   "liveSync": {
-    "statusSummary": "Active S-A-R curriculum monitor tracking post-class instructor annotations and Nov 19–20 Office Hours takeaways.",
+    "statusSummary": "Active 30-minute S-A-R curriculum monitor tracking all three post-class and Office Hours slide/material slots.",
     "lastChecked": "2026-11-13",
     "milestones": [
       {
         "badge": "MONITORING",
-        "title": "Post-Class Instructor Annotated Deck Takeaways",
-        "detail": "Watching live class notes for post-class instructor slide annotations. Distilled exam watchouts and emphasis notes will populate here automatically as soon as posted (zero proprietary slide redistribution)."
+        "title": "1. Link to Annotated Class PDFs",
+        "detail": "Current source state: <Will be added after class>. Distilled exam watchouts and instructor slide callouts will populate automatically as soon as posted (zero proprietary slide redistribution)."
       },
       {
-        "badge": "SCHEDULED",
-        "title": "Live Office Hours Q&A Synthesis (Nov 19 & Nov 20, 2026)",
-        "detail": "Session 1: Thu Nov 19 (4:00–5:30 PM MST / 5:00–6:30 PM CST) • Session 2: Fri Nov 20 (11:00 AM–12:30 PM MST / 12:00–1:30 PM CST). Post-session Q&A takeaways will be distilled after sessions conclude."
+        "badge": "MONITORING",
+        "title": "2. Office Hour Materials (Nov 19 & Nov 20, 2026)",
+        "detail": "Current source state: <Will be added after sessions>. Sessions run Thu Nov 19 (4:00–5:30 PM MST / 5:00–6:30 PM CST) and Fri Nov 20 (11:00 AM–12:30 PM MST / 12:00–1:30 PM CST)."
+      },
+      {
+        "badge": "MONITORING",
+        "title": "3. Office Hour Annotated Version",
+        "detail": "Current source state: <Will be added after sessions>. Post-session annotated Q&A solutions and exam traps will be synthesized here automatically once uploaded."
       },
       {
         "badge": "READY",
-        "title": "Exam Registration & Proctoring Readiness",
+        "title": "4. Exam Registration & Proctoring Readiness",
         "detail": "Verify CertMetrics account login, run the Pearson VUE OnVUE machine/network pre-check (if testing online), or locate an in-person Pearson VUE test center prior to scheduling."
       }
     ],
