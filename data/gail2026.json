@@ -1,5 +1,5 @@
 {
-  "version": "1.1.4",
+  "version": "1.1.5",
   "lastUpdated": "2026-11-13",
   "title": "Google Cloud Generative AI Leader (GAIL) — 2026 On-Demand Student Study & Practice Hub",
   "subtitle": "Open-access, zero-login exam preparation workbench reconciling Google Cloud's 2025 Vertex AI / Agentspace terminology with the 2026 Gemini Enterprise Agent Platform curriculum.",
@@ -139,7 +139,7 @@
         },
         {
           "heading": "Model Ecosystem Spectrum",
-          "body": "Gemini (Pro = deep complex reasoning; Flash = fast multimodal workhorse; Flash-Lite = high-volume cost efficiency; Nano = on-device edge) • Gemma (open-weights customizable family: Gemma 2, CodeGemma, PaliGemma) • Open/Partner models in Model Garden (Llama, Mistral, Anthropic Claude)."
+          "body": "Gemini (Pro / Frontier = deep multi-step reasoning, autonomous agents, up to 1M tokens; Flash = fast multimodal workhorse & Live streaming; Flash-Lite = ultra-low-cost high-volume routing/extraction; Nano = offline on-device edge via LiteRT) • Specialized Google Models (Nano Banana 2.1 / Imagen = conversational image gen & multi-image fusion; Veo 3.1 = video; Lyria = music/audio; Chirp = 100+ lang speech; Text & Multimodal Embeddings = RAG vectors) • Gemma Open-Weights (Gemma 1/2 = English-only; Gemma 3/3n/4 = 140+ languages; ShieldGemma 2 = safety moderation; CodeGemma, PaliGemma, MedGemma) • Partner/OSS in Model Garden."
         }
       ],
       "examTrap": "Do not confuse Predictive/Discriminative ML (forecasting numbers, counting visitors, classifying spam) with Generative AI (creating novel text, code, images, audio, or synthetic summaries)."
@@ -508,13 +508,19 @@
       "Dual-Terminology Alert: Expect both 2025 (Vertex AI, Vertex AI Studio, Vertex AI Search, Agentspace, NotebookLM, Imagen, CCAI) and 2026 (Agent Platform, Agent Studio, Agent Search, Gemini Enterprise, Gemini Notebook, Nano Banana, Gemini Enterprise for CX) names across prep resources.",
       "Benchmarking & Token Economics (Section 4 Strategy): Leaders evaluate models across a 3-way trade-off of Quality (intelligence/accuracy), Latency (tokens/sec & time-to-first-token), and Cost (input vs. output token pricing + Context Caching).",
       "Sustainable AI & Regional Carbon Footprint (Live Day 2 Sync): In Section 4 Infrastructure & Responsible AI scenarios, pair right-sized models (Gemini Flash / Gemini Nano) with low-carbon Google Cloud regions using Google's Carbon-Free Energy (CFE%) region selector.",
-      "Google Cloud Regions, Data Residency & Latency (Live Day 2 Sync): Select specific Google Cloud Regions & Zones (cloud.google.com/about/locations) to enforce regulatory data residency/sovereignty (e.g., GDPR, HIPAA, public sector), minimize end-user inference latency, and verify regional model availability."
+      "Google Cloud Regions, Data Residency & Latency (Live Day 2 Sync): Select specific Google Cloud Regions & Zones (cloud.google.com/about/locations) to enforce regulatory data residency/sovereignty (e.g., GDPR, HIPAA, public sector), minimize end-user inference latency, and verify regional model availability.",
+      "Google Models on Gemini Enterprise Agent Platform (Live Day 2 Sync): Match workload complexity to model tier (Pro/Frontier for deep reasoning & autonomous agents vs. Flash for multimodal speed vs. Flash-Lite for high-volume cost efficiency vs. Nano/LiteRT for offline edge), modality (Nano Banana/Imagen image, Veo video, Lyria music, Chirp speech, Multimodal Embeddings), and open-weight Gemma rules (Gemma 1/2 = English-only vs. Gemma 3/3n/4 = 140+ languages; ShieldGemma 2 = safety moderation)."
     ]
   },
   "evalResources": [
     {
       "category": "Exam Logistics, Responsible AI, Regions & Edge Docs",
       "items": [
+        {
+          "label": "Google Models on Gemini Enterprise Agent Platform",
+          "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/google-models",
+          "note": "Live Day 2 link: official catalog of Gemini (Pro/Flash/Flash-Lite), Nano Banana, Veo, Lyria, Embeddings, & Gemma."
+        },
         {
           "label": "Pearson VUE OnVUE Online Testing Setup",
           "url": "https://www.pearsonvue.com/us/en/google-cloud/onvue.html",
@@ -594,6 +600,11 @@
     }
   ],
   "changelog": [
+    {
+      "version": "v1.1.5",
+      "date": "2026-11-13",
+      "notes": "Auto-synced live Day 2 instructor addition: Google Models on Gemini Enterprise Agent Platform (docs.cloud.google.com/gemini-enterprise-agent-platform/models/google-models) — Pro/Flash/Flash-Lite tiering, Nano Banana 2.1/Imagen, Veo 3.1, Lyria, Embeddings, ShieldGemma 2, & Gemma 1/2 (EN-only) vs. Gemma 3/3n/4 (140+ languages)."
+    },
     {
       "version": "v1.1.4",
       "date": "2026-11-13",
