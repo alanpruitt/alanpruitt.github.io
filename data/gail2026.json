@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "lastUpdated": "2026-11-13",
   "title": "Google Cloud Generative AI Leader (GAIL) — 2026 On-Demand Student Study & Practice Hub",
   "subtitle": "Open-access, zero-login exam preparation workbench reconciling Google Cloud's 2025 Vertex AI / Agentspace terminology with the 2026 Gemini Enterprise Agent Platform curriculum.",
@@ -16,8 +16,20 @@
       "url": "https://cloud.google.com/learn/certification/generative-ai-leader"
     },
     {
-      "label": "No-Cost 5-Module Learning Path (Skills Boost)",
+      "label": "Official Exam Guide (PDF)",
+      "url": "https://services.google.com/fh/files/misc/generative_ai_leader_exam_guide_english.pdf"
+    },
+    {
+      "label": "Official Sample Questions",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLScNn5oUIFeMQjtsHilQsJPxDsnP-0DbhDVsIXaBeCmPj-dgYw/viewform"
+    },
+    {
+      "label": "No-Cost 5-Module Learning Path",
       "url": "https://www.skills.google/paths/1951"
+    },
+    {
+      "label": "CertMetrics Exam Registration",
+      "url": "https://cp.certmetrics.com/google/en/login"
     },
     {
       "label": "Google AI Studio (Free Sandbox)",
@@ -26,10 +38,6 @@
     {
       "label": "Google Secure AI Framework (SAIF)",
       "url": "https://safety.google/safety/saif/"
-    },
-    {
-      "label": "Lite Runtime (LiteRT) Edge AI Docs",
-      "url": "https://ai.google.dev/edge/litert"
     }
   ],
   "rosettaStone": [
@@ -466,7 +474,109 @@
       "label": "Score 12 / 12 on the Diagnostic Practice Quiz in Tab 4 and verify readiness against official sample questions."
     }
   ],
+  "liveSync": {
+    "statusSummary": "Active S-A-R curriculum monitor tracking post-class instructor annotations and Nov 19–20 Office Hours takeaways.",
+    "lastChecked": "2026-11-13",
+    "milestones": [
+      {
+        "badge": "MONITORING",
+        "title": "Post-Class Instructor Annotated Deck Takeaways",
+        "detail": "Watching live class notes for post-class instructor slide annotations. Distilled exam watchouts and emphasis notes will populate here automatically as soon as posted (zero proprietary slide redistribution)."
+      },
+      {
+        "badge": "SCHEDULED",
+        "title": "Live Office Hours Q&A Synthesis (Nov 19 & Nov 20, 2026)",
+        "detail": "Session 1: Thu Nov 19 (4:00–5:30 PM MST / 5:00–6:30 PM CST) • Session 2: Fri Nov 20 (11:00 AM–12:30 PM MST / 12:00–1:30 PM CST). Post-session Q&A takeaways will be distilled after sessions conclude."
+      },
+      {
+        "badge": "READY",
+        "title": "Exam Registration & Proctoring Readiness",
+        "detail": "Verify CertMetrics account login, run the Pearson VUE OnVUE machine/network pre-check (if testing online), or locate an in-person Pearson VUE test center prior to scheduling."
+      }
+    ],
+    "distilledTakeaways": [
+      "Dual-Terminology Alert: Expect both 2025 (Vertex AI, Vertex AI Studio, Vertex AI Search, Agentspace, NotebookLM, Imagen, CCAI) and 2026 (Agent Platform, Agent Studio, Agent Search, Gemini Enterprise, Gemini Notebook, Nano Banana, Gemini Enterprise for CX) names across prep resources.",
+      "Benchmarking & Token Economics (Section 4 Strategy): Leaders evaluate models across a 3-way trade-off of Quality (intelligence/accuracy), Latency (tokens/sec & time-to-first-token), and Cost (input vs. output token pricing + Context Caching)."
+    ]
+  },
+  "evalResources": [
+    {
+      "category": "Exam Logistics, Responsible AI & Edge Docs",
+      "items": [
+        {
+          "label": "Pearson VUE OnVUE Online Testing Setup",
+          "url": "https://www.pearsonvue.com/us/en/google-cloud/onvue.html",
+          "note": "Mandatory system test and workspace rules for remote proctored testing."
+        },
+        {
+          "label": "Find an In-Person Pearson VUE Test Center",
+          "url": "https://www.pearsonvue.com/us/en/test-takers/test-centers.html",
+          "note": "Locate authorized physical testing centers and ID requirements."
+        },
+        {
+          "label": "Google AI Principles",
+          "url": "https://ai.google/responsibility/principles/",
+          "note": "Foundational Responsible AI governance commitments tested in Section 4."
+        },
+        {
+          "label": "Responsible AI on Google Cloud",
+          "url": "https://cloud.google.com/responsible-ai",
+          "note": "Enterprise safety filters, fairness, interpretability, and governance."
+        },
+        {
+          "label": "Lite Runtime (LiteRT) Edge AI Docs",
+          "url": "https://ai.google.dev/edge/litert",
+          "note": "On-device offline runtime (formerly TensorFlow Lite) paired with Gemini Nano."
+        },
+        {
+          "label": "Reference Healthcare Agent Demo (GitHub)",
+          "url": "https://github.com/haggman/diabetes-demo",
+          "note": "Open-source clinical agent architecture demonstration shared in class."
+        }
+      ]
+    },
+    {
+      "category": "Model Quality Leaderboards & Token FinOps Calculators",
+      "items": [
+        {
+          "label": "Artificial Analysis (Quality vs. Speed vs. Price)",
+          "url": "https://artificialanalysis.ai/",
+          "note": "Independent comparison of intelligence, output speed, latency, and API cost."
+        },
+        {
+          "label": "LM Arena Leaderboard",
+          "url": "https://arena.ai/leaderboard",
+          "note": "Blind human-preference Elo rankings across text, coding, and vision."
+        },
+        {
+          "label": "BenchLM (Multi-Benchmark Aggregator)",
+          "url": "https://benchlm.ai/",
+          "note": "Cross-benchmark scoring paired with model speed and pricing."
+        },
+        {
+          "label": "Vellum LLM Leaderboard",
+          "url": "https://www.vellum.ai/llm-leaderboard",
+          "note": "Enterprise reasoning, coding, and tool-use comparisons with cost metrics."
+        },
+        {
+          "label": "Price Per Token & Helicone Cost Calculator",
+          "url": "https://www.helicone.ai/llm-cost",
+          "note": "Side-by-side per-token FinOps cost modeling across 300+ foundation models."
+        },
+        {
+          "label": "LLMprices.dev (Live Token Pricing Table)",
+          "url": "https://www.llmprices.dev/",
+          "note": "Continuously updated input/output token pricing reference."
+        }
+      ]
+    }
+  ],
   "changelog": [
+    {
+      "version": "v1.1.0",
+      "date": "2026-11-13",
+      "notes": "Added Official Exam Guide PDF, Official Sample Questions Form, CertMetrics login, Pearson OnVUE readiness, Model Evaluation & Token FinOps tooling tab, and live S-A-R post-class annotation sync tracker."
+    },
     {
       "version": "v1.0.0",
       "date": "2026-11-13",

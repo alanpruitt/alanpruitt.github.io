@@ -411,6 +411,9 @@
     <button type="button" role="tab" id="{{ $uid }}-tab-quiz" aria-selected="false" aria-controls="{{ $uid }}-panel-quiz" tabindex="-1" data-gail-tab="quiz" class="gail-tab">
       4. Diagnostic Quiz ({{ len $g.practiceQuiz }}) &amp; Checklist
     </button>
+    <button type="button" role="tab" id="{{ $uid }}-tab-live" aria-selected="false" aria-controls="{{ $uid }}-panel-live" tabindex="-1" data-gail-tab="live" class="gail-tab">
+      5. Live Class Sync &amp; Eval Tooling
+    </button>
   </div>
 
   <!-- PANEL 1: 2025 <-> 2026 Dual-Terminology Rosetta Stone -->
@@ -566,6 +569,57 @@
       </label>
       {{- end }}
     </div>
+  </div>
+
+  <!-- PANEL 5: Live Class Sync & Model Evaluation / FinOps Tooling -->
+  <div id="{{ $uid }}-panel-live" role="tabpanel" aria-labelledby="{{ $uid }}-tab-live" data-gail-panel="live" class="gail-tabpanel" hidden>
+    <div class="gail-domain-card">
+      <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+        <span class="font-mono text-xs font-bold px-2.5 py-1 rounded" style="background-color:#0D5156;color:#FFFFFF;">LIVE CURRICULUM SYNC &bull; CHECKED {{ $g.liveSync.lastChecked }}</span>
+      </div>
+      {{ printf "<%s class=\"text-base sm:text-lg font-extrabold m-0 mb-1\" style=\"color:#0B192C;background-color:#FAFBF7;\">Post-Class Annotation &amp; Office Hours Tracker</%s>" $hSub $hSub | safeHTML }}
+      <p class="text-xs sm:text-sm m-0 mb-3" style="color:#0B192C;background-color:#FAFBF7;line-height:1.55;">
+        {{ $g.liveSync.statusSummary }}
+      </p>
+      <div class="gail-pillar-grid">
+        {{- range $g.liveSync.milestones }}
+        <div class="gail-pillar">
+          <div class="mb-1.5">
+            <span class="font-mono text-xs font-bold px-2 py-0.5 rounded" style="background-color:#0B192C;color:#FFFFFF;">{{ .badge }}</span>
+          </div>
+          <div class="text-xs sm:text-sm font-bold mb-1" style="color:#0B192C;background-color:#FFFFFF;">{{ .title }}</div>
+          <p class="text-xs m-0" style="color:#0B192C;background-color:#FFFFFF;line-height:1.5;">{{ .detail }}</p>
+        </div>
+        {{- end }}
+      </div>
+      <div class="gail-trap mt-3">
+        <strong>Distilled Instructor &amp; Cohort Exam Callouts:</strong>
+        <ul class="mt-1.5 mb-0 pl-5 text-xs" style="color:#940925;background-color:#FFF5F6;line-height:1.55;">
+          {{- range $g.liveSync.distilledTakeaways }}
+          <li class="mb-1">{{ . }}</li>
+          {{- end }}
+        </ul>
+      </div>
+    </div>
+
+    {{- range $g.evalResources }}
+    <div class="gail-domain-card">
+      {{ printf "<%s class=\"text-base font-extrabold m-0 mb-2\" style=\"color:#0B192C;background-color:#FAFBF7;\">%s</%s>" $hSub .category $hSub | safeHTML }}
+      <div class="gail-pillar-grid">
+        {{- range .items }}
+        <div class="gail-pillar flex flex-col justify-between">
+          <div>
+            <div class="text-xs sm:text-sm font-bold mb-1" style="color:#0B192C;background-color:#FFFFFF;">{{ .label }}</div>
+            <p class="text-xs m-0 mb-2.5" style="color:#0B192C;background-color:#FFFFFF;line-height:1.45;">{{ .note }}</p>
+          </div>
+          <div>
+            <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" class="gail-util-link">{{ .label }} &rarr;</a>
+          </div>
+        </div>
+        {{- end }}
+      </div>
+    </div>
+    {{- end }}
   </div>
 
   <!-- Scoped Zero-Dependency Interactive Controller -->
