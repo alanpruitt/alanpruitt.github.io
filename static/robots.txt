@@ -10,6 +10,9 @@ Allow: /qa-embed/
 Allow: /data/sovereign-qa-index.json
 Allow: /data/exw-ssot-rag-index.json
 Disallow: /distribution/
+Disallow: /research-log/entries-archive.html
+Disallow: /tests/
+Disallow: /template.html
 
 User-agent: OAI-SearchBot
 Allow: /

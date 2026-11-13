@@ -19,8 +19,11 @@ def audit_file(filepath):
 
     # 1. ROBUST AUDIT: Check heading hierarchy (must start at h2, no skipped levels)
     last_level = 1  # Canvas page title is h1, content starts at h2
+    content_no_scripts = re.sub(
+        r"<(script|style)\b[^>]*>.*?</\1>", "", content, flags=re.IGNORECASE | re.DOTALL
+    )
 
-    for line in content.splitlines():
+    for line in content_no_scripts.splitlines():
         stripped = line.strip()
         # Ignore structural Centaur/prompt delimiters, table rows, and protocol bounds
         if (
@@ -33,16 +36,16 @@ def audit_file(filepath):
             continue
 
         line_no_code = re.sub(r"`[^`]*`", "", line)
-        h_html = re.search(r"<h([1-6])[^>]*>", line_no_code, re.IGNORECASE)
-        h_md = re.search(r"^(#{1,6})\s+\S+", line)
+        levels = [
+            int(m.group(1))
+            for m in re.finditer(r"<h([1-6])\b[^>]*>", line_no_code, re.IGNORECASE)
+        ]
+        if not levels:
+            h_md = re.search(r"^(#{1,6})\s+\S+", line)
+            if h_md:
+                levels = [len(h_md.group(1))]
 
-        level = None
-        if h_html:
-            level = int(h_html.group(1))
-        elif h_md:
-            level = len(h_md.group(1))
-
-        if level is not None:
+        for level in levels:
             if last_level == 1 and level not in (1, 2):
                 errors.append(
                     f"[Robust] Structure Violation: First content heading must be <h1> or <h2>, found <h{level}>."

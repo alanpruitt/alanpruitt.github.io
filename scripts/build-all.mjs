@@ -241,6 +241,7 @@ function buildGlobal404(routingMap) {
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="robots" content="noindex, follow">
   <title>Redirecting...</title>
   <script>
     (function() {
@@ -502,7 +503,7 @@ function run() {
   }
 
   const nowIso = new Date().toISOString();
-  for (const smRel of ['sitemap.xml', 'public/sitemap.xml', 'es/sitemap.xml', 'public/es/sitemap.xml']) {
+  for (const smRel of ['sitemap.xml', 'public/sitemap.xml', 'en/sitemap.xml', 'public/en/sitemap.xml', 'es/sitemap.xml', 'public/es/sitemap.xml']) {
     const smPath = resolve(DIST_DIR, smRel);
     if (existsSync(smPath)) {
       const smTxt = readFileSync(smPath, 'utf-8').replace(/<lastmod>.*?<\/lastmod>/g, `<lastmod>${nowIso}</lastmod>`);
