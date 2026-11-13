@@ -1,5 +1,5 @@
 {
-  "version": "1.1.7",
+  "version": "1.2.0",
   "lastUpdated": "2026-11-13",
   "title": "Google Cloud Generative AI Leader (GAIL) — 2026 On-Demand Student Study & Practice Hub",
   "subtitle": "Open-access, zero-login exam preparation workbench reconciling Google Cloud's 2025 Vertex AI / Agentspace terminology with the 2026 Gemini Enterprise Agent Platform curriculum.",
@@ -494,9 +494,9 @@
         "detail": "Current source state: <Will be added after sessions>. Post-session annotated Q&A solutions and exam traps will be synthesized here automatically once uploaded."
       },
       {
-        "badge": "MONITORING",
-        "title": "4. Day 1 & Day 2 YouTube Lecture Corpus (~3 Weeks)",
-        "detail": "Nov 12–13 Day One and Day Two YouTube lecture links (expected ~Early Dec 2026) will be ingested automatically via timestamped transcript + exam-signal extraction and merged into the GAIL study corpus."
+        "badge": "INGESTED (DAY 1)",
+        "title": "4. Day 1 & Day 2 Lecture Replay Corpus (Available Through Dec 4, 2026)",
+        "detail": "Day 1 full lecture transcript (07:36:48 • 527 windows • 87 exam signals) ingested on 2026-11-13; Day 2 replay link posted and auto-queued for caption ingestion as soon as YouTube processing finishes."
       },
       {
         "badge": "READY",
@@ -511,7 +511,8 @@
       "Google Cloud Regions, Data Residency & Latency (Live Day 2 Sync): Select specific Google Cloud Regions & Zones (cloud.google.com/about/locations) to enforce regulatory data residency/sovereignty (e.g., GDPR, HIPAA, public sector), minimize end-user inference latency, and verify regional model availability.",
       "Google Models on Gemini Enterprise Agent Platform (Live Day 2 Sync): Match workload complexity to model tier (Pro/Frontier for deep reasoning & autonomous agents vs. Flash for multimodal speed vs. Flash-Lite for high-volume cost efficiency vs. Nano/LiteRT for offline edge), modality (Nano Banana/Imagen image, Veo video, Lyria music, Chirp speech, Multimodal Embeddings), and open-weight Gemma rules (Gemma 1/2 = English-only vs. Gemma 3/3n/4 = 140+ languages; ShieldGemma 2 = safety moderation).",
       "Google Workspace with Gemini Prompting Guide 101 (Live Day 2 Sync): Structure prompts with P-T-C-F (Persona + Task [explicit verb] + Context [@file Drive grounding] + Format); distinguish Standalone AI apps (Gemini Deep Research & Canvas, NotebookLM Audio/Video Overviews & Mind Maps, Google Vids + Veo) from Embedded Workspace tools (Sheets =AI() formula, Gems, Meet notes) protected by Workspace's zero-training, zero-human-review privacy boundary.",
-      "Google AI Studio Prompt Workbench (Live Day 2 Sync — aistudio.google.com/prompts/new_chat): Zero-cost browser sandbox (standard Google Account, no GCP project required) for rapid prompt prototyping, System Instructions, Temperature/Top-P/Top-K tuning, Structured Outputs, Grounding with Google Search, Metaprompting, and Gemini API key export—graduate to Agent Studio (Vertex AI Studio) when enterprise IAM, VPC-SC, CMEK, SLAs, and production quotas are required."
+      "Google AI Studio Prompt Workbench (Live Day 2 Sync — aistudio.google.com/prompts/new_chat): Zero-cost browser sandbox (standard Google Account, no GCP project required) for rapid prompt prototyping, System Instructions, Temperature/Top-P/Top-K tuning, Structured Outputs, Grounding with Google Search, Metaprompting, and Gemini API key export—graduate to Agent Studio (Vertex AI Studio) when enterprise IAM, VPC-SC, CMEK, SLAs, and production quotas are required.",
+      "Day 1 Full Lecture Transcript Digest (07:36:48 Corpus Sync): (1) Real GAIL questions are paragraph-length business scenarios, not short slide definitions; (2) The official Exam Guide PDF still prints 'Imagen' without mentioning 'Nano Banana' (hybrid diffusion + LLM architecture for accurate infographic text)—know both synonyms cold; (3) Half of 'Agent Platform' (Vertex AI) builds agents while the other half handles general ML/MLOps (Training, Endpoints, Batch Inference, Versioning, Drift Monitoring, IAM); (4) Customization ladder: Prompt Engineering -> Tools/Grounding/RAG ('look up the answer' — 90%+ of enterprise cases) -> Fine-Tuning ('grad school memorization' on open-weight Gemma) -> Custom Model; (5) Mitigate LLM sycophancy & jailbreaking with SAIF, Google Cloud Mandiant, and launching internal employee-productivity agents (Gemini Enterprise) before public customer bots."
     ]
   },
   "evalResources": [
@@ -612,6 +613,11 @@
     }
   ],
   "changelog": [
+    {
+      "version": "v1.2.0",
+      "date": "2026-11-13",
+      "notes": "Auto-ingested Day 1 full lecture transcript (07:36:48, 527 windows, 87 exam signals) & queued Day 2 replay link: distilled paragraph-scenario stem format, Imagen vs. Nano Banana (hybrid diffusion+LLM) Exam Guide callout, Agent Platform two-halves MLOps architecture, 4-rung customization ladder (Prompting -> Tools/RAG -> Fine-Tuning [Gemma] -> Custom Model), and sycophancy/jailbreaking/SAIF/Mandiant/internal-first rollout rules."
+    },
     {
       "version": "v1.1.7",
       "date": "2026-11-13",
