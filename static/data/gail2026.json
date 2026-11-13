@@ -1,5 +1,5 @@
 {
-  "version": "1.1.3",
+  "version": "1.1.4",
   "lastUpdated": "2026-11-13",
   "title": "Google Cloud Generative AI Leader (GAIL) — 2026 On-Demand Student Study & Practice Hub",
   "subtitle": "Open-access, zero-login exam preparation workbench reconciling Google Cloud's 2025 Vertex AI / Agentspace terminology with the 2026 Gemini Enterprise Agent Platform curriculum.",
@@ -507,12 +507,13 @@
     "distilledTakeaways": [
       "Dual-Terminology Alert: Expect both 2025 (Vertex AI, Vertex AI Studio, Vertex AI Search, Agentspace, NotebookLM, Imagen, CCAI) and 2026 (Agent Platform, Agent Studio, Agent Search, Gemini Enterprise, Gemini Notebook, Nano Banana, Gemini Enterprise for CX) names across prep resources.",
       "Benchmarking & Token Economics (Section 4 Strategy): Leaders evaluate models across a 3-way trade-off of Quality (intelligence/accuracy), Latency (tokens/sec & time-to-first-token), and Cost (input vs. output token pricing + Context Caching).",
-      "Sustainable AI & Regional Carbon Footprint (Live Day 2 Sync): In Section 4 Infrastructure & Responsible AI scenarios, pair right-sized models (Gemini Flash / Gemini Nano) with low-carbon Google Cloud regions using Google's Carbon-Free Energy (CFE%) region selector."
+      "Sustainable AI & Regional Carbon Footprint (Live Day 2 Sync): In Section 4 Infrastructure & Responsible AI scenarios, pair right-sized models (Gemini Flash / Gemini Nano) with low-carbon Google Cloud regions using Google's Carbon-Free Energy (CFE%) region selector.",
+      "Google Cloud Regions, Data Residency & Latency (Live Day 2 Sync): Select specific Google Cloud Regions & Zones (cloud.google.com/about/locations) to enforce regulatory data residency/sovereignty (e.g., GDPR, HIPAA, public sector), minimize end-user inference latency, and verify regional model availability."
     ]
   },
   "evalResources": [
     {
-      "category": "Exam Logistics, Responsible AI, Sustainability & Edge Docs",
+      "category": "Exam Logistics, Responsible AI, Regions & Edge Docs",
       "items": [
         {
           "label": "Pearson VUE OnVUE Online Testing Setup",
@@ -533,6 +534,11 @@
           "label": "Responsible AI on Google Cloud",
           "url": "https://cloud.google.com/responsible-ai",
           "note": "Enterprise safety filters, fairness, interpretability, and governance."
+        },
+        {
+          "label": "Google Cloud Global Regions & Zones",
+          "url": "https://cloud.google.com/about/locations",
+          "note": "Live Day 2 link: enforce regional data residency/sovereignty, latency, and multi-zone HA."
         },
         {
           "label": "Google Cloud Region Carbon-Free Energy (CFE%)",
@@ -588,6 +594,11 @@
     }
   ],
   "changelog": [
+    {
+      "version": "v1.1.4",
+      "date": "2026-11-13",
+      "notes": "Auto-synced live Day 2 instructor addition: Google Cloud Global Regions & Zones (cloud.google.com/about/locations) + Section 4 Data Residency, Sovereignty & Latency callout."
+    },
     {
       "version": "v1.1.3",
       "date": "2026-11-13",
