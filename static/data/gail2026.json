@@ -1,5 +1,5 @@
 {
-  "version": "1.1.1",
+  "version": "1.1.2",
   "lastUpdated": "2026-11-13",
   "title": "Google Cloud Generative AI Leader (GAIL) — 2026 On-Demand Student Study & Practice Hub",
   "subtitle": "Open-access, zero-login exam preparation workbench reconciling Google Cloud's 2025 Vertex AI / Agentspace terminology with the 2026 Gemini Enterprise Agent Platform curriculum.",
@@ -494,8 +494,13 @@
         "detail": "Current source state: <Will be added after sessions>. Post-session annotated Q&A solutions and exam traps will be synthesized here automatically once uploaded."
       },
       {
+        "badge": "MONITORING",
+        "title": "4. Day 1 & Day 2 YouTube Lecture Corpus (~3 Weeks)",
+        "detail": "Nov 12–13 Day One and Day Two YouTube lecture links (expected ~Early Dec 2026) will be ingested automatically via timestamped transcript + exam-signal extraction and merged into the GAIL study corpus."
+      },
+      {
         "badge": "READY",
-        "title": "4. Exam Registration & Proctoring Readiness",
+        "title": "5. Exam Registration & Proctoring Readiness",
         "detail": "Verify CertMetrics account login, run the Pearson VUE OnVUE machine/network pre-check (if testing online), or locate an in-person Pearson VUE test center prior to scheduling."
       }
     ],
