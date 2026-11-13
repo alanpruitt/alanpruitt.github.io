@@ -1,5 +1,5 @@
 {
-  "version": "1.1.6",
+  "version": "1.1.7",
   "lastUpdated": "2026-11-13",
   "title": "Google Cloud Generative AI Leader (GAIL) — 2026 On-Demand Student Study & Practice Hub",
   "subtitle": "Open-access, zero-login exam preparation workbench reconciling Google Cloud's 2025 Vertex AI / Agentspace terminology with the 2026 Gemini Enterprise Agent Platform curriculum.",
@@ -32,8 +32,8 @@
       "url": "https://cp.certmetrics.com/google/en/login"
     },
     {
-      "label": "Google AI Studio (Free Sandbox)",
-      "url": "https://aistudio.google.com/"
+      "label": "Google AI Studio (New Chat Sandbox)",
+      "url": "https://aistudio.google.com/prompts/new_chat"
     },
     {
       "label": "Google Secure AI Framework (SAIF)",
@@ -510,13 +510,19 @@
       "Sustainable AI & Regional Carbon Footprint (Live Day 2 Sync): In Section 4 Infrastructure & Responsible AI scenarios, pair right-sized models (Gemini Flash / Gemini Nano) with low-carbon Google Cloud regions using Google's Carbon-Free Energy (CFE%) region selector.",
       "Google Cloud Regions, Data Residency & Latency (Live Day 2 Sync): Select specific Google Cloud Regions & Zones (cloud.google.com/about/locations) to enforce regulatory data residency/sovereignty (e.g., GDPR, HIPAA, public sector), minimize end-user inference latency, and verify regional model availability.",
       "Google Models on Gemini Enterprise Agent Platform (Live Day 2 Sync): Match workload complexity to model tier (Pro/Frontier for deep reasoning & autonomous agents vs. Flash for multimodal speed vs. Flash-Lite for high-volume cost efficiency vs. Nano/LiteRT for offline edge), modality (Nano Banana/Imagen image, Veo video, Lyria music, Chirp speech, Multimodal Embeddings), and open-weight Gemma rules (Gemma 1/2 = English-only vs. Gemma 3/3n/4 = 140+ languages; ShieldGemma 2 = safety moderation).",
-      "Google Workspace with Gemini Prompting Guide 101 (Live Day 2 Sync): Structure prompts with P-T-C-F (Persona + Task [explicit verb] + Context [@file Drive grounding] + Format); distinguish Standalone AI apps (Gemini Deep Research & Canvas, NotebookLM Audio/Video Overviews & Mind Maps, Google Vids + Veo) from Embedded Workspace tools (Sheets =AI() formula, Gems, Meet notes) protected by Workspace's zero-training, zero-human-review privacy boundary."
+      "Google Workspace with Gemini Prompting Guide 101 (Live Day 2 Sync): Structure prompts with P-T-C-F (Persona + Task [explicit verb] + Context [@file Drive grounding] + Format); distinguish Standalone AI apps (Gemini Deep Research & Canvas, NotebookLM Audio/Video Overviews & Mind Maps, Google Vids + Veo) from Embedded Workspace tools (Sheets =AI() formula, Gems, Meet notes) protected by Workspace's zero-training, zero-human-review privacy boundary.",
+      "Google AI Studio Prompt Workbench (Live Day 2 Sync — aistudio.google.com/prompts/new_chat): Zero-cost browser sandbox (standard Google Account, no GCP project required) for rapid prompt prototyping, System Instructions, Temperature/Top-P/Top-K tuning, Structured Outputs, Grounding with Google Search, Metaprompting, and Gemini API key export—graduate to Agent Studio (Vertex AI Studio) when enterprise IAM, VPC-SC, CMEK, SLAs, and production quotas are required."
     ]
   },
   "evalResources": [
     {
       "category": "Exam Logistics, Responsible AI, Regions & Edge Docs",
       "items": [
+        {
+          "label": "Google AI Studio — Interactive Prompt Workbench",
+          "url": "https://aistudio.google.com/prompts/new_chat",
+          "note": "Live Day 2 link: zero-cost browser playground for System Instructions, Temperature/Top-P, Grounding with Google Search, & API key export."
+        },
         {
           "label": "Google Workspace with Gemini Prompting Guide 101 (PDF)",
           "url": "https://services.google.com/fh/files/misc/workspace_with_gemini_prompting_guide.pdf",
@@ -606,6 +612,11 @@
     }
   ],
   "changelog": [
+    {
+      "version": "v1.1.7",
+      "date": "2026-11-13",
+      "notes": "Auto-synced live Day 2 instructor addition: Google AI Studio Prompt Workbench (aistudio.google.com/prompts/new_chat) — zero-cost browser prototyping (System Instructions, Temperature/Top-P, Grounding with Google Search, Metaprompting, Gemini API key export) vs. enterprise Agent Studio (Vertex AI Studio) IAM/VPC-SC/SLA graduation rule."
+    },
     {
       "version": "v1.1.6",
       "date": "2026-11-13",
