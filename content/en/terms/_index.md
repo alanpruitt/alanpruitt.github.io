@@ -83,6 +83,7 @@ We reserve the right to update or modify these Terms of Service at any time. Whe
 For questions, permissions, legal notices, or inquiries regarding these Terms of Service, please contact:
 
 * **Principal:** Alan Pruitt
-* **Organization:** Webcognita LLC (Veteran-Owned Small Business)
+* **Organization:** Webcognita LLC (100% Veteran-Owned, Sole-Member Small Business • VOSB)
+* **Headquarters & Standard Operating Hours:** `1906 S 6th Ave, Yuma, AZ 85364` • `Monday–Friday, 8:00 AM – 5:00 PM MST (Arizona)`
 * **Institutional Compliance Rider:** [Data Processing Addendum (DPA)](/dpa/) • [IP & OER Licensing Rider](/ip-oer/) • [Privacy Policy](/privacy/)
 * **Contact Email:** `alan.pruitt@gmail.com`

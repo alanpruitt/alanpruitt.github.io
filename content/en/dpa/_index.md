@@ -76,7 +76,8 @@ This DPA shall be governed by and construed in accordance with the federal laws 
 
 By entering into a Master Services Agreement, Purchase Order, or Statement of Work with Webcognita LLC, the signatory warrants that they are an authorized representative of Webcognita LLC, and that the commitments outlined in this Data Processing Addendum are legally binding upon the organization.
 
-* **Provider:** Webcognita LLC (Veteran-Owned Small Business)
+* **Provider:** Webcognita LLC (100% Veteran-Owned, Sole-Member Small Business • VOSB)
 * **Principal:** Alan Pruitt
+* **Headquarters & Standard Operating Hours:** `1906 S 6th Ave, Yuma, AZ 85364` • `Monday–Friday, 8:00 AM – 5:00 PM MST (Arizona)`
 * **Canonical DPA URL:** `https://alanpruitt.com/dpa/`
 * **Contact Email:** `alan.pruitt@gmail.com`

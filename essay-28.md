@@ -42,4 +42,4 @@ Enforcing mandatory PII sanitization workflows before running evaluations, recog
 - **Retain Authority:** Maintain 100% editorial judgment as a Sovereign Auditor.
 
 ### Continue Your AI Journey
-Because UArizona is an official Google Workspace Experimentation (GWE) institution, you have robust enterprise access. Explore advanced tutorials and prompt libraries at [Gemini for Education](https://edu.google.com/ai/gemini-for-education/).
+Because The University of Arizona is an official Google Workspace Experimentation (GWE) institution, you have robust enterprise access. Explore advanced tutorials and prompt libraries at [Gemini for Education](https://edu.google.com/ai/gemini-for-education/).

@@ -46,7 +46,7 @@ description: "Cláusulas contractuales estándar sobre propiedad intelectual pre
 ### 4. Garantía de Originalidad y Separación Institucional
 
 1. **Garantía de Originalidad:** El Proveedor garantiza y declara que todos los entregables proporcionados bajo un Alcance de Trabajo aplicable son obras originales creadas por el Proveedor o que el Proveedor ha obtenido todas las licencias, derechos y permisos necesarios para entregar dichas obras sin infringir los derechos de autor, marca registrada, patente, secreto comercial o privacidad de terceros.
-2. **Aviso de Separación Institucional:** Webcognita LLC (empresa propiedad de veteranos, VOSB) y Alan Pruitt operan de manera independiente de Arizona Western College y de cualquier otro empleador académico. Toda la Propiedad Intelectual del Proveedor y los entregables de consultoría comercial se desarrollan de forma independiente en hardware e infraestructura privados sin el uso de fondos ni instalaciones públicas institucionales.
+2. **Aviso de Separación Institucional:** Webcognita LLC (`SAM.gov: WEBCOGNITA` • `AZ ACC #L17046120`, empresa de miembro único propiedad de un veterano, VOSB) y Alan Pruitt operan de manera totalmente independiente desde su sede privada en **1906 S 6th Ave, Yuma, AZ 85364** (**Horario Estándar de Operación: Lunes a Viernes, 8:00 AM – 5:00 PM MST / Arizona**), con separación absoluta respecto de Arizona Western College, The University of Arizona y cualquier otra institución educativa o de investigación afiliada. Toda la Propiedad Intelectual del Proveedor y los entregables de consultoría comercial se desarrollan de forma independiente en hardware e infraestructura privados sin el uso de fondos ni instalaciones públicas institucionales.
 
 ---
 
@@ -54,7 +54,8 @@ description: "Cláusulas contractuales estándar sobre propiedad intelectual pre
 
 Este Anexo de Propiedad Intelectual y Licencias OER complementa los [Términos de Servicio de Webcognita LLC](/es/terms/), la [Política de Privacidad](/es/privacy/) y el [Anexo de Procesamiento de Datos (DPA)](/es/dpa/).
 
-* **Proveedor:** Webcognita LLC (Veteran-Owned Small Business)
+* **Proveedor:** Webcognita LLC (Veteran-Owned Small Business • 100% Sole-Member LLC)
 * **Director Principal:** Alan Pruitt
+* **Sede y Horario Estándar de Operación:** `1906 S 6th Ave, Yuma, AZ 85364` • `Lunes a Viernes, 8:00 AM – 5:00 PM MST (Arizona)`
 * **URL Canónica del Anexo IP y OER:** `https://alanpruitt.com/es/ip-oer/`
 * **Correo Electrónico de Contacto:** `alan.pruitt@gmail.com`

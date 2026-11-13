@@ -46,7 +46,7 @@ description: "Standard contract clauses defining pre-existing intellectual prope
 ### 4. Warranty of Originality and Institutional Separation
 
 1. **Warranty of Originality:** Provider warrants and represents that all deliverables provided under a governing Statement of Work are original works authored by Provider or that Provider has secured all necessary licenses, rights, and permissions to deliver such works without infringing the copyright, trademark, patent, trade secret, or privacy rights of any third party.
-2. **Institutional Separation Notice:** Webcognita LLC (a Veteran-Owned Small Business) and Alan Pruitt operate independently of Arizona Western College and any other academic employer. All Provider IP and commercial consulting deliverables are developed independently on private hardware and infrastructure without the use of public institutional funds or facilities.
+2. **Institutional Separation Notice:** Webcognita LLC (`SAM.gov: WEBCOGNITA` • `AZ ACC #L17046120`, a 100% Veteran-Owned, Sole-Member Small Business) and Alan Pruitt operate independently from private commercial headquarters at **1906 S 6th Ave, Yuma, AZ 85364** (**Standard Operating Hours: Monday–Friday, 8:00 AM – 5:00 PM MST / Arizona**), completely separate from Arizona Western College, The University of Arizona, and any affiliated educational or research institution. All Provider IP and commercial consulting deliverables are developed independently on private hardware and infrastructure without the use of public institutional funds or facilities.
 
 ---
 
@@ -54,7 +54,8 @@ description: "Standard contract clauses defining pre-existing intellectual prope
 
 This Intellectual Property and OER Licensing Rider supplements the [Webcognita LLC Terms of Service](/terms/), [Privacy Policy](/privacy/), and [Data Processing Addendum (DPA)](/dpa/).
 
-* **Provider:** Webcognita LLC (Veteran-Owned Small Business)
+* **Provider:** Webcognita LLC (100% Veteran-Owned, Sole-Member Small Business • VOSB)
 * **Principal:** Alan Pruitt
+* **Headquarters & Standard Operating Hours:** `1906 S 6th Ave, Yuma, AZ 85364` • `Monday–Friday, 8:00 AM – 5:00 PM MST (Arizona)`
 * **Canonical IP & OER Rider URL:** `https://alanpruitt.com/ip-oer/`
 * **Contact Email:** `alan.pruitt@gmail.com`
