@@ -1,5 +1,5 @@
 {
-  "version": "1.1.5",
+  "version": "1.1.6",
   "lastUpdated": "2026-11-13",
   "title": "Google Cloud Generative AI Leader (GAIL) — 2026 On-Demand Student Study & Practice Hub",
   "subtitle": "Open-access, zero-login exam preparation workbench reconciling Google Cloud's 2025 Vertex AI / Agentspace terminology with the 2026 Gemini Enterprise Agent Platform curriculum.",
@@ -167,8 +167,8 @@
           "body": "Document AI API (structured form/invoice/contract extraction + summarization) • Speech-to-Text API (audio to text) • Text-to-Speech API (text to lifelike voice) • Translation API vs. Document Translation API (Document Translation preserves original PDF/Docx visual layout!) • Cloud Vision API (image OCR, objects, content moderation) • Video Intelligence API (video scene/object search) • Natural Language API (sentiment/entities)."
         },
         {
-          "heading": "Serverless & No-Code/Low-Code Entry Points",
-          "body": "AppSheet = no-code business app builder with Gemini • Apps Script = low-code Workspace automation • Cloud Run & Cloud Run functions = serverless developer deployment invoking the Gemini API • Gems = reusable personalized assistants inside the Gemini app."
+          "heading": "Serverless, Workspace & No-Code/Low-Code Entry Points",
+          "body": "Google Workspace with Gemini spans Standalone AI apps (Gemini App Deep Research & Canvas, NotebookLM Audio/Video Overviews & Mind Maps, Google Vids + Veo) and Embedded Side Panels (@[file] Drive grounding, Sheets =AI() formula, Gems, Meet notes — with zero training or human review of Workspace data) • AppSheet = no-code business apps • Apps Script = low-code Workspace automation • Cloud Run = serverless API compute."
         }
       ],
       "examTrap": "Google AI Studio vs. Agent Studio (Vertex AI Studio): Pick Google AI Studio ONLY for rapid, free-tier browser prototyping and parameter testing. Pick Agent Studio / Vertex AI Platform whenever enterprise IAM, compliance, SLAs, scalable quotas, or production deployment are mentioned."
@@ -189,7 +189,7 @@
         },
         {
           "heading": "Prompt Engineering Toolkit",
-          "body": "Zero-shot (0 examples), One-shot (1 example), Few-shot (multiple examples enforcing format/pattern) • Role Prompting (persona/tone) • Prompt Chaining (sequential multi-turn steps) • Chain-of-Thought / CoT (intermediate reasoning steps) • ReAct (Reason + Act with tools) • Metaprompting (using AI to write/refine system prompts)."
+          "body": "Workspace P-T-C-F Framework (Persona + Task [mandatory action verb] + Context [@file grounding] + Format, ~21+ words + iterative follow-ups) • Zero-shot (0 examples), One-shot (1 example), Few-shot (multiple examples enforcing format/pattern) • Role Prompting • Prompt Chaining • Chain-of-Thought / CoT • ReAct (Reason + Act with tools) • Metaprompting (using AI to write/refine system prompts)."
         },
         {
           "heading": "Sampling & Run Parameters",
@@ -509,13 +509,19 @@
       "Benchmarking & Token Economics (Section 4 Strategy): Leaders evaluate models across a 3-way trade-off of Quality (intelligence/accuracy), Latency (tokens/sec & time-to-first-token), and Cost (input vs. output token pricing + Context Caching).",
       "Sustainable AI & Regional Carbon Footprint (Live Day 2 Sync): In Section 4 Infrastructure & Responsible AI scenarios, pair right-sized models (Gemini Flash / Gemini Nano) with low-carbon Google Cloud regions using Google's Carbon-Free Energy (CFE%) region selector.",
       "Google Cloud Regions, Data Residency & Latency (Live Day 2 Sync): Select specific Google Cloud Regions & Zones (cloud.google.com/about/locations) to enforce regulatory data residency/sovereignty (e.g., GDPR, HIPAA, public sector), minimize end-user inference latency, and verify regional model availability.",
-      "Google Models on Gemini Enterprise Agent Platform (Live Day 2 Sync): Match workload complexity to model tier (Pro/Frontier for deep reasoning & autonomous agents vs. Flash for multimodal speed vs. Flash-Lite for high-volume cost efficiency vs. Nano/LiteRT for offline edge), modality (Nano Banana/Imagen image, Veo video, Lyria music, Chirp speech, Multimodal Embeddings), and open-weight Gemma rules (Gemma 1/2 = English-only vs. Gemma 3/3n/4 = 140+ languages; ShieldGemma 2 = safety moderation)."
+      "Google Models on Gemini Enterprise Agent Platform (Live Day 2 Sync): Match workload complexity to model tier (Pro/Frontier for deep reasoning & autonomous agents vs. Flash for multimodal speed vs. Flash-Lite for high-volume cost efficiency vs. Nano/LiteRT for offline edge), modality (Nano Banana/Imagen image, Veo video, Lyria music, Chirp speech, Multimodal Embeddings), and open-weight Gemma rules (Gemma 1/2 = English-only vs. Gemma 3/3n/4 = 140+ languages; ShieldGemma 2 = safety moderation).",
+      "Google Workspace with Gemini Prompting Guide 101 (Live Day 2 Sync): Structure prompts with P-T-C-F (Persona + Task [explicit verb] + Context [@file Drive grounding] + Format); distinguish Standalone AI apps (Gemini Deep Research & Canvas, NotebookLM Audio/Video Overviews & Mind Maps, Google Vids + Veo) from Embedded Workspace tools (Sheets =AI() formula, Gems, Meet notes) protected by Workspace's zero-training, zero-human-review privacy boundary."
     ]
   },
   "evalResources": [
     {
       "category": "Exam Logistics, Responsible AI, Regions & Edge Docs",
       "items": [
+        {
+          "label": "Google Workspace with Gemini Prompting Guide 101 (PDF)",
+          "url": "https://services.google.com/fh/files/misc/workspace_with_gemini_prompting_guide.pdf",
+          "note": "Live Day 2 link (71 pp.): P-T-C-F framework, Deep Research, Canvas, NotebookLM, Google Vids, @[file] & Sheets =AI()."
+        },
         {
           "label": "Google Models on Gemini Enterprise Agent Platform",
           "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/google-models",
@@ -600,6 +606,11 @@
     }
   ],
   "changelog": [
+    {
+      "version": "v1.1.6",
+      "date": "2026-11-13",
+      "notes": "Auto-synced live Day 2 instructor addition: Google Workspace with Gemini Prompting Guide 101 (71-page PDF) — P-T-C-F framework (mandatory Task verb), Standalone AI apps (Deep Research, Canvas, NotebookLM Audio/Video Overviews & Mind Maps, Google Vids + Veo), Embedded Workspace Side Panel (@[file], Sheets =AI(), Gems), & Workspace privacy guarantee."
+    },
     {
       "version": "v1.1.5",
       "date": "2026-11-13",
