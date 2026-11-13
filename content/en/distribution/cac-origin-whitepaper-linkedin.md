@@ -42,7 +42,7 @@ Along the Yuma, AZ, Imperial Valley, CA, and San Luis Río Colorado borderland, 
 
 At Arizona Western College (HSI), 77% of students are Latino and 62% are first-generation (AWC Pres. Dr. Reetika Dhawan, The Yuma Sun, Nov. 11, 2026).
 
-As Curriculum Architect & Sovereign AI Strategist and Founder of Webcognita LLC (SDVOSB / VOSB • UEI: EZ34U9KNJA17 • CAGE: 4ZCN6), I built Generation 3 for the classrooms in front of me.
+As Curriculum Architect & Sovereign AI Strategist and Founder of Webcognita LLC (VOSB • UEI: EZ34U9KNJA17 • CAGE: 4ZCN6), I built Generation 3 for the classrooms in front of me.
 
 Drawing on my work as Exercise Science Adjunct Faculty at AWC and pro bono Generative AI Strategist at The University of Arizona, I engineered it under my S-A-R Standard (Scalable / Auditable / Repeatable).
 
@@ -81,5 +81,5 @@ Explore the complete Curriculum-as-Code (2018–2026) Origin Specification, 2-Pa
 • Substack Dispatch ("What If I Didn't Trace the Lineage?"): https://alanpruitt.substack.com/p/what-if-i-didnt-trace-the-lineage
 • Spanish Canonical Hub (ES): https://alanpruitt.com/es/curriculum-as-code/
 • Live Master Research Log Observatory (92 Entries) & 9 Architecture Briefs: https://alanpruitt.com/research-log/ | https://alanpruitt.com/#architecture-briefs
-• Webcognita LLC (SDVOSB / VOSB • UEI: EZ34U9KNJA17 • CAGE: 4ZCN6) 1-Page Federal Capabilities Statement: https://www.webcognita.com/capabilities-statement.html
+• Webcognita LLC (VOSB • UEI: EZ34U9KNJA17 • CAGE: 4ZCN6) 1-Page Federal Capabilities Statement: https://www.webcognita.com/capabilities-statement.html
 ```

@@ -11,7 +11,7 @@ keywords:
   - "Socio Habilitador No Competitivo en 50 Estados"
   - "ADA Título II WCAG 2.2 AA Contraste 9:1"
   - "IA Soberana Ollama Gemma FERPA"
-  - "Webcognita LLC SDVOSB EZ34U9KNJA17"
+  - "Webcognita LLC VOSB EZ34U9KNJA17"
 ---
 
 ## Fortaleciendo Nodos Estatales e Instituciones como Socio Habilitador No Competitivo en los 50 Estados
@@ -88,7 +88,7 @@ Los Nodos de Coordinación de **NSF TechAccess: AI-Ready America**, los colegios
 * **Flota OER Llave en Mano de Doble Espacio de Nombres:** Mapeo instantáneo `educationalAlignment` de 4 niveles en los 5 cursos de la flota—conectando códigos locales (`EXW 101`, `EXW 150`, `EXW 210`, `EXW 245`, `EXW 265`) con prefijos nacionales de transferencia (**`KIN-101`, `HLTH-150`, `KIN-210`, `KIN-245`, `KIN-265`**) y sindicación `Schema.org/Dataset` JSON-LD.
 * **Arquitectura de IA Soberana y Aislada de la Nube (Air-Gapped):** Construida sobre Apple Silicon (`M1` y `M2`) Ollama y modelos abiertos Google Gemma—garantizando 100% de cumplimiento FERPA con cero costos recurrentes de nube.
 * **Identificadores Federales Verificados de Contratación (`Webcognita LLC`):**
-  * **Clasificación Socioeconómica:** Pequeña Empresa Propiedad de Veteranos Discapacitados en Servicio (`SDVOSB / VOSB` — Veterano USMC)
+  * **Clasificación Socioeconómica:** Pequeña Empresa Propiedad de Veteranos (`VOSB` — Veterano USMC)
   * **`SAM.gov` UEI:** `EZ34U9KNJA17` &bull; **Código `CAGE`:** `4ZCN6`
   * **Códigos NAICS:** `541511` (Primario), `541715`, `541512`, `611710`, `541690`
   * **Códigos Federales PSC:** `U008` (Desarrollo Curricular), `U012` (Capacitación en TI e IA), `DA01`, `DJ01`, `R425`, `AN12`
@@ -111,7 +111,7 @@ Description: S-A-R (Scalable / Auditable / Repeatable) Compliance-as-Code linter
              (EXW 101, 150, 210, 245, 265 -> KIN / HLTH OER Dual-Namespace)
              enforcing U.S. DOL ETA TEN No. 07-25, NSF TechAccess: AI-Ready America,
              and the 8 Canvas Course Accessibility Checker rules (9:1 Double-Contrast Guard).
-Author: Coach Alan Pruitt (Webcognita LLC • SDVOSB • SAM.gov UEI: EZ34U9KNJA17 • CAGE: 4ZCN6)
+Author: Coach Alan Pruitt (Webcognita LLC • VOSB • SAM.gov UEI: EZ34U9KNJA17 • CAGE: 4ZCN6)
 """
 
 from __future__ import annotations
@@ -145,7 +145,7 @@ Description: Enforces the SSoT peer-response baseline (>= 2 replies in Module 00
              >= 1 reply in Modules 01-16 across EXW 101, 150, 210, 245, 265),
              recursively traverses Canvas /discussion_topics/:id/view trees, and
              verifies Module 10+ bilingual thread-closure integrity.
-Author: Coach Alan Pruitt (Webcognita LLC • SDVOSB • SAM.gov UEI: EZ34U9KNJA17 • CAGE: 4ZCN6)
+Author: Coach Alan Pruitt (Webcognita LLC • VOSB • SAM.gov UEI: EZ34U9KNJA17 • CAGE: 4ZCN6)
 """
 
 import re
@@ -176,7 +176,7 @@ Module: canvas_cac_sync.py
 Description: 3-Stage "Write Once -> Push Many" Zero-Drift Curriculum-as-Code (CaC)
              synchronization engine for Canvas LMS (GraphQL-First + Exact-Slug REST Upsert),
              enforcing all 8 Canvas Course Accessibility Checker rules and the 9:1 Double-Contrast Guard.
-Author: Coach Alan Pruitt (Webcognita LLC • SDVOSB • SAM.gov UEI: EZ34U9KNJA17 • CAGE: 4ZCN6)
+Author: Coach Alan Pruitt (Webcognita LLC • VOSB • SAM.gov UEI: EZ34U9KNJA17 • CAGE: 4ZCN6)
 """
 
 CANVAS_3STAGE_PIPELINE_MATRIX = {
@@ -200,7 +200,7 @@ Module: push_announcement.py
 Description: Idempotent S-A-R Canvas LMS Announcement Publisher enforcing the
              Plain-English / Norteño-Spanish student-facing gate, 9:1 contrast
              verification, and read-only dry-run safety across EXW 101-265.
-Author: Coach Alan Pruitt (Webcognita LLC • SDVOSB • SAM.gov UEI: EZ34U9KNJA17 • CAGE: 4ZCN6)
+Author: Coach Alan Pruitt (Webcognita LLC • VOSB • SAM.gov UEI: EZ34U9KNJA17 • CAGE: 4ZCN6)
 """
 
 ACTIVE_SHELLS = {
@@ -224,7 +224,7 @@ Description: 3-Gate S-A-R Pre-Flight Verifier for The EXW Clinical Auditor API
              (`scripts/canvas_rag_api.py` & `scripts/test_rag_pipeline.sh`), testing
              /health, HTTP 422 delimiter rejection, and HTTP 200 W3C PROV-O / DOM GraphRAG
              / W3C SKOS local Apple Silicon inference.
-Author: Coach Alan Pruitt (Webcognita LLC • SDVOSB • SAM.gov UEI: EZ34U9KNJA17 • CAGE: 4ZCN6)
+Author: Coach Alan Pruitt (Webcognita LLC • VOSB • SAM.gov UEI: EZ34U9KNJA17 • CAGE: 4ZCN6)
 """
 
 from canvas_rag_api import handle_audit_payload, handle_health
@@ -252,7 +252,7 @@ Description: Gate 5 Pre-Commit Compliance Evaluator enforcing U.S. DOL ETA TEN N
              Content Areas 3-5 (P-T-C-F Prompt Engineering, 150-Word Clinical SSoT Audit,
              and Active Verification) and Pattern / Rule / Solve clinical framing across
              all 5 fleet courses (EXW101, EXW150, EXW210, EXW245, EXW265).
-Author: Coach Alan Pruitt (Webcognita LLC • SDVOSB • SAM.gov UEI: EZ34U9KNJA17 • CAGE: 4ZCN6)
+Author: Coach Alan Pruitt (Webcognita LLC • VOSB • SAM.gov UEI: EZ34U9KNJA17 • CAGE: 4ZCN6)
 """
 
 FLEET_MODULES = ["EXW101", "EXW150", "EXW210", "EXW245", "EXW265"]
@@ -270,7 +270,7 @@ Module: argon4_local_rag_verify.py
 Description: Sovereign Apple Silicon RAG Corpus & Vector Index Integrity Verifier
              (`exw-carbon4-cac:latest` + `nomic-embed-text`), validating SHA-256
              chunk provenance and ### RETRIEVED ACADEMIC SSoT CONTEXT ### encapsulation.
-Author: Coach Alan Pruitt (Webcognita LLC • SDVOSB • SAM.gov UEI: EZ34U9KNJA17 • CAGE: 4ZCN6)
+Author: Coach Alan Pruitt (Webcognita LLC • VOSB • SAM.gov UEI: EZ34U9KNJA17 • CAGE: 4ZCN6)
 """
 
 OLLAMA_MODEL = "exw-carbon4-cac:latest"
@@ -289,7 +289,7 @@ Module: canvas_graphql_sync.py
 Description: Canvas LMS GraphQL-First (/api/graphql) & Curriculum-as-Code (CaC)
              Synchronization Orchestrator validating queries/mutations against
              docs/standards/canvas_graphql_schema_baseline.json (<375,000 complexity).
-Author: Coach Alan Pruitt (Webcognita LLC • SDVOSB • SAM.gov UEI: EZ34U9KNJA17 • CAGE: 4ZCN6)
+Author: Coach Alan Pruitt (Webcognita LLC • VOSB • SAM.gov UEI: EZ34U9KNJA17 • CAGE: 4ZCN6)
 """
 
 CANVAS_GRAPHQL_ENDPOINT = "https://azwestern.instructure.com/api/graphql"
@@ -308,7 +308,7 @@ Module: prov_o_receipt_generator.py
 Description: W3C PROV-O + W3C SKOS JSON-LD Provenance Receipt Generator tracing
              119 curriculum Markdown modules, 3,638 SHA-256 vector chunks, and
              local Apple Silicon inference (`exw-carbon4-cac:latest` + `nomic-embed-text`).
-Author: Coach Alan Pruitt (Webcognita LLC • SDVOSB • SAM.gov UEI: EZ34U9KNJA17 • CAGE: 4ZCN6)
+Author: Coach Alan Pruitt (Webcognita LLC • VOSB • SAM.gov UEI: EZ34U9KNJA17 • CAGE: 4ZCN6)
 """
 
 PROV_O_CONTEXT = {
@@ -372,7 +372,7 @@ Module: argon4_checklist_evaluator.py
 Description: 5-Phase S-A-R Master Deployment Checklist Evaluator verifying local
              Apple Silicon RAG readiness, Gate 5 TEN No. 07-25 compliance, Canvas
              GraphQL-First sync, W3C PROV-O JSON-LD receipts, and Hugo CI/CD deployment.
-Author: Coach Alan Pruitt (Webcognita LLC • SDVOSB • SAM.gov UEI: EZ34U9KNJA17 • CAGE: 4ZCN6)
+Author: Coach Alan Pruitt (Webcognita LLC • VOSB • SAM.gov UEI: EZ34U9KNJA17 • CAGE: 4ZCN6)
 """
 
 CHECKLIST_PHASES = [
@@ -409,7 +409,7 @@ A continuación se presenta el manifiesto consolidado de estado de despliegue S-
 {
   "system_report": "M2 / Carbon 4 Curriculum-as-Code (CaC) Deployment Status",
   "schema_version": "2.2.0",
-  "author": "Coach Alan L. Pruitt (Webcognita LLC • SDVOSB • SAM.gov UEI: EZ34U9KNJA17 • CAGE: 4ZCN6)",
+  "author": "Coach Alan L. Pruitt (Webcognita LLC • VOSB • SAM.gov UEI: EZ34U9KNJA17 • CAGE: 4ZCN6)",
   "strategic_positioning": "Non-Competing 50-State Enabling Partner for NSF TechAccess: AI-Ready America & U.S. DOL ETA TEN No. 07-25 Initiatives",
   "infrastructure_status": {
     "hardware_nodes": "M1 MacBook Pro <-> M2 MacBook Air <-> Carbon 4 Edge Node (Thunderbolt Bridge 192.168.100.2 & Mandatory Two-Machine Git Handshake)",

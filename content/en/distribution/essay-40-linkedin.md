@@ -22,7 +22,7 @@ Along the Yuma, AZ, Imperial Valley, CA, and San Luis Río Colorado borderland, 
 
 If a tool hides behind a paywall, leaks FERPA data, or ignores Norteño Spanish, workforce equity breaks at the starting line.
 
-Drawing on my experience as an Adjunct Faculty member of Exercise Science & Wellness at Arizona Western College, Generative AI Strategist at The University of Arizona, and Principal of Webcognita LLC (SDVOSB / VOSB), I engineered my S-A-R Standard (Scalable / Auditable / Repeatable) v2.2 pipeline to make all 5 DOL AI Content Areas and 7 Community College Delivery Principles executable:
+Drawing on my experience as an Adjunct Faculty member of Exercise Science & Wellness at Arizona Western College, Generative AI Strategist at The University of Arizona, and Principal of Webcognita LLC (VOSB), I engineered my S-A-R Standard (Scalable / Auditable / Repeatable) v2.2 pipeline to make all 5 DOL AI Content Areas and 7 Community College Delivery Principles executable:
 
 The Centaur Protocol frames every student as the Clinical Architect and AI strictly as a calculator inside The Clinical Framing Protocol (Pattern / Rule / Solve)
 
@@ -58,5 +58,5 @@ Read my full architectural breakdown in Essay 40 ("What If I Didn't Operationali
 • Substack Edition (with How I Made This provenance colophon): [Paste Substack URL Here]
 • Live Master Research Log Observatory (TEN No. 07-25 Entry): https://alanpruitt.com/research-log/#november-2-2026-us-dol-eta-advisory-ten-no-07-25-ai-literacy-framework
 • 7-Publication Architecture Briefs & Project Horizon White Papers Shelf: https://alanpruitt.com/#architecture-briefs
-• Webcognita LLC (SDVOSB • UEI: EZ34U9KNJA17 • CAGE: 4ZCN6) Non-Competing 50-State Enabling Resource: https://www.webcognita.com
+• Webcognita LLC (VOSB • UEI: EZ34U9KNJA17 • CAGE: 4ZCN6) Non-Competing 50-State Enabling Resource: https://www.webcognita.com
 ```

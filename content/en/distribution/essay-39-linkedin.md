@@ -33,7 +33,7 @@ Instead of sending gradebook telemetry to cloud chatbots, my M1/M2 workstations 
 
 How does your institution audit LMS rubric drift across multi-section courses before grades post?
 
-Disclaimer: The Curriculum-as-Code architecture, S-A-R Standard, and open-source tools described here represent my independent faculty engineering and research through Webcognita LLC (SDVOSB) and do not represent official policy or endorsement by Arizona Western College or The University of Arizona.
+Disclaimer: The Curriculum-as-Code architecture, S-A-R Standard, and open-source tools described here represent my independent faculty engineering and research through Webcognita LLC (VOSB) and do not represent official policy or endorsement by Arizona Western College or The University of Arizona.
 ```
 
 ---

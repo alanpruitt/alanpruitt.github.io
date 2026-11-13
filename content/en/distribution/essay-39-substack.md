@@ -38,7 +38,7 @@ Leaving LMS rubric thresholds unmanaged creates two silent failure modes:
 
 ### Engineering the Upgrade: Programmatic Validation & Edge AI
 
-Drawing on my work as an **Adjunct Faculty member of Exercise Science & Wellness at Arizona Western College**, a pro bono **Generative AI Strategist (`DCC`) at The University of Arizona (Yuma Campus)**, and **Founder of Webcognita LLC (`SDVOSB / VOSB`)**, I integrated automated validation directly into my **Curriculum-as-Code (S-A-R Standard)** pipeline:
+Drawing on my work as an **Adjunct Faculty member of Exercise Science & Wellness at Arizona Western College**, a pro bono **Generative AI Strategist (`DCC`) at The University of Arizona (Yuma Campus)**, and **Founder of Webcognita LLC (`VOSB`)**, I integrated automated validation directly into my **Curriculum-as-Code (S-A-R Standard)** pipeline:
 
 * **Programmatic Canvas Rubric Patching:** Using Python automation scripts over the Canvas API, my pipeline inspects rubric criteria ratings, flags non-zero default floors, and patches them from `1` pt to `0` pts behind `DRY_RUN` safety verification while preserving `Unlimited` mastery resubmissions (`allowed_attempts = -1`).
 * **Air-Gapped Edge AI Workflow Automation (`agy` & Ollama):** Running local models (`exw-carbon4-cac:latest`) on Apple Silicon (`M1`/`M2`) to execute daily cadence sweeps, lint course Markdown files to my **9:1 Double-Contrast Guard**, and verify compliance without exposing **100% FERPA**-protected student data.

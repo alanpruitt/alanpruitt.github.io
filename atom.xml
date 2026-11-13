@@ -1,393 +1,291 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Alan Pruitt | Curriculum-as-Code &amp; AI Strategy</title>
-  <subtitle>Curriculum architecture, algorithmic pedagogy, sovereign AI strategies, and compliance frameworks by Alan Pruitt (Coach Alan).</subtitle>
-  <link href="https://alanpruitt.com/atom.xml" rel="self" type="application/atom+xml"/>
-  <link href="https://alanpruitt.com/" rel="alternate" type="text/html"/>
+  <title>Alan Pruitt (Coach Alan) — Curriculum-as-Code &amp; Sovereign AI Essays</title>
+  <link href="https://alanpruitt.com/atom.xml" rel="self" />
+  <link href="https://alanpruitt.com/" />
+  <updated>2026-11-10T04:30:00.000Z</updated>
   <id>https://alanpruitt.com/</id>
-  <updated>2026-08-14T22:30:00.000Z</updated>
   <author>
     <name>Alan Pruitt</name>
-    <email>contact@webcognita.com</email>
-    <uri>https://alanpruitt.com</uri>
   </author>
   <entry>
-    <title>The Accessibility Checker Parity Illusion and the Curriculum-as-Code Imperative</title>
-    <link href="https://alanpruitt.com/articles/23-accessibility-checker-parity-illusion.html" rel="alternate" type="text/html"/>
-    <id>https://alanpruitt.com/articles/23-accessibility-checker-parity-illusion.html</id>
-    <updated>2026-08-21T00:00:00.000Z</updated>
-    <published>2026-08-21T00:00:00.000Z</published>
-    <summary type="text">How proprietary accessibility checkers in Canvas LMS, Microsoft Office, and Adobe Acrobat introduce silent structural compliance failures, and why Curriculum-as-Code resolves accessibility translation debt at the source.</summary>
-    <author>
-      <name>Alan Pruitt</name>
-      <email>contact@webcognita.com</email>
-      <uri>https://alanpruitt.com</uri>
-    </author>
-    <category term="Accessibility"/>
-    <category term="WCAG"/>
-    <category term="CurriculumAsCode"/>
-    <category term="ADATitleII"/>
-    <category term="Compliance"/>
-    <category term="OER"/>
+    <title>Essay 40: What If I Didn&apos;t Operationalize the Framework? – Turning U.S. DOL ETA Advisory TEN No. 07-25 into Born-Accessible Curriculum-as-Code</title>
+    <link href="https://alanpruitt.com/essays/essay-40-federal-workforce-ai-literacy/" />
+    <id>https://alanpruitt.com/essays/essay-40-federal-workforce-ai-literacy/</id>
+    <updated>2026-11-10T04:30:00.000Z</updated>
+    <summary>How I operationalized U.S. DOL ETA Training and Employment Notice (TEN) No. 07-25 across my $0 ZTC Open Educational Resource course fleet using Curriculum-as-Code (S-A-R v2.2), air-gapped Edge AI, and 9:1 ADA Title II Compliance as Code.</summary>
   </entry>
   <entry>
-    <title>Foundational Human Movement in the Algorithmic Age: PAGA 2018 SSoT &amp; Community Inactivity Interventions</title>
-    <link href="https://alanpruitt.com/articles/22-foundational-human-movement-in-the-algorithmic-age.html" rel="alternate" type="text/html"/>
-    <id>https://alanpruitt.com/articles/22-foundational-human-movement-in-the-algorithmic-age.html</id>
+    <title>Essay 39: What If I Didn&apos;t Automate the Threshold? – Programmatic Canvas Rubric Validation &amp; Edge AI Workflows</title>
+    <link href="https://alanpruitt.com/essays/essay-39-automate-the-threshold/" />
+    <id>https://alanpruitt.com/essays/essay-39-automate-the-threshold/</id>
+    <updated>2026-11-04T19:40:00.000Z</updated>
+    <summary>Why leaving LMS rubric point floors at 1 point silently corrupts 10-7-0 mastery telemetry, and how I automated zero-floor Canvas GraphQL rubric validation and air-gapped Apple Silicon Edge AI auditing across my EXW course fleet.</summary>
+  </entry>
+  <entry>
+    <title>Essay 38: What If I Didn&apos;t Build the Graph? – Why Curriculum-as-Code Transcends Flat Docs-as-Code with DOM GraphRAG &amp; W3C PROV-O</title>
+    <link href="https://alanpruitt.com/essays/essay-38-dom-graphrag-and-prov-o-curriculum-as-code/" />
+    <id>https://alanpruitt.com/essays/essay-38-dom-graphrag-and-prov-o-curriculum-as-code/</id>
+    <updated>2026-11-01T17:00:00.000Z</updated>
+    <summary>Essay 38: What If I Didn&apos;t Build the Graph? – Why Curriculum-as-Code Transcends Flat Docs-as-Code with DOM GraphRAG &amp; W3C PROV-O</summary>
+  </entry>
+  <entry>
+    <title>Essay 37: What If I Didn&apos;t? – Future-Proofing My Course Fleet with WCAG 3.0 Cognitive Accessibility</title>
+    <link href="https://alanpruitt.com/essays/essay-37-wcag-3-cognitive-accessibility/" />
+    <id>https://alanpruitt.com/essays/essay-37-wcag-3-cognitive-accessibility/</id>
+    <updated>2026-09-24T16:00:00.000Z</updated>
+    <summary>Essay 37: What If I Didn&apos;t? – Future-Proofing My Course Fleet with WCAG 3.0 Cognitive Accessibility</summary>
+  </entry>
+  <entry>
+    <title>Essay 36: What If I Didn&apos;t Standardize the Loop? – Deterministic Clinical Problem Framing in Higher Education</title>
+    <link href="https://alanpruitt.com/essays/essay-36/" />
+    <id>https://alanpruitt.com/essays/essay-36/</id>
+    <updated>2026-09-23T15:45:00.000Z</updated>
+    <summary>A counterfactual exploration of instructional engineering: why failing to standardize The Clinical Framing Protocol (Pattern / Rule / Solve) surrenders academic rigor, inflates grading fatigue, and compromises institutional compliance.</summary>
+  </entry>
+  <entry>
+    <title>Essay 35: What If I Didn&apos;t Automate Accessibility? – Curriculum-as-Code &amp; Continuous Integration</title>
+    <link href="https://alanpruitt.com/essays/essay-35/" />
+    <id>https://alanpruitt.com/essays/essay-35/</id>
+    <updated>2026-09-18T17:40:00.000Z</updated>
+    <summary>Essay 35: What If I Didn&apos;t Automate Accessibility? – Curriculum-as-Code &amp; Continuous Integration</summary>
+  </entry>
+  <entry>
+    <title>Essay 34: From GSU Demo Day to Vibe-Coding – What Happens When You Stop Scrolling and Start Building</title>
+    <link href="https://alanpruitt.com/essays/essay-34-prompt-per-mile/" />
+    <id>https://alanpruitt.com/essays/essay-34-prompt-per-mile/</id>
+    <updated>2026-09-18T00:40:00.000Z</updated>
+    <summary>From a LinkedIn question about GSU Demo Day train transit to shipping the live Prompt-per-Mile Offset Calculator in ten minutes using Curriculum-as-Code and rapid prototyping.</summary>
+  </entry>
+  <entry>
+    <title>What Happens When You Stop Renting Your Curriculum</title>
+    <link href="https://alanpruitt.com/essays/what-happens-when-you-stop-renting-your-curriculum/" />
+    <id>https://alanpruitt.com/essays/what-happens-when-you-stop-renting-your-curriculum/</id>
+    <updated>2026-09-15T00:00:00.000Z</updated>
+    <summary>A practical look at trading proprietary WYSIWYG editors for plain-text repositories, automated linters, and true instructional ownership.</summary>
+  </entry>
+  <entry>
+    <title>Essay 32: From Retrofit to Architecture – Operationalizing ADA Title II Compliance Before the Deadline</title>
+    <link href="https://alanpruitt.com/essays/essay-32-from-retrofit-to-architecture/" />
+    <id>https://alanpruitt.com/essays/essay-32-from-retrofit-to-architecture/</id>
+    <updated>2026-09-10T19:00:00.000Z</updated>
+    <summary>Why treating ADA Title II digital accessibility as a post-production LMS retrofit fails at scale, and how my Curriculum-as-Code CI/CD pipeline bakes WCAG 2.2 AA compliance directly into the source repository.</summary>
+  </entry>
+  <entry>
+    <title>The Logic Grid: Why Good Assessment Looks Like Sudoku (and How the Clinical Framing Protocol Solves the AI Crisis)</title>
+    <link href="https://alanpruitt.com/essays/essay-30-the-logic-grid/" />
+    <id>https://alanpruitt.com/essays/essay-30-the-logic-grid/</id>
+    <updated>2026-09-03T17:00:00.000Z</updated>
+    <summary>The Logic Grid: Why Good Assessment Looks Like Sudoku (and How the Clinical Framing Protocol Solves the AI Crisis)</summary>
+  </entry>
+  <entry>
+    <title>Essay 31: Beyond the Slide Deck — Architecture as Professional Development</title>
+    <link href="https://alanpruitt.com/essays/essay-31-beyond-the-slide-deck/" />
+    <id>https://alanpruitt.com/essays/essay-31-beyond-the-slide-deck/</id>
+    <updated>2026-09-03T00:00:00.000Z</updated>
+    <summary>Essay 31: Beyond the Slide Deck — Architecture as Professional Development</summary>
+  </entry>
+  <entry>
+    <title>Essay 29: The Upstream Shift — Why Post-Production Accessibility Is a Failure of Architectural Design</title>
+    <link href="https://alanpruitt.com/essays/essay-29/" />
+    <id>https://alanpruitt.com/essays/essay-29/</id>
+    <updated>2026-08-29T16:30:00.000Z</updated>
+    <summary>Essay 29: The Upstream Shift — Why Post-Production Accessibility Is a Failure of Architectural Design</summary>
+  </entry>
+  <entry>
+    <title>Essay 28: Beyond Performative Compliance — ADA Title II, Living Conformance Statements, and Automated Institutional Governance</title>
+    <link href="https://alanpruitt.com/essays/essay-28/" />
+    <id>https://alanpruitt.com/essays/essay-28/</id>
+    <updated>2026-08-28T15:00:00.000Z</updated>
+    <summary>Essay 28: Beyond Performative Compliance — ADA Title II, Living Conformance Statements, and Automated Institutional Governance</summary>
+  </entry>
+  <entry>
+    <title>Essay 25: The Accessibility Checker Parity Illusion: Schema Divergence &amp; CaC</title>
+    <link href="https://alanpruitt.com/essays/essay-25/" />
+    <id>https://alanpruitt.com/essays/essay-25/</id>
+    <updated>2026-08-27T15:00:00.000Z</updated>
+    <summary>Essay 25: The Accessibility Checker Parity Illusion: Schema Divergence &amp; CaC</summary>
+  </entry>
+  <entry>
+    <title>Essay 27: Curriculum-as-Code, ADA Title II Compliance, and Fleet-Wide Accessibility Refactoring</title>
+    <link href="https://alanpruitt.com/essays/essay-27/" />
+    <id>https://alanpruitt.com/essays/essay-27/</id>
+    <updated>2026-08-25T23:53:00.000Z</updated>
+    <summary>How engineering course architectures in plain Markdown with automated CI/CD linters solves ADA Title II compliance and enables rapid, fleet-wide accessibility refactoring across live Canvas shells.</summary>
+  </entry>
+  <entry>
+    <title>The Hybrid Ergometer Scaffold: Synchronizing AI Simulation with Lab Precision</title>
+    <link href="https://alanpruitt.com/essays/19-hybrid-ergometer-scaffold/" />
+    <id>https://alanpruitt.com/essays/19-hybrid-ergometer-scaffold/</id>
     <updated>2026-08-21T00:00:00.000Z</updated>
-    <published>2026-08-21T00:00:00.000Z</published>
-    <summary type="text">How EXW101 deploys Curriculum-as-Code, the federal PAGA 2018 SSoT, and the Clinical Framing Protocol to deconstruct systemic inactivity patterns and build community-level health interventions in rural borderland regions.</summary>
-    <author>
-      <name>Alan Pruitt</name>
-      <email>contact@webcognita.com</email>
-      <uri>https://alanpruitt.com</uri>
-    </author>
-    <category term="CurriculumAsCode"/>
-    <category term="Kinesiology"/>
-    <category term="PhysicalEducation"/>
-    <category term="PAGA"/>
-    <category term="PublicHealth"/>
-    <category term="OER"/>
+    <summary>How EXW245 decouples cognitive pre-flight mathematical verification from physical laboratory execution using a two-part scaffold pairing Gemini AI simulation sandboxes with Lode Corival research-grade cycle ergometers.</summary>
+  </entry>
+  <entry>
+    <title>Deterministic Clinical Guardrails: Preventing Hallucination Drift in Special Population Prescriptions</title>
+    <link href="https://alanpruitt.com/essays/20-deterministic-clinical-guardrails/" />
+    <id>https://alanpruitt.com/essays/20-deterministic-clinical-guardrails/</id>
+    <updated>2026-08-21T00:00:00.000Z</updated>
+    <summary>How EXW265 deploys deterministic prompt guardrails, strict delimiter encapsulation, and the federal PAGA 2018 Single Source of Truth to eliminate dangerous AI hallucination drift in exercise prescriptions for chronic conditions.</summary>
   </entry>
   <entry>
     <title>Evidence-Based Nutrition vs. The Feed: Upstream SSoT Governance in Sports Nutrition</title>
-    <link href="https://alanpruitt.com/articles/21-evidence-based-nutrition-vs-feed.html" rel="alternate" type="text/html"/>
-    <id>https://alanpruitt.com/articles/21-evidence-based-nutrition-vs-feed.html</id>
+    <link href="https://alanpruitt.com/essays/21-evidence-based-nutrition-vs-feed/" />
+    <id>https://alanpruitt.com/essays/21-evidence-based-nutrition-vs-feed/</id>
     <updated>2026-08-21T00:00:00.000Z</updated>
-    <published>2026-08-21T00:00:00.000Z</published>
-    <summary type="text">How EXW150 uses Curriculum-as-Code, the Clinical Framing Protocol, and federal SSoT standards to insulate community college students from social media fad diets, predatory supplement claims, and unanchored AI nutrition advice.</summary>
-    <author>
-      <name>Alan Pruitt</name>
-      <email>contact@webcognita.com</email>
-      <uri>https://alanpruitt.com</uri>
-    </author>
-    <category term="CurriculumAsCode"/>
-    <category term="Nutrition"/>
-    <category term="SportsNutrition"/>
-    <category term="SSoT"/>
-    <category term="InformationLiteracy"/>
-    <category term="OER"/>
+    <summary>How EXW150 uses Curriculum-as-Code, the Clinical Framing Protocol, and federal SSoT standards to insulate community college students from social media fad diets, predatory supplement claims, and unanchored AI nutrition advice.</summary>
   </entry>
   <entry>
-    <title>Deterministic Clinical Guardrails: Sovereign AI Simulation &amp; Safety Gates (EXW265 SSoT Case Study)</title>
-    <link href="https://alanpruitt.com/articles/20-deterministic-clinical-guardrails.html" rel="alternate" type="text/html"/>
-    <id>https://alanpruitt.com/articles/20-deterministic-clinical-guardrails.html</id>
-    <updated>2026-08-21T12:00:00.000Z</updated>
-    <published>2026-08-21T12:00:00.000Z</published>
-    <summary type="text">How EXW265 integrates deterministic clinical guardrails and safety gates into AI simulation models to enforce ACSM and PAGA academic source-of-truth standards.</summary>
-    <author>
-      <name>Alan Pruitt</name>
-      <email>contact@webcognita.com</email>
-      <uri>https://alanpruitt.com</uri>
-    </author>
-    <category term="AISafety"/>
-    <category term="ClinicalGuardrails"/>
-    <category term="Kinesiology"/>
-    <category term="SSoT"/>
+    <title>Foundational Human Movement in the Algorithmic Age: PAGA 2018 SSoT &amp; Community Inactivity Interventions</title>
+    <link href="https://alanpruitt.com/essays/22-foundational-human-movement-in-the-algorithmic-age/" />
+    <id>https://alanpruitt.com/essays/22-foundational-human-movement-in-the-algorithmic-age/</id>
+    <updated>2026-08-21T00:00:00.000Z</updated>
+    <summary>How EXW101 deploys Curriculum-as-Code, the federal PAGA 2018 SSoT, and the Clinical Framing Protocol to deconstruct systemic inactivity patterns and build community-level health interventions in rural borderland regions.</summary>
   </entry>
   <entry>
-    <title>The Hybrid Ergometer Scaffold: Guided Simulation &amp; Precision Testing (EXW245 Case Study)</title>
-    <link href="https://alanpruitt.com/articles/19-hybrid-ergometer-scaffold.html" rel="alternate" type="text/html"/>
-    <id>https://alanpruitt.com/articles/19-hybrid-ergometer-scaffold.html</id>
-    <updated>2026-08-15T12:00:00.000Z</updated>
-    <published>2026-08-15T12:00:00.000Z</published>
-    <summary type="text">A clinical case study detailing how hybrid recumbent ergometry pacing protocols and digital predictive calculators isolate metabolic equations under ACSM 12th Ed guidelines.</summary>
-    <author>
-      <name>Alan Pruitt</name>
-      <email>contact@webcognita.com</email>
-      <uri>https://alanpruitt.com</uri>
-    </author>
-    <category term="Kinesiology"/>
-    <category term="Ergometry"/>
-    <category term="ACSM"/>
-    <category term="Pedagogy"/>
+    <title>The Accessibility Checker Parity Illusion: Schema Divergence &amp; Curriculum-as-Code</title>
+    <link href="https://alanpruitt.com/essays/23-the-accessibility-checker-parity-illusion/" />
+    <id>https://alanpruitt.com/essays/23-the-accessibility-checker-parity-illusion/</id>
+    <updated>2026-08-19T00:00:00.000Z</updated>
+    <summary>The Accessibility Checker Parity Illusion: Schema Divergence &amp; Curriculum-as-Code</summary>
   </entry>
   <entry>
-    <title>The Illusion of the Feed: Upstream SSoT &amp; Feed Link Rot Governance</title>
-    <link href="https://alanpruitt.com/articles/18-the-illusion-of-the-feed.html" rel="alternate" type="text/html"/>
-    <id>https://alanpruitt.com/articles/18-the-illusion-of-the-feed.html</id>
-    <updated>2026-08-14T12:00:00.000Z</updated>
-    <published>2026-08-14T12:00:00.000Z</published>
-    <summary type="text">How relying on dynamic external feeds inside an LMS introduces link rot vulnerabilities, and how upstream SSoT configuration control resolves accessibility issues at the source.</summary>
-    <author>
-      <name>Alan Pruitt</name>
-      <email>contact@webcognita.com</email>
-      <uri>https://alanpruitt.com</uri>
-    </author>
-    <category term="CurriculumAsCode"/>
-    <category term="Compliance"/>
-    <category term="Pedagogy"/>
-    <category term="SSoT"/>
+    <title>Essay 26: Navigating Compliance Upstream – The Curriculum-as-Code POUR-Audit Framework</title>
+    <link href="https://alanpruitt.com/essays/26-curriculum-as-code-pour-audit-framework/" />
+    <id>https://alanpruitt.com/essays/26-curriculum-as-code-pour-audit-framework/</id>
+    <updated>2026-08-19T00:00:00.000Z</updated>
+    <summary>How I operationalize the W3C POUR accessibility principles (Perceivable, Operable, Understandable, Robust) as automated pre-commit and CI/CD verification checks inside a Curriculum-as-Code repository.</summary>
   </entry>
   <entry>
-    <title>Engineering Resilience: Resolving False-Positive Contrast Errors &amp; Array Failures</title>
-    <link href="https://alanpruitt.com/articles/17-resolving-array-parsing-script-failures.html" rel="alternate" type="text/html"/>
-    <id>https://alanpruitt.com/articles/17-resolving-array-parsing-script-failures.html</id>
-    <updated>2026-08-07T12:00:00.000Z</updated>
-    <published>2026-08-07T12:00:00.000Z</published>
-    <summary type="text">How automated accessibility checkers fail under WYSIWYG visual-editor DOM pollution and how Curriculum-as-Code resolves array parsing failures.</summary>
-    <author>
-      <name>Alan Pruitt</name>
-      <email>contact@webcognita.com</email>
-      <uri>https://alanpruitt.com</uri>
-    </author>
-    <category term="CurriculumAsCode"/>
-    <category term="Accessibility"/>
-    <category term="DOM"/>
+    <title>Essay 24: Chatbots &amp; Canvas LMS — A Cautionary Tale</title>
+    <link href="https://alanpruitt.com/essays/24-chatbots-canvas-lms-cautionary-tale/" />
+    <id>https://alanpruitt.com/essays/24-chatbots-canvas-lms-cautionary-tale/</id>
+    <updated>2026-08-17T00:00:00.000Z</updated>
+    <summary>Why integrating commercial AI chatbots inside Canvas LMS introduces severe institutional risks, compromises FERPA/ADA standards, and how high-friction Socratic assessments preserve human voice and presence.</summary>
   </entry>
   <entry>
-    <title>Canvas LMS 3-Track Self-Guided AI Branch and Bilingual Scaffolding</title>
-    <link href="https://alanpruitt.com/articles/16-canvas-lms-3-track-ai-branch.html" rel="alternate" type="text/html"/>
-    <id>https://alanpruitt.com/articles/16-canvas-lms-3-track-ai-branch.html</id>
-    <updated>2026-07-31T12:00:00.000Z</updated>
-    <published>2026-07-31T12:00:00.000Z</published>
-    <summary type="text">Transforming traditional online discussion boards into active, interdisciplinary clinical case conferences across all 16 EXW modules.</summary>
-    <author>
-      <name>Alan Pruitt</name>
-      <email>contact@webcognita.com</email>
-      <uri>https://alanpruitt.com</uri>
-    </author>
-    <category term="CanvasLMS"/>
-    <category term="Pedagogy"/>
-    <category term="Bilingual"/>
+    <title>Essay 17: Engineering Resilience: Resolving False-Positive Contrast Errors and Array Parsing Script Failures via Curriculum-as-Code</title>
+    <link href="https://alanpruitt.com/essays/17-resolving-array-parsing-script-failures/" />
+    <id>https://alanpruitt.com/essays/17-resolving-array-parsing-script-failures/</id>
+    <updated>2026-08-14T00:00:00.000Z</updated>
+    <summary>Essay 17: Engineering Resilience: Resolving False-Positive Contrast Errors and Array Parsing Script Failures via Curriculum-as-Code</summary>
   </entry>
   <entry>
-    <title>Algorithmic Pedagogy &amp; Continuous Integration: Zero-Regression Learning</title>
-    <link href="https://alanpruitt.com/articles/15-algorithmic-pedagogy-ci.html" rel="alternate" type="text/html"/>
-    <id>https://alanpruitt.com/articles/15-algorithmic-pedagogy-ci.html</id>
-    <updated>2026-07-24T12:00:00.000Z</updated>
-    <published>2026-07-24T12:00:00.000Z</published>
-    <summary type="text">Treating learning outcomes and compliance rules as executable code monitored by CI/CD.</summary>
-    <author>
-      <name>Alan Pruitt</name>
-      <email>contact@webcognita.com</email>
-      <uri>https://alanpruitt.com</uri>
-    </author>
-    <category term="AlgorithmicPedagogy"/>
-    <category term="CICD"/>
-    <category term="CurriculumAsCode"/>
+    <title>Essay 18: The Illusion of the Feed — Upstream SSoT and Feed Link Rot Governance</title>
+    <link href="https://alanpruitt.com/essays/18-the-illusion-of-the-feed/" />
+    <id>https://alanpruitt.com/essays/18-the-illusion-of-the-feed/</id>
+    <updated>2026-08-14T00:00:00.000Z</updated>
+    <summary>Essay 18: The Illusion of the Feed — Upstream SSoT and Feed Link Rot Governance</summary>
   </entry>
   <entry>
-    <title>The Guided Learning Trifecta: AI Simulation, Application &amp; Auditing</title>
-    <link href="https://alanpruitt.com/articles/14-guided-learning-trifecta.html" rel="alternate" type="text/html"/>
-    <id>https://alanpruitt.com/articles/14-guided-learning-trifecta.html</id>
-    <updated>2026-07-17T12:00:00.000Z</updated>
-    <published>2026-07-17T12:00:00.000Z</published>
-    <summary type="text">Deploying Google&apos;s Guided Learning principles in Curriculum-as-Code via system prompts.</summary>
-    <author>
-      <name>Alan Pruitt</name>
-      <email>contact@webcognita.com</email>
-      <uri>https://alanpruitt.com</uri>
-    </author>
-    <category term="GuidedLearning"/>
-    <category term="AI"/>
-    <category term="Prompts"/>
+    <title>Essay 16: Canvas LMS 3-Track Self-Guided AI Branch and Bilingual Scaffolding</title>
+    <link href="https://alanpruitt.com/essays/16-canvas-lms-3-track-ai-branch/" />
+    <id>https://alanpruitt.com/essays/16-canvas-lms-3-track-ai-branch/</id>
+    <updated>2026-08-13T00:00:00.000Z</updated>
+    <summary>Essay 16: Canvas LMS 3-Track Self-Guided AI Branch and Bilingual Scaffolding</summary>
   </entry>
   <entry>
-    <title>The Vibe-Coding Paradigm: Speed &amp; Full-Stack Execution in EdTech</title>
-    <link href="https://alanpruitt.com/articles/13-vibe-coding-paradigm.html" rel="alternate" type="text/html"/>
-    <id>https://alanpruitt.com/articles/13-vibe-coding-paradigm.html</id>
-    <updated>2026-07-10T12:00:00.000Z</updated>
-    <published>2026-07-10T12:00:00.000Z</published>
-    <summary type="text">Translating domain expertise directly into production-grade web applications using AI orchestration.</summary>
-    <author>
-      <name>Alan Pruitt</name>
-      <email>contact@webcognita.com</email>
-      <uri>https://alanpruitt.com</uri>
-    </author>
-    <category term="VibeCoding"/>
-    <category term="PWA"/>
-    <category term="EdTech"/>
+    <title>Essay 15: Algorithmic Pedagogy &amp; Continuous Integration — Engineering Zero-Regression Learning Environments</title>
+    <link href="https://alanpruitt.com/essays/essay-15/" />
+    <id>https://alanpruitt.com/essays/essay-15/</id>
+    <updated>2026-08-12T00:00:00.000Z</updated>
+    <summary>Essay 15: Algorithmic Pedagogy &amp; Continuous Integration — Engineering Zero-Regression Learning Environments</summary>
+  </entry>
+  <entry>
+    <title>The AI Safety Auditor Pattern in Applied Kinesiology</title>
+    <link href="https://alanpruitt.com/essays/10-ai-safety-auditor-pattern/" />
+    <id>https://alanpruitt.com/essays/10-ai-safety-auditor-pattern/</id>
+    <updated>2026-08-11T00:00:00.000Z</updated>
+    <summary>The AI Safety Auditor Pattern in Applied Kinesiology</summary>
+  </entry>
+  <entry>
+    <title>The Two-Part Scaffold Framework: Bridging Simulation &amp; Research-Grade Application</title>
+    <link href="https://alanpruitt.com/essays/11-two-part-scaffold-framework/" />
+    <id>https://alanpruitt.com/essays/11-two-part-scaffold-framework/</id>
+    <updated>2026-08-11T00:00:00.000Z</updated>
+    <summary>The Two-Part Scaffold Framework: Bridging Simulation &amp; Research-Grade Application</summary>
   </entry>
   <entry>
     <title>The Clinical Framing Protocol Architecture: Pattern, Rule, and Solve in Coded Instruction</title>
-    <link href="https://alanpruitt.com/articles/12-mission-loop-architecture.html" rel="alternate" type="text/html"/>
-    <id>https://alanpruitt.com/articles/12-mission-loop-architecture.html</id>
-    <updated>2026-07-03T12:00:00.000Z</updated>
-    <published>2026-07-03T12:00:00.000Z</published>
-    <summary type="text">Structuring deterministic health science problem-solving pipelines that enforce pattern identification.</summary>
-    <author>
-      <name>Alan Pruitt</name>
-      <email>contact@webcognita.com</email>
-      <uri>https://alanpruitt.com</uri>
-    </author>
-    <category term="MissionLoop"/>
-    <category term="Pedagogy"/>
-    <category term="Kinesiology"/>
+    <link href="https://alanpruitt.com/essays/12-mission-loop-architecture/" />
+    <id>https://alanpruitt.com/essays/12-mission-loop-architecture/</id>
+    <updated>2026-08-11T00:00:00.000Z</updated>
+    <summary>The Clinical Framing Protocol Architecture: Pattern, Rule, and Solve in Coded Instruction</summary>
   </entry>
   <entry>
-    <title>The Two-Part Scaffold Framework: Guided Simulation &amp; Precision Testing</title>
-    <link href="https://alanpruitt.com/articles/11-two-part-scaffold-framework.html" rel="alternate" type="text/html"/>
-    <id>https://alanpruitt.com/articles/11-two-part-scaffold-framework.html</id>
-    <updated>2026-06-26T12:00:00.000Z</updated>
-    <published>2026-06-26T12:00:00.000Z</published>
-    <summary type="text">Integrating AI simulation sandboxes with research-grade laboratory equipment.</summary>
-    <author>
-      <name>Alan Pruitt</name>
-      <email>contact@webcognita.com</email>
-      <uri>https://alanpruitt.com</uri>
-    </author>
-    <category term="Scaffolding"/>
-    <category term="Kinesiology"/>
-    <category term="AI"/>
+    <title>The Vibe-Coding Paradigm: Speed, Intuition, and Full-Stack Execution in Instructional Engineering</title>
+    <link href="https://alanpruitt.com/essays/13-vibe-coding-paradigm/" />
+    <id>https://alanpruitt.com/essays/13-vibe-coding-paradigm/</id>
+    <updated>2026-08-11T00:00:00.000Z</updated>
+    <summary>The Vibe-Coding Paradigm: Speed, Intuition, and Full-Stack Execution in Instructional Engineering</summary>
   </entry>
   <entry>
-    <title>The AI Safety Auditor Pattern: Guardrailing In-LMS Student Simulations</title>
-    <link href="https://alanpruitt.com/articles/10-ai-safety-auditor-pattern.html" rel="alternate" type="text/html"/>
-    <id>https://alanpruitt.com/articles/10-ai-safety-auditor-pattern.html</id>
-    <updated>2026-06-19T12:00:00.000Z</updated>
-    <published>2026-06-19T12:00:00.000Z</published>
-    <summary type="text">Deterministic verification protocols to prevent hallucination drift in academic environments.</summary>
-    <author>
-      <name>Alan Pruitt</name>
-      <email>contact@webcognita.com</email>
-      <uri>https://alanpruitt.com</uri>
-    </author>
-    <category term="AISafety"/>
-    <category term="AuditorPattern"/>
-    <category term="Compliance"/>
+    <title>The Guided Learning Trifecta: AI Simulation, Clinical Application, and Deterministic Auditing</title>
+    <link href="https://alanpruitt.com/essays/14-guided-learning-trifecta/" />
+    <id>https://alanpruitt.com/essays/14-guided-learning-trifecta/</id>
+    <updated>2026-08-11T00:00:00.000Z</updated>
+    <summary>The Guided Learning Trifecta: AI Simulation, Clinical Application, and Deterministic Auditing</summary>
   </entry>
   <entry>
-    <title>Immutable Learning Analytics: Privacy-Preserving Student Verification</title>
-    <link href="https://alanpruitt.com/articles/09-immutable-learning-analytics.html" rel="alternate" type="text/html"/>
-    <id>https://alanpruitt.com/articles/09-immutable-learning-analytics.html</id>
-    <updated>2026-06-12T12:00:00.000Z</updated>
-    <published>2026-06-12T12:00:00.000Z</published>
-    <summary type="text">Auditing student engagement metrics with sovereign data privacy boundaries.</summary>
-    <author>
-      <name>Alan Pruitt</name>
-      <email>contact@webcognita.com</email>
-      <uri>https://alanpruitt.com</uri>
-    </author>
-    <category term="Analytics"/>
-    <category term="Privacy"/>
-    <category term="Compliance"/>
+    <title>Immutable Learning Analytics &amp; Privacy-First Telemetry</title>
+    <link href="https://alanpruitt.com/essays/09-immutable-learning-analytics/" />
+    <id>https://alanpruitt.com/essays/09-immutable-learning-analytics/</id>
+    <updated>2026-08-06T00:00:00.000Z</updated>
+    <summary>Immutable Learning Analytics &amp; Privacy-First Telemetry</summary>
   </entry>
   <entry>
-    <title>Bilingual Localization Pipelines in Higher Education</title>
-    <link href="https://alanpruitt.com/articles/08-bilingual-localization-pipelines.html" rel="alternate" type="text/html"/>
-    <id>https://alanpruitt.com/articles/08-bilingual-localization-pipelines.html</id>
-    <updated>2026-06-05T12:00:00.000Z</updated>
-    <published>2026-06-05T12:00:00.000Z</published>
-    <summary type="text">Automating English/Spanish curriculum parity without semantic drift.</summary>
-    <author>
-      <name>Alan Pruitt</name>
-      <email>contact@webcognita.com</email>
-      <uri>https://alanpruitt.com</uri>
-    </author>
-    <category term="Localization"/>
-    <category term="Bilingual"/>
-    <category term="Pedagogy"/>
+    <title>Practical AI in Canvas: Supporting Course Design, Content Creation, and Student Engagement</title>
+    <link href="https://alanpruitt.com/essays/06-canvas-ai-course-design/" />
+    <id>https://alanpruitt.com/essays/06-canvas-ai-course-design/</id>
+    <updated>2026-08-04T00:00:00.000Z</updated>
+    <summary>Practical AI in Canvas: Supporting Course Design, Content Creation, and Student Engagement</summary>
   </entry>
   <entry>
-    <title>Continuous Integration in Course Pedagogy</title>
-    <link href="https://alanpruitt.com/articles/07-continuous-integration-pedagogy.html" rel="alternate" type="text/html"/>
-    <id>https://alanpruitt.com/articles/07-continuous-integration-pedagogy.html</id>
-    <updated>2026-05-29T12:00:00.000Z</updated>
-    <published>2026-05-29T12:00:00.000Z</published>
-    <summary type="text">Automating curriculum deployment with GitHub Actions and Canvas API integrations.</summary>
-    <author>
-      <name>Alan Pruitt</name>
-      <email>contact@webcognita.com</email>
-      <uri>https://alanpruitt.com</uri>
-    </author>
-    <category term="CICD"/>
-    <category term="Automation"/>
-    <category term="CurriculumAsCode"/>
+    <title>Continuous Integration for Pedagogy: Writing Automated Unit Tests for Learning Outcomes</title>
+    <link href="https://alanpruitt.com/essays/07-continuous-integration-pedagogy/" />
+    <id>https://alanpruitt.com/essays/07-continuous-integration-pedagogy/</id>
+    <updated>2026-08-04T00:00:00.000Z</updated>
+    <summary>Continuous Integration for Pedagogy: Writing Automated Unit Tests for Learning Outcomes</summary>
   </entry>
   <entry>
-    <title>Canvas AI Course Design &amp; Modular Architecture</title>
-    <link href="https://alanpruitt.com/articles/06-canvas-ai-course-design.html" rel="alternate" type="text/html"/>
-    <id>https://alanpruitt.com/articles/06-canvas-ai-course-design.html</id>
-    <updated>2026-05-22T12:00:00.000Z</updated>
-    <published>2026-05-22T12:00:00.000Z</published>
-    <summary type="text">Designing high-touch student interaction tracks within learning management systems.</summary>
-    <author>
-      <name>Alan Pruitt</name>
-      <email>contact@webcognita.com</email>
-      <uri>https://alanpruitt.com</uri>
-    </author>
-    <category term="CanvasLMS"/>
-    <category term="Architecture"/>
-    <category term="Pedagogy"/>
+    <title>Sovereign Localization: Automating Multi-Lingual &amp; Multi-Dialect Course Pipelines</title>
+    <link href="https://alanpruitt.com/essays/08-bilingual-localization-pipelines/" />
+    <id>https://alanpruitt.com/essays/08-bilingual-localization-pipelines/</id>
+    <updated>2026-08-04T00:00:00.000Z</updated>
+    <summary>Sovereign Localization: Automating Multi-Lingual &amp; Multi-Dialect Course Pipelines</summary>
   </entry>
   <entry>
-    <title>Instructional Engineering: Treating Pedagogy as Code</title>
-    <link href="https://alanpruitt.com/articles/05-instructional-engineering.html" rel="alternate" type="text/html"/>
-    <id>https://alanpruitt.com/articles/05-instructional-engineering.html</id>
-    <updated>2026-05-15T12:00:00.000Z</updated>
-    <published>2026-05-15T12:00:00.000Z</published>
-    <summary type="text">Applying software engineering principles to academic curriculum design and maintenance.</summary>
-    <author>
-      <name>Alan Pruitt</name>
-      <email>contact@webcognita.com</email>
-      <uri>https://alanpruitt.com</uri>
-    </author>
-    <category term="InstructionalEngineering"/>
-    <category term="CurriculumAsCode"/>
+    <title>Shifting from AI Fear to Strategic Assessment Design</title>
+    <link href="https://alanpruitt.com/essays/01-ai-assessment-design/" />
+    <id>https://alanpruitt.com/essays/01-ai-assessment-design/</id>
+    <updated>2026-07-30T00:00:00.000Z</updated>
+    <summary>Shifting from AI Fear to Strategic Assessment Design</summary>
   </entry>
   <entry>
-    <title>ADA Title II Compliance &amp; WCAG 2.2 AA in Digital Classrooms</title>
-    <link href="https://alanpruitt.com/articles/04-ada-title-ii-accessibility.html" rel="alternate" type="text/html"/>
-    <id>https://alanpruitt.com/articles/04-ada-title-ii-accessibility.html</id>
-    <updated>2026-05-08T12:00:00.000Z</updated>
-    <published>2026-05-08T12:00:00.000Z</published>
-    <summary type="text">Enforcing sovereign accessibility standards and programmatic contrast auditing across LMS pages.</summary>
-    <author>
-      <name>Alan Pruitt</name>
-      <email>contact@webcognita.com</email>
-      <uri>https://alanpruitt.com</uri>
-    </author>
-    <category term="ADATitleII"/>
-    <category term="WCAG"/>
-    <category term="Accessibility"/>
+    <title>Curriculum-as-Code: Treating Educational Content Like Software Development</title>
+    <link href="https://alanpruitt.com/essays/02-curriculum-as-code/" />
+    <id>https://alanpruitt.com/essays/02-curriculum-as-code/</id>
+    <updated>2026-07-30T00:00:00.000Z</updated>
+    <summary>Curriculum-as-Code: Treating Educational Content Like Software Development</summary>
   </entry>
   <entry>
-    <title>Air-Gapped Sovereign AI in Community Colleges</title>
-    <link href="https://alanpruitt.com/articles/03-air-gapped-sovereign-ai.html" rel="alternate" type="text/html"/>
-    <id>https://alanpruitt.com/articles/03-air-gapped-sovereign-ai.html</id>
-    <updated>2026-05-01T12:00:00.000Z</updated>
-    <published>2026-05-01T12:00:00.000Z</published>
-    <summary type="text">Deploying local open-weight models for zero-cost, private student compute.</summary>
-    <author>
-      <name>Alan Pruitt</name>
-      <email>contact@webcognita.com</email>
-      <uri>https://alanpruitt.com</uri>
-    </author>
-    <category term="SovereignAI"/>
-    <category term="AirGapped"/>
-    <category term="CommunityColleges"/>
+    <title>Air-Gapped &amp; Sovereign AI: Local Intelligence in High-Compliance Environments</title>
+    <link href="https://alanpruitt.com/essays/03-air-gapped-sovereign-ai/" />
+    <id>https://alanpruitt.com/essays/03-air-gapped-sovereign-ai/</id>
+    <updated>2026-07-30T00:00:00.000Z</updated>
+    <summary>Air-Gapped &amp; Sovereign AI: Local Intelligence in High-Compliance Environments</summary>
   </entry>
   <entry>
-    <title>Curriculum-as-Code: Version Control for Education</title>
-    <link href="https://alanpruitt.com/articles/02-curriculum-as-code.html" rel="alternate" type="text/html"/>
-    <id>https://alanpruitt.com/articles/02-curriculum-as-code.html</id>
-    <updated>2026-04-24T12:00:00.000Z</updated>
-    <published>2026-04-24T12:00:00.000Z</published>
-    <summary type="text">Establishing Git as the Single Source of Truth for instructional design.</summary>
-    <author>
-      <name>Alan Pruitt</name>
-      <email>contact@webcognita.com</email>
-      <uri>https://alanpruitt.com</uri>
-    </author>
-    <category term="CurriculumAsCode"/>
-    <category term="Git"/>
-    <category term="SSoT"/>
+    <title>Architecting Born-Accessible Higher Ed: ADA Title II &amp; Curriculum-as-Code</title>
+    <link href="https://alanpruitt.com/essays/04-ada-title-ii-accessibility/" />
+    <id>https://alanpruitt.com/essays/04-ada-title-ii-accessibility/</id>
+    <updated>2026-07-30T00:00:00.000Z</updated>
+    <summary>Architecting Born-Accessible Higher Ed: ADA Title II &amp; Curriculum-as-Code</summary>
   </entry>
   <entry>
-    <title>AI Assessment Design: Beyond the Multiple Choice Question</title>
-    <link href="https://alanpruitt.com/articles/01-ai-assessment-design.html" rel="alternate" type="text/html"/>
-    <id>https://alanpruitt.com/articles/01-ai-assessment-design.html</id>
-    <updated>2026-04-17T12:00:00.000Z</updated>
-    <published>2026-04-17T12:00:00.000Z</published>
-    <summary type="text">Designing authentic, interactive problem-solving evaluations using AI prompts.</summary>
-    <author>
-      <name>Alan Pruitt</name>
-      <email>contact@webcognita.com</email>
-      <uri>https://alanpruitt.com</uri>
-    </author>
-    <category term="AIAssessment"/>
-    <category term="Pedagogy"/>
-    <category term="Prompts"/>
+    <title>Instructional Engineering: Transforming Curriculum into Version-Controlled Source Code</title>
+    <link href="https://alanpruitt.com/essays/05-instructional-engineering/" />
+    <id>https://alanpruitt.com/essays/05-instructional-engineering/</id>
+    <updated>2026-07-30T00:00:00.000Z</updated>
+    <summary>Instructional Engineering: Transforming Curriculum into Version-Controlled Source Code</summary>
   </entry>
 </feed>

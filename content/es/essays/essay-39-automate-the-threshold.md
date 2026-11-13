@@ -38,7 +38,7 @@ La respuesta es deriva estructural en la evaluación. Cuando una rúbrica otorga
 
 ## Ingeniería de Validación Programática e IA Soberana en el Borde
 
-Apoyándome en mi labor docente en **Arizona Western College (HSI)**, como **Estratega de IA Generativa (`DCC` pro bono) en The University of Arizona (Campus Yuma)** y fundador de **Webcognita LLC (`SDVOSB / VOSB` • `UEI: EZ34U9KNJA17` • `CAGE: 4ZCN6`)**, integré tres defensas deterministas bajo mi **Estándar S-A-R (Escalable / Auditable / Repetible)**:
+Apoyándome en mi labor docente en **Arizona Western College (HSI)**, como **Estratega de IA Generativa (`DCC` pro bono) en The University of Arizona (Campus Yuma)** y fundador de **Webcognita LLC (`VOSB` • `UEI: EZ34U9KNJA17` • `CAGE: 4ZCN6`)**, integré tres defensas deterministas bajo mi **Estándar S-A-R (Escalable / Auditable / Repetible)**:
 
 1. **Parcheo y Verificación Programática de Rúbricas en Canvas:** Mis scripts en Python auditan cada criterio en las `11` aulas de Canvas, detectan cualquier piso distinto de cero y lo ajustan de `1` pt a `0` pts con respaldo previo, simulación `DRY_RUN` y reverificación.
 2. **Recalibración Formativa con Intentos Ilimitados (`10-7-0`):** Un `0 / 10` (*Recalibrar*) nunca es punitivo; va acompañado de `allowed_attempts = -1` (*Intentos ilimitados*) y retroalimentación accesible bajo **WCAG 3.0** (*En palabras sencillas* / español norteño auténtico) siguiendo **El Protocolo de Encuadre Clínico (`Patrón / Regla / Solución`)**.

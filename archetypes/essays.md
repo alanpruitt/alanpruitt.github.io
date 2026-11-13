@@ -12,7 +12,7 @@ keywords:
   - "NSF AI-Ready America Enabling Resource & K–16 Dual-Enrollment Deliverables"
   - "Non-Competing 50-State Enabling Resource"
   - "Air-Gapped Edge AI (Google Gemini Carbon 4 & Carbon 4)"
-  - "Webcognita LLC (SDVOSB • SAM.gov UEI: EZ34U9KNJA17 • CAGE: 4ZCN6)"
+  - "Webcognita LLC (VOSB • SAM.gov UEI: EZ34U9KNJA17 • CAGE: 4ZCN6)"
 ---
 
 > **In Plain English:** Before you read the details below, here is the short version: **[Bold one-line definition of this essay's core thesis].** [What happens in the institutional pipeline]. [Why it matters for students, faculty, and 50-state workforce readiness].

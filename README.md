@@ -7,14 +7,14 @@
 
 # Alan Pruitt (Coach Alan) — Curriculum Architect & Sovereign AI Strategist
 
-> Personal portfolio, 40-essay research corpus, and sovereign **Curriculum-as-Code (CaC)** repository of **Alan Pruitt (Coach Alan)** — Founder & Chief Curriculum Architect of **Webcognita LLC** (`SDVOSB / VOSB` • `SAM.gov UEI: EZ34U9KNJA17` • `CAGE: 4ZCN6`), Exercise Science Adjunct Faculty at **Arizona Western College (AWC)**, Generative AI Strategist & Designated Campus Colleague (`DCC`) at **The University of Arizona**, **Google Gemini Certified Faculty**, **Google Cloud Launchpad for Veterans** participant, and **USMC Veteran**.
+> Personal portfolio, 40-essay research corpus, and sovereign **Curriculum-as-Code (CaC)** repository of **Alan Pruitt (Coach Alan)** — Founder & Chief Curriculum Architect of **Webcognita LLC** (`VOSB` • `SAM.gov UEI: EZ34U9KNJA17` • `CAGE: 4ZCN6`), Exercise Science Adjunct Faculty at **Arizona Western College (AWC)**, Generative AI Strategist & Designated Campus Colleague (`DCC`) at **The University of Arizona**, **Google Gemini Certified Faculty**, **Google Cloud Launchpad for Veterans** participant, and **USMC Veteran**.
 
 - **Live Portfolio:** [https://alanpruitt.com](https://alanpruitt.com) ([Español / Norteño-Spanish](https://alanpruitt.com/es/))
 - **ORCID Researcher Identifier:** [https://orcid.org/0009-0002-5038-7111](https://orcid.org/0009-0002-5038-7111) (`0009-0002-5038-7111`)
 - **CERN Zenodo Research Communities:** [zenodo.org/communities/curriculum-as-code](https://zenodo.org/communities/curriculum-as-code) • [zenodo.org/communities/webcognita](https://zenodo.org/communities/webcognita)
 - **Google Developer Profile & Verified Credentials:** [https://me.developers.google.com/u/alanpruitt](https://me.developers.google.com/u/alanpruitt) (*Google Gemini Certified Faculty • Google AI Professional Certificate • Google Prompting Essentials • Google Project Management Capstone • Google Cloud Launchpad for Veterans*)
 - **Workshops & Public Canvas Proof Hub (`EXW-Demo 42051`):** [https://alanpruitt.com/workshops/](https://alanpruitt.com/workshops/)
-- **Corporate & Federal SDVOSB Practice:** [https://www.webcognita.com](https://www.webcognita.com) (`SAM.gov UEI: EZ34U9KNJA17` • `CAGE: 4ZCN6` • EIN `81-0809739` • [1-Page Capabilities Statement](https://www.webcognita.com/capabilities-statement.html) • [2-Page ATS Principal CV](https://www.webcognita.com/principal-qualifications.html))
+- **Corporate & Federal VOSB Practice:** [https://www.webcognita.com](https://www.webcognita.com) (`SAM.gov UEI: EZ34U9KNJA17` • `CAGE: 4ZCN6` • EIN `81-0809739` • [1-Page Capabilities Statement](https://www.webcognita.com/capabilities-statement.html) • [2-Page ATS Principal CV](https://www.webcognita.com/principal-qualifications.html))
 - **LinkedIn:** [https://www.linkedin.com/in/alanpruitt/](https://www.linkedin.com/in/alanpruitt/)
 - **LLM Portfolio Index (`llms.txt`):** [https://alanpruitt.com/llms.txt](https://alanpruitt.com/llms.txt) • [Full Corpus (`llms-full.txt`)](https://alanpruitt.com/llms-full.txt)
 

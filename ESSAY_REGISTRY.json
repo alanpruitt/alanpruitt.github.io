@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-11-11T23:24:48Z",
+  "generated_at": "2026-11-13T02:39:52Z",
   "published_count": 40,
   "max_published_number": 40,
   "staged_numbers": [
@@ -591,7 +591,7 @@
       "substack_kit": "content/en/distribution/essay-39-substack.md",
       "linkedin_kit": "content/en/distribution/essay-39-linkedin.md",
       "substack_live_url": "https://alanpruitt.substack.com/p/what-if-i-didnt-automate-the-threshold",
-      "word_count": 945,
+      "word_count": 943,
       "substack_word_count": 630,
       "substack_has_canonical_backlink": false,
       "substack_has_disclaimer": true
@@ -608,7 +608,7 @@
       "substack_kit": "content/en/distribution/essay-40-substack.md",
       "linkedin_kit": "content/en/distribution/essay-40-linkedin.md",
       "substack_live_url": null,
-      "word_count": 1280
+      "word_count": 1278
     }
   ]
 }

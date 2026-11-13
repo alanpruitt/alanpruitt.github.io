@@ -45,7 +45,7 @@ Across community colleges, **Hispanic-Serving Institutions (HSIs)**, and state w
 
 ## Engineering the Crosswalk: TEN No. 07-25 as Executable Code
 
-Drawing on my experience as an **Adjunct Faculty member of Exercise Science & Wellness at Arizona Western College**, a pro bono **Generative AI Strategist at The University of Arizona (School of Nutritional Sciences and Wellness — Yuma Campus)**, and **Founder & Principal Consultant of Webcognita LLC (SDVOSB)**, I independently engineered my **EXW Master Library (`S-A-R v2.2`: Scalable / Auditable / Repeatable)** to compile **TEN No. 07-25** directly into every module, rubric, simulator, and Git pre-commit gate across my **$0 ZTC Open Educational Resource (`OER`)** course fleet (`EXW 101`, `EXW 150`, `EXW 210`, `EXW 245`, and `EXW 265`).
+Drawing on my experience as an **Adjunct Faculty member of Exercise Science & Wellness at Arizona Western College**, a pro bono **Generative AI Strategist at The University of Arizona (School of Nutritional Sciences and Wellness — Yuma Campus)**, and **Founder & Principal Consultant of Webcognita LLC (VOSB)**, I independently engineered my **EXW Master Library (`S-A-R v2.2`: Scalable / Auditable / Repeatable)** to compile **TEN No. 07-25** directly into every module, rubric, simulator, and Git pre-commit gate across my **$0 ZTC Open Educational Resource (`OER`)** course fleet (`EXW 101`, `EXW 150`, `EXW 210`, `EXW 245`, and `EXW 265`).
 
 ```text
 +-------------------------------------------------------------------------------+
@@ -93,7 +93,7 @@ As documented in my [**Master Research Log Observatory (`CaC, CaaS & Compliance 
 
 Operationalizing **U.S. DOL ETA Advisory TEN No. 07-25** is also the foundational bridge from **`AI-AWARE`** to **`AI-READY`** under **NSF TechAccess: AI-Ready America**—building directly on community momentum from the AWC-hosted **Southwest Arizona AI Symposium** and my pro bono R1 Edge AI incubation work at **The University of Arizona (Yuma Campus)**.
 
-Through **Webcognita LLC** (`SDVOSB / VOSB` • `SAM.gov UEI: EZ34U9KNJA17` • `CAGE: 4ZCN6` • `Primary NAICS: 541511`), I position this entire **Curriculum-as-Code (`CaC`)**, **Curriculum-as-a-Service (`CaaS`)**, and **Compliance-as-Code** stack as a **Non-Competing 50-State Enabling Resource**. Rather than competing against colleges or workforce boards for prime institutional grants, I equip lead applicants—community colleges, universities, tribal nations, and State & Territory AI-Ready Coordination Hubs across all 50 states—with turnkey, SHA-256 checksummed OER packages, air-gapped Edge AI evaluation harnesses, and `0/0` ADA Title II accessibility pipelines.
+Through **Webcognita LLC** (`VOSB` • `SAM.gov UEI: EZ34U9KNJA17` • `CAGE: 4ZCN6` • `Primary NAICS: 541511`), I position this entire **Curriculum-as-Code (`CaC`)**, **Curriculum-as-a-Service (`CaaS`)**, and **Compliance-as-Code** stack as a **Non-Competing 50-State Enabling Resource**. Rather than competing against colleges or workforce boards for prime institutional grants, I equip lead applicants—community colleges, universities, tribal nations, and State & Territory AI-Ready Coordination Hubs across all 50 states—with turnkey, SHA-256 checksummed OER packages, air-gapped Edge AI evaluation harnesses, and `0/0` ADA Title II accessibility pipelines.
 
 *What if I didn't operationalize the framework?*
 

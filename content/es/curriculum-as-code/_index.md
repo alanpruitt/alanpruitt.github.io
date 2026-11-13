@@ -78,7 +78,7 @@ La segunda etapa trasladó el enfoque hacia repositorios de texto plano como Fue
 
 ### 1.3 Generación 3 (2026): Arquitectura Neuro-Simbólica Soberana (S-A-R v2.2)
 
-Desarrollada y validada en aulas reales de **Arizona Western College (HSI)**—donde el **77% del alumnado es latino** (`3.08` veces el umbral federal HSI del 25%) y el **62% son estudiantes universitarios de primera generación** (*"En AWC, el 77% de los estudiantes son latinos y el 62% son estudiantes de primera generación. Servimos a esta hermosa comunidad, pero los desafíos están en todas partes"*, Dra. Reetika Dhawan, Presidenta de AWC, citada en *The Yuma Sun*, 11 de noviembre de 2026)—y en investigación aplicada de IA en el borde en **The University of Arizona (Campus Yuma)** a través de **Webcognita LLC (`SDVOSB`)**, la arquitectura `S-A-R v2.2` compila módulos accesibles, rúbricas clínicas, ontologías bilingües y paquetes abiertos `Schema.org/Dataset` directamente desde Git hacia Canvas GraphQL (`POST /api/graphql`) sin depender de contenedores frágiles ni libros comerciales costosos.
+Desarrollada y validada en aulas reales de **Arizona Western College (HSI)**—donde el **77% del alumnado es latino** (`3.08` veces el umbral federal HSI del 25%) y el **62% son estudiantes universitarios de primera generación** (*"En AWC, el 77% de los estudiantes son latinos y el 62% son estudiantes de primera generación. Servimos a esta hermosa comunidad, pero los desafíos están en todas partes"*, Dra. Reetika Dhawan, Presidenta de AWC, citada en *The Yuma Sun*, 11 de noviembre de 2026)—y en investigación aplicada de IA en el borde en **The University of Arizona (Campus Yuma)** a través de **Webcognita LLC (`VOSB`)**, la arquitectura `S-A-R v2.2` compila módulos accesibles, rúbricas clínicas, ontologías bilingües y paquetes abiertos `Schema.org/Dataset` directamente desde Git hacia Canvas GraphQL (`POST /api/graphql`) sin depender de contenedores frágiles ni libros comerciales costosos.
 
 ---
 
@@ -156,7 +156,7 @@ Conecta **`3,265` nodos DOM** con resultados de aprendizaje (`CLOs`), traduce ex
 Despliega actualizaciones sin deriva en 11 entornos Canvas vía `POST /api/graphql` y compila `467/467` módulos OER verificados al **`100.0% (21/21)`** bajo las rúbricas Achieve OER + metadatos `Schema.org/Dataset` de 4 niveles.
 
 ### 3.6 IA Soberana Aislada y Habilitación Nacional en los 50 Estados
-Ejecuta **Google Gemini Carbon 4** y **Gemma 4** localmente en estaciones Apple Silicon (`M1/M2`) con 100% de privacidad FERPA y `$0.00` en tarifas recurrentes, posicionando a **Webcognita LLC (`SDVOSB`, `UEI: EZ34U9KNJA17`, `CAGE: 4ZCN6`)** como socio técnico habilitador no competidor para **NSF TechAccess: AI-Ready America**.
+Ejecuta **Google Gemini Carbon 4** y **Gemma 4** localmente en estaciones Apple Silicon (`M1/M2`) con 100% de privacidad FERPA y `$0.00` en tarifas recurrentes, posicionando a **Webcognita LLC (`VOSB`, `UEI: EZ34U9KNJA17`, `CAGE: 4ZCN6`)** como socio técnico habilitador no competidor para **NSF TechAccess: AI-Ready America**.
 
 ---
 

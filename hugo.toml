@@ -8,7 +8,7 @@ defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
 
 [params]
-  description = "Alan Pruitt (Coach Alan) — Founder of Webcognita LLC (SDVOSB), AWC Faculty & UArizona DCC. Pioneering Curriculum-as-Code (S-A-R v2.2), Edge AI & ADA Title II."
+  description = "Alan Pruitt (Coach Alan) — Founder of Webcognita LLC (VOSB), AWC Faculty & UArizona DCC. Pioneering Curriculum-as-Code (S-A-R v2.2), Edge AI & ADA Title II."
   defaultImage = "assets/og-preview.png"
   defaultImageAlt = "Alan Pruitt (Coach Alan) — Curriculum-as-Code, Digital Accessibility Governance & OER Manifesto"
 

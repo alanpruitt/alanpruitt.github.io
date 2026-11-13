@@ -6,7 +6,7 @@
 
 {{- $desc := .Description | default .Params.summary | default .Site.Params.description | default "Webcognita LLC (SAM.gov UEI: EZ34U9KNJA17 • CAGE: 4ZCN6 • EIN: 81-0809739) — Specializing in educational technology architecture, AI consulting, digital accessibility governance, and Curriculum-as-Code pipelines." -}}
 {{- $img := (.Params.image | default .Site.Params.defaultImage | default "assets/og-preview.png") | absURL -}}
-{{- $imgAlt := .Params.imageAlt | default .Site.Params.defaultImageAlt | default "Webcognita LLC (SDVOSB / VOSB) — AI Consulting, Digital Accessibility Governance & Curriculum-as-Code Architecture" -}}
+{{- $imgAlt := .Params.imageAlt | default .Site.Params.defaultImageAlt | default "Webcognita LLC (VOSB) — AI Consulting, Digital Accessibility Governance & Curriculum-as-Code Architecture" -}}
 {{- $ogType := .Params.og_type | default "website" -}}
 
 <meta property="og:title" content="{{ $title }}">
