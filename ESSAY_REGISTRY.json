@@ -1,13 +1,14 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-11-14T06:58:39Z",
+  "generated_at": "2026-11-14T19:39:36Z",
   "published_count": 40,
   "max_published_number": 40,
   "staged_numbers": [
     41,
-    42
+    42,
+    43
   ],
-  "next_new_essay_number": 43,
+  "next_new_essay_number": 44,
   "staged_essays": [
     {
       "essay_number": 41,
@@ -28,6 +29,16 @@
       "substack_kit": "docs/essays/essay-42-substack.md",
       "linkedin_kit": "docs/essays/essay-42-linkedin.md",
       "word_count": 1837
+    },
+    {
+      "essay_number": 43,
+      "status": "staged",
+      "title": "Essay 43: What If I Didn't Air-Gap the Stack? – The Why, How, and What of Compound Sovereign AI on Apple Silicon",
+      "slug": "essay-43-what-if-i-didnt-air-gap-the-stack",
+      "staged_file": "docs/essays/essay-43-what-if-i-didnt-air-gap-the-stack.md",
+      "substack_kit": "docs/essays/essay-43-substack.md",
+      "linkedin_kit": "docs/essays/essay-43-linkedin.md",
+      "word_count": 1708
     }
   ],
   "published_essays": [
