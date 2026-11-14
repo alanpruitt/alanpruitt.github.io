@@ -59,7 +59,7 @@
 
 ---
 
-## 3. Production Applications (8-App Sovereign PWA Ecosystem)
+## 3. Production Applications (9-App Sovereign PWA Ecosystem)
 
 1. **[EXW Digital Tool Kit (`exwtoolkit.com`)](https://exwtoolkit.com):** 9-Box bilingual (`EN` / `ES`) Wellness & Physical Education clinical PWA aligned with PAGA 2018 (2nd Ed.), DGA 2025–2030, ACSM 12th Ed., and NASM OPT standards, featuring Yuma desert heat-stress telemetry and cryptographic student verification tokens (`EXW-[COURSE]-M[XX]-[HASH]`).
 2. **[EXW Physical Activity Tool Kit (`paga2018.dev`)](https://paga2018.dev):** $0 ZTC Student Open Educational Resource (OER) for Arizona Western College WPE/EXW courses built on the Physical Activity Guidelines for Americans (2018, 2nd Ed.) with `Pattern / Rule / Solve` clinical activity audits.
@@ -69,6 +69,7 @@
 6. **[Markdown to Documents (`mdtodocs.app`)](https://mdtodocs.app):** Curriculum-as-Code document compiler that transforms plain-text Markdown into born-accessible, WCAG-compliant PDF, Word (`.docx`), and semantic HTML documents.
 7. **[Prompt-per-Mile Offset Calculator (`prompt-mile-hero.lovable.app`)](https://prompt-mile-hero.lovable.app):** Sustainability and active-transit telemetry utility that converts human movement and green transit miles into CO2 savings and equivalent AI compute prompt offsets.
 8. **[AgFlow 5G — Smart Irrigation & Remote Operations Calculator (`agflow-roi-dash.lovable.app`)](https://agflow-roi-dash.lovable.app):** Desert AgTech pilot utility modeling the operational, financial, and water-conservation ROI of 5G-enabled remote irrigation management across the Yuma / Imperial Valley agricultural corridor.
+9. **[GAIL 2026 Frontier AI Leader & Workforce Readiness Workbench (`gail2026.dev`)](https://gail2026.dev):** Independent `$0 ZTC` bilingual (`EN` / `ES`) Open Educational Resource PWA (`NAICS 541511`) hydrated from canonical SSoT [`alanpruitt.com/gail2026/`](https://alanpruitt.com/gail2026/) with 7 accessible learning modes, 4-Tier `LRMI` alignment (`US-DOL-TEN-07-25`, `NSF-TECHACCESS-AI-READY-2026`, `HLC ILOs`, and 50-state K–16 bridge re-compilation), `W3C SKOS` ontology, and `W3C PROV-O` `SHA-256` readiness receipts.
 
 ---
 
