@@ -1,5 +1,5 @@
 {
-  "version": "1.2.0",
+  "version": "1.3.0",
   "lastUpdated": "2026-11-13",
   "title": "Google Cloud Generative AI Leader (GAIL) — 2026 On-Demand Student Study & Practice Hub",
   "subtitle": "Open-access, zero-login exam preparation workbench reconciling Google Cloud's 2025 Vertex AI / Agentspace terminology with the 2026 Gemini Enterprise Agent Platform curriculum.",
@@ -81,7 +81,7 @@
       "name2026": "Gemini Notebook / Gemini Notebook Enterprise",
       "name2025": "NotebookLM / NotebookLM Enterprise",
       "layer": "Grounded Research",
-      "examRole": "Source-grounded synthesis assistant: upload PDFs, docs, slides, or URLs to generate cited summaries, Q&A, and study briefings strictly anchored to your uploaded files."
+      "examRole": "Source-grounded synthesis assistant (ZERO Google Search access): answers strictly from uploaded docs/URLs; sharing a notebook does not share raw source files (chat-only mode hides sources; manual re-sync on file edits)."
     },
     {
       "name2026": "Nano Banana / Gemini Flash Image",
@@ -111,7 +111,19 @@
       "name2026": "Gemini for Google Cloud",
       "name2025": "Duet AI / Gemini Cloud Assist + Code Assist",
       "layer": "Developer & Data Productivity",
-      "examRole": "Embedded cloud copilot spanning Gemini Code Assist (coding/unit tests), Gemini in BigQuery (SQL/analytics), Gemini in Looker, Cloud Assist, and Security."
+      "examRole": "Embedded cloud copilot spanning Gemini Code Assist (IDE plugin), Google Antigravity (Gemini-native IDE), Colab Enterprise (managed Jupyter), BigQuery, Looker, Cloud Assist, and Security."
+    },
+    {
+      "name2026": "CX Agent Studio",
+      "name2025": "Dialogflow / Conversational Agents",
+      "layer": "Drag-and-Drop Agent Builder",
+      "examRole": "Google's visual drag-and-drop builder for Deterministic (legacy Dialogflow rule trees), Generative (LLM), and Hybrid customer-experience agents."
+    },
+    {
+      "name2026": "Google Agent Development Kit (ADK)",
+      "name2025": "Custom Code Agent Frameworks",
+      "layer": "Code-First Agent SDK",
+      "examRole": "Open-source code-first framework for engineering custom multi-agent systems when pre-built (Gemini Enterprise) or drag-and-drop (CX Agent Studio) tools need deeper programmatic control."
     }
   ],
   "domains": [
@@ -284,6 +296,20 @@
       "pattern": "Biotech or legal firm has 50,000 curated input-output pairs and needs a smaller, low-latency model to consistently write in a highly specialized nomenclature and structured schema without giant few-shot prompts.",
       "rule": "Adapting persistent model behavior, style, or specialized task performance using curated labeled examples calls for weight adaptation.",
       "solve": "Fine-Tuning a foundation or open model (e.g., Gemini Flash or Gemma) on Agent Platform / Vertex AI."
+    },
+    {
+      "id": "sim-notebook",
+      "scenarioLabel": "Closed-World Audit Briefing (Zero Web Bleed)",
+      "pattern": "Compliance leadership uploads 30 confidential merger PDFs and wants an interactive Q&A briefing for executives that never queries public Google Search and hides the raw underlying PDFs from viewers.",
+      "rule": "Unlike standard Gemini (which can blend Google Search + chat), Gemini Notebook has zero Google Search access and supports chat-only sharing without exposing source files.",
+      "solve": "Gemini Notebook Enterprise (NotebookLM Enterprise) shared in chat-only mode (re-syncing manually whenever underlying Drive sources change)."
+    },
+    {
+      "id": "sim-bqml",
+      "scenarioLabel": "SQL Analysts Training Churn Models on Warehouse Tables",
+      "pattern": "Data analysts have 10 years of structured customer billing rows already stored in BigQuery, know standard SQL, and want to train a predictive churn model without spinning up Python/PyTorch clusters.",
+      "rule": "Follow the 4-step custom ML ladder: Pre-trained/Model Garden -> BigQuery ML (tabular SQL data in BigQuery) -> AutoML (no-code tabular/image/video) -> Custom training from scratch.",
+      "solve": "BigQuery ML (BQML) directly inside BigQuery using SQL; escalate to AutoML or custom Agent Platform pipelines only if multimodal or custom architectures are required."
     }
   ],
   "practiceQuiz": [
@@ -442,12 +468,51 @@
       ],
       "correctIndex": 2,
       "rationale": "Google Cloud recommends combining top-down strategic vision and Responsible AI / SAIF guardrails with bottom-up practitioner experimentation, starting with focused, measurable high-value use cases."
+    },
+    {
+      "id": "q13",
+      "domain": "Section 2 • Google Cloud Offerings",
+      "question": "How does grounding behavior in Gemini Notebook (NotebookLM Enterprise) differ from a standard Gemini web conversation, and what happens when you share a notebook in chat-only mode?",
+      "options": [
+        "Gemini Notebook automatically searches the live web first and grants full edit access to all underlying Google Drive files.",
+        "Gemini Notebook has zero access to Google Search—answering strictly from uploaded sources—and chat-only sharing lets recipients query the notebook without seeing or receiving access to the underlying source files.",
+        "Gemini Notebook retrains public Gemini foundation weights every night on uploaded files.",
+        "Gemini Notebook only accepts SQL tables and cannot read PDFs or slides."
+      ],
+      "correctIndex": 1,
+      "rationale": "Instructor-annotated Module 4 highlight: standard Gemini can combine Google Search, uploaded docs, and chat history, whereas Gemini Notebook has NO Google Search access and stays 100% focused on your uploaded sources. Sharing a notebook does not share raw source files, chat-only mode hides sources, and edited sources require manual re-sync."
+    },
+    {
+      "id": "q14",
+      "domain": "Section 3 • Improve Model Output",
+      "question": "In Google Cloud's agent architecture, what distinguishes the ReAct (Reason + Act) framework from standalone Chain-of-Thought (CoT) prompting?",
+      "options": [
+        "CoT invokes external REST APIs without reasoning, whereas ReAct disables all tools.",
+        "CoT performs internal intermediate reasoning steps only, whereas ReAct combines CoT reasoning with external Tools (Reasoning -> Acting via a tool -> Observing the returned data -> Iterating).",
+        "ReAct permanently modifies neural network weights like fine-tuning.",
+        "ReAct is Google's custom hardware ASIC replacing TPUs."
+      ],
+      "correctIndex": 1,
+      "rationale": "Instructor-annotated Module 5 formula: ReAct = CoT + Tools. The agent reasons step-by-step, acts by calling an Extension/Function/Data Store, observes the external result, and iterates until the goal is met."
+    },
+    {
+      "id": "q15",
+      "domain": "Section 2 & 4 • Architecture & FinOps",
+      "question": "An operations team wants a lightweight serverless handler that stays asleep at zero cost, wakes up automatically whenever a PDF lands in Cloud Storage, calls the Document Translation API, and goes back to sleep—authenticating securely inside Google Cloud. Which compute and auth pairing fits best?",
+      "options": [
+        "Dedicated bare-metal GPU VMs running 24/7 authenticated with hardcoded public API keys",
+        "Cloud Run functions triggered by the storage event, authenticating via Google Cloud IAM without needing an API key",
+        "Personal browser tabs in Google AI Studio manually refreshed by an intern",
+        "Training a custom foundation model from scratch on TPUs for every uploaded PDF"
+      ],
+      "correctIndex": 1,
+      "rationale": "Instructor-annotated Module 3 & 5 rule: Cloud Run functions are lightweight event-driven handlers ideal for 'file lands in Cloud Storage -> process -> sleep' workflows (whereas Cloud Run hosts stateless web/API containers), and workloads running inside Google Cloud authenticate natively via IAM rather than external API keys."
     }
   ],
   "studyChecklist": [
     {
       "id": "chk-1",
-      "label": "Master the 12-pair 2025 ↔ 2026 Dual-Terminology Rosetta Stone (Vertex AI / Agentspace ↔ Gemini Enterprise Agent Platform)."
+      "label": "Master the 14-pair 2025 ↔ 2026 Dual-Terminology Rosetta Stone (Vertex AI / Agentspace / Dialogflow ↔ Agent Platform / Gemini Enterprise / CX Agent Studio / ADK)."
     },
     {
       "id": "chk-2",
@@ -455,15 +520,15 @@
     },
     {
       "id": "chk-3",
-      "label": "Review Section 2 (~35%): Google AI Studio vs. Agent Studio, Agent anatomy (Model + Reasoning Loop + Tools), CX Suite (CCaaS, CX Agent Studio, Agent Assist, CX Insights), and 7 Pre-trained APIs."
+      "label": "Review Section 2 (~35%): Google AI Studio vs. Agent Studio, Agent anatomy (Model + Instructions + Tools), 3 ways to get agents (Buy / CX Agent Studio / ADK), and 7 Pre-trained APIs."
     },
     {
       "id": "chk-4",
-      "label": "Review Section 3 (~20%): 6 Foundation Model Limitations, Prompting vs. Grounding vs. RAG vs. Fine-Tuning vs. HITL, Metaprompting, and Temperature / Top-P."
+      "label": "Review Section 3 (~20%): 6 Foundation Model Limitations, Prompting vs. Grounding vs. RAG vs. Fine-Tuning vs. HITL, CoT vs. ReAct, Metaprompting, and Temperature / Top-P."
     },
     {
       "id": "chk-5",
-      "label": "Review Section 4 (~15%): 6 Project Needs + 3 Resources (including LiteRT + Gemini Nano for offline Edge AI), Top-Down + Bottom-Up adoption, and Google SAIF + IAM + SCC."
+      "label": "Review Section 4 (~15%): 6 Project Needs + 3 Resources (LiteRT + Gemini Nano Edge AI, BQML vs. AutoML, IAM vs. API keys, subscription vs. token vs. compute FinOps), and Google SAIF."
     },
     {
       "id": "chk-6",
@@ -471,17 +536,17 @@
     },
     {
       "id": "chk-7",
-      "label": "Score 12 / 12 on the Diagnostic Practice Quiz in Tab 4 and verify readiness against official sample questions."
+      "label": "Score 15 / 15 on the Diagnostic Practice Quiz in Tab 4 and verify readiness against official sample questions."
     }
   ],
   "liveSync": {
-    "statusSummary": "Active 30-minute S-A-R curriculum monitor tracking all three post-class and Office Hours slide/material slots.",
+    "statusSummary": "Active 30-minute S-A-R curriculum monitor (md_sha256: cf6261541c828a45) tracking post-class instructor annotations, lecture replays, and Nov 19–20 Office Hours.",
     "lastChecked": "2026-11-13",
     "milestones": [
       {
-        "badge": "MONITORING",
-        "title": "1. Link to Annotated Class PDFs",
-        "detail": "Current source state: <Will be added after class>. Distilled exam watchouts and instructor slide callouts will populate automatically as soon as posted (zero proprietary slide redistribution)."
+        "badge": "INGESTED (MODS 1–5)",
+        "title": "1. Instructor-Annotated Class PDFs (Modules 1–5)",
+        "detail": "Posted 2026-11-13 & synthesized! All 263 instructor slide annotations across Modules 1–5 archived locally and distilled into original exam callouts, Rosetta Stone pairs, scenarios, and quiz items (zero proprietary slide redistribution)."
       },
       {
         "badge": "MONITORING",
@@ -512,7 +577,8 @@
       "Google Models on Gemini Enterprise Agent Platform (Live Day 2 Sync): Match workload complexity to model tier (Pro/Frontier for deep reasoning & autonomous agents vs. Flash for multimodal speed vs. Flash-Lite for high-volume cost efficiency vs. Nano/LiteRT for offline edge), modality (Nano Banana/Imagen image, Veo video, Lyria music, Chirp speech, Multimodal Embeddings), and open-weight Gemma rules (Gemma 1/2 = English-only vs. Gemma 3/3n/4 = 140+ languages; ShieldGemma 2 = safety moderation).",
       "Google Workspace with Gemini Prompting Guide 101 (Live Day 2 Sync): Structure prompts with P-T-C-F (Persona + Task [explicit verb] + Context [@file Drive grounding] + Format); distinguish Standalone AI apps (Gemini Deep Research & Canvas, NotebookLM Audio/Video Overviews & Mind Maps, Google Vids + Veo) from Embedded Workspace tools (Sheets =AI() formula, Gems, Meet notes) protected by Workspace's zero-training, zero-human-review privacy boundary.",
       "Google AI Studio Prompt Workbench (Live Day 2 Sync — aistudio.google.com/prompts/new_chat): Zero-cost browser sandbox (standard Google Account, no GCP project required) for rapid prompt prototyping, System Instructions, Temperature/Top-P/Top-K tuning, Structured Outputs, Grounding with Google Search, Metaprompting, and Gemini API key export—graduate to Agent Studio (Vertex AI Studio) when enterprise IAM, VPC-SC, CMEK, SLAs, and production quotas are required.",
-      "Day 1 Full Lecture Transcript Digest (07:36:48 Corpus Sync): (1) Real GAIL questions are paragraph-length business scenarios, not short slide definitions; (2) The official Exam Guide PDF still prints 'Imagen' without mentioning 'Nano Banana' (hybrid diffusion + LLM architecture for accurate infographic text)—know both synonyms cold; (3) Half of 'Agent Platform' (Vertex AI) builds agents while the other half handles general ML/MLOps (Training, Endpoints, Batch Inference, Versioning, Drift Monitoring, IAM); (4) Customization ladder: Prompt Engineering -> Tools/Grounding/RAG ('look up the answer' — 90%+ of enterprise cases) -> Fine-Tuning ('grad school memorization' on open-weight Gemma) -> Custom Model; (5) Mitigate LLM sycophancy & jailbreaking with SAIF, Google Cloud Mandiant, and launching internal employee-productivity agents (Gemini Enterprise) before public customer bots."
+      "Day 1 Full Lecture Transcript Digest (07:36:48 Corpus Sync): (1) Real GAIL questions are paragraph-length business scenarios, not short slide definitions; (2) The official Exam Guide PDF still prints 'Imagen' without mentioning 'Nano Banana' (hybrid diffusion + LLM architecture for accurate infographic text)—know both synonyms cold; (3) Half of 'Agent Platform' (Vertex AI) builds agents while the other half handles general ML/MLOps (Training, Endpoints, Batch Inference, Versioning, Drift Monitoring, IAM); (4) Customization ladder: Prompt Engineering -> Tools/Grounding/RAG ('look up the answer' — 90%+ of enterprise cases) -> Fine-Tuning ('grad school memorization' on open-weight Gemma) -> Custom Model; (5) Mitigate LLM sycophancy & jailbreaking with SAIF, Google Cloud Mandiant, and launching internal employee-productivity agents (Gemini Enterprise) before public customer bots.",
+      "Instructor-Annotated Slide Deck Digest (263 Annotations Across Modules 1–5): (1) Gemini Notebook has ZERO Google Search access (strictly uploaded sources; sharing does not share raw source files; chat-only hides sources; manual re-sync on edits); (2) Gems (reusable prompts in Gemini) vs. Agents (Gemini Enterprise) vs. Skills (cross-conversation capabilities); (3) Three ways to get agents: Buy (Gemini Enterprise), Drag-and-Drop (CX Agent Studio, where legacy deterministic Dialogflow bots still run), or Code (Google ADK); (4) Custom ML escalation: Model Garden/APIs -> BigQuery ML (SQL tables) -> AutoML (tabular/image/video) -> Custom scratch; TPUs are Google's custom AI ASICs; (5) ReAct = CoT + Tools; Cloud Run functions (event-driven triggers) vs. Cloud Run (stateless containers); GCP internal auth = IAM (external = API key); FinOps billing = subscription (SaaS) vs. per-token (1 token ≈ 4 chars) vs. compute uptime (open/custom endpoints)."
     ]
   },
   "evalResources": [
@@ -613,6 +679,11 @@
     }
   ],
   "changelog": [
+    {
+      "version": "v1.3.0",
+      "date": "2026-11-13",
+      "notes": "Auto-ingested Instructor-Annotated Class PDFs (Modules 1–5, 263 annotations, md_sha256: cf6261541c828a45; zero proprietary redistribution): synthesized Gemini Notebook zero-Google-Search & chat-only sharing rules, Gems vs. Agents vs. Skills, 3 agent acquisition paths (Buy / CX Agent Studio + legacy Dialogflow / Google ADK), Google Antigravity & Colab Enterprise, BQML vs. AutoML escalation, TPU = ASIC, ReAct = CoT + Tools, Cloud Run vs. Cloud Run functions, IAM vs. API key auth, and 3-tier FinOps billing; expanded to 14 Rosetta Stone pairs, 10 scenarios, and 15 diagnostic questions."
+    },
     {
       "version": "v1.2.0",
       "date": "2026-11-13",
