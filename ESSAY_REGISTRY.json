@@ -1,12 +1,13 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-11-14T04:37:07Z",
+  "generated_at": "2026-11-14T06:35:07Z",
   "published_count": 40,
   "max_published_number": 40,
   "staged_numbers": [
-    41
+    41,
+    42
   ],
-  "next_new_essay_number": 42,
+  "next_new_essay_number": 43,
   "staged_essays": [
     {
       "essay_number": 41,
@@ -17,6 +18,16 @@
       "substack_kit": "docs/essays/essay-41-substack.md",
       "linkedin_kit": "docs/essays/essay-41-linkedin.md",
       "word_count": 1114
+    },
+    {
+      "essay_number": 42,
+      "status": "staged",
+      "title": "Essay 42: What If I Waited Months to Prototype? – Rapid EdTech Engineering with Antigravity CLI/IDE, Gemma Gemini 4 Carbon, and Air-Gapped Apple Silicon",
+      "slug": "essay-42-rapid-edtech-prototyping-antigravity-carbon4-apple-silicon",
+      "staged_file": "docs/essays/essay-42-rapid-edtech-prototyping-antigravity-carbon4-apple-silicon.md",
+      "substack_kit": "docs/essays/essay-42-substack.md",
+      "linkedin_kit": "docs/essays/essay-42-linkedin.md",
+      "word_count": 1837
     }
   ],
   "published_essays": [
