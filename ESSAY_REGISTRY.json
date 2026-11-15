@@ -1,15 +1,16 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-11-15T03:18:11Z",
+  "generated_at": "2026-11-15T18:34:18Z",
   "published_count": 40,
   "max_published_number": 40,
   "staged_numbers": [
     41,
     42,
     43,
-    44
+    44,
+    45
   ],
-  "next_new_essay_number": 45,
+  "next_new_essay_number": 46,
   "staged_essays": [
     {
       "essay_number": 41,
@@ -50,6 +51,16 @@
       "substack_kit": "docs/essays/essay-44-substack.md",
       "linkedin_kit": "docs/essays/essay-44-linkedin.md",
       "word_count": 1934
+    },
+    {
+      "essay_number": 45,
+      "status": "staged",
+      "title": "Essay 45 (Staged Brief): What If I Bought a Drag-and-Drop SaaS Wrapper Instead? – Solving the Local Hybrid RAG Pain Point Consultants Misdiagnose at $0 CAPEX",
+      "slug": "essay-45-zero-capex-local-hybrid-rag-brief",
+      "staged_file": "docs/essays/essay-45-zero-capex-local-hybrid-rag-brief.md",
+      "substack_kit": null,
+      "linkedin_kit": null,
+      "word_count": 899
     }
   ],
   "published_essays": [
