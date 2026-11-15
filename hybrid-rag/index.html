@@ -1,0 +1,1426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM GraphRAG &amp; Sovereign Local Hybrid RAG Workbench | Alan Pruitt</title>
+  <meta name="description" content="Dual-mode Curriculum-as-Code DOM GraphRAG (980 open SSoT nodes with W3C PROV-O SHA-256 receipts) and zero-egress Apple Silicon Local Hybrid RAG (127.0.0.1 SQLite FTS5 BM25 + 768-dim Cosine RRF + Ollama Carbon 4).">
+  <link rel="canonical" href="https://alanpruitt.com/hybrid-rag/">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="DOM GraphRAG &amp; Sovereign Local Hybrid RAG Workbench | Alan Pruitt">
+  <meta property="og:description" content="Explore 980 W3C PROV-O verified Curriculum-as-Code DOM GraphRAG nodes in-browser, or pair over 127.0.0.1 loopback to interrogate a $0-CAPEX Sovereign Local Hybrid RAG vault.">
+  <meta property="og:url" content="https://alanpruitt.com/hybrid-rag/">
+  <meta property="og:type" content="website">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "DOM GraphRAG & Sovereign Local Hybrid RAG Workbench",
+    "url": "https://alanpruitt.com/hybrid-rag/",
+    "applicationCategory": "EducationalApplication",
+    "operatingSystem": "All (Public DOM GraphRAG) / macOS Apple Silicon M1 & M2 (127.0.0.1 Loopback Vault)",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Alan Pruitt",
+      "url": "https://alanpruitt.com/",
+      "sameAs": [
+        "https://orcid.org/0009-0002-5038-7111",
+        "https://www.webcognita.com/",
+        "https://www.linkedin.com/in/alanpruitt/"
+      ]
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Webcognita LLC",
+      "url": "https://www.webcognita.com/"
+    }
+  }
+  </script>
+  <style>
+    :root {
+      --bg-page: #FAFBF7;
+      --bg-surface: #FFFFFF;
+      --bg-subtle: #F2F4EE;
+      --text-primary: #0B192C;
+      --text-body: #222222;
+      --text-muted: #333333;
+      --accent-red: #940925;
+      --accent-teal: #0D5156;
+      --accent-navy: #002147;
+      --border-light: #D5D9CE;
+      --border-strong: #0B192C;
+      --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-serif: Georgia, "Times New Roman", serif;
+      --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg-page);
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--accent-teal);
+      background-color: transparent;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      font-weight: 600;
+    }
+
+    a:hover, a:focus-visible {
+      color: var(--accent-red);
+    }
+
+    :focus-visible {
+      outline: 3px solid var(--accent-red);
+      outline-offset: 2px;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: 8px;
+      z-index: 1000;
+      padding: 10px 16px;
+      background-color: #002147;
+      color: #FFFFFF;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .skip-link:focus {
+      left: 12px;
+    }
+
+    .topbar {
+      background-color: #002147;
+      color: #FFFFFF;
+      border-bottom: 4px solid #940925;
+      padding: 12px 20px;
+    }
+
+    .topbar-inner {
+      max-width: 1140px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .brand-links {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 14px;
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+    }
+
+    .brand-links a {
+      color: #FFFFFF;
+      background-color: #002147;
+      text-decoration: none;
+      padding: 4px 8px;
+      border-radius: 4px;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+    }
+
+    .brand-links a:hover, .brand-links a:focus-visible {
+      background-color: #FFFFFF;
+      color: #002147;
+    }
+
+    .topbar-controls {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .status-pill {
+      font-family: var(--font-mono);
+      font-size: 0.76rem;
+      font-weight: 700;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background-color: #FFFFFF;
+      color: #0B192C;
+      border: 1px solid #FFFFFF;
+    }
+
+    .status-pill.is-live {
+      background-color: #2CCCD3;
+      color: #000000;
+      border-color: #2CCCD3;
+    }
+
+    .lang-btn {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 5px 12px;
+      border-radius: 6px;
+      border: 1px solid #FFFFFF;
+      background-color: #940925;
+      color: #FFFFFF;
+      cursor: pointer;
+    }
+
+    .lang-btn:hover {
+      background-color: #FFFFFF;
+      color: #940925;
+    }
+
+    .container {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 28px 20px 64px;
+    }
+
+    .hero-card {
+      background-color: #FFFFFF;
+      color: #0B192C;
+      border: 1px solid var(--border-light);
+      border-radius: 14px;
+      padding: 28px;
+      margin-bottom: 22px;
+    }
+
+    .eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #940925;
+      background-color: #FFFFFF;
+      margin: 0 0 8px 0;
+    }
+
+    h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.65rem, 3vw, 2.35rem);
+      line-height: 1.2;
+      margin: 0 0 12px 0;
+      color: #0B192C;
+      background-color: #FFFFFF;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+      color: #333333;
+      background-color: #FFFFFF;
+      margin: 0 0 18px 0;
+      max-width: 88ch;
+    }
+
+    .plain-english-box {
+      background-color: #FFFFFF;
+      color: #222222;
+      border: 1px solid #D5D9CE;
+      border-left: 5px solid #940925;
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin-top: 16px;
+    }
+
+    .plain-english-label {
+      font-family: var(--font-mono);
+      font-size: 0.76rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #940925;
+      background-color: #FFFFFF;
+      margin: 0 0 6px 0;
+    }
+
+    .plain-english-box p {
+      margin: 0 0 8px 0;
+      font-size: 0.95rem;
+      color: #222222;
+      background-color: #FFFFFF;
+    }
+
+    .plain-english-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Accessible Tablist (WCAG 1.4.1 shape indicator via ::after border) */
+    .mode-tabs-bar {
+      display: flex;
+      overflow-x: auto;
+      border-bottom: 2px solid var(--border-light);
+      background-color: #FFFFFF;
+      border-radius: 12px 12px 0 0;
+      border: 1px solid var(--border-light);
+      border-bottom: 2px solid var(--border-light);
+      padding: 0 12px;
+      gap: 8px;
+    }
+
+    [role="tab"] {
+      position: relative;
+      flex: none;
+      appearance: none;
+      border: none;
+      background-color: #FFFFFF;
+      color: #333333;
+      font-family: var(--font-sans);
+      font-size: 0.96rem;
+      font-weight: 700;
+      padding: 14px 18px;
+      cursor: pointer;
+    }
+
+    [role="tab"][aria-selected="true"] {
+      color: #940925;
+      background-color: #FFFFFF;
+    }
+
+    [role="tab"][aria-selected="true"]::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0 0;
+      border-block-end: 4px solid #940925;
+    }
+
+    .tabpanel-shell {
+      background-color: #FFFFFF;
+      color: #0B192C;
+      border: 1px solid var(--border-light);
+      border-top: none;
+      border-radius: 0 0 14px 14px;
+      padding: 24px;
+      margin-bottom: 28px;
+    }
+
+    .telemetry-strip {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .metric-tile {
+      background-color: #FAFBF7;
+      color: #0B192C;
+      border: 1px solid var(--border-light);
+      border-radius: 10px;
+      padding: 12px 14px;
+    }
+
+    .metric-label {
+      display: block;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #333333;
+      background-color: #FAFBF7;
+    }
+
+    .metric-value {
+      display: block;
+      font-family: var(--font-mono);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #0B192C;
+      background-color: #FAFBF7;
+      margin-top: 2px;
+    }
+
+    .filter-group {
+      margin-bottom: 16px;
+    }
+
+    .filter-group-label {
+      display: block;
+      font-family: var(--font-mono);
+      font-size: 0.76rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #333333;
+      background-color: #FFFFFF;
+      margin-bottom: 8px;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .filter-pill {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid #0B192C;
+      background-color: #FFFFFF;
+      color: #0B192C;
+      cursor: pointer;
+    }
+
+    .filter-pill[aria-pressed="true"] {
+      background-color: #002147;
+      color: #FFFFFF;
+      border-color: #002147;
+    }
+
+    .search-form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 18px 0 14px 0;
+    }
+
+    .search-input {
+      flex: 1 1 320px;
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      padding: 12px 16px;
+      border-radius: 8px;
+      border: 2px solid #0B192C;
+      background-color: #FFFFFF;
+      color: #0B192C;
+    }
+
+    .select-control {
+      font-family: var(--font-mono);
+      font-size: 0.84rem;
+      font-weight: 700;
+      padding: 10px 12px;
+      border-radius: 8px;
+      border: 2px solid #0B192C;
+      background-color: #FFFFFF;
+      color: #0B192C;
+    }
+
+    .btn-primary {
+      font-family: var(--font-mono);
+      font-size: 0.86rem;
+      font-weight: 700;
+      padding: 12px 20px;
+      border-radius: 8px;
+      border: 2px solid #940925;
+      background-color: #940925;
+      color: #FFFFFF;
+      cursor: pointer;
+    }
+
+    .btn-primary:hover {
+      background-color: #002147;
+      border-color: #002147;
+      color: #FFFFFF;
+    }
+
+    .btn-secondary {
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      font-weight: 700;
+      padding: 10px 14px;
+      border-radius: 8px;
+      border: 1px solid #0D5156;
+      background-color: #FFFFFF;
+      color: #0D5156;
+      cursor: pointer;
+    }
+
+    .btn-secondary:hover {
+      background-color: #0D5156;
+      color: #FFFFFF;
+    }
+
+    .chip-btn {
+      font-family: var(--font-sans);
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 5px 11px;
+      border-radius: 6px;
+      border: 1px solid #D5D9CE;
+      background-color: #FAFBF7;
+      color: #0B192C;
+      cursor: pointer;
+    }
+
+    .chip-btn:hover {
+      border-color: #940925;
+      color: #940925;
+      background-color: #FFFFFF;
+    }
+
+    .results-meta {
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #333333;
+      background-color: #FFFFFF;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border-light);
+      margin-bottom: 16px;
+    }
+
+    .answer-panel {
+      background-color: #FAFBF7;
+      color: #0B192C;
+      border: 2px solid #0D5156;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    .answer-panel h3 {
+      margin: 0 0 10px 0;
+      font-size: 1.05rem;
+      color: #0D5156;
+      background-color: #FAFBF7;
+    }
+
+    .answer-body {
+      white-space: pre-wrap;
+      font-size: 0.96rem;
+      color: #0B192C;
+      background-color: #FAFBF7;
+    }
+
+    .hit-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .hit-card {
+      background-color: #FFFFFF;
+      color: #0B192C;
+      border: 1px solid var(--border-light);
+      border-left: 4px solid #002147;
+      border-radius: 10px;
+      padding: 16px 18px;
+    }
+
+    .hit-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+
+    .badge {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 4px;
+      background-color: #002147;
+      color: #FFFFFF;
+    }
+
+    .badge-red {
+      background-color: #940925;
+      color: #FFFFFF;
+    }
+
+    .badge-teal {
+      background-color: #0D5156;
+      color: #FFFFFF;
+    }
+
+    .badge-outline {
+      background-color: #FFFFFF;
+      color: #0B192C;
+      border: 1px solid #0B192C;
+    }
+
+    .hit-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin: 0 0 6px 0;
+      color: #0B192C;
+      background-color: #FFFFFF;
+    }
+
+    .hit-dom-path {
+      font-family: var(--font-mono);
+      font-size: 0.76rem;
+      color: #333333;
+      background-color: #FAFBF7;
+      padding: 4px 8px;
+      border-radius: 4px;
+      border: 1px solid #D5D9CE;
+      margin-bottom: 10px;
+      overflow-wrap: anywhere;
+    }
+
+    .hit-excerpt {
+      font-size: 0.94rem;
+      color: #222222;
+      background-color: #FFFFFF;
+      margin: 0 0 12px 0;
+      overflow-wrap: anywhere;
+    }
+
+    .hit-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .action-btn {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 5px 10px;
+      border-radius: 6px;
+      border: 1px solid #0D5156;
+      background-color: #FFFFFF;
+      color: #0D5156;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .action-btn:hover {
+      background-color: #0D5156;
+      color: #FFFFFF;
+    }
+
+    details.chunk-disclosure {
+      margin-top: 10px;
+      border-top: 1px dashed var(--border-light);
+      padding-top: 8px;
+    }
+
+    details.chunk-disclosure summary {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #0D5156;
+      background-color: #FFFFFF;
+      cursor: pointer;
+    }
+
+    details.chunk-disclosure pre {
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      background-color: #FAFBF7;
+      color: #0B192C;
+      border: 1px solid #D5D9CE;
+      border-radius: 6px;
+      padding: 12px;
+      margin: 8px 0 0 0;
+      max-height: 320px;
+      overflow-y: auto;
+    }
+
+    .offline-bridge-box {
+      background-color: #FAFBF7;
+      color: #0B192C;
+      border: 2px solid #002147;
+      border-radius: 12px;
+      padding: 22px;
+      margin-bottom: 18px;
+    }
+
+    .offline-bridge-box h3 {
+      margin: 0 0 10px 0;
+      color: #002147;
+      background-color: #FAFBF7;
+    }
+
+    .code-line {
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      background-color: #002147;
+      color: #FFFFFF;
+      padding: 10px 14px;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin: 10px 0;
+    }
+
+    .arch-footer {
+      background-color: #FFFFFF;
+      color: #0B192C;
+      border: 1px solid var(--border-light);
+      border-radius: 14px;
+      padding: 24px;
+    }
+
+    .arch-footer h2 {
+      margin-top: 0;
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      color: #0B192C;
+      background-color: #FFFFFF;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    [hidden] {
+      display: none !important;
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-workbench" class="skip-link">Skip to Hybrid RAG Workbench</a>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <nav class="brand-links" aria-label="Site navigation">
+        <a href="https://alanpruitt.com/">alanpruitt.com</a>
+        <a href="https://alanpruitt.com/curriculum-as-code/">Curriculum-as-Code</a>
+        <a href="https://www.webcognita.com/#sovereign-hybrid-rag">Webcognita $0-CAPEX Edge Case</a>
+        <a href="https://exwtoolkit.com/">exwtoolkit.com</a>
+      </nav>
+      <div class="topbar-controls">
+        <span id="bridge-status-pill" class="status-pill" role="status" aria-live="polite">Public Reference Mode</span>
+        <button type="button" id="lang-toggle" class="lang-btn" aria-label="Switch language between English and Spanish">ES • Español</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-workbench" class="container">
+    <section class="hero-card" aria-labelledby="page-title">
+      <p class="eyebrow" data-i18n="eyebrow">S-A-R Standard v2.2 • W3C PROV-O • Zero-Residue Edge AI</p>
+      <h1 id="page-title" data-i18n="title">DOM GraphRAG &amp; Sovereign Local Hybrid RAG Workbench</h1>
+      <p class="subtitle" data-i18n="subtitle">
+        Dual-plane retrieval cockpit: interrogate 980 public Curriculum-as-Code DOM GraphRAG nodes in any browser, or connect over 127.0.0.1 loopback from M1/M2 macOS to search and synthesize across your air-gapped SQLite FTS5 + 768-dim Ollama Carbon 4 vault.
+      </p>
+
+      <div class="plain-english-box" role="region" aria-labelledby="pe-heading">
+        <p id="pe-heading" class="plain-english-label" data-i18n="peLabel">In Plain English • Cognitive Accessibility Callout</p>
+        <p id="pe-en">
+          Before you read the details below, here is the short version: <strong>DOM GraphRAG and Sovereign Hybrid RAG find exact facts across thousands of documents without uploading private files to the cloud.</strong> Public visitors can search 980 open Exercise Science curriculum nodes right in their browser, while Coach Alan's M1 and M2 Macs pair locally over <code>127.0.0.1:8766</code> to query private scans and records. That keeps veteran, legal, and academic files 100% private at zero monthly cloud cost.
+        </p>
+        <p id="pe-es" lang="es">
+          <strong>En palabras sencillas:</strong> Es como tener un archivo blindado en tu propio escritorio donde encuentras cualquier documento o regla clínica en segundos sin subir papeles privados a internet. Si los términos técnicos se ponen pesados, concéntrate primero en elegir una pregunta de ejemplo abajo y revisar las fuentes verificadas que te devuelve el buscador.
+        </p>
+      </div>
+    </section>
+
+    <div role="tablist" aria-label="Hybrid RAG Operating Modes" class="mode-tabs-bar">
+      <button type="button" role="tab" id="tab-public" aria-selected="true" tabindex="0" data-panel="panel-public">
+        Public DOM GraphRAG (980 Open SSoT Nodes)
+      </button>
+      <button type="button" role="tab" id="tab-local" aria-selected="false" tabindex="-1" data-panel="panel-local">
+        Sovereign M1/M2 Vault (127.0.0.1 Loopback)
+      </button>
+    </div>
+
+    <!-- PANEL 1: PUBLIC DOM GRAPHRAG -->
+    <section role="tabpanel" id="panel-public" aria-labelledby="tab-public" class="tabpanel-shell">
+      <h2 id="public-heading" style="margin-top:0; font-size:1.3rem; color:#0B192C; background-color:#FFFFFF;" data-i18n="publicHeading">
+        Public Curriculum-as-Code DOM GraphRAG Explorer
+      </h2>
+      <p style="margin-top:0; color:#333333; background-color:#FFFFFF; font-size:0.94rem;" data-i18n="publicDesc">
+        Runs 100% client-side in your browser against 980 distilled DOM GraphRAG nodes (compiled from 3,278 source vectors across EXW 101, 150, 210, 245, and 265) with structural Pattern / Rule / Solve role weighting and W3C PROV-O SHA-256 receipts.
+      </p>
+
+      <div class="telemetry-strip" aria-label="Public DOM GraphRAG Telemetry">
+        <div class="metric-tile">
+          <span class="metric-label">Source Vectors</span>
+          <span class="metric-value" id="pub-source-vectors">3,278</span>
+        </div>
+        <div class="metric-tile">
+          <span class="metric-label">Distilled DOM Nodes</span>
+          <span class="metric-value" id="pub-distilled-nodes">980</span>
+        </div>
+        <div class="metric-tile">
+          <span class="metric-label">Provenance Standard</span>
+          <span class="metric-value">W3C PROV-O SHA-256</span>
+        </div>
+        <div class="metric-tile">
+          <span class="metric-label">Cloud Egress</span>
+          <span class="metric-value">0 Bytes ($0 CAPEX)</span>
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <span class="filter-group-label" id="course-filter-label">Filter by Course Fleet SSoT</span>
+        <div class="pill-row" role="group" aria-labelledby="course-filter-label" id="pub-course-pills">
+          <button type="button" class="filter-pill" data-course="ALL" aria-pressed="true">ALL FLEET (980)</button>
+          <button type="button" class="filter-pill" data-course="EXW101" aria-pressed="false">EXW 101 • PAGA 2018</button>
+          <button type="button" class="filter-pill" data-course="EXW150" aria-pressed="false">EXW 150 • DGA 2025–2030</button>
+          <button type="button" class="filter-pill" data-course="EXW210" aria-pressed="false">EXW 210 • NASM OPT</button>
+          <button type="button" class="filter-pill" data-course="EXW245" aria-pressed="false">EXW 245 • ACSM 12th Ed.</button>
+          <button type="button" class="filter-pill" data-course="EXW265" aria-pressed="false">EXW 265 • Special Pops</button>
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <span class="filter-group-label" id="role-filter-label">Filter by Clinical Framing Role (Pattern / Rule / Solve)</span>
+        <div class="pill-row" role="group" aria-labelledby="role-filter-label" id="pub-role-pills">
+          <button type="button" class="filter-pill" data-role="ALL" aria-pressed="true">All DOM Roles</button>
+          <button type="button" class="filter-pill" data-role="rule" aria-pressed="false">Rule / Safety Gate</button>
+          <button type="button" class="filter-pill" data-role="solve" aria-pressed="false">Solve / 10-of-10 Exemplar</button>
+          <button type="button" class="filter-pill" data-role="plain_english" aria-pressed="false">In Plain English</button>
+          <button type="button" class="filter-pill" data-role="reading" aria-pressed="false">Instructional Core</button>
+        </div>
+      </div>
+
+      <form id="pub-search-form" class="search-form" role="search" aria-label="Search Public DOM GraphRAG">
+        <label for="pub-query" class="sr-only">Search 980 DOM GraphRAG curriculum nodes</label>
+        <input type="search" id="pub-query" class="search-input" placeholder="Search PAGA 2018, DGA 2025-2030, ACSM 12th Ed., Yuma heat gates, Pattern / Rule / Solve..." autocomplete="off">
+        <label for="pub-topk" class="sr-only">Number of public results</label>
+        <select id="pub-topk" class="select-control">
+          <option value="6">Top 6 Nodes</option>
+          <option value="12" selected>Top 12 Nodes</option>
+          <option value="25">Top 25 Nodes</option>
+        </select>
+        <button type="submit" class="btn-primary">Run DOM GraphRAG</button>
+      </form>
+
+      <div class="filter-group">
+        <span class="filter-group-label">Suggested Benchmark Queries</span>
+        <div class="pill-row" id="pub-suggested-chips"></div>
+      </div>
+
+      <div id="pub-results-meta" class="results-meta" aria-live="polite">Loading 980 DOM GraphRAG SSoT nodes...</div>
+      <div id="pub-results-list" class="hit-list"></div>
+    </section>
+
+    <!-- PANEL 2: SOVEREIGN M1/M2 LOCAL VAULT -->
+    <section role="tabpanel" id="panel-local" aria-labelledby="tab-local" class="tabpanel-shell" hidden>
+      <div style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:12px; margin-bottom:10px;">
+        <h2 style="margin:0; font-size:1.3rem; color:#0B192C; background-color:#FFFFFF;" data-i18n="localHeading">
+          Sovereign M1/M2 Local Hybrid RAG Cockpit (127.0.0.1:8766)
+        </h2>
+        <div style="display:flex; flex-wrap:wrap; gap:8px;">
+          <button type="button" id="btn-sync-scans" class="btn-secondary" hidden>Sync WF-4830 Scans + Index</button>
+          <button type="button" id="btn-retry-bridge" class="btn-secondary">Check 127.0.0.1 Bridge</button>
+        </div>
+      </div>
+
+      <!-- Shown when NOT paired to local M1/M2 loopback -->
+      <div id="local-disconnected-view" class="offline-bridge-box">
+        <h3>Zero-Residue Loopback Security Gate (Active on Coach Alan's M1 &amp; M2 Macs)</h3>
+        <p style="margin:0 0 10px 0; color:#222222; background-color:#FAFBF7;">
+          By design, <strong>zero bytes</strong> of the private Carbon 4 SQLite vault (Epson WF-4830 legal/credential scans, VetCert records, and local repositories) are ever stored on GitHub Pages or any remote server.
+        </p>
+        <p style="margin:0 0 10px 0; color:#222222; background-color:#FAFBF7;">
+          <strong>On Coach Alan's M1 or M2 Mac:</strong> Double-click <code>Sovereign Hybrid RAG.command</code> on your macOS Desktop (or run <code>make rag-ui</code> inside <code>~/projects/carbon4-ecosystem</code>). It starts the local loopback server strictly on <code>127.0.0.1:8766</code> and opens this cockpit with an ephemeral RFC 3986 URL fragment token (<code>#token=...</code>) that is never transmitted over HTTP.
+        </p>
+        <div class="code-line">make -C ~/projects/carbon4-ecosystem desktop-shortcut &amp;&amp; open ~/Desktop/"Sovereign Hybrid RAG.command"</div>
+        <div style="display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin-top:14px;">
+          <label for="manual-token-input" style="font-family:var(--font-mono); font-size:0.8rem; font-weight:700; color:#0B192C; background-color:#FAFBF7;">Manual Local Token:</label>
+          <input type="password" id="manual-token-input" class="search-input" style="max-width:300px; padding:8px 12px;" placeholder="Paste .bridge_token if needed">
+          <button type="button" id="btn-save-token" class="btn-primary" style="padding:8px 16px;">Pair 127.0.0.1:8766</button>
+          <a href="http://127.0.0.1:8766/" class="action-btn">Open Pure Offline Mirror (127.0.0.1:8766)</a>
+        </div>
+        <p style="margin:14px 0 0 0; font-size:0.88rem; color:#333333; background-color:#FAFBF7;">
+          Evaluating this architecture for your agency, clinic, or college? Read the <a href="https://www.webcognita.com/#sovereign-hybrid-rag">Webcognita LLC $0-CAPEX Sovereign Hybrid RAG Edge Use Case</a>.
+        </p>
+      </div>
+
+      <!-- Shown when PAIRED to local M1/M2 loopback -->
+      <div id="local-connected-view" hidden>
+        <div class="telemetry-strip" aria-label="Sovereign Local Vault Telemetry">
+          <div class="metric-tile">
+            <span class="metric-label">SQLite FTS5 Chunks</span>
+            <span class="metric-value" id="loc-total-chunks">—</span>
+          </div>
+          <div class="metric-tile">
+            <span class="metric-label">768-Dim Vectors</span>
+            <span class="metric-value" id="loc-emb-chunks">—</span>
+          </div>
+          <div class="metric-tile">
+            <span class="metric-label">Synthesis Engine</span>
+            <span class="metric-value" id="loc-gen-model">exw-carbon4:latest</span>
+          </div>
+          <div class="metric-tile">
+            <span class="metric-label">Loopback Transport</span>
+            <span class="metric-value">127.0.0.1:8766 (Zero Egress)</span>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <span class="filter-group-label" id="domain-filter-label">Pre-Filter by 01..07 Sovereign Domain Namespace</span>
+          <div class="pill-row" role="group" aria-labelledby="domain-filter-label" id="loc-domain-pills">
+            <button type="button" class="filter-pill" data-domain="" aria-pressed="true">ALL DOMAINS</button>
+          </div>
+        </div>
+
+        <form id="loc-search-form" class="search-form" role="search" aria-label="Interrogate Sovereign Local Hybrid RAG">
+          <label for="loc-query" class="sr-only">Enter search keywords or grounded question for Carbon 4</label>
+          <input type="search" id="loc-query" class="search-input" placeholder="Interrogate local scans, VetCert exhibits, repos, essays, or ask Carbon 4 a grounded question..." autocomplete="off">
+          <label for="loc-mode" class="sr-only">Execution Mode</label>
+          <select id="loc-mode" class="select-control">
+            <option value="search">Fast Hybrid RRF (~100 ms)</option>
+            <option value="ask">Ask Carbon 4 (### Grounded)</option>
+          </select>
+          <label for="loc-topk" class="sr-only">Top-K Chunks</label>
+          <select id="loc-topk" class="select-control">
+            <option value="5" selected>Top 5 Chunks</option>
+            <option value="8">Top 8 Chunks</option>
+            <option value="12">Top 12 Chunks</option>
+          </select>
+          <button type="submit" id="loc-submit-btn" class="btn-primary">Interrogate Vault</button>
+        </form>
+
+        <div class="filter-group">
+          <span class="filter-group-label">Quick Sovereign Vault Interrogations</span>
+          <div class="pill-row" id="loc-suggested-chips">
+            <button type="button" class="chip-btn" data-q="OERizona NETWORK" data-m="search">OERizona NETWORK (WF-4830 Scan)</button>
+            <button type="button" class="chip-btn" data-q="Thunderbird Eagle Leader Fellowship" data-m="search">Thunderbird &amp; Team RWB ELF</button>
+            <button type="button" class="chip-btn" data-q="13 CFR 128.203 control and devotion Webcognita" data-m="ask">Ask: 13 CFR 128.203 Control &amp; Devotion</button>
+            <button type="button" class="chip-btn" data-q="TEN No. 07-25 five foundational AI literacy areas" data-m="ask">Ask: U.S. DOL TEN No. 07-25 Alignment</button>
+            <button type="button" class="chip-btn" data-q="DOM GraphRAG W3C PROV-O SHA-256" data-m="search">DOM GraphRAG &amp; W3C PROV-O</button>
+            <button type="button" class="chip-btn" data-q="NADO Aliceann Wohlbruck Impact Award" data-m="search">2021 NADO Impact Award</button>
+          </div>
+        </div>
+
+        <div id="loc-results-meta" class="results-meta" aria-live="polite">Paired to 127.0.0.1:8766. Enter a query or pick a prompt chip above.</div>
+
+        <div id="loc-answer-box" class="answer-panel" hidden>
+          <h3>Carbon 4 Grounded Synthesis (Triple-Hash ### Delimiter Guard)</h3>
+          <div id="loc-answer-body" class="answer-body"></div>
+        </div>
+
+        <div id="loc-results-list" class="hit-list"></div>
+      </div>
+    </section>
+
+    <section class="arch-footer" aria-labelledby="arch-heading">
+      <h2 id="arch-heading">How This Dual-Plane Hybrid RAG Architecture Works</h2>
+      <ul style="margin:0; padding-left:20px; color:#222222; background-color:#FFFFFF;">
+        <li><strong>Plane 1 — Open Curriculum-as-Code DOM GraphRAG:</strong> Distills HTML/Markdown DOM hierarchy (<code>Course → Module → H2/H3 Section → Clinical Role</code>), <code>Pattern / Rule / Solve</code> clinical framing tags, and <code>W3C PROV-O</code> SHA-256 content hashes into an inspectable static index with zero server runtime cost.</li>
+        <li><strong>Plane 2 — Air-Gapped Apple Silicon Sovereign Vault (<code>127.0.0.1:8766</code>):</strong> Fuses exact lexical citations via <code>SQLite FTS5 (BM25)</code> with 768-dimensional dense semantic vectors via local Ollama <code>nomic-embed-text:latest</code> using <strong>Reciprocal Rank Fusion (RRF, k=60)</strong>, then synthesizes grounded answers inside <code>###</code> prompt-isolation delimiters via <code>exw-carbon4:latest</code>.</li>
+        <li><strong>Zero-Residue Security Boundary:</strong> The M1/M2 Desktop Shortcut passes an ephemeral bearer key via RFC 3986 URL hash fragment (<code>#token=...</code>), which browsers never transmit to remote HTTP hosts, and talks exclusively to <code>127.0.0.1:8766</code> via W3C Private Network Access headers.</li>
+      </ul>
+    </section>
+  </main>
+
+  <script>
+  (function () {
+    'use strict';
+
+    var BRIDGE_BASE = (window.location.hostname === '127.0.0.1' || window.location.hostname === 'localhost')
+      ? window.location.origin
+      : 'http://127.0.0.1:8766';
+
+    var state = {
+      lang: 'en',
+      pubData: null,
+      pubCourse: 'ALL',
+      pubRole: 'ALL',
+      bridgeOnline: false,
+      bridgeToken: '',
+      locDomain: ''
+    };
+
+    var i18n = {
+      en: {
+        eyebrow: 'S-A-R Standard v2.2 • W3C PROV-O • Zero-Residue Edge AI',
+        title: 'DOM GraphRAG & Sovereign Local Hybrid RAG Workbench',
+        subtitle: 'Dual-plane retrieval cockpit: interrogate 980 public Curriculum-as-Code DOM GraphRAG nodes in any browser, or connect over 127.0.0.1 loopback from M1/M2 macOS to search and synthesize across your air-gapped SQLite FTS5 + 768-dim Ollama Carbon 4 vault.',
+        peLabel: 'In Plain English • Cognitive Accessibility Callout',
+        publicHeading: 'Public Curriculum-as-Code DOM GraphRAG Explorer',
+        publicDesc: 'Runs 100% client-side in your browser against 980 distilled DOM GraphRAG nodes (compiled from 3,278 source vectors across EXW 101, 150, 210, 245, and 265) with structural Pattern / Rule / Solve role weighting and W3C PROV-O SHA-256 receipts.',
+        localHeading: 'Sovereign M1/M2 Local Hybrid RAG Cockpit (127.0.0.1:8766)',
+        toggleBtn: 'ES • Español'
+      },
+      es: {
+        eyebrow: 'Estándar S-A-R v2.2 • W3C PROV-O • IA Local Cero Residuos',
+        title: 'Mesa de Trabajo DOM GraphRAG e Híbrido RAG Soberano Local',
+        subtitle: 'Cabina de recuperación de doble plano: consulta 980 nodos públicos de Curriculum-as-Code en cualquier navegador, o conéctate por 127.0.0.1 desde macOS M1/M2 para interrogar tu bóveda local SQLite FTS5 + Ollama Carbon 4 sin tocar la nube.',
+        peLabel: 'En Palabras Sencillas • Accesibilidad Cognitiva Norteña',
+        publicHeading: 'Explorador Público DOM GraphRAG (Curriculum-as-Code)',
+        publicDesc: 'Corre 100% en tu navegador sobre 980 nodos destilados (de 3,278 vectores en EXW 101, 150, 210, 245 y 265) con pesos estructurales Patrón / Regla / Solución y recibos criptográficos W3C PROV-O SHA-256.',
+        localHeading: 'Cabina Soberana M1/M2 Hybrid RAG Local (127.0.0.1:8766)',
+        toggleBtn: 'EN • English'
+      }
+    };
+
+    function escapeHtml(str) {
+      return String(str || '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    }
+
+    // Extract #token=... from URL hash fragment (never sent over HTTP)
+    function initTokenFromHash() {
+      var hash = window.location.hash || '';
+      var m = hash.match(/(?:^#|&)token=([A-Za-z0-9_\-]+)/);
+      if (m && m[1]) {
+        state.bridgeToken = m[1];
+        try { sessionStorage.setItem('carbon4_bridge_token', m[1]); } catch (e) {}
+        // Scrub token from visible address bar while keeping session active
+        if (window.history && window.history.replaceState) {
+          window.history.replaceState(null, document.title, window.location.pathname + window.location.search);
+        }
+      } else {
+        try {
+          state.bridgeToken = sessionStorage.getItem('carbon4_bridge_token') || '';
+        } catch (e) {}
+      }
+    }
+
+    // Accessible Tabs
+    var tabs = Array.prototype.slice.call(document.querySelectorAll('[role="tab"]'));
+    function activateTab(selectedTab, moveFocus) {
+      tabs.forEach(function (tab) {
+        var isSelected = (tab === selectedTab);
+        tab.setAttribute('aria-selected', isSelected ? 'true' : 'false');
+        tab.setAttribute('tabindex', isSelected ? '0' : '-1');
+        var panel = document.getElementById(tab.getAttribute('data-panel'));
+        if (panel) {
+          if (isSelected) {
+            panel.removeAttribute('hidden');
+          } else {
+            panel.setAttribute('hidden', '');
+          }
+        }
+      });
+      if (moveFocus) selectedTab.focus();
+    }
+
+    tabs.forEach(function (tab, idx) {
+      tab.addEventListener('click', function () { activateTab(tab, false); });
+      tab.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+          e.preventDefault();
+          var dir = e.key === 'ArrowRight' ? 1 : -1;
+          var nextIdx = (idx + dir + tabs.length) % tabs.length;
+          activateTab(tabs[nextIdx], true);
+        }
+      });
+    });
+
+    // Language switcher
+    document.getElementById('lang-toggle').addEventListener('click', function () {
+      state.lang = (state.lang === 'en') ? 'es' : 'en';
+      document.documentElement.lang = state.lang;
+      var dict = i18n[state.lang];
+      document.querySelectorAll('[data-i18n]').forEach(function (el) {
+        var k = el.getAttribute('data-i18n');
+        if (dict[k]) el.textContent = dict[k];
+      });
+      this.textContent = dict.toggleBtn;
+      renderPublicSuggestedChips();
+    });
+
+    // ---------------- PUBLIC DOM GRAPHRAG ----------------
+    function tokenize(text) {
+      return String(text || '')
+        .toLowerCase()
+        .replace(/[^a-z0-9áéíóúñü\-\s]/g, ' ')
+        .split(/\s+/)
+        .filter(function (w) { return w.length >= 2; });
+    }
+
+    function scorePublicItem(item, qTerms, rawQ) {
+      if (!qTerms.length) return 1;
+      var hayTitle = (item.section + ' ' + item.dom_path + ' ' + item.course + ' ' + item.module + ' ' + item.ssot).toLowerCase();
+      var hayBody = String(item.text || '').toLowerCase();
+      var score = 0;
+      if (rawQ && hayBody.indexOf(rawQ) !== -1) score += 12;
+      if (rawQ && hayTitle.indexOf(rawQ) !== -1) score += 18;
+      for (var i = 0; i < qTerms.length; i++) {
+        var t = qTerms[i];
+        if (hayTitle.indexOf(t) !== -1) score += 6;
+        var pos = hayBody.indexOf(t);
+        if (pos !== -1) {
+          score += 3;
+          if (pos < 180) score += 1.5;
+        }
+      }
+      if (score > 0 && (item.role === 'rule' || item.role === 'solve')) {
+        score += 0.8;
+      }
+      return score;
+    }
+
+    function runPublicSearch() {
+      var listEl = document.getElementById('pub-results-list');
+      var metaEl = document.getElementById('pub-results-meta');
+      if (!state.pubData || !state.pubData.items) return;
+
+      var t0 = performance.now();
+      var rawQ = document.getElementById('pub-query').value.trim().toLowerCase();
+      var topK = parseInt(document.getElementById('pub-topk').value, 10) || 12;
+      var qTerms = tokenize(rawQ);
+
+      var matches = [];
+      var items = state.pubData.items;
+      for (var i = 0; i < items.length; i++) {
+        var it = items[i];
+        if (state.pubCourse !== 'ALL' && it.course !== state.pubCourse) continue;
+        if (state.pubRole !== 'ALL' && it.role !== state.pubRole) continue;
+        var sc = scorePublicItem(it, qTerms, rawQ);
+        if (sc > 0) matches.push({ item: it, score: sc });
+      }
+      matches.sort(function (a, b) { return b.score - a.score; });
+      var sliced = matches.slice(0, topK);
+      var elapsed = (performance.now() - t0).toFixed(1);
+
+      metaEl.textContent = 'Showing ' + sliced.length + ' of ' + matches.length +
+        ' matching DOM GraphRAG nodes in ' + elapsed + ' ms (Course: ' + state.pubCourse + ', Role: ' + state.pubRole + ').';
+
+      if (!sliced.length) {
+        listEl.innerHTML = '<div class="hit-card"><p class="hit-excerpt">No matching DOM GraphRAG nodes found for this filter combination. Try resetting Course or Role to ALL.</p></div>';
+        return;
+      }
+
+      listEl.innerHTML = sliced.map(function (entry, idx) {
+        var it = entry.item;
+        var linksHtml = (it.links || []).map(function (lnk) {
+          return '<a class="action-btn" href="' + escapeHtml(lnk.u) + '" target="_blank" rel="noopener noreferrer">' +
+            escapeHtml(lnk.t || 'Open Tool') + '</a>';
+        }).join('');
+
+        return '<article class="hit-card">' +
+          '<div class="hit-header">' +
+            '<span class="badge">#' + (idx + 1) + '</span>' +
+            '<span class="badge badge-red">' + escapeHtml(it.course) + ' • ' + escapeHtml(it.module) + '</span>' +
+            '<span class="badge badge-teal">' + escapeHtml(it.role_label || it.role) + '</span>' +
+            '<span class="badge badge-outline">PROV-O sha256:' + escapeHtml(it.sha) + '</span>' +
+          '</div>' +
+          '<h3 class="hit-title">' + escapeHtml(it.section) + '</h3>' +
+          '<div class="hit-dom-path">DOM Path: ' + escapeHtml(it.dom_path) + ' • SSoT: ' + escapeHtml(it.ssot) + '</div>' +
+          '<p class="hit-excerpt">' + escapeHtml(it.text) + '</p>' +
+          '<div class="hit-actions">' +
+            linksHtml +
+            '<span style="font-family:var(--font-mono); font-size:0.74rem; color:#333333; background-color:#FFFFFF;">Source: ' + escapeHtml(it.source) + '</span>' +
+          '</div>' +
+        '</article>';
+      }).join('');
+    }
+
+    function renderPublicSuggestedChips() {
+      var wrap = document.getElementById('pub-suggested-chips');
+      if (!state.pubData || !state.pubData.suggested_queries) return;
+      wrap.innerHTML = state.pubData.suggested_queries.map(function (sq) {
+        var lbl = (state.lang === 'es' && sq.label_es) ? sq.label_es : sq.label_en;
+        return '<button type="button" class="chip-btn" data-pubq="' + escapeHtml(sq.query) + '">' + escapeHtml(lbl) + '</button>';
+      }).join('');
+      wrap.querySelectorAll('[data-pubq]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          document.getElementById('pub-query').value = btn.getAttribute('data-pubq');
+          runPublicSearch();
+        });
+      });
+    }
+
+    function loadPublicIndex() {
+      fetch('/data/exw-ssot-rag-index.json')
+        .then(function (r) { return r.json(); })
+        .then(function (data) {
+          state.pubData = data;
+          if (data.meta) {
+            document.getElementById('pub-source-vectors').textContent = Number(data.meta.source_vectors || 3278).toLocaleString();
+            document.getElementById('pub-distilled-nodes').textContent = Number(data.meta.distilled_nodes || 980).toLocaleString();
+          }
+          renderPublicSuggestedChips();
+          runPublicSearch();
+        })
+        .catch(function () {
+          document.getElementById('pub-results-meta').textContent = 'Public DOM GraphRAG index unavailable in this path.';
+        });
+    }
+
+    document.getElementById('pub-course-pills').addEventListener('click', function (e) {
+      var btn = e.target.closest('[data-course]');
+      if (!btn) return;
+      state.pubCourse = btn.getAttribute('data-course');
+      this.querySelectorAll('[data-course]').forEach(function (b) {
+        b.setAttribute('aria-pressed', b === btn ? 'true' : 'false');
+      });
+      runPublicSearch();
+    });
+
+    document.getElementById('pub-role-pills').addEventListener('click', function (e) {
+      var btn = e.target.closest('[data-role]');
+      if (!btn) return;
+      state.pubRole = btn.getAttribute('data-role');
+      this.querySelectorAll('[data-role]').forEach(function (b) {
+        b.setAttribute('aria-pressed', b === btn ? 'true' : 'false');
+      });
+      runPublicSearch();
+    });
+
+    document.getElementById('pub-search-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      runPublicSearch();
+    });
+
+    document.getElementById('pub-topk').addEventListener('change', runPublicSearch);
+
+    // ---------------- SOVEREIGN M1/M2 LOOPBACK BRIDGE ----------------
+    function bridgeHeaders() {
+      var h = { 'Content-Type': 'application/json' };
+      if (state.bridgeToken) h['X-Carbon4-Token'] = state.bridgeToken;
+      return h;
+    }
+
+    function renderDomainPills(byDomain, totalChunks) {
+      var row = document.getElementById('loc-domain-pills');
+      var html = '<button type="button" class="filter-pill" data-domain="" aria-pressed="' + (state.locDomain === '' ? 'true' : 'false') + '">ALL (' + totalChunks + ')</button>';
+      Object.keys(byDomain || {}).sort().forEach(function (dom) {
+        var pressed = (state.locDomain === dom) ? 'true' : 'false';
+        html += '<button type="button" class="filter-pill" data-domain="' + escapeHtml(dom) + '" aria-pressed="' + pressed + '">' +
+          escapeHtml(dom) + ' (' + byDomain[dom] + ')</button>';
+      });
+      row.innerHTML = html;
+    }
+
+    function checkLocalBridge(autoSwitchTab) {
+      var pill = document.getElementById('bridge-status-pill');
+      fetch(BRIDGE_BASE + '/api/status', {
+        method: 'GET',
+        headers: bridgeHeaders()
+      })
+      .then(function (r) {
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        return r.json();
+      })
+      .then(function (st) {
+        state.bridgeOnline = true;
+        pill.textContent = 'Sovereign M1/M2 Vault LIVE (' + Number(st.total_chunks || 0).toLocaleString() + ' Chunks)';
+        pill.classList.add('is-live');
+
+        document.getElementById('local-disconnected-view').setAttribute('hidden', '');
+        document.getElementById('local-connected-view').removeAttribute('hidden');
+        document.getElementById('btn-sync-scans').removeAttribute('hidden');
+
+        document.getElementById('loc-total-chunks').textContent = Number(st.total_chunks || 0).toLocaleString();
+        document.getElementById('loc-emb-chunks').textContent = Number(st.embedded_chunks || 0).toLocaleString();
+        document.getElementById('loc-gen-model').textContent = st.gen_model || 'exw-carbon4:latest';
+        renderDomainPills(st.by_domain || {}, st.total_chunks || 0);
+
+        if (autoSwitchTab) {
+          activateTab(document.getElementById('tab-local'), false);
+        }
+      })
+      .catch(function () {
+        state.bridgeOnline = false;
+        pill.textContent = 'Public Reference Mode';
+        pill.classList.remove('is-live');
+        document.getElementById('local-disconnected-view').removeAttribute('hidden');
+        document.getElementById('local-connected-view').setAttribute('hidden', '');
+        document.getElementById('btn-sync-scans').setAttribute('hidden', '');
+      });
+    }
+
+    document.getElementById('loc-domain-pills').addEventListener('click', function (e) {
+      var btn = e.target.closest('[data-domain]');
+      if (!btn) return;
+      state.locDomain = btn.getAttribute('data-domain');
+      this.querySelectorAll('[data-domain]').forEach(function (b) {
+        b.setAttribute('aria-pressed', b === btn ? 'true' : 'false');
+      });
+      if (document.getElementById('loc-query').value.trim()) {
+        runLocalInterrogation();
+      }
+    });
+
+    function openLocalUri(uri, reveal) {
+      fetch(BRIDGE_BASE + '/api/open-local', {
+        method: 'POST',
+        headers: bridgeHeaders(),
+        body: JSON.stringify({ uri: uri, reveal: !!reveal })
+      })
+      .then(function (r) { return r.json(); })
+      .then(function (res) {
+        if (!res.ok) alert('Unable to open file: ' + (res.error || 'Unknown error'));
+      })
+      .catch(function (err) {
+        alert('Loopback error: ' + err.message);
+      });
+    }
+
+    function runLocalInterrogation() {
+      var q = document.getElementById('loc-query').value.trim();
+      if (!q) return;
+      var mode = document.getElementById('loc-mode').value;
+      var topK = parseInt(document.getElementById('loc-topk').value, 10) || 5;
+      var metaEl = document.getElementById('loc-results-meta');
+      var listEl = document.getElementById('loc-results-list');
+      var ansBox = document.getElementById('loc-answer-box');
+      var ansBody = document.getElementById('loc-answer-body');
+      var submitBtn = document.getElementById('loc-submit-btn');
+
+      ansBox.setAttribute('hidden', '');
+      submitBtn.disabled = true;
+      metaEl.textContent = (mode === 'ask')
+        ? 'Running Hybrid RRF + local Ollama Carbon 4 synthesis on 127.0.0.1 (may take 4–15s)...'
+        : 'Running FTS5 BM25 + 768-dim Cosine RRF search on 127.0.0.1...';
+
+      var endpoint = (mode === 'ask') ? '/api/ask' : '/api/search';
+      fetch(BRIDGE_BASE + endpoint, {
+        method: 'POST',
+        headers: bridgeHeaders(),
+        body: JSON.stringify({
+          query: q,
+          top_k: topK,
+          domain: state.locDomain
+        })
+      })
+      .then(function (r) {
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        return r.json();
+      })
+      .then(function (data) {
+        submitBtn.disabled = false;
+        var hits = data.hits || [];
+        metaEl.textContent = 'Retrieved ' + hits.length + ' canonical vault source(s) in ' +
+          data.retrieval_ms + ' ms (Domain: ' + (state.locDomain || 'ALL') +
+          (data.total_ms ? ' • Total w/ Carbon 4: ' + data.total_ms + ' ms' : '') + ').';
+
+        if (data.answer) {
+          ansBody.textContent = data.answer;
+          ansBox.removeAttribute('hidden');
+        }
+
+        if (!hits.length) {
+          listEl.innerHTML = '<div class="hit-card"><p class="hit-excerpt">Zero matching chunks in this domain namespace.</p></div>';
+          return;
+        }
+
+        listEl.innerHTML = hits.map(function (h, idx) {
+          var uri = String(h.uri || '');
+          var actionBtns = '';
+          if (uri.indexOf('http://') === 0 || uri.indexOf('https://') === 0) {
+            actionBtns += '<a class="action-btn" href="' + escapeHtml(uri) + '" target="_blank" rel="noopener noreferrer">Open Cloud Scan / URL</a>';
+          } else if (uri.indexOf('file://') === 0) {
+            actionBtns += '<button type="button" class="action-btn" data-open-uri="' + escapeHtml(uri) + '" data-reveal="0">Open on Mac</button>';
+            actionBtns += '<button type="button" class="action-btn" data-open-uri="' + escapeHtml(uri) + '" data-reveal="1">Reveal in Finder</button>';
+          }
+          actionBtns += '<button type="button" class="action-btn" data-copy-uri="' + escapeHtml(uri) + '">Copy URI</button>';
+
+          return '<article class="hit-card">' +
+            '<div class="hit-header">' +
+              '<span class="badge">[Source ' + (idx + 1) + ']</span>' +
+              '<span class="badge badge-red">' + escapeHtml(h.domain_tag) + '</span>' +
+              '<span class="badge badge-teal">' + escapeHtml(h.source_type) + '</span>' +
+              '<span class="badge badge-outline">RRF: ' + escapeHtml(h.rrf_score) + '</span>' +
+            '</div>' +
+            '<h3 class="hit-title">' + escapeHtml(h.title) + '</h3>' +
+            '<div class="hit-dom-path">URI: ' + escapeHtml(uri) + (h.updated_at ? ' • Updated: ' + escapeHtml(h.updated_at) : '') + '</div>' +
+            '<p class="hit-excerpt">' + escapeHtml(h.excerpt) + '</p>' +
+            '<div class="hit-actions">' + actionBtns + '</div>' +
+            '<details class="chunk-disclosure">' +
+              '<summary>Inspect Full Indexed Chunk Text</summary>' +
+              '<pre>' + escapeHtml(h.body_text || h.excerpt) + '</pre>' +
+            '</details>' +
+          '</article>';
+        }).join('');
+
+        listEl.querySelectorAll('[data-open-uri]').forEach(function (b) {
+          b.addEventListener('click', function () {
+            openLocalUri(b.getAttribute('data-open-uri'), b.getAttribute('data-reveal') === '1');
+          });
+        });
+        listEl.querySelectorAll('[data-copy-uri]').forEach(function (b) {
+          b.addEventListener('click', function () {
+            var u = b.getAttribute('data-copy-uri');
+            if (navigator.clipboard) {
+              navigator.clipboard.writeText(u).then(function () {
+                var orig = b.textContent;
+                b.textContent = 'Copied!';
+                setTimeout(function () { b.textContent = orig; }, 1400);
+              });
+            }
+          });
+        });
+      })
+      .catch(function (err) {
+        submitBtn.disabled = false;
+        metaEl.textContent = 'Local bridge request failed (' + err.message + '). Ensure Sovereign Hybrid RAG.command is running on M1/M2.';
+      });
+    }
+
+    document.getElementById('loc-search-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      runLocalInterrogation();
+    });
+
+    document.getElementById('loc-suggested-chips').addEventListener('click', function (e) {
+      var btn = e.target.closest('[data-q]');
+      if (!btn) return;
+      document.getElementById('loc-query').value = btn.getAttribute('data-q');
+      document.getElementById('loc-mode').value = btn.getAttribute('data-m') || 'search';
+      runLocalInterrogation();
+    });
+
+    document.getElementById('btn-retry-bridge').addEventListener('click', function () {
+      checkLocalBridge(true);
+    });
+
+    document.getElementById('btn-save-token').addEventListener('click', function () {
+      var val = document.getElementById('manual-token-input').value.trim();
+      if (val) {
+        state.bridgeToken = val;
+        try { sessionStorage.setItem('carbon4_bridge_token', val); } catch (e) {}
+      }
+      checkLocalBridge(true);
+    });
+
+    document.getElementById('btn-sync-scans').addEventListener('click', function () {
+      var btn = this;
+      btn.disabled = true;
+      var orig = btn.textContent;
+      btn.textContent = 'Syncing WF-4830 Scans...';
+      fetch(BRIDGE_BASE + '/api/sync-scans', {
+        method: 'POST',
+        headers: bridgeHeaders(),
+        body: '{}'
+      })
+      .then(function (r) { return r.json(); })
+      .then(function (res) {
+        btn.disabled = false;
+        btn.textContent = orig;
+        document.getElementById('loc-results-meta').textContent =
+          'Scan sync complete: +' + (res.cloud_scans || 0) + ' cloud scan(s), +' +
+          (res.repo_chunks || 0) + ' repo chunk(s). Vault total: ' + (res.total_chunks || 0) + ' chunks.';
+        checkLocalBridge(false);
+      })
+      .catch(function (err) {
+        btn.disabled = false;
+        btn.textContent = orig;
+        alert('Sync failed: ' + err.message);
+      });
+    });
+
+    // Boot sequence
+    initTokenFromHash();
+    loadPublicIndex();
+    checkLocalBridge(Boolean(state.bridgeToken) || window.location.hostname === '127.0.0.1');
+  })();
+  </script>
+</body>
+</html>
