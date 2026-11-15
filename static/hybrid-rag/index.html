@@ -676,6 +676,83 @@
       background-color: #FFFFFF;
     }
 
+    .site-legal-footer {
+      background-color: #F5F2EB;
+      color: #0B192C;
+      border-top: 3px solid #002147;
+      padding: 32px 20px 44px;
+    }
+
+    .site-legal-inner {
+      max-width: 1140px;
+      margin: 0 auto;
+    }
+
+    .legal-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 18px;
+      margin-bottom: 20px;
+    }
+
+    .legal-box {
+      background-color: #FFFFFF;
+      color: #0B192C;
+      border: 1px solid #D5D9CE;
+      border-left: 4px solid #002147;
+      border-radius: 8px;
+      padding: 14px 16px;
+      font-size: 0.82rem;
+      line-height: 1.55;
+    }
+
+    .legal-box.is-ip {
+      border-left-color: #940925;
+    }
+
+    .legal-box strong {
+      color: #0B192C;
+      background-color: #FFFFFF;
+    }
+
+    .legal-nav {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding-top: 16px;
+      border-top: 1px solid #D5D9CE;
+      font-size: 0.82rem;
+      color: #0B192C;
+      background-color: #F5F2EB;
+    }
+
+    .legal-nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .legal-nav a {
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      padding: 0 4px;
+      color: #0B192C;
+      background-color: #F5F2EB;
+      font-weight: 700;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    .legal-nav a:hover, .legal-nav a:focus-visible {
+      color: #940925;
+    }
+
     .sr-only {
       position: absolute;
       width: 1px;
@@ -925,6 +1002,82 @@
     </section>
   </main>
 
+  <footer id="site-legal-footer" class="site-legal-footer" aria-label="Intellectual Property, OER Licensing, and Governance Disclosures">
+    <div id="footer-en" class="site-legal-inner">
+      <div class="legal-grid">
+        <div class="legal-box is-ip">
+          <strong>Dual-License Split — OER Curriculum Content vs. Proprietary Background IP:</strong>
+          Designated instructional text, pedagogical tables, and open Exercise Science curriculum nodes (<code>980</code> EXW SSoT nodes) are published as <code>$0 ZTC</code> Open Educational Resources under
+          <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="license noopener noreferrer" style="color:#0D5156; background-color:#FFFFFF;">CC BY-NC-SA 4.0</a>
+          with mandatory attribution to <strong>Alan Pruitt (alanpruitt.com) and Webcognita LLC</strong>.
+          <strong>Strict Proprietary Code Exclusion (<code>2 CFR &sect; 200.315</code> &bull; <code>29 CFR &sect; 2900.13</code>):</strong>
+          Under no circumstances does an OER content license grant open-source ownership, source-code redistribution rights, or commercial licenses over the underlying proprietary software architectures, Curriculum-as-Code (<code>C-a-C</code>) compilers, <code>DOM GraphRAG</code> / <code>W3C PROV-O</code> engines, <code>9:1</code> accessibility linters, <code>127.0.0.1</code> Sovereign Hybrid RAG orchestration code, or PWA codebases (<code>hybridrag.dev</code>, <code>exwtoolkit.com</code>, <code>paga2018.dev</code>, <code>exwdemo.dev</code>, <code>flavorarchitect.dev</code>, <code>arquitectodelsabor.dev</code>, <code>gail2026.dev</code>, <code>mdtodocs.app</code>), which remain sole and exclusive <strong>Pre-Existing Provider Intellectual Property (&ldquo;Background IP&rdquo;) &copy; 2026 Alan Pruitt &amp; Webcognita LLC. All rights reserved.</strong>
+        </div>
+        <div class="legal-box">
+          <strong>Institutional Separation, Non-Endorsement &amp; Scope of Practice:</strong>
+          Engineered independently on private hardware and infrastructure by <strong>Webcognita LLC</strong> (100% Veteran-Owned Small Business &bull; <code>SAM.gov UEI: EZ34U9KNJA17</code> &bull; <code>CAGE: 4ZCN6</code> &bull; <code>EIN: 81-0809739</code> &bull; <code>1906 S 6th Ave, Yuma, AZ 85364</code>). Independent faculty research and OER publishing; views and architectures do not represent official policy or endorsement of Arizona Western College, The University of Arizona, Google, ACSM, NASM, or any federal agency. Provided strictly for educational, instructional engineering, and workforce readiness purposes&mdash;not medical advice, clinical diagnosis, medical nutrition therapy, or legal counsel.
+        </div>
+        <div class="legal-box">
+          <strong>AI &amp; Zero-Residue Privacy Disclosure:</strong>
+          <em>AI Disclosure: Grounded synthesis in Local Vault Mode uses local open-weight models (Google Gemma 4 / Carbon 4 via Ollama on 127.0.0.1), and curriculum research incorporates Google Gemini workflows. Residents and evaluators must audit all clinical and regulatory claims against primary Sources of Truth (PAGA 2018 2nd Ed., 2025&ndash;2030 DGA, ACSM 12th Ed., NASM OPT). AI can make mistakes.</em> Zero tracking cookies, zero telemetry beacons, and zero cloud transmission of private loopback vault queries.
+        </div>
+      </div>
+
+      <div class="legal-nav">
+        <div>
+          <strong>&copy; 2026 Alan Pruitt &amp; Webcognita LLC.</strong> OER Text: <code>CC BY-NC-SA 4.0</code> &bull; Software, Compilers &amp; Background IP: All Rights Reserved.
+        </div>
+        <nav aria-label="Legal and Policy Links">
+          <ul>
+            <li><a href="https://alanpruitt.com/ip-oer/">IP &amp; OER Licensing Rider</a></li>
+            <li><a href="https://alanpruitt.com/privacy/">Privacy Policy</a></li>
+            <li><a href="https://alanpruitt.com/terms/">Terms of Service</a></li>
+            <li><a href="https://alanpruitt.com/dpa/">DPA</a></li>
+            <li><a href="https://www.webcognita.com/accessibility.html">Accessibility (WCAG 2.2 AA 9:1)</a></li>
+            <li><a href="https://alanpruitt.com/sitemap.xml">Sitemap</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div id="footer-es" class="site-legal-inner" lang="es" hidden>
+      <div class="legal-grid">
+        <div class="legal-box is-ip">
+          <strong>Separación de Doble Licencia — Contenido OER vs. Propiedad Intelectual Preexistente:</strong>
+          Los textos curriculares designados, tablas pedagógicas y nodos abiertos de Ciencias del Ejercicio (<code>980</code> nodos EXW SSoT) se publican como Recursos Educativos Abiertos (<code>$0 ZTC</code>) bajo licencia
+          <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es" target="_blank" rel="license noopener noreferrer" style="color:#0D5156; background-color:#FFFFFF;">CC BY-NC-SA 4.0</a>
+          con atribución obligatoria a <strong>Alan Pruitt (alanpruitt.com) y Webcognita LLC</strong>.
+          <strong>Exclusión Estricta de Código Propietario (<code>2 CFR &sect; 200.315</code> &bull; <code>29 CFR &sect; 2900.13</code>):</strong>
+          Bajo ninguna circunstancia una licencia OER otorga titularidad de código abierto, derechos de redistribución de código fuente ni licencias comerciales sobre las arquitecturas de software propietario subyacentes, compiladores Curriculum-as-Code (<code>C-a-C</code>), motores <code>DOM GraphRAG</code> / <code>W3C PROV-O</code>, auditores de contraste <code>9:1</code>, orquestadores locales <code>127.0.0.1</code> ni aplicaciones PWA (<code>hybridrag.dev</code>, <code>exwtoolkit.com</code>, <code>paga2018.dev</code>, <code>exwdemo.dev</code>, <code>flavorarchitect.dev</code>, <code>arquitectodelsabor.dev</code>, <code>gail2026.dev</code>, <code>mdtodocs.app</code>), los cuales permanecen como <strong>Propiedad Intelectual Preexistente exclusiva (&ldquo;Background IP&rdquo;) &copy; 2026 Alan Pruitt y Webcognita LLC. Todos los derechos reservados.</strong>
+        </div>
+        <div class="legal-box">
+          <strong>Separación Institucional, No Endoso y Alcance de Práctica:</strong>
+          Desarrollado de forma independiente en hardware e infraestructura privados por <strong>Webcognita LLC</strong> (Empresa Propiedad de un Veterano, VOSB &bull; <code>SAM.gov UEI: EZ34U9KNJA17</code> &bull; <code>CAGE: 4ZCN6</code> &bull; <code>EIN: 81-0809739</code> &bull; <code>1906 S 6th Ave, Yuma, AZ 85364</code>). Investigación docente independiente y publicación OER; las opiniones y arquitecturas no representan políticas oficiales ni aval de Arizona Western College, The University of Arizona, Google, ACSM, NASM ni agencias federales. Herramienta estrictamente educativa y de ingeniería instruccional&mdash;no constituye consejo médico, diagnóstico clínico, terapia nutricional médica ni asesoría jurídica.
+        </div>
+        <div class="legal-box">
+          <strong>Divulgación de IA y Privacidad de Cero Residuo:</strong>
+          <em>Divulgación de IA: La síntesis fundamentada en modo de bóveda local utiliza modelos abiertos locales (Google Gemma 4 / Carbon 4 vía Ollama en 127.0.0.1) y flujos de investigación asistidos por Google Gemini. Los residentes y evaluadores deben auditar toda afirmación clínica o normativa frente a las Fuentes de Verdad primarias (PAGA 2018 2.ª ed., DGA 2025&ndash;2030, ACSM 12.ª ed., NASM OPT). La IA puede cometer errores.</em> Cero cookies de rastreo, cero telemetría externa y cero transmisión a la nube de consultas privadas en <code>127.0.0.1</code>.
+        </div>
+      </div>
+
+      <div class="legal-nav">
+        <div>
+          <strong>&copy; 2026 Alan Pruitt y Webcognita LLC.</strong> Texto OER: <code>CC BY-NC-SA 4.0</code> &bull; Software, Compiladores e IP Preexistente: Todos los derechos reservados.
+        </div>
+        <nav aria-label="Enlaces legales y de gobernanza">
+          <ul>
+            <li><a href="https://alanpruitt.com/es/ip-oer/">Anexo IP y Licencias OER</a></li>
+            <li><a href="https://alanpruitt.com/es/privacy/">Política de Privacidad</a></li>
+            <li><a href="https://alanpruitt.com/es/terms/">Términos de Servicio</a></li>
+            <li><a href="https://alanpruitt.com/es/dpa/">DPA</a></li>
+            <li><a href="https://www.webcognita.com/accessibility.html">Accesibilidad (WCAG 2.2 AA 9:1)</a></li>
+            <li><a href="https://alanpruitt.com/sitemap.xml">Sitemap</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
   <script>
   (function () {
     'use strict';
@@ -1034,6 +1187,17 @@
         if (dict[k]) el.textContent = dict[k];
       });
       this.textContent = dict.toggleBtn;
+      var fEn = document.getElementById('footer-en');
+      var fEs = document.getElementById('footer-es');
+      if (fEn && fEs) {
+        if (state.lang === 'es') {
+          fEn.setAttribute('hidden', '');
+          fEs.removeAttribute('hidden');
+        } else {
+          fEs.setAttribute('hidden', '');
+          fEn.removeAttribute('hidden');
+        }
+      }
       renderPublicSuggestedChips();
     });
 
