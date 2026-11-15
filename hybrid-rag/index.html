@@ -776,6 +776,7 @@
           <button type="button" class="filter-pill" data-course="EXW210" aria-pressed="false">EXW 210 • NASM OPT</button>
           <button type="button" class="filter-pill" data-course="EXW245" aria-pressed="false">EXW 245 • ACSM 12th Ed.</button>
           <button type="button" class="filter-pill" data-course="EXW265" aria-pressed="false">EXW 265 • Special Pops</button>
+          <button type="button" class="filter-pill" data-course="STANDARDS" aria-pressed="false">STANDARDS • Crosswalk</button>
         </div>
       </div>
 
@@ -783,10 +784,12 @@
         <span class="filter-group-label" id="role-filter-label">Filter by Clinical Framing Role (Pattern / Rule / Solve)</span>
         <div class="pill-row" role="group" aria-labelledby="role-filter-label" id="pub-role-pills">
           <button type="button" class="filter-pill" data-role="ALL" aria-pressed="true">All DOM Roles</button>
-          <button type="button" class="filter-pill" data-role="rule" aria-pressed="false">Rule / Safety Gate</button>
-          <button type="button" class="filter-pill" data-role="solve" aria-pressed="false">Solve / 10-of-10 Exemplar</button>
-          <button type="button" class="filter-pill" data-role="plain_english" aria-pressed="false">In Plain English</button>
-          <button type="button" class="filter-pill" data-role="reading" aria-pressed="false">Instructional Core</button>
+          <button type="button" class="filter-pill" data-role="Clinical_Case_Pattern" aria-pressed="false">Pattern • Clinical Case</button>
+          <button type="button" class="filter-pill" data-role="SSoT_Rule_Constraint" aria-pressed="false">Rule • SSoT Gate</button>
+          <button type="button" class="filter-pill" data-role="Instructional_Core_Solve" aria-pressed="false">Solve • Instructional Core</button>
+          <button type="button" class="filter-pill" data-role="Exemplar_10_10" aria-pressed="false">10/10 Exemplar</button>
+          <button type="button" class="filter-pill" data-role="Active_Verification" aria-pressed="false">Active Verification</button>
+          <button type="button" class="filter-pill" data-role="Plain_English_Callout" aria-pressed="false">In Plain English</button>
         </div>
       </div>
 
@@ -1059,7 +1062,7 @@
           if (pos < 180) score += 1.5;
         }
       }
-      if (score > 0 && (item.role === 'rule' || item.role === 'solve')) {
+      if (score > 0 && (item.role === 'SSoT_Rule_Constraint' || item.role === 'Exemplar_10_10')) {
         score += 0.8;
       }
       return score;
@@ -1098,10 +1101,22 @@
 
       listEl.innerHTML = sliced.map(function (entry, idx) {
         var it = entry.item;
-        var linksHtml = (it.links || []).map(function (lnk) {
-          return '<a class="action-btn" href="' + escapeHtml(lnk.u) + '" target="_blank" rel="noopener noreferrer">' +
-            escapeHtml(lnk.t || 'Open Tool') + '</a>';
-        }).join('');
+        var linksHtml = '';
+        if (Array.isArray(it.links)) {
+          linksHtml = it.links.map(function (lnk) {
+            return '<a class="action-btn" href="' + escapeHtml(lnk.u || lnk.url) + '" target="_blank" rel="noopener noreferrer">' +
+              escapeHtml(lnk.t || lnk.label || 'Open Tool') + '</a>';
+          }).join('');
+        } else if (it.links && typeof it.links === 'object') {
+          if (it.links.url) {
+            linksHtml += '<a class="action-btn" href="' + escapeHtml(it.links.url) + '" target="_blank" rel="noopener noreferrer">' +
+              escapeHtml(it.links.label || 'Inspect Canvas SSoT') + '</a>';
+          }
+          if (it.links.toolkit_url) {
+            linksHtml += '<a class="action-btn" href="' + escapeHtml(it.links.toolkit_url) + '" target="_blank" rel="noopener noreferrer">' +
+              escapeHtml(it.links.toolkit_label || 'Open OER Toolkit') + '</a>';
+          }
+        }
 
         return '<article class="hit-card">' +
           '<div class="hit-header">' +
