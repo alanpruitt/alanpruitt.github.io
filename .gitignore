@@ -21,3 +21,6 @@ wcag3_test_report.json
 __pycache__/
 *.pyc
 .venv/
+
+# macOS Terminal saved transcripts
+Terminal Saved Output*.txt
