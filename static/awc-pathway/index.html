@@ -1,0 +1,1538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AWC Institutional Pathway DOM GraphRAG Workbench | Responsible AI Edge Use Case</title>
+  <meta name="description" content="Focused Public DOM GraphRAG & Hybrid RRF Workbench for the Arizona Western College pathway: Adjunct Faculty -> Exercise and Wellness Curriculum -> Allied Health Programs -> Entrepreneurial College -> Arizona Western College (1,005 W3C PROV-O verified SSoT nodes, 0 bytes PII/FERPA).">
+  <link rel="canonical" href="https://alanpruitt.com/awc-pathway/">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="AWC Institutional Pathway DOM GraphRAG Workbench | Responsible AI Edge Use Case">
+  <meta property="og:description" content="Institutional-scale Responsible AI Edge Use Case: 1,005 W3C PROV-O verified nodes tracing Adjunct Faculty -> Exercise & Wellness Curriculum -> Allied Health Programs -> Entrepreneurial College -> Arizona Western College.">
+  <meta property="og:url" content="https://alanpruitt.com/awc-pathway/">
+  <meta property="og:type" content="website">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "AWC Institutional Pathway DOM GraphRAG Workbench",
+    "alternateName": "Adjunct Faculty -> Exercise and Wellness -> Allied Health -> Entrepreneurial College -> Arizona Western College Responsible AI Edge Use Case",
+    "url": "https://alanpruitt.com/awc-pathway/",
+    "isPartOf": {
+      "@type": "WebApplication",
+      "name": "DOM GraphRAG & Sovereign Local Hybrid RAG Workbench",
+      "url": "https://alanpruitt.com/hybrid-rag/"
+    },
+    "applicationCategory": "EducationalApplication",
+    "operatingSystem": "All Browsers (100% Client-Side Hybrid BM25 + Graph RRF; Zero Login; Zero PII)",
+    "inLanguage": ["en", "es"],
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "educationalAlignment": [
+      {
+        "@type": "AlignmentObject",
+        "alignmentType": "educationalFramework",
+        "educationalFramework": "U.S. DOL ETA Training and Employment Notice (TEN) No. 07-25: AI Literacy Framework",
+        "targetName": "Area 1 (AI Principles), Area 3 (Direct AI), Area 4 (Evaluate Outputs), Area 5 (Use AI Responsibly)"
+      },
+      {
+        "@type": "AlignmentObject",
+        "alignmentType": "educationalFramework",
+        "educationalFramework": "NSF TechAccess: AI-Ready America",
+        "targetName": "Community College Workforce & Allied Health Responsible AI Enablement"
+      }
+    ],
+    "author": {
+      "@type": "Person",
+      "name": "Alan Pruitt",
+      "jobTitle": "Adjunct Faculty, Exercise Science & Wellness",
+      "url": "https://alanpruitt.com/",
+      "sameAs": [
+        "https://orcid.org/0009-0002-5038-7111",
+        "https://www.linkedin.com/in/alanpruitt/"
+      ]
+    }
+  }
+  </script>
+  <style>
+    :root {
+      --bg-page: #FAFBF7;
+      --bg-surface: #FFFFFF;
+      --bg-subtle: #F2F4EE;
+      --text-primary: #0B192C;
+      --text-body: #222222;
+      --text-muted: #333333;
+      --accent-red: #940925;
+      --accent-teal: #0D5156;
+      --accent-navy: #002147;
+      --border-light: #C8CEC0;
+      --border-strong: #0B192C;
+      --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-serif: Georgia, "Times New Roman", serif;
+      --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #FAFBF7;
+      color: #0B192C;
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: #0D5156;
+      background-color: transparent;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      font-weight: 600;
+    }
+
+    a:hover, a:focus-visible {
+      color: #940925;
+    }
+
+    :focus-visible {
+      outline: 3px solid #940925;
+      outline-offset: 2px;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: 8px;
+      z-index: 1000;
+      padding: 10px 16px;
+      background-color: #002147;
+      color: #FFFFFF;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .skip-link:focus {
+      left: 12px;
+    }
+
+    .topbar {
+      background-color: #002147;
+      color: #FFFFFF;
+      border-bottom: 4px solid #940925;
+      padding: 12px 20px;
+    }
+
+    .topbar-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .brand-links {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+    }
+
+    .brand-links a {
+      color: #FFFFFF;
+      background-color: #002147;
+      text-decoration: none;
+      padding: 5px 10px;
+      border-radius: 4px;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+    }
+
+    .brand-links a:hover, .brand-links a:focus-visible {
+      background-color: #FFFFFF;
+      color: #002147;
+    }
+
+    .topbar-controls {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .status-pill {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 5px 11px;
+      border-radius: 999px;
+      background-color: #FFFFFF;
+      color: #0B192C;
+      border: 1px solid #FFFFFF;
+    }
+
+    .status-pill.is-live {
+      background-color: #2CCCD3;
+      color: #000000;
+      border-color: #2CCCD3;
+    }
+
+    .lang-btn {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      font-weight: 700;
+      min-height: 36px;
+      padding: 5px 12px;
+      border-radius: 6px;
+      border: 1px solid #FFFFFF;
+      background-color: #940925;
+      color: #FFFFFF;
+      cursor: pointer;
+    }
+
+    .lang-btn:hover {
+      background-color: #FFFFFF;
+      color: #940925;
+    }
+
+    .container {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 26px 20px 64px;
+    }
+
+    .hero-card, .workbench-card, .arch-card {
+      background-color: #FFFFFF;
+      color: #0B192C;
+      border: 1px solid var(--border-light);
+      border-radius: 14px;
+      padding: 26px;
+      margin-bottom: 22px;
+    }
+
+    .arch-card {
+      content-visibility: auto;
+      contain-intrinsic-size: auto 420px;
+    }
+
+    .eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #940925;
+      background-color: #FFFFFF;
+      margin: 0 0 8px 0;
+    }
+
+    h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.6rem, 2.9vw, 2.25rem);
+      line-height: 1.22;
+      margin: 0 0 10px 0;
+      color: #0B192C;
+      background-color: #FFFFFF;
+    }
+
+    h2 {
+      font-family: var(--font-serif);
+      font-size: 1.32rem;
+      line-height: 1.3;
+      margin: 0 0 10px 0;
+      color: #0B192C;
+      background-color: #FFFFFF;
+    }
+
+    .subtitle {
+      font-size: 0.98rem;
+      color: #222222;
+      background-color: #FFFFFF;
+      margin: 0 0 16px 0;
+      max-width: 92ch;
+    }
+
+    .plain-english-box {
+      background-color: #FFFFFF;
+      color: #222222;
+      border: 1.5px solid #0B192C;
+      border-left: 6px solid #940925;
+      border-radius: 0 8px 8px 0;
+      padding: 15px 18px;
+      margin-top: 14px;
+    }
+
+    .plain-english-label {
+      font-family: var(--font-mono);
+      font-size: 0.76rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #940925;
+      background-color: #FFFFFF;
+      margin: 0 0 6px 0;
+    }
+
+    .plain-english-box p {
+      margin: 0 0 8px 0;
+      font-size: 0.94rem;
+      color: #222222;
+      background-color: #FFFFFF;
+    }
+
+    .plain-english-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Interactive 5-Node Pathway Spine */
+    .spine-header-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .spine-mode-toggle {
+      display: inline-flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      align-items: center;
+    }
+
+    .spine-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(175px, 1fr));
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    @media (max-width: 980px) {
+      .spine-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .spine-node-btn {
+      text-align: left;
+      background-color: #FFFFFF;
+      color: #0B192C;
+      border: 2px solid #0B192C;
+      border-radius: 10px;
+      padding: 12px 14px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 8px;
+      min-height: 108px;
+      transition: background-color 0.12s ease, color 0.12s ease;
+    }
+
+    .spine-node-btn:hover {
+      border-color: #940925;
+    }
+
+    .spine-node-btn[aria-pressed="true"] {
+      background-color: #002147;
+      color: #FFFFFF;
+      border-color: #940925;
+    }
+
+    .spine-step-tag {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #940925;
+      background-color: #FFFFFF;
+      padding: 2px 7px;
+      border-radius: 4px;
+      display: inline-block;
+      align-self: flex-start;
+      border: 1px solid #940925;
+    }
+
+    .spine-node-btn[aria-pressed="true"] .spine-step-tag {
+      background-color: #2CCCD3;
+      color: #000000;
+      border-color: #2CCCD3;
+    }
+
+    .spine-node-name {
+      font-weight: 800;
+      font-size: 0.94rem;
+      line-height: 1.28;
+    }
+
+    .spine-node-count {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 700;
+      opacity: 0.95;
+    }
+
+    .spine-inspector {
+      background-color: #FAFBF7;
+      color: #0B192C;
+      border: 1px solid var(--border-light);
+      border-left: 5px solid #0D5156;
+      border-radius: 0 8px 8px 0;
+      padding: 12px 16px;
+      margin-bottom: 18px;
+      font-size: 0.9rem;
+    }
+
+    .spine-inspector strong {
+      color: #0B192C;
+      background-color: #FAFBF7;
+    }
+
+    .telemetry-strip {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 12px;
+      margin: 14px 0 18px;
+    }
+
+    .metric-tile {
+      background-color: #FAFBF7;
+      color: #0B192C;
+      border: 1px solid var(--border-light);
+      border-radius: 8px;
+      padding: 11px 14px;
+    }
+
+    .metric-label {
+      display: block;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: #333333;
+      background-color: #FAFBF7;
+    }
+
+    .metric-value {
+      display: block;
+      font-family: var(--font-mono);
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: #002147;
+      background-color: #FAFBF7;
+      margin-top: 2px;
+    }
+
+    .filter-group {
+      margin-bottom: 14px;
+    }
+
+    .filter-group-label {
+      display: block;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: #333333;
+      background-color: #FFFFFF;
+      margin-bottom: 6px;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .filter-pill, .chip-btn {
+      font-family: var(--font-mono);
+      font-size: 0.77rem;
+      font-weight: 700;
+      min-height: 36px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1.5px solid #0B192C;
+      background-color: #FFFFFF;
+      color: #0B192C;
+      cursor: pointer;
+    }
+
+    .filter-pill:hover, .chip-btn:hover {
+      border-color: #940925;
+      color: #940925;
+    }
+
+    .filter-pill[aria-pressed="true"] {
+      background-color: #940925;
+      color: #FFFFFF;
+      border-color: #940925;
+    }
+
+    .chip-btn {
+      border-style: dashed;
+      border-color: #0D5156;
+      color: #0D5156;
+    }
+
+    .search-form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 16px 0;
+    }
+
+    .search-input {
+      flex: 1 1 320px;
+      min-height: 44px;
+      padding: 10px 14px;
+      font-size: 0.96rem;
+      font-family: var(--font-sans);
+      color: #0B192C;
+      background-color: #FFFFFF;
+      border: 2px solid #0B192C;
+      border-radius: 8px;
+    }
+
+    .select-control {
+      min-height: 44px;
+      padding: 8px 12px;
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #0B192C;
+      background-color: #FFFFFF;
+      border: 2px solid #0B192C;
+      border-radius: 8px;
+    }
+
+    .btn-primary {
+      min-height: 44px;
+      padding: 10px 18px;
+      font-family: var(--font-mono);
+      font-size: 0.84rem;
+      font-weight: 700;
+      border-radius: 8px;
+      border: 2px solid #940925;
+      background-color: #940925;
+      color: #FFFFFF;
+      cursor: pointer;
+    }
+
+    .btn-primary:hover {
+      background-color: #002147;
+      border-color: #002147;
+      color: #FFFFFF;
+    }
+
+    .btn-secondary {
+      min-height: 40px;
+      padding: 8px 14px;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      font-weight: 700;
+      border-radius: 8px;
+      border: 2px solid #0D5156;
+      background-color: #FFFFFF;
+      color: #0D5156;
+      cursor: pointer;
+    }
+
+    .btn-secondary:hover {
+      background-color: #0D5156;
+      color: #FFFFFF;
+    }
+
+    .local-synth-box {
+      background-color: #FFFFFF;
+      color: #0B192C;
+      border: 2px solid #0D5156;
+      border-radius: 10px;
+      padding: 16px 18px;
+      margin-bottom: 16px;
+    }
+
+    .local-synth-box h3 {
+      margin: 0 0 8px 0;
+      font-size: 1rem;
+      color: #0D5156;
+      background-color: #FFFFFF;
+    }
+
+    .local-synth-output {
+      white-space: pre-wrap;
+      font-size: 0.92rem;
+      line-height: 1.6;
+      background-color: #FFFFFF;
+      color: #0B192C;
+      border: 1px solid var(--border-light);
+      border-radius: 8px;
+      padding: 14px;
+      margin-top: 10px;
+    }
+
+    .results-meta {
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #002147;
+      background-color: #FAFBF7;
+      border: 1px solid var(--border-light);
+      border-radius: 6px;
+      padding: 9px 13px;
+      margin-bottom: 14px;
+    }
+
+    .hit-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .hit-card {
+      background-color: #FFFFFF;
+      color: #0B192C;
+      border: 1.5px solid var(--border-light);
+      border-left: 5px solid #002147;
+      border-radius: 10px;
+      padding: 16px 18px;
+      content-visibility: auto;
+      contain-intrinsic-size: auto 290px;
+    }
+
+    .hit-card.is-spine {
+      border-left-color: #940925;
+    }
+
+    .hit-header {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .badge {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 4px;
+      background-color: #002147;
+      color: #FFFFFF;
+    }
+
+    .badge-red {
+      background-color: #940925;
+      color: #FFFFFF;
+    }
+
+    .badge-teal {
+      background-color: #0D5156;
+      color: #FFFFFF;
+    }
+
+    .badge-outline {
+      background-color: #FFFFFF;
+      color: #0B192C;
+      border: 1px solid #0B192C;
+    }
+
+    .hit-title {
+      font-size: 1.06rem;
+      margin: 0 0 4px 0;
+      color: #0B192C;
+      background-color: #FFFFFF;
+    }
+
+    .hit-dom-path {
+      font-family: var(--font-mono);
+      font-size: 0.76rem;
+      color: #333333;
+      background-color: #FFFFFF;
+      margin-bottom: 8px;
+    }
+
+    .hit-excerpt {
+      margin: 0 0 12px 0;
+      font-size: 0.93rem;
+      color: #222222;
+      background-color: #FFFFFF;
+    }
+
+    .hit-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .action-btn {
+      display: inline-flex;
+      align-items: center;
+      min-height: 36px;
+      padding: 5px 11px;
+      border-radius: 6px;
+      font-family: var(--font-mono);
+      font-size: 0.76rem;
+      font-weight: 700;
+      border: 1.5px solid #0D5156;
+      background-color: #FFFFFF;
+      color: #0D5156;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .action-btn:hover {
+      background-color: #0D5156;
+      color: #FFFFFF;
+    }
+
+    details.lineage-disclosure {
+      margin-top: 12px;
+      border-top: 1px dashed var(--border-light);
+      padding-top: 9px;
+    }
+
+    details.lineage-disclosure summary {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #940925;
+      background-color: #FFFFFF;
+      cursor: pointer;
+    }
+
+    .lineage-list {
+      margin: 8px 0 0 0;
+      padding: 10px 14px 10px 28px;
+      background-color: #FAFBF7;
+      color: #0B192C;
+      border: 1px solid var(--border-light);
+      border-radius: 6px;
+      font-size: 0.84rem;
+    }
+
+    .lineage-list li {
+      margin-bottom: 5px;
+    }
+
+    .lineage-list li:last-child {
+      margin-bottom: 0;
+    }
+
+    .compare-table-wrap {
+      overflow-x: auto;
+      margin-top: 12px;
+    }
+
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+      background-color: #FFFFFF;
+      color: #0B192C;
+    }
+
+    .compare-table caption {
+      text-align: left;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #002147;
+      background-color: #FFFFFF;
+      padding-bottom: 8px;
+    }
+
+    .compare-table th, .compare-table td {
+      border: 1px solid var(--border-light);
+      padding: 10px 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .compare-table th {
+      background-color: #002147;
+      color: #FFFFFF;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+    }
+
+    .site-legal-footer {
+      background-color: #F5F2EB;
+      color: #0B192C;
+      border-top: 3px solid #002147;
+      padding: 28px 20px 40px;
+    }
+
+    .site-legal-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      font-size: 0.83rem;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    [hidden] {
+      display: none !important;
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-pathway-workbench" class="skip-link">Skip to AWC Pathway GraphRAG Workbench</a>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <nav class="brand-links" aria-label="Pathway & Ecosystem Navigation">
+        <a href="https://azwestern.instructure.com/courses/42051" target="_blank" rel="noopener noreferrer">AWC EXW-Demo (Course 42051)</a>
+        <a href="https://exwtoolkit.com/" target="_blank" rel="noopener noreferrer">exwtoolkit.com</a>
+        <a href="https://paga2018.dev/" target="_blank" rel="noopener noreferrer">paga2018.dev</a>
+        <a href="https://gail2026.dev/" target="_blank" rel="noopener noreferrer">gail2026.dev</a>
+        <a href="https://alanpruitt.com/curriculum-as-code/">Curriculum-as-Code</a>
+        <a href="https://alanpruitt.com/hybrid-rag/">Full Hybrid RAG Architecture</a>
+      </nav>
+      <div class="topbar-controls">
+        <span id="gov-status-pill" class="status-pill is-live" role="status" aria-live="polite">100% Public SSoT • 0 Bytes PII/FERPA</span>
+        <button type="button" id="lang-toggle" class="lang-btn" aria-label="Switch language between English and Spanish">ES • Español</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-pathway-workbench" class="container">
+    <section class="hero-card" aria-labelledby="page-title">
+      <p class="eyebrow" data-i18n="eyebrow">Institutional Responsible AI Edge Use Case • S-A-R v2.2 • W3C PROV-O</p>
+      <h1 id="page-title" data-i18n="title">Arizona Western College (AWC) Pathway DOM GraphRAG Workbench</h1>
+      <p class="subtitle" data-i18n="subtitle">
+        Focused, zero-PII Retrieval-Augmented Generation (RAG) cockpit scoped exclusively to a single 5-tier institutional pathway: Adjunct Faculty -> Exercise and Wellness Curriculum -> Allied Health Programs -> Entrepreneurial College -> Arizona Western College.
+      </p>
+
+      <div class="plain-english-box" role="region" aria-labelledby="pe-heading">
+        <p id="pe-heading" class="plain-english-label" data-i18n="peLabel">In Plain English • Responsible AI Edge Architecture</p>
+        <p id="pe-en">
+          Before you read the details below, here is the short version: <strong>this workbench proves how a college can deploy Retrieval-Augmented Generation (RAG) at institutional scale without risking student privacy (FERPA), AI hallucinations, or recurring cloud fees.</strong> Every search runs right inside your browser across 1,005 verified public nodes connecting classroom Exercise and Wellness labs up through Allied Health Programs, the Entrepreneurial College, and Arizona Western College's HSI mission. Every result includes a cryptographic SHA-256 receipt and traces all five institutional layers.
+        </p>
+        <p id="pe-es" lang="es">
+          <strong>En palabras sencillas:</strong> Es como un mapa interactivo blindado que conecta cada práctica del aula en Ejercicio y Bienestar con Salud Aliada, el Colegio Emprendedor y la misión estudiantil de Arizona Western College, sin subir datos de estudiantes a la nube ni inventar respuestas. Si los términos técnicos se ponen pesados, toca cualquiera de los 5 bloques de la ruta abajo para explorar cómo cada curso apoya el éxito estudiantil con costo $0 en libros.
+        </p>
+      </div>
+    </section>
+
+    <section class="workbench-card" aria-labelledby="spine-heading">
+      <div class="spine-header-row">
+        <div>
+          <h2 id="spine-heading" data-i18n="spineHeading">5-Tier Institutional Pathway Graph Explorer</h2>
+          <p style="margin:0; font-size:0.9rem; color:#333333; background-color:#FFFFFF;" data-i18n="spineSub">
+            Select any node in the pathway chain to traverse connected curriculum, clinical, workforce, and institutional nodes:
+          </p>
+        </div>
+        <div class="spine-mode-toggle" role="group" aria-label="Graph Traversal Scope">
+          <button type="button" class="filter-pill" id="btn-scope-connected" aria-pressed="true">Connected Graph Edges</button>
+          <button type="button" class="filter-pill" id="btn-scope-spine" aria-pressed="false">25 Pathway Spine Nodes Only</button>
+          <button type="button" class="filter-pill" id="btn-reset-pathway" aria-pressed="false">Reset All (1,005)</button>
+        </div>
+      </div>
+
+      <div class="spine-grid" role="group" aria-labelledby="spine-heading" id="spine-buttons-grid">
+        <button type="button" class="spine-node-btn" data-tier="N1_ADJUNCT_FACULTY" aria-pressed="false">
+          <span class="spine-step-tag">Tier 1 • Classroom</span>
+          <span class="spine-node-name" data-tier-label="N1_ADJUNCT_FACULTY">Adjunct Faculty</span>
+          <span class="spine-node-count" id="cnt-N1_ADJUNCT_FACULTY">672 connected</span>
+        </button>
+        <button type="button" class="spine-node-btn" data-tier="N2_EXW_CURRICULUM" aria-pressed="false">
+          <span class="spine-step-tag">Tier 2 • Curriculum</span>
+          <span class="spine-node-name" data-tier-label="N2_EXW_CURRICULUM">Exercise &amp; Wellness Curriculum</span>
+          <span class="spine-node-count" id="cnt-N2_EXW_CURRICULUM">1,005 connected</span>
+        </button>
+        <button type="button" class="spine-node-btn" data-tier="N3_ALLIED_HEALTH" aria-pressed="false">
+          <span class="spine-step-tag">Tier 3 • Clinical Feeder</span>
+          <span class="spine-node-name" data-tier-label="N3_ALLIED_HEALTH">Allied Health Programs</span>
+          <span class="spine-node-count" id="cnt-N3_ALLIED_HEALTH">746 connected</span>
+        </button>
+        <button type="button" class="spine-node-btn" data-tier="N4_ENTREPRENEURIAL_COLLEGE" aria-pressed="false">
+          <span class="spine-step-tag">Tier 4 • Workforce</span>
+          <span class="spine-node-name" data-tier-label="N4_ENTREPRENEURIAL_COLLEGE">Entrepreneurial College</span>
+          <span class="spine-node-count" id="cnt-N4_ENTREPRENEURIAL_COLLEGE">742 connected</span>
+        </button>
+        <button type="button" class="spine-node-btn" data-tier="N5_AWC_INSTITUTION" aria-pressed="false">
+          <span class="spine-step-tag">Tier 5 • Institution</span>
+          <span class="spine-node-name" data-tier-label="N5_AWC_INSTITUTION">Arizona Western College</span>
+          <span class="spine-node-count" id="cnt-N5_AWC_INSTITUTION">500 connected</span>
+        </button>
+      </div>
+
+      <div id="spine-inspector" class="spine-inspector" role="status" aria-live="polite">
+        <strong>Active Pathway Lens — Full 5-Tier Institutional Graph (1,005 Public Nodes):</strong>
+        Adjunct Faculty &rarr; Exercise and Wellness Curriculum &rarr; Allied Health Programs &rarr; Entrepreneurial College &rarr; Arizona Western College. Click any tier above or run a Hybrid BM25 + Graph RRF query below.
+      </div>
+
+      <div class="telemetry-strip" aria-label="Responsible AI Pathway Telemetry">
+        <div class="metric-tile">
+          <span class="metric-label">Pathway Nodes</span>
+          <span class="metric-value" id="tel-nodes">1,005 Verified</span>
+        </div>
+        <div class="metric-tile">
+          <span class="metric-label">Retrieval Engine</span>
+          <span class="metric-value">BM25 + Graph RRF (k=60)</span>
+        </div>
+        <div class="metric-tile">
+          <span class="metric-label">Student PII / FERPA Risk</span>
+          <span class="metric-value">0 Bytes (100% Open SSoT)</span>
+        </div>
+        <div class="metric-tile">
+          <span class="metric-label">Student &amp; College Cost</span>
+          <span class="metric-value">$0 ZTC • $0 SaaS</span>
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <span class="filter-group-label" id="course-filter-label">Filter by Pathway Spine or EXW Course SSoT</span>
+        <div class="pill-row" role="group" aria-labelledby="course-filter-label" id="course-pills">
+          <button type="button" class="filter-pill" data-course="ALL" aria-pressed="true">ALL PATHWAY (1,005)</button>
+          <button type="button" class="filter-pill" data-course="PATHWAY" aria-pressed="false">5-TIER SPINE (25)</button>
+          <button type="button" class="filter-pill" data-course="EXW101" aria-pressed="false">EXW 101 • PAGA 2018</button>
+          <button type="button" class="filter-pill" data-course="EXW150" aria-pressed="false">EXW 150 • DGA 2025–2030</button>
+          <button type="button" class="filter-pill" data-course="EXW210" aria-pressed="false">EXW 210 • NASM OPT</button>
+          <button type="button" class="filter-pill" data-course="EXW245" aria-pressed="false">EXW 245 • ACSM 12th Ed.</button>
+          <button type="button" class="filter-pill" data-course="EXW265" aria-pressed="false">EXW 265 • Special Pops</button>
+          <button type="button" class="filter-pill" data-course="STANDARDS" aria-pressed="false">STANDARDS • Governance</button>
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <span class="filter-group-label" id="role-filter-label">Filter by Clinical Framing &amp; Governance Role</span>
+        <div class="pill-row" role="group" aria-labelledby="role-filter-label" id="role-pills">
+          <button type="button" class="filter-pill" data-role="ALL" aria-pressed="true">All Roles</button>
+          <button type="button" class="filter-pill" data-role="Clinical_Case_Pattern" aria-pressed="false">Pattern • Yuma Case</button>
+          <button type="button" class="filter-pill" data-role="SSoT_Rule_Constraint" aria-pressed="false">Rule • SSoT Safety Gate</button>
+          <button type="button" class="filter-pill" data-role="Instructional_Core_Solve" aria-pressed="false">Solve • Prescription</button>
+          <button type="button" class="filter-pill" data-role="Exemplar_10_10" aria-pressed="false">10/10 Exemplar</button>
+          <button type="button" data-role="Active_Verification" class="filter-pill" aria-pressed="false">Active Verification</button>
+          <button type="button" data-role="Plain_English_Callout" class="filter-pill" aria-pressed="false">In Plain English</button>
+        </div>
+      </div>
+
+      <form id="pathway-search-form" class="search-form" role="search" aria-label="Search AWC Institutional Pathway GraphRAG">
+        <label for="pathway-query" class="sr-only">Search AWC Pathway DOM GraphRAG nodes</label>
+        <input type="search" id="pathway-query" class="search-input" placeholder="Search Allied Health vitals, Nursing, DOL TEN 07-25, Entrepreneurial College, 77% Latino HSI, PAGA 2018, T2DM..." autocomplete="off">
+        <label for="pathway-topk" class="sr-only">Number of pathway nodes to display</label>
+        <select id="pathway-topk" class="select-control">
+          <option value="8">Top 8 Nodes</option>
+          <option value="15" selected>Top 15 Nodes</option>
+          <option value="25">Top 25 Nodes</option>
+        </select>
+        <button type="submit" class="btn-primary">Run Hybrid GraphRAG</button>
+        <button type="button" id="btn-local-synth" class="btn-secondary" hidden>Synthesize Pathway Brief (Local Ollama)</button>
+      </form>
+
+      <div id="local-synth-container" class="local-synth-box" hidden>
+        <h3>Pathway-Scoped Local Edge Synthesis (127.0.0.1 • Public Pathway Nodes Only)</h3>
+        <p style="margin:0; font-size:0.84rem; color:#333333; background-color:#FFFFFF;">
+          Synthesized locally via Apache 2.0 Ollama strictly from the public AWC pathway nodes retrieved below (zero access to non-pathway files; zero cloud egress).
+        </p>
+        <div id="local-synth-output" class="local-synth-output" aria-live="polite"></div>
+      </div>
+
+      <div class="filter-group">
+        <span class="filter-group-label">Institutional Benchmark Queries (Click to Execute)</span>
+        <div class="pill-row" id="suggested-chips"></div>
+      </div>
+
+      <div id="results-meta" class="results-meta" aria-live="polite">Loading 1,005 AWC Pathway DOM GraphRAG nodes...</div>
+      <div id="results-list" class="hit-list"></div>
+    </section>
+
+    <section class="arch-card" aria-labelledby="resp-ai-heading">
+      <h2 id="resp-ai-heading">Why Pathway-Scoped Edge GraphRAG Is an Institutional Responsible AI Reference Case</h2>
+      <p style="margin:0 0 10px 0; font-size:0.94rem; color:#222222; background-color:#FFFFFF;">
+        Aligned with <strong>U.S. Department of Labor ETA TEN No. 07-25</strong> (<em>Area 1: Understand AI Principles</em>, <em>Area 4: Evaluate Outputs</em>, and <em>Area 5: Use AI Responsibly</em>) and <strong>NSF TechAccess: AI-Ready America</strong>, this workbench illustrates how community colleges can scale RAG responsibly across a focused academic-to-workforce pathway:
+      </p>
+      <div class="compare-table-wrap">
+        <table class="compare-table">
+          <caption>Comparison of Unguarded Cloud Chatbots vs. Pathway-Scoped Institutional DOM GraphRAG</caption>
+          <thead>
+            <tr>
+              <th scope="col">Institutional Dimension</th>
+              <th scope="col">Unguarded Generic Cloud Chatbot</th>
+              <th scope="col">AWC Pathway-Scoped Edge DOM GraphRAG</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Domain Containment</th>
+              <td>Draws from unverified open-web training weights; mixes unrelated institutions and outdated prerequisites.</td>
+              <td>Strictly bounded to verified public nodes along <strong>Adjunct Faculty &rarr; EXW &rarr; Allied Health &rarr; Entrepreneurial College &rarr; AWC</strong>.</td>
+            </tr>
+            <tr>
+              <th scope="row">Hallucination &amp; Clinical Gate</th>
+              <td>Frequently invents citations or crosses licensed healthcare Scope-of-Practice boundaries.</td>
+              <td>Every node carries a <strong>W3C PROV-O SHA-256 receipt</strong> anchored in PAGA 2018, DGA 2025–2030, ACSM 12th Ed., NASM OPT, and statutory Scope-of-Practice gates.</td>
+            </tr>
+            <tr>
+              <th scope="row">FERPA &amp; Student Privacy</th>
+              <td>Student prompts and pasted records transit external commercial servers.</td>
+              <td><strong>0 bytes of student PII</strong>; executes 100% client-side in browser memory with zero login and zero tracking cookies.</td>
+            </tr>
+            <tr>
+              <th scope="row">HSI Equity, Accessibility &amp; Cost</th>
+              <td>Per-seat subscription tiers ($20+/user/month) and inconsistent screen-reader / contrast compliance.</td>
+              <td><strong>$0 ZTC / $0 SaaS</strong>, bilingual English + Norteño-Spanish scaffolding, and <strong>9:1 Double-Contrast Guard</strong> (ADA Title II / WCAG 2.2 AA).</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-legal-footer">
+    <div class="site-legal-inner">
+      <p style="margin:0 0 10px 0; color:#0B192C; background-color:#F5F2EB;">
+        <strong>AI Disclosure &amp; Scope of Practice:</strong> <em>AI Disclosure: Curriculum synthesis and structural compilation assisted by Google Gemini and local open-weight Google Gemma 4 models. Residents and evaluators must audit all clinical and institutional claims against primary Sources of Truth (PAGA 2018 2nd Ed., DGA 2025–2030, ACSM 12th Ed., NASM OPT, and official AWC catalogs). AI can make mistakes.</em> Strictly educational and instructional-engineering reference—not medical advice, clinical diagnosis, or official institutional policy representation.
+      </p>
+      <p style="margin:0; color:#0B192C; background-color:#F5F2EB;">
+        <strong>&copy; 2026 Alan Pruitt (<a href="https://alanpruitt.com/" style="color:#002147; background-color:#F5F2EB;">alanpruitt.com</a>).</strong>
+        Designated EXW OER curriculum text licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="license noopener noreferrer" style="color:#002147; background-color:#F5F2EB;">CC BY-NC-SA 4.0</a> • Software compilers &amp; GraphRAG engine: All rights reserved (<a href="https://alanpruitt.com/ip-oer/" style="color:#002147; background-color:#F5F2EB;">IP &amp; OER Rider</a>).
+      </p>
+    </div>
+  </footer>
+
+  <script>
+  (function () {
+    'use strict';
+
+    var BRIDGE_BASE = (window.location.hostname === '127.0.0.1' || window.location.hostname === 'localhost')
+      ? window.location.origin
+      : 'http://127.0.0.1:8766';
+
+    var state = {
+      lang: 'en',
+      data: null,
+      idfMap: {},
+      avgDocLen: 80,
+      docTokens: [],
+      selectedTier: 'ALL',
+      spineOnly: false,
+      course: 'ALL',
+      role: 'ALL',
+      lastSliced: [],
+      localDemoOnline: false
+    };
+
+    var SYNONYM_MAP = {
+      'nursing': ['vitals', 'blood', 'pressure', 'hypertension', 'spo2', 'patient', 'clearance', 'allied'],
+      'enfermeria': ['nursing', 'vitals', 'blood', 'pressure', 'allied', 'patient'],
+      'allied': ['nursing', 'medical', 'clinical', 'vitals', 'rehab', 'radiologic', 'chw', 'scope'],
+      'entrepreneurial': ['workforce', 'career', '07-25', 'agile', '8-week', 'employer', 'simulator'],
+      'emprendedor': ['entrepreneurial', 'workforce', '07-25', 'career'],
+      'hsi': ['latino', 'first-generation', 'spanish', 'ztc', 'oer', 'yuma', 'equity'],
+      'diabetes': ['t2dm', 'glycemic', 'sugar', 'insulin', 'dga', 'metabolic'],
+      'heat': ['yuma', 'sweat', 'hydration', 'electrolytes', '110', 'desert'],
+      'calor': ['yuma', 'heat', 'sweat', 'hydration', 'electrolytes'],
+      'rag': ['graphrag', 'prov-o', 'bm25', 'rrf', 'responsible', 'ferpa', 'hallucination']
+    };
+
+    var COURSE_ALLIED_BRIDGE = {
+      'EXW101': 'Builds foundational movement, MET dosing, and preventive health literacy for Pre-Nursing, CHW, and Allied Health entry.',
+      'EXW150': 'Equips Pre-Nursing, Medical Assistant, and CHW learners with DGA 2025-2030 cardiometabolic and T2DM nutrition education.',
+      'EXW210': 'Builds anatomical planes, OHSA postural screening, and safe resistance mechanics for Physical Therapy Assistant and Rad Tech.',
+      'EXW245': 'Trains clinical vital-sign triage (HR, BP, VO2, ergometry) and ACSM 12th Ed. medical-clearance gates for Allied Health care.',
+      'EXW265': 'Prepares Allied Health and CHW practitioners for older-adult fall prevention, hypertension, T2DM, prenatal, and adaptive care.',
+      'STANDARDS': 'Enforces statutory Scope-of-Practice, clinical safety gates, and accessible documentation across Allied Health pathways.',
+      'PATHWAY': 'Connects zero-prerequisite EXW clinical foundations directly into AWC Nursing, MA, Rad Tech, CHW, and transfer degrees.'
+    };
+
+    var i18n = {
+      en: {
+        eyebrow: 'Institutional Responsible AI Edge Use Case • S-A-R v2.2 • W3C PROV-O',
+        title: 'Arizona Western College (AWC) Pathway DOM GraphRAG Workbench',
+        subtitle: 'Focused, zero-PII Retrieval-Augmented Generation (RAG) cockpit scoped exclusively to a single 5-tier institutional pathway: Adjunct Faculty -> Exercise and Wellness Curriculum -> Allied Health Programs -> Entrepreneurial College -> Arizona Western College.',
+        peLabel: 'In Plain English • Responsible AI Edge Architecture',
+        spineHeading: '5-Tier Institutional Pathway Graph Explorer',
+        spineSub: 'Select any node in the pathway chain to traverse connected curriculum, clinical, workforce, and institutional nodes:',
+        toggleBtn: 'ES • Español'
+      },
+      es: {
+        eyebrow: 'Caso Edge Institucional de IA Responsable • Estándar S-A-R v2.2 • W3C PROV-O',
+        title: 'Mesa DOM GraphRAG de Ruta Institucional en Arizona Western College (AWC)',
+        subtitle: 'Cabina enfocada de Generación Aumentada por Recuperación (RAG) sin datos personales (0 PII), acotada exclusivamente a la ruta de 5 niveles: Docente Adjunto -> Currículo de Ejercicio y Bienestar -> Programas de Salud Aliada -> Colegio Emprendedor -> Arizona Western College.',
+        peLabel: 'En Palabras Sencillas • Arquitectura Edge de IA Responsable',
+        spineHeading: 'Explorador de Grafo Institucional de 5 Niveles',
+        spineSub: 'Seleccione cualquier eslabón de la ruta para recorrer los nodos curriculares, clínicos, laborales e institucionales conectados:',
+        toggleBtn: 'EN • English'
+      }
+    };
+
+    function escapeHtml(str) {
+      return String(str || '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    }
+
+    function tokenize(text) {
+      return String(text || '')
+        .toLowerCase()
+        .replace(/[^a-z0-9áéíóúñü\-\s]/g, ' ')
+        .split(/\s+/)
+        .filter(function (w) { return w.length >= 2; });
+    }
+
+    function buildCorpusBM25Stats(items) {
+      var df = {};
+      var totalLen = 0;
+      var docs = [];
+      for (var i = 0; i < items.length; i++) {
+        var it = items[i];
+        var full = (it.section + ' ' + it.dom_path + ' ' + it.course + ' ' + it.module + ' ' + it.ssot + ' ' +
+          (it.semantic_concepts || []).join(' ') + ' ' + it.text);
+        var toks = tokenize(full);
+        totalLen += toks.length;
+        var tf = {};
+        var seen = {};
+        for (var j = 0; j < toks.length; j++) {
+          var w = toks[j];
+          tf[w] = (tf[w] || 0) + 1;
+          if (!seen[w]) {
+            seen[w] = true;
+            df[w] = (df[w] || 0) + 1;
+          }
+        }
+        docs.push({ len: toks.length, tf: tf, titleLower: (it.section + ' ' + it.dom_path + ' ' + it.ssot).toLowerCase() });
+      }
+      var N = items.length || 1;
+      var idf = {};
+      Object.keys(df).forEach(function (term) {
+        idf[term] = Math.log(1 + (N - df[term] + 0.5) / (df[term] + 0.5));
+      });
+      state.idfMap = idf;
+      state.avgDocLen = (totalLen / N) || 80;
+      state.docTokens = docs;
+    }
+
+    function expandQueryConcepts(qTerms) {
+      var expanded = [];
+      qTerms.forEach(function (t) {
+        if (SYNONYM_MAP[t]) {
+          SYNONYM_MAP[t].forEach(function (syn) {
+            if (qTerms.indexOf(syn) === -1 && expanded.indexOf(syn) === -1) {
+              expanded.push(syn);
+            }
+          });
+        }
+      });
+      return expanded;
+    }
+
+    function computeLineage(it) {
+      if (it.pathway_lineage) return it.pathway_lineage;
+      var c = it.course || 'PATHWAY';
+      var roleLbl = it.role_label || it.role || 'Curriculum Node';
+      return {
+        t1_adjunct: 'Adjunct Faculty (' + roleLbl + '): Facilitated via Pattern / Rule / Solve clinical framing, Plain English + Norteño-Spanish scaffolding, and 10-7-0 Mastery verification.',
+        t2_exw: 'Exercise & Wellness Curriculum (' + c + '): Verified $0 ZTC OER module node anchored in ' + (it.ssot || 'Academic SSoT') + ' (Prerequisite: None).',
+        t3_allied: COURSE_ALLIED_BRIDGE[c] || COURSE_ALLIED_BRIDGE['PATHWAY'],
+        t4_entrepreneurial: 'Entrepreneurial College: Operationalizes U.S. DOL ETA TEN No. 07-25 AI Literacy (Direct AI, Evaluate Outputs, Use AI Responsibly) in agile 8-Wk / 16-Wk formats.',
+        t5_awc: 'Arizona Western College: Advances Title V HSI equity (77% Latino / 62% first-gen), HLC ILOs, and 9:1 WCAG 2.2 AA / ADA Title II compliance at $0 student cost.'
+      };
+    }
+
+    function updateSpineInspector() {
+      var box = document.getElementById('spine-inspector');
+      if (!state.data || !state.data.pathway_topology) return;
+      if (state.selectedTier === 'ALL') {
+        box.innerHTML = (state.lang === 'es')
+          ? '<strong>Lente Activo — Grafo Institucional Completo de 5 Niveles (1,005 Nodos Públicos):</strong> Docente Adjunto &rarr; Currículo de Ejercicio y Bienestar &rarr; Programas de Salud Aliada &rarr; Colegio Emprendedor &rarr; Arizona Western College.'
+          : '<strong>Active Pathway Lens — Full 5-Tier Institutional Graph (1,005 Public Nodes):</strong> Adjunct Faculty &rarr; Exercise and Wellness Curriculum &rarr; Allied Health Programs &rarr; Entrepreneurial College &rarr; Arizona Western College.';
+        return;
+      }
+      var found = null;
+      state.data.pathway_topology.forEach(function (t) {
+        if (t.id === state.selectedTier) found = t;
+      });
+      if (!found) return;
+      var ttl = (state.lang === 'es') ? found.title_es : found.title_en;
+      var sum = (state.lang === 'es') ? found.summary_es : found.summary_en;
+      box.innerHTML = '<strong>' + escapeHtml(ttl) + ':</strong> ' + escapeHtml(sum);
+    }
+
+    function updateSpineCounts() {
+      if (!state.data || !state.data.meta) return;
+      var map = state.spineOnly
+        ? (state.data.meta.counts_by_primary_tier || {})
+        : (state.data.meta.counts_by_connected_tier || {});
+      ['N1_ADJUNCT_FACULTY', 'N2_EXW_CURRICULUM', 'N3_ALLIED_HEALTH', 'N4_ENTREPRENEURIAL_COLLEGE', 'N5_AWC_INSTITUTION'].forEach(function (tid) {
+        var el = document.getElementById('cnt-' + tid);
+        if (el) {
+          var n = Number(map[tid] || 0).toLocaleString();
+          el.textContent = state.spineOnly ? (n + ' primary nodes') : (n + ' connected');
+        }
+      });
+    }
+
+    function runHybridPathwaySearch() {
+      if (!state.data || !state.data.items) return;
+      var t0 = performance.now();
+      var items = state.data.items;
+      var rawQ = document.getElementById('pathway-query').value.trim().toLowerCase();
+      var topK = parseInt(document.getElementById('pathway-topk').value, 10) || 15;
+      var qTerms = tokenize(rawQ);
+      var synTerms = expandQueryConcepts(qTerms);
+
+      var candidates = [];
+      for (var i = 0; i < items.length; i++) {
+        var it = items[i];
+        if (state.spineOnly && it.course !== 'PATHWAY') continue;
+        if (state.course !== 'ALL' && it.course !== state.course) continue;
+        if (state.role !== 'ALL' && it.role !== state.role) continue;
+        if (state.selectedTier !== 'ALL') {
+          if (state.spineOnly) {
+            if (it.pathway_node !== state.selectedTier) continue;
+          } else {
+            var tags = it.pathway_tags || [];
+            if (it.pathway_node !== state.selectedTier && tags.indexOf(state.selectedTier) === -1) continue;
+          }
+        }
+
+        var docStat = state.docTokens[i];
+        var bm25 = 0;
+        var graphScore = 0;
+
+        if (!qTerms.length) {
+          // Default structural browse ranking: prioritize canonical 5-tier PATHWAY spine nodes first
+          bm25 = (it.course === 'PATHWAY') ? 10.0 : 2.0;
+          if (state.selectedTier !== 'ALL' && it.pathway_node === state.selectedTier) graphScore += 8.0;
+          graphScore += (it.pathway_tags || []).length * 1.2;
+        } else {
+          var k1 = 1.5;
+          var b = 0.75;
+          for (var qIdx = 0; qIdx < qTerms.length; qIdx++) {
+            var qt = qTerms[qIdx];
+            var tf = docStat.tf[qt] || 0;
+            if (tf > 0) {
+              var idf = state.idfMap[qt] || 1.2;
+              bm25 += idf * ((tf * (k1 + 1)) / (tf + k1 * (1 - b + b * (docStat.len / state.avgDocLen))));
+            }
+            if (docStat.titleLower.indexOf(qt) !== -1) {
+              bm25 += 2.4;
+            }
+          }
+          if (rawQ.length >= 4 && docStat.titleLower.indexOf(rawQ) !== -1) bm25 += 6.0;
+
+          // Stream B: Graph Topology + Semantic Concept Expansion score
+          var conceptsStr = ((it.semantic_concepts || []).join(' ') + ' ' + (it.pathway_tags || []).join(' ')).toLowerCase();
+          for (var sIdx = 0; sIdx < qTerms.length; sIdx++) {
+            if (conceptsStr.indexOf(qTerms[sIdx]) !== -1) graphScore += 3.2;
+          }
+          for (var eIdx = 0; eIdx < synTerms.length; eIdx++) {
+            var syn = synTerms[eIdx];
+            if ((docStat.tf[syn] || 0) > 0 || conceptsStr.indexOf(syn) !== -1) {
+              graphScore += 2.1;
+            }
+          }
+          if (bm25 > 0 || graphScore > 0) {
+            if (it.course === 'PATHWAY') graphScore += 2.5;
+            if (state.selectedTier !== 'ALL' && it.pathway_node === state.selectedTier) graphScore += 2.0;
+            if (it.role === 'SSoT_Rule_Constraint' || it.role === 'Exemplar_10_10') graphScore += 0.6;
+          }
+        }
+
+        if (bm25 > 0 || graphScore > 0) {
+          candidates.push({ idx: i, item: it, bm25: bm25, graph: graphScore, bm25Rank: 0, graphRank: 0, rrf: 0 });
+        }
+      }
+
+      // Reciprocal Rank Fusion (k = 60) across BM25 stream and Graph/Concept stream
+      candidates.sort(function (a, b) { return b.bm25 - a.bm25; });
+      for (var r1 = 0; r1 < candidates.length; r1++) {
+        candidates[r1].bm25Rank = r1 + 1;
+      }
+      candidates.sort(function (a, b) { return b.graph - a.graph; });
+      for (var r2 = 0; r2 < candidates.length; r2++) {
+        candidates[r2].graphRank = r2 + 1;
+        candidates[r2].rrf = (1.0 / (60.0 + candidates[r2].bm25Rank)) + (1.0 / (60.0 + candidates[r2].graphRank));
+      }
+      candidates.sort(function (a, b) {
+        if (Math.abs(b.rrf - a.rrf) > 1e-9) return b.rrf - a.rrf;
+        return (b.bm25 + b.graph) - (a.bm25 + a.graph);
+      });
+
+      var sliced = candidates.slice(0, topK);
+      state.lastSliced = sliced;
+      var elapsed = (performance.now() - t0).toFixed(2);
+
+      document.getElementById('results-meta').textContent =
+        'Hybrid RRF retrieved ' + sliced.length + ' of ' + candidates.length +
+        ' matching AWC Pathway nodes in ' + elapsed + ' ms (Tier: ' + state.selectedTier +
+        ' • Course: ' + state.course + ' • Role: ' + state.role + ' • PII Egress: 0 Bytes).';
+
+      var listEl = document.getElementById('results-list');
+      if (!sliced.length) {
+        listEl.innerHTML = '<div class="hit-card"><p class="hit-excerpt">No pathway nodes matched that exact filter combination. Click "Reset All (1,005)" to broaden the graph scope.</p></div>';
+        return;
+      }
+
+      listEl.innerHTML = sliced.map(function (entry, pos) {
+        var it = entry.item;
+        var lin = computeLineage(it);
+        var isSpine = (it.course === 'PATHWAY');
+        var linksHtml = '';
+        if (it.links && typeof it.links === 'object') {
+          if (it.links.url) {
+            linksHtml += '<a class="action-btn" href="' + escapeHtml(it.links.url) + '" target="_blank" rel="noopener noreferrer">' +
+              escapeHtml(it.links.label || 'Inspect Canvas SSoT') + '</a>';
+          }
+          if (it.links.toolkit_url) {
+            linksHtml += '<a class="action-btn" href="' + escapeHtml(it.links.toolkit_url) + '" target="_blank" rel="noopener noreferrer">' +
+              escapeHtml(it.links.toolkit_label || 'Open Edge Companion') + '</a>';
+          }
+        }
+
+        return '<article class="hit-card' + (isSpine ? ' is-spine' : '') + '">' +
+          '<div class="hit-header">' +
+            '<span class="badge">#' + (pos + 1) + '</span>' +
+            '<span class="badge badge-red">' + escapeHtml(it.course) + ' • ' + escapeHtml(it.module) + '</span>' +
+            '<span class="badge badge-teal">' + escapeHtml(it.role_label || it.role) + '</span>' +
+            '<span class="badge badge-outline">RRF:' + entry.rrf.toFixed(4) + ' (BM25 #' + entry.bm25Rank + ' + Graph #' + entry.graphRank + ')</span>' +
+            '<span class="badge badge-outline">PROV-O sha256:' + escapeHtml(it.sha) + '</span>' +
+          '</div>' +
+          '<h3 class="hit-title">' + escapeHtml(it.section) + '</h3>' +
+          '<div class="hit-dom-path">Graph Path: ' + escapeHtml(it.dom_path) + ' • SSoT: ' + escapeHtml(it.ssot) + '</div>' +
+          '<p class="hit-excerpt">' + escapeHtml(it.text) + '</p>' +
+          '<div class="hit-actions">' +
+            linksHtml +
+            '<span style="font-family:var(--font-mono); font-size:0.74rem; color:#333333; background-color:#FFFFFF;">Connected Tiers: ' + escapeHtml((it.pathway_tags || []).length) + '/5 • Source: ' + escapeHtml(it.source) + '</span>' +
+          '</div>' +
+          '<details class="lineage-disclosure">' +
+            '<summary>Trace 5-Tier AWC Institutional Pathway Lineage (Adjunct Faculty -> EXW -> Allied Health -> Entrepreneurial College -> AWC)</summary>' +
+            '<ol class="lineage-list">' +
+              '<li><strong>1. Adjunct Faculty:</strong> ' + escapeHtml(lin.t1_adjunct) + '</li>' +
+              '<li><strong>2. Exercise &amp; Wellness Curriculum:</strong> ' + escapeHtml(lin.t2_exw) + '</li>' +
+              '<li><strong>3. Allied Health Programs:</strong> ' + escapeHtml(lin.t3_allied) + '</li>' +
+              '<li><strong>4. Entrepreneurial College:</strong> ' + escapeHtml(lin.t4_entrepreneurial) + '</li>' +
+              '<li><strong>5. Arizona Western College:</strong> ' + escapeHtml(lin.t5_awc) + '</li>' +
+            '</ol>' +
+          '</details>' +
+        '</article>';
+      }).join('');
+    }
+
+    function renderSuggestedChips() {
+      var wrap = document.getElementById('suggested-chips');
+      if (!state.data || !state.data.suggested_queries) return;
+      wrap.innerHTML = state.data.suggested_queries.map(function (sq) {
+        var lbl = (state.lang === 'es' && sq.label_es) ? sq.label_es : sq.label_en;
+        return '<button type="button" class="chip-btn" data-q="' + escapeHtml(sq.query) + '">' + escapeHtml(lbl) + '</button>';
+      }).join('');
+      wrap.querySelectorAll('[data-q]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          document.getElementById('pathway-query').value = btn.getAttribute('data-q');
+          runHybridPathwaySearch();
+        });
+      });
+    }
+
+    // Optional live presenter mode: only shows local Ollama synthesis button when M1/M2 loopback is active
+    function probeOptionalLocalPresenterEngine() {
+      fetch(BRIDGE_BASE + '/healthz', { method: 'GET' })
+        .then(function (r) { return r.ok ? r.json() : Promise.reject(); })
+        .then(function () {
+          state.localDemoOnline = true;
+          document.getElementById('btn-local-synth').removeAttribute('hidden');
+        })
+        .catch(function () {
+          state.localDemoOnline = false;
+        });
+    }
+
+    document.getElementById('btn-local-synth').addEventListener('click', function () {
+      if (!state.lastSliced.length) return;
+      var btn = this;
+      var box = document.getElementById('local-synth-container');
+      var out = document.getElementById('local-synth-output');
+      var q = document.getElementById('pathway-query').value.trim() || 'Summarize the 5-tier Arizona Western College Exercise and Wellness to Allied Health and Entrepreneurial College pathway.';
+      box.removeAttribute('hidden');
+      btn.disabled = true;
+      out.textContent = 'Synthesizing grounded institutional pathway brief via local Apple Silicon Ollama (0 cloud bytes, 0 private vault access)...';
+
+      var publicContext = state.lastSliced.slice(0, 6).map(function (e, idx) {
+        return {
+          rank: idx + 1,
+          id: e.item.id,
+          course: e.item.course,
+          section: e.item.section,
+          ssot: e.item.ssot,
+          sha: e.item.sha,
+          text: e.item.text
+        };
+      });
+
+      fetch(BRIDGE_BASE + '/api/ask-public-pathway', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ query: q, nodes: publicContext })
+      })
+      .then(function (r) { return r.json(); })
+      .then(function (res) {
+        btn.disabled = false;
+        out.textContent = res.answer || res.error || 'Local synthesis unavailable.';
+      })
+      .catch(function (err) {
+        btn.disabled = false;
+        out.textContent = 'Local Ollama presenter endpoint unavailable (' + err.message + '). Client-side Hybrid GraphRAG remains 100% active.';
+      });
+    });
+
+    // Event wiring
+    document.getElementById('spine-buttons-grid').addEventListener('click', function (e) {
+      var btn = e.target.closest('[data-tier]');
+      if (!btn) return;
+      var clicked = btn.getAttribute('data-tier');
+      state.selectedTier = (state.selectedTier === clicked) ? 'ALL' : clicked;
+      this.querySelectorAll('[data-tier]').forEach(function (b) {
+        b.setAttribute('aria-pressed', b.getAttribute('data-tier') === state.selectedTier ? 'true' : 'false');
+      });
+      updateSpineInspector();
+      runHybridPathwaySearch();
+    });
+
+    document.getElementById('btn-scope-connected').addEventListener('click', function () {
+      state.spineOnly = false;
+      this.setAttribute('aria-pressed', 'true');
+      document.getElementById('btn-scope-spine').setAttribute('aria-pressed', 'false');
+      updateSpineCounts();
+      runHybridPathwaySearch();
+    });
+
+    document.getElementById('btn-scope-spine').addEventListener('click', function () {
+      state.spineOnly = true;
+      this.setAttribute('aria-pressed', 'true');
+      document.getElementById('btn-scope-connected').setAttribute('aria-pressed', 'false');
+      updateSpineCounts();
+      runHybridPathwaySearch();
+    });
+
+    document.getElementById('btn-reset-pathway').addEventListener('click', function () {
+      state.selectedTier = 'ALL';
+      state.spineOnly = false;
+      state.course = 'ALL';
+      state.role = 'ALL';
+      document.getElementById('pathway-query').value = '';
+      document.getElementById('btn-scope-connected').setAttribute('aria-pressed', 'true');
+      document.getElementById('btn-scope-spine').setAttribute('aria-pressed', 'false');
+      document.querySelectorAll('#spine-buttons-grid [data-tier]').forEach(function (b) {
+        b.setAttribute('aria-pressed', 'false');
+      });
+      document.querySelectorAll('#course-pills [data-course]').forEach(function (b) {
+        b.setAttribute('aria-pressed', b.getAttribute('data-course') === 'ALL' ? 'true' : 'false');
+      });
+      document.querySelectorAll('#role-pills [data-role]').forEach(function (b) {
+        b.setAttribute('aria-pressed', b.getAttribute('data-role') === 'ALL' ? 'true' : 'false');
+      });
+      document.getElementById('local-synth-container').setAttribute('hidden', '');
+      updateSpineCounts();
+      updateSpineInspector();
+      runHybridPathwaySearch();
+    });
+
+    document.getElementById('course-pills').addEventListener('click', function (e) {
+      var btn = e.target.closest('[data-course]');
+      if (!btn) return;
+      state.course = btn.getAttribute('data-course');
+      this.querySelectorAll('[data-course]').forEach(function (b) {
+        b.setAttribute('aria-pressed', b === btn ? 'true' : 'false');
+      });
+      runHybridPathwaySearch();
+    });
+
+    document.getElementById('role-pills').addEventListener('click', function (e) {
+      var btn = e.target.closest('[data-role]');
+      if (!btn) return;
+      state.role = btn.getAttribute('data-role');
+      this.querySelectorAll('[data-role]').forEach(function (b) {
+        b.setAttribute('aria-pressed', b === btn ? 'true' : 'false');
+      });
+      runHybridPathwaySearch();
+    });
+
+    document.getElementById('pathway-search-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      runHybridPathwaySearch();
+    });
+
+    document.getElementById('pathway-topk').addEventListener('change', runHybridPathwaySearch);
+
+    document.getElementById('lang-toggle').addEventListener('click', function () {
+      state.lang = (state.lang === 'en') ? 'es' : 'en';
+      document.documentElement.lang = state.lang;
+      var dict = i18n[state.lang];
+      document.querySelectorAll('[data-i18n]').forEach(function (el) {
+        var k = el.getAttribute('data-i18n');
+        if (dict[k]) el.textContent = dict[k];
+      });
+      this.textContent = dict.toggleBtn;
+      if (state.data && state.data.pathway_topology) {
+        state.data.pathway_topology.forEach(function (t) {
+          var lblEl = document.querySelector('[data-tier-label="' + t.id + '"]');
+          if (lblEl) lblEl.textContent = ((state.lang === 'es') ? t.short_es : t.short_en).replace(/^\d+\.\s*/, '');
+        });
+      }
+      updateSpineInspector();
+      renderSuggestedChips();
+    });
+
+    // Load AWC 5-Tier Pathway Index + support ?tier=N3_ALLIED_HEALTH or ?q=... deep links
+    fetch('/data/awc-pathway-graphrag.json')
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        state.data = data;
+        buildCorpusBM25Stats(data.items || []);
+        if (data.meta && data.meta.distilled_nodes) {
+          document.getElementById('tel-nodes').textContent = Number(data.meta.distilled_nodes).toLocaleString() + ' Verified';
+        }
+        var params = new URLSearchParams(window.location.search);
+        var urlTier = params.get('tier');
+        var urlQ = params.get('q');
+        if (urlTier && /^N[1-5]_/.test(urlTier)) {
+          state.selectedTier = urlTier;
+          document.querySelectorAll('#spine-buttons-grid [data-tier]').forEach(function (b) {
+            b.setAttribute('aria-pressed', b.getAttribute('data-tier') === urlTier ? 'true' : 'false');
+          });
+        }
+        if (urlQ) {
+          document.getElementById('pathway-query').value = urlQ;
+        }
+        updateSpineCounts();
+        updateSpineInspector();
+        renderSuggestedChips();
+        runHybridPathwaySearch();
+        probeOptionalLocalPresenterEngine();
+      })
+      .catch(function (err) {
+        document.getElementById('results-meta').textContent = 'Error loading /data/awc-pathway-graphrag.json: ' + err.message;
+      });
+  })();
+  </script>
+</body>
+</html>

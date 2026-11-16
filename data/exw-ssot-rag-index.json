@@ -596,7 +596,7 @@
       "sha": "2b4675626dae",
       "section": "1. Purpose & Route Architecture on `https://exwtoolkit.com`",
       "source": "docs/standards/LOVABLE_SPEC_Kinematic_Gait_MET_Auditor.md",
-      "text": "This specification defines the Kinematic Gait & Aerobic MET Auditor, bridging two core boxes of the EXW Digital Tool Kit (https://exwtoolkit.com): 1. Box 2 — Engine Box: Kinematic gait speed (Cadence × Stride Length), treadmill/terrain fractional grade ($G$), ACSM walking gross oxygen uptake (VO2 in mL\\cdotkg-1\·min-1), Metabolic Equivalents (METs = VO2 / 3.5), and PAGA 2018 Moderate-to-Vigorous Physical Activity (MVPA) intensity classification. 2. Box 6 — Cardio Box: Karvone",
+      "text": "This specification defines the Kinematic Gait & Aerobic MET Auditor, bridging two core boxes of the EXW Digital Tool Kit (https://exwtoolkit.com): 1. Box 2 — Engine Box: Kinematic gait speed (Cadence × Stride Length), treadmill/terrain fractional grade ($G$), ACSM walking gross oxygen uptake (VO2 in mL·kg-1·min-1), Metabolic Equivalents (METs = VO2 / 3.5), and PAGA 2018 Moderate-to-Vigorous Physical Activity (MVPA) intensity classification. 2. Box 6 — Cardio Box: Karvone",
       "links": {
         "label": "Inspect Vehicle 1 & 2: Clinical Framing Protocol & Federal SSoT Hierarchy",
         "url": "https://azwestern.instructure.com/courses/42051/pages/exw-demo-coach-alan-vehicle-1-and-2-the-clinical-framing-protocol-and-federal-ssot-hierarchy",
@@ -636,7 +636,7 @@
       "sha": "7eaf00880b17",
       "section": "3. Verification Checklist Before Publishing in Lovable",
       "source": "docs/standards/LOVABLE_SPEC_Kinematic_Gait_MET_Auditor.md",
-      "text": "1. Route Alias Check: Confirm both https://exwtoolkit.com/simulators/gait-speed-auditor and https://exwtoolkit.com/simulators/gait-speed-auditor.html load without a 404 inside the Course 22429 Canvas <iframe> (height=\"540\"). 2. Math Sanity Check: * At 100 steps/min, 0.70 m step length, 0% grade → S = 70.0 m/min (2.61 mph), VO2 = 10.50 mL\\cdotkg-1\·min-1, METs = 3.00 METs (exact PAGA Moderate boundary). * At 112 steps/min, 0.76 m step length, 0% grade → $S = ",
+      "text": "1. Route Alias Check: Confirm both https://exwtoolkit.com/simulators/gait-speed-auditor and https://exwtoolkit.com/simulators/gait-speed-auditor.html load without a 404 inside the Course 22429 Canvas <iframe> (height=\"540\"). 2. Math Sanity Check: * At 100 steps/min, 0.70 m step length, 0% grade → S = 70.0 m/min (2.61 mph), VO2 = 10.50 mL·kg-1·min-1, METs = 3.00 METs (exact PAGA Moderate boundary). * At 112 steps/min, 0.76 m step length, 0% grade → $S = ",
       "links": {
         "label": "Inspect Vehicle 1 & 2: Clinical Framing Protocol & Federal SSoT Hierarchy",
         "url": "https://azwestern.instructure.com/courses/42051/pages/exw-demo-coach-alan-vehicle-1-and-2-the-clinical-framing-protocol-and-federal-ssot-hierarchy",
@@ -10956,7 +10956,7 @@
       "sha": "eb469ec7a48c",
       "section": "Clinical Framing Protocol (Pattern / Rule / Solve | Patrón / Regla / Solución)",
       "source": "02_COURSES/EXW210/EXW210_Spring2027/week-05_mod05/module-05_biomechanics.html",
-      "text": "[CLINICAL_PROFILE: Client H.P. | Age: 47 | Location: Yuma, AZ | Occupation: Warehouse supervisor | Observation in GY 116: Performs a 250 N (56 lb) kettlebell deadlift with the bell 0.42 m anterior to the L4/L5 lumbar fulcrum and exhibits an arched lower back (anterior pelvic tilt).] Pattern (Context / Patrón): An excessive 0.42 m moment arm generates 250 N × 0.42 m = 105 N\·m of lumbar extensor torque, compounded by tight hip flexors inhibiting gluteus maximus activation (altered reciprocal inhibition). Rule (Constra",
+      "text": "[CLINICAL_PROFILE: Client H.P. | Age: 47 | Location: Yuma, AZ | Occupation: Warehouse supervisor | Observation in GY 116: Performs a 250 N (56 lb) kettlebell deadlift with the bell 0.42 m anterior to the L4/L5 lumbar fulcrum and exhibits an arched lower back (anterior pelvic tilt).] Pattern (Context / Patrón): An excessive 0.42 m moment arm generates 250 N × 0.42 m = 105 N·m of lumbar extensor torque, compounded by tight hip flexors inhibiting gluteus maximus activation (altered reciprocal inhibition). Rule (Constra",
       "links": {
         "label": "Inspect EXW 210 Personal Fitness Training Syllabus & Modules (Course 42051)",
         "url": "https://azwestern.instructure.com/courses/42051/pages/exw210-syllabus-spring2027",

@@ -782,6 +782,7 @@
       <nav class="brand-links" aria-label="Site navigation">
         <a href="https://alanpruitt.com/">alanpruitt.com</a>
         <a href="https://hybrid-rag.dev/">hybrid-rag.dev (PWA)</a>
+        <a href="https://alanpruitt.com/awc-pathway/">AWC 5-Tier Pathway Edge Case</a>
         <a href="https://alanpruitt.com/curriculum-as-code/">Curriculum-as-Code</a>
         <a href="https://www.webcognita.com/#sovereign-hybrid-rag">Webcognita $0-CAPEX Edge Case</a>
         <a href="https://exwtoolkit.com/">exwtoolkit.com</a>
@@ -849,10 +850,32 @@
         </div>
       </div>
 
+      <div style="background-color:#FFFFFF; color:#0B192C; border:1.5px solid #0D5156; border-left:6px solid #940925; border-radius:0 8px 8px 0; padding:12px 16px; margin-bottom:16px; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:12px;">
+        <div style="font-size:0.88rem; color:#0B192C; background-color:#FFFFFF;">
+          <strong style="color:#940925; background-color:#FFFFFF;">Institutional Responsible AI Edge Use Case:</strong>
+          Explore the standalone, zero-PII 5-tier pathway workbench scoped strictly to
+          <strong>Adjunct Faculty &rarr; EXW Curriculum &rarr; Allied Health Programs &rarr; Entrepreneurial College &rarr; Arizona Western College</strong>.
+        </div>
+        <a href="/awc-pathway/" class="action-btn" style="background-color:#940925; color:#FFFFFF; border-color:#940925;">Open Focused AWC Pathway Workbench &rarr;</a>
+      </div>
+
+      <div class="filter-group">
+        <span class="filter-group-label" id="pathway-tier-label">Filter by 5-Tier AWC Institutional Pathway Node</span>
+        <div class="pill-row" role="group" aria-labelledby="pathway-tier-label" id="pub-pathway-pills">
+          <button type="button" class="filter-pill" data-ptier="ALL" aria-pressed="true">All 5 Tiers (1,005)</button>
+          <button type="button" class="filter-pill" data-ptier="N1_ADJUNCT_FACULTY" aria-pressed="false">1. Adjunct Faculty</button>
+          <button type="button" class="filter-pill" data-ptier="N2_EXW_CURRICULUM" aria-pressed="false">2. EXW Curriculum</button>
+          <button type="button" class="filter-pill" data-ptier="N3_ALLIED_HEALTH" aria-pressed="false">3. Allied Health Programs</button>
+          <button type="button" class="filter-pill" data-ptier="N4_ENTREPRENEURIAL_COLLEGE" aria-pressed="false">4. Entrepreneurial College</button>
+          <button type="button" class="filter-pill" data-ptier="N5_AWC_INSTITUTION" aria-pressed="false">5. Arizona Western College</button>
+        </div>
+      </div>
+
       <div class="filter-group">
         <span class="filter-group-label" id="course-filter-label">Filter by Course Fleet SSoT</span>
         <div class="pill-row" role="group" aria-labelledby="course-filter-label" id="pub-course-pills">
-          <button type="button" class="filter-pill" data-course="ALL" aria-pressed="true">ALL FLEET (980)</button>
+          <button type="button" class="filter-pill" data-course="ALL" aria-pressed="true">ALL PUBLIC (1,005)</button>
+          <button type="button" class="filter-pill" data-course="PATHWAY" aria-pressed="false">5-TIER SPINE (25)</button>
           <button type="button" class="filter-pill" data-course="EXW101" aria-pressed="false">EXW 101 • PAGA 2018</button>
           <button type="button" class="filter-pill" data-course="EXW150" aria-pressed="false">EXW 150 • DGA 2025–2030</button>
           <button type="button" class="filter-pill" data-course="EXW210" aria-pressed="false">EXW 210 • NASM OPT</button>
@@ -1094,8 +1117,10 @@
     var state = {
       lang: 'en',
       pubData: null,
+      pubTier: 'ALL',
       pubCourse: 'ALL',
       pubRole: 'ALL',
+      pathwayOnlyUrlMode: false,
       bridgeOnline: false,
       bridgeToken: '',
       locDomain: ''
@@ -1251,9 +1276,14 @@
       var items = state.pubData.items;
       for (var i = 0; i < items.length; i++) {
         var it = items[i];
+        if (state.pubTier !== 'ALL') {
+          var ptags = it.pathway_tags || [];
+          if (it.pathway_node !== state.pubTier && ptags.indexOf(state.pubTier) === -1) continue;
+        }
         if (state.pubCourse !== 'ALL' && it.course !== state.pubCourse) continue;
         if (state.pubRole !== 'ALL' && it.role !== state.pubRole) continue;
         var sc = scorePublicItem(it, qTerms, rawQ);
+        if (!qTerms.length && it.course === 'PATHWAY') sc += 4.0;
         if (sc > 0) matches.push({ item: it, score: sc });
       }
       matches.sort(function (a, b) { return b.score - a.score; });
@@ -1261,7 +1291,8 @@
       var elapsed = (performance.now() - t0).toFixed(1);
 
       metaEl.textContent = 'Showing ' + sliced.length + ' of ' + matches.length +
-        ' matching DOM GraphRAG nodes in ' + elapsed + ' ms (Course: ' + state.pubCourse + ', Role: ' + state.pubRole + ').';
+        ' matching DOM GraphRAG nodes in ' + elapsed + ' ms (Pathway Tier: ' + state.pubTier +
+        ', Course: ' + state.pubCourse + ', Role: ' + state.pubRole + ').';
 
       if (!sliced.length) {
         listEl.innerHTML = '<div class="hit-card"><p class="hit-excerpt">No matching DOM GraphRAG nodes found for this filter combination. Try resetting Course or Role to ALL.</p></div>';
@@ -1321,13 +1352,16 @@
     }
 
     function loadPublicIndex() {
-      fetch('/data/exw-ssot-rag-index.json')
-        .then(function (r) { return r.json(); })
+      fetch('/data/awc-pathway-graphrag.json')
+        .then(function (r) {
+          if (!r.ok) return fetch('/data/exw-ssot-rag-index.json').then(function (r2) { return r2.json(); });
+          return r.json();
+        })
         .then(function (data) {
           state.pubData = data;
           if (data.meta) {
-            document.getElementById('pub-source-vectors').textContent = Number(data.meta.source_vectors || 3278).toLocaleString();
-            document.getElementById('pub-distilled-nodes').textContent = Number(data.meta.distilled_nodes || 980).toLocaleString();
+            document.getElementById('pub-source-vectors').textContent = Number(data.meta.source_vectors || 3303).toLocaleString();
+            document.getElementById('pub-distilled-nodes').textContent = Number(data.meta.distilled_nodes || 1005).toLocaleString();
           }
           renderPublicSuggestedChips();
           runPublicSearch();
@@ -1336,6 +1370,16 @@
           document.getElementById('pub-results-meta').textContent = 'Public DOM GraphRAG index unavailable in this path.';
         });
     }
+
+    document.getElementById('pub-pathway-pills').addEventListener('click', function (e) {
+      var btn = e.target.closest('[data-ptier]');
+      if (!btn) return;
+      state.pubTier = btn.getAttribute('data-ptier');
+      this.querySelectorAll('[data-ptier]').forEach(function (b) {
+        b.setAttribute('aria-pressed', b === btn ? 'true' : 'false');
+      });
+      runPublicSearch();
+    });
 
     document.getElementById('pub-course-pills').addEventListener('click', function (e) {
       var btn = e.target.closest('[data-course]');
@@ -1600,10 +1644,20 @@
       });
     });
 
-    // Boot sequence
+    // Boot sequence (supports ?pathway=awc focused institutional mode hiding private vault tab)
+    var bootParams = new URLSearchParams(window.location.search);
+    if ((bootParams.get('pathway') || '').toLowerCase() === 'awc') {
+      state.pathwayOnlyUrlMode = true;
+      var localTabEl = document.getElementById('tab-local');
+      if (localTabEl) localTabEl.setAttribute('hidden', '');
+      var pillEl = document.getElementById('bridge-status-pill');
+      if (pillEl) pillEl.textContent = 'AWC 5-Tier Pathway Mode (0 PII)';
+    }
     initTokenFromHash();
     loadPublicIndex();
-    checkLocalBridge(Boolean(state.bridgeToken) || window.location.hostname === '127.0.0.1');
+    if (!state.pathwayOnlyUrlMode) {
+      checkLocalBridge(Boolean(state.bridgeToken) || window.location.hostname === '127.0.0.1');
+    }
   })();
   </script>
 </body>
