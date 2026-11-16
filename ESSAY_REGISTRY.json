@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-11-16T00:22:34Z",
+  "generated_at": "2026-11-16T16:17:56Z",
   "published_count": 40,
   "max_published_number": 40,
   "staged_numbers": [
@@ -8,9 +8,10 @@
     42,
     43,
     44,
-    45
+    45,
+    46
   ],
-  "next_new_essay_number": 46,
+  "next_new_essay_number": 47,
   "staged_essays": [
     {
       "essay_number": 41,
@@ -61,6 +62,16 @@
       "substack_kit": null,
       "linkedin_kit": null,
       "word_count": 899
+    },
+    {
+      "essay_number": 46,
+      "status": "staged",
+      "title": "Essay 46: What If I Didn't Scope the Pathway? – Demonstrating Responsible Institutional RAG from Adjunct Classroom to College Mission",
+      "slug": "essay-46-what-if-i-didnt-scope-the-pathway",
+      "staged_file": "docs/essays/essay-46-what-if-i-didnt-scope-the-pathway.md",
+      "substack_kit": "docs/essays/essay-46-substack.md",
+      "linkedin_kit": "docs/essays/essay-46-linkedin.md",
+      "word_count": 2181
     }
   ],
   "published_essays": [
