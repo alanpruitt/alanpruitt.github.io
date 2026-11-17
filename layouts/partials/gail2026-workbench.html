@@ -559,7 +559,7 @@
 
     <!-- Persistent Browser Study Progress Checklist -->
     <div class="gail-domain-card mt-4" style="margin-bottom:0;">
-      {{ printf "<%s class=\"text-base font-extrabold m-0 mb-1\" style=\"color:#0B192C;background-color:#FAFBF7;\">Personal 7-Step Exam Readiness Checklist (Saved Automatically in Browser)</%s>" $hSub $hSub | safeHTML }}
+      {{ printf "<%s class=\"text-base font-extrabold m-0 mb-1\" style=\"color:#0B192C;background-color:#FAFBF7;\">Personal %d-Step Exam Readiness Checklist (Saved Automatically in Browser)</%s>" $hSub (len $g.studyChecklist) $hSub | safeHTML }}
       <p class="text-xs m-0 mb-3" style="color:#0B192C;background-color:#FAFBF7;">
         Check off milestones as you progress; state persists locally in your browser via <code>localStorage</code> with zero account login.
       </p>

@@ -1,14 +1,26 @@
 {
-  "version": "1.4.0",
-  "lastUpdated": "2026-11-14",
+  "version": "1.5.0",
+  "lastUpdated": "2026-11-17",
   "title": "Google Cloud Generative AI Leader (GAIL) — 2026 On-Demand Student Study & Practice Hub",
   "subtitle": "Open-access, zero-login exam preparation workbench reconciling Google Cloud's 2025 Vertex AI / Agentspace terminology with the 2026 Gemini Enterprise Agent Platform curriculum.",
   "disclaimer": "Independent open-access educational study tool authored by Alan Pruitt (Google Gemini Certified Faculty; Google Cloud Launchpad for Veterans). Google Cloud, Vertex AI, Gemini, Gemma, Imagen, and Veo are trademarks of Google LLC. Not affiliated with or endorsed by Google LLC; contains zero proprietary exam items.",
   "examSpecs": [
-    { "label": "Exam Format", "value": "50–60 Multiple-Choice & Multiple-Select" },
-    { "label": "Time Limit", "value": "90 Minutes (Proctored Online or Center)" },
-    { "label": "Exam Fee & Validity", "value": "$99 USD • Valid for 3 Years" },
-    { "label": "Technical Scope", "value": "Zero Coding Required • Scenario Strategy" }
+    {
+      "label": "Exam Format",
+      "value": "50–60 Multiple-Choice & Multiple-Select"
+    },
+    {
+      "label": "Time Limit",
+      "value": "90 Minutes (Proctored Online or Center)"
+    },
+    {
+      "label": "Exam Fee & Validity",
+      "value": "$99 USD • Valid for 3 Years"
+    },
+    {
+      "label": "Technical Scope",
+      "value": "Zero Coding Required • Scenario Strategy"
+    }
   ],
   "officialLinks": [
     {
@@ -24,20 +36,28 @@
       "url": "https://docs.google.com/forms/d/e/1FAIpQLScNn5oUIFeMQjtsHilQsJPxDsnP-0DbhDVsIXaBeCmPj-dgYw/viewform"
     },
     {
-      "label": "No-Cost 5-Module Learning Path",
+      "label": "No-Cost Learning Path (Customer Portal)",
       "url": "https://www.skills.google/paths/1951"
+    },
+    {
+      "label": "No-Cost Learning Path (Partner Portal)",
+      "url": "https://partner.skills.google/paths/1952"
     },
     {
       "label": "CertMetrics Exam Registration",
       "url": "https://cp.certmetrics.com/google/en/login"
     },
     {
-      "label": "Google AI Studio (New Chat Sandbox)",
+      "label": "Google AI Studio (Prompt & Parameter Sandbox)",
       "url": "https://aistudio.google.com/prompts/new_chat"
     },
     {
+      "label": "Gemini Enterprise Agent Platform Docs",
+      "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/overview"
+    },
+    {
       "label": "Google Secure AI Framework (SAIF)",
-      "url": "https://safety.google/safety/saif/"
+      "url": "https://safety.google/cybersecurity-advancements/saif/"
     }
   ],
   "rosettaStone": [
@@ -124,6 +144,18 @@
       "name2025": "Custom Code Agent Frameworks",
       "layer": "Code-First Agent SDK",
       "examRole": "Open-source code-first framework for engineering custom multi-agent systems when pre-built (Gemini Enterprise) or drag-and-drop (CX Agent Studio) tools need deeper programmatic control."
+    },
+    {
+      "name2026": "Model Garden (Agent Platform) vs. Cloud API Library",
+      "name2025": "Vertex AI Model Garden vs. Pre-Trained Cloud AI APIs",
+      "layer": "Model Catalog vs. Turnkey APIs",
+      "examRole": "Model Garden discovers, customizes, and deploys 200+ First-Party (Gemini, Nano Banana 2, Veo 3.1, Chirp 3), Open (Gemma, CodeGemma, PaliGemma, Llama, Mistral, Falcon), and Partner (Anthropic Claude) foundation models; Cloud API Library enables turnkey pre-trained APIs (Document AI, Vision, Speech, Translation, Natural Language) with zero model training."
+    },
+    {
+      "name2026": "Gems in Gemini Apps",
+      "name2025": "Custom Workspace Prompt Personas (vs. Enterprise Agents)",
+      "layer": "Personal & Team Productivity",
+      "examRole": "Saved reusable instructions/personas inside Gemini Apps and Google Workspace for repeatable individual or team writing, coding, and analysis—distinct from Enterprise Agents, which add multi-silo Data Store connectors, tools, IAM governance, and adversarial defense."
     }
   ],
   "domains": [
@@ -139,7 +171,7 @@
         },
         {
           "heading": "Four Primary Gen AI Use Archetypes (C-S-D-A)",
-          "body": "Create (draft emails in Gmail, visuals in Slides/Nano Banana, videos in Google Vids, code in Code Assist) • Summarize (reports in Gemini Notebook, meetings in Meet, reviews in Looker) • Discover (demand forecasting on Agent Platform, recommendations in Agent Search, cross-silo search in Gemini Enterprise) • Automate (Document AI extraction, Speech/Translation APIs)."
+          "body": "Create (draft customer replies via Conversational AI, client emails in Gmail, presentation visuals in Slides, marketing design concepts in Nano Banana, troubleshooting videos in Google Vids, unit tests & starter code in Gemini Code Assist) • Summarize (financial reports in Gemini Notebook Enterprise, customer sentiment in Looker, meeting action items in Meet, complex data visuals/graphs in Gemini in BigQuery) • Discover (demand forecasting & molecular fine-tuning on Agent Platform, churn-reducing recommendations in Agent Search, Drive file Q&A, cross-silo search in Gemini Enterprise, real-time fraud anomaly detection) • Automate (accessible format conversion via Speech/Translation APIs, contract extraction in Document AI, automated code docs via Gemini Code Assist [legacy exam name: Codey], automated ticket routing)."
         },
         {
           "heading": "Three ML Learning Paradigms",
@@ -151,7 +183,7 @@
         },
         {
           "heading": "Model Ecosystem Spectrum",
-          "body": "Gemini (Pro / Frontier = deep multi-step reasoning, autonomous agents, up to 1M tokens; Flash = fast multimodal workhorse & Live streaming; Flash-Lite = ultra-low-cost high-volume routing/extraction; Nano = offline on-device edge via LiteRT) • Specialized Google Models (Nano Banana 2.1 / Imagen = conversational image gen & multi-image fusion; Veo 3.1 = video; Lyria = music/audio; Chirp = 100+ lang speech; Text & Multimodal Embeddings = RAG vectors) • Gemma Open-Weights (Gemma 1/2 = English-only; Gemma 3/3n/4 = 140+ languages; ShieldGemma 2 = safety moderation; CodeGemma, PaliGemma, MedGemma) • Partner/OSS in Model Garden."
+          "body": "4-Category Model Catalog: (1) First-Party Foundation Models — Gemini (Pro, Flash, Flash-Lite, Nano), Gemini Flash Image (Nano Banana 2), Veo 3.1 (text/image-to-video), Lyria (audio/music), Chirp 3 (speech-to-text), Embeddings; (2) First-Party Pre-Trained APIs — Speech-to-Text, Natural Language, Translation/Document Translation, Vision, Video Intelligence, Document AI; (3) Open Models — Gemma 2/3/3n/4, CodeGemma, PaliGemma, ShieldGemma 2, Meta Llama 3.1/3.2, Mistral, AI21, TII Falcon, BERT, FLAN-T5, ViT, EfficientNet; (4) Third-Party Partner Models in Model Garden — Anthropic Claude model family."
         }
       ],
       "examTrap": "Do not confuse Predictive/Discriminative ML (forecasting numbers, counting visitors, classifying spam) with Generative AI (creating novel text, code, images, audio, or synthetic summaries)."
@@ -197,7 +229,7 @@
         },
         {
           "heading": "RAG vs. Fine-Tuning vs. Grounding (Canonical Distinction)",
-          "body": "Grounding is the overarching goal of connecting model outputs to verifiable truth. RAG (Retrieve → Augment prompt → Generate → optional Iterate) uses Semantic Search + Vector Databases / Data Stores to ground answers in dynamic private/live docs WITHOUT retraining weights. Fine-Tuning updates model weights on curated labeled datasets to teach specialized domain style, tone, or narrow task behavior."
+          "body": "Grounding is the overarching goal of connecting model outputs to verifiable sources. RAG (Retrieve → Add to prompt → Generate) is a primary grounding technique powered by Semantic Search (matching conceptual meaning and user intent via dense vector embeddings rather than brittle exact keywords) and Vector Databases / Data Stores—updating facts dynamically without retraining weights. Fine-Tuning trains a pre-trained model on curated task/domain-specific datasets to adapt style, nomenclature, or domain grounding behavior."
         },
         {
           "heading": "Prompt Engineering Toolkit",
@@ -205,7 +237,7 @@
         },
         {
           "heading": "Sampling & Run Parameters",
-          "body": "Temperature: Low (0.0–0.2) = deterministic, factual, consistent (use for RAG, code, extraction); High (0.7–1.0) = creative brainstorming • Top-P (Nucleus Sampling): cumulative token probability cutoff • Output Length: max token cap • Safety Settings: configurable harm filters."
+          "body": "System Instructions define agent context, persona, and rules BEFORE user input across 4 goals: Consistency (tone/persona), Accuracy (domain grounding & admitting uncertainty), Relevance (staying in scope + handoff rules), and Safety (blocking unhelpful/unsafe replies; graduate to CX Agent Studio for enterprise adversarial defense) • Temperature: Low (0.0–0.2) = formal, deterministic, factual; High (0.7–1.0) = passionate, creative variety • Top-P: cumulative probability focus vs. elaboration • Output Length: token/word ceiling."
         },
         {
           "heading": "Human-in-the-Loop (HITL) Governance",
@@ -235,6 +267,10 @@
         {
           "heading": "Secure AI Framework (SAIF) & Cloud Security",
           "body": "SAIF mitigates AI-specific risks (prompt injection, data poisoning, model theft, sensitive data leakage). Enforced on Google Cloud via Identity and Access Management (IAM least privilege), Security Command Center (posture visibility), SynthID watermarking, and Google Cloud's enterprise privacy commitment (customer data/prompts are NOT used to train public foundation models)."
+        },
+        {
+          "heading": "Trust Through Transparency, Sovereignty & FinOps",
+          "body": "Google Cloud Transparency commitments ensure customer data and prompts remain customer-owned and are never used to train public foundation models without permission, backed by Access Transparency logs, regional Data Residency / Sovereignty selection, Carbon-Free Energy (CFE%) region placement, and 3-way Quality vs. Latency vs. Cost FinOps governance."
         }
       ],
       "examTrap": "Avoid 'all-at-once' enterprise rollouts or skipping governance for speed. The exam rewards starting with focused, measurable pilot use cases backed by clear baseline KPIs, SAIF security, and Top-Down + Bottom-Up alignment."
@@ -310,6 +346,20 @@
       "pattern": "Data analysts have 10 years of structured customer billing rows already stored in BigQuery, know standard SQL, and want to train a predictive churn model without spinning up Python/PyTorch clusters.",
       "rule": "Follow the 4-step custom ML ladder: Pre-trained/Model Garden -> BigQuery ML (tabular SQL data in BigQuery) -> AutoML (no-code tabular/image/video) -> Custom training from scratch.",
       "solve": "BigQuery ML (BQML) directly inside BigQuery using SQL; escalate to AutoML or custom Agent Platform pipelines only if multimodal or custom architectures are required."
+    },
+    {
+      "id": "sim-semantic",
+      "scenarioLabel": "Intent-Based Catalog Discovery (Semantic Search + Vector DB)",
+      "pattern": "E-commerce shoppers search 'lightweight gear for hot desert trail shifts' and legacy SQL keyword search returns zero results because product descriptions use terms like 'breathable UV hydration pack' instead of exact query words.",
+      "rule": "Matching conceptual meaning and user intent across unstructured text or multimodal catalogs requires dense vector embeddings indexed for similarity retrieval rather than exact lexical keyword matching.",
+      "solve": "Generate embeddings and store them in a Vector Database (Vertex AI Vector Search) or managed Agent Search to power Semantic Search and grounded RAG."
+    },
+    {
+      "id": "sim-gems-cx",
+      "scenarioLabel": "Personal Workspace Persona vs. Public Customer Bot",
+      "pattern": "A product marketer wants a saved, reusable brand-voice editor inside Gemini Apps, while the machinery division needs a public website troubleshooting bot protected against prompt-injection and adversarial attacks.",
+      "rule": "Reusable personal/team prompt personas in Gemini Apps map to Gems, whereas public customer-facing bots prototype System Instructions (Consistency, Accuracy, Relevance, Safety) via Metaprompting in Google AI Studio and graduate to CX Agent Studio for production adversarial defense.",
+      "solve": "Create a Gem in Gemini Apps for repeatable personal Workspace tasks; use Metaprompting in Google AI Studio to draft initial System Instructions, then build and harden the production bot in CX Agent Studio."
     }
   ],
   "practiceQuiz": [
@@ -507,41 +557,84 @@
       ],
       "correctIndex": 1,
       "rationale": "Instructor-annotated Module 3 & 5 rule: Cloud Run functions are lightweight event-driven handlers ideal for 'file lands in Cloud Storage -> process -> sleep' workflows (whereas Cloud Run hosts stateless web/API containers), and workloads running inside Google Cloud authenticate natively via IAM rather than external API keys."
+    },
+    {
+      "id": "q16",
+      "domain": "Section 3 • Improve Model Output",
+      "question": "A retailer wants customers searching 'outfit for a rainy outdoor graduation' to find water-resistant dress coats and umbrellas even when product titles do not contain the words 'rainy' or 'graduation'. Which technology pairing enables this conceptual meaning lookup?",
+      "options": [
+        "Exact SQL string equality matching with Temperature set to 1.0",
+        "Semantic search powered by embeddings stored in a vector database",
+        "Speech-to-Text transcription via Chirp 3",
+        "Disabling grounding and relying solely on unsupervised fraud detection"
+      ],
+      "correctIndex": 1,
+      "rationale": "Module 4 Student Materials highlight: Semantic search interprets user intent and conceptual meaning using numerical vector embeddings indexed in a vector database, overcoming brittle exact-keyword search."
+    },
+    {
+      "id": "q17",
+      "domain": "Section 2 • Google Cloud Offerings",
+      "question": "An enterprise architect is comparing model categories in Model Garden on Gemini Enterprise Agent Platform (Vertex AI). How are Gemma, Meta Llama, and Anthropic Claude categorized relative to Gemini and Chirp?",
+      "options": [
+        "Gemini and Chirp are First-Party Google foundation models; Gemma and Meta Llama are Open models; Anthropic Claude is a Third-Party partner model family in Model Garden.",
+        "All five models are closed-source consumer Gems limited to personal Gmail accounts.",
+        "Gemma and Claude are hardware TPUs, whereas Chirp is a SQL data warehouse.",
+        "Only third-party models can run in Google AI Studio without a Google Cloud project."
+      ],
+      "correctIndex": 0,
+      "rationale": "Module 3 Example Models & Specs taxonomy: Google First-Party foundation models include Gemini, Gemini Flash Image (Nano Banana 2), Veo 3.1, and Chirp 3; Open models include Gemma, CodeGemma, PaliGemma, Llama, Mistral, and Falcon; Third-Party partner models in Model Garden include Anthropic's Claude family."
+    },
+    {
+      "id": "q18",
+      "domain": "Section 3 & 4 • Agent Design & Governance",
+      "question": "During a rapid prototype in Google AI Studio, a team uses metaprompting to generate System Instructions for a machinery support bot covering Consistency, Accuracy, Relevance, and Safety. Before launching the bot publicly on their corporate website, what critical production step does Google Cloud recommend?",
+      "options": [
+        "Share a single personal Google AI Studio browser login with external website visitors.",
+        "Graduate the prototype to CX Agent Studio / Agent Studio on Google Cloud to add enterprise adversarial defense, Data Store grounding, IAM security, and scalable quotas.",
+        "Set Temperature and Top-P to maximum values so the bot guesses answers when unsure.",
+        "Convert the interactive website chatbot into a chat-only consumer photo album."
+      ],
+      "correctIndex": 1,
+      "rationale": "Module 5 Build Your Own Agent takeaway: System Instructions in Google AI Studio establish Consistency, Accuracy, Relevance, and Safety during rapid prototyping (which faces QPM/RPM/TPM rate limits), while production customer agents require CX Agent Studio / Agent Studio for robust adversarial defense, enterprise security, and scalable quotas."
     }
   ],
   "studyChecklist": [
     {
       "id": "chk-1",
-      "label": "Master the 14-pair 2025 ↔ 2026 Dual-Terminology Rosetta Stone (Vertex AI / Agentspace / Dialogflow ↔ Agent Platform / Gemini Enterprise / CX Agent Studio / ADK)."
+      "label": "Master the 16-pair 2025 ↔ 2026 Dual-Terminology Rosetta Stone (Vertex AI / Agentspace / Dialogflow / Model Garden / Gems ↔ Agent Platform / Gemini Enterprise / CX Agent Studio / ADK)."
     },
     {
       "id": "chk-2",
-      "label": "Review Section 1 (~30%): AI → ML → DL → Foundation Models → Gen AI hierarchy, C-S-D-A archetypes, Supervised/Unsupervised/RL, and 4-stage ML lifecycle."
+      "label": "Review Section 1 (~30%): AI → ML → DL → Foundation Models → Gen AI hierarchy, C-S-D-A archetypes, Supervised/Unsupervised/RL, 4-stage ML lifecycle, and 4-category Model Garden taxonomy."
     },
     {
       "id": "chk-3",
-      "label": "Review Section 2 (~35%): Google AI Studio vs. Agent Studio, Agent anatomy (Model + Instructions + Tools), 3 ways to get agents (Buy / CX Agent Studio / ADK), and 7 Pre-trained APIs."
+      "label": "Review Section 2 (~35%): Google AI Studio vs. Agent Studio, Agent anatomy (Model + Reasoning Loop + Tools), 3 ways to get agents (Buy / CX Agent Studio / ADK), Gems vs. Agents, and 7 Pre-trained APIs."
     },
     {
       "id": "chk-4",
-      "label": "Review Section 3 (~20%): 6 Foundation Model Limitations, Prompting vs. Grounding vs. RAG vs. Fine-Tuning vs. HITL, CoT vs. ReAct, Metaprompting, and Temperature / Top-P."
+      "label": "Review Section 3 (~20%): 6 Foundation Model Limitations, Grounding vs. RAG (Semantic Search + Vector DBs) vs. Fine-Tuning, System Instructions (Consistency/Accuracy/Relevance/Safety), CoT vs. ReAct, Metaprompting, and Temperature / Top-P."
     },
     {
       "id": "chk-5",
-      "label": "Review Section 4 (~15%): 6 Project Needs + 3 Resources (LiteRT + Gemini Nano Edge AI, BQML vs. AutoML, IAM vs. API keys, subscription vs. token vs. compute FinOps), and Google SAIF."
+      "label": "Review Section 4 (~15%): 6 Project Needs + 3 Resources (LiteRT + Gemini Nano Edge AI, BQML vs. AutoML, IAM vs. API keys, FinOps), Google SAIF, and Cloud Transparency commitments."
     },
     {
       "id": "chk-6",
-      "label": "Complete hands-on 15-minute Google AI Studio walkthrough (System Instructions, Temperature slider, and Grounding using Google Search toggle)."
+      "label": "Complete Module 5 Takeaway Labs 1 & 2 in Google AI Studio: Parameter Playground (Temperature, Output length, Top-P) and RAG in Action (Run settings → Tools → Grounding using Google Search)."
     },
     {
       "id": "chk-7",
-      "label": "Score 15 / 15 on the Diagnostic Practice Quiz in Tab 4 and verify readiness against official sample questions."
+      "label": "Complete Module 5 Takeaway Lab 3 in Google AI Studio: Build Your Own Agent via Metaprompting (Agent instruction writer → System Instructions → note CX Agent Studio graduation for adversarial defense)."
+    },
+    {
+      "id": "chk-8",
+      "label": "Score 18 / 18 on the Diagnostic Practice Quiz and verify readiness against the Official Sample Questions Form."
     }
   ],
   "liveSync": {
-    "statusSummary": "Active 30-minute S-A-R curriculum monitor (md_sha256: cf6261541c828a45): Modules 1–5 annotated decks + BOTH Day 1 & Day 2 full lecture transcripts (15h 37m total) ingested; monitoring Nov 19–20 Office Hours.",
-    "lastChecked": "2026-11-14",
+    "statusSummary": "Active 30-minute S-A-R curriculum monitor (md_sha256: cf6261541c828a45): Official Module 1–5 Student Materials & Takeaway Labs + Annotated Decks + Day 1 & Day 2 Lecture Transcripts (15h 37m) synced; monitoring Nov 19–20 Office Hours.",
+    "lastChecked": "2026-11-17",
     "milestones": [
       {
         "badge": "INGESTED (MODS 1–5)",
@@ -579,27 +672,113 @@
       "Google AI Studio Prompt Workbench (Live Day 2 Sync — aistudio.google.com/prompts/new_chat): Zero-cost browser sandbox (standard Google Account, no GCP project required) for rapid prompt prototyping, System Instructions, Temperature/Top-P/Top-K tuning, Structured Outputs, Grounding with Google Search, Metaprompting, and Gemini API key export—graduate to Agent Studio (Vertex AI Studio) when enterprise IAM, VPC-SC, CMEK, SLAs, and production quotas are required.",
       "Day 1 Full Lecture Transcript Digest (07:36:48 Corpus Sync): (1) Real GAIL questions are paragraph-length business scenarios, not short slide definitions; (2) The official Exam Guide PDF still prints 'Imagen' without mentioning 'Nano Banana' (hybrid diffusion + LLM architecture for accurate infographic text)—know both synonyms cold; (3) Half of 'Agent Platform' (Vertex AI) builds agents while the other half handles general ML/MLOps (Training, Endpoints, Batch Inference, Versioning, Drift Monitoring, IAM); (4) Customization ladder: Prompt Engineering -> Tools/Grounding/RAG ('look up the answer' — 90%+ of enterprise cases) -> Fine-Tuning ('grad school memorization' on open-weight Gemma) -> Custom Model; (5) Mitigate LLM sycophancy & jailbreaking with SAIF, Google Cloud Mandiant, and launching internal employee-productivity agents (Gemini Enterprise) before public customer bots.",
       "Instructor-Annotated Slide Deck Digest (263 Annotations Across Modules 1–5): (1) Gemini Notebook has ZERO Google Search access (strictly uploaded sources; sharing does not share raw source files; chat-only hides sources; manual re-sync on edits); (2) Gems (reusable prompts in Gemini) vs. Agents (Gemini Enterprise) vs. Skills (cross-conversation capabilities); (3) Three ways to get agents: Buy (Gemini Enterprise), Drag-and-Drop (CX Agent Studio, where legacy deterministic Dialogflow bots still run), or Code (Google ADK); (4) Custom ML escalation: Model Garden/APIs -> BigQuery ML (SQL tables) -> AutoML (tabular/image/video) -> Custom scratch; TPUs are Google's custom AI ASICs; (5) ReAct = CoT + Tools; Cloud Run functions (event-driven triggers) vs. Cloud Run (stateless containers); GCP internal auth = IAM (external = API key); FinOps billing = subscription (SaaS) vs. per-token (1 token ≈ 4 chars) vs. compute uptime (open/custom endpoints).",
-      "Day 2 Full Lecture Transcript Digest (08:00:34 Corpus Sync — 91 Exam Signals): (1) Google Workspace features (Nano Banana in Slides, formula synthesis in Sheets, Gemini in Docs) ARE tested even if you come from a Microsoft 365 shop; (2) Agent Platform sub-services: Feature Store, Model Registry (coexisting model versions), Agent Platform Evaluation (leader before/after quality metrics), and Agent Runtime ('Cloud Run specifically built for agents'); (3) Gemini Enterprise pre-connects corporate Email/SharePoint/Dropbox/BigQuery via Connectors (= Data Stores / managed RAG lookup engines) and provides seat-adoption analytics (top-10 users vs. zero-login seats) for 10–50 user before/after ROI pilots; (4) CX Suite + Security + BI: CX Agent Studio (premier drag-and-drop builder), Agent Assist (split-screen human rep copilot), CX Insights (call-center analytics), CCaaS (universal telephony/chat adapter), Gemini in Looker (BI charts), and Security Command Center (Gemini for Security); (5) Models memorize only ~2–5% of training data without provenance—use Grounding/RAG for citation explainability, log chatbot transcripts (with PII guards) for liability defense, and plan for annual model retirements."
+      "Day 2 Full Lecture Transcript Digest (08:00:34 Corpus Sync — 91 Exam Signals): (1) Google Workspace features (Nano Banana in Slides, formula synthesis in Sheets, Gemini in Docs) ARE tested even if you come from a Microsoft 365 shop; (2) Agent Platform sub-services: Feature Store, Model Registry (coexisting model versions), Agent Platform Evaluation (leader before/after quality metrics), and Agent Runtime ('Cloud Run specifically built for agents'); (3) Gemini Enterprise pre-connects corporate Email/SharePoint/Dropbox/BigQuery via Connectors (= Data Stores / managed RAG lookup engines) and provides seat-adoption analytics (top-10 users vs. zero-login seats) for 10–50 user before/after ROI pilots; (4) CX Suite + Security + BI: CX Agent Studio (premier drag-and-drop builder), Agent Assist (split-screen human rep copilot), CX Insights (call-center analytics), CCaaS (universal telephony/chat adapter), Gemini in Looker (BI charts), and Security Command Center (Gemini for Security); (5) Models memorize only ~2–5% of training data without provenance—use Grounding/RAG for citation explainability, log chatbot transcripts (with PII guards) for liability defense, and plan for annual model retirements.",
+      "Official Module 1–5 Student Materials & Takeaway Labs Sync (v1.5.0): (1) Learning Paths live on both Customer Portal (skills.google/paths/1951) and Partner Portal (partner.skills.google/paths/1952); (2) Model Garden 4-tier catalog = First-Party (Gemini 2.5 Pro / Flash / Flash-Lite, Nano Banana 2 / Gemini Flash Image, Veo 3.1, Chirp 3), Pre-Trained APIs (enabled in Cloud Console API Library), Open (Gemma, CodeGemma, PaliGemma, Llama, Mistral, Falcon, BERT, FLAN-T5, ViT, EfficientNet), and Third-Party Partner (Anthropic Claude); note legacy 'Codey' name alongside Gemini Code Assist; (3) Module 4 core links: Gems in Gemini Apps (reusable personal/team personas), Semantic Search + Vector Databases (meaning/intent embeddings for RAG), Gemini Notebook Enterprise, and Creating Trust Through Transparency (cloud.google.com/transparency); (4) Module 5 hands-on Takeaway Labs in Google AI Studio: Parameter Playground (Temperature, Output length, Top-P), RAG in Action (Tools -> Grounding using Google Search), and Build Your Own Agent via Metaprompting (System Instructions = Consistency, Accuracy, Relevance, Safety; graduate to CX Agent Studio for production adversarial defense)."
     ]
   },
   "evalResources": [
     {
-      "category": "Exam Logistics, Responsible AI, Regions & Edge Docs",
+      "category": "Module 1–5 Official Student Materials & Hands-On Lab Directory",
       "items": [
         {
-          "label": "Google AI Studio — Interactive Prompt Workbench",
+          "label": "Gen AI Leader 5-Module Path (Customer Portal)",
+          "url": "https://www.skills.google/paths/1951",
+          "note": "Page 1 Student Materials: no-cost on-demand 5-module Google Cloud Skills Boost path."
+        },
+        {
+          "label": "Gen AI Leader 5-Module Path (Partner Portal)",
+          "url": "https://partner.skills.google/paths/1952",
+          "note": "Page 1 Student Materials: partner-portal edition covering all 5 GAIL course modules."
+        },
+        {
+          "label": "Mod 1 • Gemini Enterprise Agent Platform Overview",
+          "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/overview",
+          "note": "Unified enterprise platform (Vertex AI) for building, scaling, and governing ML & agents."
+        },
+        {
+          "label": "Mod 1 & 3 • Explore Models in Model Garden",
+          "url": "https://cloud.google.com/vertex-ai/generative-ai/docs/model-garden/explore-models",
+          "note": "Catalog of First-Party (Gemini, Veo, Chirp), Open (Gemma, Llama, Mistral), & Partner (Claude) models."
+        },
+        {
+          "label": "Mod 2 • Google's Secure AI Framework (SAIF)",
+          "url": "https://safety.google/cybersecurity-advancements/saif/",
+          "note": "Conceptual cybersecurity framework mitigating prompt injection, data poisoning, & model theft."
+        },
+        {
+          "label": "Mod 3 • Lite Runtime (LiteRT) Edge AI Overview",
+          "url": "https://ai.google.dev/edge/litert",
+          "note": "High-performance on-device runtime (formerly TFLite) paired with Gemini Nano for offline edge."
+        },
+        {
+          "label": "Mod 4 • Google Workspace with Gemini Hub",
+          "url": "https://support.google.com/a/answer/13623623",
+          "note": "Embedded Gemini side panels across Gmail, Docs, Sheets, Slides, Drive, & Meet with enterprise privacy."
+        },
+        {
+          "label": "Mod 4 • Gemini Apps & Gemini Advanced Tiers",
+          "url": "https://support.google.com/gemini/answer/14517446?hl=en",
+          "note": "Plan capabilities and model access tiers for Gemini web and mobile experiences."
+        },
+        {
+          "label": "Mod 4 • Get Started with Gems in Gemini Apps",
+          "url": "https://support.google.com/gemini/answer/15236321?hl=en",
+          "note": "Create reusable custom Gemini instructions/personas for recurring individual or team tasks."
+        },
+        {
+          "label": "Mod 4 • What Is Semantic Search?",
+          "url": "https://cloud.google.com/discover/what-is-semantic-search?hl=en",
+          "note": "Intent- and meaning-based retrieval using embeddings vs. brittle keyword matching."
+        },
+        {
+          "label": "Mod 4 • What Is a Vector Database?",
+          "url": "https://cloud.google.com/discover/what-is-a-vector-database?hl=en",
+          "note": "Indexing high-dimensional embeddings for fast similarity lookup in enterprise RAG pipelines."
+        },
+        {
+          "label": "Mod 4 • What Is Gemini Notebook Enterprise?",
+          "url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/overview",
+          "note": "Closed-world source-grounded synthesis (zero Google Search bleed) with enterprise IAM controls."
+        },
+        {
+          "label": "Mod 5 • Send Prompts Using Agent Studio (Quickstart)",
+          "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/agent-studio/quickstart",
+          "note": "Enterprise console quickstart for prompt design, grounding, IAM governance, and production quotas."
+        },
+        {
+          "label": "Mod 5 • Google Cloud Console API Library",
+          "url": "https://console.cloud.google.com/apis/library",
+          "note": "Enable turnkey Pre-Trained Cloud AI APIs (Document AI, Speech, Vision, Translation) & Vertex APIs."
+        }
+      ]
+    },
+    {
+      "category": "Exam Logistics, Responsible AI, Transparency, Regions & Labs",
+      "items": [
+        {
+          "label": "Google AI Studio — Parameter, RAG & Metaprompting Sandbox",
           "url": "https://aistudio.google.com/prompts/new_chat",
-          "note": "Live Day 2 link: zero-cost browser playground for System Instructions, Temperature/Top-P, Grounding with Google Search, & API key export."
+          "note": "Mod 5 Takeaway Labs 1–3: test Temperature/Top-P, Grounding with Google Search, & System Instructions."
+        },
+        {
+          "label": "Mod 5 • Gemini API Quickstart & Generate an API Key",
+          "url": "https://ai.google.dev/gemini-api/docs/quickstart",
+          "note": "Generate a developer Gemini API key for external prototyping (use IAM inside Google Cloud)."
+        },
+        {
+          "label": "Mod 4 • Creating Trust Through Transparency",
+          "url": "https://cloud.google.com/transparency?hl=en",
+          "note": "Customer data ownership, zero training on customer data without permission, & Access Transparency."
         },
         {
           "label": "Google Workspace with Gemini Prompting Guide 101 (PDF)",
           "url": "https://services.google.com/fh/files/misc/workspace_with_gemini_prompting_guide.pdf",
-          "note": "Live Day 2 link (71 pp.): P-T-C-F framework, Deep Research, Canvas, NotebookLM, Google Vids, @[file] & Sheets =AI()."
+          "note": "71-page official guide: P-T-C-F framework, Deep Research, Canvas, NotebookLM, Vids, & Sheets =AI()."
         },
         {
           "label": "Google Models on Gemini Enterprise Agent Platform",
           "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/google-models",
-          "note": "Live Day 2 link: official catalog of Gemini (Pro/Flash/Flash-Lite), Nano Banana, Veo, Lyria, Embeddings, & Gemma."
+          "note": "Official catalog of Gemini (Pro/Flash/Flash-Lite), Nano Banana, Veo, Lyria, Embeddings, & Gemma."
         },
         {
           "label": "Pearson VUE OnVUE Online Testing Setup",
@@ -619,22 +798,17 @@
         {
           "label": "Responsible AI on Google Cloud",
           "url": "https://cloud.google.com/responsible-ai",
-          "note": "Enterprise safety filters, fairness, interpretability, and governance."
+          "note": "Enterprise safety filters, fairness, interpretability, SynthID watermarking, and governance."
         },
         {
           "label": "Google Cloud Global Regions & Zones",
           "url": "https://cloud.google.com/about/locations",
-          "note": "Live Day 2 link: enforce regional data residency/sovereignty, latency, and multi-zone HA."
+          "note": "Enforce regional data residency/sovereignty, latency targets, and multi-zone HA."
         },
         {
           "label": "Google Cloud Region Carbon-Free Energy (CFE%)",
           "url": "https://cloud.google.com/sustainability/region-carbon",
-          "note": "Live Day 2 link: select low-carbon Google Cloud regions for sustainable AI workloads."
-        },
-        {
-          "label": "Lite Runtime (LiteRT) Edge AI Docs",
-          "url": "https://ai.google.dev/edge/litert",
-          "note": "On-device offline runtime (formerly TensorFlow Lite) paired with Gemini Nano."
+          "note": "Select low-carbon Google Cloud regions for sustainable AI workloads."
         },
         {
           "label": "Reference Healthcare Agent Demo (GitHub)",
@@ -644,7 +818,7 @@
       ]
     },
     {
-      "category": "Model Quality Leaderboards & Token FinOps Calculators",
+      "category": "Model Quality Leaderboards, Benchmarks & Token FinOps Calculators",
       "items": [
         {
           "label": "Artificial Analysis (Quality vs. Speed vs. Price)",
@@ -654,7 +828,7 @@
         {
           "label": "LM Arena Leaderboard",
           "url": "https://arena.ai/leaderboard",
-          "note": "Blind human-preference Elo rankings across text, coding, and vision."
+          "note": "Blind human-preference Elo rankings across text, coding, vision, and image generation."
         },
         {
           "label": "BenchLM (Multi-Benchmark Aggregator)",
@@ -675,11 +849,41 @@
           "label": "LLMprices.dev (Live Token Pricing Table)",
           "url": "https://www.llmprices.dev/",
           "note": "Continuously updated input/output token pricing reference."
+        },
+        {
+          "label": "Vertex AI / Agent Platform Pricing",
+          "url": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+          "note": "Official Google Cloud token, context caching, grounding, and endpoint compute pricing."
+        },
+        {
+          "label": "Gemini API Pricing (Google AI Studio)",
+          "url": "https://ai.google.dev/pricing",
+          "note": "Free-tier rate limits (RPM/TPM/RPD) vs. pay-as-you-go developer token tiers."
+        },
+        {
+          "label": "Vertex AI Evaluation Service Overview",
+          "url": "https://cloud.google.com/vertex-ai/generative-ai/docs/models/evaluation-overview",
+          "note": "Automated rubric-based before/after quality evaluation across model upgrades and prompts."
+        },
+        {
+          "label": "Google Agent Development Kit (ADK) Docs",
+          "url": "https://google.github.io/adk-docs/",
+          "note": "Open-source code-first multi-agent SDK when custom programmatic orchestration is required."
+        },
+        {
+          "label": "SynthID AI Watermarking & Provenance",
+          "url": "https://deepmind.google/technologies/synthid/",
+          "note": "Imperceptible watermarking and detection for AI-generated images, audio, text, and video."
         }
       ]
     }
   ],
   "changelog": [
+    {
+      "version": "v1.5.0",
+      "date": "2026-11-17",
+      "notes": "Ingested Official Generative AI Leader Student Materials PDF (Modules 1–5 Resource Directory & Takeaway Labs, zero proprietary slide redistribution) + repaired gail2026.dev runtime schema array-minimum check: added Partner Portal path (1952), Agent Platform & Agent Studio quickstarts, Model Garden 4-category taxonomy (First-Party / Pre-Trained APIs / Open / Anthropic Claude Partner + legacy Codey synonym), Cloud Console API Library, Gems in Gemini Apps vs. Enterprise Agents, Semantic Search + Vector Databases, Creating Trust Through Transparency (cloud.google.com/transparency), and Module 5 Takeaway Labs (Parameter Playground, RAG in Action, Build Your Own Agent via Metaprompting + CX Agent Studio adversarial defense graduation); expanded to 16 Rosetta Stone pairs, 12 scenarios, 18 diagnostic questions, and 37 curated public links."
+    },
     {
       "version": "v1.4.0",
       "date": "2026-11-14",
