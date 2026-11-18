@@ -14,8 +14,8 @@
   "courseCode": "KIN-101",
   "identifier": "KIN-101-OER-2026-V2.2",
   "version": "2.2.0",
-  "datePublished": "2026-11-12",
-  "dateModified": "2026-11-12",
+  "datePublished": "2026-11-18",
+  "dateModified": "2026-11-18",
   "description": "Standardized ZTC OER module package for KIN-101 (Concepts of Kinesiology: Foundational Movement & Physical Activity) incorporating Curriculum-as-Code publishing, the Clinical Framing Protocol (Pattern / Rule / Solve), Physical Activity Guidelines for Americans (PAGA), 2nd Edition (2018) as the Academic Single Source of Truth (SSoT), and the U.S. Department of Labor AI Literacy Framework (TEN No. 07-25) with WCAG 2.2 AA (9:1 Double-Contrast Guard) compliance.",
   "url": "https://alanpruitt.com/export/kin-101/metadata.json",
   "sameAs": [
@@ -136,20 +136,20 @@
     {
       "@type": "AlignmentObject",
       "alignmentType": "teaches",
-      "educationalFramework": "U.S. Department of Labor (DOL) ETA Training and Employment Notice (TEN) No. 07-25: AI Literacy Framework (Feb 13, 2026)",
+      "educationalFramework": "U.S. Department of Labor (DOL) ETA Training and Employment Notice (TEN) No. 07-25: AI Literacy Framework (Feb 13, 2026; aligned with Executive Order 14434 Super Intelligence / SI, 91 FR 63129, & 15 U.S.C. 9401(3))",
       "targetName": "US-DOL-TEN-07-25",
       "targetUrl": "https://www.dol.gov/agencies/eta/advisories/ten-07-25",
-      "targetDescription": "5 Foundational Content Areas (1. Understand AI Principles, 2. Explore AI Uses, 3. Direct AI Effectively, 4. Evaluate Outputs, 5. Use AI Responsibly) and 7 Community College Delivery Design Principles.",
-      "description": "Workforce AI Problem Framing & Output Auditing via the Centaur Protocol and Pattern / Rule / Solve."
+      "targetDescription": "5 Foundational Content Areas (1. Understand AI Principles, 2. Explore AI Uses, 3. Direct AI Effectively, 4. Evaluate Outputs, 5. Use AI Responsibly) and 7 Community College Delivery Design Principles, bridged to federal Super Intelligence (SI) nomenclature under Executive Order 14434 (91 FR 63129) and 15 U.S.C. 9401(3).",
+      "description": "Workforce Super Intelligence (SI) / AI Problem Framing & Output Auditing via the Centaur Protocol and Pattern / Rule / Solve."
     },
     {
       "@type": "AlignmentObject",
       "alignmentType": "teaches",
-      "educationalFramework": "U.S. National Science Foundation (NSF) TechAccess: AI-Ready America Initiative (50-State Workforce Readiness, AI Literacy & Superintelligence Human-in-the-Loop Safety Governance)",
+      "educationalFramework": "U.S. National Science Foundation (NSF) TechAccess: AI-Ready America Initiative & Executive Order 14434 Super Intelligence (SI, 91 FR 63129) Human-in-the-Loop Safety Governance",
       "targetName": "NSF-TECHACCESS-AI-READY-2026",
       "targetUrl": "https://www.nsf.gov/funding/initiatives/ai-ready",
-      "targetDescription": "Nationwide 50-state and territory initiative accelerating practical AI literacy, experiential workforce upskilling, small business empowerment, and human-in-the-loop safety governance for frontier AI and superintelligence systems.",
-      "description": "Operationalized at Arizona Western College (building on the AWC Southwest Arizona AI Symposium) as a non-competing, turnkey Curriculum-as-Code reference architecture and enabling resource for State & Territory AI-Ready Coordination Hubs."
+      "targetDescription": "Nationwide 50-state and territory initiative accelerating practical Super Intelligence (SI, EO 14434) and AI (15 U.S.C. 9401(3)) literacy, experiential workforce upskilling, small business empowerment, and human-in-the-loop safety governance.",
+      "description": "Operationalized at Arizona Western College (building on the AWC Southwest Arizona AI Symposium) as a turnkey Curriculum-as-Code reference architecture and Non-Competing 50-State Enabling Partner for State & Territory Coordination Hubs."
     },
     {
       "@type": "AlignmentObject",
@@ -203,7 +203,7 @@
     }
   ],
   "schema_version": "S-A-R-v2.2-OER-Commons-Syndication",
-  "generated_at": "2026-11-12T21:22:08.495614+00:00",
+  "generated_at": "2026-11-18T02:52:39.075098+00:00",
   "course_code": "KIN-101",
   "course_slug": "kin-101",
   "course_title": "Concepts of Kinesiology: Foundational Movement & Physical Activity",
@@ -304,8 +304,8 @@
     {
       "path": "module-00/Module-00-Master.md",
       "format": "markdown",
-      "bytes": 21430,
-      "sha256": "26423a1dce3e3cff462354f172891785fd908d1f2cddd37f96f083986e8ad6d8"
+      "bytes": 21235,
+      "sha256": "85b9dc39abb603c120d1c6c0e93de70a8a55d1b153efd2d34bfffd4fa3850236"
     },
     {
       "path": "module-00/mod-00-clinical-discussion.html",
@@ -784,14 +784,14 @@
     {
       "path": "module-05/mod-05-lab-and-simulation-01.html",
       "format": "html",
-      "bytes": 66591,
-      "sha256": "3ab255c90e5628b732ca498f7df80024cf0861450382f4e7cbf67cd1d2131ec0"
+      "bytes": 66597,
+      "sha256": "2e1937f5fd8920b90469e07582de0ca8723b1afd5bacff105215724f6c7a5279"
     },
     {
       "path": "module-05/mod-05-lab-and-simulation-01.md",
       "format": "markdown",
-      "bytes": 32360,
-      "sha256": "a7382c96064e93b49d6b989c82e922cac45b54ed2317edade7e88ebf28e95d1e"
+      "bytes": 32366,
+      "sha256": "3cb88e47579369e825767121a32de8ceab755e34316fd2f6bbdfaa1fafeff37b"
     },
     {
       "path": "module-05/mod-05-lab-and-simulation-02.html",
@@ -880,14 +880,14 @@
     {
       "path": "module-06/mod-06-lab-and-simulation-01.html",
       "format": "html",
-      "bytes": 57079,
-      "sha256": "b1898bc8e916e97d111067595382f926dcef9c64813c0cf3ff1692a9a39f338f"
+      "bytes": 57059,
+      "sha256": "530666e6889d8482ece6d49b2844d451975c6d34b4a9b653ee4c4e518a0fb857"
     },
     {
       "path": "module-06/mod-06-lab-and-simulation-01.md",
       "format": "markdown",
-      "bytes": 29858,
-      "sha256": "0caf698a58063e74b8547b3d25453d44d258fd70b1e82fb5e9d69dba9a8ad040"
+      "bytes": 29838,
+      "sha256": "a57b2005af858eac0c0415a42f6e6fb2dda0516e806d04e01c2b9acce8b6cb6b"
     },
     {
       "path": "module-06/mod-06-overview-energy-systems-and-workout-fueling.html",
@@ -1060,14 +1060,14 @@
     {
       "path": "module-08/mod-08-lab-and-simulation-01.html",
       "format": "html",
-      "bytes": 47236,
-      "sha256": "baca85cf5dd6c383532b085fad6ed4ec76200504937b489d7ce84acfcfa3bb66"
+      "bytes": 47220,
+      "sha256": "bead348a84b32dad259945076a228885715548af8fa9d966ee0c9c8fea26632e"
     },
     {
       "path": "module-08/mod-08-lab-and-simulation-01.md",
       "format": "markdown",
-      "bytes": 24537,
-      "sha256": "dc6a26b247ae21094a8acf2c7322a266c497e06c07a5735d364d0b867921967c"
+      "bytes": 24523,
+      "sha256": "864359ef9875b8c9619450ab5cea3011827330c0cf1816d6179d032560faec6b"
     },
     {
       "path": "module-08/mod-08-lab-and-simulation-02.html",
@@ -1390,14 +1390,14 @@
     {
       "path": "module-11/mod-11-required-readings-lifespan-physical-activity-and-age-appropriate-exercise.html",
       "format": "html",
-      "bytes": 32944,
-      "sha256": "f2238b92e851992ed49c848860624927f264adbf00976ccc98deddb0749ebf91"
+      "bytes": 32931,
+      "sha256": "cf90a157f2b0d101c51ef194b1a717efa209f798af7dd2fb19023633fd4ea82f"
     },
     {
       "path": "module-11/mod-11-required-readings-lifespan-physical-activity-and-age-appropriate-exercise.md",
       "format": "markdown",
-      "bytes": 22244,
-      "sha256": "e1dc5b13bbdf8b73cbff7c51b91ed0429e9773d33f73e0f0c09ca31c537b0188"
+      "bytes": 22231,
+      "sha256": "19f6497043614e46fc0f7323ada3b8d71df3d2933ace3c94f7ae2dc5f77ee900"
     },
     {
       "path": "module-11/mod-11-summary-and-wrap-up-lifespan-physical-activity-and-age-appropriate-exercise.html",

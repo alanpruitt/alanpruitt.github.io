@@ -14,8 +14,8 @@
   "courseCode": "KIN-245",
   "identifier": "KIN-245-OER-2026-V2.2",
   "version": "2.2.0",
-  "datePublished": "2026-11-12",
-  "dateModified": "2026-11-12",
+  "datePublished": "2026-11-18",
+  "dateModified": "2026-11-18",
   "description": "Standardized ZTC OER module package for KIN-245 (Exercise Testing & Prescription: Clinical Ergometry & Physiological Assessment) incorporating Curriculum-as-Code publishing, the Clinical Framing Protocol (Pattern / Rule / Solve), ACSM's Guidelines for Exercise Testing and Prescription, 12th Edition (2025) as the Academic Single Source of Truth (SSoT), and the U.S. Department of Labor AI Literacy Framework (TEN No. 07-25) with WCAG 2.2 AA (9:1 Double-Contrast Guard) compliance.",
   "url": "https://alanpruitt.com/export/kin-245/metadata.json",
   "sameAs": [
@@ -135,20 +135,20 @@
     {
       "@type": "AlignmentObject",
       "alignmentType": "teaches",
-      "educationalFramework": "U.S. Department of Labor (DOL) ETA Training and Employment Notice (TEN) No. 07-25: AI Literacy Framework (Feb 13, 2026)",
+      "educationalFramework": "U.S. Department of Labor (DOL) ETA Training and Employment Notice (TEN) No. 07-25: AI Literacy Framework (Feb 13, 2026; aligned with Executive Order 14434 Super Intelligence / SI, 91 FR 63129, & 15 U.S.C. 9401(3))",
       "targetName": "US-DOL-TEN-07-25",
       "targetUrl": "https://www.dol.gov/agencies/eta/advisories/ten-07-25",
-      "targetDescription": "5 Foundational Content Areas (1. Understand AI Principles, 2. Explore AI Uses, 3. Direct AI Effectively, 4. Evaluate Outputs, 5. Use AI Responsibly) and 7 Community College Delivery Design Principles.",
-      "description": "Workforce AI Problem Framing & Output Auditing via the Centaur Protocol and Pattern / Rule / Solve."
+      "targetDescription": "5 Foundational Content Areas (1. Understand AI Principles, 2. Explore AI Uses, 3. Direct AI Effectively, 4. Evaluate Outputs, 5. Use AI Responsibly) and 7 Community College Delivery Design Principles, bridged to federal Super Intelligence (SI) nomenclature under Executive Order 14434 (91 FR 63129) and 15 U.S.C. 9401(3).",
+      "description": "Workforce Super Intelligence (SI) / AI Problem Framing & Output Auditing via the Centaur Protocol and Pattern / Rule / Solve."
     },
     {
       "@type": "AlignmentObject",
       "alignmentType": "teaches",
-      "educationalFramework": "U.S. National Science Foundation (NSF) TechAccess: AI-Ready America Initiative (50-State Workforce Readiness, AI Literacy & Superintelligence Human-in-the-Loop Safety Governance)",
+      "educationalFramework": "U.S. National Science Foundation (NSF) TechAccess: AI-Ready America Initiative & Executive Order 14434 Super Intelligence (SI, 91 FR 63129) Human-in-the-Loop Safety Governance",
       "targetName": "NSF-TECHACCESS-AI-READY-2026",
       "targetUrl": "https://www.nsf.gov/funding/initiatives/ai-ready",
-      "targetDescription": "Nationwide 50-state and territory initiative accelerating practical AI literacy, experiential workforce upskilling, small business empowerment, and human-in-the-loop safety governance for frontier AI and superintelligence systems.",
-      "description": "Operationalized at Arizona Western College (building on the AWC Southwest Arizona AI Symposium) as a non-competing, turnkey Curriculum-as-Code reference architecture and enabling resource for State & Territory AI-Ready Coordination Hubs."
+      "targetDescription": "Nationwide 50-state and territory initiative accelerating practical Super Intelligence (SI, EO 14434) and AI (15 U.S.C. 9401(3)) literacy, experiential workforce upskilling, small business empowerment, and human-in-the-loop safety governance.",
+      "description": "Operationalized at Arizona Western College (building on the AWC Southwest Arizona AI Symposium) as a turnkey Curriculum-as-Code reference architecture and Non-Competing 50-State Enabling Partner for State & Territory Coordination Hubs."
     },
     {
       "@type": "AlignmentObject",
@@ -202,7 +202,7 @@
     }
   ],
   "schema_version": "S-A-R-v2.2-OER-Commons-Syndication",
-  "generated_at": "2026-11-12T21:22:30.595626+00:00",
+  "generated_at": "2026-11-18T02:53:01.956508+00:00",
   "course_code": "KIN-245",
   "course_slug": "kin-245",
   "course_title": "Exercise Testing & Prescription: Clinical Ergometry & Physiological Assessment",
@@ -255,8 +255,8 @@
     {
       "path": "module-00/00-overview.md",
       "format": "markdown",
-      "bytes": 23119,
-      "sha256": "8fda11ba9cf4d63ec5f87525cce241b3cb196c01337c9d89076814bbeac3a3c8"
+      "bytes": 22851,
+      "sha256": "152767dd7d38d904d0ce11805bff1153077d1d1f9ea9c958734440cafe57bd3d"
     },
     {
       "path": "module-00/Module-00-Master.html",
@@ -267,8 +267,8 @@
     {
       "path": "module-00/Module-00-Master.md",
       "format": "markdown",
-      "bytes": 23096,
-      "sha256": "1554b9ebc7b0f112230726f853ac260850ca622b14fffca5bc1f49211e766db7"
+      "bytes": 22828,
+      "sha256": "2183d10a72288b088d45999f5b2333bdbc2198457dc0985db506b8420c83d951"
     },
     {
       "path": "module-01/00-overview.md",
@@ -291,8 +291,8 @@
     {
       "path": "module-02/00-overview.md",
       "format": "markdown",
-      "bytes": 15996,
-      "sha256": "b86927bf0f0a35ad36f6df244d12bb94662e04cd7967f523718e43a58660ab04"
+      "bytes": 15709,
+      "sha256": "13e780b500be0bdf2c1d3f6cca96cddf05e5bcfd1c68c06bb66d82b500367375"
     },
     {
       "path": "module-02/Module-02-Master.html",
@@ -303,8 +303,8 @@
     {
       "path": "module-02/Module-02-Master.md",
       "format": "markdown",
-      "bytes": 15958,
-      "sha256": "8e4383108427cd50b7eb27ce689535372b12228250910016803b82ae6d42864f"
+      "bytes": 15671,
+      "sha256": "4b6db800129528155f5b233b0ded827b4cf9edfbe08cc1d7c0313d24f8a0ed4d"
     },
     {
       "path": "module-03/00-overview.md",
@@ -363,56 +363,56 @@
     {
       "path": "module-06/00-overview.md",
       "format": "markdown",
-      "bytes": 17233,
-      "sha256": "900fa1e09fce702c71681427a6c6919afc32bd179898f2ef2e850a9096822684"
+      "bytes": 17197,
+      "sha256": "bf9ad4eb3bcfce8fda8128d39dcdcb892968ba257e865511072d1fe09a7b46ea"
     },
     {
       "path": "module-06/Module-06-Master.html",
       "format": "html",
-      "bytes": 21980,
-      "sha256": "0b9a2035c6b9e9fb3168d92635ba40671ec634330aceaf47a8e4c9d3734bade8"
+      "bytes": 21962,
+      "sha256": "6dcb59079bcff61d24eee5cb0a2275949ff9ef78b47957cb8864c5abd83e8f68"
     },
     {
       "path": "module-06/Module-06-Master.md",
       "format": "markdown",
-      "bytes": 17209,
-      "sha256": "0ddf6c54def52c770c7d364ecc94bb1680f9dbcb1c54a347432135997f272bd9"
+      "bytes": 17173,
+      "sha256": "f214a6f33d5b327f43fd2491f60b7b67f2817f2a6e04390f3352b2dc64be5b43"
     },
     {
       "path": "module-07/00-overview.md",
       "format": "markdown",
-      "bytes": 17431,
-      "sha256": "602ccfa68818a0caecd8b645c690f33ed49f8162ee2c59fddaa22b91a2f5ccae"
+      "bytes": 17428,
+      "sha256": "fcd014c9f3629adb435accff6cd202fe00fd3b48a97cdcb91d82a6545f73fafd"
     },
     {
       "path": "module-07/Module-07-Master.html",
       "format": "html",
-      "bytes": 22162,
-      "sha256": "7ffb3dc1d7b55b7d018816255030a45a01fd54345d72eaf6161db1266b58fe1a"
+      "bytes": 22159,
+      "sha256": "1b925019826c77caa2001ea815feffbd656f64b77709ae98569c9554a34cf354"
     },
     {
       "path": "module-07/Module-07-Master.md",
       "format": "markdown",
-      "bytes": 17402,
-      "sha256": "c20522006ff72e5a535c85eac78a44d8424b0c6a4f49d9a6b9ddd653422c759e"
+      "bytes": 17399,
+      "sha256": "e428126d43f16ff5898d64aeac31c173a5505dff268311fd28bacab8f038dad2"
     },
     {
       "path": "module-08/00-overview.md",
       "format": "markdown",
-      "bytes": 17999,
-      "sha256": "43780281d3f0241602b42f3645d3cc38febac8ca43f426e703b81dc26f8fb661"
+      "bytes": 17994,
+      "sha256": "7c9bff74ff851e5fd69f57286cd605c64db417643c65ca8bddc1628f5bff3ca4"
     },
     {
       "path": "module-08/Module-08-Master.html",
       "format": "html",
-      "bytes": 22822,
-      "sha256": "d857674a09e561f7bba2e768e2ca6691755013872e8666150908a7ddb3e48bd2"
+      "bytes": 22809,
+      "sha256": "39a20a28cb25bc7f0f6f1223aa6992850a506e316d59c8a3eb8334f7bdfa6482"
     },
     {
       "path": "module-08/Module-08-Master.md",
       "format": "markdown",
-      "bytes": 17969,
-      "sha256": "721bdbb45448e1dbcd43b1ede03bade8d3617cdda7f83831353713168bf9a21b"
+      "bytes": 17964,
+      "sha256": "03072c3cc5269735db73a5bfed063f54a581028e6b6a0870ff051bc930b6fdee"
     },
     {
       "path": "module-09/00-overview.md",
@@ -435,20 +435,20 @@
     {
       "path": "module-10/00-overview.md",
       "format": "markdown",
-      "bytes": 17813,
-      "sha256": "79d9900742be2cb20de76c24bb99e1f5c6be727e1788d381d94edc47c348d79d"
+      "bytes": 17808,
+      "sha256": "b85cb3d1eaa145da5b110edef037e406dfbfd081ea6c05a9667f584dc7bf064f"
     },
     {
       "path": "module-10/Module-10-Master.html",
       "format": "html",
-      "bytes": 21956,
-      "sha256": "d71a1ec1945098bd0c4acc9f022d3e618e9d8d3467fad9074dc92ae04af6eb66"
+      "bytes": 21950,
+      "sha256": "8f59e979d15d6bf9129da9a63b8face545a59e28b938f1024523385f32dcd85a"
     },
     {
       "path": "module-10/Module-10-Master.md",
       "format": "markdown",
-      "bytes": 17787,
-      "sha256": "2de2b23e4c10971ab9dc80ae58035dd43a531da4506364183a233e14a3a3ae6d"
+      "bytes": 17782,
+      "sha256": "09b9f702f41eb4cfaf5982e622678b1d726d9f94d5785ab002596101ea8be50e"
     },
     {
       "path": "module-11/00-overview.md",
@@ -471,20 +471,20 @@
     {
       "path": "module-12/00-overview.md",
       "format": "markdown",
-      "bytes": 18242,
-      "sha256": "985a665a07fbc11293f812cf3204baae572c2bc93fad9b127d0549e3f52ab13a"
+      "bytes": 18230,
+      "sha256": "1bd0c99c11583d607ca01fd0124a76a96f69dcedef4603e3ea5676b7a075e191"
     },
     {
       "path": "module-12/Module-12-Master.html",
       "format": "html",
-      "bytes": 22461,
-      "sha256": "c83345e41752e14d99326910263b2b9a87918e60f261b110b6d5f77bdad8cc31"
+      "bytes": 22458,
+      "sha256": "dcfdaa716d05ddc139f5fd999ebfa28ab2fa01f38d1c93c7c2cfe4ef0b408eff"
     },
     {
       "path": "module-12/Module-12-Master.md",
       "format": "markdown",
-      "bytes": 18211,
-      "sha256": "4a6595ad77e26b1ebca9aae6164b9e4f5eb7443e440f42a6dc8555bda52d6074"
+      "bytes": 18199,
+      "sha256": "8dd8fba7649914d6383dfe40efe93ec9fa29f766c7d74135c4e9c0c4001a8de8"
     },
     {
       "path": "module-13/00-overview.md",
@@ -549,8 +549,8 @@
     {
       "path": "module-16/Module-16-Master.html",
       "format": "html",
-      "bytes": 22052,
-      "sha256": "e09834fc098b3d0a4e4a3274a0a36436686a79e7254e6d15817ae62ea82cea4f"
+      "bytes": 22049,
+      "sha256": "e7ed91c5115bf9c6e2019f42e6e1f6614182b10eaa0b4118279518203811b2a0"
     },
     {
       "path": "module-16/Module-16-Master.md",
