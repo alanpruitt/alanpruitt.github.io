@@ -59,7 +59,7 @@
 
 ---
 
-## 3. Production Applications (9-App Sovereign PWA Ecosystem)
+## 3. Production Applications (11-App Sovereign PWA Ecosystem)
 
 1. **[EXW Digital Tool Kit (`exwtoolkit.com`)](https://exwtoolkit.com):** 9-Box bilingual (`EN` / `ES`) Wellness & Physical Education clinical PWA aligned with PAGA 2018 (2nd Ed.), DGA 2025–2030, ACSM 12th Ed., and NASM OPT standards, featuring Yuma desert heat-stress telemetry and cryptographic student verification tokens (`EXW-[COURSE]-M[XX]-[HASH]`).
 2. **[EXW Physical Activity Tool Kit (`paga2018.dev`)](https://paga2018.dev):** $0 ZTC Student Open Educational Resource (OER) for Arizona Western College WPE/EXW courses built on the Physical Activity Guidelines for Americans (2018, 2nd Ed.) with `Pattern / Rule / Solve` clinical activity audits.
@@ -70,6 +70,8 @@
 7. **[Prompt-per-Mile Offset Calculator (`prompt-mile-hero.lovable.app`)](https://prompt-mile-hero.lovable.app):** Sustainability and active-transit telemetry utility that converts human movement and green transit miles into CO2 savings and equivalent AI compute prompt offsets.
 8. **[AgFlow 5G — Smart Irrigation & Remote Operations Calculator (`agflow-roi-dash.lovable.app`)](https://agflow-roi-dash.lovable.app):** Desert AgTech pilot utility modeling the operational, financial, and water-conservation ROI of 5G-enabled remote irrigation management across the Yuma / Imperial Valley agricultural corridor.
 9. **[GAIL 2026 Frontier AI Leader & Workforce Readiness Workbench (`gail2026.dev`)](https://gail2026.dev):** Independent `$0 ZTC` bilingual (`EN` / `ES`) Open Educational Resource PWA (`NAICS 541511`) hydrated from canonical SSoT [`alanpruitt.com/gail2026/`](https://alanpruitt.com/gail2026/) with 7 accessible learning modes, 4-Tier `LRMI` alignment (`US-DOL-TEN-07-25`, `NSF-TECHACCESS-AI-READY-2026`, `HLC ILOs`, and 50-state K–16 bridge re-compilation), `W3C SKOS` ontology, and `W3C PROV-O` `SHA-256` readiness receipts.
+10. **[DOM GraphRAG, Sovereign Local Hybrid RAG & Zero-Laptop Travel Vault (`hybrid-rag.dev`)](https://hybrid-rag.dev):** 4-plane installable desktop & mobile PWA (canonical SSoT [`alanpruitt.com/hybrid-rag/`](https://alanpruitt.com/hybrid-rag/)) uniting `980` open `W3C PROV-O` `SHA-256` DOM GraphRAG nodes, zero-egress `127.0.0.1:8766` / WireGuard `View in RAM` HQ pairing, and Airplane-Mode `WCGVLT01` `AES-256-GCM` cross-border Travel Vaults with 1-tap `Border Lock`.
+11. **[Federal, Defense & Arizona SLED Hybrid RAG OSINT Radar (`webcognita.com/govcon-radar/`)](https://www.webcognita.com/govcon-radar/):** Zero-egress client-side Okapi BM25 + Semantic Concept Vector Reciprocal Rank Fusion (`RRF, k=60`) across `87` public Federal, Department of War (`PIEE`), Cooperative (`1GPA`, `Mohave`), and State of Arizona SLED (`Ring 0–9`) procurement nodes, interactive `FAR 2.101` / `A.R.S. § 41-2535` threshold routing, `NAICS / NIGP / PSC / GSA SIN` crosswalks, and a 12-gate `FAR 9.104-1` + `CMMC Level 1` readiness self-check.
 
 ---
 

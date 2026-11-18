@@ -33,16 +33,16 @@ def audit_file(filepath):
             continue
 
         line_no_code = re.sub(r"`[^`]*`", "", line)
-        h_html = re.search(r"<h([1-6])[^>]*>", line_no_code, re.IGNORECASE)
+        h_html_matches = list(re.finditer(r"<h([1-6])\b[^>]*>", line_no_code, re.IGNORECASE))
         h_md = re.search(r"^(#{1,6})\s+\S+", line)
 
-        level = None
-        if h_html:
-            level = int(h_html.group(1))
-        elif h_md:
-            level = len(h_md.group(1))
+        levels_on_line = (
+            [int(m.group(1)) for m in h_html_matches]
+            if h_html_matches
+            else ([len(h_md.group(1))] if h_md else [])
+        )
 
-        if level is not None:
+        for level in levels_on_line:
             if last_level == 1 and level not in (1, 2):
                 errors.append(
                     f"[Robust] Structure Violation: First content heading must be <h1> or <h2>, found <h{level}>."
