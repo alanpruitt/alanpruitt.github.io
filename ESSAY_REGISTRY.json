@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-11-18T22:21:00Z",
+  "generated_at": "2026-11-18T22:47:05Z",
   "published_count": 41,
   "max_published_number": 41,
   "staged_numbers": [
@@ -16,47 +16,47 @@
     {
       "essay_number": 42,
       "status": "staged",
-      "title": "What If I Didn't Log the Telemetry? – Compliance as Code & 6 Months of Continuous Curriculum-as-Code Intelligence",
+      "title": "Essay 42: What If I Didn't Log the Telemetry? – Automating ADA Title II, Section 508, and Super Intelligence (SI / AI) Compliance-as-Code",
       "slug": "essay-42-compliance-as-code-and-master-research-log",
       "staged_file": "docs/essays/essay-42-compliance-as-code-and-master-research-log.md",
       "substack_kit": "docs/essays/essay-42-substack.md",
       "linkedin_kit": "docs/essays/essay-42-linkedin.md",
-      "word_count": 1114
+      "word_count": 1262
     },
     {
       "essay_number": 43,
       "status": "staged",
-      "title": "Essay 43: What If I Waited Months to Prototype? – Rapid EdTech Engineering with Antigravity CLI/IDE, Gemma Gemini 4 Carbon, and Air-Gapped Apple Silicon",
+      "title": "Essay 43: What If I Waited Months to Prototype? – Rapid Sovereign Super Intelligence (SI) & Edge AI Solution Architecture on Air-Gapped Apple Silicon",
       "slug": "essay-43-rapid-edtech-prototyping-antigravity-carbon4-apple-silicon",
       "staged_file": "docs/essays/essay-43-rapid-edtech-prototyping-antigravity-carbon4-apple-silicon.md",
       "substack_kit": "docs/essays/essay-43-substack.md",
       "linkedin_kit": "docs/essays/essay-43-linkedin.md",
-      "word_count": 1837
+      "word_count": 1848
     },
     {
       "essay_number": 44,
       "status": "staged",
-      "title": "Essay 44: What If I Didn't Air-Gap the Stack? – The Why, How, and What of Compound Sovereign AI on Apple Silicon",
+      "title": "Essay 44: What If I Didn't Air-Gap the Stack? – Compound Super Intelligence (SI) & Sovereign Edge AI Architecture for FERPA, HIPAA, and Federal Data Privacy",
       "slug": "essay-44-what-if-i-didnt-air-gap-the-stack",
       "staged_file": "docs/essays/essay-44-what-if-i-didnt-air-gap-the-stack.md",
       "substack_kit": "docs/essays/essay-44-substack.md",
       "linkedin_kit": "docs/essays/essay-44-linkedin.md",
-      "word_count": 1708
+      "word_count": 1719
     },
     {
       "essay_number": 45,
       "status": "staged",
-      "title": "Essay 45: What If I Didn't Sanitize Before Searching? – Revisiting Google I/O's 'Search, Don't Sort' in the Era of Curriculum-as-Code and Sovereign Hybrid RAG",
+      "title": "Essay 45: What If I Didn't Sanitize Before Searching? – Revisiting Google I/O's 'Search, Don't Sort' for Sovereign Local Hybrid RAG and Super Intelligence (SI)",
       "slug": "essay-45-what-if-i-didnt-sanitize-before-searching",
       "staged_file": "docs/essays/essay-45-what-if-i-didnt-sanitize-before-searching.md",
       "substack_kit": "docs/essays/essay-45-substack.md",
       "linkedin_kit": "docs/essays/essay-45-linkedin.md",
-      "word_count": 1934
+      "word_count": 1945
     },
     {
       "essay_number": 46,
       "status": "staged",
-      "title": "Essay 46 (Staged Brief): What If I Bought a Drag-and-Drop SaaS Wrapper Instead? – Solving the Local Hybrid RAG Pain Point Consultants Misdiagnose at $0 CAPEX",
+      "title": "Essay 46 (Staged Brief): What If I Bought a Drag-and-Drop SaaS Wrapper Instead? – Solving the $0-CAPEX Sovereign Local Hybrid RAG Pain Point Under EO 14434 Super Intelligence (SI)",
       "slug": "essay-46-zero-capex-local-hybrid-rag-brief",
       "staged_file": "docs/essays/essay-46-zero-capex-local-hybrid-rag-brief.md",
       "substack_kit": null,
@@ -66,12 +66,12 @@
     {
       "essay_number": 47,
       "status": "staged",
-      "title": "Essay 47: What If I Didn't Scope the Pathway? – Demonstrating Responsible Institutional RAG from Adjunct Classroom to College Mission",
+      "title": "Essay 47: What If I Didn't Scope the Pathway? – Responsible Institutional GraphRAG and Workforce Super Intelligence (SI / AI) Governance Under U.S. DOL TEN No. 07-25",
       "slug": "essay-47-what-if-i-didnt-scope-the-pathway",
       "staged_file": "docs/essays/essay-47-what-if-i-didnt-scope-the-pathway.md",
       "substack_kit": "docs/essays/essay-47-substack.md",
       "linkedin_kit": "docs/essays/essay-47-linkedin.md",
-      "word_count": 2181
+      "word_count": 2192
     }
   ],
   "published_essays": [
@@ -676,8 +676,11 @@
       "es_file": "content/es/essays/essay-41-super-intelligence-eo-14434-sovereign-hybrid-rag.md",
       "substack_kit": "content/en/distribution/essay-41-substack.md",
       "linkedin_kit": "content/en/distribution/essay-41-linkedin.md",
-      "substack_live_url": null,
-      "word_count": 1785
+      "substack_live_url": "https://alanpruitt.substack.com/p/essay-41-what-if-i-didnt-bridge-the",
+      "word_count": 1785,
+      "substack_word_count": 945,
+      "substack_has_canonical_backlink": true,
+      "substack_has_disclaimer": true
     }
   ]
 }
