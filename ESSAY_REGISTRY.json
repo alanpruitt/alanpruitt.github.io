@@ -1,76 +1,76 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-11-18T21:29:50Z",
-  "published_count": 40,
-  "max_published_number": 40,
+  "generated_at": "2026-11-18T21:37:59Z",
+  "published_count": 41,
+  "max_published_number": 41,
   "staged_numbers": [
-    41,
     42,
     43,
     44,
     45,
-    46
+    46,
+    47
   ],
-  "next_new_essay_number": 47,
+  "next_new_essay_number": 48,
   "staged_essays": [
-    {
-      "essay_number": 41,
-      "status": "staged",
-      "title": "What If I Didn't Log the Telemetry? – Compliance as Code & 6 Months of Continuous Curriculum-as-Code Intelligence",
-      "slug": "essay-41-compliance-as-code-and-master-research-log",
-      "staged_file": "docs/essays/essay-41-compliance-as-code-and-master-research-log.md",
-      "substack_kit": "docs/essays/essay-41-substack.md",
-      "linkedin_kit": "docs/essays/essay-41-linkedin.md",
-      "word_count": 1114
-    },
     {
       "essay_number": 42,
       "status": "staged",
-      "title": "Essay 42: What If I Waited Months to Prototype? – Rapid EdTech Engineering with Antigravity CLI/IDE, Gemma Gemini 4 Carbon, and Air-Gapped Apple Silicon",
-      "slug": "essay-42-rapid-edtech-prototyping-antigravity-carbon4-apple-silicon",
-      "staged_file": "docs/essays/essay-42-rapid-edtech-prototyping-antigravity-carbon4-apple-silicon.md",
+      "title": "What If I Didn't Log the Telemetry? – Compliance as Code & 6 Months of Continuous Curriculum-as-Code Intelligence",
+      "slug": "essay-42-compliance-as-code-and-master-research-log",
+      "staged_file": "docs/essays/essay-42-compliance-as-code-and-master-research-log.md",
       "substack_kit": "docs/essays/essay-42-substack.md",
       "linkedin_kit": "docs/essays/essay-42-linkedin.md",
-      "word_count": 1837
+      "word_count": 1114
     },
     {
       "essay_number": 43,
       "status": "staged",
-      "title": "Essay 43: What If I Didn't Air-Gap the Stack? – The Why, How, and What of Compound Sovereign AI on Apple Silicon",
-      "slug": "essay-43-what-if-i-didnt-air-gap-the-stack",
-      "staged_file": "docs/essays/essay-43-what-if-i-didnt-air-gap-the-stack.md",
+      "title": "Essay 43: What If I Waited Months to Prototype? – Rapid EdTech Engineering with Antigravity CLI/IDE, Gemma Gemini 4 Carbon, and Air-Gapped Apple Silicon",
+      "slug": "essay-43-rapid-edtech-prototyping-antigravity-carbon4-apple-silicon",
+      "staged_file": "docs/essays/essay-43-rapid-edtech-prototyping-antigravity-carbon4-apple-silicon.md",
       "substack_kit": "docs/essays/essay-43-substack.md",
       "linkedin_kit": "docs/essays/essay-43-linkedin.md",
-      "word_count": 1708
+      "word_count": 1837
     },
     {
       "essay_number": 44,
       "status": "staged",
-      "title": "Essay 44: What If I Didn't Sanitize Before Searching? – Revisiting Google I/O's 'Search, Don't Sort' in the Era of Curriculum-as-Code and Sovereign Hybrid RAG",
-      "slug": "essay-44-what-if-i-didnt-sanitize-before-searching",
-      "staged_file": "docs/essays/essay-44-what-if-i-didnt-sanitize-before-searching.md",
+      "title": "Essay 44: What If I Didn't Air-Gap the Stack? – The Why, How, and What of Compound Sovereign AI on Apple Silicon",
+      "slug": "essay-44-what-if-i-didnt-air-gap-the-stack",
+      "staged_file": "docs/essays/essay-44-what-if-i-didnt-air-gap-the-stack.md",
       "substack_kit": "docs/essays/essay-44-substack.md",
       "linkedin_kit": "docs/essays/essay-44-linkedin.md",
-      "word_count": 1934
+      "word_count": 1708
     },
     {
       "essay_number": 45,
       "status": "staged",
-      "title": "Essay 45 (Staged Brief): What If I Bought a Drag-and-Drop SaaS Wrapper Instead? – Solving the Local Hybrid RAG Pain Point Consultants Misdiagnose at $0 CAPEX",
-      "slug": "essay-45-zero-capex-local-hybrid-rag-brief",
-      "staged_file": "docs/essays/essay-45-zero-capex-local-hybrid-rag-brief.md",
+      "title": "Essay 45: What If I Didn't Sanitize Before Searching? – Revisiting Google I/O's 'Search, Don't Sort' in the Era of Curriculum-as-Code and Sovereign Hybrid RAG",
+      "slug": "essay-45-what-if-i-didnt-sanitize-before-searching",
+      "staged_file": "docs/essays/essay-45-what-if-i-didnt-sanitize-before-searching.md",
+      "substack_kit": "docs/essays/essay-45-substack.md",
+      "linkedin_kit": "docs/essays/essay-45-linkedin.md",
+      "word_count": 1934
+    },
+    {
+      "essay_number": 46,
+      "status": "staged",
+      "title": "Essay 46 (Staged Brief): What If I Bought a Drag-and-Drop SaaS Wrapper Instead? – Solving the Local Hybrid RAG Pain Point Consultants Misdiagnose at $0 CAPEX",
+      "slug": "essay-46-zero-capex-local-hybrid-rag-brief",
+      "staged_file": "docs/essays/essay-46-zero-capex-local-hybrid-rag-brief.md",
       "substack_kit": null,
       "linkedin_kit": null,
       "word_count": 899
     },
     {
-      "essay_number": 46,
+      "essay_number": 47,
       "status": "staged",
-      "title": "Essay 46: What If I Didn't Scope the Pathway? – Demonstrating Responsible Institutional RAG from Adjunct Classroom to College Mission",
-      "slug": "essay-46-what-if-i-didnt-scope-the-pathway",
-      "staged_file": "docs/essays/essay-46-what-if-i-didnt-scope-the-pathway.md",
-      "substack_kit": "docs/essays/essay-46-substack.md",
-      "linkedin_kit": "docs/essays/essay-46-linkedin.md",
+      "title": "Essay 47: What If I Didn't Scope the Pathway? – Demonstrating Responsible Institutional RAG from Adjunct Classroom to College Mission",
+      "slug": "essay-47-what-if-i-didnt-scope-the-pathway",
+      "staged_file": "docs/essays/essay-47-what-if-i-didnt-scope-the-pathway.md",
+      "substack_kit": "docs/essays/essay-47-substack.md",
+      "linkedin_kit": "docs/essays/essay-47-linkedin.md",
       "word_count": 2181
     }
   ],
@@ -664,6 +664,20 @@
       "linkedin_kit": "content/en/distribution/essay-40-linkedin.md",
       "substack_live_url": null,
       "word_count": 1278
+    },
+    {
+      "essay_number": 41,
+      "status": "published",
+      "title": "Essay 41: What If I Didn't Bridge the Nomenclature? – Operationalizing Executive Order 14434 Super Intelligence (SI), U.S. DOL TEN No. 07-25, and Sovereign Local Hybrid RAG",
+      "date": "2026-11-18",
+      "slug": "essay-41-super-intelligence-eo-14434-sovereign-hybrid-rag",
+      "canonical_url": "https://alanpruitt.com/essays/essay-41-super-intelligence-eo-14434-sovereign-hybrid-rag/",
+      "en_file": "content/en/essays/essay-41-super-intelligence-eo-14434-sovereign-hybrid-rag.md",
+      "es_file": "content/es/essays/essay-41-super-intelligence-eo-14434-sovereign-hybrid-rag.md",
+      "substack_kit": "content/en/distribution/essay-41-substack.md",
+      "linkedin_kit": "content/en/distribution/essay-41-linkedin.md",
+      "substack_live_url": null,
+      "word_count": 1785
     }
   ]
 }
