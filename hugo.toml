@@ -8,9 +8,34 @@ defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
 
 [params]
-  description = "Alan Pruitt (Coach Alan) — Founder of Webcognita LLC (VOSB), AWC Adjunct & The University of Arizona Volunteer DCC. Curriculum-as-Code (S-A-R v2.2) & Edge AI."
+  description = "Alan Pruitt (Coach Alan) — Super Intelligence (SI) & Sovereign AI Strategist (EO 14434 / 15 U.S.C. 9401(3)), Curriculum Architect & Founder of Webcognita LLC (VOSB • SAM.gov UEI: EZ34U9KNJA17 • MBO Partners Marketplace)."
   defaultImage = "assets/og-preview.png"
-  defaultImageAlt = "Alan Pruitt (Coach Alan) — Curriculum-as-Code, Digital Accessibility Governance & OER Manifesto"
+  defaultImageAlt = "Alan Pruitt (Coach Alan) — Super Intelligence (SI), Sovereign Hybrid RAG, Curriculum-as-Code & ADA Title II Governance"
+  defaultKeywords = [
+    "Super Intelligence (SI)",
+    "Executive Order 14434",
+    "15 U.S.C. 9401(3) Artificial Intelligence",
+    "Sovereign Hybrid RAG",
+    "Retrieval-Augmented Generation",
+    "Curriculum-as-Code",
+    "Compliance-as-Code",
+    "S-A-R Standard",
+    "DOM GraphRAG",
+    "W3C PROV-O",
+    "ADA Title II Compliance",
+    "Section 508 Compliance",
+    "WCAG 2.2 AA 9:1 Contrast",
+    "WCAG 3.0 Cognitive Accessibility",
+    "U.S. DOL ETA TEN No. 07-25 AI Literacy Framework",
+    "NSF TechAccess: AI-Ready America",
+    "Air-Gapped Edge AI",
+    "Google Gemma 4",
+    "Google Gemini Certified Faculty",
+    "Canvas LMS GraphQL",
+    "MBO Partners Beeline Marketplace",
+    "Webcognita LLC VOSB UEI EZ34U9KNJA17 CAGE 4ZCN6",
+    "Alan Pruitt"
+  ]
 
 [sitemap]
   changefreq = "weekly"

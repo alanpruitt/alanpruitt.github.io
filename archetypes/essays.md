@@ -2,16 +2,24 @@
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
 draft: false
-description: "How Curriculum-as-Code (S-A-R Standard), the U.S. DOL ETA Advisory TEN No. 07-25 AI Literacy Framework, and automated WCAG 2.2 AA (9:1 Double-Contrast Guard) & WCAG 3.0 cognitive accessibility continuous integration serve as a Non-Competing 50-State Enabling Resource for NSF TechAccess: AI-Ready America and K–16 Dual-Enrollment Deliverables."
+description: "How Sovereign Super Intelligence (SI) & Artificial Intelligence (AI) governance (Executive Order 14434 & 15 U.S.C. 9401(3)), Curriculum-as-Code (S-A-R Standard v2.2), Sovereign Local Hybrid RAG, the U.S. DOL ETA Advisory TEN No. 07-25 AI Literacy Framework, and automated ADA Title II, Section 508 & WCAG 2.2 AA (9:1) / WCAG 3.0 continuous integration serve as a Non-Competing 50-State Enabling Resource."
 keywords:
+  - "Super Intelligence (SI)"
+  - "Executive Order 14434 (91 FR 63129)"
+  - "15 U.S.C. 9401(3) Artificial Intelligence"
+  - "Sovereign Local Hybrid RAG (SQLite FTS5 BM25 + Vector RRF)"
+  - "Retrieval-Augmented Generation (RAG)"
   - "Curriculum-as-Code"
+  - "Compliance-as-Code"
   - "S-A-R Standard"
+  - "DOM GraphRAG & W3C PROV-O"
+  - "ADA Title II & Section 508 Compliance"
+  - "WCAG 2.2 AA (9:1 Double-Contrast Guard) & WCAG 3.0 Cognitive Accessibility"
   - "U.S. DOL ETA Advisory TEN No. 07-25 AI Literacy Framework"
-  - "Automated WCAG 2.2 AA (9:1 Double-Contrast Guard) & WCAG 3.0 Cognitive Accessibility Continuous Integration for Higher Education"
   - "NSF TechAccess: AI-Ready America"
-  - "NSF AI-Ready America Enabling Resource & K–16 Dual-Enrollment Deliverables"
+  - "Air-Gapped Edge SI / AI (Ollama, Google Gemma 4, Google Gemini)"
   - "Non-Competing 50-State Enabling Resource"
-  - "Air-Gapped Edge AI (Google Gemini Carbon 4 & Carbon 4)"
+  - "MBO Partners / Beeline Extended Workforce Marketplace"
   - "Webcognita LLC (VOSB • SAM.gov UEI: EZ34U9KNJA17 • CAGE: 4ZCN6)"
 ---
 

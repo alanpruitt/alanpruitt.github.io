@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="CzTdgB5WJ_UjWFg7HpV9VOOACNmsgHQP1mFMI2b_tls" />
-    <title>{{ .Title }} | Alan Pruitt (Coach Alan) — Curriculum Architect &amp; AI Strategist</title>
-    <meta name="description" content="{{ .Description | default "Alan Pruitt (Coach Alan) — Curriculum Architect, AI Strategist, USMC Veteran & Founder of Webcognita LLC." }}">
+    <title>{{ .Title }} | Alan Pruitt (Coach Alan) — Super Intelligence (SI) &amp; Sovereign AI Strategist</title>
+    <meta name="description" content="{{ .Description | default "Alan Pruitt (Coach Alan) — Super Intelligence (SI) & Sovereign AI Strategist, Curriculum Architect, USMC Veteran & Founder of Webcognita LLC (VOSB)." }}">
+    {{- $kw := .Params.keywords | default .Site.Params.defaultKeywords -}}
+    {{- if $kw }}
+    <meta name="keywords" content="{{ delimit $kw ", " }}">
+    {{- end }}
     <meta name="author" content="Alan Pruitt">
     <link rel="canonical" href="{{ .Permalink }}">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%230B192C'/></svg>">
@@ -51,7 +55,10 @@
       "@context": "https://schema.org",
       "@type": "WebPage",
       "name": {{ .Title | jsonify | safeJS }},
-      "description": {{ (.Description | default "Alan Pruitt (Coach Alan) — Curriculum Architect, AI Strategist, USMC Veteran & Founder of Webcognita LLC.") | jsonify | safeJS }},
+      "description": {{ (.Description | default "Alan Pruitt (Coach Alan) — Super Intelligence (SI) & Sovereign AI Strategist, Curriculum Architect, USMC Veteran & Founder of Webcognita LLC (VOSB).") | jsonify | safeJS }},
+      {{- with (.Params.keywords | default .Site.Params.defaultKeywords) }}
+      "keywords": {{ . | jsonify | safeJS }},
+      {{- end }}
       "url": {{ .Permalink | jsonify | safeJS }},
       "inLanguage": {{ (.Lang | default "en") | jsonify | safeJS }},
       "author": {
