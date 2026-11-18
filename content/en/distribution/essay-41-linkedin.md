@@ -45,7 +45,7 @@ Check the first comment for Essay 41, live reference architectures, and my Resea
 Read my full architectural breakdown in Essay 41 ("What If I Didn't Bridge the Nomenclature? – Operationalizing Executive Order 14434 Super Intelligence (SI), U.S. DOL TEN No. 07-25, and Sovereign Local Hybrid RAG"):
 
 • Canonical Essay 41 (EN + Español): https://alanpruitt.com/essays/essay-41-super-intelligence-eo-14434-sovereign-hybrid-rag/
-• Substack Edition (with How I Made This provenance colophon): [Paste Substack URL Here]
+• Substack Edition (with How I Made This provenance colophon): https://alanpruitt.substack.com/p/essay-41-what-if-i-didnt-bridge-the
 • Sovereign Local Hybrid RAG Reference Architecture: https://hybrid-rag.dev/
 • 88-Node Federal & Arizona SLED Hybrid RAG Radar: https://www.webcognita.com/govcon-radar/
 • Webcognita LLC (VOSB • Active SAM.gov UEI: EZ34U9KNJA17 • CAGE: 4ZCN6 • Active MBO Partners Marketplace): https://www.webcognita.com/

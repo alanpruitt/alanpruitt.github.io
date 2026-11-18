@@ -31,6 +31,7 @@ EMOJI_RE = re.compile(r"[\U0001F300-\U0001FAFF\u2600-\u27BF]")
 
 # Known Substack post URL slug substring -> Canonical Essay Number
 SUBSTACK_SLUG_TO_ESSAY = {
+    "essay-41-what-if-i-didnt-bridge-the": 41,
     "what-if-i-didnt-automate-the-threshold": 39,
     "essay-38-what-if-i-didnt-build-the": 38,
     "what-if-i-didnt-future-proofing-my": 37,
