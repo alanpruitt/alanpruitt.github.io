@@ -1,13 +1,13 @@
 {
-  "version": "1.5.0",
-  "lastUpdated": "2026-11-17",
+  "version": "1.6.0",
+  "lastUpdated": "2026-11-19",
   "title": "Google Cloud Generative AI Leader (GAIL) — 2026 On-Demand Student Study & Practice Hub",
   "subtitle": "Open-access, zero-login exam preparation workbench reconciling Google Cloud's 2025 Vertex AI / Agentspace terminology with the 2026 Gemini Enterprise Agent Platform curriculum.",
   "disclaimer": "Independent open-access educational study tool authored by Alan Pruitt (Google Gemini Certified Faculty; Google Cloud Launchpad for Veterans). Google Cloud, Vertex AI, Gemini, Gemma, Imagen, and Veo are trademarks of Google LLC. Not affiliated with or endorsed by Google LLC; contains zero proprietary exam items.",
   "examSpecs": [
     {
       "label": "Exam Format",
-      "value": "50–60 Multiple-Choice & Multiple-Select"
+      "value": "50–60 Multiple-Choice Questions (Bookmark & Review)"
     },
     {
       "label": "Time Limit",
@@ -32,8 +32,16 @@
       "url": "https://services.google.com/fh/files/misc/generative_ai_leader_exam_guide_english.pdf"
     },
     {
-      "label": "Official Sample Questions",
+      "label": "Official Sample Questions (Live Form)",
       "url": "https://docs.google.com/forms/d/e/1FAIpQLScNn5oUIFeMQjtsHilQsJPxDsnP-0DbhDVsIXaBeCmPj-dgYw/viewform"
+    },
+    {
+      "label": "Official Sample Questions (24Q PDF)",
+      "url": "https://services.google.com/fh/files/misc/generative_ai_leader_sample_questions_english.pdf"
+    },
+    {
+      "label": "Office Hours Prep Deck (GAIL-OO)",
+      "url": "https://tinyurl.com/GAIL-OO"
     },
     {
       "label": "No-Cost Learning Path (Customer Portal)",
@@ -86,10 +94,10 @@
       "examRole": "Central employee portal uniting Google-quality multimodal search across enterprise data silos (Drive, Jira, SharePoint, SQL) with custom role-based AI work assistants."
     },
     {
-      "name2026": "Agent Search",
+      "name2026": "Agent Search (on Gemini Enterprise Agent Platform)",
       "name2025": "Vertex AI Search",
       "layer": "RAG & Recommendations",
-      "examRole": "Out-of-the-box grounded search and recommendation engine over organizational data, featuring specialized vertical tuning for retail, media, and healthcare."
+      "examRole": "Out-of-the-box grounded search and recommendation engine over organizational data (printed on the 2026 Live Sample Form as 'Agent Search on Gemini Enterprise Agent Platform' where the 2025 Sample PDF prints 'Vertex AI Search'), with vertical tuning for retail, media, and healthcare."
     },
     {
       "name2026": "Gemini Enterprise for Customer Experience",
@@ -113,7 +121,7 @@
       "name2026": "Veo",
       "name2025": "Veo",
       "layer": "Foundation Model (Video)",
-      "examRole": "Generative video foundation model creating high-definition video clips from text descriptions or still reference images."
+      "examRole": "Generative video foundation model creating high-definition video clips from STATIC text descriptions or still reference images—unsuitable for dynamically visualizing live, fluctuating real-time telemetry streams."
     },
     {
       "name2026": "Chirp",
@@ -152,10 +160,28 @@
       "examRole": "Model Garden discovers, customizes, and deploys 200+ First-Party (Gemini, Nano Banana 2, Veo 3.1, Chirp 3), Open (Gemma, CodeGemma, PaliGemma, Llama, Mistral, Falcon), and Partner (Anthropic Claude) foundation models; Cloud API Library enables turnkey pre-trained APIs (Document AI, Vision, Speech, Translation, Natural Language) with zero model training."
     },
     {
-      "name2026": "Gems in Gemini Apps",
+      "name2026": "Gemini App (Zero-Setup) vs. Gems in Gemini Apps",
       "name2025": "Custom Workspace Prompt Personas (vs. Enterprise Agents)",
       "layer": "Personal & Team Productivity",
-      "examRole": "Saved reusable instructions/personas inside Gemini Apps and Google Workspace for repeatable individual or team writing, coding, and analysis—distinct from Enterprise Agents, which add multi-silo Data Store connectors, tools, IAM governance, and adversarial defense."
+      "examRole": "Standalone Gemini app = prebuilt Gen AI workspace for immediate zero-setup creative brainstorming and drafting; Gems = saved reusable custom personas requiring initial setup (guidelines/instructions); Enterprise Agents = multi-silo Data Store connectors, tools, IAM governance, and adversarial defense."
+    },
+    {
+      "name2026": "Google Workspace with Gemini",
+      "name2025": "Gemini for Google Workspace",
+      "layer": "Collaborative Productivity",
+      "examRole": "Confirmed 2026 Live Sample Form rename (replacing 'Gemini for Google Workspace' in the 2025 PDF): embedded AI across Gmail, Docs, Sheets (=AI()), Slides (Nano Banana), Drive (@file), Meet, and Vids with enterprise data privacy (zero training on organizational data)."
+    },
+    {
+      "name2026": "Conversational, Code, Workflow, Data & Creative Agents",
+      "name2025": "5 Functional Gen AI Agent Role Archetypes",
+      "layer": "Agent Role Taxonomy",
+      "examRole": "Conversational agent = natural-language/multimodal dialogue (e.g., interactive VR persona); Code agent = write, review, debug, and generate software from natural language; Workflow agent = cross-app task automation; Data agent = analytical lookup; Creative agent = media ideation."
+    },
+    {
+      "name2026": "Explainable Gen AI Policies vs. Fairness Assessments",
+      "name2025": "Decision Interpretability vs. Demographic Bias Auditing",
+      "layer": "Responsible AI Governance",
+      "examRole": "Explainable Gen AI policies solve lack of decision transparency ('why did the model rank or exclude a candidate?'), whereas Fairness assessments audit for demographic/group discrimination—and Google Cloud's Open Approach mitigates single-vendor lock-in while AutoML + Model Garden + APIs (+ HITL) democratize AI."
     }
   ],
   "domains": [
@@ -175,7 +201,7 @@
         },
         {
           "heading": "Three ML Learning Paradigms",
-          "body": "Supervised Learning = labeled data (tags/targets known, e.g., spam detection, price prediction). Unsupervised Learning = unlabeled data (finds natural clusters, segments, or anomalies). Reinforcement Learning = learns via rewards & penalties through interaction (includes RLHF used to align LLMs)."
+          "body": "Supervised Learning = labeled data (input-output targets known—including unstructured free-text customer emails manually tagged 'Billing' or 'Tech Support'). Unsupervised Learning = unlabeled data (discovers natural clusters, segments, or anomalies). Reinforcement Learning = agent/robot learns optimal actions via numeric rewards & penalties through environment interaction (heavily tested, including RLHF used to align LLMs)."
         },
         {
           "heading": "Data Readiness & 4-Stage ML Lifecycle",
@@ -186,7 +212,7 @@
           "body": "4-Category Model Catalog: (1) First-Party Foundation Models — Gemini (Pro, Flash, Flash-Lite, Nano), Gemini Flash Image (Nano Banana 2), Veo 3.1 (text/image-to-video), Lyria (audio/music), Chirp 3 (speech-to-text), Embeddings; (2) First-Party Pre-Trained APIs — Speech-to-Text, Natural Language, Translation/Document Translation, Vision, Video Intelligence, Document AI; (3) Open Models — Gemma 2/3/3n/4, CodeGemma, PaliGemma, ShieldGemma 2, Meta Llama 3.1/3.2, Mistral, AI21, TII Falcon, BERT, FLAN-T5, ViT, EfficientNet; (4) Third-Party Partner Models in Model Garden — Anthropic Claude model family."
         }
       ],
-      "examTrap": "Do not confuse Predictive/Discriminative ML (forecasting numbers, counting visitors, classifying spam) with Generative AI (creating novel text, code, images, audio, or synthetic summaries)."
+      "examTrap": "Do not confuse Predictive/Discriminative ML (forecasting numbers, counting visitors, classifying spam) with Generative AI (creating novel text, code, images, audio, or synthetic summaries)—and remember Veo generates video from static text/images, NOT live fluctuating real-time telemetry dashboards."
     },
     {
       "id": "sec2",
@@ -200,11 +226,11 @@
         },
         {
           "heading": "Anatomy & Taxonomy of AI Agents",
-          "body": "Every Gen AI Agent combines 3 core parts: 1. Foundation Model ('brain'), 2. Reasoning Loop (observe → interpret → reason → act), and 3. Tools (Extensions for external APIs, Functions for defined actions, Data Stores for RAG knowledge, Plugins). Agent types: Deterministic (strict scripted rules), Generative (natural LLM conversation), Hybrid (best of both: strict transaction guardrails + natural dialogue), and Multi-Agent Systems (specialized agents collaborating on complex goals)."
+          "body": "Every Gen AI Agent combines 3 core parts: 1. Foundation Model ('brain'), 2. Reasoning Loop (observe → interpret → reason → act), and 3. Tools (Extensions for external APIs, Functions for defined actions, Data Stores for RAG knowledge, Plugins). Control styles: Deterministic, Generative, Hybrid, and Multi-Agent Systems. Functional role archetypes: Conversational agent (natural dialogue / VR), Code agent (write/review/debug software), Workflow agent, Data agent, and Creative agent."
         },
         {
           "heading": "Customer Experience Suite (4 Distinct Tools)",
-          "body": "CCaaS (cloud omnichannel contact center routing) • CX Agent Studio / Conversational Agents (customer-facing self-service virtual bots) • Agent Assist (real-time suggested replies & post-call summaries coaching LIVE human reps) • CX / Conversational Insights (manager sentiment & call-driver analytics)."
+          "body": "Google Cloud Contact Center as a Service / CCaaS (full omnichannel phone + email + chat platform with CRM integration & intelligent routing—broader than standalone Conversational AI) • CX Agent Studio / Conversational Agents (customer-facing self-service virtual bots) • Agent Assist (real-time suggested replies & post-call summaries coaching LIVE human reps) • CX / Conversational Insights (manager sentiment & call-driver analytics)."
         },
         {
           "heading": "7 Pre-Trained Cloud AI APIs (Zero Custom Training)",
@@ -212,7 +238,7 @@
         },
         {
           "heading": "Serverless, Workspace & No-Code/Low-Code Entry Points",
-          "body": "Google Workspace with Gemini spans Standalone AI apps (Gemini App Deep Research & Canvas, NotebookLM Audio/Video Overviews & Mind Maps, Google Vids + Veo) and Embedded Side Panels (@[file] Drive grounding, Sheets =AI() formula, Gems, Meet notes — with zero training or human review of Workspace data) • AppSheet = no-code business apps • Apps Script = low-code Workspace automation • Cloud Run = serverless API compute."
+          "body": "Google Workspace with Gemini spans Standalone AI apps—Gemini App (prebuilt zero-setup creative brainstorming, Deep Research & Canvas), Gemini Notebook / NotebookLM (multi-doc research Q&A, Audio/Video Overviews & Mind Maps), Google Vids + Veo—and Embedded Side Panels (@[file] Drive grounding, Sheets =AI() formula, Gems [requires initial persona/guideline setup], Meet notes — zero training on Workspace data) • AppSheet = no-code apps • Apps Script = low-code Workspace automation • Cloud Run = serverless compute."
         }
       ],
       "examTrap": "Google AI Studio vs. Agent Studio (Vertex AI Studio): Pick Google AI Studio ONLY for rapid, free-tier browser prototyping and parameter testing. Pick Agent Studio / Vertex AI Platform whenever enterprise IAM, compliance, SLAs, scalable quotas, or production deployment are mentioned."
@@ -240,8 +266,8 @@
           "body": "System Instructions define agent context, persona, and rules BEFORE user input across 4 goals: Consistency (tone/persona), Accuracy (domain grounding & admitting uncertainty), Relevance (staying in scope + handoff rules), and Safety (blocking unhelpful/unsafe replies; graduate to CX Agent Studio for enterprise adversarial defense) • Temperature: Low (0.0–0.2) = formal, deterministic, factual; High (0.7–1.0) = passionate, creative variety • Top-P: cumulative probability focus vs. elaboration • Output Length: token/word ceiling."
         },
         {
-          "heading": "Human-in-the-Loop (HITL) Governance",
-          "body": "Mandatory human expert oversight in high-risk workflows (healthcare, finance, legal, contextual content moderation) via Pre-generation review (validating before deployment/release) and Post-generation review (continuous feedback loops)."
+          "heading": "Human-in-the-Loop (HITL) & Explainable AI Governance",
+          "body": "Mandatory human expert oversight in high-risk workflows (healthcare, HR, finance, legal, moderation) via Pre-generation review and Post-generation review. Pair with Explainable Gen AI policies when stakeholders require decision transparency ('why an output ranked or excluded an individual'), distinct from Fairness assessments (auditing group bias)."
         }
       ],
       "examTrap": "Never pick Fine-Tuning when a company's primary need is answering questions from frequently updated manuals, inventory, or policies while minimizing hallucinations — that is ALWAYS Grounding / RAG."
@@ -254,7 +280,7 @@
       "pillars": [
         {
           "heading": "Pre-Project Scoping: 6 Needs & 3 Resources",
-          "body": "6 Needs: Scale (user volume), Customization (SaaS vs. RAG vs. custom), User Interaction, Privacy (PII/PHI sensitivity), Latency (real-time vs. batch), and Connectivity (cloud vs. offline edge). 3 Resources: People (in-house ML skill), Money (budget/TCO), and Time (speed-to-market)."
+          "body": "6 Needs: Scale, Customization, User Interaction, Privacy, Latency, and Connectivity (cloud vs. offline edge). 3 Resources: People (in-house ML skill), Money (budget/TCO), and Time (speed-to-market). Google Cloud's Open Approach prevents single-vendor lock-in across diverse tools, while Google Cloud democratizes AI for teams lacking ML specialists via low-code/no-code AutoML, Model Garden pre-trained models, and easy-to-use APIs (always retaining Human-in-the-Loop—never 'zero human input')."
         },
         {
           "heading": "Multi-Directional Adoption (Top-Down + Bottom-Up)",
@@ -360,6 +386,20 @@
       "pattern": "A product marketer wants a saved, reusable brand-voice editor inside Gemini Apps, while the machinery division needs a public website troubleshooting bot protected against prompt-injection and adversarial attacks.",
       "rule": "Reusable personal/team prompt personas in Gemini Apps map to Gems, whereas public customer-facing bots prototype System Instructions (Consistency, Accuracy, Relevance, Safety) via Metaprompting in Google AI Studio and graduate to CX Agent Studio for production adversarial defense.",
       "solve": "Create a Gem in Gemini Apps for repeatable personal Workspace tasks; use Metaprompting in Google AI Studio to draft initial System Instructions, then build and harden the production bot in CX Agent Studio."
+    },
+    {
+      "id": "sim-explainable-open",
+      "scenarioLabel": "Opaque Screening Decisions & Multi-Vendor Lock-In",
+      "pattern": "An enterprise talent-acquisition board worries its Gen AI resume screener cannot explain why specific applicants were deprioritized, while the CIO mandates avoiding lock-in to a single proprietary AI vendor despite having minimal in-house ML engineering staff.",
+      "rule": "Lack of rationale visibility requires Explainable Gen AI policies (whereas Fairness assessments test demographic bias); vendor-lock-in risk maps to Google Cloud's Open Approach; low ML staffing maps to AI Democratization with Human-in-the-Loop retained.",
+      "solve": "Implement Explainable Gen AI policies + HITL review for transparency, adopt Google Cloud's Open Approach (open Gemma/Llama + partner models) to prevent lock-in, and democratize build velocity with Vertex AI AutoML, Model Garden, and turnkey Cloud AI APIs."
+    },
+    {
+      "id": "sim-zero-setup-veo",
+      "scenarioLabel": "Zero-Setup Tagline Ideation vs. Live-Stream Video Trap",
+      "pattern": "A brand team needs a prebuilt Gen AI tool with zero configuration right now to brainstorm campaign taglines and social post drafts, while an operations lead asks whether Veo can render a live dashboard streaming second-by-second logistics sensor metrics.",
+      "rule": "Immediate zero-setup creative ideation uses the standalone Gemini app (custom Gems require initial persona/guideline setup; NotebookLM analyzes uploaded source docs), and Veo generates video strictly from static text/image inputs—not dynamic real-time data streams.",
+      "solve": "Launch the standalone Gemini app for immediate zero-setup creative drafting, and route live fluctuating sensor streams to Looker / BI analytics rather than Veo (reserving Veo for storyboard/image-to-video clips)."
     }
   ],
   "practiceQuiz": [
@@ -596,32 +636,110 @@
       ],
       "correctIndex": 1,
       "rationale": "Module 5 Build Your Own Agent takeaway: System Instructions in Google AI Studio establish Consistency, Accuracy, Relevance, and Safety during rapid prototyping (which faces QPM/RPM/TPM rate limits), while production customer agents require CX Agent Studio / Agent Studio for robust adversarial defense, enterprise security, and scalable quotas."
+    },
+    {
+      "id": "q19",
+      "domain": "Section 3 & 4 • Responsible AI & Transparency",
+      "question": "A regional credit union pilots a Gen AI loan-triage assistant, but compliance officers object that loan underwriters cannot see why the system flagged or deprioritized specific applicant files. Which action directly addresses this lack of decision transparency?",
+      "options": [
+        "Establish explainable Gen AI governance and interpretability policies so model reasoning and contributing factors can be inspected.",
+        "Ingest millions of additional unlabeled web articles without changing governance controls.",
+        "Run a one-time demographic fairness benchmark only, without exposing per-decision rationale.",
+        "Fine-tune a larger foundation model at Temperature 1.0 to increase output creativity."
+      ],
+      "correctIndex": 0,
+      "rationale": "Explainable Gen AI policies directly address 'black-box' lack of transparency into how or why outputs are reached. Fairness assessments evaluate group bias rather than explaining individual decisions, and adding data or fine-tuning does not make reasoning transparent."
+    },
+    {
+      "id": "q20",
+      "domain": "Section 1 • Fundamentals",
+      "question": "A logistics firm runs two AI initiatives: (1) an autonomous yard shuttle learns optimal docking maneuvers by earning positive points for smooth, on-time docks and point deductions for delays; and (2) an operations team trains a ticket router using 30,000 free-text customer emails that analysts manually tagged as 'Customs Hold', 'Damaged Freight', or 'Invoice Query'. Which pairing accurately classifies both?",
+      "options": [
+        "Initiative 1 uses unsupervised learning; Initiative 2 uses unlabeled structured data.",
+        "Initiative 1 uses reinforcement learning; Initiative 2 uses labeled data (for supervised learning).",
+        "Both initiatives use deterministic rule trees with zero machine learning.",
+        "Initiative 1 uses text-to-speech transcription; Initiative 2 uses reinforcement learning."
+      ],
+      "correctIndex": 1,
+      "rationale": "Learning through trial-and-error interaction with numeric rewards and penalties is Reinforcement Learning. Even though free-text email prose is unstructured, manually attaching target category tags ('Customs Hold', etc.) makes the dataset Labeled Data suitable for supervised ML."
+    },
+    {
+      "id": "q21",
+      "domain": "Section 4 • Business Strategy & Governance",
+      "question": "A manufacturing CIO has two strategic requirements: (1) integrate open-source and multi-vendor AI tools without becoming locked into a single proprietary vendor, and (2) enable business analysts who lack deep ML coding expertise to build AI solutions responsibly. How does Google Cloud satisfy both?",
+      "options": [
+        "Enforce closed single-model lock-in while deploying fully autonomous black-box AI that requires zero human input.",
+        "Support an open approach (open Gemma/Llama models, open standards, partner ecosystem) to prevent lock-in, and democratize AI through low-code AutoML, Model Garden pre-trained models, and turnkey APIs with Human-in-the-Loop oversight.",
+        "Require every department to write custom C++ CUDA kernels on bare-metal servers before accessing pre-trained APIs.",
+        "Limit organization-wide AI usage to consumer personal Gmail accounts with no IAM governance."
+      ],
+      "correctIndex": 1,
+      "rationale": "Google Cloud's open approach mitigates vendor lock-in across diverse tools and open/partner models, while AI democratization lowers technical barriers via AutoML, Model Garden, and easy-to-use APIs. Exam trap: reject distractors claiming 'fully automated AI requiring zero human input'—Google Cloud emphasizes Human-in-the-Loop."
+    },
+    {
+      "id": "q22",
+      "domain": "Section 2 • Google Cloud Offerings",
+      "question": "A national insurer wants to modernize its support operations into a unified cloud platform spanning voice calls, web chat, and email queues, complete with live CRM synchronization and intelligent call routing to specialists—while separately enabling internal underwriters to deploy custom cross-silo agents over policy, claims, and actuarial repositories. Which two Google Cloud offerings match these two needs?",
+      "options": [
+        "Google Cloud Contact Center as a Service (CCaaS) for unified omnichannel + CRM contact center operations, and Gemini Enterprise for cross-silo internal employee agents.",
+        "Chirp alone for omnichannel CRM routing, and LiteRT for cross-silo enterprise search.",
+        "Cloud Vision API for phone routing, and consumer Google Photos for actuarial agents.",
+        "Standalone Conversational AI without telephony/CRM integration for both workloads."
+      ],
+      "correctIndex": 0,
+      "rationale": "Google Cloud CCaaS provides the full omnichannel (voice/email/chat) + CRM + routing contact-center platform (broader than standalone Conversational AI bots alone), while Gemini Enterprise (formerly Agentspace) empowers employees to discover data and run custom internal agents across organizational silos."
+    },
+    {
+      "id": "q23",
+      "domain": "Section 2 • Google Cloud Offerings",
+      "question": "A software team wants an AI agent specialized in generating starter modules, reviewing pull requests, and debugging scripts from natural-language prompts, while the communications team wants a prebuilt Gen AI tool requiring ZERO additional setup right now to brainstorm event taglines and initial social drafts. Which agent type and Workspace entry point fit best?",
+      "options": [
+        "A Code agent for software engineering tasks, and the standalone prebuilt Gemini app for immediate zero-setup creative brainstorming.",
+        "A physical robotics controller for code review, and creating a custom multi-connector Enterprise Agent before drafting a single tagline.",
+        "Chirp speech transcription for debugging Python code, and BigQuery SQL tables for zero-setup tagline ideation.",
+        "A Conversational VR avatar for silent batch code compilation, and configuring a custom Gem before any zero-setup prompt can run."
+      ],
+      "correctIndex": 0,
+      "rationale": "Among Google's 5 functional agent role types (Conversational, Code, Workflow, Data, Creative), a Code agent handles code generation, review, and debugging. Office Hours Slide 55 distinction: the standalone Gemini app delivers immediate zero-setup creative brainstorming, whereas creating a custom Gem requires setup with brand guidelines/personas."
+    },
+    {
+      "id": "q24",
+      "domain": "Section 1 • Fundamentals",
+      "question": "An energy utility director proposes using Google's Veo model as a live control-room display to continuously ingest and plot second-by-second smart-grid voltage fluctuations. Why is Veo inappropriate for this use case?",
+      "options": [
+        "Veo is an audio-only speech-to-text transcription engine and cannot produce visual frames.",
+        "Veo generates video clips from static text or image inputs and is not designed to dynamically process or visualize live, fluctuating real-time telemetry streams.",
+        "Veo only executes SQL payroll queries inside relational databases.",
+        "Veo can only run offline on microcontrollers without GPUs or TPUs."
+      ],
+      "correctIndex": 1,
+      "rationale": "Veo creates high-definition video from static text prompts or still reference images; it cannot dynamically ingest and render live fluctuating telemetry streams (use BI/visualization tools such as Looker for live data, Nano Banana / Imagen for photorealistic images, and Chirp for speech-to-text)."
     }
   ],
   "studyChecklist": [
     {
       "id": "chk-1",
-      "label": "Master the 16-pair 2025 ↔ 2026 Dual-Terminology Rosetta Stone (Vertex AI / Agentspace / Dialogflow / Model Garden / Gems ↔ Agent Platform / Gemini Enterprise / CX Agent Studio / ADK)."
+      "label": "Master the 19-pair 2025 ↔ 2026 Dual-Terminology Rosetta Stone (including Live Sample Form renames: Gemini Enterprise Agent Platform, Agent Search on Gemini Enterprise Agent Platform, Google Workspace with Gemini, 5 Agent Role Archetypes, and Explainable Gen AI vs. Fairness)."
     },
     {
       "id": "chk-2",
-      "label": "Review Section 1 (~30%): AI → ML → DL → Foundation Models → Gen AI hierarchy, C-S-D-A archetypes, Supervised/Unsupervised/RL, 4-stage ML lifecycle, and 4-category Model Garden taxonomy."
+      "label": "Review Section 1 (~30%): AI → ML → DL → Foundation Models → Gen AI hierarchy, C-S-D-A archetypes, Supervised (including labeled unstructured emails) / Unsupervised / Reinforcement Learning, Veo static-input boundary, and 4-category Model Garden taxonomy."
     },
     {
       "id": "chk-3",
-      "label": "Review Section 2 (~35%): Google AI Studio vs. Agent Studio, Agent anatomy (Model + Reasoning Loop + Tools), 3 ways to get agents (Buy / CX Agent Studio / ADK), Gems vs. Agents, and 7 Pre-trained APIs."
+      "label": "Review Section 2 (~35%): Google AI Studio vs. Agent Studio, Agent anatomy + 5 functional roles (Conversational, Code, Workflow, Data, Creative), CCaaS vs. Conversational AI, Gemini App (zero-setup) vs. Gems vs. Gemini Enterprise, and 7 Pre-trained APIs."
     },
     {
       "id": "chk-4",
-      "label": "Review Section 3 (~20%): 6 Foundation Model Limitations, Grounding vs. RAG (Semantic Search + Vector DBs) vs. Fine-Tuning, System Instructions (Consistency/Accuracy/Relevance/Safety), CoT vs. ReAct, Metaprompting, and Temperature / Top-P."
+      "label": "Review Section 3 (~20%): 6 Foundation Model Limitations, Grounding vs. RAG (Semantic Search + Vector DBs) vs. Fine-Tuning, System Instructions (Consistency/Accuracy/Relevance/Safety), CoT vs. ReAct, Metaprompting, Temperature / Top-P, and Explainable Gen AI policies vs. Fairness assessments."
     },
     {
       "id": "chk-5",
-      "label": "Review Section 4 (~15%): 6 Project Needs + 3 Resources (LiteRT + Gemini Nano Edge AI, BQML vs. AutoML, IAM vs. API keys, FinOps), Google SAIF, and Cloud Transparency commitments."
+      "label": "Review Section 4 (~15%): 6 Project Needs + 3 Resources, Open Approach (anti-lock-in) vs. AI Democratization (AutoML + Model Garden + APIs + HITL), LiteRT + Gemini Nano Edge AI, BQML vs. AutoML, SAIF, and Cloud Transparency."
     },
     {
       "id": "chk-6",
-      "label": "Complete Module 5 Takeaway Labs 1 & 2 in Google AI Studio: Parameter Playground (Temperature, Output length, Top-P) and RAG in Action (Run settings → Tools → Grounding using Google Search)."
+      "label": "Complete Module 5 Takeaway Labs 1 & 2 in Google AI Studio: Parameter Playground (Temperature, Output length, Top-P) and RAG in Action (Run settings → Tools → Grounding using Google Search)—plus NotebookLM Studio study synthesis."
     },
     {
       "id": "chk-7",
@@ -629,12 +747,16 @@
     },
     {
       "id": "chk-8",
-      "label": "Score 18 / 18 on the Diagnostic Practice Quiz and verify readiness against the Official Sample Questions Form."
+      "label": "Score 24 / 24 on the Diagnostic Practice Quiz and complete both the Official 24-Question Sample PDF and the Live Official Sample Questions Form."
+    },
+    {
+      "id": "chk-9",
+      "label": "Complete Office Hours Exam Logistics Check: sign in to Google Skills & CertMetrics with the EXACT same email (Request Merge if duplicated), enter voucher from no-cost-training-help@google.com on the Billing page (>= 24h reschedule rule), test OnVUE on a personal laptop (+30m check-in) or pick a 2-ID / Military on-base Pearson VUE center before Dec 18, 2026."
     }
   ],
   "liveSync": {
-    "statusSummary": "Active 30-minute S-A-R curriculum monitor (md_sha256: cf6261541c828a45): Official Module 1–5 Student Materials & Takeaway Labs + Annotated Decks + Day 1 & Day 2 Lecture Transcripts (15h 37m) synced; monitoring Nov 19–20 Office Hours.",
-    "lastChecked": "2026-11-17",
+    "statusSummary": "Active 30-minute S-A-R curriculum monitor (md_sha256: 51eb8fed6fd375a5): Official 24-Question Sample PDF + Nov 19–20 Office Hours 55-Slide Deck (tinyurl.com/GAIL-OO) + Modules 1–5 Annotated Decks & Labs + 15h 37m Lecture Corpus synced; monitoring post-session Annotated Office Hours.",
+    "lastChecked": "2026-11-19",
     "milestones": [
       {
         "badge": "INGESTED (MODS 1–5)",
@@ -642,24 +764,24 @@
         "detail": "Posted 2026-11-13 & synthesized! All 263 instructor slide annotations across Modules 1–5 archived locally and distilled into original exam callouts, Rosetta Stone pairs, scenarios, and quiz items (zero proprietary slide redistribution)."
       },
       {
-        "badge": "MONITORING",
-        "title": "2. Office Hour Materials (Nov 19 & Nov 20, 2026)",
-        "detail": "Current source state: <Will be added after sessions>. Sessions run Thu Nov 19 (4:00–5:30 PM MST / 5:00–6:30 PM CST) and Fri Nov 20 (11:00 AM–12:30 PM MST / 12:00–1:30 PM CST)."
+        "badge": "INGESTED (55 SLIDES)",
+        "title": "2. Office Hour Materials & 24Q Sample Audit (Nov 19–20, 2026)",
+        "detail": "Posted 2026-11-19 (tinyurl.com/GAIL-OO) & synthesized! All 55 Office Hours slides + Official 24-Question Sample PDF + Slide 55 bonus 25th question distilled: confirmed live 2026 Sample Form renames, all-MCQ format, CertMetrics/voucher workflows, and 6 net-new clean-room diagnostic questions."
       },
       {
         "badge": "MONITORING",
         "title": "3. Office Hour Annotated Version",
-        "detail": "Current source state: <Will be added after sessions>. Post-session annotated Q&A solutions and exam traps will be synthesized here automatically once uploaded."
+        "detail": "Current source state: <Will be added after sessions>. Fri Nov 20 session runs 11:00 AM–12:30 PM MST (12:00–1:30 PM CST); post-session annotated markups will be synthesized automatically once posted."
       },
       {
-        "badge": "INGESTED (DAYS 1 & 2)",
-        "title": "4. Day 1 & Day 2 Lecture Replay Corpus (Available Through Dec 4, 2026)",
-        "detail": "100% Complete! Day 1 (07:36:48 • 87 signals) + Day 2 (08:00:34 • 534 windows • 91 signals) full lecture transcripts auto-ingested and distilled into non-proprietary exam guidance."
+        "badge": "INGESTED (EXTENDED DEC 18)",
+        "title": "4. Day 1 & Day 2 Lecture Replay Corpus (Extended Through Dec 18, 2026)",
+        "detail": "100% Complete & Replay Window Extended! Day 1 (07:36:48 • 87 signals) + Day 2 (08:00:34 • 534 windows • 91 signals) full transcripts distilled; class video replays remain open through Friday, Dec 18, 2026."
       },
       {
-        "badge": "READY",
-        "title": "5. Exam Registration & Proctoring Readiness",
-        "detail": "Verify CertMetrics account login, run the Pearson VUE OnVUE machine/network pre-check (if testing online), or locate an in-person Pearson VUE test center prior to scheduling."
+        "badge": "ACTIONABLE",
+        "title": "5. CertMetrics SSO, Voucher, OnVUE / Military Center & Dec 18 Swag",
+        "detail": "Use the EXACT same email on Google Skills & CertMetrics (use Profile -> Request Merge if split; personal email OK). Watch spam for no-cost-training-help@google.com, apply voucher on Payment/Billing screen, reschedule >= 24h early, use a personal (non-work) laptop for OnVUE (+30m check-in) or bring 2 IDs to an in-person / Military on-base Pearson VUE center. First 500 passing by Dec 18, 2026 receive a Google swag voucher."
       }
     ],
     "distilledTakeaways": [
@@ -673,7 +795,8 @@
       "Day 1 Full Lecture Transcript Digest (07:36:48 Corpus Sync): (1) Real GAIL questions are paragraph-length business scenarios, not short slide definitions; (2) The official Exam Guide PDF still prints 'Imagen' without mentioning 'Nano Banana' (hybrid diffusion + LLM architecture for accurate infographic text)—know both synonyms cold; (3) Half of 'Agent Platform' (Vertex AI) builds agents while the other half handles general ML/MLOps (Training, Endpoints, Batch Inference, Versioning, Drift Monitoring, IAM); (4) Customization ladder: Prompt Engineering -> Tools/Grounding/RAG ('look up the answer' — 90%+ of enterprise cases) -> Fine-Tuning ('grad school memorization' on open-weight Gemma) -> Custom Model; (5) Mitigate LLM sycophancy & jailbreaking with SAIF, Google Cloud Mandiant, and launching internal employee-productivity agents (Gemini Enterprise) before public customer bots.",
       "Instructor-Annotated Slide Deck Digest (263 Annotations Across Modules 1–5): (1) Gemini Notebook has ZERO Google Search access (strictly uploaded sources; sharing does not share raw source files; chat-only hides sources; manual re-sync on edits); (2) Gems (reusable prompts in Gemini) vs. Agents (Gemini Enterprise) vs. Skills (cross-conversation capabilities); (3) Three ways to get agents: Buy (Gemini Enterprise), Drag-and-Drop (CX Agent Studio, where legacy deterministic Dialogflow bots still run), or Code (Google ADK); (4) Custom ML escalation: Model Garden/APIs -> BigQuery ML (SQL tables) -> AutoML (tabular/image/video) -> Custom scratch; TPUs are Google's custom AI ASICs; (5) ReAct = CoT + Tools; Cloud Run functions (event-driven triggers) vs. Cloud Run (stateless containers); GCP internal auth = IAM (external = API key); FinOps billing = subscription (SaaS) vs. per-token (1 token ≈ 4 chars) vs. compute uptime (open/custom endpoints).",
       "Day 2 Full Lecture Transcript Digest (08:00:34 Corpus Sync — 91 Exam Signals): (1) Google Workspace features (Nano Banana in Slides, formula synthesis in Sheets, Gemini in Docs) ARE tested even if you come from a Microsoft 365 shop; (2) Agent Platform sub-services: Feature Store, Model Registry (coexisting model versions), Agent Platform Evaluation (leader before/after quality metrics), and Agent Runtime ('Cloud Run specifically built for agents'); (3) Gemini Enterprise pre-connects corporate Email/SharePoint/Dropbox/BigQuery via Connectors (= Data Stores / managed RAG lookup engines) and provides seat-adoption analytics (top-10 users vs. zero-login seats) for 10–50 user before/after ROI pilots; (4) CX Suite + Security + BI: CX Agent Studio (premier drag-and-drop builder), Agent Assist (split-screen human rep copilot), CX Insights (call-center analytics), CCaaS (universal telephony/chat adapter), Gemini in Looker (BI charts), and Security Command Center (Gemini for Security); (5) Models memorize only ~2–5% of training data without provenance—use Grounding/RAG for citation explainability, log chatbot transcripts (with PII guards) for liability defense, and plan for annual model retirements.",
-      "Official Module 1–5 Student Materials & Takeaway Labs Sync (v1.5.0): (1) Learning Paths live on both Customer Portal (skills.google/paths/1951) and Partner Portal (partner.skills.google/paths/1952); (2) Model Garden 4-tier catalog = First-Party (Gemini 2.5 Pro / Flash / Flash-Lite, Nano Banana 2 / Gemini Flash Image, Veo 3.1, Chirp 3), Pre-Trained APIs (enabled in Cloud Console API Library), Open (Gemma, CodeGemma, PaliGemma, Llama, Mistral, Falcon, BERT, FLAN-T5, ViT, EfficientNet), and Third-Party Partner (Anthropic Claude); note legacy 'Codey' name alongside Gemini Code Assist; (3) Module 4 core links: Gems in Gemini Apps (reusable personal/team personas), Semantic Search + Vector Databases (meaning/intent embeddings for RAG), Gemini Notebook Enterprise, and Creating Trust Through Transparency (cloud.google.com/transparency); (4) Module 5 hands-on Takeaway Labs in Google AI Studio: Parameter Playground (Temperature, Output length, Top-P), RAG in Action (Tools -> Grounding using Google Search), and Build Your Own Agent via Metaprompting (System Instructions = Consistency, Accuracy, Relevance, Safety; graduate to CX Agent Studio for production adversarial defense)."
+      "Official Module 1–5 Student Materials & Takeaway Labs Sync (v1.5.0): (1) Learning Paths live on both Customer Portal (skills.google/paths/1951) and Partner Portal (partner.skills.google/paths/1952); (2) Model Garden 4-tier catalog = First-Party (Gemini 2.5 Pro / Flash / Flash-Lite, Nano Banana 2 / Gemini Flash Image, Veo 3.1, Chirp 3), Pre-Trained APIs (enabled in Cloud Console API Library), Open (Gemma, CodeGemma, PaliGemma, Llama, Mistral, Falcon, BERT, FLAN-T5, ViT, EfficientNet), and Third-Party Partner (Anthropic Claude); note legacy 'Codey' name alongside Gemini Code Assist; (3) Module 4 core links: Gems in Gemini Apps (reusable personal/team personas), Semantic Search + Vector Databases (meaning/intent embeddings for RAG), Gemini Notebook Enterprise, and Creating Trust Through Transparency (cloud.google.com/transparency); (4) Module 5 hands-on Takeaway Labs in Google AI Studio: Parameter Playground (Temperature, Output length, Top-P), RAG in Action (Tools -> Grounding using Google Search), and Build Your Own Agent via Metaprompting (System Instructions = Consistency, Accuracy, Relevance, Safety; graduate to CX Agent Studio for production adversarial defense).",
+      "Official 24-Question Sample PDF + 55-Slide Office Hours Sync (v1.6.0 — tinyurl.com/GAIL-OO & md_sha256: 51eb8fed6fd375a5): (1) Live 2026 Form Rebrand Proof (Slides 37–39, 44): Google updated the live Sample Questions Form from 'Vertex AI' -> 'Gemini Enterprise Agent Platform', 'Vertex AI Search' -> 'Agent Search on Gemini Enterprise Agent Platform', and 'Gemini for Google Workspace' -> 'Google Workspace with Gemini' while the downloadable 24Q PDF retains 2025 names; (2) Slide 55 Bonus 25th Question: pick standalone 'Gemini app' for immediate zero-setup creative brainstorming/taglines (custom 'Gems' require setup; 'NotebookLM' synthesizes uploaded campaign docs); (3) Key Sample Distinctions: Explainable Gen AI policies (decision transparency, Q1) vs. Fairness assessments (group bias); Reinforcement Learning tested twice (reward/penalty scores via environment interaction, Q3/Q16) + manually tagged free-text emails = Labeled data (Q17); Open approach (anti-vendor lock-in, Q6) vs. Democratizing AI (AutoML + Model Garden + APIs with HITL—never 'zero human input', Q24); CCaaS (voice/email/chat + CRM + routing, Q15) vs. Gemini Enterprise (tested twice for cross-silo internal agents, Q8/Q14); 5 Agent Roles = Conversational (Q19), Code (Q20), Workflow, Data, Creative; Veo cannot visualize live fluctuating telemetry streams because it generates video from static inputs (Q22); (4) Exam Format & Logistics: 50–60 ALL multiple-choice questions in 90 mins (bookmark & back/forth enabled, immediate tentative pass/fail); match Google Skills & CertMetrics SSO email, enter voucher on Billing screen, reschedule >= 24h ahead, avoid corporate laptops on OnVUE (30m check-in + 20m room scan) or use 2-ID / Military on-base Pearson VUE centers; class replays extended through Dec 18, 2026 & first 500 passing by Dec 18 earn Google swag."
     ]
   },
   "evalResources": [
@@ -755,6 +878,16 @@
     {
       "category": "Exam Logistics, Responsible AI, Transparency, Regions & Labs",
       "items": [
+        {
+          "label": "Office Hours Exam Prep & Logistics Deck (GAIL-OO)",
+          "url": "https://tinyurl.com/GAIL-OO",
+          "note": "55-slide cohort Office Hours guide: CertMetrics SSO, voucher billing screen, OnVUE vs. test center, & 2026 live form crosswalks."
+        },
+        {
+          "label": "Official GAIL Sample Questions (24-Question PDF)",
+          "url": "https://services.google.com/fh/files/misc/generative_ai_leader_sample_questions_english.pdf",
+          "note": "Compare 2025 PDF item wording side-by-side against the 2026-rebranded Live Sample Questions Form."
+        },
         {
           "label": "Google AI Studio — Parameter, RAG & Metaprompting Sandbox",
           "url": "https://aistudio.google.com/prompts/new_chat",
@@ -879,6 +1012,11 @@
     }
   ],
   "changelog": [
+    {
+      "version": "v1.6.0",
+      "date": "2026-11-19",
+      "notes": "Ingested Official 24-Question Sample PDF + Nov 19–20 Office Hours 55-Slide Prep Deck (tinyurl.com/GAIL-OO) + Live Instructor Doc update (md_sha256: 51eb8fed6fd375a5; zero proprietary redistribution): documented live 2026 Sample Form renames (Gemini Enterprise Agent Platform, Agent Search on Gemini Enterprise Agent Platform, Google Workspace with Gemini) vs. 2025 PDF, Slide 55 bonus 25th sample question (zero-setup Gemini app vs. Gems vs. NotebookLM), Explainable Gen AI policies vs. Fairness assessments, RL reward/penalty & labeled unstructured email signals, Open Approach vs. AI Democratization (+ HITL), CCaaS vs. Conversational AI, 5 functional Agent Roles (Conversational, Code, Workflow, Data, Creative), Veo static-input boundary, all-MCQ exam format + bookmarking + immediate tentative result, CertMetrics/Google Skills SSO email match, Billing-screen voucher rule, >= 24h reschedule rule, OnVUE personal-laptop vs. 2-ID / Military on-base test centers, and Dec 18 replay extension & First-500 Google swag cutoff; expanded to 19 Rosetta Stone pairs, 14 scenarios, 24 clean-room diagnostic questions, and 9 readiness steps."
+    },
     {
       "version": "v1.5.0",
       "date": "2026-11-17",
