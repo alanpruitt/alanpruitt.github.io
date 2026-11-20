@@ -1,5 +1,5 @@
 {
-  "version": "1.6.0",
+  "version": "1.7.0",
   "lastUpdated": "2026-11-19",
   "title": "Google Cloud Generative AI Leader (GAIL) — 2026 On-Demand Student Study & Practice Hub",
   "subtitle": "Open-access, zero-login exam preparation workbench reconciling Google Cloud's 2025 Vertex AI / Agentspace terminology with the 2026 Gemini Enterprise Agent Platform curriculum.",
@@ -10,8 +10,8 @@
       "value": "50–60 Multiple-Choice Questions (Bookmark & Review)"
     },
     {
-      "label": "Time Limit",
-      "value": "90 Minutes (Proctored Online or Center)"
+      "label": "Time Limit & Pacing",
+      "value": "90 Minutes (~1 Min/Q + Built-In Note Pad)"
     },
     {
       "label": "Exam Fee & Validity",
@@ -400,6 +400,13 @@
       "pattern": "A brand team needs a prebuilt Gen AI tool with zero configuration right now to brainstorm campaign taglines and social post drafts, while an operations lead asks whether Veo can render a live dashboard streaming second-by-second logistics sensor metrics.",
       "rule": "Immediate zero-setup creative ideation uses the standalone Gemini app (custom Gems require initial persona/guideline setup; NotebookLM analyzes uploaded source docs), and Veo generates video strictly from static text/image inputs—not dynamic real-time data streams.",
       "solve": "Launch the standalone Gemini app for immediate zero-setup creative drafting, and route live fluctuating sensor streams to Looker / BI analytics rather than Veo (reserving Veo for storyboard/image-to-video clips)."
+    },
+    {
+      "id": "sim-p1-p2-tactic",
+      "scenarioLabel": "Exam Stem Tactic: P1 vs. P2 Trap, Actor Check & Pacing",
+      "pattern": "A paragraph-length exam stem describes an early background symptom (P1: e.g., overlooked applicants or fragmented tools) before ending with a specific target constraint (P2: e.g., 'address lack of transparency'), and three of the four answer choices validly solve P1 instead of P2.",
+      "rule": "Decompose multi-sentence stems into P1 (context) vs. P2 (final-sentence question target), verify the Actor ('Employees' -> Gemini Enterprise vs. 'Customers' -> CX Agent Studio / CCaaS) and Input boundary (closed uploaded docs -> Gemini Notebook vs. web-blended -> Gemini app), and pace at ~1 min/question.",
+      "solve": "Eliminate P1 distractors and pick the option that solves P2; check the clock every ~5 questions, jot P1/P2 or eliminations in Pearson VUE's built-in split-screen Note Pad, and click Review (Bookmark) rather than stalling on uncertain items."
     }
   ],
   "practiceQuiz": [
@@ -714,6 +721,19 @@
       ],
       "correctIndex": 1,
       "rationale": "Veo creates high-definition video from static text prompts or still reference images; it cannot dynamically ingest and render live fluctuating telemetry streams (use BI/visualization tools such as Looker for live data, Nano Banana / Imagen for photorealistic images, and Chirp for speech-to-text)."
+    },
+    {
+      "id": "q25",
+      "domain": "Exam Strategy & Test-Day Execution",
+      "question": "While taking the 90-minute GAIL exam, a candidate encounters a dense paragraph scenario that mentions both model accuracy drift (Sentence 2) and an urgent executive requirement to audit why specific recommendations were produced (Final Sentence). Three options fix accuracy drift, while one addresses decision explainability. Which test-taking workflow aligns with best-practice GAIL exam execution?",
+      "options": [
+        "Spend 12 minutes debating the three accuracy options, ignore the final sentence, and leave the question blank.",
+        "Separate the background symptom (P1) from the final question target (P2) using the built-in on-screen Note Pad if needed, select the option that solves P2 within ~1 minute, bookmark for review if uncertain, and check elapsed time every ~5 questions.",
+        "Bring handwritten paper notes into the room and read every question out loud into the OnVUE microphone.",
+        "Submit each question permanently one-by-one since backward navigation and bookmarking are disabled."
+      ],
+      "correctIndex": 1,
+      "rationale": "Annotated Office Hours Slides 5–6 & 32 strategy: target ~1 minute per question, check the timer every ~5 questions, use the split-screen digital Note Pad and Review/Bookmark button (back-and-forth navigation is enabled), and isolate P2 (the actual question ask) from P1 distractors. Physical scratch paper and speaking aloud on OnVUE (monitored via webcam + mic) are prohibited."
     }
   ],
   "studyChecklist": [
@@ -747,15 +767,15 @@
     },
     {
       "id": "chk-8",
-      "label": "Score 24 / 24 on the Diagnostic Practice Quiz and complete both the Official 24-Question Sample PDF and the Live Official Sample Questions Form."
+      "label": "Score 25 / 25 on the Diagnostic Practice Quiz, practice P1 vs. P2 stem decomposition + Actor/Input checks, and complete both the Official 24-Question Sample PDF and Live Sample Form."
     },
     {
       "id": "chk-9",
-      "label": "Complete Office Hours Exam Logistics Check: sign in to Google Skills & CertMetrics with the EXACT same email (Request Merge if duplicated), enter voucher from no-cost-training-help@google.com on the Billing page (>= 24h reschedule rule), test OnVUE on a personal laptop (+30m check-in) or pick a 2-ID / Military on-base Pearson VUE center before Dec 18, 2026."
+      "label": "Complete Office Hours Exam Logistics & Pacing Check: match Google Skills & CertMetrics email (Request Merge if split), apply voucher from no-cost-training-help@google.com on Billing screen (>= 24h reschedule rule for both Online & In-Person), verify OnVUE personal laptop + webcam + microphone (or 2-ID / Military center), and pace at ~1 min/question using the built-in Note Pad + 5-question clock checks before Dec 18, 2026."
     }
   ],
   "liveSync": {
-    "statusSummary": "Active 30-minute S-A-R curriculum monitor (md_sha256: 51eb8fed6fd375a5): Official 24-Question Sample PDF + Nov 19–20 Office Hours 55-Slide Deck (tinyurl.com/GAIL-OO) + Modules 1–5 Annotated Decks & Labs + 15h 37m Lecture Corpus synced; monitoring post-session Annotated Office Hours.",
+    "statusSummary": "100% Cohort Corpus Complete (md_sha256: 65bdd07a9044cae8): All 5 Launchpad for Veterans milestones—Annotated Modules 1–5, Official 24Q Sample PDF, Office Hours Deck, Nov 19 Annotated Office Hours (56 slides, 154 markups), & 15h 37m Lecture Replays—archived & distilled into clean-room guidance.",
     "lastChecked": "2026-11-19",
     "milestones": [
       {
@@ -769,9 +789,9 @@
         "detail": "Posted 2026-11-19 (tinyurl.com/GAIL-OO) & synthesized! All 55 Office Hours slides + Official 24-Question Sample PDF + Slide 55 bonus 25th question distilled: confirmed live 2026 Sample Form renames, all-MCQ format, CertMetrics/voucher workflows, and 6 net-new clean-room diagnostic questions."
       },
       {
-        "badge": "MONITORING",
-        "title": "3. Office Hour Annotated Version",
-        "detail": "Current source state: <Will be added after sessions>. Fri Nov 20 session runs 11:00 AM–12:30 PM MST (12:00–1:30 PM CST); post-session annotated markups will be synthesized automatically once posted."
+        "badge": "INGESTED (154 MARKUPS)",
+        "title": "3. Office Hour Annotated Version (56 Slides • Complete)",
+        "detail": "Posted 2026-11-19 (2026-11-19.zip) & synthesized! Extracted 154 instructor markups + newly inserted Slide 6 whiteboard diagram (split-screen digital Note Pad, ~1 min/Q pace, 5-question timer check, P1 vs. P2 stem decomposition, Actor/Input checks, and OnVUE mic rule)."
       },
       {
         "badge": "INGESTED (EXTENDED DEC 18)",
@@ -796,7 +816,8 @@
       "Instructor-Annotated Slide Deck Digest (263 Annotations Across Modules 1–5): (1) Gemini Notebook has ZERO Google Search access (strictly uploaded sources; sharing does not share raw source files; chat-only hides sources; manual re-sync on edits); (2) Gems (reusable prompts in Gemini) vs. Agents (Gemini Enterprise) vs. Skills (cross-conversation capabilities); (3) Three ways to get agents: Buy (Gemini Enterprise), Drag-and-Drop (CX Agent Studio, where legacy deterministic Dialogflow bots still run), or Code (Google ADK); (4) Custom ML escalation: Model Garden/APIs -> BigQuery ML (SQL tables) -> AutoML (tabular/image/video) -> Custom scratch; TPUs are Google's custom AI ASICs; (5) ReAct = CoT + Tools; Cloud Run functions (event-driven triggers) vs. Cloud Run (stateless containers); GCP internal auth = IAM (external = API key); FinOps billing = subscription (SaaS) vs. per-token (1 token ≈ 4 chars) vs. compute uptime (open/custom endpoints).",
       "Day 2 Full Lecture Transcript Digest (08:00:34 Corpus Sync — 91 Exam Signals): (1) Google Workspace features (Nano Banana in Slides, formula synthesis in Sheets, Gemini in Docs) ARE tested even if you come from a Microsoft 365 shop; (2) Agent Platform sub-services: Feature Store, Model Registry (coexisting model versions), Agent Platform Evaluation (leader before/after quality metrics), and Agent Runtime ('Cloud Run specifically built for agents'); (3) Gemini Enterprise pre-connects corporate Email/SharePoint/Dropbox/BigQuery via Connectors (= Data Stores / managed RAG lookup engines) and provides seat-adoption analytics (top-10 users vs. zero-login seats) for 10–50 user before/after ROI pilots; (4) CX Suite + Security + BI: CX Agent Studio (premier drag-and-drop builder), Agent Assist (split-screen human rep copilot), CX Insights (call-center analytics), CCaaS (universal telephony/chat adapter), Gemini in Looker (BI charts), and Security Command Center (Gemini for Security); (5) Models memorize only ~2–5% of training data without provenance—use Grounding/RAG for citation explainability, log chatbot transcripts (with PII guards) for liability defense, and plan for annual model retirements.",
       "Official Module 1–5 Student Materials & Takeaway Labs Sync (v1.5.0): (1) Learning Paths live on both Customer Portal (skills.google/paths/1951) and Partner Portal (partner.skills.google/paths/1952); (2) Model Garden 4-tier catalog = First-Party (Gemini 2.5 Pro / Flash / Flash-Lite, Nano Banana 2 / Gemini Flash Image, Veo 3.1, Chirp 3), Pre-Trained APIs (enabled in Cloud Console API Library), Open (Gemma, CodeGemma, PaliGemma, Llama, Mistral, Falcon, BERT, FLAN-T5, ViT, EfficientNet), and Third-Party Partner (Anthropic Claude); note legacy 'Codey' name alongside Gemini Code Assist; (3) Module 4 core links: Gems in Gemini Apps (reusable personal/team personas), Semantic Search + Vector Databases (meaning/intent embeddings for RAG), Gemini Notebook Enterprise, and Creating Trust Through Transparency (cloud.google.com/transparency); (4) Module 5 hands-on Takeaway Labs in Google AI Studio: Parameter Playground (Temperature, Output length, Top-P), RAG in Action (Tools -> Grounding using Google Search), and Build Your Own Agent via Metaprompting (System Instructions = Consistency, Accuracy, Relevance, Safety; graduate to CX Agent Studio for production adversarial defense).",
-      "Official 24-Question Sample PDF + 55-Slide Office Hours Sync (v1.6.0 — tinyurl.com/GAIL-OO & md_sha256: 51eb8fed6fd375a5): (1) Live 2026 Form Rebrand Proof (Slides 37–39, 44): Google updated the live Sample Questions Form from 'Vertex AI' -> 'Gemini Enterprise Agent Platform', 'Vertex AI Search' -> 'Agent Search on Gemini Enterprise Agent Platform', and 'Gemini for Google Workspace' -> 'Google Workspace with Gemini' while the downloadable 24Q PDF retains 2025 names; (2) Slide 55 Bonus 25th Question: pick standalone 'Gemini app' for immediate zero-setup creative brainstorming/taglines (custom 'Gems' require setup; 'NotebookLM' synthesizes uploaded campaign docs); (3) Key Sample Distinctions: Explainable Gen AI policies (decision transparency, Q1) vs. Fairness assessments (group bias); Reinforcement Learning tested twice (reward/penalty scores via environment interaction, Q3/Q16) + manually tagged free-text emails = Labeled data (Q17); Open approach (anti-vendor lock-in, Q6) vs. Democratizing AI (AutoML + Model Garden + APIs with HITL—never 'zero human input', Q24); CCaaS (voice/email/chat + CRM + routing, Q15) vs. Gemini Enterprise (tested twice for cross-silo internal agents, Q8/Q14); 5 Agent Roles = Conversational (Q19), Code (Q20), Workflow, Data, Creative; Veo cannot visualize live fluctuating telemetry streams because it generates video from static inputs (Q22); (4) Exam Format & Logistics: 50–60 ALL multiple-choice questions in 90 mins (bookmark & back/forth enabled, immediate tentative pass/fail); match Google Skills & CertMetrics SSO email, enter voucher on Billing screen, reschedule >= 24h ahead, avoid corporate laptops on OnVUE (30m check-in + 20m room scan) or use 2-ID / Military on-base Pearson VUE centers; class replays extended through Dec 18, 2026 & first 500 passing by Dec 18 earn Google swag."
+      "Official 24-Question Sample PDF + 55-Slide Office Hours Sync (v1.6.0 — tinyurl.com/GAIL-OO & md_sha256: 51eb8fed6fd375a5): (1) Live 2026 Form Rebrand Proof (Slides 37–39, 44): Google updated the live Sample Questions Form from 'Vertex AI' -> 'Gemini Enterprise Agent Platform', 'Vertex AI Search' -> 'Agent Search on Gemini Enterprise Agent Platform', and 'Gemini for Google Workspace' -> 'Google Workspace with Gemini' while the downloadable 24Q PDF retains 2025 names; (2) Slide 55 Bonus 25th Question: pick standalone 'Gemini app' for immediate zero-setup creative brainstorming/taglines (custom 'Gems' require setup; 'NotebookLM' synthesizes uploaded campaign docs); (3) Key Sample Distinctions: Explainable Gen AI policies (decision transparency, Q1) vs. Fairness assessments (group bias); Reinforcement Learning tested twice (reward/penalty scores via environment interaction, Q3/Q16) + manually tagged free-text emails = Labeled data (Q17); Open approach (anti-vendor lock-in, Q6) vs. Democratizing AI (AutoML + Model Garden + APIs with HITL—never 'zero human input', Q24); CCaaS (voice/email/chat + CRM + routing, Q15) vs. Gemini Enterprise (tested twice for cross-silo internal agents, Q8/Q14); 5 Agent Roles = Conversational (Q19), Code (Q20), Workflow, Data, Creative; Veo cannot visualize live fluctuating telemetry streams because it generates video from static inputs (Q22); (4) Exam Format & Logistics: 50–60 ALL multiple-choice questions in 90 mins (bookmark & back/forth enabled, immediate tentative pass/fail); match Google Skills & CertMetrics SSO email, enter voucher on Billing screen, reschedule >= 24h ahead, avoid corporate laptops on OnVUE (30m check-in + 20m room scan) or use 2-ID / Military on-base Pearson VUE centers; class replays extended through Dec 18, 2026 & first 500 passing by Dec 18 earn Google swag.",
+      "Annotated Office Hours Digest (v1.7.0 — 56 Slides, 154 Instructor Markups, md_sha256: 65bdd07a9044cae8): (1) Pacing & Split-Screen Digital Note Pad (Slides 5–6 Whiteboard): target ~1 minute per question (do not dig in), check the timer every ~5 questions, use Pearson VUE's built-in right-hand digital Note Pad, and click Review to bookmark uncertain items for a second pass; (2) P1 vs. P2 Stem Decomposition Tactic (Slide 32): multi-sentence stems often pair an early symptom (P1, matched by 3 distractor choices!) with a distinct final-sentence requirement (P2)—always solve P2; (3) Live Synonym & Boundary Callouts (Slides 28, 33, 36, 38–40): LLMs = Foundational models (vast datasets, broad adaptability—not small/niche); Imagen = Nano Banana; Conversational Agents = CX Agent Studio; NotebookLM = Gemini Notebook(s) (100% focused on uploaded input docs, whereas Gemini app blends Google Search); underline 'Employees' (Gemini Enterprise) vs. 'central platform to manage ML development/deployment/monitoring' (Gemini Enterprise Agent Platform); (4) OnVUE Microphone & Universal 24h Reschedule (Slides 18 & 22): OnVUE requires a working microphone + webcam + reliable internet on a personal computer, and BOTH Online and In-Person exams can be rescheduled up to 24 hours ahead."
     ]
   },
   "evalResources": [
@@ -1012,6 +1033,11 @@
     }
   ],
   "changelog": [
+    {
+      "version": "v1.7.0",
+      "date": "2026-11-19",
+      "notes": "100% Launchpad for Veterans Corpus Completion — Ingested Instructor-Annotated Office Hours archive (2026-11-19.zip: 56 slides including newly added Slide 6 exam-interface whiteboard + 154 live annotations, md_sha256: 65bdd07a9044cae8; zero proprietary redistribution): distilled ~1 min/question pacing rule, 5-question clock check, built-in split-screen Pearson VUE digital Note Pad + Review bookmark workflow, P1 vs. P2 multi-problem stem decomposition tactic, Actor ('Employees' vs. 'Customers') & Input-boundary (Gemini Notebook closed sources vs. Gemini app Google Search blend) checks, LLMs = Foundational models & Conversational Agents = CX Agent Studio callouts, OnVUE microphone requirement, and universal 24-hour reschedule rule; expanded to 15 scenarios and 25 clean-room diagnostic questions."
+    },
     {
       "version": "v1.6.0",
       "date": "2026-11-19",
