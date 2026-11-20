@@ -49,6 +49,9 @@ jobs:
           cp -r essays public/ 2>/dev/null || true
           cp -r articles public/ 2>/dev/null || true
           hugo --minify
+          mkdir -p public/.well-known
+          cp static/.well-known/security.txt public/.well-known/security.txt
+          touch public/.nojekyll
           python3 scripts/inject_canonicals.py
           printf "google-site-verification: google79ce991311bd4c24.html" > public/google79ce991311bd4c24.html
           grep -q "google-site-verification: google79ce991311bd4c24.html" public/google79ce991311bd4c24.html
