@@ -62,7 +62,7 @@ keywords:
 
 Este documento establece la genealogía histórica completa y la evolución arquitectónica de **Curriculum-as-Code (CaC)** desde la ingeniería de confiabilidad de redes (`NetOps`) en 2018 hasta la pedagogía neuro-simbólica universitaria en 2026. En noviembre de 2018, la comunidad de NRE Labs (`nre-learning/nrelabs-curriculum` y la plataforma Antidote) introdujo el término *Curriculum-as-Code* para orquestar enrutadores virtuales en Kubernetes mediante archivos YAML (`syringe.yaml`). Al acoplar el contenido educativo a clústeres pesados de contenedores, NRE Labs terminó cerrando su plataforma interactiva. La Generación 2 (`2021–2026`) desacopló los textos en repositorios Git—anticipado en agosto de 2021 por el **Premio Nacional NADO Aliceann Wohlbruck** otorgado a Alan Pruitt por compilar un manual regional `CEDS` con un modelo Co-Pilot de código abierto en GitHub, y retomado en 2026 por flujos de diapositivas LaTeX/Beamer (`arXiv:2608.07364`)—pero los archivos planos carecían de grafos pedagógicos, verificación de accesibilidad LMS y trazabilidad criptográfica.
 
-La Generación 3 (**Curriculum-as-Code Neuro-Simbólico y Soberano**, `S-A-R v2.2` — *Escalable / Auditable / Repetible*) cierra esas brechas en una flota universitaria activa de 5 cursos y 11 entornos Canvas (`EXW 101`, `150`, `210`, `245`, `265` y paquetes OER nacionales `KIN` / `HLTH`), integrando **El Protocolo de Encuadre Clínico (`Patrón / Regla / Solución`)**, fuentes federales de verdad (**PAGA 2018**, **DGA 2025–2030**, **ACSM 12.ª Ed.**, **NASM OPT** y **U.S. DOL ETA TEN N.º 07-25**), compuertas CI/CD para **ADA Título II / WCAG 2.2 AA (`9:1`) y WCAG 3.0**, un grafo **DOM GraphRAG de `3,265` nodos**, recibos **W3C PROV-O**, ontologías bilingües **W3C SKOS** en español norteño e IA local aislada (**Google Gemini Carbon 4** y **Gemma 4**).
+La Generación 3 (**Curriculum-as-Code Neuro-Simbólico y Soberano**, `S-A-R v2.2` — *Escalable / Auditable / Repetible*) cierra esas brechas en una flota universitaria activa de 5 cursos y 11 entornos Canvas (`EXW 101`, `150`, `210`, `245`, `265` y paquetes OER nacionales `KIN` / `HLTH`), integrando **El Protocolo de Encuadre Clínico (`Patrón / Regla / Solución`)**, fuentes federales de verdad (**PAGA 2018**, **DGA 2025–2030**, **ACSM 12.ª Ed.**, **NASM OPT** y **U.S. DOL ETA TEN N.º 07-25**), compuertas CI/CD para **ADA Título II / WCAG 2.2 AA (`9:1`) y WCAG 3.0**, un grafo **DOM GraphRAG de `3,265` nodos**, recibos **W3C PROV-O**, ontologías bilingües **W3C SKOS** en español norteño e IA local aislada de pesos abiertos (**Google Gemma 4 / Carbon 4**).
 
 ---
 
@@ -130,7 +130,7 @@ Desarrollada y validada en aulas reales de **Arizona Western College (HSI)**—d
         <th scope="row">Grafo Semántico e IA Soberana</th>
         <td>Scripts imperativos previos a los modelos de lenguaje.</td>
         <td>Fragmentos planos de texto con APIs comerciales en la nube.</td>
-        <td><strong>DOM GraphRAG de <code>3,265</code> nodos</strong> + <strong>W3C PROV-O</strong> + <strong>W3C SKOS</strong> español norteño + <strong>Gemini Carbon 4 y Gemma 4</strong> locales en Apple Silicon.</td>
+        <td><strong>DOM GraphRAG de <code>3,265</code> nodos</strong> + <strong>W3C PROV-O</strong> + <strong>W3C SKOS</strong> español norteño + <strong>Google Gemma 4 (<code>Carbon 4</code>)</strong> local de pesos abiertos en Apple Silicon.</td>
       </tr>
     </tbody>
   </table>
@@ -156,7 +156,7 @@ Conecta **`3,265` nodos DOM** con resultados de aprendizaje (`CLOs`), traduce ex
 Despliega actualizaciones sin deriva en 11 entornos Canvas vía `POST /api/graphql` y compila `467/467` módulos OER verificados al **`100.0% (21/21)`** bajo las rúbricas Achieve OER + metadatos `Schema.org/Dataset` de 4 niveles.
 
 ### 3.6 IA Soberana Aislada y Habilitación Nacional en los 50 Estados
-Ejecuta **Google Gemini Carbon 4** y **Gemma 4** localmente en estaciones Apple Silicon (`M1/M2`) con 100% de privacidad FERPA y `$0.00` en tarifas recurrentes, posicionando a **Webcognita LLC (`VOSB`, `UEI: EZ34U9KNJA17`, `CAGE: 4ZCN6`)** como socio técnico habilitador no competidor para **NSF TechAccess: AI-Ready America**.
+Ejecuta el modelo abierto **Google Gemma 4 (`Carbon 4`)** vía Ollama localmente en estaciones Apple Silicon (`M1/M2`) (junto con **Google Antigravity `Gemini 4 Neon`** estrictamente para software limpio COTS sin datos privados) con 100% de privacidad FERPA y `$0.00` en tarifas recurrentes, posicionando a **Webcognita LLC (`VOSB`, `UEI: EZ34U9KNJA17`, `CAGE: 4ZCN6`)** como socio técnico habilitador no competidor para **NSF TechAccess: AI-Ready America**.
 
 ---
 

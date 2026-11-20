@@ -64,7 +64,7 @@ keywords:
 
 This flagship origin paper establishes the historical genealogy and architectural evolution of **Curriculum-as-Code (CaC)** from 2018 network reliability engineering (`NetOps`) to 2026 neuro-symbolic higher-education pedagogy. In November 2018, the NRE Labs community (`nre-learning/nrelabs-curriculum` and the Antidote platform) coined *Curriculum-as-Code* to orchestrate Kubernetes virtual routers and browser terminals via declarative YAML (`syringe.yaml`). Because Generation 1 coupled educational materials permanently to heavy container clusters, NRE Labs ultimately shut down under runtime maintenance overhead. Generation 2 (`2021–2026`) decoupled prose into plain-text Git repositories—demonstrated early by Alan Pruitt's **August 2021 NADO Aliceann Wohlbruck Impact Award** for compiling a regional Comprehensive Economic Development Strategy (`CEDS`) manual via an open-source GitHub AI Co-Pilot, and echoed later by 2026 STEM LaTeX/Beamer slide scripts (`arXiv:2608.07364`)—yet flat file pipelines remained blind to semantic pedagogy, LMS accessibility checkers, and cryptographic auditability.
 
-Generation 3 (**Sovereign Neuro-Symbolic Curriculum-as-Code**, `S-A-R v2.2` — *Scalable / Auditable / Repeatable*) resolves those structural gaps across a live 5-course, 11-shell higher-education fleet (`EXW 101`, `150`, `210`, `245`, `265` and national `KIN` / `HLTH` Open Educational Resource packages). By uniting **The Centaur Protocol**, **The Clinical Framing Protocol (`Pattern / Rule / Solve`)**, federal Single Sources of Truth (**PAGA 2018**, **DGA 2025–2030**, **ACSM 12th Ed.**, **NASM OPT**, and **U.S. DOL ETA TEN No. 07-25**), automated **ADA Title II / WCAG 2.2 AA (`9:1` Double-Contrast Guard) & WCAG 3.0** CI/CD linters, a **`3,265`-node DOM GraphRAG** knowledge graph, **W3C PROV-O** SHA-256 provenance receipts, **W3C SKOS** Norteño-Spanish clinical ontologies, and air-gapped Apple Silicon Edge AI (**Google Gemini Carbon 4** and **Gemma 4**), `S-A-R v2.2` guarantees institutional data sovereignty, clinical rigor, and `$0 ZTC` open-access syndication.
+Generation 3 (**Sovereign Neuro-Symbolic Curriculum-as-Code**, `S-A-R v2.2` — *Scalable / Auditable / Repeatable*) resolves those structural gaps across a live 5-course, 11-shell higher-education fleet (`EXW 101`, `150`, `210`, `245`, `265` and national `KIN` / `HLTH` Open Educational Resource packages). By uniting **The Centaur Protocol**, **The Clinical Framing Protocol (`Pattern / Rule / Solve`)**, federal Single Sources of Truth (**PAGA 2018**, **DGA 2025–2030**, **ACSM 12th Ed.**, **NASM OPT**, and **U.S. DOL ETA TEN No. 07-25**), automated **ADA Title II / WCAG 2.2 AA (`9:1` Double-Contrast Guard) & WCAG 3.0** CI/CD linters, a **`3,265`-node DOM GraphRAG** knowledge graph, **W3C PROV-O** SHA-256 provenance receipts, **W3C SKOS** Norteño-Spanish clinical ontologies, and air-gapped Apple Silicon Edge AI (open-weight **Google Gemma 4 / Carbon 4**), `S-A-R v2.2` guarantees institutional data sovereignty, clinical rigor, and `$0 ZTC` open-access syndication.
 
 ---
 
@@ -150,7 +150,7 @@ Independently engineered and field-tested by Alan Pruitt across active Exercise 
         <th scope="row">AI Inference &amp; Sovereignty</th>
         <td>Pre-LLM deterministic shell validation.</td>
         <td>Commercial cloud LLM APIs with external telemetry egress.</td>
-        <td><strong>100% Air-Gapped Apple Silicon (<code>M1/M2</code>) Edge AI</strong> running local <strong>Google Gemini Carbon 4</strong> and <strong>Gemma 4</strong> via Ollama (zero FERPA cloud leakage).</td>
+        <td><strong>100% Air-Gapped Apple Silicon (<code>M1/M2</code>) Edge AI</strong> running local open-weight <strong>Google Gemma 4 (<code>Carbon 4</code>)</strong> via Ollama (zero FERPA cloud leakage).</td>
       </tr>
       <tr>
         <th scope="row">Open Syndication &amp; Licensing</th>
@@ -203,7 +203,7 @@ Through a **3-Stage "Write Once -> Push Many" Zero-Drift Publishing Pipeline** (
 
 ### 3.6 Air-Gapped Edge AI Sovereignty and 50-State NSF AI-Ready Enablement
 
-All local grading telemetry, RAG retrieval, and rubric validation execute on air-gapped Apple Silicon (`M1` and `M2`) workstations running open-weight **Google Gemini Carbon 4** and **Gemma 4** models via Ollama—achieving 100% FERPA student privacy at `$0.00` recurring cloud cost. Through **Webcognita LLC (`VOSB`, `SAM.gov UEI: EZ34U9KNJA17`, `CAGE: 4ZCN6`)**, this reference architecture serves as a **non-competing 50-state technical enabling partner** for community colleges, universities, tribal nations, and **NSF TechAccess: AI-Ready America** Coordination Hubs.
+All local grading telemetry, RAG retrieval, and rubric validation execute on air-gapped Apple Silicon (`M1` and `M2`) workstations running open-weight **Google Gemma 4 (`Carbon 4`)** models via Ollama (paired with clean-room **Google Antigravity `Gemini 4 Neon`** on M1/M2 strictly for public non-PII COTS software engineering)—achieving 100% FERPA student privacy at `$0.00` recurring cloud cost. Through **Webcognita LLC (`VOSB`, `SAM.gov UEI: EZ34U9KNJA17`, `CAGE: 4ZCN6`)**, this reference architecture serves as a **non-competing 50-state technical enabling partner** for community colleges, universities, tribal nations, and **NSF TechAccess: AI-Ready America** Coordination Hubs.
 
 ---
 
