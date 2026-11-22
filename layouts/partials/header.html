@@ -1,90 +1,635 @@
-
+{{- $hdrCount := add (or (.Scratch.Get "apHeaderSeq") 0) 1 -}}
+{{- .Scratch.Set "apHeaderSeq" $hdrCount -}}
+{{- $menuId := printf "ap-site-menu-%d" $hdrCount -}}
+{{- $hdrId := printf "ap-site-header-%d" $hdrCount -}}
+{{- $rel := .RelPermalink -}}
+{{- $isEs := eq .Lang "es" -}}
+{{- $enUrl := "/" -}}
+{{- $esUrl := "/es/" -}}
+{{- range .AllTranslations -}}
+  {{- if eq .Lang "en" -}}{{- $enUrl = .RelPermalink -}}{{- end -}}
+  {{- if eq .Lang "es" -}}{{- $esUrl = .RelPermalink -}}{{- end -}}
+{{- end -}}
 <style>
-  #ap-desktop-nav, #ap-brand-dot, #ap-brand-badge { display: none; }
-  #ap-mobile-nav { display: flex; }
-  header a, #ap-mobile-nav summary {
+  .ap-skip-link {
+    position: absolute;
+    inset-inline-start: -9999px;
+    inset-block-start: auto;
+    inline-size: 1px;
+    block-size: 1px;
+    overflow: hidden;
+    z-index: 100;
+    background-color: #0B192C;
+    color: #FAFBF7;
+    padding: 0.75rem 1.25rem;
+    font-weight: 800;
+    font-size: 0.875rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+  }
+  .ap-skip-link:focus {
+    inset-inline-start: 1rem;
+    inset-block-start: 1rem;
+    inline-size: auto;
+    block-size: auto;
+  }
+
+  .ap-site-header {
+    position: sticky;
+    inset-block-start: 0;
+    z-index: 50;
+    inline-size: 100%;
+    border-block-end: 1.5px solid #CBD5E1;
+    background-color: rgba(255, 255, 255, 0.97);
+    backdrop-filter: blur(12px);
+  }
+
+  .ap-site-header.is-measuring,
+  .ap-site-header.is-measuring * {
+    transition: none !important;
+  }
+
+  .ap-header-shell {
+    max-inline-size: 76rem;
+    margin-inline: auto;
+    padding-inline: 0.85rem;
+    padding-block: 0.45rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+
+  .ap-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    min-block-size: 44px;
+    min-inline-size: 44px;
+    padding-inline: 0.25rem;
+    text-decoration: none;
+    color: #0B192C;
+    flex-shrink: 0;
+  }
+
+  .ap-brand-name {
+    font-size: 1.1rem;
+    font-weight: 800;
+    white-space: nowrap;
+    color: #0B192C;
+  }
+
+  .ap-brand-dot,
+  .ap-brand-badge {
+    display: none;
+  }
+
+  @media (min-width: 640px) {
+    .ap-header-shell {
+      padding-inline: 1.25rem;
+    }
+    .ap-brand-dot {
+      display: inline-block;
+      color: #0B192C;
+      font-weight: 700;
+    }
+    .ap-brand-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.15rem 0.55rem;
+      font-size: 0.7rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      border-radius: 0.375rem;
+      border: 1px solid #0B192C;
+      background-color: #E8EEF5;
+      color: #0B192C;
+      white-space: nowrap;
+    }
+  }
+
+  .ap-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    flex-shrink: 0;
+    margin-inline-start: auto;
+  }
+
+  .ap-qa-trigger {
+    min-block-size: 44px;
+    min-inline-size: 44px;
+    padding-inline: 0.65rem;
+    padding-block: 0.35rem;
+    border-radius: 0.5rem;
+    border: 1.5px solid #0B192C;
+    background-color: #FAFBF7;
+    color: #0B192C;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 0.75rem;
+    font-weight: 800;
+    cursor: pointer;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-height: 44px;
-    min-width: 44px;
-    box-sizing: border-box;
+    gap: 0.35rem;
+    white-space: nowrap;
   }
-  #ap-mobile-nav details div a {
+
+  .ap-qa-trigger:hover,
+  .ap-qa-trigger:focus-visible {
+    background-color: #E8EEF5;
+    color: #0B192C;
+  }
+
+  .ap-qa-trigger-label {
+    display: none;
+  }
+
+  @media (min-width: 520px) {
+    .ap-qa-trigger-label {
+      display: inline;
+    }
+  }
+
+  .ap-lang-nav {
+    display: inline-flex;
+    align-items: center;
+    border: 1.5px solid #0B192C;
+    border-radius: 0.5rem;
+    background-color: #FFFFFF;
+    padding: 0.1rem;
+    gap: 0.1rem;
+  }
+
+  .ap-site-header a.ap-lang-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-block-size: 44px;
+    min-inline-size: 44px;
+    padding-inline: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-decoration: none;
+    border-radius: 0.35rem;
+    color: #0B192C;
+    background-color: #FFFFFF;
+  }
+
+  .ap-site-header a.ap-lang-link.is-active {
+    background-color: #0B192C;
+    color: #FFFFFF;
+  }
+
+  .ap-site-nav {
+    display: flex;
+    align-items: center;
+  }
+
+  #{{ $hdrId }} .ap-menu-button {
+    anchor-name: --ap-menu-btn-{{ $hdrCount }};
+  }
+  #{{ $hdrId }} .ap-site-menu {
+    inset-block-start: 4.1rem;
+    inset-block-start: anchor(--ap-menu-btn-{{ $hdrCount }} bottom);
+  }
+
+  .ap-menu-button {
+    min-block-size: 44px;
+    min-inline-size: 44px;
+    padding-inline: 0.75rem;
+    padding-block: 0.35rem;
+    border-radius: 0.5rem;
+    border: 1.5px solid #0B192C;
+    background-color: #FAFBF7;
+    color: #0B192C;
+    font-size: 0.78rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+    white-space: nowrap;
+  }
+
+  .ap-menu-button:hover,
+  .ap-menu-button:focus-visible {
+    background-color: #E8EEF5;
+  }
+
+  /* Collapsed Popover Navigation (Default & Narrow Viewports) */
+  .ap-site-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0.55rem;
+    position: fixed;
+    inset: auto;
+    inset-block-start: 4.1rem;
+    inset-inline-end: 0.85rem;
+    inline-size: min(86dvw, 21rem);
+    max-inline-size: calc(100dvw - 1.7rem);
+    block-size: fit-content;
+    max-block-size: calc(100dvh - 5.25rem);
+    margin-block-start: 0.45rem;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    background-color: #FFFFFF;
+    color: #0B192C;
+    border: 2px solid #0B192C;
+    border-radius: 0.75rem;
+    box-shadow: 0 16px 32px rgba(11, 25, 44, 0.16);
+  }
+
+  .ap-site-menu[popover]:is(:popover-open, .\:popover-open) {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .ap-site-menu[popover] {
+      transition: opacity 0.14s ease, translate 0.14s ease, display 0.14s ease, overlay 0.14s ease;
+      transition-behavior: allow-discrete;
+    }
+    .ap-site-menu[popover]:not(:is(:popover-open, .\:popover-open)) {
+      opacity: 0;
+      translate: 0 -0.25rem;
+    }
+    @starting-style {
+      .ap-site-menu[popover]:is(:popover-open, .\:popover-open) {
+        opacity: 0;
+        translate: 0 -0.25rem;
+      }
+    }
+  }
+
+  .ap-site-menu > li {
+    margin: 0;
+    padding: 0;
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+
+  .ap-site-menu > li.ap-cluster-split {
+    border-block-start: 1px solid #CBD5E1;
+    padding-block-start: 0.3rem;
+    margin-block-start: 0.15rem;
+  }
+
+  .ap-nav-link {
+    display: flex;
+    align-items: center;
     justify-content: space-between;
+    gap: 0.5rem;
+    min-block-size: 44px;
+    min-inline-size: 44px;
+    padding-inline: 0.8rem;
+    padding-block: 0.4rem;
+    border-radius: 0.5rem;
+    border: 1px solid transparent;
+    background-color: #FFFFFF;
+    color: #0B192C;
+    font-size: 0.88rem;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
   }
-  @media (min-width: 768px) {
-    #ap-desktop-nav { display: flex; }
-    #ap-mobile-nav { display: none; }
-    #ap-brand-dot { display: inline-block; }
-    #ap-brand-badge { display: inline-flex; }
+
+  .ap-nav-link:hover,
+  .ap-nav-link:focus-visible {
+    background-color: #E8EEF5;
+    border-color: #0B192C;
+    color: #0B192C;
+  }
+
+  .ap-nav-link--primary {
+    background-color: #F1F5F9;
+    border-color: #0B192C;
+    font-weight: 800;
+  }
+
+  .ap-nav-link[aria-current="page"] {
+    background-color: #0B192C;
+    border-color: #0B192C;
+    color: #FFFFFF;
+    font-weight: 800;
+  }
+
+  .ap-nav-arrow {
+    font-size: 0.82rem;
+    font-weight: 800;
+    color: currentColor;
+  }
+
+  /* Wide Layout: Dedicated Two-Tier Pill Bar (Activated Dynamically When Row Fits) */
+  .ap-site-header.is-wide .ap-header-shell {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas:
+      "brand actions"
+      "nav   nav";
+    row-gap: 0.4rem;
+    padding-block: 0.5rem 0.55rem;
+  }
+
+  .ap-site-header.is-wide .ap-brand {
+    grid-area: brand;
+    justify-self: start;
+  }
+
+  .ap-site-header.is-wide .ap-header-actions {
+    grid-area: actions;
+    justify-self: end;
+  }
+
+  .ap-site-header.is-wide .ap-site-nav {
+    grid-area: nav;
+    inline-size: 100%;
+    min-inline-size: 0;
+    border-block-start: 1px solid #E2E8F0;
+    padding-block-start: 0.45rem;
+  }
+
+  .ap-site-header.is-wide .ap-menu-button {
+    display: none;
+  }
+
+  .ap-site-header.is-wide .ap-site-menu {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.45rem;
+    inline-size: 100%;
+    max-inline-size: none;
+    block-size: auto;
+    max-block-size: none;
+    overflow: visible;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    opacity: 1;
+    translate: none;
+  }
+
+  .ap-site-header.is-wide .ap-site-menu::backdrop {
+    display: none;
+  }
+
+  .ap-site-header.is-wide .ap-site-menu > li.ap-cluster-split {
+    border-block-start: 0;
+    padding-block-start: 0;
+    margin-block-start: 0;
+    margin-inline-start: auto;
+    padding-inline-start: 0.65rem;
+    border-inline-start: 1.5px solid #CBD5E1;
+  }
+
+  .ap-site-header.is-wide .ap-nav-link {
+    display: inline-flex;
+    justify-content: center;
+    padding-inline: 0.78rem;
+    padding-block: 0.35rem;
+    font-size: 0.84rem;
+    border: 1px solid #CBD5E1;
+    background-color: #F8FAFC;
+    border-radius: 0.5rem;
+  }
+
+  .ap-site-header.is-wide .ap-nav-link--primary {
+    border: 1.5px solid #0B192C;
+    background-color: #E8EEF5;
+    font-weight: 800;
+  }
+
+  .ap-site-header.is-wide .ap-nav-link:hover,
+  .ap-site-header.is-wide .ap-nav-link:focus-visible {
+    background-color: #E8EEF5;
+    border-color: #0B192C;
+  }
+
+  .ap-site-header.is-wide .ap-nav-link[aria-current="page"] {
+    background-color: #0B192C;
+    border-color: #0B192C;
+    color: #FFFFFF;
+  }
+
+  .ap-site-header.is-wide .ap-nav-arrow--internal {
+    display: none;
+  }
+
+  .ap-site-header :where(a, button):focus-visible {
+    outline: 2.5px solid #0B192C;
+    outline-offset: 2px;
+  }
+
+  @media (forced-colors: active) {
+    .ap-nav-link[aria-current="page"] {
+      outline: 2px solid ButtonText;
+    }
+  }
+
+  @media print {
+    .ap-skip-link,
+    .ap-site-header {
+      display: none !important;
+    }
   }
 </style>
-<a href="#main-content" style="position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden; z-index: 100; background-color: #0B192C; color: #FAFBF7; padding: 0.75rem 1.25rem; font-weight: 800; font-size: 0.875rem; border-radius: 0.5rem; text-decoration: none;" onfocus="this.style.left='1rem';this.style.top='1rem';this.style.width='auto';this.style.height='auto';" onblur="this.style.left='-9999px';this.style.width='1px';this.style.height='1px';">{{ if eq .Lang "es" }}Saltar al contenido principal{{ else }}Skip to main content{{ end }}</a>
-<header style="position: sticky; top: 0; z-index: 50; width: 100%; border-bottom: 1px solid #e4e4e7; background-color: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px);">
-  <div style="max-width: 64rem; margin: 0 auto; height: 4rem; display: flex; align-items: center; justify-content: space-between; padding: 0 1.25rem;">
-    
+
+<a class="ap-skip-link" href="#main-content">{{ if $isEs }}Saltar al contenido principal{{ else }}Skip to main content{{ end }}</a>
+
+<header id="{{ $hdrId }}" class="ap-site-header">
+  <div class="ap-header-shell">
     <!-- BRAND (Left) -->
-    <a href="{{ if eq .Lang "es" }}/es/{{ else }}/{{ end }}" style="display: flex; align-items: center; gap: 0.5rem; text-decoration: none; color: #002147;">
-      <span style="font-size: 1.125rem; font-weight: 800; white-space: nowrap;">Alan Pruitt</span>
-      <span id="ap-brand-dot" style="color: #a1a1aa; font-weight: bold;">•</span>
-      <span id="ap-brand-badge" style="padding: 0.15rem 0.5rem; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; border-radius: 0.375rem; border: 1px solid #d4d4d8; background-color: #f4f4f5; color: #27272a;">CaC Architect</span>
+    <a class="ap-brand" href="{{ if $isEs }}/es/{{ else }}/{{ end }}"{{ if or (eq $rel "/") (eq $rel "/es/") }} aria-current="page"{{ end }}>
+      <span class="ap-brand-name">Alan Pruitt</span>
+      <span class="ap-brand-dot" aria-hidden="true">&bull;</span>
+      <span class="ap-brand-badge">CaC Architect</span>
     </a>
 
-    <!-- DESKTOP NAV (Right) -->
-    <nav id="ap-desktop-nav" style="align-items: center; gap: 1.05rem;">
-      <a href="{{ if eq .Lang "es" }}/es/curriculum-as-code/{{ else }}/curriculum-as-code/{{ end }}" style="text-decoration: none; color: #0B192C; font-size: 0.9rem; font-weight: 800;">{{ if eq .Lang "es" }}Origen CaC{{ else }}CaC Origin{{ end }}</a>
-      <a href="{{ if eq .Lang "es" }}/es/workshops/{{ else }}/workshops/{{ end }}" style="text-decoration: none; color: #3f3f46; font-size: 0.9rem; font-weight: 600;">{{ if eq .Lang "es" }}Talleres{{ else }}Workshops{{ end }}</a>
-      <a href="{{ if eq .Lang "es" }}/es/roi-calculator/{{ else }}/roi-calculator/{{ end }}" style="text-decoration: none; color: #3f3f46; font-size: 0.9rem; font-weight: 600;">{{ if eq .Lang "es" }}Calculadora ROI{{ else }}ROI Calculator{{ end }}</a>
-      <a href="{{ if eq .Lang "es" }}/es/essays/{{ else }}/essays/{{ end }}" style="text-decoration: none; color: #3f3f46; font-size: 0.9rem; font-weight: 600;">{{ if eq .Lang "es" }}Ensayos{{ else }}Essays{{ end }}</a>
-      <a href="/edge-inat/" style="text-decoration: none; color: #0B192C; font-size: 0.9rem; font-weight: 700;">Edge-iNat</a>
-      <a href="https://www.webcognita.com/govcon-radar/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: #0B192C; font-size: 0.9rem; font-weight: 700;">{{ if eq .Lang "es" }}Radar GovCon{{ else }}GovCon Radar{{ end }}</a>
-      <a href="/research-log/" style="text-decoration: none; color: #0B192C; font-size: 0.9rem; font-weight: 700;">{{ if eq .Lang "es" }}Bitácora{{ else }}Research Log{{ end }}</a>
-      <a href="/contact.html" style="text-decoration: none; color: #0B192C; font-size: 0.9rem; font-weight: 700;">{{ if eq .Lang "es" }}Contacto{{ else }}Contact{{ end }}</a>
-      <button type="button" data-open-qa-modal style="min-height: 44px; min-width: 44px; padding: 0.35rem 0.75rem; border-radius: 0.45rem; border: 1.5px solid #0B192C; background-color: #FAFBF7; color: #0B192C; font-family: monospace; font-size: 0.75rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.35rem;">
+    <!-- UTILITY ACTIONS: Q&A MODAL + LANGUAGE SWITCHER + COLLAPSED NAV BUTTON -->
+    <div class="ap-header-actions">
+      <button
+        type="button"
+        class="ap-qa-trigger"
+        data-open-qa-modal
+        aria-label="{{ if $isEs }}[Q&A] Consultar Arquitectura (Comando K){{ else }}[Q&A] Ask Architecture Modal (Command K){{ end }}"
+      >
         <span>[Q&amp;A]</span>
-        <span>{{ if eq .Lang "es" }}Consultar / ⌘K{{ else }}Ask / ⌘K{{ end }}</span>
+        <span class="ap-qa-trigger-label">{{ if $isEs }}Consultar / ⌘K{{ else }}Ask / ⌘K{{ end }}</span>
       </button>
 
-      {{ $enUrl := "/" }}
-      {{ $esUrl := "/es/" }}
-      {{ range .AllTranslations }}
-        {{ if eq .Lang "en" }}{{ $enUrl = .RelPermalink }}{{ end }}
-        {{ if eq .Lang "es" }}{{ $esUrl = .RelPermalink }}{{ end }}
-      {{ end }}
-      <div style="display: flex; align-items: center; border: 1px solid #d4d4d8; border-radius: 0.375rem; background-color: #f4f4f5; padding: 0.125rem; gap: 0.125rem;">
-        <a href="{{ $enUrl }}" style="padding: 0.25rem 0.5rem; font-size: 0.75rem; font-weight: 700; text-decoration: none; border-radius: 0.25rem; {{ if eq .Lang "en" }}background-color: #002147; color: #fff;{{ else }}color: #52525b;{{ end }}">EN</a>
-        <a href="{{ $esUrl }}" style="padding: 0.25rem 0.5rem; font-size: 0.75rem; font-weight: 700; text-decoration: none; border-radius: 0.25rem; {{ if eq .Lang "es" }}background-color: #002147; color: #fff;{{ else }}color: #52525b;{{ end }}">ES</a>
-      </div>
-    </nav>
-
-    <!-- MOBILE NAV (Right) -->
-    <div id="ap-mobile-nav" style="align-items: center; gap: 0.5rem;">
-      <button type="button" data-open-qa-modal aria-label="{{ if eq .Lang "es" }}[Q&A] Abrir consulta de arquitectura{{ else }}[Q&A] Open Architecture Modal{{ end }}" style="min-height: 44px; min-width: 44px; padding: 0.35rem 0.65rem; border-radius: 0.375rem; border: 1.5px solid #002147; background-color: #FFF9F0; color: #002147; font-family: monospace; font-size: 0.75rem; font-weight: 800; cursor: pointer;">
-        [Q&amp;A]
-      </button>
-      <div style="display: flex; align-items: center; border: 1px solid #d4d4d8; border-radius: 0.375rem; background-color: #f4f4f5; padding: 0.125rem; gap: 0.125rem;">
-        <a href="{{ $enUrl }}" style="padding: 0.25rem 0.5rem; font-size: 0.75rem; font-weight: 700; text-decoration: none; border-radius: 0.25rem; {{ if eq .Lang "en" }}background-color: #002147; color: #fff;{{ else }}color: #52525b;{{ end }}">EN</a>
-        <a href="{{ $esUrl }}" style="padding: 0.25rem 0.5rem; font-size: 0.75rem; font-weight: 700; text-decoration: none; border-radius: 0.25rem; {{ if eq .Lang "es" }}background-color: #002147; color: #fff;{{ else }}color: #52525b;{{ end }}">ES</a>
-      </div>
-
-      <details style="position: relative; margin: 0;">
-        <summary style="list-style: none; cursor: pointer; display: flex; align-items: center; gap: 0.35rem; padding: 0.35rem 0.75rem; border-radius: 0.375rem; border: 1.5px solid #002147; background-color: #FFF9F0; color: #002147; font-size: 0.75rem; font-weight: 800; text-transform: uppercase;">
-          <span>{{ if eq .Lang "es" }}Menú{{ else }}Menu{{ end }}</span>
-          <svg style="width: 1rem; height: 1rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
-        </summary>
-        <div style="position: absolute; right: 0; top: calc(100% + 0.5rem); width: 14rem; background-color: #FFF9F0; border: 2px solid #002147; border-radius: 0.5rem; padding: 0.5rem; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); z-index: 60; display: flex; flex-direction: column; gap: 0.25rem;">
-          <a href="{{ if eq .Lang "es" }}/es/curriculum-as-code/{{ else }}/curriculum-as-code/{{ end }}" style="display: flex; justify-content: space-between; padding: 0.5rem 0.75rem; text-decoration: none; color: #002147; font-size: 0.875rem; font-weight: 800;"><span>{{ if eq .Lang "es" }}Origen CaC (Whitepaper){{ else }}CaC Origin Whitepaper{{ end }}</span><span style="color: #71717a;">&rarr;</span></a>
-          <a href="{{ if eq .Lang "es" }}/es/workshops/{{ else }}/workshops/{{ end }}" style="display: flex; justify-content: space-between; padding: 0.5rem 0.75rem; text-decoration: none; color: #002147; font-size: 0.875rem; font-weight: 700;"><span>{{ if eq .Lang "es" }}Talleres{{ else }}Workshops{{ end }}</span><span style="color: #71717a;">&rarr;</span></a>
-          <a href="{{ if eq .Lang "es" }}/es/roi-calculator/{{ else }}/roi-calculator/{{ end }}" style="display: flex; justify-content: space-between; padding: 0.5rem 0.75rem; text-decoration: none; color: #002147; font-size: 0.875rem; font-weight: 700;"><span>{{ if eq .Lang "es" }}Calculadora ROI{{ else }}ROI Calculator{{ end }}</span><span style="color: #71717a;">&rarr;</span></a>
-          <a href="{{ if eq .Lang "es" }}/es/essays/{{ else }}/essays/{{ end }}" style="display: flex; justify-content: space-between; padding: 0.5rem 0.75rem; text-decoration: none; color: #002147; font-size: 0.875rem; font-weight: 700;"><span>{{ if eq .Lang "es" }}Ensayos{{ else }}Essays{{ end }}</span><span style="color: #71717a;">&rarr;</span></a>
-          <a href="/edge-inat/" style="display: flex; justify-content: space-between; padding: 0.5rem 0.75rem; text-decoration: none; color: #002147; font-size: 0.875rem; font-weight: 700;"><span>Edge-iNat (Edge AI)</span><span style="color: #71717a;">&rarr;</span></a>
-          <a href="https://www.webcognita.com/govcon-radar/" target="_blank" rel="noopener noreferrer" style="display: flex; justify-content: space-between; padding: 0.5rem 0.75rem; text-decoration: none; color: #002147; font-size: 0.875rem; font-weight: 700;"><span>{{ if eq .Lang "es" }}Radar GovCon (PWA){{ else }}GovCon Radar (PWA){{ end }}</span><span style="color: #71717a;">&rarr;</span></a>
-          <a href="/research-log/" style="display: flex; justify-content: space-between; padding: 0.5rem 0.75rem; text-decoration: none; color: #002147; font-size: 0.875rem; font-weight: 700;"><span>{{ if eq .Lang "es" }}Bitácora CaC{{ else }}Research Log{{ end }}</span><span style="color: #71717a;">&rarr;</span></a>
-          <a href="/contact.html" style="display: flex; justify-content: space-between; padding: 0.5rem 0.75rem; text-decoration: none; color: #002147; font-size: 0.875rem; font-weight: 700;"><span>{{ if eq .Lang "es" }}Contacto Institucional{{ else }}Institutional Contact{{ end }}</span><span style="color: #71717a;">&rarr;</span></a>
-        </div>
-      </details>
+      <nav class="ap-lang-nav" aria-label="{{ if $isEs }}Selector de Idioma{{ else }}Language Switcher{{ end }}">
+        <a href="{{ $enUrl }}" class="ap-lang-link{{ if not $isEs }} is-active{{ end }}" lang="en"{{ if not $isEs }} aria-current="true"{{ end }} aria-label="English (EN)">EN</a>
+        <a href="{{ $esUrl }}" class="ap-lang-link{{ if $isEs }} is-active{{ end }}" lang="es"{{ if $isEs }} aria-current="true"{{ end }} aria-label="Español (ES)">ES</a>
+      </nav>
     </div>
 
+    <!-- SINGLE SEMANTIC PRIMARY NAVIGATION TREE (Inline Pill Bar When Wide, Native Popover When Narrow) -->
+    <nav class="ap-site-nav" aria-label="{{ if $isEs }}Navegación Principal{{ else }}Primary Navigation{{ end }}">
+      <button
+        class="ap-menu-button"
+        type="button"
+        popovertarget="{{ $menuId }}"
+        popovertargetaction="toggle"
+        aria-controls="{{ $menuId }}"
+      >
+        <svg style="inline-size: 1rem; block-size: 1rem; flex-shrink: 0;" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 7h16M4 12h16M4 17h16"></path>
+        </svg>
+        <span>{{ if $isEs }}Menú{{ else }}Menu{{ end }}</span>
+      </button>
+
+      <ul id="{{ $menuId }}" class="ap-site-menu" popover="auto">
+        <li>
+          <a
+            class="ap-nav-link ap-nav-link--primary"
+            href="{{ if $isEs }}/es/curriculum-as-code/{{ else }}/curriculum-as-code/{{ end }}"
+            {{- if or (hasPrefix $rel "/curriculum-as-code") (hasPrefix $rel "/es/curriculum-as-code") }} aria-current="page"{{ end -}}
+          >
+            <span>{{ if $isEs }}Origen CaC{{ else }}CaC Origin{{ end }}</span>
+            <span class="ap-nav-arrow ap-nav-arrow--internal" aria-hidden="true">&rarr;</span>
+          </a>
+        </li>
+        <li>
+          <a
+            class="ap-nav-link"
+            href="{{ if $isEs }}/es/workshops/{{ else }}/workshops/{{ end }}"
+            {{- if or (hasPrefix $rel "/workshops") (hasPrefix $rel "/es/workshops") }} aria-current="page"{{ end -}}
+          >
+            <span>{{ if $isEs }}Talleres{{ else }}Workshops{{ end }}</span>
+            <span class="ap-nav-arrow ap-nav-arrow--internal" aria-hidden="true">&rarr;</span>
+          </a>
+        </li>
+        <li>
+          <a
+            class="ap-nav-link"
+            href="{{ if $isEs }}/es/roi-calculator/{{ else }}/roi-calculator/{{ end }}"
+            {{- if or (hasPrefix $rel "/roi-calculator") (hasPrefix $rel "/es/roi-calculator") }} aria-current="page"{{ end -}}
+          >
+            <span>{{ if $isEs }}Calculadora ROI{{ else }}ROI Calculator{{ end }}</span>
+            <span class="ap-nav-arrow ap-nav-arrow--internal" aria-hidden="true">&rarr;</span>
+          </a>
+        </li>
+        <li>
+          <a
+            class="ap-nav-link"
+            href="{{ if $isEs }}/es/essays/{{ else }}/essays/{{ end }}"
+            {{- if or (hasPrefix $rel "/essays") (hasPrefix $rel "/es/essays") }} aria-current="page"{{ end -}}
+          >
+            <span>{{ if $isEs }}Ensayos{{ else }}Essays{{ end }}</span>
+            <span class="ap-nav-arrow ap-nav-arrow--internal" aria-hidden="true">&rarr;</span>
+          </a>
+        </li>
+        <li>
+          <a
+            class="ap-nav-link"
+            href="/research-log/"
+            {{- if hasPrefix $rel "/research-log" }} aria-current="page"{{ end -}}
+          >
+            <span>{{ if $isEs }}Bitácora CaC{{ else }}Research Log{{ end }}</span>
+            <span class="ap-nav-arrow ap-nav-arrow--internal" aria-hidden="true">&rarr;</span>
+          </a>
+        </li>
+        <li class="ap-cluster-split">
+          <a
+            class="ap-nav-link"
+            href="/edge-inat/"
+            {{- if hasPrefix $rel "/edge-inat" }} aria-current="page"{{ end -}}
+          >
+            <span>Edge-iNat</span>
+            <span class="ap-nav-arrow ap-nav-arrow--internal" aria-hidden="true">&rarr;</span>
+          </a>
+        </li>
+        <li>
+          <a
+            class="ap-nav-link"
+            href="https://www.webcognita.com/govcon-radar/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span>{{ if $isEs }}Radar GovCon{{ else }}GovCon Radar{{ end }}</span>
+            <span class="ap-nav-arrow" aria-hidden="true">&#8599;</span>
+          </a>
+        </li>
+        <li>
+          <a
+            class="ap-nav-link"
+            href="/contact.html"
+            {{- if eq $rel "/contact.html" }} aria-current="page"{{ end -}}
+          >
+            <span>{{ if $isEs }}Contacto{{ else }}Contact{{ end }}</span>
+            <span class="ap-nav-arrow ap-nav-arrow--internal" aria-hidden="true">&rarr;</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
   </div>
 </header>
+
+<script type="module">
+  // MANDATORY: Feature detect 'popover' on HTMLElement.prototype before loading polyfill.
+  if (!Object.hasOwn(HTMLElement.prototype, "popover")) {
+    import("https://unpkg.com/@oddbird/popover-polyfill@latest/dist/popover.min.js");
+  }
+
+  (() => {
+    const header = document.getElementById({{ $hdrId | jsonify | safeJS }});
+    const menu = document.getElementById({{ $menuId | jsonify | safeJS }});
+    if (!header || !menu) return;
+    const nav = menu.closest(".ap-site-nav");
+    if (!nav) return;
+
+    let isWide = false;
+    let lastCollapsedWidth = 0;
+
+    function syncLayout(forceMeasure = false) {
+      const currentHeaderWidth = header.clientWidth;
+      if (!forceMeasure && !isWide && currentHeaderWidth <= lastCollapsedWidth) {
+        return;
+      }
+
+      const wasOpen = !isWide && (menu.matches(":popover-open") || menu.classList.contains(":popover-open"));
+      header.classList.add("is-measuring", "is-wide");
+      menu.removeAttribute("popover");
+
+      const fits = menu.scrollWidth <= nav.clientWidth;
+
+      if (fits) {
+        isWide = true;
+        lastCollapsedWidth = 0;
+      } else {
+        isWide = false;
+        lastCollapsedWidth = currentHeaderWidth;
+        menu.setAttribute("popover", "auto");
+        header.classList.remove("is-wide");
+        if (wasOpen && typeof menu.showPopover === "function") {
+          try { menu.showPopover(); } catch (_) {}
+        }
+      }
+
+      requestAnimationFrame(() => {
+        header.classList.remove("is-measuring");
+      });
+    }
+
+    syncLayout(true);
+
+    if (typeof ResizeObserver !== "undefined") {
+      const ro = new ResizeObserver(() => syncLayout(false));
+      ro.observe(header);
+      ro.observe(menu);
+    }
+  })();
+</script>
+
