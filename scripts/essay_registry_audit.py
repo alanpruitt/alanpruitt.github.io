@@ -215,6 +215,17 @@ def scan_staged_drafts(master, published_nums):
                     f"[SUBSTACK SUBTITLE > 195 CHARS] essay-{num:02d}-substack.md is "
                     f"{len(m_sub.group(1).strip())} chars (Substack hard cap ~198 chars)"
                 )
+        li_kit_path = os.path.join(docs_dir, f"essay-{num:02d}-linkedin.md")
+        has_li_kit = os.path.exists(li_kit_path)
+        if has_li_kit:
+            li_raw = open(li_kit_path, encoding="utf-8").read()
+            for m_li in re.finditer(r"(?:Document Title|Title):\s*`([^`]+)`", li_raw):
+                doc_title = m_li.group(1).strip()
+                if len(doc_title) > 58:
+                    errors.append(
+                        f"[LINKEDIN DOC TITLE > 58 CHARS] essay-{num:02d}-linkedin.md has "
+                        f"{len(doc_title)}/58 chars: '{doc_title}'"
+                    )
         staged.append({
             "essay_number": num,
             "status": "staged",
@@ -225,7 +236,7 @@ def scan_staged_drafts(master, published_nums):
             if has_sub_kit
             else None,
             "linkedin_kit": f"docs/essays/essay-{num:02d}-linkedin.md"
-            if os.path.exists(os.path.join(docs_dir, f"essay-{num:02d}-linkedin.md"))
+            if has_li_kit
             else None,
             "word_count": len(body.split()),
         })
