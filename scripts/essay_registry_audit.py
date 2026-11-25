@@ -4,7 +4,7 @@ S-A-R Sequential Essay Registry & Substack Parity Auditor
 =========================================================
 Maintains the Single Source of Truth (SSoT) sequential Essay ledger across:
   1. /Users/alanpruitt/alanpruitt.github.io (Web Canonical SSoT: content/en/essays/, content/es/essays/, content/en/distribution/)
-  2. /Users/alanpruitt/EXW-MASTER-LIBRARY/docs/essays/ (Fleet Mirror & Staged Draft Queue)
+  2. /Users/alanpruitt/projects/carbon4-ecosystem/docs/essays/ (Webcognita LLC Private Staged Draft Queue)
   3. https://alanpruitt.substack.com/feed (Live Substack RSS Parity Verification)
 
 Guarantees:
@@ -52,7 +52,7 @@ def resolve_repo_roots():
         gh_io = parent
     else:
         gh_io = "/Users/alanpruitt/alanpruitt.github.io"
-    master = "/Users/alanpruitt/EXW-MASTER-LIBRARY"
+    master = "/Users/alanpruitt/projects/carbon4-ecosystem"
     return gh_io, (master if os.path.exists(master) else None)
 
 
@@ -272,11 +272,11 @@ def verify_substack_parity(records, strict_network=False):
 
 def render_markdown_ledger(registry):
     lines = [
-        "# Canonical Essay Sequential Ledger (`alanpruitt.com` ↔ Substack ↔ `EXW-MASTER-LIBRARY`)",
+        "# Canonical Essay Sequential Ledger (`alanpruitt.com` ↔ Substack ↔ `carbon4-ecosystem`)",
         "",
         f"**Last Audited:** `{registry['generated_at']}`  ",
         f"**Published Live Sequence:** `Essay 01` – `Essay {registry['max_published_number']:02d}` (`{registry['published_count']}/{registry['max_published_number']}` contiguous, `0` gaps)  ",
-        f"**Staged Queue (`EXW-MASTER-LIBRARY/docs/essays/`):** "
+        f"**Staged Queue (`carbon4-ecosystem/docs/essays/`):** "
         + (
             ", ".join(f"`Essay {s['essay_number']:02d}` (*{s['title']}*)" for s in registry["staged_essays"])
             if registry["staged_essays"]

@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-11-19T05:36:21Z",
+  "generated_at": "2026-11-25T06:15:48Z",
   "published_count": 41,
   "max_published_number": 41,
   "staged_numbers": [
@@ -10,9 +10,10 @@
     45,
     46,
     47,
-    48
+    48,
+    49
   ],
-  "next_new_essay_number": 49,
+  "next_new_essay_number": 50,
   "staged_essays": [
     {
       "essay_number": 42,
@@ -83,6 +84,16 @@
       "substack_kit": null,
       "linkedin_kit": null,
       "word_count": 555
+    },
+    {
+      "essay_number": 49,
+      "status": "staged",
+      "title": "Essay 49: What If I Didn't Harden the Moat Before the First Bid? – Counterintelligence Discipline, CMMC 2.0 Level 1, and Surviving the SAM.gov Glass House",
+      "slug": "essay-49-what-if-i-didnt-harden-the-moat",
+      "staged_file": "docs/essays/essay-49-what-if-i-didnt-harden-the-moat.md",
+      "substack_kit": "docs/essays/essay-49-substack.md",
+      "linkedin_kit": "docs/essays/essay-49-linkedin.md",
+      "word_count": 1861
     }
   ],
   "published_essays": [
