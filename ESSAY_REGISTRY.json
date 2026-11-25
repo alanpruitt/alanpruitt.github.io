@@ -1,10 +1,9 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-11-25T06:15:48Z",
-  "published_count": 41,
-  "max_published_number": 41,
+  "generated_at": "2026-11-25T15:41:09Z",
+  "published_count": 42,
+  "max_published_number": 42,
   "staged_numbers": [
-    42,
     43,
     44,
     45,
@@ -15,16 +14,6 @@
   ],
   "next_new_essay_number": 50,
   "staged_essays": [
-    {
-      "essay_number": 42,
-      "status": "staged",
-      "title": "Essay 42: What If I Didn't Log the Telemetry? – Automating ADA Title II, Section 508, and Super Intelligence (SI / AI) Compliance-as-Code",
-      "slug": "essay-42-compliance-as-code-and-master-research-log",
-      "staged_file": "docs/essays/essay-42-compliance-as-code-and-master-research-log.md",
-      "substack_kit": "docs/essays/essay-42-substack.md",
-      "linkedin_kit": "docs/essays/essay-42-linkedin.md",
-      "word_count": 1262
-    },
     {
       "essay_number": 43,
       "status": "staged",
@@ -670,6 +659,20 @@
       "linkedin_kit": "content/en/distribution/essay-41-linkedin.md",
       "substack_live_url": null,
       "word_count": 1785
+    },
+    {
+      "essay_number": 42,
+      "status": "published",
+      "title": "Essay 42: What If I Didn't Log the Telemetry? – Automating ADA Title II, Section 508, and Super Intelligence (SI / AI) Compliance-as-Code",
+      "date": "2026-11-25",
+      "slug": "essay-42-compliance-as-code-and-master-research-log",
+      "canonical_url": "https://alanpruitt.com/essays/essay-42-compliance-as-code-and-master-research-log/",
+      "en_file": "content/en/essays/essay-42-compliance-as-code-and-master-research-log.md",
+      "es_file": "content/es/essays/essay-42-compliance-as-code-and-master-research-log.md",
+      "substack_kit": "content/en/distribution/essay-42-substack.md",
+      "linkedin_kit": "content/en/distribution/essay-42-linkedin.md",
+      "substack_live_url": null,
+      "word_count": 1262
     }
   ]
 }

@@ -5,6 +5,7 @@ User-agent: *
 Allow: /
 Allow: /llms.txt
 Allow: /llms-full.txt
+Allow: /.well-known/security.txt
 Allow: /research-log/
 Allow: /qa-embed/
 Allow: /data/sovereign-qa-index.json
