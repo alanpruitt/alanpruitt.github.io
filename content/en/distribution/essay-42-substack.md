@@ -1,7 +1,7 @@
 ## Substack Distribution Package: Essay 42 (Scheduled for Wednesday, November 25, 2026)
 
 - **Title:** Essay 42: What If I Didn't Log the Telemetry? – Automating ADA Title II, Section 508, and Super Intelligence (SI / AI) Compliance-as-Code
-- **Subtitle:** How I turned 92 dated intelligence briefs across Google Workspace, Instructure Canvas, EO 14434 Super Intelligence (SI), and WCAG 2.2 AA / 3.0 into an executable Compliance-as-Code pipeline and open web observatory.
+- **Subtitle:** How I turned 92 dated briefs across Google Workspace, Canvas, EO 14434 Super Intelligence (SI), and WCAG 2.2 AA / 3.0 into a Compliance-as-Code pipeline and web observatory.
 - **Canonical URL:** `https://alanpruitt.com/essays/essay-42-compliance-as-code-and-master-research-log/`
 - **Master Research Log Observatory:** `https://alanpruitt.com/research-log/`
 - **Architecture Briefs Shelf (Compendium 07):** `https://alanpruitt.com/#architecture-briefs`
@@ -60,8 +60,15 @@ Without six months of structured upstream intelligence and executable **Complian
 ---
 
 ### How I Made This
-- **Concept & Framework:** Conceived and architected by Alan Pruitt (Webcognita LLC), grounded in the S-A-R Standard (Scalable / Auditable / Repeatable), Compliance as Code, and the Clinical Framing Protocol (`Pattern / Rule / Solve`).
+- **Concept & Framework:** Conceived and architected by Alan Pruitt ([ORCID: 0009-0002-5038-7111](https://orcid.org/0009-0002-5038-7111) • Webcognita LLC), grounded in the S-A-R Standard (Scalable / Auditable / Repeatable), Compliance as Code, and the Clinical Framing Protocol (`Pattern / Rule / Solve`).
 - **Drafting & Execution:** Co-authored and iteratively refined using Google Antigravity IDE and my local sovereign `exw-carbon4-cac:latest` model, synthesized against 92 dated entries in my Master Research Log (`May–Nov 2026`).
 - **Verification:** Every clinical claim, API architecture reference, and accessibility threshold was human-audited and verified by the author prior to publication.
+
+**Alan Pruitt** | Principal & Managing Member • [ORCID: 0009-0002-5038-7111](https://orcid.org/0009-0002-5038-7111)  
+**WEBCOGNITA LLC** — Veteran-Owned Small Business (100% VOSB)  
+**SAM.gov UEI:** `EZ34U9KNJA17` | **CAGE:** `4ZCN6` | **ADOT AZ UTRACS SBC:** `#23545`  
+**NAICS:** 541511 (Primary), 541512, 541715, 611710, 541690 | **GPC / P-Card & ACH Ready**  
+1906 S 6th Ave, Yuma, AZ 85364 | [webcognita.com](https://www.webcognita.com/) | [1-Page Capabilities PDF](https://www.webcognita.com/assets/Webcognita_LLC_Capabilities_Statement.pdf) | [Schedule Briefing & Voice](https://www.webcognita.com/contact.html)  
+*USMC & U.S. Army CI Veteran • 2025 U.S. SBA AZ Veteran Champion • 2023 U.S. Dept. of Commerce MBDA Advocate of the Year*
 
 > **Disclaimer:** The Curriculum-as-Code architecture, Compliance-as-Code pipeline, S-A-R Standard, and open-source software tools described in this essay represent my independent faculty engineering and research through Webcognita LLC and do not represent official policy or endorsement by Arizona Western College or The University of Arizona.

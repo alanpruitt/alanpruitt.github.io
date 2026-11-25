@@ -31,6 +31,7 @@ EMOJI_RE = re.compile(r"[\U0001F300-\U0001FAFF\u2600-\u27BF]")
 
 # Known Substack post URL slug substring -> Canonical Essay Number
 SUBSTACK_SLUG_TO_ESSAY = {
+    "what-if-i-didnt-log-the-telemetry": 42,
     "essay-41-what-if-i-didnt-bridge-the": 41,
     "what-if-i-didnt-automate-the-threshold": 39,
     "essay-38-what-if-i-didnt-build-the": 38,
@@ -204,6 +205,16 @@ def scan_staged_drafts(master, published_nums):
         if not title:
             m_h = re.search(r"^#+\s+(.*)$", raw, flags=re.M)
             title = m_h.group(1).strip() if m_h else bn
+        sub_kit_path = os.path.join(docs_dir, f"essay-{num:02d}-substack.md")
+        has_sub_kit = os.path.exists(sub_kit_path)
+        if has_sub_kit:
+            sub_raw = open(sub_kit_path, encoding="utf-8").read()
+            m_sub = re.search(r"Subtitle:\*\*?\s*(.+)", sub_raw)
+            if m_sub and len(m_sub.group(1).strip()) > 195:
+                errors.append(
+                    f"[SUBSTACK SUBTITLE > 195 CHARS] essay-{num:02d}-substack.md is "
+                    f"{len(m_sub.group(1).strip())} chars (Substack hard cap ~198 chars)"
+                )
         staged.append({
             "essay_number": num,
             "status": "staged",
@@ -211,7 +222,7 @@ def scan_staged_drafts(master, published_nums):
             "slug": os.path.splitext(bn)[0],
             "staged_file": f"docs/essays/{bn}",
             "substack_kit": f"docs/essays/essay-{num:02d}-substack.md"
-            if os.path.exists(os.path.join(docs_dir, f"essay-{num:02d}-substack.md"))
+            if has_sub_kit
             else None,
             "linkedin_kit": f"docs/essays/essay-{num:02d}-linkedin.md"
             if os.path.exists(os.path.join(docs_dir, f"essay-{num:02d}-linkedin.md"))

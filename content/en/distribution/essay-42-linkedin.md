@@ -47,6 +47,7 @@ Are your digital teams still relying on periodic manual accessibility audits, or
 Full architectural breakdown in Essay 42 ("What If I Didn't Log the Telemetry? – Automating ADA Title II, Section 508, and Super Intelligence (SI / AI) Compliance-as-Code"):
 
 • Canonical Essay 42 (EN + Español): https://alanpruitt.com/essays/essay-42-compliance-as-code-and-master-research-log/
+• Substack Edition: https://alanpruitt.substack.com/p/what-if-i-didnt-log-the-telemetry
 • Live Master Research Log Observatory (92 Dated Telemetry Briefs): https://alanpruitt.com/research-log/
 • Compendium 07 White Paper (Tagged PDF): https://alanpruitt.com/docs/CaC_and_CaaS_Master_Research_Log_2026_Compendium.pdf
 • Webcognita LLC Capabilities & 120-Node GovCon/SLED Radar (Active SAM.gov VOSB • UEI: EZ34U9KNJA17 • CAGE: 4ZCN6 • AZ Trade Name #9260023 • AZ SPO IV0000112720 • Mesa VSS VS0000020834): https://www.webcognita.com/govcon-radar/
