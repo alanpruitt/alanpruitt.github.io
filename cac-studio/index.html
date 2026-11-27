@@ -1,0 +1,2242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curriculum-as-Code Faculty Studio &amp; Assignment Transformer | EXW-Demo (Course 42051)</title>
+  <meta name="description" content="Zero-login, 9:1 WCAG 2.2 AA bilingual (EN/ES) Community College Faculty Studio for EXW-Demo (Course 42051) and exwdemo.dev: 4-step Assignment Transformer with Canvas HTML export, Community of Inquiry (CoI) to S-A-R v2.2 Crosswalk, HSI Equity/FERPA/$0 ZTC Tool Matrix, and 5 Turnkey 10-Minute Department Labs.">
+  <link rel="canonical" href="https://alanpruitt.com/cac-studio/">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Curriculum-as-Code Faculty Studio &amp; Assignment Transformer | EXW-Demo (Course 42051)">
+  <meta property="og:description" content="Transform vulnerable assignments into AI-resilient Pattern -> Rule -> Solve modules with 1-click 9:1 Canvas HTML export, CoI crosswalk, HSI FERPA/$0 ZTC matrix, and 10-minute department labs.">
+  <meta property="og:url" content="https://alanpruitt.com/cac-studio/">
+  <meta property="og:type" content="website">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Curriculum-as-Code (C-a-C) Community College Faculty Studio & Assignment Transformer",
+    "url": "https://alanpruitt.com/cac-studio/",
+    "isPartOf": {
+      "@type": "EducationalOccupationalProgram",
+      "name": "EXW-Demo (Course ID 42051) Curriculum-as-Code Hub",
+      "url": "https://exwdemo.dev/"
+    },
+    "applicationCategory": "EducationalApplication",
+    "operatingSystem": "All Browsers (100% Client-Side; Zero Login; Zero Trackers; Zero Student PII)",
+    "inLanguage": ["en", "es"],
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "educationalAlignment": [
+      {
+        "@type": "AlignmentObject",
+        "alignmentType": "educationalFramework",
+        "educationalFramework": "U.S. DOL ETA Training and Employment Notice (TEN) No. 07-25: AI Literacy Framework",
+        "targetName": "5 Foundational Content Areas & 7 Community College Delivery Design Principles"
+      },
+      {
+        "@type": "AlignmentObject",
+        "alignmentType": "educationalFramework",
+        "educationalFramework": "Community of Inquiry (Garrison, Anderson, & Archer, 2000)",
+        "targetName": "Cognitive Presence, Teaching Presence, and Social Presence"
+      }
+    ],
+    "author": {
+      "@type": "Person",
+      "name": "Alan Pruitt",
+      "jobTitle": "Adjunct Faculty, Exercise Science & Wellness (AWC) & Founder, Webcognita LLC",
+      "url": "https://alanpruitt.com/",
+      "sameAs": [
+        "https://orcid.org/0009-0002-5038-7111",
+        "https://www.linkedin.com/in/alanpruitt/"
+      ]
+    },
+    "isBasedOn": {
+      "@type": "CreativeWork",
+      "name": "The AI-Resistant Pedagogy Studio",
+      "author": {
+        "@type": "Person",
+        "name": "Dr. Stacy Ybarra",
+        "jobTitle": "Director, Center for Teaching Excellence",
+        "affiliation": {
+          "@type": "CollegeOrUniversity",
+          "name": "Our Lady of the Lake University (OLLU)"
+        }
+      },
+      "datePublished": "2026-11-19"
+    }
+  }
+  </script>
+  <style>
+    @property --fade-start {
+      syntax: "<length>";
+      inherits: false;
+      initial-value: 0px;
+    }
+    @property --fade-end {
+      syntax: "<length>";
+      inherits: false;
+      initial-value: 0px;
+    }
+
+    :root {
+      color-scheme: light;
+      --brand-color: #002147;
+      --bg-page: #FAFBF7;
+      --bg-surface: #FFFFFF;
+      --bg-subtle: #F2F5F8;
+      --text-primary: #0B192C;
+      --text-body: #111827;
+      --accent-navy: #002147;
+      --accent-red: #7E061E;
+      --accent-teal: #08454A;
+      --border-muted: #94A3B8;
+      --border-strong: #002147;
+      --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #FAFBF7;
+      color: #111827;
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      accent-color: var(--brand-color);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .visually-hidden:where(:not(:focus-within, :active)) {
+      position: absolute !important;
+      clip-path: inset(50%) !important;
+      overflow: hidden !important;
+      width: 1px !important;
+      height: 1px !important;
+      margin: -1px !important;
+      padding: 0 !important;
+      border: 0 !important;
+      white-space: nowrap !important;
+    }
+
+    .skip-link {
+      position: fixed;
+      inset-block-start: 10px;
+      inset-inline-start: 10px;
+      z-index: 1000;
+      padding: 10px 16px;
+      background-color: #002147;
+      color: #FFFFFF;
+      border: 2px solid #FFFFFF;
+      border-radius: 6px;
+      font-weight: 700;
+      text-decoration: underline;
+    }
+
+    :where(a:any-link, button, select, summary, input):focus-visible {
+      outline: 3px solid #7E061E;
+      outline-offset: 3px;
+    }
+
+    a {
+      color: #08454A;
+      background-color: transparent;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      font-weight: 600;
+    }
+
+    a:hover {
+      color: #7E061E;
+    }
+
+    .shell {
+      max-inline-size: 1160px;
+      margin-inline: auto;
+      padding: 1.25rem 1rem 3rem;
+    }
+
+    .hero {
+      background-color: #002147;
+      color: #FFFFFF;
+      border-bottom: 6px solid #7E061E;
+      padding: 1.5rem 1rem;
+    }
+
+    .hero-inner {
+      max-inline-size: 1160px;
+      margin-inline: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .hero h1 {
+      margin: 0.25rem 0 0.4rem;
+      font-size: clamp(1.35rem, 2.6vw, 1.95rem);
+      line-height: 1.25;
+      color: #FFFFFF;
+      background-color: #002147;
+    }
+
+    .hero-kicker {
+      display: inline-block;
+      background-color: #FFFFFF;
+      color: #002147;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 4px;
+    }
+
+    .hero p {
+      margin: 0;
+      max-inline-size: 72ch;
+      font-size: 0.96rem;
+      color: #FFFFFF;
+      background-color: #002147;
+    }
+
+    .hero-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-block-start: 0.75rem;
+    }
+
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      min-block-size: 36px;
+      padding: 6px 12px;
+      border-radius: 5px;
+      background-color: #FFFFFF;
+      color: #002147;
+      font-size: 0.84rem;
+      font-weight: 700;
+      text-decoration: underline;
+    }
+
+    .lang-toggle-btn {
+      min-block-size: 44px;
+      min-inline-size: 44px;
+      padding: 8px 14px;
+      background-color: #FFFFFF;
+      color: #002147;
+      border: 2px solid #FFFFFF;
+      border-radius: 6px;
+      font-weight: 800;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+
+    /* Single-row accessible scrolling tablist per modern-web-guidance `tabs` */
+    .tablist-scroller {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: inline proximity;
+      scroll-padding-inline: 2.5rem;
+      border-block-end: 2px solid #002147;
+      background-color: #FFFFFF;
+      margin-block-end: 1.25rem;
+      --fade-size: 2.5rem;
+      --fade-dir: right;
+      --fade-start-pos: 0;
+      --fade-end-pos: 100%;
+    }
+
+    @supports (animation-timeline: scroll()) {
+      .tablist-scroller {
+        mask:
+          linear-gradient(black, black) no-clip subtract,
+          linear-gradient(to var(--fade-dir), black, transparent) var(--fade-start-pos) 0 / var(--fade-start) 100% no-repeat no-clip,
+          linear-gradient(to var(--fade-dir), transparent, black) var(--fade-end-pos) 0 / var(--fade-end) 100% no-repeat no-clip;
+        animation: reveal-fade-start linear both, hide-fade-end linear both;
+        animation-timeline: scroll(self inline);
+        animation-range: 0 var(--fade-size), calc(100% - var(--fade-size)) 100%;
+      }
+    }
+
+    @keyframes reveal-fade-start {
+      to { --fade-start: var(--fade-size); }
+    }
+    @keyframes hide-fade-end {
+      from { --fade-end: var(--fade-size); }
+    }
+
+    [role="tab"] {
+      position: relative;
+      flex: none;
+      scroll-snap-align: start;
+      min-block-size: 46px;
+      padding: 0.7rem 1.1rem;
+      border: 0;
+      background-color: #FFFFFF;
+      color: #002147;
+      font-family: inherit;
+      font-size: 0.95rem;
+      font-weight: 700;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    [role="tab"][aria-selected="true"] {
+      color: #7E061E;
+      background-color: #FAFBF7;
+    }
+
+    [role="tab"][aria-selected="true"]::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      border-block-end: 4px solid #7E061E;
+    }
+
+    /* Styling strictly on nested .panel-inner per `search-hidden-content` */
+    .panel-inner {
+      background-color: #FFFFFF;
+      color: #111827;
+      border: 2px solid #002147;
+      border-radius: 10px;
+      padding: 1.5rem;
+    }
+
+    .plain-callout {
+      background-color: #F2F5F8;
+      color: #111827;
+      border: 1.5px solid #002147;
+      border-inline-start: 6px solid #08454A;
+      border-radius: 6px;
+      padding: 0.9rem 1.1rem;
+      margin-block-end: 1.25rem;
+      font-size: 0.94rem;
+    }
+
+    .wizard-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+      margin-block-end: 1.25rem;
+    }
+
+    .field-card {
+      background-color: #FAFBF7;
+      color: #111827;
+      border: 1.5px solid #002147;
+      border-radius: 8px;
+      padding: 1rem;
+    }
+
+    .field-card label {
+      display: block;
+      font-weight: 800;
+      color: #002147;
+      background-color: #FAFBF7;
+      margin-block-end: 0.35rem;
+      font-size: 0.93rem;
+    }
+
+    .field-hint {
+      display: block;
+      font-size: 0.82rem;
+      color: #111827;
+      background-color: #FAFBF7;
+      margin-block-end: 0.5rem;
+    }
+
+    .field-card select {
+      inline-size: 100%;
+      min-block-size: 44px;
+      padding: 0.5rem 0.65rem;
+      border: 2px solid #002147;
+      border-radius: 6px;
+      background-color: #FFFFFF;
+      color: #111827;
+      font-size: 0.94rem;
+      font-weight: 600;
+    }
+
+    .strategy-btn-group {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 0.75rem;
+      margin-block: 0.75rem 1.25rem;
+    }
+
+    .choice-btn {
+      min-block-size: 56px;
+      padding: 0.75rem 0.9rem;
+      text-align: start;
+      background-color: #FFFFFF;
+      color: #002147;
+      border: 2px solid #002147;
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 0.9rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .choice-btn[aria-pressed="true"] {
+      background-color: #002147;
+      color: #FFFFFF;
+      border-color: #7E061E;
+    }
+
+    .choice-btn span {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 500;
+      margin-block-start: 0.2rem;
+    }
+
+    .action-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: center;
+      margin-block: 1rem;
+    }
+
+    .btn-primary {
+      min-block-size: 44px;
+      padding: 0.65rem 1.25rem;
+      background-color: #7E061E;
+      color: #FFFFFF;
+      border: 2px solid #7E061E;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .btn-secondary {
+      min-block-size: 44px;
+      padding: 0.65rem 1.1rem;
+      background-color: #FFFFFF;
+      color: #002147;
+      border: 2px solid #002147;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .output-card {
+      background-color: #FFFFFF;
+      color: #111827;
+      border: 2px solid #08454A;
+      border-block-start: 6px solid #002147;
+      border-radius: 8px;
+      padding: 1.25rem;
+      margin-block-start: 1rem;
+    }
+
+    .badge-inline {
+      display: inline-block;
+      padding: 3px 9px;
+      border-radius: 4px;
+      font-size: 0.78rem;
+      font-weight: 800;
+      background-color: #002147;
+      color: #FFFFFF;
+      margin-inline-end: 6px;
+    }
+
+    .badge-teal {
+      background-color: #08454A;
+      color: #FFFFFF;
+    }
+
+    .badge-red {
+      background-color: #7E061E;
+      color: #FFFFFF;
+    }
+
+    /* Responsive container-queried data tables per `responsive-table` */
+    .table-wrapper {
+      overflow: auto;
+      max-inline-size: 100%;
+      container-type: inline-size;
+      border: 1.5px solid #002147;
+      border-radius: 8px;
+      margin-block: 1rem;
+      background-color: #FFFFFF;
+    }
+
+    table {
+      inline-size: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      background-color: #FFFFFF;
+      color: #111827;
+      font-size: 0.92rem;
+    }
+
+    caption {
+      text-align: start;
+      padding: 0.75rem 1rem;
+      font-weight: 800;
+      color: #002147;
+      background-color: #F2F5F8;
+      border-block-end: 1.5px solid #002147;
+    }
+
+    thead {
+      position: sticky;
+      inset-block-start: 0;
+      z-index: 1;
+    }
+
+    thead th {
+      background-color: #002147;
+      color: #FFFFFF;
+      text-align: start;
+      padding: 0.7rem 0.85rem;
+      font-weight: 700;
+    }
+
+    tbody th, tbody td {
+      padding: 0.75rem 0.85rem;
+      border-block-end: 1px solid #94A3B8;
+      vertical-align: top;
+      text-align: start;
+      background-color: #FFFFFF;
+      color: #111827;
+    }
+
+    tbody th {
+      position: sticky;
+      inset-inline-start: 0;
+      font-weight: 800;
+      color: #002147;
+      background-color: #FAFBF7;
+    }
+
+    @container (width < 640px) {
+      table, thead, tbody, tr, th, td {
+        display: block;
+      }
+      thead {
+        display: none;
+      }
+      tr {
+        margin-block-end: 1rem;
+        border-block-end: 2px solid #002147;
+      }
+      tbody th {
+        position: static;
+        background-color: #F2F5F8;
+        color: #002147;
+      }
+      td:nth-child(2)::before { content: var(--label-2) ": "; font-weight: 800; color: #002147; }
+      td:nth-child(3)::before { content: var(--label-3) ": "; font-weight: 800; color: #002147; }
+      td:nth-child(4)::before { content: var(--label-4) ": "; font-weight: 800; color: #002147; }
+      td:nth-child(5)::before { content: var(--label-5) ": "; font-weight: 800; color: #002147; }
+    }
+
+    /* Exclusive native <details> disclosures per `search-hidden-content` */
+    details.disclosure-card {
+      background-color: #FFFFFF;
+      color: #111827;
+      border: 1.5px solid #002147;
+      border-radius: 8px;
+      margin-block-end: 0.75rem;
+      padding: 0.75rem 1rem;
+    }
+
+    details.disclosure-card summary {
+      cursor: pointer;
+      font-weight: 800;
+      color: #002147;
+      background-color: #FFFFFF;
+      min-block-size: 32px;
+      font-size: 0.98rem;
+    }
+
+    .disclosure-body {
+      margin-block-start: 0.75rem;
+      padding-block-start: 0.75rem;
+      border-block-start: 1px solid #94A3B8;
+    }
+
+    .lab-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1rem;
+    }
+
+    .lab-card {
+      background-color: #FAFBF7;
+      color: #111827;
+      border: 1.5px solid #002147;
+      border-block-start: 5px solid #08454A;
+      border-radius: 8px;
+      padding: 1.1rem;
+    }
+
+    .lab-card h3 {
+      margin-block: 0 0.4rem;
+      color: #002147;
+      background-color: #FAFBF7;
+      font-size: 1.05rem;
+    }
+
+    .coi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1rem;
+      margin-block: 1rem;
+    }
+
+    .coi-card {
+      background-color: #FAFBF7;
+      color: #111827;
+      border: 2px solid #002147;
+      border-radius: 8px;
+      padding: 1.1rem;
+    }
+
+    .coi-card h3 {
+      margin-block: 0 0.4rem;
+      color: #7E061E;
+      background-color: #FAFBF7;
+    }
+
+    .toast-status {
+      min-block-size: 1.5rem;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #08454A;
+      background-color: transparent;
+    }
+
+    /* Zero-Login Progress & Session Bar (`progress` + `brand-consistent-forms` + `copy-button`) */
+    .session-bar {
+      background-color: #FFFFFF;
+      color: #111827;
+      border: 2px solid #002147;
+      border-inline-start: 8px solid #08454A;
+      border-radius: 8px;
+      padding: 0.95rem 1.2rem;
+      margin-block-end: 1.25rem;
+    }
+
+    .session-top {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.65rem;
+      margin-block-end: 0.5rem;
+    }
+
+    .session-label {
+      font-weight: 800;
+      font-size: 0.92rem;
+      color: #002147;
+      background-color: #FFFFFF;
+    }
+
+    progress#studio-progress {
+      appearance: none;
+      border: 0 solid;
+      overflow: clip;
+      display: block;
+      inline-size: 100%;
+      block-size: 12px;
+      --progress-bar-radius: 1e5px;
+      --progress-bar-track: #CBD5E1;
+      --progress-bar-fill: #08454A;
+      border-radius: var(--progress-bar-radius);
+      background: var(--progress-bar-track);
+      margin-block-end: 0.75rem;
+    }
+
+    progress#studio-progress::-webkit-progress-bar {
+      background: transparent;
+    }
+
+    progress#studio-progress::-webkit-progress-value {
+      background: var(--progress-bar-fill);
+      border-radius: var(--progress-bar-radius);
+      transition: inline-size 0.3s;
+    }
+
+    progress#studio-progress::-moz-progress-bar {
+      background: var(--progress-bar-fill);
+      border-radius: var(--progress-bar-radius);
+      transition: inline-size 0.3s;
+    }
+
+    .session-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .btn-sm {
+      font: inherit;
+      font-size: 0.85rem;
+      font-weight: 700;
+      min-block-size: 44px;
+      min-inline-size: 44px;
+      padding: 0.45rem 0.85rem;
+      border-radius: 6px;
+      border: 1.5px solid #002147;
+      background-color: #FFFFFF;
+      color: #002147;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      text-decoration: none;
+    }
+
+    .btn-sm-danger {
+      border-color: #7E061E;
+      color: #7E061E;
+      background-color: #FFFFFF;
+    }
+
+    .lab-check-row {
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+      margin-block-start: 0.75rem;
+      padding-block-start: 0.65rem;
+      border-block-start: 1px solid #94A3B8;
+      min-block-size: 44px;
+    }
+
+    .lab-check-row input[type="checkbox"] {
+      inline-size: 1.2rem;
+      block-size: 1.2rem;
+      cursor: pointer;
+      flex: none;
+    }
+
+    .lab-check-row label {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #002147;
+      background-color: #FAFBF7;
+      cursor: pointer;
+      padding-block: 6px;
+      margin-block: -6px;
+    }
+
+    @supports not (accent-color: var(--brand-color)) {
+      .lab-check-row label {
+        position: relative;
+        padding-inline-start: 1.85rem;
+        display: inline-flex;
+        align-items: center;
+      }
+      .lab-check-row input[type="checkbox"] {
+        position: absolute !important;
+        clip-path: inset(50%) !important;
+        overflow: hidden !important;
+        width: 1px !important;
+        height: 1px !important;
+        margin: -1px !important;
+        padding: 0 !important;
+        border: 0 !important;
+        white-space: nowrap !important;
+      }
+      .lab-check-row input[type="checkbox"] + label::before {
+        content: "";
+        position: absolute;
+        inset-inline-start: 0;
+        inset-block-start: 50%;
+        transform: translateY(-50%);
+        inline-size: 1.15rem;
+        block-size: 1.15rem;
+        border: 2px solid #002147;
+        background-color: #FFFFFF;
+        border-radius: 4px;
+      }
+      .lab-check-row input[type="checkbox"]:focus-visible + label::before {
+        outline: 3px solid #7E061E;
+        outline-offset: 2px;
+      }
+      .lab-check-row input[type="checkbox"]:checked + label::before {
+        background-color: #002147;
+      }
+      .lab-check-row input[type="checkbox"]:checked + label::after {
+        content: "\2713";
+        position: absolute;
+        inset-inline-start: 0.22rem;
+        inset-block-start: 50%;
+        transform: translateY(-50%);
+        color: #FFFFFF;
+        font-weight: 800;
+        font-size: 0.82rem;
+      }
+    }
+
+    .scan-group {
+      margin-block-end: 1.25rem;
+    }
+
+    .scan-label {
+      display: block;
+      font-weight: 800;
+      color: #002147;
+      background-color: #FFFFFF;
+      margin-block-end: 0.25rem;
+    }
+
+    .scan-input,
+    .scan-textarea {
+      font: inherit;
+      font-size: max(1rem, 1em);
+      inline-size: 100%;
+      min-block-size: 48px;
+      padding: 0.7rem 0.85rem;
+      border: 2px solid #002147;
+      border-radius: 6px;
+      background-color: #FFFFFF;
+      color: #111827;
+    }
+
+    .scan-textarea {
+      resize: vertical;
+      min-block-size: 150px;
+      line-height: 1.5;
+    }
+
+    .scan-textarea:user-invalid,
+    .scan-textarea[aria-invalid="true"] {
+      border-color: #7E061E;
+    }
+
+    .scan-error {
+      display: block;
+      font-size: 0.86rem;
+      font-weight: 700;
+      color: #7E061E;
+      background-color: #FFFFFF;
+      margin-block-start: 0.3rem;
+      min-block-size: 1.25rem;
+    }
+
+    @media (pointer: coarse) {
+      .scan-input,
+      .btn-sm {
+        min-block-size: 52px;
+      }
+    }
+
+    .copy {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      position: relative;
+    }
+
+    .copy-button {
+      font: inherit;
+      font-size: 0.88rem;
+      font-weight: 800;
+      min-inline-size: 48px;
+      min-block-size: 44px;
+      padding: 0.55rem 0.95rem;
+      border-radius: 6px;
+      border: 2px solid #08454A;
+      background-color: #08454A;
+      color: #FFFFFF;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .copy-button[data-copied] {
+      background-color: #002147;
+      border-color: #002147;
+    }
+
+    .copy-button[data-failed] {
+      background-color: #7E061E;
+      border-color: #7E061E;
+    }
+
+    .copy-icon::before {
+      content: "\2398";
+    }
+
+    .copy-button[data-copied] .copy-icon::before {
+      content: "\2713";
+    }
+
+    .copy-button[data-failed] .copy-icon::before {
+      content: "!";
+    }
+
+    .tip {
+      display: inline-block;
+      font-size: 0.84rem;
+      font-weight: 800;
+      padding: 0.25rem 0.55rem;
+      border-radius: 4px;
+      background-color: #F2F5F8;
+      color: #08454A;
+      border: 1.5px solid #08454A;
+      opacity: 0;
+      transition: opacity 0.15s ease;
+    }
+
+    .copy-button[data-copied] + .tip,
+    .copy-button[data-failed] + .tip {
+      opacity: 1;
+    }
+
+    .copy-button[data-failed] + .tip {
+      color: #7E061E;
+      border-color: #7E061E;
+    }
+
+    pre.prompt-box {
+      margin: 0.6rem 0 0;
+      padding: 0.95rem 1.1rem;
+      background-color: #FAFBF7;
+      color: #111827;
+      border: 1.5px solid #002147;
+      border-radius: 6px;
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      line-height: 1.5;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+
+    footer {
+      max-inline-size: 1160px;
+      margin-inline: auto;
+      padding: 1.5rem 1rem 2.5rem;
+      border-block-start: 2px solid #002147;
+      font-size: 0.86rem;
+      color: #111827;
+      background-color: #FAFBF7;
+    }
+
+    @media print {
+      .hero-links, .tablist-scroller, .action-bar, .lang-toggle-btn {
+        display: none !important;
+      }
+      .panel-inner, .output-card {
+        border: 1px solid #000000;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-heading" class="skip-link">Skip to main content</a>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <div>
+        <span class="hero-kicker" data-i18n="kicker">EXW-Demo (Course ID 42051) • Community College Faculty Studio</span>
+        <h1 id="main-heading" tabindex="-1" data-i18n="h1">Curriculum-as-Code Faculty Studio &amp; AI-Resilient Assignment Transformer</h1>
+        <p data-i18n="heroSub">In plain English: Built for busy community college instructors, division chairs, and instructional designers. Transform vulnerable take-home assignments into observable Pattern -> Rule -> Solve modules in 30 seconds, map courses to the Community of Inquiry (CoI) &amp; U.S. DOL TEN No. 07-25 frameworks, audit FERPA/$0 ZTC tool equity, and run 10-minute department labs—with zero student logins or cloud tracking.</p>
+        <nav aria-label="Companion Hubs" class="hero-links">
+          <a class="hero-pill" href="https://exwdemo.dev/" target="_blank" rel="noopener noreferrer">EXW-Demo Hub (exwdemo.dev)</a>
+          <a class="hero-pill" href="https://azwestern.instructure.com/courses/42051" target="_blank" rel="noopener noreferrer">Public Canvas Shell (Course 42051)</a>
+          <a class="hero-pill" href="https://alanpruitt.com/awc-pathway/" target="_blank" rel="noopener noreferrer">AWC 5-Tier Pathway GraphRAG</a>
+          <a class="hero-pill" href="https://exwtoolkit.com/" target="_blank" rel="noopener noreferrer">EXW Clinical Simulators ($0 ZTC)</a>
+        </nav>
+      </div>
+      <button type="button" id="lang-btn" class="lang-toggle-btn" aria-label="Switch interface language between English and Spanish">Español (ES)</button>
+    </div>
+  </header>
+
+  <main class="shell">
+    <div id="live-announcer" class="visually-hidden" aria-live="polite" aria-atomic="true"></div>
+
+    <section aria-label="Scholarly Attribution" class="plain-callout" style="margin-bottom: 1.25rem; border-left: 6px solid #7E061E;">
+      <strong style="color: #002147; background-color: #F2F5F8;">Collegial Attribution:</strong>
+      <span data-i18n="attrBody">Faculty adoption design concepts in this EXW-Demo studio—including the vulnerable-assignment redesign workflow, Community of Inquiry (CoI) faculty framing, equity/privacy tool matrix, and 10-minute department micro-labs—are adapted with attribution to Dr. Stacy Ybarra, Director, OLLU Center for Teaching Excellence, Nov. 19, 2026, and integrated with the Curriculum-as-Code (S-A-R Standard v2.2 &amp; U.S. DOL TEN No. 07-25) architecture.</span>
+      <span lang="es" style="display: block; margin-top: 4px; color: #111827; background-color: #F2F5F8;"><em>Atribución académica: Conceptos de adopción docente adaptados con reconocimiento a la Dra. Stacy Ybarra, Directora, OLLU Center for Teaching Excellence, 19 de noviembre de 2026.</em></span>
+    </section>
+
+    <section aria-label="Zero-Login Progress and Session Controls" class="session-bar">
+      <div class="session-top">
+        <label for="studio-progress" id="progress-label" class="session-label">Faculty Adoption Progress: 1 of 7 Milestones Completed (Auto-Saved in Browser — 0 Bytes Cloud Egress)</label>
+        <span class="badge-inline badge-teal" data-i18n="zeroCloudBadge">$0 Zero-Login • Local Auto-Save</span>
+      </div>
+      <progress id="studio-progress" max="7" value="1"></progress>
+      <div class="session-actions">
+        <span class="copy">
+          <button type="button" class="copy-button" command="--copy" commandfor="permalink-source">
+            <span class="copy-icon" aria-hidden="true"></span>
+            <span data-i18n="btnShareLink">Copy Shareable Studio Link</span>
+          </button>
+          <span class="tip" role="status"></span>
+        </span>
+        <input type="text" id="permalink-source" class="visually-hidden" tabindex="-1" aria-hidden="true" readonly value="https://alanpruitt.com/cac-studio/">
+        <button type="button" id="btn-save-json" class="btn-sm" data-i18n="btnSaveJson">Save Draft (.json)</button>
+        <label for="draft-file-input" class="btn-sm" data-i18n="btnLoadJson">Resume Draft (.json)</label>
+        <input type="file" id="draft-file-input" accept=".json,application/json" class="visually-hidden">
+        <button type="button" id="btn-reset-session" class="btn-sm btn-sm-danger" data-i18n="btnResetSession">Reset Local Session</button>
+        <span id="session-toast" class="toast-status" aria-hidden="true"></span>
+      </div>
+    </section>
+
+    <div class="tablist-scroller" role="tablist" aria-label="Faculty Studio Workbenches" id="studio-tablist">
+      <button type="button" role="tab" id="tab-transformer" aria-selected="true" tabindex="0" data-panel="panel-transformer">1. Assignment Transformer (Canvas Export)</button>
+      <button type="button" role="tab" id="tab-coi" aria-selected="false" tabindex="-1" data-panel="panel-coi">2. Community of Inquiry &amp; TEN 07-25 Crosswalk</button>
+      <button type="button" role="tab" id="tab-equity" aria-selected="false" tabindex="-1" data-panel="panel-equity">3. HSI Equity, FERPA &amp; $0 ZTC Tool Matrix</button>
+      <button type="button" role="tab" id="tab-labs" aria-selected="false" tabindex="-1" data-panel="panel-labs">4. Five 10-Minute Department Meeting Labs</button>
+      <button type="button" role="tab" id="tab-scanner" aria-selected="false" tabindex="-1" data-panel="panel-scanner">5. Local Syllabus Scanner &amp; Adoption Plan</button>
+    </div>
+
+    <!-- PANEL 1: INTERACTIVE C-a-C ASSIGNMENT TRANSFORMER -->
+    <div role="tabpanel" id="panel-transformer" aria-labelledby="tab-transformer">
+      <div class="panel-inner">
+        <h2 style="margin-top: 0; color: #002147; background-color: #FFFFFF;" data-i18n="t1Heading">4-Step AI-Resilient Assignment Transformer (Zero Stubs • 1-Click Canvas HTML)</h2>
+        <div class="plain-callout">
+          <strong style="color: #002147; background-color: #F2F5F8;">Why "AI-Resilient Active Verification" Beats "AI-Resistant" Bans:</strong>
+          Modern multimodal systems easily fabricate traditional essays, generic policy briefs, and even fake prompt logs. Instead of policing students with unreliable detectors, Curriculum-as-Code pairs <strong>local baseline telemetry</strong>, <strong>primary statutory/clinical rule citations</strong>, and <strong>structured human verification</strong> so learning stays authentic across every discipline.
+          <span lang="es" style="display: block; margin-top: 4px;"><em>En español claro: En lugar de prohibiciones frágiles, transforma tareas tradicionales en actividades verificables (Patrón → Regla → Solución) listas para pegar en Canvas LMS con contraste 9:1.</em></span>
+        </div>
+
+        <div class="wizard-grid">
+          <div class="field-card">
+            <label for="sel-legacy">Step 1: Vulnerable Assignment to Replace</label>
+            <span id="hint-legacy" class="field-hint">Pick the Monday-morning pain point in your syllabus.</span>
+            <select id="sel-legacy" aria-describedby="hint-legacy">
+              <option value="discussion">Weekly Canvas Discussion Post ("Read &amp; Reply to 2 Peers")</option>
+              <option value="essay">Standard 5-Page Research or Argument Essay</option>
+              <option value="lab">Traditional Written Lab Report or Worksheet</option>
+              <option value="exam">Take-Home Essay Exam or Short-Answer Test</option>
+              <option value="bib">Annotated Bibliography / Literature Summary</option>
+              <option value="case">Written Case Study Analysis</option>
+              <option value="quiz">Open-Book Reading Comprehension Quiz</option>
+              <option value="review">Post-Exam Review (Passive Grade Check)</option>
+            </select>
+          </div>
+
+          <div class="field-card">
+            <label for="sel-discipline">Step 2: Community College Discipline Pathway</label>
+            <span id="hint-discipline" class="field-hint">Adapts primary SSoT sources and authentic context.</span>
+            <select id="sel-discipline" aria-describedby="hint-discipline">
+              <option value="health">Health, Kinesiology &amp; Allied Health (EXW / Nursing)</option>
+              <option value="stem">Biology, Chemistry &amp; Lab STEM</option>
+              <option value="humanities">English, Composition &amp; Humanities</option>
+              <option value="business">Business, Accounting &amp; Entrepreneurship</option>
+              <option value="cte">CTE, Skilled Trades, AgTech &amp; Workforce</option>
+              <option value="social">Psychology, Education &amp; Social Sciences</option>
+            </select>
+          </div>
+
+          <div class="field-card">
+            <label for="sel-traffic">Step 3: Traffic-Light AI Governance Level</label>
+            <span id="hint-traffic" class="field-hint">Sets explicit student boundaries with ### delimiters.</span>
+            <select id="sel-traffic" aria-describedby="hint-traffic">
+              <option value="amber">AMBER — Scoped AI Thought-Partner (Cite &amp; Verify with ###)</option>
+              <option value="green">GREEN — Mandatory AI Output Audit (Critique Errors &amp; Bias)</option>
+              <option value="red">RED — Embodied Human Baseline (Zero Generative AI Allowed)</option>
+            </select>
+          </div>
+        </div>
+
+        <h3 style="color: #002147; background-color: #FFFFFF; margin-bottom: 0.35rem; font-size: 1.05rem;">Step 4: Select Core S-A-R v2.2 &amp; Community of Inquiry Verification Vehicle</h3>
+        <div class="strategy-btn-group" role="group" aria-label="Verification Vehicle Selection">
+          <button type="button" class="choice-btn" data-vehicle="prs" aria-pressed="true">
+            Vehicle 1: Pattern → Rule → Solve
+            <span>Cognitive Presence • Primary SSoT Rule Anchor</span>
+          </button>
+          <button type="button" class="choice-btn" data-vehicle="audit" aria-pressed="false">
+            Vehicle 2: Flawed-AI Critique &amp; Fact Audit
+            <span>DOL TEN 07-25 Area 4 • Catch Hallucinations</span>
+          </button>
+          <button type="button" class="choice-btn" data-vehicle="embodied" aria-pressed="false">
+            Vehicle 3: Local Field / Oral Micro-Defense
+            <span>Social &amp; Embodied Presence • Live Telemetry</span>
+          </button>
+          <button type="button" class="choice-btn" data-vehicle="wrapper" aria-pressed="false">
+            Vehicle 4: Peer Jigsaw &amp; Metacognitive Wrapper
+            <span>Collaborative Synthesis &amp; Error Diagnosis</span>
+          </button>
+        </div>
+
+        <div class="action-bar">
+          <button type="button" id="btn-copy-canvas" class="btn-primary">Copy 9:1 Canvas-Ready HTML</button>
+          <button type="button" id="btn-copy-md" class="btn-secondary">Copy Clean Markdown</button>
+          <button type="button" id="btn-print" class="btn-secondary">Print / Save PDF Brief</button>
+          <span id="copy-toast" class="toast-status" aria-hidden="true"></span>
+        </div>
+
+        <div id="transformer-output" class="output-card"></div>
+      </div>
+    </div>
+
+    <!-- PANEL 2: COI <-> S-A-R v2.2 ROSETTA STONE -->
+    <div role="tabpanel" id="panel-coi" aria-labelledby="tab-coi" hidden="until-found">
+      <div class="panel-inner">
+        <h2 style="margin-top: 0; color: #002147; background-color: #FFFFFF;">Community of Inquiry (CoI) ↔ Curriculum-as-Code (S-A-R v2.2) Rosetta Stone</h2>
+        <p>Instructional designers, HLC peer reviewers, and Quality Matters (QM) teams already know Garrison, Anderson, &amp; Archer's (2000) <strong>Community of Inquiry</strong> model. This crosswalk translates every C-a-C engineering vehicle directly into CoI and <strong>U.S. DOL ETA Advisory TEN No. 07-25</strong> terminology.</p>
+
+        <figure style="margin: 1.25rem 0; padding: 1rem; background-color: #FAFBF7; border: 1.5px solid #002147; border-radius: 8px; text-align: center;">
+          <svg role="img" viewBox="0 0 680 230" style="max-inline-size: 680px; inline-size: 100%; block-size: auto;">
+            <title>Diagram mapping Community of Inquiry Cognitive, Teaching, and Social Presence to S-A-R v2.2 Problem Framing, Traffic-Light Governance, and Active Verification</title>
+            <rect x="12" y="20" width="200" height="185" rx="10" fill="#FFFFFF" stroke="#002147" stroke-width="2.5"/>
+            <text x="112" y="52" text-anchor="middle" fill="#7E061E" font-weight="800" font-size="15">Cognitive Presence</text>
+            <text x="112" y="78" text-anchor="middle" fill="#002147" font-weight="700" font-size="13">Vehicle 1: Problem Framer</text>
+            <text x="112" y="106" text-anchor="middle" fill="#111827" font-size="12">Pattern → Rule → Solve</text>
+            <text x="112" y="130" text-anchor="middle" fill="#111827" font-size="12">Primary Federal/Clinical SSoT</text>
+            <text x="112" y="154" text-anchor="middle" fill="#08454A" font-weight="700" font-size="11">DOL TEN 07-25 Areas 1 &amp; 4</text>
+
+            <rect x="240" y="20" width="200" height="185" rx="10" fill="#FFFFFF" stroke="#08454A" stroke-width="2.5"/>
+            <text x="340" y="52" text-anchor="middle" fill="#08454A" font-weight="800" font-size="15">Teaching Presence</text>
+            <text x="340" y="78" text-anchor="middle" fill="#002147" font-weight="700" font-size="13">Vehicle 2: Clear Guardrails</text>
+            <text x="340" y="106" text-anchor="middle" fill="#111827" font-size="12">Traffic-Light AI + ### Bounds</text>
+            <text x="340" y="130" text-anchor="middle" fill="#111827" font-size="12">Born-Accessible 9:1 + EN/ES</text>
+            <text x="340" y="154" text-anchor="middle" fill="#08454A" font-weight="700" font-size="11">ADA Title II (28 CFR Part 35)</text>
+
+            <rect x="468" y="20" width="200" height="185" rx="10" fill="#FFFFFF" stroke="#7E061E" stroke-width="2.5"/>
+            <text x="568" y="52" text-anchor="middle" fill="#002147" font-weight="800" font-size="15">Social Presence</text>
+            <text x="568" y="78" text-anchor="middle" fill="#7E061E" font-weight="700" font-size="13">Vehicle 3: Active Proof</text>
+            <text x="568" y="106" text-anchor="middle" fill="#111827" font-size="12">Local Baseline Telemetry</text>
+            <text x="568" y="130" text-anchor="middle" fill="#111827" font-size="12">2-Min Oral / Peer Synthesis</text>
+            <text x="568" y="154" text-anchor="middle" fill="#08454A" font-weight="700" font-size="11">DOL TEN 07-25 Area 5</text>
+          </svg>
+          <figcaption style="font-size: 0.84rem; color: #111827; margin-top: 0.5rem;">Adapted from Garrison, Anderson, &amp; Archer (2000) and aligned to S-A-R Standard v2.2 &amp; U.S. DOL ETA TEN No. 07-25.</figcaption>
+        </figure>
+
+        <div tabindex="0" role="region" aria-labelledby="coi-caption" class="table-wrapper">
+          <table style="--label-2: 'S-A-R v2.2 Vehicle'; --label-3: 'DOL TEN 07-25 Alignment'; --label-4: 'Classroom Proof Artifact';">
+            <caption id="coi-caption">Accreditation &amp; Instructional Design Crosswalk: CoI to S-A-R v2.2</caption>
+            <thead>
+              <tr>
+                <th scope="col">CoI Tenet (2000)</th>
+                <th scope="col">S-A-R v2.2 C-a-C Vehicle</th>
+                <th scope="col">U.S. DOL TEN No. 07-25 Alignment</th>
+                <th scope="col">Verifiable Student Artifact</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Cognitive Presence</th>
+                <td>Vehicle 1: Clinical / Problem Framing (<code>Pattern → Rule → Solve</code>)</td>
+                <td>Area 1 (Understand AI Principles) &amp; Area 4 (Evaluate Outputs Against Ground Truth)</td>
+                <td>Student extracts anomaly pattern, cites exact primary federal/disciplinary threshold, and audits AI draft errors.</td>
+              </tr>
+              <tr>
+                <th scope="row">Teaching Presence</th>
+                <td>Vehicle 2: Traffic-Light Syllabus Policy, <code>###</code> Prompt Isolation &amp; 9:1 UDL</td>
+                <td>Area 2 (Contextualize Workplace AI) &amp; Area 3 (Direct AI Effectively)</td>
+                <td>Zero-ambiguity syllabus expectations, Plain English + Norteño Spanish parity, and $0 ZTC open simulators.</td>
+              </tr>
+              <tr>
+                <th scope="row">Social &amp; Embodied Presence</th>
+                <td>Vehicle 3: Active Verification Telemetry, Peer Rubric Review &amp; Local Field Context</td>
+                <td>Area 5 (Use AI Responsibly &amp; Ethically with Human Accountability)</td>
+                <td>Local community/lab measurement, simulator verification token, or 2-minute peer/oral defense.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- PANEL 3: HSI EQUITY, FERPA & $0 ZTC SOVEREIGN TOOL MATRIX -->
+    <div role="tabpanel" id="panel-equity" aria-labelledby="tab-equity" hidden="until-found">
+      <div class="panel-inner">
+        <h2 style="margin-top: 0; color: #002147; background-color: #FFFFFF;">HSI Equity, FERPA Privacy &amp; $0 ZTC Sovereign Tool Matrix</h2>
+        <div class="plain-callout">
+          <strong style="color: #7E061E; background-color: #F2F5F8;">Critical Community College &amp; HSI Guardrail:</strong>
+          At Hispanic-Serving Institutions and rural community colleges, requiring $20/month commercial AI subscriptions widens the equity gap—and requiring students to upload coursework or personal data into uncontracted consumer cloud chatbots creates <strong>FERPA student-privacy exposure</strong>. Inspect the matrix and expand each category below for $0 ZTC sovereign alternatives.
+        </div>
+
+        <div tabindex="0" role="region" aria-labelledby="tool-matrix-caption" class="table-wrapper">
+          <table style="--label-2: 'Equity Upside'; --label-3: 'Paywall / Bias Risk'; --label-4: 'FERPA / PII Rule'; --label-5: '$0 ZTC / Sovereign Path';">
+            <caption id="tool-matrix-caption">Community College AI Tool Equity, FERPA &amp; $0 ZTC Comparison Matrix</caption>
+            <thead>
+              <tr>
+                <th scope="col">Tool Category</th>
+                <th scope="col">Equity Upside</th>
+                <th scope="col">Paywall &amp; Equity Risk</th>
+                <th scope="col">FERPA &amp; PII Guardrail</th>
+                <th scope="col">$0 ZTC / Sovereign Alternative</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Consumer Cloud LLMs (ChatGPT, Claude, Gemini Free)</th>
+                <td>24/7 bilingual brainstorming, plain-language explanation, and grammar scaffolding for working learners.</td>
+                <td>$20/mo frontier tiers outperform free caps; generic outputs flatten regional &amp; cultural voice.</td>
+                <td><strong>NEVER</strong> require personal student accounts with PII or upload identifiable student work without an institutional DPA.</td>
+                <td>Design for baseline $0 tiers or faculty-run local open-weight models (<strong>Google Gemma 4</strong> via Ollama).</td>
+              </tr>
+              <tr>
+                <th scope="row">Grounded Source Notebooks (NotebookLM / Local Hybrid RAG)</th>
+                <td>Restricts answers strictly to instructor-curated open textbooks and federal guidelines with inline citations.</td>
+                <td>Cloud notebooks still require Google login unless hosted as a zero-login static DOM GraphRAG PWA.</td>
+                <td>Keep corpora 100% public OER / syllabus SSoT; zero student grades or health logs in shared notebooks.</td>
+                <td>Zero-login client-side BM25 + RRF workbenches (e.g., <a href="https://alanpruitt.com/awc-pathway/" target="_blank" rel="noopener noreferrer">AWC Pathway GraphRAG</a>).</td>
+              </tr>
+              <tr>
+                <th scope="row">Browser-Local Edge Simulators ($0 ZTC PWAs)</th>
+                <td>Runs 100% offline/mobile on smartphones between shifts; zero accounts, zero paywalls, &gt;=9:1 outdoor contrast.</td>
+                <td>Requires intentional curriculum alignment so simulation metrics tie back to rubric reasoning.</td>
+                <td><strong>100% FERPA Safe:</strong> Zero bytes leave the student's device; emits stateless verification tokens.</td>
+                <td><a href="https://exwtoolkit.com/" target="_blank" rel="noopener noreferrer">exwtoolkit.com</a> &amp; <a href="https://paga2018.dev/" target="_blank" rel="noopener noreferrer">paga2018.dev</a> ($0 ZTC OER).</td>
+              </tr>
+              <tr>
+                <th scope="row">Commercial AI Detectors (Turnitin AI / GPTZero)</th>
+                <td>None—creates adversarial distrust rather than teaching source verification.</td>
+                <td>Documented higher false-positive rates on multilingual/ESL writers and neurodivergent prose structures.</td>
+                <td>Uploading student essays into third-party commercial detectors without consent raises IP and privacy concerns.</td>
+                <td>Replace reactive detection with <strong>Active Verification</strong> (primary SSoT rule checks + 2-min oral/wrapper proof).</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 style="color: #002147; background-color: #FFFFFF;">Expandable Implementation Guides (Select Any Row to Open)</h3>
+        <details class="disclosure-card" name="equity-accordion" open>
+          <summary>Rule 1: Never Grade Prompt Polish—Grade Primary Rule Verification</summary>
+          <div class="disclosure-body">
+            <p style="margin: 0;">Students paying $20/month for frontier reasoning models will always generate smoother prose than peers using a shared library Chromebook. Level the playing field by grading whether the student accurately identified the <strong>Pattern</strong>, cited the exact <strong>Course SSoT Rule</strong>, and verified the <strong>Solve</strong> against local telemetry.</p>
+          </div>
+        </details>
+        <details class="disclosure-card" name="equity-accordion">
+          <summary>Rule 2: Protect Multilingual &amp; Borderland Voices (EN / Español Parity)</summary>
+          <div class="disclosure-body">
+            <p style="margin: 0;">Explicitly permit students to brainstorm or verify concepts in Spanish or English while requiring transparent disclosure of AI translation/editing support—and never penalize authentic regional syntax using automated "AI probability" scores.</p>
+          </div>
+        </details>
+        <details class="disclosure-card" name="equity-accordion">
+          <summary>Rule 3: The Triple-Hash (###) Student Prompt Isolation Habit</summary>
+          <div class="disclosure-body">
+            <p style="margin: 0;">Teach workforce-ready prompt hygiene (U.S. DOL TEN No. 07-25 Area 3 &amp; Area 5): wrap anonymized case data inside <code>###CASE_DATA_START### ... ###CASE_DATA_END###</code> delimiters and strip all names, student IDs, and clinical identifiers before touching any external tool.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- PANEL 4: FIVE 10-MINUTE DEPARTMENT MEETING LABS -->
+    <div role="tabpanel" id="panel-labs" aria-labelledby="tab-labs" hidden="until-found">
+      <div class="panel-inner">
+        <h2 style="margin-top: 0; color: #002147; background-color: #FFFFFF;">Five Turnkey 10-Minute Department &amp; In-Service Micro-Labs</h2>
+        <p>Designed for division chairs, faculty leads, and Teaching &amp; Learning Centers: each micro-lab fits into a <strong>10-minute agenda slot</strong> (<code>5 minutes solo</code> + <code>5 minutes pair/table debrief</code>) with zero prep slides required.</p>
+
+        <div class="action-bar">
+          <button type="button" id="btn-copy-labs" class="btn-primary">Copy All 5 Facilitator Agendas (Markdown)</button>
+          <span id="labs-toast" class="toast-status" aria-hidden="true"></span>
+        </div>
+
+        <div class="lab-grid">
+          <article class="lab-card">
+            <span class="badge-inline">Lab 1 • 10 Min</span>
+            <h3>The Monday-Morning Vulnerability Swap</h3>
+            <p><strong>Solo (5 min):</strong> Pick one current assignment where pasted AI prose could earn a "B" today. Circle the single learning outcome you actually care about measuring.</p>
+            <p style="margin-bottom: 0;"><strong>Debrief (5 min):</strong> Trade with a colleague and add one local data anchor, simulator metric, or 2-sentence oral check that AI cannot fabricate.</p>
+            <div class="lab-check-row">
+              <input type="checkbox" id="lab-done-1" data-lab="1">
+              <label for="lab-done-1">Mark Lab 1 Completed (Saved Locally)</label>
+            </div>
+          </article>
+
+          <article class="lab-card">
+            <span class="badge-inline badge-teal">Lab 2 • 10 Min</span>
+            <h3>One-Sentence Traffic-Light Syllabus Rule</h3>
+            <p><strong>Solo (5 min):</strong> Draft three crisp 1-sentence rules for your syllabus: one <strong>Red</strong> (human baseline), one <strong>Amber</strong> (scoped thought-partner), and one <strong>Green</strong> (AI output audit).</p>
+            <p style="margin-bottom: 0;"><strong>Debrief (5 min):</strong> Read your sentences aloud—if a working first-generation student at 11:00 PM cannot tell what is allowed in 10 seconds, cut the jargon in half.</p>
+            <div class="lab-check-row">
+              <input type="checkbox" id="lab-done-2" data-lab="2">
+              <label for="lab-done-2">Mark Lab 2 Completed (Saved Locally)</label>
+            </div>
+          </article>
+
+          <article class="lab-card">
+            <span class="badge-inline badge-red">Lab 3 • 10 Min</span>
+            <h3>Product vs. Process Grade-Weight Audit</h3>
+            <p><strong>Solo (5 min):</strong> Write down your last major project's point breakdown: what % rewarded polished final prose vs. observable reasoning steps (Pattern, SSoT Rule, Revision Diff)?</p>
+            <p style="margin-bottom: 0;"><strong>Debrief (5 min):</strong> Shift at least <strong>40%</strong> of the rubric weight onto verifiable process &amp; rule accuracy without increasing your grading time.</p>
+            <div class="lab-check-row">
+              <input type="checkbox" id="lab-done-3" data-lab="3">
+              <label for="lab-done-3">Mark Lab 3 Completed (Saved Locally)</label>
+            </div>
+          </article>
+
+          <article class="lab-card">
+            <span class="badge-inline">Lab 4 • 10 Min</span>
+            <h3>HSI Paywall, Mobile &amp; FERPA Barrier Check</h3>
+            <p><strong>Solo (5 min):</strong> Test one AI-involved activity against three checks: (1) Can it be completed at $0? (2) Does it work on a smartphone? (3) Does it require zero student PII?</p>
+            <p style="margin-bottom: 0;"><strong>Debrief (5 min):</strong> Replace any paid or login-gated step with an instructor-supplied sample output or $0 ZTC open web tool.</p>
+            <div class="lab-check-row">
+              <input type="checkbox" id="lab-done-4" data-lab="4">
+              <label for="lab-done-4">Mark Lab 4 Completed (Saved Locally)</label>
+            </div>
+          </article>
+
+          <article class="lab-card">
+            <span class="badge-inline badge-teal">Lab 5 • 10 Min</span>
+            <h3>The 4-Question Metacognitive Exam Wrapper</h3>
+            <p><strong>Solo (5 min):</strong> Attach 4 post-quiz questions worth 5% recovery credit: (1) How I prepared, (2) Error pattern (concept vs. rule misread), (3) Exact SSoT page/rule fix, (4) Next-unit adjustment.</p>
+            <p style="margin-bottom: 0;"><strong>Debrief (5 min):</strong> Share how error-pattern diagnosis builds self-regulated learners faster than re-lecturing.</p>
+            <div class="lab-check-row">
+              <input type="checkbox" id="lab-done-5" data-lab="5">
+              <label for="lab-done-5">Mark Lab 5 Completed (Saved Locally)</label>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <!-- PANEL 5: ZERO-EGRESS LOCAL SYLLABUS VULNERABILITY SCANNER & ADOPTION PLANNER -->
+    <div role="tabpanel" id="panel-scanner" aria-labelledby="tab-scanner" hidden="until-found">
+      <div class="panel-inner">
+        <h2 id="scanner-heading" style="margin-top: 0; color: #002147; background-color: #FFFFFF;">Local Syllabus Vulnerability Scanner &amp; Personalized Adoption Planner</h2>
+        <div class="plain-callout">
+          <strong style="color: #08454A; background-color: #F2F5F8;">100% On-Device RAM Execution (Zero AI Gateway • Zero FERPA/IP Egress • $0 Cost):</strong>
+          Paste your course outcomes, assignment breakdown, or syllabus policy text below. A deterministic in-browser keyword &amp; vulnerability scanner runs in under 5 milliseconds with <strong>zero network calls</strong>—flagging AI-vulnerable assignments, mapping your discipline pathway, generating 1-click pre-filled Transformer links, and preparing an optional anonymized <code>###</code> prompt block for your own college-approved AI environment.
+          <span lang="es" style="display: block; margin-top: 4px;"><em>Ejecución 100% local en navegador (0 bytes salen de su dispositivo; sin cuentas ni pasarelas pagadas): pegue sus objetivos o lista de tareas para generar un plan de adopción personalizado con enlaces directos.</em></span>
+        </div>
+
+        <form id="scanner-form" aria-labelledby="scanner-heading" action="/cac-studio/" method="GET" novalidate>
+          <div class="scan-group">
+            <label for="scan-course-title" class="scan-label">Course Code &amp; Title (Optional):</label>
+            <span id="scan-course-hint" class="field-hint">Example: BIO 181 General Biology I, ENG 101 Composition, or EXW 101 Foundations.</span>
+            <input type="text" id="scan-course-title" name="course_title" class="scan-input" maxlength="100" enterkeyhint="next" aria-describedby="scan-course-hint">
+          </div>
+
+          <div class="scan-group">
+            <label for="scan-syllabus-text" class="scan-label">Paste Course Goals, Assignment List, or Syllabus Policy Text: <span aria-hidden="true">*</span></label>
+            <span id="scan-text-hint" class="field-hint">Include your major graded assignments (discussions, essays, labs, quizzes, exams) and any current AI or textbook notes (minimum 20 characters; never paste student names or IDs).</span>
+            <textarea id="scan-syllabus-text" name="syllabus_text" class="scan-textarea" required minlength="20" aria-describedby="scan-text-hint scan-error"></textarea>
+            <span id="scan-error" class="scan-error" aria-live="polite"></span>
+          </div>
+
+          <div class="action-bar" style="margin-top: 0.5rem;">
+            <button type="submit" class="btn-primary">Scan Syllabus Locally &amp; Build Adoption Plan</button>
+            <button type="button" id="btn-load-sample-syllabus" class="btn-secondary">Load Sample Community College Syllabus</button>
+          </div>
+        </form>
+
+        <div id="scanner-output" class="output-card" hidden>
+          <h3 id="scan-plan-title" style="margin-top: 0; color: #002147; background-color: #FFFFFF;">Personalized 3-Step Faculty Adoption Plan</h3>
+          <div id="scan-summary-badges" style="margin-bottom: 0.85rem;"></div>
+          <p id="scan-governance-notes" style="margin: 0 0 1rem 0; color: #111827; background-color: #FFFFFF;"></p>
+
+          <div class="table-wrapper" tabindex="0" role="region" aria-labelledby="scan-table-cap">
+            <table style="--label-2: 'Vulnerability'; --label-3: 'Recommended S-A-R Fix'; --label-4: 'Studio Deep-Link';">
+              <caption id="scan-table-cap">Detected Syllabus Assignments &amp; Pre-Loaded Studio Links</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Detected Syllabus Item</th>
+                  <th scope="col">AI Vulnerability Signal</th>
+                  <th scope="col">Recommended Policy &amp; Vehicle</th>
+                  <th scope="col">1-Click Studio Action</th>
+                </tr>
+              </thead>
+              <tbody id="scan-tbody"></tbody>
+            </table>
+          </div>
+
+          <h4 style="margin: 1.1rem 0 0.35rem; color: #002147; background-color: #FFFFFF;">Optional Sovereign Handoff: Anonymized <code>###</code> Prompt for Your Own Institutional AI (Gemini / ChatGPT Edu / Local Ollama)</h4>
+          <div class="sow-toolbar" style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem;">
+            <span class="copy">
+              <button type="button" class="copy-button" command="--copy" commandfor="scanner-prompt-pre">
+                <span class="copy-icon" aria-hidden="true"></span>
+                <span>Copy ### Prompt Block</span>
+              </button>
+              <span class="tip" role="status"></span>
+            </span>
+          </div>
+          <pre id="scanner-prompt-pre" class="prompt-box" tabindex="0" aria-label="Anonymized triple-hash prompt for institutional AI"></pre>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p style="margin: 0 0 0.5rem 0;">
+      <strong>Collegial Attribution:</strong> Adapted in part from faculty development concepts by <strong>Dr. Stacy Ybarra, Director, OLLU Center for Teaching Excellence, Nov. 19, 2026</strong>, and engineered into <strong>Curriculum-as-Code (`S-A-R Standard v2.2` • `EXW-Demo Course 42051`)</strong> by <strong>Alan Pruitt</strong> (<a href="https://alanpruitt.com/">alanpruitt.com</a>) &amp; <strong>Webcognita LLC</strong> (<a href="https://www.webcognita.com/">webcognita.com</a>). Conforms to DOJ ADA Title II (<code>28 CFR Part 35</code>), Section 508, and WCAG 2.2 Level AA (<code>&gt;= 9:1</code> Double-Contrast Guard).
+    </p>
+    <p style="margin: 0;">
+      <em>Institutional Non-Endorsement &amp; Dual-License Notice:</em> Pedagogical templates and open faculty lab guides on this page are shared under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-NC-SA 4.0</a> for non-commercial educational use with attribution (crediting Dr. Stacy Ybarra, Director, OLLU Center for Teaching Excellence, Nov. 19, 2026, and Alan Pruitt / EXW-Demo); underlying C-a-C compiler &amp; PWA architecture © 2026 Alan Pruitt &amp; Webcognita LLC. Institutional affiliations (Our Lady of the Lake University; Arizona Western College; The University of Arizona) are stated for scholarly attribution and faculty identification only.
+    </p>
+  </footer>
+
+  <script>
+    (function () {
+      'use strict';
+
+      const announcer = document.getElementById('live-announcer');
+      function announce(msg) {
+        if (!announcer) return;
+        announcer.textContent = '';
+        window.setTimeout(function () { announcer.textContent = msg; }, 40);
+      }
+
+      // --- 1. Accessible Tablist + URL Query / LocalStorage Persistence + `beforematch` ---
+      const STORAGE_KEY = 'cac_studio_state_v2';
+      const tablist = document.getElementById('studio-tablist');
+      const tabs = Array.from(tablist.querySelectorAll('[role="tab"]'));
+      const panels = tabs.map(function (t) { return document.getElementById(t.dataset.panel); });
+
+      const milestones = {
+        configured: true,
+        exportedBlueprint: false,
+        viewedCoi: false,
+        viewedEquity: false,
+        completedLab: false,
+        scannedSyllabus: false,
+        sharedOrSaved: false
+      };
+
+      let activeTabId = 'tab-transformer';
+
+      function selectTab(targetTab, moveFocus, skipSave) {
+        activeTabId = targetTab.id;
+        if (activeTabId === 'tab-coi') milestones.viewedCoi = true;
+        if (activeTabId === 'tab-equity') milestones.viewedEquity = true;
+        tabs.forEach(function (tab, idx) {
+          const isSel = tab === targetTab;
+          tab.setAttribute('aria-selected', isSel ? 'true' : 'false');
+          tab.tabIndex = isSel ? 0 : -1;
+          const panel = panels[idx];
+          if (isSel) {
+            panel.removeAttribute('hidden');
+          } else if ('onbeforematch' in HTMLElement.prototype) {
+            panel.setAttribute('hidden', 'until-found');
+          } else {
+            panel.hidden = true;
+          }
+        });
+        if (targetTab.scrollIntoView) {
+          targetTab.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+        }
+        if (moveFocus) {
+          targetTab.focus();
+        }
+        if (!skipSave) {
+          persistState();
+        }
+      }
+
+      tabs.forEach(function (tab, idx) {
+        tab.addEventListener('click', function () {
+          selectTab(tab, false, false);
+        });
+        tab.addEventListener('keydown', function (e) {
+          let nextIdx = null;
+          if (e.key === 'ArrowRight') nextIdx = (idx + 1) % tabs.length;
+          else if (e.key === 'ArrowLeft') nextIdx = (idx - 1 + tabs.length) % tabs.length;
+          else if (e.key === 'Home') nextIdx = 0;
+          else if (e.key === 'End') nextIdx = tabs.length - 1;
+          if (nextIdx !== null) {
+            e.preventDefault();
+            selectTab(tabs[nextIdx], true, false);
+          }
+        });
+      });
+
+      panels.forEach(function (panel, idx) {
+        panel.addEventListener('beforematch', function () {
+          selectTab(tabs[idx], false, false);
+        });
+      });
+
+      if (!('onbeforematch' in HTMLElement.prototype)) {
+        panels.forEach(function (panel, idx) {
+          if (idx !== 0) panel.hidden = true;
+        });
+      }
+
+      // --- 2. Bilingual EN/ES Header Toggle ---
+      let currentLang = 'en';
+      const i18n = {
+        en: {
+          btn: 'Español (ES)',
+          kicker: 'EXW-Demo (Course ID 42051) • Community College Faculty Studio',
+          h1: 'Curriculum-as-Code Faculty Studio & AI-Resilient Assignment Transformer',
+          heroSub: 'In plain English: Built for busy community college instructors, division chairs, and instructional designers. Transform vulnerable take-home assignments into observable Pattern -> Rule -> Solve modules in 30 seconds, map courses to the Community of Inquiry (CoI) & U.S. DOL TEN No. 07-25 frameworks, audit FERPA/$0 ZTC tool equity, and run 10-minute department labs—with zero student logins or cloud tracking.',
+          t1Heading: '4-Step AI-Resilient Assignment Transformer (Zero Stubs • 1-Click Canvas HTML)',
+          attrBody: 'Faculty adoption design concepts in this EXW-Demo studio—including the vulnerable-assignment redesign workflow, Community of Inquiry (CoI) faculty framing, equity/privacy tool matrix, and 10-minute department micro-labs—are adapted with attribution to Dr. Stacy Ybarra, Director, OLLU Center for Teaching Excellence, Nov. 19, 2026, and integrated with the Curriculum-as-Code (S-A-R Standard v2.2 & U.S. DOL TEN No. 07-25) architecture.',
+          zeroCloudBadge: '$0 Zero-Login • Local Auto-Save',
+          btnShareLink: 'Copy Shareable Studio Link',
+          btnSaveJson: 'Save Draft (.json)',
+          btnLoadJson: 'Resume Draft (.json)',
+          btnResetSession: 'Reset Local Session'
+        },
+        es: {
+          btn: 'English (EN)',
+          kicker: 'EXW-Demo (Curso ID 42051) • Estudio Docente de Colegio Comunitario',
+          h1: 'Estudio Docente Curriculum-as-Code y Transformador de Tareas Resilientes ante IA',
+          heroSub: 'En español claro: Diseñado para docentes de colegios comunitarios, jefaturas de división y diseñadores instruccionales. Transforme tareas vulnerables en módulos observables (Patrón -> Regla -> Solución) en 30 segundos, alinee cursos con Comunidad de Indagación (CoI) y U.S. DOL TEN No. 07-25, audite privacidad FERPA / $0 ZTC y ejecute micro-talleres departamentales de 10 minutos.',
+          t1Heading: 'Transformador de Tareas en 4 Pasos (Cero Plantillas Vacías • Exportación Canvas 9:1)',
+          attrBody: 'Los conceptos de adopción docente en este estudio EXW-Demo—incluyendo el flujo de rediseño de tareas vulnerables, la alineación con Comunidad de Indagación (CoI), la matriz de equidad/privacidad y los micro-talleres departamentales de 10 minutos—se adaptan con atribución a la Dra. Stacy Ybarra, Directora, OLLU Center for Teaching Excellence, 19 de noviembre de 2026, integrados con la arquitectura Curriculum-as-Code (S-A-R v2.2 y U.S. DOL TEN No. 07-25).',
+          zeroCloudBadge: '$0 Sin Login • Guardado Local',
+          btnShareLink: 'Copiar Enlace Compartible',
+          btnSaveJson: 'Guardar Borrador (.json)',
+          btnLoadJson: 'Cargar Borrador (.json)',
+          btnResetSession: 'Reiniciar Sesión Local'
+        }
+      };
+
+      const langBtn = document.getElementById('lang-btn');
+      function applyLangUI() {
+        document.documentElement.lang = currentLang;
+        langBtn.textContent = i18n[currentLang].btn;
+        document.querySelectorAll('[data-i18n]').forEach(function (el) {
+          const key = el.getAttribute('data-i18n');
+          if (i18n[currentLang][key]) el.textContent = i18n[currentLang][key];
+        });
+      }
+
+      langBtn.addEventListener('click', function () {
+        currentLang = currentLang === 'en' ? 'es' : 'en';
+        applyLangUI();
+        persistState();
+        announce(currentLang === 'es' ? 'Idioma cambiado a Español' : 'Language switched to English');
+      });
+
+      // --- 3. Complete 100% Non-Stub Assignment Transformer Engine ---
+      const LEGACY_MAP = {
+        discussion: { label: 'Weekly Canvas Discussion Post', pain: 'Generic 250-word chatbot summaries and hollow "Great point, I agree!" peer replies' },
+        essay: { label: '5-Page Research or Argument Essay', pain: 'Polished one-shot AI prose with fabricated or unread citations' },
+        lab: { label: 'Traditional Written Lab Report', pain: 'Auto-generated methods/discussion paragraphs detached from bench observations' },
+        exam: { label: 'Take-Home Essay Exam', pain: 'Unverified off-camera answer synthesis replacing individual conceptual recall' },
+        bib: { label: 'Annotated Bibliography', pain: 'Abstract-level LLM summaries generated without reading primary studies' },
+        case: { label: 'Written Case Study Analysis', pain: 'Surface-level textbook platitudes missing specific threshold trade-offs' },
+        quiz: { label: 'Open-Book Reading Quiz', pain: 'Instant copy-paste lookup with zero long-term schema retention' },
+        review: { label: 'Passive Post-Exam Review', pain: 'Students check their score and move on without diagnosing conceptual misconceptions' }
+      };
+
+      const DISC_MAP = {
+        health: {
+          label: 'Health, Kinesiology & Allied Health',
+          ssot: '2018 U.S. Physical Activity Guidelines (PAGA 2018), USDA Dietary Guidelines 2025–2030, and ACSM 12th Ed. clinical safety gates',
+          context: 'a Yuma borderland client working outdoor shifts in 106°F desert heat or an older adult fall-risk screening',
+          telemetry: 'baseline resting HR / gait-speed / sweat-rate metric from the $0 ZTC EXW Clinical Toolkit (exwtoolkit.com)'
+        },
+        stem: {
+          label: 'Biology, Chemistry & Lab STEM',
+          ssot: 'peer-reviewed lab protocol safety sheets, stoichiometric conservation laws, and raw bench instrument logs',
+          context: 'an unexpected experimental outlier recorded during this week\'s wet-lab or local environmental water/soil sample',
+          telemetry: 'timestamped bench notebook measurement photo + raw control-vs-variable delta table'
+        },
+        humanities: {
+          label: 'English, Composition & Humanities',
+          ssot: 'primary archival texts, verbatim line/page quotations, and rhetorical audience constraints',
+          context: 'a primary local/regional historical document, oral interview excerpt, or close-reading passage assigned in class',
+          telemetry: 'annotated primary-passage quote check + tracked-revision rationale comparing initial claim to final thesis'
+        },
+        business: {
+          label: 'Business, Accounting & Entrepreneurship',
+          ssot: 'GAAP / FASB accounting rules, SBA small-business feasibility benchmarks, and local municipal/county market data',
+          context: 'a real Main Street micro-enterprise or regional supply-chain bottleneck in your local county',
+          telemetry: 'unit-economics sensitivity table testing a 15% cost shock + live source URL verification'
+        },
+        cte: {
+          label: 'CTE, Skilled Trades, AgTech & Workforce',
+          ssot: 'OSHA safety standards, NEC/AWS/manufacturer torque & diagnostic tolerance tables, and field inspection checklists',
+          context: 'a live shop-floor fault scenario, irrigation/AgTech sensor anomaly, or equipment lockout/tagout inspection',
+          telemetry: 'shop diagnostic reading / caliper or multimeter value + signed safety-gate checklist'
+        },
+        social: {
+          label: 'Psychology, Education & Social Sciences',
+          ssot: 'APA ethical guidelines, peer-reviewed empirical study methodology sections, and public Census / BLS datasets',
+          context: 'a local community service gap, classroom observation scenario, or demographic trend in your county',
+          telemetry: 'primary dataset row citation (n, methodology limitation, effect size) + ethical boundary check'
+        }
+      };
+
+      const TRAFFIC_MAP = {
+        amber: {
+          badge: 'AMBER — Scoped AI Thought-Partner (Cite & Verify)',
+          color: '#08454A',
+          rule: 'Permitted ONLY for brainstorming or plain-language concept clarification using anonymized prompts wrapped in ###CASE_DATA_START### ... ###CASE_DATA_END###. Never paste unverified AI prose; you must verify every claim against the Course SSoT and include a 2-line AI Usage & Verification Note.'
+        },
+        green: {
+          badge: 'GREEN — Mandatory AI Output Audit (DOL TEN 07-25 Area 4)',
+          color: '#002147',
+          rule: 'Required AI Critique Mode: Generate (or use the instructor-provided $0 sample) AI response for this scenario, then audit and correct at least two factual omissions, threshold errors, or contextual biases using our primary Course SSoT.'
+        },
+        red: {
+          badge: 'RED — Embodied Human Baseline (Zero Generative AI)',
+          color: '#7E061E',
+          rule: 'No generative AI writing, summarizing, or outlining tools may be used on this baseline competency check. Assessment measures your direct unaided clinical/technical reasoning and authentic voice.'
+        }
+      };
+
+      const VEHICLE_MAP = {
+        prs: {
+          title: 'Structured Pattern → Rule → Solve Brief + Primary SSoT Verification',
+          coi: 'Cognitive Presence + Teaching Presence (DOL TEN 07-25 Areas 1, 3 & 4)',
+          buildSteps: function (leg, disc) {
+            return [
+              '<strong>1. PATTERN (Extract Observable Signal):</strong> Using ' + disc.context + ', state the core anomaly, bottleneck, or competing claim in 2–3 concise sentences supported by your ' + disc.telemetry + '.',
+              '<strong>2. RULE (Anchor to Primary SSoT):</strong> Cite the exact governing threshold or principle from ' + disc.ssot + ' (include section/table/page—no generic web summaries).',
+              '<strong>3. SOLVE (Contextual Action Plan):</strong> Propose a concrete, step-by-step intervention tailored to real resource/safety constraints, stating one risk if the rule is misapplied.',
+              '<strong>4. ACTIVE VERIFICATION PROOF:</strong> Attach your ' + disc.telemetry + ' and 2-sentence verification reflection.'
+            ];
+          }
+        },
+        audit: {
+          title: 'Red-Team Audit of a Flawed AI Draft Against Primary Course SSoT',
+          coi: 'Cognitive Presence (DOL TEN 07-25 Area 4: Evaluate AI Outputs Critically)',
+          buildSteps: function (leg, disc) {
+            return [
+              '<strong>1. BASELINE ARTIFACT ($0 Zero-Paywall Provided):</strong> Start from the instructor-supplied synthetic AI draft on ' + disc.context + ' (or generate one via any $0 baseline model using <code>###</code> anonymized delimiters—zero student PII).',
+              '<strong>2. RED-TEAM ERROR HUNT:</strong> Identify at least <strong>two specific errors, missing safety gates, or equity blind spots</strong> where the AI output contradicts ' + disc.ssot + '.',
+              '<strong>3. SSoT REMEDIATION:</strong> Rewrite the flawed section into a verified, practitioner-grade recommendation backed by your ' + disc.telemetry + '.',
+              '<strong>4. PEER / SELF SIGN-OFF:</strong> State in 2 sentences when an entry-level professional in ' + disc.label + ' should trust vs. override automated AI suggestions.'
+            ];
+          }
+        },
+        embodied: {
+          title: 'Local Field Telemetry + 90-Second Synchronous / Audio Micro-Defense',
+          coi: 'Social & Embodied Presence (DOL TEN 07-25 Area 5: Human Accountability)',
+          buildSteps: function (leg, disc) {
+            return [
+              '<strong>1. LOCAL OBSERVATION / BENCH RUN:</strong> Collect one real-world observation or simulation run grounded in ' + disc.context + ' (' + disc.telemetry + ').',
+              '<strong>2. CONCISE 1-PAGE FIELD BRIEF:</strong> Map your observation using <code>Pattern → Rule → Solve</code> anchored to ' + disc.ssot + '.',
+              '<strong>3. 90-SECOND MICRO-DEFENSE (UDL Modality Choice):</strong> Submit a 90-second Canvas Studio voice/video note (or live lab check-in) answering without a script: <em>"Which single SSoT threshold drove your decision, and what changes if the baseline shifts by 20%?"</em>',
+              '<strong>4. PEER CROSS-CHECK:</strong> Respond to one classmate\'s brief by testing an edge-case constraint rather than generic praise.'
+            ];
+          }
+        },
+        wrapper: {
+          title: 'Interdependent Peer Jigsaw + Metacognitive Error-Diagnosis Wrapper',
+          coi: 'Social Presence + Cognitive Metacognition (Self-Regulated Mastery)',
+          buildSteps: function (leg, disc) {
+            return [
+              '<strong>1. INDIVIDUAL SSoT BRIEF:</strong> Diagnose your assigned slice of ' + disc.context + ' using ' + disc.ssot + ' and record your ' + disc.telemetry + '.',
+              '<strong>2. INTERDEPENDENT SYNTHESIS:</strong> Combine constraints with two peers holding different variables to produce a unified decision table.',
+              '<strong>3. METACOGNITIVE WRAPPER:</strong> Document (a) your initial assumption that turned out incomplete, (b) the exact SSoT rule that corrected it, and (c) your updated study/verification habit for the next module.',
+              '<strong>4. TRANSPARENCY LOG:</strong> Include your Traffic-Light AI compliance statement.'
+            ];
+          }
+        }
+      };
+
+      let selectedVehicle = 'prs';
+      const selLegacy = document.getElementById('sel-legacy');
+      const selDisc = document.getElementById('sel-discipline');
+      const selTraffic = document.getElementById('sel-traffic');
+      const outputBox = document.getElementById('transformer-output');
+      const vehicleBtns = Array.from(document.querySelectorAll('.choice-btn'));
+
+      function currentModel() {
+        const leg = LEGACY_MAP[selLegacy.value];
+        const disc = DISC_MAP[selDisc.value];
+        const traf = TRAFFIC_MAP[selTraffic.value];
+        const veh = VEHICLE_MAP[selectedVehicle];
+        const steps = veh.buildSteps(leg, disc);
+        return { leg: leg, disc: disc, traf: traf, veh: veh, steps: steps };
+      }
+
+      function buildCanvasHTML(m) {
+        const stepLis = m.steps.map(function (s) {
+          return '<li style="margin-bottom: 8px; background-color: #FFFFFF; color: #111827;">' + s + '</li>';
+        }).join('\n');
+        return (
+          '<div style="background-color: #FFFFFF; color: #111827; border: 2px solid #002147; border-left: 8px solid ' + m.traf.color + '; border-radius: 8px; padding: 20px; margin: 16px 0; font-family: system-ui, -apple-system, sans-serif; line-height: 1.6;">\n' +
+          '  <p style="margin: 0 0 8px 0; background-color: #FFFFFF; color: #002147;"><strong>Curriculum-as-Code Redesigned Module (' + m.disc.label + ')</strong> — Replaces: <em>' + m.leg.label + '</em></p>\n' +
+          '  <h3 style="margin: 0 0 10px 0; color: #002147; background-color: #FFFFFF;">' + m.veh.title + '</h3>\n' +
+          '  <div style="background-color: #F2F5F8; color: #111827; border: 1.5px solid #002147; border-radius: 6px; padding: 10px 14px; margin-bottom: 14px;">\n' +
+          '    <strong style="color: ' + m.traf.color + '; background-color: #F2F5F8;">AI Policy (' + m.traf.badge + '):</strong> ' + m.traf.rule + '\n' +
+          '  </div>\n' +
+          '  <p style="margin: 0 0 10px 0; background-color: #FFFFFF; color: #111827;"><strong>In Plain English (Why This Matters):</strong> Instead of ' + m.leg.pain.toLowerCase() + ', this assignment builds durable workforce problem-framing aligned with <em>' + m.veh.coi + '</em>.</p>\n' +
+          '  <h4 style="margin: 12px 0 6px 0; color: #002147; background-color: #FFFFFF;">Student Deliverables (Pattern → Rule → Solve)</h4>\n' +
+          '  <ol style="margin: 0 0 16px 20px; padding: 0; background-color: #FFFFFF; color: #111827;">\n' + stepLis + '\n  </ol>\n' +
+          '  <table style="width: 100%; border-collapse: collapse; background-color: #FFFFFF; color: #111827; font-size: 0.92rem;">\n' +
+          '    <caption style="text-align: left; font-weight: 700; padding: 6px 0; color: #002147; background-color: #FFFFFF;">10-Point Active Verification Grading Rubric</caption>\n' +
+          '    <thead>\n' +
+          '      <tr>\n' +
+          '        <th scope="col" style="background-color: #002147; color: #FFFFFF; padding: 8px; text-align: left;">Criterion</th>\n' +
+          '        <th scope="col" style="background-color: #002147; color: #FFFFFF; padding: 8px; text-align: left;">Observable Mastery Standard</th>\n' +
+          '        <th scope="col" style="background-color: #002147; color: #FFFFFF; padding: 8px; text-align: left;">Pts</th>\n' +
+          '      </tr>\n' +
+          '    </thead>\n' +
+          '    <tbody>\n' +
+          '      <tr><th scope="row" style="background-color: #FAFBF7; color: #002147; padding: 8px; border: 1px solid #94A3B8; text-align: left;">1. Pattern Extraction</th><td style="background-color: #FFFFFF; color: #111827; padding: 8px; border: 1px solid #94A3B8;">Isolates concrete signal/anomaly from local scenario or telemetry without filler.</td><td style="background-color: #FFFFFF; color: #111827; padding: 8px; border: 1px solid #94A3B8;"><strong>2.5</strong></td></tr>\n' +
+          '      <tr><th scope="row" style="background-color: #FAFBF7; color: #002147; padding: 8px; border: 1px solid #94A3B8; text-align: left;">2. Primary SSoT Rule</th><td style="background-color: #FFFFFF; color: #111827; padding: 8px; border: 1px solid #94A3B8;">Cites exact governing threshold from ' + m.disc.ssot + ' (zero hallucinated citations).</td><td style="background-color: #FFFFFF; color: #111827; padding: 8px; border: 1px solid #94A3B8;"><strong>3.0</strong></td></tr>\n' +
+          '      <tr><th scope="row" style="background-color: #FAFBF7; color: #002147; padding: 8px; border: 1px solid #94A3B8; text-align: left;">3. Contextual Solve</th><td style="background-color: #FFFFFF; color: #111827; padding: 8px; border: 1px solid #94A3B8;">Applies rule accurately to real constraints and names one failure/safety boundary.</td><td style="background-color: #FFFFFF; color: #111827; padding: 8px; border: 1px solid #94A3B8;"><strong>2.5</strong></td></tr>\n' +
+          '      <tr><th scope="row" style="background-color: #FAFBF7; color: #002147; padding: 8px; border: 1px solid #94A3B8; text-align: left;">4. Active Verification</th><td style="background-color: #FFFFFF; color: #111827; padding: 8px; border: 1px solid #94A3B8;">Includes verified ' + m.disc.telemetry + ' + Traffic-Light AI compliance note.</td><td style="background-color: #FFFFFF; color: #111827; padding: 8px; border: 1px solid #94A3B8;"><strong>2.0</strong></td></tr>\n' +
+          '    </tbody>\n' +
+          '  </table>\n' +
+          '  <p style="margin: 12px 0 0 0; font-size: 0.85rem; background-color: #FFFFFF; color: #111827;"><em>Attribution: Faculty adoption design adapted with credit to Dr. Stacy Ybarra, Director, OLLU Center for Teaching Excellence, Nov. 19, 2026; Curriculum-as-Code (S-A-R Standard v2.2) implementation by Alan Pruitt / EXW-Demo (Course 42051).</em></p>\n' +
+          '</div>'
+        );
+      }
+
+      function buildMarkdown(m) {
+        const cleanSteps = m.steps.map(function (s, i) {
+          return (i + 1) + '. ' + s.replace(/<[^>]+>/g, '');
+        }).join('\n');
+        return (
+          '## ' + m.veh.title + '\n' +
+          '- **Discipline:** ' + m.disc.label + ' (Replaces: *' + m.leg.label + '*)\n' +
+          '- **Framework Alignment:** ' + m.veh.coi + '\n' +
+          '- **AI Policy (' + m.traf.badge + '):** ' + m.traf.rule + '\n\n' +
+          '### Student Deliverables (Pattern -> Rule -> Solve)\n' + cleanSteps + '\n\n' +
+          '### 10-Point Active Verification Rubric\n' +
+          '| Criterion | Observable Mastery Standard | Pts |\n' +
+          '| :--- | :--- | :---: |\n' +
+          '| 1. Pattern Extraction | Isolates concrete signal/anomaly from local scenario or telemetry | 2.5 |\n' +
+          '| 2. Primary SSoT Rule | Cites exact threshold from ' + m.disc.ssot + ' | 3.0 |\n' +
+          '| 3. Contextual Solve | Applies rule to constraints and names one safety/edge boundary | 2.5 |\n' +
+          '| 4. Active Verification | Includes ' + m.disc.telemetry + ' + AI compliance disclosure | 2.0 |\n\n' +
+          '*Attribution: Faculty adoption design adapted with credit to Dr. Stacy Ybarra, Director, OLLU Center for Teaching Excellence, Nov. 19, 2026; Curriculum-as-Code (S-A-R Standard v2.2) implementation by Alan Pruitt / EXW-Demo (Course 42051).*\n'
+        );
+      }
+
+      function renderTransformer() {
+        const m = currentModel();
+        outputBox.innerHTML = buildCanvasHTML(m);
+      }
+
+      vehicleBtns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          selectedVehicle = btn.getAttribute('data-vehicle');
+          vehicleBtns.forEach(function (b) {
+            b.setAttribute('aria-pressed', b === btn ? 'true' : 'false');
+          });
+          renderTransformer();
+          persistState();
+          announce('Updated assignment blueprint: ' + VEHICLE_MAP[selectedVehicle].title);
+        });
+      });
+
+      [selLegacy, selDisc, selTraffic].forEach(function (sel) {
+        sel.addEventListener('change', function () {
+          renderTransformer();
+          persistState();
+          announce('Updated assignment blueprint for ' + DISC_MAP[selDisc.value].label);
+        });
+      });
+
+      function copyWithFeedback(text, toastEl, msg) {
+        navigator.clipboard.writeText(text).then(function () {
+          toastEl.textContent = msg;
+          announce(msg);
+          window.setTimeout(function () { toastEl.textContent = ''; }, 4000);
+        });
+      }
+
+      document.getElementById('btn-copy-canvas').addEventListener('click', function () {
+        milestones.exportedBlueprint = true;
+        persistState();
+        copyWithFeedback(
+          buildCanvasHTML(currentModel()),
+          document.getElementById('copy-toast'),
+          'Copied 9:1 WCAG 2.2 AA Canvas HTML to clipboard!'
+        );
+      });
+
+      document.getElementById('btn-copy-md').addEventListener('click', function () {
+        milestones.exportedBlueprint = true;
+        persistState();
+        copyWithFeedback(
+          buildMarkdown(currentModel()),
+          document.getElementById('copy-toast'),
+          'Copied clean Markdown blueprint to clipboard!'
+        );
+      });
+
+      document.getElementById('btn-print').addEventListener('click', function () {
+        window.print();
+      });
+
+      document.getElementById('btn-copy-labs').addEventListener('click', function () {
+        const labsMd = Array.from(document.querySelectorAll('.lab-card')).map(function (c) {
+          const title = c.querySelector('h3').textContent.trim();
+          const ps = Array.from(c.querySelectorAll('p')).map(function (p) { return '- ' + p.textContent.trim(); }).join('\n');
+          return '### ' + title + ' (10 Minutes)\n' + ps;
+        }).join('\n\n');
+        copyWithFeedback(
+          '# Five Turnkey 10-Minute Department AI-Readiness Micro-Labs\n_Attribution: Adapted with credit to Dr. Stacy Ybarra, Director, OLLU Center for Teaching Excellence, Nov. 19, 2026 • Curriculum-as-Code (EXW-Demo Course 42051) by Alan Pruitt (CC BY-NC-SA 4.0)_\n\n' + labsMd,
+          document.getElementById('labs-toast'),
+          'Copied all 5 facilitator agendas to clipboard!'
+        );
+      });
+
+      // --- 4. Zero-Login Progress Bar, LocalStorage Auto-Save, Permalink & Portable JSON Drafts ---
+      const progressBar = document.getElementById('studio-progress');
+      const progressLabel = document.getElementById('progress-label');
+      const permalinkInput = document.getElementById('permalink-source');
+      const labCheckboxes = Array.from(document.querySelectorAll('.lab-check-row input[type="checkbox"]'));
+      const scanCourseInput = document.getElementById('scan-course-title');
+      const scanTextInput = document.getElementById('scan-syllabus-text');
+
+      function getCompletedLabs() {
+        return labCheckboxes.filter(function (cb) { return cb.checked; }).map(function (cb) { return cb.getAttribute('data-lab'); });
+      }
+
+      function computeProgressCount() {
+        milestones.completedLab = getCompletedLabs().length > 0;
+        return Object.keys(milestones).reduce(function (acc, k) {
+          return acc + (milestones[k] ? 1 : 0);
+        }, 0);
+      }
+
+      function buildShareUrl() {
+        const params = new URLSearchParams();
+        params.set('tab', activeTabId.replace(/^tab-/, ''));
+        params.set('legacy', selLegacy.value);
+        params.set('disc', selDisc.value);
+        params.set('traffic', selTraffic.value);
+        params.set('vehicle', selectedVehicle);
+        const doneLabs = getCompletedLabs();
+        if (doneLabs.length > 0) params.set('labs', doneLabs.join(','));
+        if (currentLang === 'es') params.set('lang', 'es');
+        return 'https://alanpruitt.com/cac-studio/?' + params.toString();
+      }
+
+      function updateProgressUI() {
+        const count = computeProgressCount();
+        progressBar.value = count;
+        progressLabel.textContent = currentLang === 'es'
+          ? 'Progreso Docente: ' + count + ' de 7 Hitos Completados (Guardado Local en Navegador — 0 Bytes a la Nube)'
+          : 'Faculty Adoption Progress: ' + count + ' of 7 Milestones Completed (Auto-Saved in Browser — 0 Bytes Cloud Egress)';
+        const shareUrl = buildShareUrl();
+        permalinkInput.value = shareUrl;
+        try {
+          const urlObj = new URL(shareUrl);
+          window.history.replaceState(null, '', window.location.pathname + urlObj.search);
+        } catch (e) {}
+      }
+
+      function serializeState() {
+        return {
+          schema: 'cac-studio-draft-v2',
+          savedAt: new Date().toISOString(),
+          lang: currentLang,
+          activeTabId: activeTabId,
+          legacy: selLegacy.value,
+          disc: selDisc.value,
+          traffic: selTraffic.value,
+          vehicle: selectedVehicle,
+          completedLabs: getCompletedLabs(),
+          courseTitle: scanCourseInput.value,
+          syllabusText: scanTextInput.value,
+          milestones: milestones
+        };
+      }
+
+      function persistState() {
+        updateProgressUI();
+        try {
+          window.localStorage.setItem(STORAGE_KEY, JSON.stringify(serializeState()));
+        } catch (e) {}
+      }
+
+      function applyRestoredState(st) {
+        if (!st || typeof st !== 'object') return;
+        if (st.lang === 'en' || st.lang === 'es') {
+          currentLang = st.lang;
+          applyLangUI();
+        }
+        if (st.legacy && LEGACY_MAP[st.legacy]) selLegacy.value = st.legacy;
+        if (st.disc && DISC_MAP[st.disc]) selDisc.value = st.disc;
+        if (st.traffic && TRAFFIC_MAP[st.traffic]) selTraffic.value = st.traffic;
+        if (st.vehicle && VEHICLE_MAP[st.vehicle]) {
+          selectedVehicle = st.vehicle;
+          vehicleBtns.forEach(function (b) {
+            b.setAttribute('aria-pressed', b.getAttribute('data-vehicle') === selectedVehicle ? 'true' : 'false');
+          });
+        }
+        if (Array.isArray(st.completedLabs)) {
+          const set = new Set(st.completedLabs.map(String));
+          labCheckboxes.forEach(function (cb) {
+            cb.checked = set.has(cb.getAttribute('data-lab'));
+          });
+        }
+        if (typeof st.courseTitle === 'string') scanCourseInput.value = st.courseTitle.slice(0, 100);
+        if (typeof st.syllabusText === 'string') scanTextInput.value = st.syllabusText.slice(0, 12000);
+        if (st.milestones && typeof st.milestones === 'object') {
+          Object.keys(milestones).forEach(function (k) {
+            if (typeof st.milestones[k] === 'boolean') milestones[k] = st.milestones[k];
+          });
+        }
+        if (st.activeTabId) {
+          const foundTab = document.getElementById(st.activeTabId);
+          if (foundTab) selectTab(foundTab, false, true);
+        }
+        renderTransformer();
+        if (scanTextInput.value.trim().length >= 20) {
+          runLocalSyllabusScan(false);
+        }
+        updateProgressUI();
+      }
+
+      labCheckboxes.forEach(function (cb) {
+        cb.addEventListener('change', function () {
+          persistState();
+          announce('Updated 10-minute lab checklist progress.');
+        });
+      });
+
+      document.getElementById('btn-save-json').addEventListener('click', function () {
+        milestones.sharedOrSaved = true;
+        persistState();
+        const blob = new Blob([JSON.stringify(serializeState(), null, 2)], { type: 'application/json' });
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = 'cac-faculty-studio-draft.json';
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        window.setTimeout(function () { URL.revokeObjectURL(a.href); }, 1000);
+        announce('Saved portable JSON studio draft to your device.');
+      });
+
+      document.getElementById('draft-file-input').addEventListener('change', function (e) {
+        const file = e.target.files && e.target.files[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = function () {
+          try {
+            const parsed = JSON.parse(String(reader.result || '{}'));
+            applyRestoredState(parsed);
+            persistState();
+            const toast = document.getElementById('session-toast');
+            toast.textContent = 'Restored draft!';
+            window.setTimeout(function () { toast.textContent = ''; }, 3500);
+            announce('Restored saved Faculty Adoption Studio draft.');
+          } catch (err) {
+            announce('Could not parse JSON draft file.');
+          }
+        };
+        reader.readAsText(file);
+        e.target.value = '';
+      });
+
+      document.getElementById('btn-reset-session').addEventListener('click', function () {
+        try { window.localStorage.removeItem(STORAGE_KEY); } catch (e) {}
+        selLegacy.value = 'discussion';
+        selDisc.value = 'health';
+        selTraffic.value = 'amber';
+        selectedVehicle = 'prs';
+        vehicleBtns.forEach(function (b) {
+          b.setAttribute('aria-pressed', b.getAttribute('data-vehicle') === 'prs' ? 'true' : 'false');
+        });
+        labCheckboxes.forEach(function (cb) { cb.checked = false; });
+        scanCourseInput.value = '';
+        scanTextInput.value = '';
+        document.getElementById('scanner-output').hidden = true;
+        Object.keys(milestones).forEach(function (k) { milestones[k] = (k === 'configured'); });
+        selectTab(document.getElementById('tab-transformer'), false, true);
+        renderTransformer();
+        try { window.history.replaceState(null, '', window.location.pathname); } catch (e) {}
+        updateProgressUI();
+        const toast = document.getElementById('session-toast');
+        toast.textContent = 'Local session cleared.';
+        window.setTimeout(function () { toast.textContent = ''; }, 3000);
+        announce('Cleared local browser progress and restored default studio settings.');
+      });
+
+      // --- 5. Declarative Invoker Commands Copy Button + Fallback (`copy-button` guide) ---
+      const copyTimers = new WeakMap();
+      let lastCopiedAnnouncement = '';
+
+      function legacyExecCopy(text) {
+        const area = Object.assign(document.createElement('textarea'), { value: text });
+        area.setAttribute('readonly', '');
+        area.style.cssText = 'position:fixed;inset-block-start:0;opacity:0';
+        document.body.appendChild(area);
+        area.select();
+        try { return document.execCommand('copy'); } finally { area.remove(); }
+      }
+
+      function reportCopyStatus(button, ok) {
+        const tip = button.nextElementSibling;
+        clearTimeout(copyTimers.get(button));
+        button.removeAttribute('data-copied');
+        button.removeAttribute('data-failed');
+        let message = ok ? 'Copied' : 'Copy failed';
+        if (message === lastCopiedAnnouncement) message += '\u00A0';
+        lastCopiedAnnouncement = message;
+        tip.textContent = '';
+        void button.offsetWidth;
+        button.setAttribute(ok ? 'data-copied' : 'data-failed', '');
+        requestAnimationFrame(function () { tip.textContent = message; });
+        copyTimers.set(button, window.setTimeout(function () {
+          button.removeAttribute('data-copied');
+          button.removeAttribute('data-failed');
+          tip.textContent = '';
+        }, 2200));
+      }
+
+      async function handleCommandCopy(button, target) {
+        if (target && target.id === 'permalink-source') {
+          milestones.sharedOrSaved = true;
+          persistState();
+        }
+        const text = target.matches('input, textarea') ? target.value : target.innerText.trim();
+        if (!text) return;
+        try {
+          await navigator.clipboard.writeText(text);
+          reportCopyStatus(button, true);
+        } catch (err) {
+          if (legacyExecCopy(text)) reportCopyStatus(button, true);
+          else reportCopyStatus(button, false);
+        }
+      }
+
+      if ('CommandEvent' in window) {
+        document.addEventListener('command', function (ev) {
+          if (ev.command && ev.command.indexOf('--copy') === 0) {
+            handleCommandCopy(ev.source, ev.target);
+          }
+        }, true);
+      } else {
+        document.addEventListener('click', function (ev) {
+          const btn = ev.target.closest('button[command^="--copy"]');
+          if (!btn) return;
+          const target = document.getElementById(btn.getAttribute('commandfor'));
+          if (target) handleCommandCopy(btn, target);
+        });
+      }
+
+      // --- 6. 100% Browser-Local Syllabus Vulnerability Scanner & Deep-Link Planner ---
+      const DISC_KEYWORDS = {
+        health: ['health', 'kinesiology', 'exw', 'nursing', 'nutrition', 'clinical', 'exercise', 'anatomy', 'physiology', 'patient', 'fitness', 'wellness', 'acsm', 'paga'],
+        stem: ['biology', 'chemistry', 'physics', 'bio ', 'chem ', 'phy ', 'lab ', 'wet lab', 'stoichiometry', 'microbiology', 'calculus', 'statistics', 'geology'],
+        humanities: ['english', 'composition', 'eng ', 'rhetoric', 'literature', 'history', 'philosophy', 'humanities', 'essay', 'thesis', 'mla', 'archival'],
+        business: ['business', 'accounting', 'economics', 'marketing', 'finance', 'bus ', 'acc ', 'entrepreneur', 'management', 'gaap', 'market'],
+        cte: ['welding', 'automotive', 'hvac', 'electrical', 'agtech', 'agriculture', 'osha', 'culinary', 'machining', 'cte', 'trades', 'cybersecurity', 'it '],
+        social: ['psychology', 'sociology', 'education', 'psy ', 'soc ', 'edu ', 'political', 'criminal justice', 'anthropology', 'apa', 'child development']
+      };
+
+      const VULN_DETECTORS = [
+        { key: 'discussion', rx: /discussion|forum|reply to (two|2) peers|weekly post|board post/i, recTraffic: 'amber', recVehicle: 'prs', label: 'Weekly Discussion Posts' },
+        { key: 'essay', rx: /essay|research paper|term paper|argumentative paper|reflection paper|5-page|five-page|writing assignment/i, recTraffic: 'amber', recVehicle: 'audit', label: 'Research / Argument Essay' },
+        { key: 'lab', rx: /lab report|laboratory|worksheet|wet-lab|bench|practicum/i, recTraffic: 'amber', recVehicle: 'embodied', label: 'Written Lab Report / Worksheet' },
+        { key: 'exam', rx: /take-home exam|midterm|final exam|short-answer exam|online exam|essay exam/i, recTraffic: 'red', recVehicle: 'embodied', label: 'Take-Home / Online Exam' },
+        { key: 'bib', rx: /annotated bibliography|literature review|source summary|article summary/i, recTraffic: 'green', recVehicle: 'audit', label: 'Annotated Bibliography / Lit Summary' },
+        { key: 'case', rx: /case study|scenario analysis|client profile|care plan/i, recTraffic: 'amber', recVehicle: 'prs', label: 'Case Study Analysis' },
+        { key: 'quiz', rx: /reading quiz|open-book quiz|chapter quiz|comprehension quiz|multiple choice/i, recTraffic: 'amber', recVehicle: 'wrapper', label: 'Open-Book Reading Quiz' },
+        { key: 'review', rx: /exam review|post-exam|test corrections|reflection/i, recTraffic: 'amber', recVehicle: 'wrapper', label: 'Post-Exam Review' }
+      ];
+
+      const scanForm = document.getElementById('scanner-form');
+      const scanError = document.getElementById('scan-error');
+      let scanTouched = false;
+
+      function validateScanInput() {
+        const val = scanTextInput.value.trim();
+        if (val.length < 20) {
+          const msg = 'Please paste at least 20 characters of course goals or assignment descriptions (or click Load Sample Community College Syllabus).';
+          scanTextInput.setCustomValidity(msg);
+          scanTextInput.setAttribute('aria-invalid', 'true');
+          scanError.textContent = msg;
+          return false;
+        }
+        scanTextInput.setCustomValidity('');
+        scanTextInput.removeAttribute('aria-invalid');
+        scanError.textContent = '';
+        return true;
+      }
+
+      scanTextInput.addEventListener('blur', function () {
+        if (scanTouched) validateScanInput();
+      });
+
+      scanTextInput.addEventListener('input', function () {
+        scanTouched = true;
+        if (scanTextInput.getAttribute('aria-invalid') === 'true') validateScanInput();
+      });
+
+      function detectDiscipline(combinedText) {
+        const lower = combinedText.toLowerCase();
+        let bestKey = selDisc.value || 'health';
+        let bestScore = 0;
+        Object.keys(DISC_KEYWORDS).forEach(function (dKey) {
+          let score = 0;
+          DISC_KEYWORDS[dKey].forEach(function (kw) {
+            if (lower.indexOf(kw) !== -1) score += 1;
+          });
+          if (score > bestScore) {
+            bestScore = score;
+            bestKey = dKey;
+          }
+        });
+        return bestKey;
+      }
+
+      function jumpToPreset(legacyKey, discKey, trafficKey, vehicleKey) {
+        selLegacy.value = legacyKey;
+        selDisc.value = discKey;
+        selTraffic.value = trafficKey;
+        selectedVehicle = vehicleKey;
+        vehicleBtns.forEach(function (b) {
+          b.setAttribute('aria-pressed', b.getAttribute('data-vehicle') === vehicleKey ? 'true' : 'false');
+        });
+        renderTransformer();
+        const t1 = document.getElementById('tab-transformer');
+        selectTab(t1, true, false);
+        announce('Loaded ' + LEGACY_MAP[legacyKey].label + ' blueprint into Assignment Transformer.');
+      }
+
+      function runLocalSyllabusScan(shouldAnnounce) {
+        const titleTxt = scanCourseInput.value.trim();
+        const bodyTxt = scanTextInput.value.trim();
+        if (bodyTxt.length < 20) return;
+
+        const detectedDisc = detectDiscipline(titleTxt + ' ' + bodyTxt);
+        const discObj = DISC_MAP[detectedDisc];
+
+        let matched = VULN_DETECTORS.filter(function (det) { return det.rx.test(bodyTxt); });
+        if (matched.length === 0) {
+          matched = [VULN_DETECTORS[0], VULN_DETECTORS[1], VULN_DETECTORS[5]];
+        }
+
+        const hasAiPolicy = /traffic[- ]light|generative ai|chatgpt|gemini|llm|artificial intelligence policy|###/i.test(bodyTxt);
+        const hasZtc = /oer|zero textbook|ztc|\$0|openstax|free resource/i.test(bodyTxt);
+        const hasA11y = /accessibility|wcag|ada|accommodation|disability|title ii/i.test(bodyTxt);
+
+        const planTitle = document.getElementById('scan-plan-title');
+        planTitle.textContent = 'Personalized Adoption Plan' + (titleTxt ? ' — ' + titleTxt : '') + ' (' + discObj.label + ')';
+
+        const badgeBox = document.getElementById('scan-summary-badges');
+        badgeBox.innerHTML = '';
+        const b1 = document.createElement('span');
+        b1.className = 'badge-inline';
+        b1.textContent = 'Detected Pathway: ' + discObj.label;
+        const b2 = document.createElement('span');
+        b2.className = 'badge-inline ' + (hasAiPolicy ? 'badge-teal' : 'badge-red');
+        b2.textContent = hasAiPolicy ? 'AI Policy Mentioned (Upgrade to Traffic-Light + ###)' : 'Gap: Missing Explicit Traffic-Light AI Rule';
+        const b3 = document.createElement('span');
+        b3.className = 'badge-inline ' + (hasZtc ? 'badge-teal' : '');
+        b3.textContent = hasZtc ? '$0 ZTC / OER Aligned' : 'Tip: Verify $0 ZTC / No-Paywall AI Parity';
+        badgeBox.append(b1, b2, b3);
+
+        const govNotes = document.getElementById('scan-governance-notes');
+        govNotes.textContent = 'Recommended Sequence: (1) Run Micro-Lab 2 (Tab 4) to add a 1-sentence Red/Amber/Green AI policy' +
+          (hasA11y ? '; ' : ' and an ADA Title II accessibility note; ') +
+          '(2) Redesign your highest-weight vulnerable assignment below using 1-Click Load; ' +
+          '(3) Map your syllabus outcomes in Tab 2 (Community of Inquiry <-> U.S. DOL TEN No. 07-25) for division review.';
+
+        const tbody = document.getElementById('scan-tbody');
+        tbody.innerHTML = '';
+        matched.forEach(function (item) {
+          const tr = document.createElement('tr');
+          const th = document.createElement('th');
+          th.scope = 'row';
+          th.textContent = item.label;
+
+          const tdPain = document.createElement('td');
+          tdPain.textContent = LEGACY_MAP[item.key].pain;
+
+          const tdFix = document.createElement('td');
+          tdFix.textContent = TRAFFIC_MAP[item.recTraffic].badge + ' • ' + VEHICLE_MAP[item.recVehicle].title;
+
+          const tdAction = document.createElement('td');
+          const loadBtn = document.createElement('button');
+          loadBtn.type = 'button';
+          loadBtn.className = 'btn-sm';
+          loadBtn.textContent = 'Load in Transformer \u2192';
+          loadBtn.addEventListener('click', function () {
+            jumpToPreset(item.key, detectedDisc, item.recTraffic, item.recVehicle);
+          });
+
+          const deepHref = 'https://alanpruitt.com/cac-studio/?tab=transformer&legacy=' + encodeURIComponent(item.key) +
+            '&disc=' + encodeURIComponent(detectedDisc) +
+            '&traffic=' + encodeURIComponent(item.recTraffic) +
+            '&vehicle=' + encodeURIComponent(item.recVehicle);
+          const deepLink = document.createElement('a');
+          deepLink.href = deepHref;
+          deepLink.style.display = 'inline-block';
+          deepLink.style.marginInlineStart = '0.5rem';
+          deepLink.style.fontSize = '0.82rem';
+          deepLink.textContent = 'Permalink';
+          deepLink.addEventListener('click', function (ev) {
+            ev.preventDefault();
+            jumpToPreset(item.key, detectedDisc, item.recTraffic, item.recVehicle);
+          });
+
+          tdAction.append(loadBtn, deepLink);
+          tr.append(th, tdPain, tdFix, tdAction);
+          tbody.appendChild(tr);
+        });
+
+        const promptLines = [
+          'Role: Instructional Designer applying Curriculum-as-Code (S-A-R Standard v2.2), Community of Inquiry (CoI), and U.S. DOL ETA TEN No. 07-25.',
+          'Task: Propose 2 localized Pattern -> Rule -> Solve assignment prompts and a 1-sentence Red/Amber/Green AI syllabus rule for the anonymized course goals delimited below. Use $0 ZTC open resources and >= 9:1 WCAG 2.2 AA structure.',
+          'Primary Discipline SSoT: ' + discObj.ssot,
+          '',
+          '###COURSE_GOALS_START###',
+          (titleTxt ? 'Course: ' + titleTxt + '\n' : '') + bodyTxt.slice(0, 2500),
+          '###COURSE_GOALS_END###'
+        ];
+        document.getElementById('scanner-prompt-pre').textContent = promptLines.join('\n');
+        document.getElementById('scanner-output').hidden = false;
+
+        milestones.scannedSyllabus = true;
+        persistState();
+        if (shouldAnnounce) {
+          announce('Generated personalized adoption plan with ' + matched.length + ' pre-loaded assignment links.');
+        }
+      }
+
+      scanForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        scanTouched = true;
+        if (!validateScanInput()) {
+          scanTextInput.focus();
+          return;
+        }
+        runLocalSyllabusScan(true);
+      });
+
+      document.getElementById('btn-load-sample-syllabus').addEventListener('click', function () {
+        scanCourseInput.value = 'BIO 181 — General Biology I (Community College Transfer Pathway)';
+        scanTextInput.value = 'Course Learning Outcomes: Analyze cellular energetics, enzyme kinetics, and Mendelian genetics.\n' +
+          'Graded Assignments:\n' +
+          '- Weekly Canvas Discussion Posts (20%): Read chapter and reply to 2 peers (250 words).\n' +
+          '- 6 Written Wet-Lab Reports (30%): Submit methods, data table, and discussion worksheet.\n' +
+          '- Annotated Bibliography & 5-Page Literature Essay (25%): Summarize 5 peer-reviewed articles.\n' +
+          '- Online Open-Book Chapter Quizzes & Take-Home Midterm Exam (25%).\n' +
+          'Syllabus Policy: Plagiarism and unauthorized cheating are prohibited.';
+        validateScanInput();
+        runLocalSyllabusScan(true);
+      });
+
+      // --- 7. Boot: Hydrate from LocalStorage, then Override with URL Permalink Params ---
+      try {
+        const rawSaved = window.localStorage.getItem(STORAGE_KEY);
+        if (rawSaved) {
+          applyRestoredState(JSON.parse(rawSaved));
+        }
+      } catch (e) {}
+
+      const qs = new URLSearchParams(window.location.search);
+      if (Array.from(qs.keys()).length > 0) {
+        const urlState = {
+          lang: qs.get('lang') || currentLang,
+          legacy: qs.get('legacy') || selLegacy.value,
+          disc: qs.get('disc') || selDisc.value,
+          traffic: qs.get('traffic') || selTraffic.value,
+          vehicle: qs.get('vehicle') || selectedVehicle,
+          completedLabs: qs.get('labs') ? qs.get('labs').split(',') : getCompletedLabs(),
+          activeTabId: qs.get('tab') ? 'tab-' + qs.get('tab') : activeTabId
+        };
+        applyRestoredState(urlState);
+      } else {
+        renderTransformer();
+        updateProgressUI();
+      }
+    })();
+  </script>
+</body>
+</html>
